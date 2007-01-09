@@ -1,0 +1,520 @@
+<skin>
+
+  <!--                    Nemesis Greyline Skin [original] for DM7025
+
+         !! Only for CVS images compiled after Tue Jul 11 19:14:16 CEST 2006 !!
+
+      ********************************************************
+      *   If you modify this xml please specify the original skin name followed    *
+      *     by your name before uploading it to your favourite board... e.g.       *
+      *                                                                                                 *
+      *  "Nemesis Greyline Skin [original] for DM**** - Mod by [your_name]"   *
+      ********************************************************
+
+      Best regards
+      Nemesis
+
+   -->
+
+	<colors>
+		<color name="white" 	value="#ffffff" />
+		<color name="lightgrey" 	value="#cccccc" />
+		<color name="grey" 	value="#999999" />
+		<color name="darkgrey" 	value="#4c4c4c" />
+		<color name="black" 	value="#000000" />
+		<color name="red" 		value="#ff0010" />
+		<color name="green" 	value="#00cc66" />
+		<color name="bright_green" 	value="#00ff33" />
+		<color name="blue" 		value="#0000ff" />
+		<color name="bright_blue" 	value="#3366ff" />
+		<color name="yellow"	value="#f3ca09" />
+		<color name="transparent" 	value="#ffffffff" />
+		<color name="transpGrey" 	value="#50333333" />
+		<color name="transpBlack" value="#45000000" />
+		<color name="transpBlue" value="#5500071E" />
+		<color name="dark"  	value="#33294a6b" />	
+		<color name="WindowTitleForeground" value="#ffffff" />		
+		<color name="Background" value="#55000000" />
+		<color name="LabelForegroundText_1" 	value="#ffffff" />
+		<color name="LabelForegroundText_2" 	value="#dadada" />
+		<color name="LabelForegroundText_3" 	value="#999999" />
+		<color name="LabelForegroundActive" 	value="#17fa70" />
+		<color name="MenuTitleForeground" 	value="#ffffff" />				
+		<color name="KeyForeground" 	value="#ffffff" />
+	</colors>
+
+	<fonts>
+		<font filename="md_khmurabi_10.ttf" name="Regular" scale="100" />
+		<font filename="ae_AlMateen.ttf" name="Replacement" scale="90" is_replacement="1" />
+	</fonts>
+
+	<windowstyle type="skinned">
+		<title offset="25,5" font="Regular;20" />
+		<color name="Background" color="#55000000" />
+		<color name="LabelForeground" color="#ffffff" />
+		<color name="ListboxBackground" color="#55000000" />
+		<color name="ListboxForeground" color="#ffffff" />
+		<color name="ListboxSelectedBackground" color="#45666666" />
+		<color name="ListboxSelectedForeground" color="#ffffff" />
+		<color name="ListboxMarkedBackground" color="#990000" />
+		<color name="ListboxMarkedForeground" color="#ffffff" />
+		<color name="ListboxMarkedAndSelectedBackground" color="#ff0000" />
+		<color name="ListboxMarkedAndSelectedForeground" color="#ffffff" />
+		<color name="WindowTitleForeground" color="#ffffff" />
+		<color name="WindowTitleBackground" color="#55000000" />
+		<borderset name="bsWindow">
+			<pixmap pos="bpTopLeft"     filename="Nemesis.SkinSuite.Shared/Greyline/bs_tl.png" />
+			<pixmap pos="bpTop"         filename="Nemesis.SkinSuite.Shared/Greyline/bs_t.png"  />
+			<pixmap pos="bpTopRight"    filename="Nemesis.SkinSuite.Shared/Greyline/bs_tr.png" />
+			<pixmap pos="bpLeft"        filename="Nemesis.SkinSuite.Shared/Greyline/bs_l.png"  />
+			<pixmap pos="bpRight"       filename="Nemesis.SkinSuite.Shared/Greyline/bs_r.png"  />
+			<pixmap pos="bpBottomLeft"  filename="Nemesis.SkinSuite.Shared/Greyline/bs_bl.png" />
+			<pixmap pos="bpBottom"      filename="Nemesis.SkinSuite.Shared/Greyline/bs_b.png"  />
+			<pixmap pos="bpBottomRight" filename="Nemesis.SkinSuite.Shared/Greyline/bs_br.png" />
+		</borderset>
+	</windowstyle>
+
+	<screen name="InfoBar" position="0,0" size="720,576" flags="wfNoBorder" title="InfoBar">
+		<eLabel position="0,0" zPosition="-3" size="720,576" backgroundColor="transparent" />
+
+		<!-- topBar start -->
+		<eLabel position="70,65" zPosition="-1" size="580,60" backgroundColor="Background" />
+		<ePixmap pixmap="Nemesis.Greyline/ib_service.png" position="65,60" zPosition="3" size="590,71" transparent="1" alphatest="on" />
+		<widget name="NimA" position="79,68" zPosition="0" size="37,25" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_nim_a.png" transparent="1" alphatest="on" />
+		<widget name="NimB" position="79,68" zPosition="0" size="37,25" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_nim_b.png" transparent="1" alphatest="on" />
+		<widget source="CurrentService" render="Label" position="125,68" zPosition="2" size="400,26" font="Regular;22" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="CurrentTime" render="Label" position="535,68"  zPosition="2" size="105,26" font="Regular;22" valign="top" halign="center" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="CurrentTime" render="Label" position="0,0" size="0,0">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget source="CurrentService" render="Label" position="0,0" size="0,0">
+			<convert type="ServiceName">Provider</convert>
+		</widget>
+		<eLabel text="Signal Quality" position="105,104" zPosition="2" size="120,18" font="Regular;16" valign="center" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="FrontendStatus" render="Label" position="222,104" zPosition="2" size="40,18" font="Regular;16" valign="center" transparent="1" foregroundColor="LabelForegroundText_1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="FrontendStatus" render="Progress" pixmap="Nemesis.SkinSuite.Shared/progress_snr.png" position="100,124" zPosition="2" size="167,7">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel text="Bit Error Rate" position="295,104" zPosition="2" size="105,18" font="Regular;16" valign="center" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="FrontendStatus" render="Label" position="415,104" zPosition="2" size="40,18" font="Regular;16" valign="center" transparent="1" foregroundColor="LabelForegroundText_1">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<widget source="FrontendStatus" render="Progress" position="0,0" size="0,0" >
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<eLabel text="Signal Strength" position="455,104" zPosition="2" size="120,18" font="Regular;16" valign="center" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="FrontendStatus" render="Label" position="580,104" zPosition="2" size="40,18" font="Regular;16" valign="center" halign="right" transparent="1" foregroundColor="LabelForegroundText_1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="FrontendStatus" render="Progress" pixmap="Nemesis.SkinSuite.Shared/progress_snr.png" position="453,124" zPosition="2" size="167,6">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+
+		<!-- bottomBar start -->
+		<eLabel position="70,422" zPosition="-1" size="580,100" backgroundColor="Background" />
+		<ePixmap name="EventBar" position="65,417" zPosition="5" size="590,112" pixmap="Nemesis.SkinSuite.Shared/Greyline/ib_events.png" transparent="1" alphatest="on" />
+		<widget source="Event_Now" render="Progress" pixmap="Nemesis.SkinSuite.Shared/Greyline/progress_event.png" position="173,418" zPosition="4" size="376,5">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<ePixmap name="Now_Arrow" position="78,430" zPosition="0" size="14,14" pixmap="Nemesis.SkinSuite.Shared/Greyline/now.png" transparent="1" alphatest="on" />
+		<widget name="BlinkingPoint" position="530,432" zPosition="2" size="10,10" pixmap="Nemesis.SkinSuite.Shared/record.png" alphatest="on" />
+		<widget source="Event_Now" render="Label" position="100,425" zPosition="1" size="65,24" font="Regular;22" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="Event_Now" render="Label" position="167,425" zPosition="1" size="360,24" font="Regular;22" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event_Now" render="Label" position="535,425" zPosition="1" size="105,24" font="Regular;22" halign="right" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<widget source="Event_Next" render="Label" position="100,450" zPosition="1" size="65,24" font="Regular;22" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="Event_Next" render="Label" position="167,450" zPosition="1" size="360,24" font="Regular;22" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event_Next" render="Label" position="535,450" zPosition="1" size="105,24" font="Regular;22" halign="right" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<eLabel position="77,476" zPosition="1" size="566,1" backgroundColor="LabelForegroundText_3" />
+		<ePixmap pixmap="Nemesis.SkinSuite.Shared/button_grey.png" position="92,480" size="12,12" transparent="1" alphatest="on" />
+		<widget source="RecordingPossible" render="Pixmap" pixmap="Nemesis.SkinSuite.Shared/button_red.png" position="92,480" zPosition="1" size="12,12" transparent="1" alphatest="on" >
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel text="Record" position="112,478" zPosition="1" size="120,18" font="Regular;16" valign="top" transparent="1" foregroundColor="LabelForegroundText_3" />
+		<widget source="RecordingPossible" render="FixedLabel" text="Record" position="112,478" zPosition="2" size="120,18" font="Regular;16" valign="top" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap pixmap="Nemesis.SkinSuite.Shared/button_grey.png" position="221,480" size="12,12" transparent="1" alphatest="on" />
+		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.SkinSuite.Shared/button_green.png" position="221,480" zPosition="1" size="12,12" transparent="1" alphatest="on">
+			<convert type="ServiceInfo">SubservicesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel text="Subservices" position="241,478" zPosition="1" size="120,18" font="Regular;16" valign="top" transparent="1" foregroundColor="LabelForegroundText_3" />
+		<widget source="CurrentService" render="FixedLabel" text="Subservices" position="241,478" zPosition="2" size="120,18" font="Regular;16" valign="top" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1">
+			<convert type="ServiceInfo">SubservicesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap pixmap="Nemesis.SkinSuite.Shared/button_grey.png" position="365,480" size="12,12" transparent="1" alphatest="on" />
+		<widget source="TimeshiftPossible" render="Pixmap" pixmap="Nemesis.SkinSuite.Shared/button_yellow.png" position="365,480" zPosition="1" size="12,12" transparent="1" alphatest="on">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel text="Timeshift" position="385,478" zPosition="1" size="120,18" font="Regular;16" valign="top" transparent="1" foregroundColor="LabelForegroundText_3" />
+		<widget source="TimeshiftPossible" render="FixedLabel" text="Timeshift" position="385,478" zPosition="2" size="120,18" font="Regular;16" valign="top" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap pixmap="Nemesis.SkinSuite.Shared/button_grey.png" position="509,480" size="12,12" transparent="1" alphatest="on" />
+		<widget source="ExtensionsAvailable" render="Pixmap" pixmap="Nemesis.SkinSuite.Shared/button_blue.png" position="509,480" zPosition="1" size="12,12" transparent="1" alphatest="on">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel text="Extensions" position="529,478" zPosition="1" size="120,18" font="Regular;16" valign="top" transparent="1" foregroundColor="LabelForegroundText_3" />
+		<widget source="ExtensionsAvailable" render="FixedLabel" text="Extensions" position="529,478" zPosition="2" size="120,18" font="Regular;16" valign="top" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap position="451,504" zPosition="3" size="11,16" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_crypt_off.png" alphatest="on" />
+		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_crypt_on.png" position="451,504" zPosition="4" size="11,16" alphatest="on">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap position="466,504" zPosition="3" size="25,16" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_txt_off.png" />
+		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_txt_on.png" position="466,504" zPosition="4" size="25,16">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap position="495,504" zPosition="3" size="28,16" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_format_off.png" transparent="1" alphatest="on" />
+		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_format_on.png" position="495,504" zPosition="4" size="28,16">
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap position="527,504" zPosition="3" size="25,16" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_dolby_off.png" transparent="1" alphatest="on" />
+		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.SkinSuite.Shared/Greyline/ico_dolby_on.png" position="527,504" zPosition="4" size="25,16">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap position="569,504" zPosition="3" size="26,16" pixmap="Nemesis.SkinSuite.Shared/Greyline/NimA_Inactive.png" transparent="1" alphatest="on" />
+		<widget name="NimA_Active" position="569,504" zPosition="4" size="26,16" pixmap="Nemesis.SkinSuite.Shared/Greyline/NimA_Active.png" transparent="1" alphatest="on" />
+		<ePixmap position="599,504" zPosition="3" size="26,16" pixmap="Nemesis.SkinSuite.Shared/Greyline/NimB_Inactive.png" transparent="1" alphatest="on" />
+		<widget name="NimB_Active" position="599,504" zPosition="4" size="26,16" pixmap="Nemesis.SkinSuite.Shared/Greyline/NimB_Active.png" transparent="1" alphatest="on" />
+		<ePixmap position="81,504" zPosition="6" size="41,20" pixmap="Nemesis.SkinSuite.Shared/Greyline/dmm_logo.png" transparent="1" alphatest="on" />
+	</screen>
+
+	<screen name="MediaPlayer" position="85,50" size="550,476" flags="wfNoBorder" title="MediaPlayer">
+		<eLabel position="0,0" zPosition="0" size="550,440" backgroundColor="transparent" />
+		<eLabel position="6,6" zPosition="1" size="540,406" backgroundColor="Background" />
+		<ePixmap name="mp_bg" position="0,0" zPosition="2" size="550,476" pixmap="Nemesis.SkinSuite.Shared/Greyline/mediaplayer.png" transparent="1" alphatest="on" />
+		<widget name="artisttext" position="25,15" zPosition="3" size="65,17" font="Regular;16" valign="top" foregroundColor="LabelForegroundText_2" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="artist" position="90,15" zPosition="3" size="300,17" font="Regular;16" valign="top" foregroundColor="LabelForegroundText_1" transparent="1" />
+		<widget name="albumtext" position="25,34" zPosition="3" size="65,17" font="Regular;16" valign="top" foregroundColor="LabelForegroundText_2" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="album" position="90,34" zPosition="3" size="300,17" font="Regular;16" valign="top" foregroundColor="LabelForegroundText_1" transparent="1" />
+		<widget name="yeartext" position="25,54" zPosition="3" size="65,17" font="Regular;16" valign="top" foregroundColor="LabelForegroundText_2" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="year" position="90,54" zPosition="3" size="300,17" font="Regular;16" valign="top" foregroundColor="LabelForegroundText_1" transparent="1" />
+		<widget name="genretext" position="25,74" zPosition="3" size="65,17" font="Regular;16" valign="top" foregroundColor="LabelForegroundText_2" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="genre" position="90,74" zPosition="3" size="300,17" font="Regular;16" valign="top" foregroundColor="LabelForegroundText_1" transparent="1" />
+		<widget name="titletext" position="0,0" zPosition="3" size="0,0" font="Regular;16" valign="top" backgroundColor="Background" />
+		<eLabel name="nowPlaying" position="25,101" zPosition="3" size="365,14" text="Now Playing" font="Regular;12" foregroundColor="bright_green" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="title" position="25,114" zPosition="3" size="365,18" font="Regular;16" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" />
+		<widget name="coverArt" position="413,14" zPosition="3" size="116,116" pixmap="no_coverArt.png" transparent="1" alphatest="on" />
+		<widget name="filelist" position="41,143" zPosition="2" size="488,115" scrollbarMode="showOnDemand" />
+		<widget name="playlist" position="41,270" zPosition="2" size="488,132" scrollbarMode="showOnDemand" selectionDisabled="1" />
+		<widget name="PositionGauge" position="13,418" size="526,6" zPosition="3" pointer="Nemesis.SkinSuite.Shared/Greyline/position_pointer.png:3,6" />
+		<widget name="currenttext" position="0,0" zPosition="0" size="0,0" />
+	</screen>
+
+	<screen name="MoviePlayer" flags="wfNoBorder" position="85,419" size="550,120" title="MoviePlayer">
+		<eLabel position="0,0" zPosition="-2" size="550,129" backgroundColor="transparent" />
+		<ePixmap position="0,0" zPosition="1" size="550,120" pixmap="Nemesis.SkinSuite.Shared/Greyline/movieplayer.png" transparent="1" alphatest="on" />
+		<eLabel position="6,6" size="540,106" backgroundColor="Background" />
+		<widget source="CurrentService" render="Label" position="20,7" zPosition="1" size="410,45" font="Regular;20" valign="center" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="CurrentService" render="Label" position="430,7" zPosition="1" size="100,45" valign="center" halign="right" font="Regular;20" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="CurrentService" render="PositionGauge" pointer="Nemesis.SkinSuite.Shared/Greyline/position_pointer.png:3,6" position="13,63" zPosition="2" size="526,6" transparent="1">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="CurrentService" render="Label" position="6,85" zPosition="2" size="111,25" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+	</screen>
+	
+	<screen name="MovieSelection" position="90,100" size="560,410" title="Select a movie">
+		<widget name="waitingtext" position="5,0" size="555,410" zPosition="4" font="Regular;22" backgroundColor="Background" foregroundColor="LabelForegroundText_1" />
+		<widget name="list" position="5,0" size="555,375" zPosition="1" backgroundColor="Background" scrollbarMode="showOnDemand" />
+		<widget name="freeDiskSpace" position="0,375" zPosition="4" size="580,45" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2" />
+		<ePixmap position="0,0" zPosition="3" size="536,375" pixmap="Nemesis.SkinSuite.Shared/Greyline/movieselection_div.png" transparent="1" alphatest="on" />
+	</screen>	
+
+	<screen name="Setup" position="100,150" size="540,310" title="Setup">
+		<widget name="title" position="10,10" size="280,35" font="Regular;23" foregroundColor="MenuTitleForeground"  />
+		<widget name="config" position="10,50" size="520,200" scrollbarMode="showOnDemand" />
+		<widget name="cancel" position="10,260" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<widget name="canceltext" position="10,260" zPosition="2" size="140,40" font="Regular;20" valign="center" halign="center" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="ok" position="390,260" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png"  transparent="1" alphatest="on" />
+		<widget name="oktext" position="390,260" zPosition="2" size="140,40" font="Regular;20" valign="center" halign="center" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+	</screen>
+	
+	<screen name="configOSD" position="130,113" size="460,350" title="OSD Settings">
+		<widget name="okbutton" position="150,270" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png"  transparent="1" alphatest="on" />
+		<eLabel name="oktext" position="150,270" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="txt_alpha" position="20,20" size="110,20" />
+		<widget name="sld_alpha" position="150,20" size="290,20" />
+		<widget name="txt_brightness" position="20,60" size="120,20" />
+		<widget name="sld_brightness" position="150,20" size="290,20" />
+		<widget name="txt_gamma" position="20,100" size="120,20" />
+		<widget name="sld_gamma" position="150,100" size="290,20" />
+	</screen>
+
+	<screen name="HarddiskWait" position="100,150" size="540,60">
+		<widget name="wait" position="20,10" size="500,25" font="Regular;23" foregroundColor="LabelForegroundText_1" />
+	</screen>
+
+	<screen name="HarddiskSetup" position="140,150" size="420,160" title="Harddisk">
+		<widget name="model" position="20,10" size="380,25" font="Regular;23" foregroundColor="LabelForegroundText_1" />
+		<widget name="capacity" position="20,40" size="380,25" font="Regular;23" foregroundColor="LabelForegroundText_1" />
+		<widget name="bus" position="20,70" size="380,25" font="Regular;23" foregroundColor="LabelForegroundText_1" />
+		<widget name="initialize" position="140,110" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png"  transparent="1" alphatest="on" />
+		<widget name="initializetext" position="140,110" size="140,40" valign="center" halign="center" zPosition="2" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+	</screen>
+
+	<screen name="PluginBrowser" position="150,115" size="420,370" title="Plugin browser">
+		<widget name="list" position="10,10" size="400,300" scrollbarMode="showOnDemand" />
+		<ePixmap name="remove" position="5,325" zPosition="1" size="200,40" pixmap="Nemesis.SkinSuite.Shared/key-red_200.png" transparent="1" alphatest="on" />
+		<ePixmap name="download" position="215,325" zPosition="1" size="200,40" pixmap="Nemesis.SkinSuite.Shared/key-green_200.png" transparent="1" alphatest="on" />
+		<widget name="red" position="5,325" zPosition="2" size="200,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="green" position="215,325" zPosition="2" size="200,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+	</screen>
+
+	<screen name="ServiceInfo" position="90,120" size="560,370" title="Serviceinfo">
+		<ePixmap name="bg_red" position="0,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="bg_green" position="140,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="bg_yellow" position="280,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="bg_blue" position="420,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center"  font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="infolist" position="20,50" size="560,365" selectionDisabled="1"/>
+	</screen>
+
+	<screen name="TimerEditList" position="90,100" size="560,417" title="Timer Editor">
+		<ePixmap name="red" position="0,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="green" position="140,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="yellow" position="280,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="blue" position="420,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center"  font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="timerlist" position="0,45" size="560,364" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<screen name="TimerEntry" position="90,95" size="560,430" title="Timer entry">
+		<widget name="config" position="10,10" size="540,350" scrollbarMode="showOnDemand" />
+		<widget name="cancel" position="10,375" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png"  transparent="1" alphatest="on" />
+		<widget name="canceltext" position="10,375" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="ok" position="410,375" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png"  transparent="1" alphatest="on" />
+		<widget name="oktext" position="410,375" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+	</screen>
+
+	<screen name="TimeDateInput" position="150,150" size="400,270" title="Time/Date Input">
+		<widget name="config" position="10,10" size="380,200" />
+		<widget name="cancel" position="10,220" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png"  transparent="1" alphatest="on" />
+		<widget name="canceltext" position="10,220" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="ok" position="250,220" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png"  transparent="1" alphatest="on" />
+		<widget name="oktext" position="250,220" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+	</screen>
+
+	<screen name="TimerSanityConflict" position="60,100" size="600,400" title="Timer sanity error">
+		<ePixmap name="red" position="0,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="green" position="145,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="yellow" position="310,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="blue" position="455,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="145,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20"  transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="310,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="455,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20"  transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="timer1" position="0,45" size="290,80" scrollbarMode="showOnDemand" />
+		<widget name="timer2" position="310,45" size="280,80" scrollbarMode="showOnDemand" />
+		<widget name="list" position="0,160" size="250,240" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<screen name="TimerLog" position="90,100" size="560,400" title="Timer log">
+		<ePixmap name="red" position="0,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="green" position="140,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="yellow" position="280,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="blue" position="420,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20"  transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20"  transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="loglist" position="0,45" size="560,250" scrollbarMode="showOnDemand" />
+		<widget name="logentry" position="0,300" size="560,140" font="Regular;20" foregroundColor="LabelForegroundText_1" />
+	</screen>
+	
+	<screen name="NumberZap" position="235,255" size="250,60" title="Channel">
+		<widget name="channel" position="35,15" size="110,25" font="Regular;23" foregroundColor="LabelForegroundText_1" />
+		<widget name="number" position="145,15" size="80,25" halign="right" font="Regular;23" foregroundColor="LabelForegroundText_1" />
+	</screen>	
+
+	<screen name="Volume" flags="wfNoBorder" position="214,150" size="292,23" title="Volume" zPosition="1" >
+		<ePixmap position="0,0" zPosition="0" size="292,23" pixmap="Nemesis.SkinSuite.Shared/Greyline/volumeslider.png" />
+		<widget name="Volume" zPosition="1" position="76,7" size="196,10" backgroundColor="Background" pixmap="Nemesis.SkinSuite.Shared/Greyline/progress_volume.png" />
+	</screen>
+
+	<screen name="Mute" position="515,140" zPosition="10" size="34,45" title="Mute" flags="wfNoBorder" >
+		<ePixmap position="0,0" size="34,45" pixmap="Nemesis.SkinSuite.Shared/Greyline/mute.png" />
+	</screen>
+
+	<screen name="SimpleChannelSelection" position="90,100" size="560,417" title="Channel Selection">
+		<ePixmap name="red" position="0,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="green" position="140,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="yellow" position="280,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="blue" position="420,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center"  font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="list" position="0,45" size="560,364" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<screen name="ChannelSelection" position="90,100" size="560,417" title="Channel Selection">
+		<ePixmap name="red" position="0,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="green" position="140,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="yellow" position="280,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="blue" position="420,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center"  font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="list" position="0,45" size="560,364" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<screen name="ChannelSelectionRadio" position="90,100" size="560,307" title="Channel Selection" >
+		<ePixmap name="red" position="0,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="green" position="140,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="yellow" position="280,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="blue" position="420,0" zPosition="1" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1"/>
+		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="list" position="0,45" size="560,252" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<screen name="RadioInfoBar" position="90,420" size="560,105" zPosition="-1">
+		<widget source="CurrentService" render="Label" position="5,5" size="390,26" font="Regular;22" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget name="BlinkingPoint" pixmap="Nemesis.SkinSuite.Shared/record.png" position="400,8" zPosition="2" size="22,22" alphatest="on"/>
+		<widget source="CurrentTime" render="Label" position="465,5" size="90,28" font="Regular;22" halign="center" transparent="1">
+			<convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Event_Now" render="Progress" position="465,32" zPosition="1" size="90,9" borderWidth="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="Event_Now" render="Label" position="5,50" size="60,22" font="Regular;20" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="Event_Next" render="Label" position="5,80" size="60,22" font="Regular;20" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="Event_Now" render="Label" position="80,50" size="380,22" font="Regular;20" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event_Next" render="Label" position="80,80" size="380,22" font="Regular;20" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event_Now" render="Label" position="465,50" size="90,22" font="Regular;20" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<widget source="Event_Next" render="Label" position="465,80" size="90,22" font="Regular;20" halign="right" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+	</screen>
+
+	<screen name="EPGSelection" position="90,90" size="560,430" title="EPG Selection">
+		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="blue" position="420,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center"  font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="list" position="10,45" size="540,375" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<screen name="EPGSelectionMulti" position="90,90" size="560,430" title="EPG Selection">
+		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="blue" position="420,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center"  font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<ePixmap name="listframe" position="5,70" zPosition="1" size="551,361" pixmap="Nemesis.SkinSuite.Shared/Greyline/epg_frame.png" transparent="1" alphatest="on" />
+		<widget name="now_button" position="5,50" size="0,0" pixmap="Nemesis.SkinSuite.Shared/Greyline/epg_buttons.png" transparent="1" alphatest="on" />
+		<widget name="next_button" position="5,50" size="0,0" pixmap="Nemesis.SkinSuite.Shared/Greyline/epg_buttons.png" transparent="1" alphatest="on" />
+		<widget name="more_button" position="5,50" size="0,0" pixmap="Nemesis.SkinSuite.Shared/Greyline/epg_buttons.png" transparent="1" alphatest="on" />
+		<widget name="now_button_sel" position="5,50" zPosition="2" size="320,25" pixmap="Nemesis.SkinSuite.Shared/Greyline/epg_now.png" transparent="1" alphatest="on" />
+		<widget name="next_button_sel" position="5,50" zPosition="2" size="320,25" pixmap="Nemesis.SkinSuite.Shared/Greyline/epg_next.png" transparent="1" alphatest="on" />
+		<widget name="more_button_sel" position="5,50" zPosition="2" size="320,25" pixmap="Nemesis.SkinSuite.Shared/Greyline/epg_more.png" transparent="1" alphatest="on" />
+		<widget name="now_text" text="NOW" zPosition="3" position="5,50" size="108,22" transparent="1" halign="center" valign="center" font="Regular;16" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="next_text" text="NEXT" zPosition="3" position="111,50" size="108,22" transparent="1" halign="center" valign="center" font="Regular;16" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="more_text" text="MORE" zPosition="3" position="216,50" size="108,22" transparent="1" halign="center" valign="center" font="Regular;16" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="date" position="410,35" size="140,45" valign="center" halign="right" font="Regular;18" foregroundColor="LabelForegroundText_1" />
+		<widget name="list" position="11,75" size="540,350" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<screen name="EventView" position="90,90" size="560,430" title="Eventview">
+		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-red.png" transparent="1" alphatest="on" />
+		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-green.png" transparent="1" alphatest="on" />
+		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-yellow.png" transparent="1" alphatest="on" />
+		<ePixmap name="blue" position="420,0" size="140,40" pixmap="Nemesis.SkinSuite.Shared/key-blue.png" transparent="1" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center"  font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="epg_description" position="10,45" size="540,336" font="Regular;21" foregroundColor="LabelForegroundText_1" />
+		<widget name="datetime" position="10,395" size="140,35" font="Regular;21" foregroundColor="LabelForegroundText_1" />
+		<widget name="duration" position="150,395" size="120,35" font="Regular;21" foregroundColor="LabelForegroundText_1" />
+		<widget name="channel" position="280,395" size="270,35" font="Regular;21" foregroundColor="LabelForegroundText_1" />
+	</screen>
+
+	<screen name="HelpMenu" flags="wfNoBorder" position="0,0" size="720,576" title="Menu">
+		<widget name="list" position="70,100" size="420,378" scrollbarMode="showOnDemand" />
+		<widget name="rc" pixmap="rc.png" position="540,50" zPosition="10" size="154,475" transparent="1" alphatest="on"/>
+		<widget name="arrowup" pixmap="arrowup.png" position="585,425" zPosition="11" size="37,70" transparent="1" alphatest="on"/>
+		<eLabel position="400,40" size="220,60" text="help..." font="Regular;30" foregroundColor="LabelForegroundText_1" />
+		<ePixmap name="wizard" pixmap="wizard.png" position="440,350" zPosition="11" size="97,174" transparent="1" alphatest="on" />
+	</screen>
+	
+	<screen name="About" position="180,123" size="360,330" title="About">
+		<widget name="text" position="10,30" size="420,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
+		<widget name="fpVersion" position="10,50" size="420,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
+		<widget name="tuner" position="10,80" size="420,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
+		<widget name="tuner0" position="10,100" size="420,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
+		<widget name="tuner1" position="10,120" size="420,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
+		<widget name="hdd" position="10,170" size="420,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
+		<widget name="hddA" position="10,190" size="420,40" font="Regular;18" foregroundColor="LabelForegroundText_1" />
+		<ePixmap position="20,288" zPosition="1" size="100,30" pixmap="Nemesis.SkinSuite.Shared/Greyline/nemesis.png" transparent="1" alphatest="on" />		
+		<ePixmap position="225,257" zPosition="1" size="119,65" pixmap="Nemesis.SkinSuite.Shared/Greyline/logo.png" transparent="1" alphatest="on" />
+	</screen>
+
+</skin>
