@@ -116,8 +116,8 @@
 			<convert type="ServiceName">Provider</convert>
 		</widget>
 		<eLabel text="SNR" position="390,412" zPosition="4" size="37,19" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1" />
-		<widget source="FrontendStatus" render="Label" position="425,412" zPosition="4" size="41,19" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1">
-			<convert type="FrontendInfo">SNR</convert>
+		<widget source="FrontendStatus" render="Label" position="425,416" zPosition="4" size="41,19" font="smallFont;14" valign="top" transparent="1" foregroundColor="LabelForegroundText_1">
+			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<widget source="FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_red.png" position="468,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">SNR</convert>

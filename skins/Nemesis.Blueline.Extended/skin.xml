@@ -95,8 +95,8 @@
 			<convert type="ServiceName">Provider</convert>
 		</widget>
 		<eLabel text="Signal Quality" position="105,116" zPosition="2" size="120,18" font="Regular;16" valign="center" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1" />
-		<widget source="FrontendStatus" render="Label" position="222,116" zPosition="2" size="40,18" font="Regular;16" valign="center" transparent="1" foregroundColor="LabelForegroundText_1">
-			<convert type="FrontendInfo">SNR</convert>
+		<widget source="FrontendStatus" render="Label" position="222,116" zPosition="2" size="70,18" font="Regular;16" valign="center" transparent="1" foregroundColor="LabelForegroundText_1">
+			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<widget source="FrontendStatus" render="Progress" pixmap="Nemesis.SkinSuite.Shared/progress_snr.png" position="100,136" zPosition="2" size="167,7">
 			<convert type="FrontendInfo">SNR</convert>

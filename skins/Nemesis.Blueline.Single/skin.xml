@@ -120,8 +120,8 @@
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>		
 		<eLabel position="581,390" zPosition="3" size="37,14" text="SNR" font="Regular;14" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2" />
-		<widget source="FrontendStatus" render="Label" position="618,390" zPosition="3" size="34,14" font="Regular;14" halign="right" transparent="1" foregroundColor="LabelForegroundText_1">
-			<convert type="FrontendInfo">SNR</convert>
+		<widget source="FrontendStatus" render="Label" position="618,390" zPosition="3" size="34,14" font="Regular;12" halign="right" transparent="1" foregroundColor="LabelForegroundText_1">
+			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<eLabel name="agc"  position="581,404" zPosition="3" size="37,14" text="AGC" font="Regular;14" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2" />
 		<widget source="FrontendStatus" render="Label" position="618,404" zPosition="3" size="34,14" font="Regular;14" halign="right" transparent="1" foregroundColor="LabelForegroundText_1">
