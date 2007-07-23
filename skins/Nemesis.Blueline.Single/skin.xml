@@ -390,7 +390,25 @@
 		<widget name="key_green" position="140,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center"  font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="list" position="0,45" size="560,364" scrollbarMode="showOnDemand" />
+		<widget name="list" position="0,40" size="560,280" scrollbarMode="showOnDemand" />
+		<ePixmap position="0,321" size="560,101" pixmap="border_eventinfo-fs8.png" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="ServiceEvent" render="Label" position="4,327" size="55,22" font="Regular;19" >
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="62,327" size="70,22" font="Regular;19" >
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Progress" position="140,331" size="100,13" borderWidth="2" >
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="CurrentTime" render="Label" position="495,327" size="65,28" font="Regular;19" >
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="4,352" size="552,66" font="Regular;19" >
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
 	</screen>
 
 	<screen name="ChannelSelectionRadio" position="90,100" size="560,307" title="Channel Selection" >
