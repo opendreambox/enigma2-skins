@@ -12,10 +12,6 @@ AC_OUTPUT([
 ./skins/Nemesis.Greenline.Extended/Makefile
 ./skins/Nemesis.Greyline/Makefile
 ./skins/Nemesis.Flatline/Makefile
-./skins/Nemesis.SkinSuite.Shared/Makefile
-./skins/Nemesis.SkinSuite.Shared/Greyline/Makefile
-./skins/Nemesis.SkinSuite.Shared/Blueline/Makefile
-./skins/Nemesis.SkinSuite.Shared/Greenline/Makefile
 ./skins/Nemesis.Flatline.Blue/Makefile
 ./skins/Nemesis.Blueline/Makefile
 ./skins/Nemesis.Greenline.Single/Makefile
