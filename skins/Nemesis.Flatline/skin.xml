@@ -44,10 +44,10 @@
 
 	<fonts>
 		<font filename="md_khmurabi_10.ttf" name="Regular" scale="100" />
-		<font filename="Nemesis.Flatline/ArenaCdBd.ttf" name="eventFont" scale="100" />
-		<font filename="Nemesis.Flatline/ArenaCdBd.ttf" name="keyFont" scale="100" />
-		<font filename="Nemesis.Flatline/ArenaCdBd.ttf" name="titleFont" scale="100" />
-		<font filename="Nemesis.Flatline/ArenaCdBd.ttf" name="smallFont" scale="100" />
+		<font filename="ArenaCdBd.ttf" name="eventFont" scale="100" />
+		<font filename="ArenaCdBd.ttf" name="keyFont" scale="100" />
+		<font filename="ArenaCdBd.ttf" name="titleFont" scale="100" />
+		<font filename="ArenaCdBd.ttf" name="smallFont" scale="100" />
 		<font filename="ae_AlMateen.ttf" name="Replacement" scale="90" is_replacement="1" />
 	</fonts>
 
