@@ -384,19 +384,19 @@
 	<!-- Movieplayer -->
 	<screen name="MoviePlayer" position="45,465" size="640,90" title="MoviePlayer" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="Nemesis.Greenline/movieplayer.png" position="0,0" zPosition="-1" size="640,90" />
-		<widget source="CurrentService" render="PositionGauge" pointer="Nemesis.Greenline/position_pointer.png:516,0" position="19,64" size="305,10" transparent="1">
+		<widget source="session.CurrentService" render="PositionGauge" pointer="Nemesis.Greenline/position_pointer.png:516,0" position="19,64" size="305,10" transparent="1">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
 		<ePixmap pixmap="Nemesis.Greenline/position_overlay_l.png" position="14,62" zPosition="1" size="7,15" alphatest="on" />
 		<ePixmap pixmap="Nemesis.Greenline/position_overlay_r.png" position="317,62" zPosition="1" size="7,15" alphatest="on" />
-		<widget source="CurrentService" render="Label" position="20,12" size="510,38" font="Regular;20" valign="center" noWrap="1" backgroundColor="bg" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="20,12" size="510,38" font="Regular;20" valign="center" noWrap="1" backgroundColor="bg" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="CurrentService" render="Label" position="435,12" size="100,38" font="Regular;20" halign="right" valign="center" backgroundColor="bg" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="435,12" size="100,38" font="Regular;20" halign="right" valign="center" backgroundColor="bg" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<eLabel position="540,12" size="10,38" text="/" font="Regular;20" halign="center" valign="center" backgroundColor="bg" transparent="1" />
-		<widget source="CurrentService" render="Label" position="555,12" size="100,38" font="Regular;20" halign="left" valign="center" backgroundColor="bg" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="555,12" size="100,38" font="Regular;20" halign="left" valign="center" backgroundColor="bg" transparent="1">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 		<ePixmap pixmap="Nemesis.Greenline/mp_buttons.png" position="449,62" size="138,13" alphatest="on" />
