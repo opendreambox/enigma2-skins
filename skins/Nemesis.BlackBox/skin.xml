@@ -497,7 +497,9 @@
 			<convert type="RdsInfo">RasInteractiveAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget name="BlinkingPoint" pixmap="Nemesis.BlackBox/record.png" position="385,5" zPosition="2" size="12,12" alphatest="on" />
+		<widget source="session.RecordState" render="Pixmap" pixmap="Nemesis.BlackBox/record.png" position="385,5" zPosition="2" size="12,12" alphatest="on" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
 		<widget source="session.Event_Now" render="Progress" pixmap="Nemesis.BlackBox/volume_bar.png" position="400,5" zPosition="2" size="65,12" borderWidth="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>

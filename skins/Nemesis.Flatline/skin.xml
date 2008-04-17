@@ -80,124 +80,134 @@
 	<screen name="InfoBar" position="10,30" size="720,576" flags="wfNoBorder" title="InfoBar">
 		<eLabel position="0,0" zPosition="-3" size="720,576" backgroundColor="transparent" />
 		<ePixmap name="InfoBarBackground" pixmap="Nemesis.Flatline/infobar.png" position="48,346" zPosition="3" size="617,169" transparent="1" alphatest="on" />
-		<widget source="CurrentTime" render="Label" position="70,373"  zPosition="4" size="102,26" font="titleFont;26" valign="center" halign="center" transparent="1" foregroundColor="LabelForegroundText_1">
+		<widget source="global.CurrentTime" render="Label" position="70,373"  zPosition="4" size="102,26" font="titleFont;26" valign="center" halign="center" transparent="1" foregroundColor="LabelForegroundText_1">
 			<convert type="ClockToText">WithSeconds</convert>
 		</widget>
-		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/ico_crypt_on.png" position="204,364" zPosition="4" size="24,16" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/ico_crypt_on.png" position="204,364" zPosition="4" size="24,16" alphatest="on">
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/ico_txt_on.png" position="233,364" zPosition="4" size="24,16">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/ico_txt_on.png" position="233,364" zPosition="4" size="24,16">
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/ico_dolby_on.png" position="262,364" zPosition="4" size="25,16">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/ico_dolby_on.png" position="262,364" zPosition="4" size="25,16">
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/ico_format_on.png" position="292,364" zPosition="4" size="24,16">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/ico_format_on.png" position="292,364" zPosition="4" size="24,16">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget name="NimA" pixmap="Nemesis.Flatline/NimA.png" position="337,362" zPosition="5" size="33,21"/>
-		<widget name="NimB" pixmap="Nemesis.Flatline/NimB.png" position="351,362" zPosition="5" size="33,21"/>
-		<widget name="NimA_Active" pixmap="Nemesis.Flatline/NimA_Active.png" position="337,362" zPosition="4" size="33,21"/>
-		<widget name="NimB_Active" pixmap="Nemesis.Flatline/NimB_Active.png" position="351,362" zPosition="4" size="33,21"/>
-		<widget source="CurrentService" render="Label" position="205,384" zPosition="4" size="334,30" font="titleFont;22" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2" >
+		<ePixmap name="NimA" pixmap="Nemesis.Flatline/NimA.png" position="337,362" zPosition="5" size="33,21"/>
+		<ePixmap name="NimB" pixmap="Nemesis.Flatline/NimB.png" position="351,362" zPosition="5" size="33,21"/>
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="Nemesis.Flatline/NimA_Active.png" position="337,362" size="33,21" zPosition="4" >
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="Nemesis.Flatline/NimB_Active.png" position="351,362" size="33,21" zPosition="4" >
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="205,384" zPosition="4" size="334,30" font="titleFont;22" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="Event_Now" render="Progress" pixmap="Nemesis.Flatline/now_progress.png" size="83,13" position="558,392" zPosition="2">
+		<widget source="session.Event_Now" render="Progress" pixmap="Nemesis.Flatline/now_progress.png" size="83,13" position="558,392" zPosition="2">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="CurrentTime" render="Label" position="392,360" zPosition="4" size="250,22" font="smallFont;18" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1">
+		<widget source="global.CurrentTime" render="Label" position="392,360" zPosition="4" size="250,22" font="smallFont;18" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<widget source="CurrentService" render="Label" position="206,412" zPosition="4" size="180,20" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1"  >
+		<widget source="session.CurrentService" render="Label" position="206,412" zPosition="4" size="180,20" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1"  >
 			<convert type="ServiceName">Provider</convert>
 		</widget>
 		<eLabel text="SNR" position="390,412" zPosition="4" size="37,19" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1" />
-		<widget source="FrontendStatus" render="Label" position="425,416" zPosition="4" size="41,19" font="smallFont;14" valign="top" transparent="1" foregroundColor="LabelForegroundText_1">
+		<widget source="session.FrontendStatus" render="Label" position="425,416" zPosition="4" size="41,19" font="smallFont;14" valign="top" transparent="1" foregroundColor="LabelForegroundText_1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<widget source="FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_red.png" position="468,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_red.png" position="468,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ValueRange">0,39699</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_orange.png" position="468,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_orange.png" position="468,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ValueRange">36700,45875</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_green.png" position="468,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_green.png" position="468,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">SNR</convert>
 			<convert type="ValueRange">45876,65536</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendStatus" render="Progress" position="0,0" size="0,0">
+		<widget source="session.FrontendStatus" render="Progress" position="0,0" size="0,0">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<eLabel text="AGC" position="489,412" zPosition="4" size="39,19" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1" />
-		<widget source="FrontendStatus" render="Label" position="526,412" zPosition="4" size="41,19" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1">
+		<widget source="session.FrontendStatus" render="Label" position="526,412" zPosition="4" size="41,19" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_orange.png" position="570,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_orange.png" position="570,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">AGC</convert>
 			<convert type="ValueRange">0,39699</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_green.png" position="570,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ico_green.png" position="570,418" zPosition="5" size="9,9" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">AGC</convert>
 			<convert type="ValueRange">36700,65536</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendStatus" render="Progress" position="0,0" size="0,0">
+		<widget source="session.FrontendStatus" render="Progress" position="0,0" size="0,0">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel text="BER" position="588,412" zPosition="4" size="35,19" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-1,-1" />
-		<widget source="FrontendStatus" render="Label" position="622,412" zPosition="4" size="25,19" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1">
+		<widget source="session.FrontendStatus" render="Label" position="622,412" zPosition="4" size="25,19" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_1">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<ePixmap pixmap="Nemesis.Flatline/ico_green.png" position="634,418" zPosition="5" size="9,9" transparent="1" alphatest="on" />
-		<widget source="FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ber_warning.png" position="615,413" zPosition="6" size="49,18" >
+		<widget source="session.FrontendStatus" render="Pixmap" pixmap="Nemesis.Flatline/ber_warning.png" position="615,413" zPosition="6" size="49,18" >
 			<convert type="FrontendInfo">BER</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendStatus" render="Progress" position="0,0" size="0,0" >
+		<widget source="session.FrontendStatus" render="Progress" position="0,0" size="0,0" >
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<eLabel position="58,433" size="607,56" backgroundColor="Background" />
 		<ePixmap name="Now_Arrow" pixmap="Nemesis.Flatline/now_arrow.png" position="69,439" zPosition="1" size="15,16" transparent="1" alphatest="on" />
-		<widget name="BlinkingPoint" pixmap="Nemesis.Flatline/record.png" position="547,437" zPosition="2" size="22,22" alphatest="on" />
-		<widget source="Event_Now" render="Label" position="75,434" zPosition="1" size="60,26" font="eventFont;20" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundActive" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.RecordState" render="Pixmap" pixmap="Nemesis.Flatline/record.png" position="547,437" zPosition="2" size="22,22" alphatest="on" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="75,434" zPosition="1" size="60,26" font="eventFont;20" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundActive" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<eLabel text="-" position="135,434" zPosition="1" size="10,26" font="eventFont;20" valign="top" halign="center" transparent="1" foregroundColor="LabelForegroundActive" shadowColor="black" shadowOffset="-2,-2"/>
-		<widget source="Event_Now" render="Label" position="145,434" zPosition="1" size="60,26" font="eventFont;20" valign="top" transparent="1" foregroundColor="LabelForegroundActive" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Now" render="Label" position="145,434" zPosition="1" size="60,26" font="eventFont;20" valign="top" transparent="1" foregroundColor="LabelForegroundActive" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="Event_Now" render="Label" position="206,434" zPosition="1" size="340,26" font="eventFont;20" valign="top" transparent="1" foregroundColor="LabelForegroundActive" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Now" render="Label" position="206,434" zPosition="1" size="340,26" font="eventFont;20" valign="top" transparent="1" foregroundColor="LabelForegroundActive" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event_Now" render="Label" position="553,434" zPosition="1" size="90,26" font="eventFont;20" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundActive" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Now" render="Label" position="553,434" zPosition="1" size="90,26" font="eventFont;20" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundActive" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget source="Event_Next" render="Label" position="75,460" zPosition="5" size="60,26" font="eventFont;20" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Next" render="Label" position="75,460" zPosition="5" size="60,26" font="eventFont;20" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<eLabel text="-" position="135,460" zPosition="1" size="10,26" font="eventFont;20" valign="top" halign="center" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2"/>
-		<widget source="Event_Next" render="Label" position="145,460" zPosition="1" size="60,26" font="eventFont;20" valign="top" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Next" render="Label" position="145,460" zPosition="1" size="60,26" font="eventFont;20" valign="top" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="Event_Next" render="Label" position="206,460" zPosition="1" size="340,26" font="eventFont;20" valign="top" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Next" render="Label" position="206,460" zPosition="1" size="340,26" font="eventFont;20" valign="top" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event_Next" render="Label" position="553,460" zPosition="1" size="90,26" font="eventFont;20" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Next" render="Label" position="553,460" zPosition="1" size="90,26" font="eventFont;20" valign="top" halign="right" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
@@ -208,12 +218,12 @@
 		<widget source="RecordingPossible" render="FixedLabel" text="Record" position="118,490" zPosition="4" size="110,20" font="smallFont;18" valign="top" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/button_green.png" position="219,492" zPosition="4" size="18,18" transparent="1" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline/button_green.png" position="219,492" zPosition="4" size="18,18" transparent="1" alphatest="on">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<eLabel text="Subservices" position="244,490" zPosition="3" size="110,20" font="smallFont;18" valign="top" transparent="1" foregroundColor="LabelForegroundText_3" />
-		<widget source="CurrentService" render="FixedLabel" text="Subservices" position="244,490" zPosition="4" size="110,20" font="smallFont;18" valign="top" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1">
+		<widget source="session.CurrentService" render="FixedLabel" text="Subservices" position="244,490" zPosition="4" size="110,20" font="smallFont;18" valign="top" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -263,17 +273,17 @@
 		<eLabel position="0,0" zPosition="-2" size="607,133" backgroundColor="transparent" />
 		<eLabel position="25,3" zPosition="5" size="300,25" text="MoviePlayer" font="titleFont;22" valign="top" foregroundColor="WindowTitleForeground" transparent="1" />
 		<ePixmap position="0,0" zPosition="3" size="607,133" pixmap="Nemesis.Flatline/movieplayer.png" transparent="1" alphatest="on" />
-		<widget source="CurrentService" render="Label" position="105,26" zPosition="4" size="100,25" valign="center" halign="right" font="eventFont;20" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.CurrentService" render="Label" position="105,26" zPosition="4" size="100,25" valign="center" halign="right" font="eventFont;20" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget source="CurrentService" render="PositionGauge" pointer="Nemesis.Flatline/position_pointer.png:0,2" position="215,29" zPosition="4" size="270,18" transparent="1" foregroundColor="LabelForegroundText_3">
+		<widget source="session.CurrentService" render="PositionGauge" pointer="Nemesis.Flatline/position_pointer.png:0,2" position="215,29" zPosition="4" size="270,18" transparent="1" foregroundColor="LabelForegroundText_3">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
-		<widget source="CurrentService" render="Label" position="495,26" zPosition="4" size="100,25" valign="center" halign="left" font="eventFont;20" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.CurrentService" render="Label" position="495,26" zPosition="4" size="100,25" valign="center" halign="left" font="eventFont;20" transparent="1" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 		<eLabel position="0,26" size="607,81" backgroundColor="Background" />
-		<widget source="CurrentService" render="Label" position="115,54" zPosition="2" size="470,52" font="eventFont;22" halign="center" valign="center" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.CurrentService" render="Label" position="115,54" zPosition="2" size="470,52" font="eventFont;22" halign="center" valign="center" foregroundColor="LabelForegroundText_1" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
@@ -282,6 +292,7 @@
 		<eLabel position="0,0" size="720,576" backgroundColor="transparent" />
 		<eLabel position="100,61" zPosition="5" size="546,35" text="Select a movie" font="titleFont;24" valign="center" foregroundColor="WindowTitleForeground" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
 		<eLabel position="80,97" size="580,423" backgroundColor="Background" />
+
 		<widget name="waitingtext" position="80,98" size="580,325" zPosition="4" font="Regular;22" backgroundColor="Background" foregroundColor="LabelForegroundText_1" />
 		<widget name="list" position="80,98" size="580,375" zPosition="1" backgroundColor="Background" scrollbarMode="showOnDemand" />
 		<widget name="freeDiskSpace" position="80,475" zPosition="4" size="580,45" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2" />
@@ -441,7 +452,7 @@
 		<widget name="key_yellow" position="280,0" zPosition="2" size="140,40" valign="center" halign="center"  font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="list" position="0,40" size="560,280" scrollbarMode="showOnDemand" />
-		<ePixmap position="0,321" size="560,101" pixmap="border_eventinfo-fs8.png" zPosition="1" transparent="1" alphatest="on" />
+		<ePixmap position="0,321" size="560,101" pixmap="Nemesis.Flatline/border_eventinfo.png" zPosition="1" transparent="1" alphatest="on" />
 		<widget source="ServiceEvent" render="Label" position="0,327" halign="right" size="55,22" font="Regular;19" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"></convert>
@@ -453,7 +464,7 @@
 		<widget source="ServiceEvent" render="Progress" position="140,331" size="100,13" borderWidth="2" >
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="CurrentTime" render="Label" position="495,327" size="65,28" font="Regular;19" >
+		<widget source="global.CurrentTime" render="Label" position="495,327" size="65,28" font="Regular;19" >
 			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="4,352" size="552,66" font="Regular;19" >
@@ -474,35 +485,37 @@
 	</screen>
 	
 	<screen name="RadioInfoBar" position="90,420" size="560,105" zPosition="-1">
-		<widget source="CurrentService" render="Label" position="5,5" size="390,26" font="Regular;22" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="5,5" size="390,26" font="Regular;22" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget name="BlinkingPoint" pixmap="Nemesis.Flatline/record.png" position="400,8" zPosition="2" size="22,22" alphatest="on"/>
-		<widget source="CurrentTime" render="Label" position="465,5" size="90,28" font="Regular;22" halign="center" transparent="1">
+		<widget source="session.RecordState" render="Pixmap" pixmap="Nemesis.Flatline/record.png" position="400,8" zPosition="2" size="22,22" alphatest="on" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="465,5" size="90,28" font="Regular;22" halign="center" transparent="1">
 			<convert type="ClockToText">WithSeconds</convert>
 		</widget>
-		<widget source="Event_Now" render="Progress" pixmap="Nemesis.Flatline/now_progress.png" position="465,32" zPosition="1" size="90,9" borderWidth="1">
+		<widget source="session.Event_Now" render="Progress" pixmap="Nemesis.Flatline/now_progress.png" position="465,32" zPosition="1" size="90,9" borderWidth="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="Event_Now" render="Label" position="5,50" size="60,22" font="Regular;20" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="5,50" size="60,22" font="Regular;20" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="Event_Next" render="Label" position="5,80" size="60,22" font="Regular;20" transparent="1">
+		<widget source="session.Event_Next" render="Label" position="5,80" size="60,22" font="Regular;20" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="Event_Now" render="Label" position="80,50" size="380,22" font="Regular;20" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="80,50" size="380,22" font="Regular;20" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event_Next" render="Label" position="80,80" size="380,22" font="Regular;20" transparent="1">
+		<widget source="session.Event_Next" render="Label" position="80,80" size="380,22" font="Regular;20" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event_Now" render="Label" position="465,50" size="90,22" font="Regular;20" halign="right" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="465,50" size="90,22" font="Regular;20" halign="right" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget source="Event_Next" render="Label" position="465,80" size="90,22" font="Regular;20" halign="right" transparent="1">
+		<widget source="session.Event_Next" render="Label" position="465,80" size="90,22" font="Regular;20" halign="right" transparent="1">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
@@ -556,77 +569,6 @@
 		<widget name="datetime" position="10,395" size="140,35" font="Regular;21" foregroundColor="LabelForegroundText_1" />
 		<widget name="duration" position="150,395" size="120,35" font="Regular;21" foregroundColor="LabelForegroundText_1" />
 		<widget name="channel" position="280,395" size="270,35" font="Regular;21" foregroundColor="LabelForegroundText_1" />
-	</screen>
-
-	<screen name="HelpMenu" flags="wfNoBorder" position="0,0" size="720,576" title="Menu">
-		<widget name="list" position="70,100" size="420,378" scrollbarMode="showOnDemand" />
-		<widget name="rc" pixmap="rc.png" position="540,50" zPosition="10" size="154,475" transparent="1" alphatest="on"/>
-		<widget name="arrowup" pixmap="Nemesis.Flatline/arrowup.png" position="585,425" zPosition="11" size="38,40" transparent="1" alphatest="on"/>
-		<eLabel position="400,40" size="220,60" text="help..." font="Regular;30" foregroundColor="LabelForegroundText_1" />
-		<ePixmap name="wizard" pixmap="Nemesis.Flatline/wizard.png" position="440,350" zPosition="11" size="97,174" transparent="1" alphatest="on" />
-	</screen>
-
-	<screen name="InputBox" position="100,100" size="550,60" title="Input" >
-		<widget name="text" position="0,0" size="550,25" font="Regular;20" foregroundColor="LabelForegroundText_1"/>
-		<widget name="input" position="0,30" size="550,25" font="Regular;20" foregroundColor="LabelForegroundText_1" />
-	</screen>
-
-	<screen name="MessageBox" position="60,245" size="600,10" title="Message">
-		<widget name="text" position="65,8" size="520,0" font="Regular;22" foregroundColor="LabelForegroundText_1" />
-		<widget name="ErrorPixmap" pixmap="error.png" position="5,5" zPosition="3" size="53,53" alphatest="on" transparent="1" />
-		<widget name="QuestionPixmap" pixmap="question.png" position="5,5" zPosition="3" size="53,53" alphatest="on" transparent="1" />
-		<widget name="InfoPixmap" pixmap="info.png" position="5,5" zPosition="3" size="53,53" alphatest="on" transparent="1" />
-		<widget name="list" position="100,100" size="480,375" />
-		<applet type="onLayoutFinish">
-# this should be factored out into some helper code, but currently demonstrates applets.
-from enigma import eSize, ePoint
-
-orgwidth = self.instance.size().width()
-orgpos = self.instance.position()
-textsize = self["text"].getSize()
-
-# y size still must be fixed in font stuff...
-textsize = (textsize[0] + 50, textsize[1] + 50)
-offset = 0
-if self.type == self.TYPE_YESNO:
-	offset = 60
-wsizex = textsize[0] + 60
-wsizey = textsize[1] + offset
-if (280 > wsizex):
-	wsizex = 280
-wsize = (wsizex, wsizey)
-
-
-# resize
-self.instance.resize(eSize(*wsize))
-
-# resize label
-self["text"].instance.resize(eSize(*textsize))
-
-# move list
-listsize = (wsizex, 50)
-self["list"].instance.move(ePoint(0, textsize[1]))
-self["list"].instance.resize(eSize(*listsize))
-
-# center window
-newwidth = wsize[0]
-self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
-		</applet>
-	</screen>
-
-	<screen name="About" position="180,123" size="360,330" title="About">
-		<widget source="EnigmaVersion" render="Label" position="10,30" size="340,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<widget source="ImageVersion" render="Label" position="10,50" size="340,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<widget source="FPVersion" render="Label" position="10,90" size="340,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<widget source="TunerHeader" render="Label" position="10,110" size="340,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<widget source="Tuner0" render="Label" position="10,130" size="340,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<widget source="Tuner1" render="Label" position="10,150" size="340,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<widget source="Tuner2" render="Label" position="10,170" size="340,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<widget source="Tuner3" render="Label" position="10,190" size="340,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<widget source="HDDHeader" render="Label" position="10,210" size="340,20" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<widget source="hddA" render="Label" position="10,230" size="340,40" font="Regular;18" foregroundColor="LabelForegroundText_1" />
-		<ePixmap position="20,288" zPosition="1" size="100,30" pixmap="Nemesis.Flatline/nemesis.png" transparent="1" alphatest="on" />		
-		<ePixmap position="225,257" zPosition="1" size="119,65" pixmap="Nemesis.Flatline/logo.png" transparent="1" alphatest="on" />
 	</screen>
 
 </skin>

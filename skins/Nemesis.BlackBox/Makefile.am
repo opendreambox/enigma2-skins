@@ -1,0 +1,3 @@
+SUBDIRS = menu
+installdir = /usr/share/enigma2/Nemesis.BlackBox/
+install_DATA = *.png *.xml
