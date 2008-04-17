@@ -99,8 +99,16 @@
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap name="NimA" pixmap="Nemesis.Flatline/NimA.png" position="337,362" zPosition="5" size="33,21"/>
-		<ePixmap name="NimB" pixmap="Nemesis.Flatline/NimB.png" position="351,362" zPosition="5" size="33,21"/>
+		<widget source="session.FrontendInfo" render="Pixmap" position="337,362" size="33,21" pixmap="Nemesis.Flatline/NimA.png" zPosition="5" >
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="351,362" size="33,21" pixmap="Nemesis.Flatline/NimB.png" zPosition="5" >
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<widget source="session.TunerInfo" render="Pixmap" pixmap="Nemesis.Flatline/NimA_Active.png" position="337,362" size="33,21" zPosition="4" >
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">1</convert>
@@ -494,6 +502,7 @@
 		<widget source="global.CurrentTime" render="Label" position="465,5" size="90,28" font="Regular;22" halign="center" transparent="1">
 			<convert type="ClockToText">WithSeconds</convert>
 		</widget>
+
 		<widget source="session.Event_Now" render="Progress" pixmap="Nemesis.Flatline/now_progress.png" position="465,32" zPosition="1" size="90,9" borderWidth="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
