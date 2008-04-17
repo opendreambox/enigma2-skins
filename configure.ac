@@ -3,7 +3,6 @@ AM_INIT_AUTOMAKE(enigma2-skins, 1.0)
 
 AC_OUTPUT([
 ./Makefile
-./fonts/Makefile
 ./skins/Makefile
 ./skins/Nemesis.Blueline.Extended/Makefile
 ./skins/Nemesis.Greyline.Extended/Makefile
