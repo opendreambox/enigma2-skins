@@ -16,4 +16,13 @@ AC_OUTPUT([
 ./skins/Nemesis.Blueline/Makefile
 ./skins/Nemesis.Greenline.Single/Makefile
 ./skins/Nemesis.Blueline.Single/Makefile
+./skins/Nemesis.BlackBox/Makefile
+./skins/Nemesis.BlackBox/menu/Makefile
+./skins/Nemesis.ChromeLine/Makefile
+./skins/Nemesis.ChromeLine/menu/Makefile
+./skins/Nemesis.ChromeLine.Cobolt/Makefile
+./skins/Nemesis.ChromeLine.Cobolt/menu/Makefile
+./skins/Nemesis.GlassLine/Makefile
+./skins/Nemesis.GlassLine/menu/Makefile
+./skins/Nemesis.ShadowLine/Makefile
 ])
