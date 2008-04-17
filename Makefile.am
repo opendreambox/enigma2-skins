@@ -1,1 +1,1 @@
-SUBDIRS = fonts skins
+SUBDIRS = skins
