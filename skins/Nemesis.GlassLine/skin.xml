@@ -456,7 +456,7 @@
 		<eLabel name="nowPlaying" position="90,136" zPosition="1" size="413,16" text="Now Playing" font="Regular;14" foregroundColor="#ffc435" transparent="1" />
 		<widget name="title" position="90,152" zPosition="1" size="413,18" font="Regular;16" valign="top" transparent="1" />
 		<widget name="coverArt" position="516,55" zPosition="2" size="116,116" pixmap="Nemesis.GlassLine/no_coverArt.png" transparent="1" />
-		<ePixmap pixmap="Nemesis.GlassLine/mp_buttons.png" position="512,179" zPosition="2" size="109,13" alphatest="on" />
+		<ePixmap pixmap="skin_default/mp_buttons.png" position="512,179" zPosition="2" size="109,13" alphatest="on" />
 		<widget name="PositionGauge" position="93,181" zPosition="2" size="376,10" pointer="Nemesis.GlassLine/position_pointer.png:590,0" seek_pointer="Nemesis.GlassLine/position_pointer.png:590,0" transparent="1" />
 		<widget name="filelist" position="85,213" zPosition="1" size="550,138" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="playlist" position="85,364" zPosition="1" size="550,154" scrollbarMode="showOnDemand" transparent="1" selectionDisabled="1" />
