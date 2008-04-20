@@ -1,0 +1,420 @@
+<skin>
+	<!-- Nemesis FlatLine Picon Lava Skin -->
+	<!-- Colors (#AARRGGBB) -->
+	<colors>
+		<color name="white" value="#ffffff" />
+		<color name="lightgrey" value="#cccccc" />
+		<color name="grey" value="#999999" />
+		<color name="darkgrey" value="#4c4c4c" />
+		<color name="black" value="#000000" />
+		<color name="red" value="#ff0000" />
+		<color name="green" value="#00cc66" />
+		<color name="bright_green" value="#00ff00" />
+		<color name="blue" value="#0000ff" />
+		<color name="bright_blue" value="#66ffff" />
+		<color name="yellow" value="#f3ca09" />
+		<color name="transparent" value="#ffffffff" />
+		<color name="transpWhite" value="#77ffffff" />
+		<color name="transpGrey" value="#50333333" />
+		<color name="transpBlack" value="#65000000" />
+		<color name="dark" value="#40000000" />
+		<color name="background" value="#40000000" />
+		<color name="bg" value="#40000000" />
+		<color name="h1" value="#ffcc33" />
+		<color name="h2" value="#dadada" />
+	</colors>
+	<!-- Main screen colors (id=0 for Menu's, id=1 for LCD) -->
+	<windowstyle type="skinned" id="0">
+		<title offset="30,14" font="Regular;22" />
+		<color name="Background" color="#40000000" />
+		<color name="LabelForeground" color="#ffffff" />
+		<color name="ListboxBackground" color="#40000000" />
+		<color name="ListboxForeground" color="#ffffff" />
+		<color name="ListboxSelectedBackground" color="#35667277" />
+		<color name="ListboxSelectedForeground" color="#ffffff" />
+		<color name="ListboxMarkedBackground" color="#990000" />
+		<color name="ListboxMarkedForeground" color="#ffffff" />
+		<color name="ListboxMarkedAndSelectedBackground" color="#ff0000" />
+		<color name="ListboxMarkedAndSelectedForeground" color="#ffffff" />
+		<color name="WindowTitleForeground" color="#ffffff" />
+		<color name="WindowTitleBackground" color="#40000000" />
+		<borderset name="bsWindow">
+			<pixmap pos="bpTopLeft" filename="Nemesis.Flatline.Picon.Lava/bs_tl.png" />
+			<pixmap pos="bpTop" filename="Nemesis.Flatline.Picon.Lava/bs_t.png" />
+			<pixmap pos="bpTopRight" filename="Nemesis.Flatline.Picon.Lava/bs_tr.png" />
+			<pixmap pos="bpLeft" filename="Nemesis.Flatline.Picon.Lava/bs_l.png" />
+			<pixmap pos="bpRight" filename="Nemesis.Flatline.Picon.Lava/bs_r.png" />
+			<pixmap pos="bpBottomLeft" filename="Nemesis.Flatline.Picon.Lava/bs_bl.png" />
+			<pixmap pos="bpBottom" filename="Nemesis.Flatline.Picon.Lava/bs_b.png" />
+			<pixmap pos="bpBottomRight" filename="Nemesis.Flatline.Picon.Lava/bs_br.png" />
+		</borderset>
+	</windowstyle>
+	<!-- this is for LCD -->
+	<windowstyle type="skinned" id="1">
+		<color name="Background" color="#000000" />
+		<color name="LabelForeground" color="#ffffff" />
+		<color name="ListboxBackground" color="#000000" />
+		<color name="ListboxForeground" color="#ffffff" />
+		<color name="ListboxSelectedBackground" color="#000000" />
+		<color name="ListboxSelectedForeground" color="#ffffff" />
+		<color name="ListboxMarkedBackground" color="#000000" />
+		<color name="ListboxMarkedForeground" color="#ffffff" />
+		<color name="ListboxMarkedAndSelectedBackground" color="#000000" />
+		<color name="ListboxMarkedAndSelectedForeground" color="#ffffff" />
+		<color name="WindowTitleForeground" color="#ffffff" />
+		<color name="WindowTitleBackground" color="#000000" />
+	</windowstyle>
+	<!-- Fonts -->
+	<fonts>
+		<font filename="lcd.ttf" name="LCD" scale="100" />
+		<font filename="nmsbd.ttf" name="Regular" scale="95" />
+		<font filename="tuxtxt.ttf" name="Console" scale="100" />
+		<font filename="ae_AlMateen.ttf" name="Replacement" scale="90" is_replacement="1" />
+	</fonts>
+	<!-- Infobar -->
+	<screen name="InfoBar" position="45,360" size="630,190" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/ib_main.png" position="-5,0" zPosition="-2" size="635,190" />
+		<widget source="session.CurrentService" render="Picon" position="25,11" size="70,53" alphatest="on">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/picon_overlay.png" position="25,11" zPosition="1" size="70,53" alphatest="on" />
+		<widget source="session.Event_Now" render="Progress" pixmap="Nemesis.Flatline.Picon.Lava/now_progress.png" position="24,65" zPosition="1" size="72,25" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/NimA_Active.png" position="115,28" size="34,22" alphatest="on" >
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/NimB_Active.png" position="128,28" size="34,22" alphatest="on" >
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/NimA.png" position="115,28" zPosition="1" size="34,22" alphatest="on" >
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/NimB.png" position="128,28" zPosition="1" size="34,22" alphatest="on" >
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/ico_crypt_on.png" position="177,34" size="19,12" alphatest="on">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/ico_txt_on.png" position="202,34" size="24,16" alphatest="on" >
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/ico_format_on.png" position="227,34" size="18,16" alphatest="on" >
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/ico_dolby_on.png" position="251,34" size="20,12" alphatest="on" >
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/ico_rec.png" position="278,35" size="28,10" alphatest="on" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="115,55" size="345,22" font="Regular;18" valign="top" backgroundColor="#001e4c" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="530,55" size="80,22" font="Regular;18" valign="top" halign="right" backgroundColor="#284674" transparent="1" >
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="SNR" position="106,80" size="37,19" font="Regular;14" valign="top" foregroundColor="lightgrey" backgroundColor="#151818" transparent="1" />
+		<widget source="session.FrontendStatus" render="Label" position="139,80" size="65,19" font="Regular;14" valign="top" backgroundColor="#151818" transparent="1">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<eLabel text="AGC" position="215,80" size="39,19" font="Regular;14" valign="top" foregroundColor="lightgrey" backgroundColor="#151818" transparent="1" />
+		<widget source="session.FrontendStatus" render="Label" position="251,80" size="41,19" font="Regular;14" valign="top" backgroundColor="#151818" transparent="1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<eLabel text="BER" position="301,80" size="35,19" font="Regular;14" valign="top" foregroundColor="lightgrey" backgroundColor="#151818" transparent="1" />
+		<widget source="session.FrontendStatus" render="Label" position="336,80" size="45,19" font="Regular;14" valign="top" backgroundColor="#151818" transparent="1">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="400,80" size="210,16" font="Regular;14" valign="top" halign="right" backgroundColor="#001e4c" transparent="1">
+			<convert type="ServiceName">Provider</convert>
+		</widget>
+		<ePixmap name="Now_Arrow" pixmap="Nemesis.Flatline.Picon.Lava/now_arrow.png" position="25,105" size="15,16" alphatest="on" />
+		<widget source="session.Event_Now" render="Label" position="45,103" size="60,22" font="Regular;20" foregroundColor="h1" backgroundColor="bg" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="105,103" size="405,22" font="Regular;20" noWrap="1" foregroundColor="h1" backgroundColor="bg" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="517,103" size="95,22" font="Regular;20" halign="right" foregroundColor="h1" backgroundColor="bg" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="45,129" size="60,22" font="Regular;20" foregroundColor="h2" backgroundColor="bg" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="105,129" size="405,22" font="Regular;20" noWrap="1" foregroundColor="h2" backgroundColor="bg" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="517,129" size="95,22" font="Regular;20" halign="right" foregroundColor="h2" backgroundColor="bg" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/button_grey.png" position="40,158" size="22,22" alphatest="on" />
+		<widget source="RecordingPossible" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/button_red.png" position="42,160" zPosition="1" size="18,18" alphatest="on">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel text="Record" position="65,161" size="120,18" font="Regular;16" valign="top" foregroundColor="#7f7f7f" backgroundColor="#4f585a" transparent="1" />
+		<widget source="RecordingPossible" render="FixedLabel" text="Record" position="65,161" zPosition="1" size="120,18" font="Regular;16" valign="top" backgroundColor="#4f585a" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/button_grey.png" position="185,158" size="22,22" alphatest="on" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/button_green.png" position="187,160" zPosition="1" size="18,18" alphatest="on">
+			<convert type="ServiceInfo">SubservicesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel text="Subservices" position="210,161" size="120,18" font="Regular;16" valign="top" transparent="1" foregroundColor="#7f7f7f" backgroundColor="#4f585a" />
+		<widget source="session.CurrentService" render="FixedLabel" text="Subservices" position="210,161" zPosition="1" size="120,18" font="Regular;16" valign="top" backgroundColor="#4f585a" transparent="1">
+			<convert type="ServiceInfo">SubservicesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/button_grey.png" position="330,158" size="22,22" alphatest="on" />
+		<widget source="TimeshiftPossible" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/button_yellow.png" position="332,160" zPosition="1" size="18,18" alphatest="on">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel text="Timeshift" position="355,161" size="120,18" font="Regular;16" valign="top" foregroundColor="#9dabc1" backgroundColor="#4f585a" transparent="1" />
+		<widget source="TimeshiftPossible" render="FixedLabel" text="Timeshift" position="355,161" zPosition="1" size="120,18" font="Regular;16" valign="top" backgroundColor="#4f585a" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/button_grey.png" position="475,158" size="22,22" alphatest="on" />
+		<widget source="ExtensionsAvailable" render="Pixmap" pixmap="Nemesis.Flatline.Picon.Lava/button_blue.png" position="477,160" zPosition="1" size="18,18" alphatest="on">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel text="Extensions" position="500,161" size="120,18" font="Regular;16" valign="top" foregroundColor="#9dabc1" backgroundColor="#4f585a" transparent="1" />
+		<widget source="ExtensionsAvailable" render="FixedLabel" text="Extensions" position="500,161" zPosition="1" size="120,18" font="Regular;16" valign="top" backgroundColor="#4f585a" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	<!-- Channel selection - TV -->
+	<screen name="ChannelSelection" position="90,95" size="560,430" title="Channel Selection">
+		<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+		<widget name="key_green" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+		<widget name="key_yellow" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+		<widget name="key_blue" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
+		<widget name="list" position="0,40" size="560,280" scrollbarMode="showOnDemand" />
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/border_eventinfo.png" position="0,320" zPosition="1" size="560,110" transparent="1" alphatest="on" />
+		<widget source="ServiceEvent" render="Label" position="10,325" zPosition="1" size="460,20" font="Regular;19" noWrap="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<ePixmap pixmap="skin_default/icons/clock.png" position="478,328" zPosition="1" size="14,14" alphatest="on" />
+		<widget source="global.CurrentTime" render="Label" position="490,325" zPosition="1" size="60,20" font="Regular;19" halign="right">
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="210,345" zPosition="1" size="340,20" font="Regular;19" halign="right" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="10,345" zPosition="1" size="60,22" font="Regular;19">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="70,345" zPosition="1" size="70,22" font="Regular;19">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Progress" position="145,348" zPosition="1" pixmap="skin_default/progress_medium.png" size="80,12" borderWidth="2" borderColor="#cccccc">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="10,366" zPosition="1" size="540,58" font="Regular;18" foregroundColor="#cccccc">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+	</screen>
+	<!-- EPG Selection - Multi -->
+	<screen name="EPGSelectionMulti" position="90,95" size="560,430" title="EPG Selection">
+		<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+		<widget name="key_green" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+		<widget name="key_yellow" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+		<widget name="key_blue" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/border_epg.png" position="5,70" size="551,361" alphatest="on" />
+		<widget name="now_button_sel" pixmap="Nemesis.Flatline.Picon.Lava/epg_now.png" position="5,50" zPosition="1" size="320,25" alphatest="on" />
+		<widget name="next_button_sel" pixmap="Nemesis.Flatline.Picon.Lava/epg_next.png" position="5,50" zPosition="1" size="320,25" alphatest="on" />
+		<widget name="more_button_sel" pixmap="Nemesis.Flatline.Picon.Lava/epg_more.png" position="5,50" zPosition="1" size="320,25" alphatest="on" />
+		<widget name="now_text" position="5,50" zPosition="2" size="108,22" text="NOW" font="Regular;16" halign="center" valign="center" backgroundColor="background" transparent="1" />
+		<widget name="next_text" position="111,50" zPosition="2" size="108,22" text="NEXT" font="Regular;16" halign="center" valign="center" backgroundColor="background" transparent="1" />
+		<widget name="more_text" position="216,50" zPosition="2" size="108,22" text="MORE" font="Regular;16" halign="center" valign="center" backgroundColor="background" transparent="1" />
+		<widget name="date" position="410,35" size="140,45" font="Regular;18" valign="center" halign="right" />
+		<widget name="list" position="11,75" size="540,350" scrollbarMode="showOnDemand" />
+	</screen>
+	<!-- Graphical Multi EPG -->
+	<screen name="GraphMultiEPG" position="90,90" size="560,440" title="Electronic Program Guide">
+		<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+		<widget name="key_green" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+		<widget name="timeline_text" position="0,41" size="560,20" />
+		<widget name="list" position="0,65" size="560,270" EntryBorderColor="#292a2b" EntryBackgroundColor="#48494c" EntryBackgroundColorSelected="#35667277" scrollbarMode="showOnDemand" />
+		<widget name="timeline0" position="0,65" zPosition="1" size="1,270" pixmap="skin_default/timeline.png" />
+		<widget name="timeline1" position="0,65" zPosition="1" size="1,270" pixmap="skin_default/timeline.png" />
+		<widget name="timeline2" position="0,65" zPosition="1" size="1,270" pixmap="skin_default/timeline.png" />
+		<widget name="timeline3" position="0,65" zPosition="1" size="1,270" pixmap="skin_default/timeline.png" />
+		<widget name="timeline4" position="0,65" zPosition="1" size="1,270" pixmap="skin_default/timeline.png" />
+		<widget name="timeline5" position="0,65" zPosition="1" size="1,270" pixmap="skin_default/timeline.png" />
+		<widget name="timeline_now" position="0,64" zPosition="2" size="19,273" pixmap="skin_default/timeline-now.png" alphatest="on" />
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/border_multiepg.png" position="0,42" zPosition="1" size="560,398" transparent="1" alphatest="on" />
+		<widget source="Event" render="Label" position="10,337" zPosition="1" size="460,20" font="Regular;19" noWrap="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<ePixmap pixmap="skin_default/icons/clock.png" position="473,339" zPosition="1" size="14,14" alphatest="on" />
+		<widget source="global.CurrentTime" render="Label" position="490,337" zPosition="1" size="60,20" font="Regular;19" halign="right">
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="Event" render="Label" position="10,357" zPosition="1" size="50,22" font="Regular;18">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="Event" render="Label" position="60,357" zPosition="1" size="70,22" font="Regular;18">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Progress" position="125,360" zPosition="1" pixmap="skin_default/progress_medium.png" size="65,11" borderWidth="2" borderColor="#cccccc">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="Event" render="Label" position="205,357" zPosition="1" size="350,20" font="Regular;18" noWrap="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:(%A)</convert>
+		</widget>
+		<widget source="Event" render="Label" position="10,377" zPosition="1" size="540,60" font="Regular;18" foregroundColor="#cccccc">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+	</screen>
+	<!-- Mediaplayer -->
+	<screen name="MediaPlayer" position="0,0" size="720,576" title="MediaPlayer">
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/mediaplayer_top.png" position="0,0" zPosition="-2" size="720,165" />
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/mediaplayer_middle.png" position="0,165" zPosition="-2" size="720,296" />
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/mediaplayer_bottom.png" position="0,461" zPosition="-2" size="720,115" />
+		<widget name="artisttext" position="233,40" size="65,20" font="Regular;18" valign="top" foregroundColor="h2" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="artist" position="298,40" size="240,20" font="Regular;18" valign="top" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="albumtext" position="233,60" size="65,20" font="Regular;18" valign="top" foregroundColor="h2" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="album" position="298,60" size="240,20" font="Regular;18" valign="top" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="yeartext" position="233,80" size="65,20" font="Regular;18" valign="top" foregroundColor="h2" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="year" position="298,80" size="240,20" font="Regular;18" valign="top" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="genretext" position="233,100" size="65,20" font="Regular;18" valign="top" foregroundColor="h2" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="genre" position="298,100" size="240,20" font="Regular;18" valign="top" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="titletext" position="233,120" size="65,20" font="Regular;18" valign="top" foregroundColor="h2" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="title" position="298,120" size="240,20" font="Regular;18" valign="top" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
+		<widget name="coverArt" position="549,38" zPosition="2" size="116,116" pixmap="skin_default/no_coverArt.png" transparent="1" alphatest="on" />
+		<ePixmap pixmap="Nemesis.Flatline.Picon.Lava/position_pointer_bg.png" position="240,143" zPosition="1" size="290,17" alphatest="on" />
+		<widget name="PositionGauge" pointer="Nemesis.Flatline.Picon.Lava/position_pointer.png:363,0" position="242,150" zPosition="2" size="288,11" transparent="1" />
+		<eLabel text="Filelist" position="85,184" size="155,25" font="Regular;22" valign="top" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="filelist" position="71,217" size="185,225" transparent="1" scrollbarMode="showOnDemand" />
+		<eLabel text="Playlist" position="290,184" size="330,25" font="Regular;22" valign="top" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="playlist" position="262,217" size="379,286" transparent="1" scrollbarMode="showOnDemand" selectionDisabled="1" />
+		<widget name="currenttext" position="69,527" size="597,22" font="Regular;18" halign="center" foregroundColor="h2" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
+	</screen>
+	<!-- Main menu -->
+	<screen name="menu_mainmenu" position="170,150" size="380,285" title="Main menu">
+		<widget source="title" render="Label" position="170,10" size="200,35" font="Regular;23" />
+		<widget source="menu" render="Listbox" position="170,55" size="200,225" scrollbarMode="showOnDemand">
+			<convert type="StringList" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/dvd_player.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">dvd_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/subtitles.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">subtitle_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/media_player.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">media_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/timer.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">timer_edit</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/scart.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">scart_switch</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/information.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/plugins.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">plugin_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/setup.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/shutdown.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	<!-- Movieplayer -->
+	<screen name="MoviePlayer" position="49,440" size="622,107" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-1" size="622,107" pixmap="Nemesis.Flatline.Picon.Lava/movieplayer.png" transparent="1" alphatest="on" />
+		<widget source="session.CurrentService" render="Label" position="25,32" size="420,37" font="Regular;22" halign="left" valign="top" backgroundColor="bg" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="450,32" size="75,18" font="Regular;20" halign="center" valign="top" backgroundColor="bg" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel text="/" position="525,32" size="10,18" font="Regular;22" halign="center" valign="top" backgroundColor="bg" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="535,32" size="75,18" font="Regular;20" halign="center" valign="top" backgroundColor="bg" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="PositionGauge" pointer="Nemesis.Flatline.Picon.Lava/position_pointer.png:363,0" position="131,85" size="383,11" transparent="1">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+	</screen>
+	<!-- Movieselection -->
+	<screen name="MovieSelection" position="90,83" size="560,445" title="Select a movie">
+		<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/blue.png" position="420,0" size="140,40" alphatest="on" />
+		<widget name="key_red" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+		<widget name="key_green" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+		<widget name="key_yellow" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+		<widget name="key_blue" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
+		<widget name="waitingtext" position="0,45" size="560,395" zPosition="4" font="Regular;22" halign="center" valign="center" />
+		<widget name="list" position="0,40" size="560,375" zPosition="2" scrollbarMode="showOnDemand" />
+		<widget name="DescriptionBorder" pixmap="Nemesis.Flatline.Picon.Lava/border_eventinfo.png" position="0,315" zPosition="1" size="560,110" transparent="1" alphatest="on" />
+		<widget source="Service" render="Label" position="5,318" zPosition="1" size="480,35" font="Regular;17" foregroundColor="#cccccc">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="495,318" zPosition="1" size="60,22" font="Regular;17" halign="right">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="380,337" zPosition="2" size="175,22" font="Regular;17" halign="right">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="5,357" zPosition="1" size="550,63" font="Regular;19">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<widget name="freeDiskSpace" position="10,427" size="540,20" font="Regular;19" halign="right" valign="center" foregroundColor="h2" />
+	</screen>
+	<!-- Volume -->
+	<screen name="Volume" flags="wfNoBorder" position="410,100" zPosition="1" size="223,24" backgroundColor="transparent" title="Volume" >
+		<widget name="Volume" zPosition="1" position="21,0" size="178,24" pixmap="Nemesis.Flatline.Picon.Lava/progress_volume.png" backgroundColor="transparent" />
+		<ePixmap position="0,0" zPosition="2" size="223,24" pixmap="Nemesis.Flatline.Picon.Lava/volume.png" transparent="1" alphatest="on" />
+	</screen>
+</skin>
