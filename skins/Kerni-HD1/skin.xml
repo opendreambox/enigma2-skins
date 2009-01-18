@@ -121,7 +121,7 @@
 		</widget>
 
 		<!-- eLabel 												text="REC"   position="870,9"  zPosition="4" size="45,17" font="Regular;16" valign="top" halign="center" foregroundColor="#ff2525" 	backgroundColor="#20000000" transparent="1"/ -->
-		<widget source="session.RecordState" 	render="FixedLabel" text="REC"   position="870,9"  zPosition="5" size="45,17" font="Regular;16" valign="top" halign="center" foregroundColor="black" 	backgroundColor="#20000000" transparent="1">
+		<widget source="session.RecordState" 	render="FixedLabel" text="REC"   position="870,9"  zPosition="5" size="45,17" font="Regular;16" valign="top" halign="center" foregroundColor="#ff2525" 	backgroundColor="#20000000" transparent="1">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget source="session.CurrentService" render="FixedLabel" text="SUB"   position="915,9"  zPosition="1" size="45,17" font="Regular;16" valign="top" halign="center" foregroundColor="#389416" 	backgroundColor="#20000000" transparent="1">
