@@ -24,4 +24,8 @@ AC_OUTPUT([
 ./skins/Nemesis.GlassLine/Makefile
 ./skins/Nemesis.GlassLine/menu/Makefile
 ./skins/Nemesis.ShadowLine/Makefile
+./skins/Kerni-HD1/Makefile
+./skins/Kerni-HD1/menu/Makefile
+./skins/Kerni-HD1/icons/Makefile
+./skins/Kerni-HD1/buttons/Makefile
 ])
