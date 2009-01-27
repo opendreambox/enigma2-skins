@@ -4,4 +4,4 @@ SUBDIRS = \
 	Nemesis.Greenline.Extended Nemesis.Greenline.Single Nemesis.Greyline \
 	Nemesis.Greyline.Extended Nemesis.Greyline.Single Nemesis.BlackBox \
 	Nemesis.ChromeLine Nemesis.ChromeLine.Cobolt Nemesis.GlassLine \
-	Nemesis.ShadowLine Kerni-HD1
+	Nemesis.ShadowLine Kerni-HD1 dreamTV-HD

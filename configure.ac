@@ -28,4 +28,8 @@ AC_OUTPUT([
 ./skins/Kerni-HD1/menu/Makefile
 ./skins/Kerni-HD1/icons/Makefile
 ./skins/Kerni-HD1/buttons/Makefile
+./skins/dreamTV-HD/Makefile
+./skins/dreamTV-HD/menu/Makefile
+./skins/dreamTV-HD/icons/Makefile
+./skins/dreamTV-HD/buttons/Makefile
 ])
