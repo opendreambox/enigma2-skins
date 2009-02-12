@@ -246,7 +246,17 @@
 		<widget source="session.CurrentService" render="Label" position="50,450" zPosition="1" size="620,25" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Cutlist" position="64,100" zPosition="1" size="175,270" scrollbarMode="showOnDemand" transparent="1" />
+		<widget source="cutlist" position="64,100" zPosition="1" size="175,270" scrollbarMode="showOnDemand" transparent="1" render="Listbox" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(size=(125, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
+						MultiContentEntryText(pos=(125,0), size=(50, 20), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
+					],
+				 "fonts": [gFont("Regular", 18)],
+				 "itemHeight": 20
+				}
+			</convert>
+		</widget>
 		<widget name="Timeline" position="50,485" size="615,20" backgroundColor="#384849" pointer="Nemesis.GlassLine/position_pointer.png:590,-3" foregroundColor="black" />
 		<ePixmap pixmap="Nemesis.GlassLine/mp_buttons.png" position="274,515" size="172,37" alphatest="on" />
 	</screen>
