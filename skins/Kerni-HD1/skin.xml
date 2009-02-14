@@ -201,7 +201,22 @@
 		</widget>
 
 		<!-- Tuner Status Start -->
-		<eLabel text="Tuner:" 												 position=" 975,108" zPosition="4" size="60,20" font="Regular;18" halign="left"   foregroundColor="grey"     backgroundColor="transpBlack" transparent="1" />
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S" position="960,108" size="60,20" font="Regular;18" halign="right" foregroundColor="green" backgroundColor="transpBlack" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C" position="960,108" size="60,20" font="Regular;18" halign="right" foregroundColor="green" backgroundColor="transpBlack" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T" position="960,108" size="60,20" font="Regular;18" halign="right" foregroundColor="green" backgroundColor="transpBlack" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+
 		<eLabel 													text="A" position="1040,108" zPosition="1" size="20,20" font="Regular;18" halign="center" foregroundColor="darkgrey" backgroundColor="transpBlack" transparent="1" />
 		<eLabel 													text="B" position="1065,108" zPosition="1" size="20,20" font="Regular;18" halign="center" foregroundColor="darkgrey" backgroundColor="transpBlack" transparent="1" />
 		<eLabel 													text="C" position="1090,108" zPosition="1" size="20,20" font="Regular;18" halign="center" foregroundColor="darkgrey" backgroundColor="transpBlack" transparent="1" />
