@@ -1028,8 +1028,8 @@
 		<eLabel 				position="0,0" 		size="800,2" backgroundColor="grey" />
 		<widget name="list" 	position="0,0" 		size="801,452" scrollbarMode="showOnDemand" />
 		<eLabel 				position="0,450" 	size="800,2" backgroundColor="grey" />
-		<ePixmap pixmap="dTV-HD_LE/button300.png"  position=" 80,464"  zPosition="1" size="300,38" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD_LE/button300.png"  position="420,464"  zPosition="1" size="300,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button300.png"  position=" 80,464"  zPosition="1" size="300,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button300.png"  position="420,464"  zPosition="1" size="300,38" alphatest="blend" />
 		<widget name="red" 						position=" 80,463"	zPosition="2" size="300,38" font="Regular;24" halign="center" valign="center" foregroundColor="red"   backgroundColor="darkgrey" transparent="1"/>
 		<widget name="green" 					position="420,463" 	zPosition="2" size="300,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1"/>
 	</screen>
