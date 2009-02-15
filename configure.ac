@@ -32,4 +32,9 @@ AC_OUTPUT([
 ./skins/dreamTV-HD/menu/Makefile
 ./skins/dreamTV-HD/icons/Makefile
 ./skins/dreamTV-HD/buttons/Makefile
+./skins/dTV-HD/Makefile
+./skins/dTV-HD/menu/Makefile
+./skins/dTV-HD/icons/Makefile
+./skins/dTV-HD/extra_icons/Makefile
+./skins/dTV-HD/buttons/Makefile
 ])
