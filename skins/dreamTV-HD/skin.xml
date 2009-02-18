@@ -397,6 +397,10 @@
 			<convert type="MenuEntryCompare">factory_reset</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
+		<widget source="menu" render="Pixmap" pixmap="dreamTV-HD/icons/swm.png" position="95,250" size="110,110" alphatest="blend">
+			<convert type="MenuEntryCompare">software_manager</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 	<screen name="menu_scan" position="339,84" size="602,553" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel position="1,1" size="600,552" backgroundColor="transpBlack" zPosition="-1"/>
@@ -1029,7 +1033,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
 		<widget name="ButtonRedtext" position=" 120,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="ButtonBluetext" position="390,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
+		<widget name="ButtonBluetext" position="390,525" size="550,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="90,100" size="1100,560" title="Network test...">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
@@ -1536,6 +1540,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="rescantext" position="540,525" size="170,27" zPosition="1" font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
 		<ePixmap position="940,400" size="140,110" zPosition="2" pixmap="dreamTV-HD/icons/wlan.png" transparent="1" alphatest="blend"/>
 	</screen>
+
 	<screen name="UpdatePluginMenu" position="339,84" size="602,553" title="Softwaremanager..." backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel position="1,1" size="600,552" backgroundColor="transpBlack" zPosition="-1"/>
 		<eLabel position="1,1" size="600,2" backgroundColor="grey" zPosition="5"/>
@@ -1561,8 +1566,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				{"template": [
 						MultiContentEntryText(pos = (0, 0), size = (290, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
 					],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 440
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 230
 				}
 			</convert>
 		</widget>
@@ -1590,13 +1595,34 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget name="config" 								position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand" transparent="1" />            
 	</screen>
-	<screen name="PacketManager" position="340,134" size="600,502" title="IPKG upgrade...">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="list" 	position="15,15" size="570,424" zPosition="3" scrollbarMode="showOnDemand" />
-		<widget name="status" 	position="15,15" size="570,424"  zPosition="4" font="Regular;22" halign="center" valign="center" />
-		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="closetext" 	position="50,467" size="250,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="red"/>
-		<widget name="reloadtext" 	position="300,467" size="250,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="green"/>
+	<screen name="PacketManager" position="240,134" size="800,502" title="IPKG upgrade...">
+		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="list" render="Listbox"  position="15,20" size="770,424" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 5), size = (670, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (10, 35), size = (670, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (690, 5), size = (48, 48), png = 4), # index 4 is the status pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (5, 58), size = (0, 0), png = 5), # index 4 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+
+		<eLabel position="15,19"  size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,79"  size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,139" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,199" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,259" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,319" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,379" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,439" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+
+		<eLabel position="0,460" size="800,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="closetext" 	position="150,467" size="250,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="red"/>
+		<widget name="reloadtext" 	position="400,467" size="250,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="green"/>
 	</screen>
 	<screen name="Ipkg" position="340,134" size="600,502" title="Installing Software...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
@@ -1615,6 +1641,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="red" position="0,0" size="0,0"/>
 		<widget name="yellow" position="0,0" size="0,0"/>
 		<widget name="blue" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="IPKGMenu" position="340,134" size="600,502" title="Select IPKG source....." >
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
+		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="closetext" 			position=" 40,467" size="250,30" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
+		<widget name="edittext" 			position="310,467" size="250,30" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
 	</screen>
 	<screen name="IPKGSource" position="100,134" size="1080,102" title="IPKG source">
 		<eLabel position="0,0" size="1080,2" backgroundColor="grey" zPosition="5"/>
@@ -1646,6 +1679,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="config" 	position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
+
 	<screen name="IMDB" position="90,100" size="1100,560" title="IMDb Details Plugin">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
 		<widget name="titellabel" position="20,20" size="580,28" font="Regular;25" valign="center" transparent="1"/>
