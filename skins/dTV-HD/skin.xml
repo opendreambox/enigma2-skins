@@ -32,7 +32,7 @@
 		<color name="listbox" 			value="#0f56a4"/>
 	</colors>
 	<fonts>
-		<font filename="lcd.ttf" 	name="LCD" 			scale="100"/>
+		<font filename="lcd.ttf" 			name="LCD" 			scale="100"/>
 		<font filename="nmsbd.ttf" 			name="Regular" 		scale="100"/>
 		<font filename="ae_AlMateen.ttf" 	name="Replacement" 	scale="100" replacement="1"/>
 		<font filename="tuxtxt.ttf" 		name="Console" 		scale="100"/>
@@ -44,7 +44,7 @@
 		<color name="ListboxBackground" 					color="#000000"/>
 		<color name="ListboxForeground" 					color="#ffffff"/>
 
-		<color name="ListboxSelectedBackground" 			color="#2b393a"/>
+		<color name="ListboxSelectedBackground" 			color="#00375b"/>
 		<color name="ListboxSelectedForeground" 			color="#ffffff"/>
 
 		<color name="ListboxMarkedBackground" 				color="#3658a4"/>
@@ -461,21 +461,21 @@
 		</widget>
 	</screen>
 
-	<screen name="About" position="255,100" size="770,555" title="About" backgroundColor="transparent" >
+	<screen name="About" 					position="255,100" 	size="770,555" 	title="About" >
 		<eLabel position="0,0" size="770,2" backgroundColor="grey" />
-		<widget source="EnigmaVersion" render="Label" position="11,120" size="580,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="ImageVersion" render="Label" position="11,160" size="580,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="FPVersion" render="Label" position="11,200" size="580,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="TunerHeader" render="Label" position="11,250" size="580,25" font="Regular;24" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="Tuner0" render="Label" position="11,290" size="580,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="Tuner1" render="Label" position="11,325" size="580,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="Tuner2" render="Label" position="11,360" size="580,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="Tuner3" render="Label" position="11,395" size="580,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="HDDHeader" render="Label" position="11,445" size="580,25" font="Regular;24" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="hddA" render="Label" position="11,485" size="580,50" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="EnigmaVersion" 	render="Label" position="11,50"  size="550,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="ImageVersion" 	render="Label" position="11,80"  size="550,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="FPVersion" 		render="Label" position="11,120" size="550,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="TunerHeader" 	render="Label" position="11,170" size="550,25" font="Regular;24" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="Tuner0" 		render="Label" position="11,210" size="550,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="Tuner1" 		render="Label" position="11,245" size="550,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="Tuner2" 		render="Label" position="11,280" size="550,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="Tuner3" 		render="Label" position="11,315" size="550,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="HDDHeader" 		render="Label" position="11,365" size="550,25" font="Regular;24" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="hddA" 			render="Label" position="11,405" size="550,50" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
 
-		<eLabel  position="0,330" size="770,2" backgroundColor="grey" />
-		<ePixmap position="510,352" size="200,110" pixmap="dTV-HD/icons/kerni.png" alphatest="blend" />
+		<eLabel  									   position="0,518"  size="770,2" backgroundColor="grey" />
+		<ePixmap 									   position="540,400" size="200,110" pixmap="dTV-HD/icons/kerni.png" alphatest="blend" />
 	</screen>
 	<screen name="AdapterSetup" 			position="90,90" 	size="1100,570" title="Network Setup" >
 		<eLabel 					 position="0,0" 	size="1100,2" 	backgroundColor="grey" />
@@ -922,9 +922,8 @@
 		<eLabel 					  position="780,0" size="2,518" 	backgroundColor="grey" />
 		<eLabel 					  position="0,518" size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position="820,532" size="250,38" zPosition="1" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="410,532" size="250,38" zPosition="1" alphatest="blend" />
 		<widget name="ButtonRedtext" 		position="820,531" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="ButtonBluetext" 		position="410,531" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="ButtonBluetext" 		position="410,531" size="560,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1"/>
 	</screen>
 	<screen name="NetworkAdapterTest" 		position="90,90" 	size="1100,570" title="Network test..." >
 		<eLabel 					    	position="0,0" size="1100,2" 	backgroundColor="grey" />
@@ -1704,6 +1703,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget name="config" 								position="640,370" 	size="520,150" zPosition="14" scrollbarMode="showOnDemand"  transparent="1"/>            
 	</screen>
+
 	<screen name="UpdatePluginMenu" 		position="319,74" 	size="642,572"  title="Softwaremanager..." backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="1,1" size="640,570" zPosition="-5" alphatest="blend"/>
 		<eLabel position="21,99" size="600,2" backgroundColor="grey" zPosition="5"/>
@@ -1725,8 +1725,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				{"template": [
 						MultiContentEntryText(pos = (0, 0), size = (290, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
 					],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 440
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 230
 				}
 			</convert>
 		</widget>
@@ -1738,15 +1738,37 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1"/>
 	</screen>
-	<screen name="PacketManager" 			position="340,125" 	size="600,502"  title="IPKG upgrade...">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="list" 	position="15,10" size="570,416" zPosition="3" scrollbarMode="showOnDemand" />
-		<widget name="status" 	position="15,10" size="570,416" zPosition="4" font="Regular;22" halign="center" valign="center" />
-		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<ePixmap pixmap="dTV-HD/button.png" position=" 40,464" size="250,38" zPosition="1" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="310,464" size="250,38" zPosition="1" alphatest="blend" />
-		<widget name="closetext" 			position=" 40,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
-		<widget name="reloadtext" 			position="310,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
+	<screen name="PacketManager" 			position="240,125" 	size="800,502"  title="IPKG upgrade...">
+		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
+
+		<widget source="list" render="Listbox"  position="5,15" size="790,420" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (5, 5), size = (690, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (5, 35), size = (690, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (700, 5), size = (48, 48), png = 4), # index 4 is the status pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (5, 58), size = (0, 0), png = 5), # index 4 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+
+		<eLabel position="5,14"  size="762,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="5,74"  size="762,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="5,134" size="762,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="5,194" size="762,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="5,254" size="762,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="5,314" size="762,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="5,374" size="762,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="5,434" size="762,2" backgroundColor="darkgrey" zPosition="5"/>
+
+		<eLabel position="0,450" size="800,2" backgroundColor="grey" zPosition="5"/>
+		<ePixmap pixmap="dTV-HD/button.png" position="140,464" size="250,38" zPosition="1" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="410,464" size="250,38" zPosition="1" alphatest="blend" />
+		<widget name="closetext" 			position="140,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
+		<widget name="reloadtext" 			position="410,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
 	</screen>
 	<screen name="Ipkg" 					position="340,125" 	size="600,502"  title="Installing Software...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
@@ -1770,6 +1792,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="IPKGSource" 				position="150,125" 	size="980,102"  title="IPKG source">
 		<eLabel position="0,0" size="1080,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="text" position="10,40" size="1060,25" font="Regular;22" foregroundColor="white" />
+	</screen>
+	<screen name="IPKGMenu" 				position="340,125" 	size="600,502"  title="Select IPKG source....." >
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
+		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<ePixmap pixmap="dTV-HD/button.png" position=" 40,464" size="250,38" zPosition="1" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="310,464" size="250,38" zPosition="1" alphatest="blend" />
+		<widget name="closetext" 			position=" 40,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
+		<widget name="edittext" 			position="310,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
 	</screen>
 	<screen name="RestoreMenu" 				position="340,125" 	size="600,502"  title="Restore Backups">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
