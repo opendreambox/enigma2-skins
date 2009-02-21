@@ -529,8 +529,11 @@
 		<widget name="DNS2text" position="790,340" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
 		<widget name="DNS2" position="790,370" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="ButtonRedtext" position="120,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="ButtonBluetext" position="390,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
+		<widget name="ButtonGreen" position="20,529" size="21,21" zPosition="10" pixmap="dreamTV-HD/buttons/green.png" transparent="1" alphatest="on" />
+		<eLabel text="Virtual KeyBoard" position="50,525"  size="260,30" font="Regular;24" halign="left" valign="center" />
+		<widget name="ButtonBluetext" position="400,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
+		<widget name="ButtonRedtext" position="820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget name="HelpWindow" position="180,410" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
 		<widget name="ButtonRed" position="0,0" size="0,0"/>
 		<widget name="ButtonBlue" position="0,0" size="0,0"/>
 		<widget name="BottomBG" position="0,0" size="0,0"/>
@@ -545,7 +548,7 @@
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
 		<widget name="Statustext" position="20,525" size="150,30" zPosition="10" font="Regular;24" transparent="1"/>
 		<widget name="statuspic" position="180,530" size="15,16" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" zPosition="10" transparent="1" alphatest="on"/>
-		<widget name="ButtonRedtext" position="390,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget name="ButtonRedtext" position="820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
 		<widget name="BottomBG" position="0,0" size="0,0"/>
 		<widget name="ButtonRed" position="0,0" size="0,0"/>
 	</screen>
@@ -1022,9 +1025,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="introduction" position="20,470" size="740,30" zPosition="10" font="Regular;24" halign="center" transparent="1"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="ButtonRedtext" position=" 20,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="ButtonGreentext" position="290,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
-		<widget name="ButtonYellowtext" position="560,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
+		<widget name="ButtonGreentext" position="200,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+		<widget name="ButtonYellowtext" position="470,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
+		<widget name="ButtonRedtext" position=" 820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
 	</screen>
 	<screen name="NetworkAdapterSelection" position="90,100" size="1100,560" title="Select Network Adapter">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
@@ -1032,8 +1035,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="introduction" position="20,470" size="740,30" zPosition="10" font="Regular;24" halign="center" transparent="1"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="ButtonRedtext" position=" 120,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="ButtonBluetext" position="390,525" size="550,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
+		<widget name="ButtonBluetext" position="200,525" size="550,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
+		<widget name="ButtonRedtext" position=" 820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="90,100" size="1100,560" title="Network test...">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
@@ -1076,7 +1079,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="ButtonGreentext" position="60,526" size="250,30" font="Regular;24" transparent="1" foregroundColor="green"/>
 		<widget name="ButtonYellow_Check" position="360,531" size="15,16" pixmaps="skin_default/buttons/button_yellow.png,skin_default/buttons/button_yellow_off.png" transparent="1" alphatest="on"/>
 		<widget name="ButtonYellowtext" position="390,526" size="250,30" font="Regular;24" transparent="1" foregroundColor="yellow"/>
-		<widget name="ButtonRedtext" position=" 830,526" size="250,30" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget name="ButtonRedtext" position=" 820,526" size="250,30" font="Regular;24" halign="center" foregroundColor="red"/>
 		<widget name="InfoTextBorder" position="0,0" size="0,0"/>
 		<widget name="ButtonRed" position="0,0" size="0,0" pixmap="skin_default/buttons/button_red.png"/>
 	</screen>
@@ -1540,7 +1543,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="rescantext" position="540,525" size="170,27" zPosition="1" font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
 		<ePixmap position="940,400" size="140,110" zPosition="2" pixmap="dreamTV-HD/icons/wlan.png" transparent="1" alphatest="blend"/>
 	</screen>
-
 	<screen name="UpdatePluginMenu" position="339,84" size="602,553" title="Softwaremanager..." backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel position="1,1" size="600,552" backgroundColor="transpBlack" zPosition="-1"/>
 		<eLabel position="1,1" size="600,2" backgroundColor="grey" zPosition="5"/>
@@ -1679,7 +1681,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="config" 	position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
-
 	<screen name="IMDB" position="90,100" size="1100,560" title="IMDb Details Plugin">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
 		<widget name="titellabel" position="20,20" size="580,28" font="Regular;25" valign="center" transparent="1"/>
@@ -1978,15 +1979,87 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" position="290,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
 		<widget name="key_blue" position="830,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
-	<screen name="NetworkBrowser" position="90,100" size="1100,560" title="Network Neighbourhood">
+	<screen name="AutoMountEdit" position="90,100" size="1100,560" title="MountEdit">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="text" position="10,10" zPosition="1" size="760,420" font="Regular;22" halign="center" valign="center"/>
-		<widget name="list" position="20,20" zPosition="2" size="740,400" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" transparent="1"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="mounttext" position="20,525" size="300,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="blue"/>
+		<widget name="introduction2" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget name="ButtonRedtext" position="820,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget name="ButtonGreen" pixmap="skin_default/buttons/button_green.png" position="990,470" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
+		<widget name="VKeyIcon" pixmap="skin_default/vkey_icon.png" position="1020,450" zPosition="10" size="60,48" transparent="1" alphatest="on"/>
+		<widget name="HelpWindow" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on"/>	
+		<widget name="ButtonRed" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="AutoMountManager" position="90,100" size="1100,560" title="MountManager">
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
+		<widget source="config" render="Listbox" position="20,20" size="740,420" scrollbarMode="showOnDemand" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 5), size = (660, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+						MultiContentEntryText(pos = (70, 35), size = (650, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 3), # index 4 is the pixmap
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+		<widget name="introduction" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget name="ButtonRedtext" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget name="ButtonRed" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="AutoMountView" position="90,100" size="1100,560" title="MountView">
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
+		<widget name="legend1" position="10,10"  zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center" />
+		<widget name="legend2" position="200,8" zPosition="1" size="400,60" font="Regular;20" halign="center" valign="center" />
+		<widget name="legend3" position="640,8" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center" />
+		<eLabel position="0,75" size="780,2" backgroundColor="grey"/>
+		<widget source="config" render="Listbox" position="10,90" size="750,420" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (40, 6), size = (48, 48), png = 0), # index 0 is the isMounted pixmap
+						MultiContentEntryText(pos = (200, 5), size = (200, 28), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the sharename
+						MultiContentEntryText(pos = (380, 8), size = (250, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the IPdescription
+						MultiContentEntryText(pos = (200, 35), size = (350, 20), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the DIRdescription
+						MultiContentEntryPixmapAlphaTest(pos = (650, 15), size = (48, 48), png = 4), # index 4 is the activepng pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (680, 6), size = (48, 48), png = 5), # index 4 is the mounttype pixmap
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+		<widget name="introduction" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget name="deletetext" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
+		<widget name="ButtonRedtext" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
+	</screen>
+	<screen name="NetworkBrowser" position="90,100" size="1100,560" title="Network Neighbourhood">
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
+		<widget source="list" render="Listbox" position="20,20" size="740,420" zPosition="10" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 1), # index 1 is the expandable/expanded/verticalline icon
+						MultiContentEntryText(pos = (70, 4), size = (620, 26), font=2, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the Hostname
+						MultiContentEntryText(pos = (160, 5), size = (520, 25), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the sharename
+						MultiContentEntryText(pos = (160, 26), size = (520, 17), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is the sharedescription
+						MultiContentEntryPixmapAlphaTest(pos = (65, 6), size = (48, 48), png = 5), # index 5 is the nfs/cifs icon
+						MultiContentEntryPixmapAlphaTest(pos = (110, 6), size = (48, 48), png = 6), # index 6 is the isMounted icon
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 17),gFont("Regular", 24)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+		<widget name="mounttext" position="20,525" size="300,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="green"/>
 		<widget name="rescantext" position="320,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
-		<widget name="closetext" position="780,525" size="300,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget name="closetext" position="820,525" size="300,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
 	</screen>
 	<screen name="UserDialog" position="90,100" size="1100,560" title="UserDialog">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
@@ -1994,57 +2067,32 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
 		<widget name="introduction2" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
-		<widget name="ButtonRedtext" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget name="ButtonRedtext" position="820,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
 		<widget name="ButtonGreen" pixmap="skin_default/buttons/button_green.png" position="990,470" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
 		<widget name="VKeyIcon" pixmap="skin_default/vkey_icon.png" position="1020,450" zPosition="10" size="60,48" transparent="1" alphatest="on"/>
-		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on"/>	
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
-	</screen>
-	<screen name="AutoMountView" position="90,100" size="1100,560" title="MountView">
-		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="legend1" position="10,10" zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center"/>
-		<widget name="legend2" position="140,10" zPosition="1" size="310,60" font="Regular;18" halign="center" valign="center"/>
-		<widget name="legend3" position="465,10" zPosition="1" size="100,60" font="Regular;18" halign="center" valign="center"/>
-		<eLabel position="0,75" size="780,2" backgroundColor="grey"/>
-		<widget name="config" position="30,90" size="720,400" scrollbarMode="showOnDemand" transparent="1"/>
-		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
-		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="deletetext" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
-		<widget name="introduction2" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
-		<widget name="ButtonRedtext" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
-	</screen>
-	<screen name="AutoMountManager" position="90,100" size="1100,560" title="MountManager">
-		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="config" position="20,20" size="740,450" scrollbarMode="showOnDemand" transparent="1"/>
-		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
-		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="introduction2" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
-		<widget name="ButtonRedtext" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
-	</screen>
-	<screen name="AutoMountEdit" position="90,100" size="1100,560" title="MountEdit">
-		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" transparent="1"/>
-		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
-		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="introduction2" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
-		<widget name="ButtonRedtext" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
-		<widget name="ButtonGreen" pixmap="skin_default/buttons/button_green.png" position="990,470" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
-		<widget name="VKeyIcon" pixmap="skin_default/vkey_icon.png" position="1020,450" zPosition="10" size="60,48" transparent="1" alphatest="on"/>
-		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on"/>	
+		<widget name="HelpWindow" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on"/>	
 		<widget name="ButtonRed" position="0,0" size="0,0"/>
 	</screen>
 	<screen name="UserManager" position="90,100" size="1100,560" title="UserManager">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="config" position="20,20" size="740,450" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget source="config" render="Listbox" position="10,20" size="750,420" scrollbarMode="showOnDemand" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (80, 7), size = (650, 50), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 3), # index 4 is the status pixmap
+					],
+				"fonts": [gFont("Regular", 40)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="deletetext" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
-		<widget name="introduction2" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget name="introduction" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget name="deletetext" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
 		<widget name="ButtonRedtext" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
 		<widget name="ButtonRed" position="0,0" size="0,0"/>
 	</screen>
-	<!-- Suomipoeka -->	
 	<screen name="SuomipoekaMenu" position="90,100" size="1100,560" title="SuomipoekaMenu">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
 		<widget name="config" position="20,20" size="740,475" scrollbarMode="showOnDemand" transparent="1"/>
@@ -2114,7 +2162,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_red" render="Label" position="190,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
 		<widget source="key_green" render="Label" position="460,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
 	</screen>
-
 	<screen name="ChannelSelection_summary" position="0,0" size="132,64">
 		<widget source="parent.ServiceEvent" render="Label" position="6,3" size="120,34" font="Regular;16" halign="center" valign="top">
 			<convert type="ServiceName">Name</convert>
