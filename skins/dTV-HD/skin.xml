@@ -2152,7 +2152,17 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="TitleCutter" 				position="0,0" 		size="1280,720" title="Cutlist editor" flags="wfNoBorder" >
 		<eLabel 					position="80,125" size="300,420" 	zPosition="1" backgroundColor="grey" />
 		<eLabel 					position="81,126" size="298,418" 	zPosition="2" backgroundColor="black" />
-		<widget name="Cutlist" 		position="90,135" size="280,400"  	zPosition="3" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget source="cutlist"    position="90,135" size="280,400" zPosition="3" scrollbarMode="showOnDemand" transparent="1" render="Listbox" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos=(10,2), size=(170, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
+						MultiContentEntryText(pos=(190,2), size=(80, 20), text = 2, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(3))
+					],
+				 "fonts": [gFont("Regular", 20)],
+				 "itemHeight": 25
+				}
+			</convert>
+		</widget>
 
 		<eLabel 					position="479,124" zPosition="3"  size="696,377" backgroundColor="#ff000000" />
 		<widget name="Video" 		position="270,100" zPosition="-10" size="390,300" />
