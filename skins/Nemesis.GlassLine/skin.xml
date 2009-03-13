@@ -109,6 +109,16 @@
 			<convert type="ValueBitTest">2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="146,42" size="14,14" font="Regular;14" foregroundColor="lightgrey" backgroundColor="#253c40" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="160,42" size="14,14" font="Regular;14" foregroundColor="lightgrey" backgroundColor="#253c40" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<widget source="session.FrontendInfo" render="FixedLabel" text="_" position="118,40" zPosition="1" size="14,18" font="Regular;18" foregroundColor="orange" transparent="1">
 			<convert type="FrontendInfo">NUMBER</convert>
 			<convert type="ValueRange">0,0</convert>
@@ -119,16 +129,26 @@
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel text="SNR" position="169,42" size="37,19" font="Regular;14" valign="top" foregroundColor="lightgrey" backgroundColor="#253c40" transparent="1" />
-		<widget source="session.FrontendStatus" render="Label" position="202,42" size="55,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="_" position="118,40" zPosition="1" size="14,18" font="Regular;18" foregroundColor="orange" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="_" position="132,40" zPosition="1" size="14,18" font="Regular;18" foregroundColor="orange" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel text="SNR" position="179,42" size="37,19" font="Regular;14" valign="top" foregroundColor="lightgrey" backgroundColor="#253c40" transparent="1" />
+		<widget source="session.FrontendStatus" render="Label" position="212,42" size="55,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<eLabel text="AGC" position="269,42" size="39,19" font="Regular;14" valign="top" foregroundColor="lightgrey" backgroundColor="#253c40" transparent="1" />
-		<widget source="session.FrontendStatus" render="Label" position="304,42" size="41,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
+		<eLabel text="AGC" position="279,42" size="39,19" font="Regular;14" valign="top" foregroundColor="lightgrey" backgroundColor="#253c40" transparent="1" />
+		<widget source="session.FrontendStatus" render="Label" position="314,42" size="41,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<eLabel text="BER" position="354,42" size="35,19" font="Regular;14" valign="top" foregroundColor="lightgrey" backgroundColor="#253c40" transparent="1" />
-		<widget source="session.FrontendStatus" render="Label" position="389,42" size="45,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
+		<eLabel text="BER" position="364,42" size="35,19" font="Regular;14" valign="top" foregroundColor="lightgrey" backgroundColor="#253c40" transparent="1" />
+		<widget source="session.FrontendStatus" render="Label" position="399,42" size="45,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<ePixmap position="100,61" size="14,14" pixmap="Nemesis.GlassLine/now_arrow.png" alphatest="on" />
@@ -466,10 +486,10 @@
 		<eLabel name="nowPlaying" position="90,136" zPosition="1" size="413,16" text="Now Playing" font="Regular;14" foregroundColor="#ffc435" transparent="1" />
 		<widget name="title" position="90,152" zPosition="1" size="413,18" font="Regular;16" valign="top" transparent="1" />
 		<widget name="coverArt" position="516,55" zPosition="2" size="116,116" pixmap="Nemesis.GlassLine/no_coverArt.png" transparent="1" />
-		<ePixmap pixmap="skin_default/mp_buttons.png" position="512,179" zPosition="2" size="109,13" alphatest="on" />
+		<ePixmap pixmap="skin_default/icons/mp_buttons.png" position="512,179" zPosition="2" size="109,13" alphatest="on" />
 		<widget name="PositionGauge" position="93,181" zPosition="2" size="376,10" pointer="Nemesis.GlassLine/position_pointer.png:590,0" seek_pointer="Nemesis.GlassLine/position_pointer.png:590,0" transparent="1" />
 		<widget name="filelist" position="85,213" zPosition="1" size="550,138" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="playlist" position="85,364" zPosition="1" size="550,154" scrollbarMode="showOnDemand" transparent="1" selectionDisabled="1" />
+		<widget name="playlist" position="85,372" zPosition="1" size="550,138" scrollbarMode="showOnDemand" transparent="1" selectionDisabled="1" />
 		<widget name="currenttext" position="0,0" size="0,0" />
 		<widget name="titletext" position="0,0" size="0,0" />
 	</screen>
@@ -569,11 +589,14 @@
 	</screen>
 	<!-- Nameserver setup -->
 	<screen name="NameserverSetup" position="130,135" size="460,330" title="Nameserver Setup">
-		<ePixmap position="10,10" size="21,21" pixmap="Nemesis.GlassLine/key_red.png" alphatest="on" />
-		<widget name="red" position="40,10" size="115,21" halign="left" valign="top" font="Regular;20" />
-		<ePixmap position="425,10" size="21,21" pixmap="Nemesis.GlassLine/key_green.png" alphatest="on" />
-		<widget name="green" position="235,10" size="180,21" halign="right" valign="top" font="Regular;20" />
-		<widget name="config" position="10,50" size="440,175" scrollbarMode="showOnDemand" />
+		<ePixmap pixmap="Nemesis.GlassLine/key_red.png" 	position="10,10" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Nemesis.GlassLine/key_green.png" 	position="160,10" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Nemesis.GlassLine/key_yellow.png" 	position="310,10" size="21,21" alphatest="on" />
+		<widget name="ButtonRedtext" 						position="40,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="ButtonGreentext" 						position="190,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="ButtonYellowtext" 					position="340,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="config" 		position="10,50" size="440,175" scrollbarMode="showOnDemand" />
+		<widget name="introduction" position="10,305" size="440,23" zPosition="10" font="Regular;20" halign="center" transparent="1" />
 	</screen>
 	<!-- Numberzap -->
 	<screen name="NumberZap" position="70,50" size="150,55" backgroundColor="transparent" flags="wfNoBorder">
@@ -744,38 +767,6 @@
 		<widget name="key_blue" position="450,10" size="115,21" halign="left" valign="center" font="Regular;20" />
 		<widget name="list" position="0,45" size="560,364" scrollbarMode="showOnDemand" />
 	</screen>
-	<!-- Software update -->
-	<screen name="UpdatePlugin" position="70,208" size="580,195" title="LT Software Update...">
-		<widget name="package" position="10,10" size="560,25" font="Regular;18"/>
-		<widget name="activityslider" position="10,35" size="560,5" pixmap="Nemesis.GlassLine/progress_big.png" />
-		<widget name="status" position="10,60" size="560,100" font="Regular;18"/>
-		<widget name="slider" position="10,175" size="560,15" pixmap="Nemesis.GlassLine/progress_big.png" borderWidth="2" borderColor="#505555" />
-	</screen>
-	<!-- Start Wizard -->
-	<screen name="StartWizard" position="0,0" size="720,576" title="Welcome..." flags="wfNoBorder">
-		<ePixmap pixmap="Nemesis.GlassLine/bg_noBorder.png" position="0,0" zPosition="-3" size="720,576" />
-		<ePixmap pixmap="Nemesis.GlassLine/bg_Border_610x290.png" position="56,223" zPosition="-1" size="610,290" />
-		<ePixmap pixmap="Nemesis.GlassLine/logo_screen.png" position="60,40" size="103,36" alphatest="on" />
-		<eLabel text="Welcome..." position="172,39" size="300,25" font="Regular;20" valign="top" backgroundColor="black" foregroundColor="orange" transparent="1" />
-		<widget source="global.CurrentTime" render="Label" position="340,40" size="320,20" font="Regular;17" backgroundColor="background" valign="center" halign="right" transparent="1">
-			    <convert type="ClockToText">Date</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="540,60" size="120,20" font="Regular;21" backgroundColor="background" valign="center" halign="right" transparent="1">
-			    <convert type="ClockToText">WithSeconds</convert>
-		</widget>
-		<eLabel position="483,88" size="174,134" backgroundColor="#505555" />
-		<widget source="session.VideoPicture" render="Pig" position="485,90" zPosition="1" size="170,130" backgroundColor="transparent" />
-		<ePixmap pixmap="Nemesis.GlassLine/wizard.png" position="483,81" zPosition="2" size="174,159" />
-		<widget name="text" position="60,90" zPosition="2" size="415,130" font="Regular;19" transparent="1" />
-		<ePixmap pixmap="Nemesis.GlassLine/rc.png" position="73,333" zPosition="1" size="250,165" />
-		<widget name="list" position="80,244" zPosition="2" size="566,250" backgroundColor="background" selectionPixmap="Nemesis.GlassLine/selected.png" transparent="1" scrollbarMode="showOnDemand" />
-		<widget name="config" position="80,244" zPosition="2" size="566,250" backgroundColor="background" selectionPixmap="Nemesis.GlassLine/selected.png" transparent="1" scrollbarMode="showOnDemand" />
-		<widget name="stepslider" position="62,525" zPosition="1" borderWidth="2" borderColor="#505555" size="600,15" pixmap="Nemesis.GlassLine/progress_big.png" backgroundColor="black" />
-		<widget name="rc" position="0,0" size="0,0" />
-		<widget name="arrowdown" position="0,0" size="0,0" />
-		<widget name="arrowup" position="0,0" size="0,0" />
-		<widget name="arrowup2" position="0,0" size="0,0" />
-	</screen>
 	<!-- Time & date input -->
 	<screen name="TimeDateInput" position="150,150" size="400,270" title="Time/Date Input">
 		<widget name="config" position="10,10" size="380,200" />
@@ -834,10 +825,8 @@
 		<widget name="config" position="80,245" zPosition="2" size="565,250" backgroundColor="background" selectionPixmap="Nemesis.GlassLine/selected.png" transparent="1" scrollbarMode="showOnDemand" />
 		<widget name="cancel" pixmap="Nemesis.GlassLine/key_red.png" position="80,525" size="21,21" alphatest="on" />
 		<widget name="ok" pixmap="Nemesis.GlassLine/key_green.png" position="220,525" size="21,21" alphatest="on" />
-		<widget name="location" pixmap="Nemesis.GlassLine/key_yellow.png" position="360,525" size="21,21" alphatest="on" />
 		<widget name="canceltext" position="110,525" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
 		<widget name="oktext" position="250,525" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
-		<widget name="locationtext" position="390,525" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
 	</screen>
 	<!-- Timer log -->
 	<screen name="TimerLog" position="0,0" size="720,576" title="Timer log" flags="wfNoBorder">
@@ -921,10 +910,12 @@
 	</screen>
 	<!-- Web Interface config -->
 	<screen name="WebIfConfigScreen" position="145,85" size="430,410" title="Webinterface Setup">
-		<widget name="config" position="5,0" size="420,360" scrollbarMode="showOnDemand" />
-		<ePixmap name="key_red" position="5,380" size="21,21" pixmap="Nemesis.GlassLine/key_red.png" alphatest="on" />
-		<ePixmap name="key_green" position="400,380" size="21,21" pixmap="Nemesis.GlassLine/key_green.png" alphatest="on" />
-		<widget name="buttonred" position="35,380" size="180,21" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
-		<widget name="buttongreen" position="215,380" size="180,21" font="Regular;19" valign="top" halign="right" backgroundColor="background" transparent="1" />
+		<ePixmap pixmap="Nemesis.GlassLine/key_red.png" 	position="10,10" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Nemesis.GlassLine/key_green.png" 	position="160,10" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Nemesis.GlassLine/key_yellow.png" 	position="310,10" size="21,21" alphatest="on" />
+		<widget name="key_red" 						position="40,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="key_green" 						position="190,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="key_yellow" 					position="340,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="config" position="5,50" size="420,360" scrollbarMode="showOnDemand" />
 	</screen>
 </skin>
