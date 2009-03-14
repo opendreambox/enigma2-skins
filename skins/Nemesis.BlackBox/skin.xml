@@ -91,14 +91,14 @@
 			<convert type="ValueBitTest">2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="130,35" zPosition="2" size="10,14" font="Regular;14" halign="center" valign="top" backgroundColor="background" transparent="1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">3</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="143,35" zPosition="2" size="10,14" font="Regular;14" halign="center" valign="top" backgroundColor="background" transparent="1">
+		<widget source="session.TunerInfo" render="FixedLabel" text="C" position="130,35" zPosition="2" size="10,14" font="Regular;14" halign="center" valign="top" backgroundColor="background" transparent="1">
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="D" position="143,35" zPosition="2" size="10,14" font="Regular;14" halign="center" valign="top" backgroundColor="background" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="session.FrontendInfo" render="Pixmap" 			position="104,49" zPosition="1" size="8,4" pixmap="Nemesis.BlackBox/ico_Nim-Active.png" alphatest="on">
@@ -118,7 +118,7 @@
 		</widget>
 		<widget source="session.FrontendInfo" render="Pixmap" 			position="143,49" zPosition="1" size="8,4" pixmap="Nemesis.BlackBox/ico_Nim-Active.png" alphatest="on">
 			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">4,4</convert>
+			<convert type="ValueRange">3,3</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<eLabel text="SNR" position="153,35" size="32,19" font="Regular;14" valign="top" backgroundColor="background" foregroundColor="#e5b243" transparent="1" />
