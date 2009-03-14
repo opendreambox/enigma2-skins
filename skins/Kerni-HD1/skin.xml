@@ -548,9 +548,9 @@
 			<convert type="ClockToText">Date</convert>
 		</widget>
 
-		<eLabel text="Network Setup" 	position="120,63" size="330,30" font="Regular;27" backgroundColor="#0b67a2" transparent="1"/>
+		<eLabel text="Network Setup" 	position="480,63" size="330,30" font="Regular;27" backgroundColor="#0b67a2" transparent="1"/>
 
-		<widget name="introduction" 	position="80,62" 		size="300,32" font="Regular;24" halign="center" backgroundColor="#0b67a2" transparent="1"/>
+		<widget name="introduction" 	position="80,62" size="300,32" font="Regular;24" halign="center" backgroundColor="#0b67a2" transparent="1"/>
 
 		<widget name="IPtext" 		position="80,120" 	size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
 		<widget name="IP" 			position="80,155" 	size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
