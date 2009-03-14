@@ -167,14 +167,25 @@
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<!-- Yellow button (is timeshift possible?) -->
 		<ePixmap pixmap="Nemesis.Blueline/button_grey.png" position="365,481" size="12,12" alphatest="on" />
 		<widget source="TimeshiftPossible" render="Pixmap" pixmap="Nemesis.Blueline/button_yellow.png" position="365,481" zPosition="1" size="12,12" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel text="Timeshift" position="385,478" size="120,18" font="Regular;16" valign="top" foregroundColor="grey" backgroundColor="#30000927" transparent="1" />
+		<widget source="ShowTimeshiftOnYellow" render="FixedLabel" text="Timeshift" position="385,478" size="120,18" font="Regular;16" valign="top" foregroundColor="grey" backgroundColor="#30000927" transparent="1" >
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<widget source="TimeshiftPossible" render="FixedLabel" text="Timeshift" position="385,478" zPosition="1" size="120,18" font="Regular;16" valign="top" backgroundColor="#30000927" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<!-- Yellow button (used for audio on boxes with new rc?) -->
+		<widget source="ShowAudioOnYellow" render="Pixmap" pixmap="Nemesis.Blueline/button_yellow.png" position="365,481" zPosition="1" size="12,12" alphatest="on">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="ShowAudioOnYellow" render="FixedLabel" text="Audio" position="385,478" zPosition="1" size="120,18" font="Regular;16" valign="top" backgroundColor="#30000927" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+
 		<ePixmap pixmap="Nemesis.Blueline/button_grey.png" position="509,481" size="12,12" alphatest="on" />
 		<widget source="ExtensionsAvailable" render="Pixmap" pixmap="Nemesis.Blueline/button_blue.png" position="509,481" zPosition="1" size="12,12" alphatest="on">
 			<convert type="ConditionalShowHide" />
@@ -331,7 +342,7 @@
 		<widget name="title" position="25,114" size="385,18" font="Regular;16" valign="top" transparent="1" />
 		<widget name="coverArt" pixmap="Nemesis.Blueline/no_coverArt.png" position="504,15" size="116,116" alphatest="on" />
 		<widget name="filelist" position="41,143" size="578,115" scrollbarMode="showOnDemand" />
-		<widget name="playlist" position="41,270" size="578,154" scrollbarMode="showOnDemand" selectionDisabled="1" />
+		<widget name="playlist" position="41,278" size="578,138" scrollbarMode="showOnDemand" selectionDisabled="1" />
 		<widget name="PositionGauge" pointer="Nemesis.Blueline/position_pointer.png:516,0" position="12,449" size="320,10" transparent="1" />
 		<ePixmap pixmap="Nemesis.Blueline/position_overlay_l.png" position="8,447" zPosition="1" size="7,15" alphatest="on" />
 		<ePixmap pixmap="Nemesis.Blueline/position_overlay_r.png" position="328,447" zPosition="1" size="7,15" alphatest="on" />
