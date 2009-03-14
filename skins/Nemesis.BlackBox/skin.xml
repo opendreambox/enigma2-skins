@@ -121,16 +121,16 @@
 			<convert type="ValueRange">3,3</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel text="SNR" position="153,35" size="32,19" font="Regular;14" valign="top" backgroundColor="background" foregroundColor="#e5b243" transparent="1" />
-		<widget source="session.FrontendStatus" render="Label" position="187,35" size="60,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
+		<eLabel text="SNR" position="163,35" size="32,19" font="Regular;14" valign="top" backgroundColor="background" foregroundColor="#e5b243" transparent="1" />
+		<widget source="session.FrontendStatus" render="Label" position="197,35" size="60,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<eLabel text="AGC" position="253,35" size="34,19" font="Regular;14" valign="top" backgroundColor="background" foregroundColor="#e5b243" transparent="1" />
-		<widget source="session.FrontendStatus" render="Label" position="287,35" size="41,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
+		<eLabel text="AGC" position="263,35" size="34,19" font="Regular;14" valign="top" backgroundColor="background" foregroundColor="#e5b243" transparent="1" />
+		<widget source="session.FrontendStatus" render="Label" position="297,35" size="41,19" font="Regular;14" valign="top" backgroundColor="background" transparent="1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<eLabel text="BER" position="328,35" size="35,19" font="Regular;14" valign="top" backgroundColor="background" foregroundColor="#e5b243" transparent="1" />
-		<widget source="session.FrontendStatus" render="Label" position="363,35" size="40,19" font="Regular;14" valign="top" noWrap="1" backgroundColor="background" transparent="1">
+		<eLabel text="BER" position="338,35" size="35,19" font="Regular;14" valign="top" backgroundColor="background" foregroundColor="#e5b243" transparent="1" />
+		<widget source="session.FrontendStatus" render="Label" position="373,35" size="40,19" font="Regular;14" valign="top" noWrap="1" backgroundColor="background" transparent="1">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Picon" position="9,40" size="70,53" pixmap="Nemesis.BlackBox/picon_default.png" alphatest="on">
