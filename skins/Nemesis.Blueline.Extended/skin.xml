@@ -170,14 +170,25 @@
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<!-- Yellow button (is timeshift possible?) -->
 		<ePixmap pixmap="Nemesis.Blueline.Extended/button_grey.png" position="365,481" size="12,12" alphatest="on" />
 		<widget source="TimeshiftPossible" render="Pixmap" pixmap="Nemesis.Blueline.Extended/button_yellow.png" position="365,481" zPosition="1" size="12,12" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel text="Timeshift" position="385,478" size="120,18" font="Regular;16" valign="top" foregroundColor="grey" backgroundColor="#30000927" transparent="1" />
+		<widget source="ShowTimeshiftOnYellow" render="FixedLabel" text="Timeshift" position="385,478" size="120,18" font="Regular;16" valign="top" foregroundColor="grey" backgroundColor="#30000927" transparent="1" >
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<widget source="TimeshiftPossible" render="FixedLabel" text="Timeshift" position="385,478" zPosition="1" size="120,18" font="Regular;16" valign="top" backgroundColor="#30000927" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<!-- Yellow button (used for audio on boxes with new rc?) -->
+		<widget source="ShowAudioOnYellow" render="Pixmap" pixmap="Nemesis.Blueline.Extended/button_yellow.png" position="365,481" zPosition="1" size="12,12" alphatest="on">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="ShowAudioOnYellow" render="FixedLabel" text="Audio" position="385,478" zPosition="1" size="120,18" font="Regular;16" valign="top" backgroundColor="#30000927" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+
 		<ePixmap pixmap="Nemesis.Blueline.Extended/button_grey.png" position="509,481" size="12,12" alphatest="on" />
 		<widget source="ExtensionsAvailable" render="Pixmap" pixmap="Nemesis.Blueline.Extended/button_blue.png" position="509,481" zPosition="1" size="12,12" alphatest="on">
 			<convert type="ConditionalShowHide" />
