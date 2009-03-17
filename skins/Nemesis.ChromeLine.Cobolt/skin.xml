@@ -230,9 +230,9 @@
 		<widget name="now_button_sel" position="5,50" zPosition="2" size="320,25" pixmap="Nemesis.ChromeLine.Cobolt/epg_now.png" alphatest="on" />
 		<widget name="next_button_sel" position="5,50" zPosition="2" size="320,25" pixmap="Nemesis.ChromeLine.Cobolt/epg_next.png" alphatest="on" />
 		<widget name="more_button_sel" position="5,50" zPosition="2" size="320,25" pixmap="Nemesis.ChromeLine.Cobolt/epg_more.png" alphatest="on" />
-		<widget name="now_text" text="NOW" zPosition="3" position="5,50" size="108,22" transparent="1" halign="center" valign="center" font="Regular;16" />
-		<widget name="next_text" text="NEXT" zPosition="3" position="111,50" size="108,22" transparent="1" halign="center" valign="center" font="Regular;16" />
-		<widget name="more_text" text="MORE" zPosition="3" position="216,50" size="108,22" transparent="1" halign="center" valign="center" font="Regular;16" />
+		<widget name="now_text" text="NOW" zPosition="3" position="5,50" size="108,22" transparent="1" halign="center" valign="center" font="Regular;16" backgroundColor="darkgrey"/>
+		<widget name="next_text" text="NEXT" zPosition="3" position="111,50" size="108,22" transparent="1" halign="center" valign="center" font="Regular;16" backgroundColor="darkgrey"/>
+		<widget name="more_text" text="MORE" zPosition="3" position="216,50" size="108,22" transparent="1" halign="center" valign="center" font="Regular;16" backgroundColor="darkgrey"/>
 		<widget name="date" position="410,35" size="140,45" valign="center" halign="right" font="Regular;18" />
 		<widget name="list" position="11,75" size="540,350" scrollbarMode="showOnDemand" />
 		<ePixmap pixmap="Nemesis.ChromeLine.Cobolt/epg_frame.png" position="5,70" zPosition="1" size="551,361" alphatest="on" />
