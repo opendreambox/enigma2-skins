@@ -2069,7 +2069,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- Softwaremanager -->
 	<screen name="UpdatePluginMenu" 			position="0,0" 	size="1280,720" 	title="Softwaremanager..." 		flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-epg.png" transparent="1" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="#0b67a2" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -2077,25 +2077,28 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="Softwaremanager..." 	position="80,63"	size="300,30" font="Regular;27" halign="center" backgroundColor="#0b67a2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="80,120" size="318,440" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" position="80,120" size="460,440" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (25, 7), size = (323, 30), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
+						MultiContentEntryText(pos = (25, 7), size = (415, 30), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
 					],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
 				}
 			</convert>
 		</widget>
-		<eLabel 									position="450,130" size="750,420" zPosition="1" backgroundColor="#bbbbbb" />
-		<eLabel 									position="452,132" size="746,416" zPosition="2" backgroundColor="#202b4247" />
-		<widget source="menu" render="Listbox" 	position="460,140" size="730,400" zPosition="3" scrollbarMode="showNever" selectionDisabled="1">
+		<eLabel 								position="538,100" size="3,480" zPosition="1" backgroundColor="#bbbbbb" />
+
+
+		<eLabel 								position="560,130" size="640,420" zPosition="1" backgroundColor="#bbbbbb" />
+		<eLabel 								position="562,132" size="636,416" zPosition="2" backgroundColor="#202b4247" />
+		<widget source="menu" render="Listbox" 	position="570,190" size="620,300" zPosition="3" scrollbarMode="showNever" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (2, 52), size = (730, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
+						MultiContentEntryText(pos = (5, 35), size = (610, 230), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
 					],
-				"fonts": [gFont("Regular", 20)],
-				"itemHeight": 230
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 300
 				}
 			</convert>
 		</widget>
