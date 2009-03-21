@@ -291,9 +291,45 @@
 	</screen>
 	<!-- Main menu -->
 	<screen name="menu_mainmenu" position="170,150" size="380,285" title="Main menu">
-		<widget source="title" render="Label" position="10,10" size="360,35" font="Regular;23" />
-		<widget source="menu" render="Listbox" position="10,55" size="360,225" scrollbarMode="showOnDemand">
+		<widget source="title" render="Label" position="170,10" size="200,35" font="Regular;23" />
+		<widget source="menu" render="Listbox" position="170,55" size="200,225" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/dvd_player.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">dvd_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/subtitles.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">subtitle_selection</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/media_player.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">media_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/timer.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">timer_edit</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/scart.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">scart_switch</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/information.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/plugins.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">plugin_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/setup.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/shutdown.png" position="20,20" size="128,128" alphatest="on">
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
 	<!-- Mediaplayer -->
@@ -313,7 +349,7 @@
 		<ePixmap pixmap="skin_default/icons/mp_buttons.png" position="454,136" zPosition="2" size="108,13" alphatest="on" />
 		<widget name="PositionGauge" position="15,138" zPosition="2" size="418,10" pointer="Nemesis.ShadowLine/position_pointer.png:540,0" seek_pointer="skin_default/position_pointer.png:540,0" transparent="1" />
 		<widget name="filelist" position="15,163" zPosition="1" size="550,138" scrollbarMode="showOnDemand" />
-		<widget name="playlist" position="15,314" zPosition="1" size="550,154" scrollbarMode="showOnDemand" selectionDisabled="1" />
+		<widget name="playlist" position="15,322" zPosition="1" size="550,138" scrollbarMode="showOnDemand" selectionDisabled="1" />
 		<widget name="currenttext" position="1,1" size="1,1" />
 		<widget name="titletext" position="1,1" size="1,1" />
 	</screen>
@@ -368,14 +404,6 @@
 	<!-- Mute -->
 	<screen name="Mute" position="540,90" zPosition="10" size="34,45" title="Mute" flags="wfNoBorder">
 		<ePixmap position="0,0" size="34,45" pixmap="Nemesis.ShadowLine/mute.png"/>
-	</screen>
-	<!-- Nameserver setup -->
-	<screen name="NameserverSetup" position="130,135" size="460,330" title="Nameserver Setup">
-		<ePixmap position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
-		<widget name="red" position="35,10" size="115,20" halign="left" valign="top" font="Regular;18" backgroundColor="background" transparent="1" />
-		<ePixmap position="430,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
-		<widget name="green" position="240,10" size="180,20" halign="right" valign="top" font="Regular;18" backgroundColor="background" transparent="1" />
-		<widget name="config" position="10,50" size="440,175" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Plugin browser -->
 	<screen name="PluginBrowser" position="150,115" size="420,370" title="Plugin browser">
@@ -493,11 +521,9 @@
 	<screen name="TimerEntry" position="90,95" size="560,425" title="Timer entry">
 		<widget name="cancel" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<widget name="ok" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
-		<widget name="location" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
 		<ePixmap name="blue" position="420,10" size="17,17" pixmap="Nemesis.ShadowLine/key-blue.png" alphatest="on" />
 		<widget name="canceltext" position="35,0" size="115,40" halign="left" valign="center" font="Regular;18" backgroundColor="background" transparent="1" />
 		<widget name="oktext" position="165,0" size="115,40" halign="left" valign="center" font="Regular;18" backgroundColor="background" transparent="1" />
-		<widget name="locationtext" position="305,0" size="115,40" halign="left" valign="center" font="Regular;18" backgroundColor="background" transparent="1" />
 		<eLabel name="key_blue" position="445,0" size="115,40" halign="left" valign="center" font="Regular;18" backgroundColor="background" transparent="1" />
 		<widget name="config" position="10,45" size="540,378" scrollbarMode="showOnDemand" />
 	</screen>
