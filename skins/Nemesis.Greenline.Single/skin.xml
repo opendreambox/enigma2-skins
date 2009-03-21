@@ -314,7 +314,7 @@
 		<widget name="title" position="25,114" size="385,18" font="Regular;16" valign="top" transparent="1" />
 		<widget name="coverArt" pixmap="Nemesis.Greenline.Single/no_coverArt.png" position="504,15" size="116,116" alphatest="on" />
 		<widget name="filelist" position="41,143" size="578,115" scrollbarMode="showOnDemand" />
-		<widget name="playlist" position="41,270" size="578,154" scrollbarMode="showOnDemand" selectionDisabled="1" />
+		<widget name="playlist" position="41,277" size="578,138" scrollbarMode="showOnDemand" selectionDisabled="1" />
 		<widget name="PositionGauge" pointer="Nemesis.Greenline.Single/position_pointer.png:516,0" position="12,449" size="320,10" transparent="1" />
 		<ePixmap pixmap="Nemesis.Greenline.Single/position_overlay_l.png" position="8,447" zPosition="1" size="7,15" alphatest="on" />
 		<ePixmap pixmap="Nemesis.Greenline.Single/position_overlay_r.png" position="328,447" zPosition="1" size="7,15" alphatest="on" />
