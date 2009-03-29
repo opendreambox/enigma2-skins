@@ -366,19 +366,20 @@
 		<ePixmap pixmap="Kerni-HD1/icons/info.png" position="610,250" size="100,110" alphatest="blend" />
 	</screen>
 	<screen name="menu_setup" 			position="0,0" size="1280,720" title="Main menu" 		flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
+		<ePixmap position="0,0" zPosition="-11" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
+		<ePixmap position="35,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
 		<ePixmap position="870,380" zPosition="-9" size="310,200" pixmap="Kerni-HD1/menu/box.png" alphatest="blend" transparent="1" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="#0b67a2" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="900,70" size="310,22" font="Regular;20" halign="right" backgroundColor="#0b67a2" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="890,70" size="320,22" font="Regular;20" halign="right" backgroundColor="#0b67a2" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
 
 		<widget source="title" render="Label" position="80,60" size="300,32" font="Regular;27" halign="center" backgroundColor="#0b67a2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="80,120" size="318,440" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" position="80,120" size="353,440" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (25, 7), size = (323, 30), flags = RT_HALIGN_LEFT, text = 0) ],
+				{"template": [ MultiContentEntryText(pos = (20, 7), size = (330, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
 				}
