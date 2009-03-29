@@ -43,10 +43,8 @@
 		<color name="LabelForeground" 						color="#ffffff"/>
 		<color name="ListboxBackground" 					color="#000000"/>
 		<color name="ListboxForeground" 					color="#ffffff"/>
-
-		<color name="ListboxSelectedBackground" 			color="#00375b"/>
+		<color name="ListboxSelectedBackground" 			color="#1357a3"/>
 		<color name="ListboxSelectedForeground" 			color="#ffffff"/>
-
 		<color name="ListboxMarkedBackground" 				color="#3658a4"/>
 		<color name="ListboxMarkedForeground" 				color="#ff0000"/>
 		<color name="ListboxMarkedAndSelectedBackground"	color="#3658a4"/>
@@ -62,10 +60,6 @@
 			<pixmap pos="bpBottomLeft" 	filename="dTV-HD/bs_bl.png"/>
 			<pixmap pos="bpBottom" 		filename="dTV-HD/bs_b.png"/>
 			<pixmap pos="bpBottomRight"	filename="dTV-HD/bs_br.png"/>
-		</borderset>
-		<borderset name="bsListboxEntry">
-			<pixmap pos="bpTop" filename="dTV-HD/h-white.png"/>
-			<pixmap pos="bpBottom" filename="dTV-HD/h-white.png"/>
 		</borderset>
 	</windowstyle>
 	<windowstyle type="skinned" id="1">
@@ -262,7 +256,7 @@
 		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend" />
 		<widget source="title" render="Label" position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1"/>
 
-		<widget source="menu" render="Listbox" position="23,101" size="298,450" scrollbarMode="showNever"  >
+		<widget source="menu" render="Listbox" position="23,101" size="298,450" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select300_45.png" >
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -319,7 +313,7 @@
 		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend" />
 		<widget source="title" render="Label" position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1"/>
 
-		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever"  >
+		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select300_45.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -330,48 +324,53 @@
 
 		<ePixmap pixmap="dTV-HD/icons/info.png" position="120,250" size="100,110" alphatest="blend" />
 	</screen>
-	<screen name="menu_setup" 				position="319,74" 	size="642,572" title="Main menu" backgroundColor="transparent2" flags="wfNoBorder">
-		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="1,1" size="640,570" zPosition="-5" alphatest="blend"/>
-		<eLabel position="21,99" 	size="600,2" backgroundColor="grey" zPosition="5"/>
+	<screen name="menu_setup" 				position="319,74" 	size="692,572" title="Main menu" backgroundColor="transparent2" flags="wfNoBorder">
+		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="1,1" size="600,570" zPosition="-5" alphatest="blend"/>
+		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="51,1" size="640,570" zPosition="-6" alphatest="blend"/>
+		<eLabel position="21,99" 	size="650,2" backgroundColor="grey" zPosition="5"/>
 		<eLabel position="320,101" 	size="2,450" backgroundColor="grey" zPosition="5"/>
 
 		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend" />
 		<widget source="title" render="Label" position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1"/>
 
-		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever"  >
+		<widget source="menu" render="Listbox" position="322,101" size="347,450" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select430_45.png" >
 			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
+				{"template": [ MultiContentEntryText(pos = (0, 9), size = (347, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 45
 				}
 			</convert>
 		</widget>
 
-		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/search.png" 	position="70,250" size="200,110" alphatest="blend">
+		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/search.png" 	position="70,250"  size="200,110" alphatest="blend">
 			<convert type="MenuEntryCompare">service_searching_selection</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/setup.png" 	position="85,250" size="170,110" alphatest="blend">
+		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/setup.png" 	position="85,250"  size="170,110" alphatest="blend">
 			<convert type="MenuEntryCompare">system_selection</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/ci.png" 		position="85,250" size="170,110" alphatest="blend">
+		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/ci.png" 		position="85,250"  size="170,110" alphatest="blend">
 			<convert type="MenuEntryCompare">ci_setup</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/ci.png" 		position="85,250"  size="170,110" alphatest="blend">
+			<convert type="MenuEntryCompare">ci_assign</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/look.png" 	position="115,250" size="110,110" alphatest="blend">
 			<convert type="MenuEntryCompare">parental_setup</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/default.png" position="105,250" size="130,110" alphatest="blend">
+		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/default.png"  position="105,250" size="130,110" alphatest="blend">
 			<convert type="MenuEntryCompare">default_wizard</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/reset.png" 	position="85,250" size="170,110" alphatest="blend">
+		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/reset.png" 	position="85,250"  size="170,110" alphatest="blend">
 			<convert type="MenuEntryCompare">factory_reset</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/swm.png" 	position="115,250" size="110,110" alphatest="blend">
+		<widget source="menu" render="Pixmap" pixmap="dTV-HD/icons/swm.png" 		position="115,250" size="110,110" alphatest="blend">
 			<convert type="MenuEntryCompare">software_manager</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -384,7 +383,7 @@
 		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend" />
 		<widget source="title" render="Label" position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1"/>
 
-		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever"  >
+		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select300_45.png" >
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -403,7 +402,7 @@
 		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend" />
 		<widget source="title" render="Label" position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1"/>
 
-		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever"  >
+		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select300_45.png" >
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -422,7 +421,7 @@
 		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend" />
 		<widget source="title" render="Label" position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1"/>
 
-		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever"  >
+		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select300_45.png" >
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -441,7 +440,7 @@
 		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend" />
 		<widget source="title" render="Label" position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1"/>
 
-		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever"  >
+		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select300_45.png" >
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -456,7 +455,7 @@
 		<eLabel position="0,0" 		size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget source="title" render="Label" position="10,10" size="580,35" font="Regular;27" halign="center" />
 		<eLabel position="10,50" 		size="580,2" backgroundColor="grey" zPosition="5"/>
-		<widget source="menu" render="Listbox" position="10,55" size="580,450" scrollbarMode="showOnDemand"  >
+		<widget source="menu" render="Listbox" position="10,55" size="580,450" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" >
 			<convert type="StringList" />
 		</widget>
 	</screen>
@@ -482,7 +481,7 @@
 		<widget name="Adaptertext" 	 position="10,20" 	size="140,25" 	zPosition="10" font="Regular;22" transparent="1" />
 		<widget name="Adapter" 		 position="150,20"  size="520,25" 	zPosition="10" font="Regular;22" transparent="1" />
 		<eLabel 					 position="0,55" 	size="760,2" 	backgroundColor="grey" />
-		<widget name="config" 		 position="20,70" 	size="740,375" 	scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" 		 position="20,70" 	size="740,375" 	scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" />
 		<widget name="introduction2" position="0,470"   size="760,30" 	zPosition="10" font="Regular;24" halign="center" transparent="1" />
 		<eLabel 					 position="780,0" 	size="2,518" 	backgroundColor="grey" />
 		<widget name="introduction"  position="790,20" 	size="300,25" font="Regular;22" halign="center" />
@@ -512,7 +511,7 @@
 		<widget name="IFtext" 		 position="10,20" 	size="140,25" 	zPosition="10" font="Regular;22" transparent="1" />
 		<widget name="IF" 			 position="150,20"  size="520,25" 	zPosition="10" font="Regular;22" transparent="1" />
 		<eLabel 					 position="0,55" 	size="760,2" 	backgroundColor="grey" />
-		<widget name="menulist" 	 position="20,70" 	size="740,375" 	scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="menulist" 	 position="20,70" 	size="740,375" 	scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"  />
 		<eLabel 					 position="780,0"   size="2,518" 	backgroundColor="grey" />
 		<widget name="description" 	 position="790,20"  size="300,400" font="Regular;22" halign="center" valign="center" />
 		<eLabel 					 position="0,518" 	size="1100,2" backgroundColor="grey" />
@@ -525,19 +524,18 @@
 	</screen>
 	<screen name="BouquetSelector" 			position="340,150"  size="600,300"  title="Choose bouquet">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" />
-		<widget name="menu" position="10,20" size="580,260" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="menu" position="10,20" size="580,260" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
 		<eLabel 			position="0,280" size="600,2" backgroundColor="grey" />
 	</screen>
 	<screen name="ChannelContextMenu" 		position="340,150"  size="600,300"  title="Channellist menu">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" />
-		<widget name="menu" position="10,20" size="580,260" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="menu" position="10,20" size="580,260" scrollbarMode="showOnDemand"  selectionPixmap="dTV-HD/menu/select1080_25.png" />
 		<eLabel 			position="0,280" size="600,2" backgroundColor="grey" />
 	</screen>
 	<screen name="ChannelSelection" 		position="80,90" 	size="1120,570" title="Channel Selection">
 		<eLabel position="0,0" 		size="1140,2" backgroundColor="grey" />
 		<eLabel position="800,0" 	size="2,518" backgroundColor="grey" />
-		<widget name="list" position="10,20" size="780,480" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666"  serviceItemHeight="32" serviceNumberFont="Regular;24" serviceNameFont="Regular;24" serviceInfoFont="Regular;21" transparent="1" />
-		<eLabel 					position="0,518" 	size="1120,2" backgroundColor="grey" />
+		<widget name="list" position="10,20" size="780,480" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_30.png" foregroundColorServiceNotAvail="#666666"  serviceItemHeight="32" serviceNumberFont="Regular;24" serviceNameFont="Regular;24" serviceInfoFont="Regular;21" transparent="1" />
 		<widget source="ServiceEvent" render="Label" position="810,10" zPosition="1" size="310,50" font="Regular;24" halign="center" foregroundColor="white" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -563,6 +561,7 @@
 		<widget source="global.CurrentTime" render="Label" 	position="1040,490" zPosition="1" size="70,20" font="Regular;22" halign="center">
 			<convert type="ClockToText"></convert>
 		</widget>
+		<eLabel 					position="0,518" 	size="1120,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 30,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="300,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="570,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -574,7 +573,7 @@
 	</screen>
 	<screen name="ChannelSelectionRadio" 	position="102,90" 	size="1076,370" title="Channel Selection">
 		<eLabel position="0,0" 		size="1076,2" backgroundColor="grey" />
-		<widget name="list" position="10,10" size="1056,300" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666"  serviceItemHeight="30" serviceNumberFont="Regular;24" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" />
+		<widget name="list" position="10,10" size="1056,300" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_30.png" foregroundColorServiceNotAvail="#666666"  serviceItemHeight="30" serviceNumberFont="Regular;24" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" />
 		<eLabel 					position="0,318" 	size="1116,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 10,332"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="280,332"  zPosition="1" size="250,38" alphatest="blend" />
@@ -589,10 +588,91 @@
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="text" 	position="10,10" size="580,30" font="Regular;25" transparent="1" />
 		<eLabel 				position="0,45" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="entries" 	position="10,55" size="580,400" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="entries" 	position="10,55" size="580,400" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
 		<eLabel 				position="0,480" size="600,2" backgroundColor="grey" />
 	</screen>
-	<screen name="Console" 					position="90,90"   size="1100,570" title="Command execution...">
+	<screen name="CIselectMainMenu" 		position="340,125" 	size="600,502"  title="CI Assignment">
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+
+		<widget name="CiList" position="0,10" size="600,450" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+
+		<eLabel 				position="0,480" size="600,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" 		position=" 40,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" 		position="310,532" zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red"   render="Label" 	position=" 40,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_green" render="Label" 	position="310,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="black" transparent="1"/>
+	</screen>
+	<screen name="CIconfigMenu" 			position="90,90" 	size="1100,570" title="CI Assignment">
+		<eLabel 						position="0,0" 	  	size="1100,2"   backgroundColor="grey" />
+		<widget name="CAidList.desc" 	position="20,10"  	size="1060,30"  font="Regular;24" />
+		<eLabel 						position="10,50"   	size="1080,2" 	backgroundColor="grey" />
+		<widget name="CAidList" 		position="20,60"  	size="1060,75" 	zPosition="3" font="Regular;22" />
+		<eLabel 						position="10,145"  	size="1080,2" 	backgroundColor="grey" />
+		<widget name="ServiceList.desc" position="20,155" 	size="1060,30" 	zPosition="3" font="Regular;24" />
+		<eLabel 						position="10,195"  	size="1080,2" 	backgroundColor="grey" />
+		<widget name="ServiceList" 		position="20,205" 	size="1060,300" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<eLabel 						position="10,518" 	size="1080,2" 	backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" 	render="Label" position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" 	render="Label" position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" 	render="Label" position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
+	</screen>
+	<screen name="easyCIconfigMenu" 		position="90,90" 	size="1100,570" title="CI Assignment">
+		<eLabel 						position="0,0" 	  	size="1100,2"  backgroundColor="grey" />
+		<widget name="ServiceList.desc" position="10,10"  	size="1080,30" font="Regular;24" />
+		<eLabel 						position="0,50"   	size="1100,2" backgroundColor="grey" />
+		<widget name="ServiceList" 		position="10,60"  	size="1080,450" 	zPosition="3" font="Regular;22" />
+
+		<eLabel 						position="0,518" 	size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position="145,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="415,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="685,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" 	render="Label" position="145,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" 	render="Label" position="415,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="685,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
+	</screen>
+	<screen name="CAidSelect" 				position="340,125" 	size="600,502"  title="select CAId's">
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+
+		<widget name="list" position="0,10" size="600,450" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+
+		<eLabel 				position="0,480" size="600,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" 		position=" 40,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" 		position="310,532" zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red"   render="Label" 	position=" 40,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_green" render="Label" 	position="310,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="black" transparent="1"/>
+	</screen>
+	<screen name="myProviderSelection" 		position="90,90" 	size="1100,570" title="Select provider to add...">
+		<eLabel position="0,0" size="1140,2" backgroundColor="grey" />
+		<widget name="list" position="10,20" size="1080,480" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<eLabel position="0,518" size="1120,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 30,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="300,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="570,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="840,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="key_red" 				position=" 30,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="black" transparent="1"/>
+		<widget name="key_green" 			position="300,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="black" transparent="1"/>
+		<widget name="key_yellow" 			position="570,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="black" transparent="1"/>
+		<widget name="key_blue" 			position="840,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="black" transparent="1"/>
+	</screen>
+	<screen name="myChannelSelection" 		position="90,90" 	size="1100,570" title="Select service to add...">
+		<eLabel position="0,0" size="1140,2" backgroundColor="grey" />
+		<widget name="list" position="10,20" size="1080,480" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<eLabel position="0,518" size="1120,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 30,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="300,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="570,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="840,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="key_red" 				position=" 30,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="black" transparent="1"/>
+		<widget name="key_green" 			position="300,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="black" transparent="1"/>
+		<widget name="key_yellow" 			position="570,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="black" transparent="1"/>
+		<widget name="key_blue" 			position="840,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="black" transparent="1"/>
+	</screen>
+	<screen name="Console" 					position="90,90"    size="1100,570" title="Command execution...">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<widget name="text" position="20,20" size="1060,520" font="Console;21" />
 		<eLabel 			position="0,540" size="1100,2" backgroundColor="grey" />
@@ -605,7 +685,7 @@
 
 		<eLabel 					position="100,122" size="300,420" zPosition="1" backgroundColor="darkgrey" />
 		<eLabel 					position="102,124" size="296,416" zPosition="2" backgroundColor="black" />
-		<widget source="cutlist"    position="110,132" size="280,400" zPosition="3" scrollbarMode="showOnDemand" transparent="1" render="Listbox" >
+		<widget source="cutlist"    position="110,132" size="280,400" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" render="Listbox" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=(10,2), size=(170, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
@@ -637,7 +717,7 @@
 	</screen>
 	<screen name="EPGSelection" 			position="90,90" 	size="1100,570" zPosition="10" title="EPG Selection" >
 		<eLabel 					position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="list" 		position="10,20" 	size="1080,475" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="list" 		position="10,20" 	size="1080,475" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -656,7 +736,7 @@
 		<widget name="next_text" 	position="282,7"	zPosition="4" size="250,25" text="NEXT" font="Regular;20" halign="center" backgroundColor="black" transparent="1" />
 		<widget name="more_text" 	position="532,7"	zPosition="4" size="250,25" text="MORE" font="Regular;20" halign="center" backgroundColor="black" transparent="1" />
 		<widget name="date" position="880,10" size="200,28" font="Regular;24" valign="center" halign="right" backgroundColor="black" transparent="1"/>
-		<widget name="list" position="10,55" size="1080,450" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="list" position="10,55" size="1080,450" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -689,7 +769,7 @@
 		<eLabel position="800,0" 	size="2,518" backgroundColor="grey" />
 		<widget name="timeline_text" position="0,10" size="800,30" />
 		<eLabel 					 position="0,40" size="800,2" backgroundColor="grey" />
-		<widget name="list" position="10,60" size="780,432" scrollbarMode="showOnDemand" EntryBorderColor="#999999" EntryBackgroundColor="#333333" EntryForegroundColorSelected="#000000" EntryBackgroundColorSelected="#cccccc" transparent="1" />
+		<widget name="list" position="10,60" size="780,432" scrollbarMode="showOnDemand" EntryBorderColor="#999999" EntryBackgroundColor="#333333" EntryForegroundColorSelected="#000000" EntryBackgroundColorSelected="#cccccc" />
 		<eLabel 			position="0,60"  size="760,1" backgroundColor="darkgrey" />
 		<eLabel 			position="0,114" size="760,1" backgroundColor="darkgrey" />
 		<eLabel 			position="0,168" size="760,1" backgroundColor="darkgrey" />
@@ -699,12 +779,12 @@
 		<eLabel 			position="0,384" size="760,1" backgroundColor="darkgrey" />
 		<eLabel 			position="0,438" size="760,1" backgroundColor="darkgrey" />
 		<eLabel 			position="0,492" size="760,1" backgroundColor="darkgrey" />
-		<widget name="timeline0" position="0,55" zPosition="1" size="1,442" pixmap="dTV-HD/timeline.png" />
-		<widget name="timeline1" position="0,55" zPosition="1" size="1,442" pixmap="dTV-HD/timeline.png" />
-		<widget name="timeline2" position="0,55" zPosition="1" size="1,442" pixmap="dTV-HD/timeline.png" />
-		<widget name="timeline3" position="0,55" zPosition="1" size="1,442" pixmap="dTV-HD/timeline.png" />
-		<widget name="timeline4" position="0,55" zPosition="1" size="1,442" pixmap="dTV-HD/timeline.png" />
-		<widget name="timeline5" position="0,55" zPosition="1" size="1,442" pixmap="dTV-HD/timeline.png" />
+		<widget name="timeline0" position="0,60" zPosition="1" size="1,432" pixmap="dTV-HD/timeline.png" />
+		<widget name="timeline1" position="0,60" zPosition="1" size="1,432" pixmap="dTV-HD/timeline.png" />
+		<widget name="timeline2" position="0,60" zPosition="1" size="1,432" pixmap="dTV-HD/timeline.png" />
+		<widget name="timeline3" position="0,60" zPosition="1" size="1,432" pixmap="dTV-HD/timeline.png" />
+		<widget name="timeline4" position="0,60" zPosition="1" size="1,432" pixmap="dTV-HD/timeline.png" />
+		<widget name="timeline5" position="0,60" zPosition="1" size="1,432" pixmap="dTV-HD/timeline.png" />
 		<widget name="timeline_now" position="0,53" zPosition="2" size="19,446" pixmap="dTV-HD/timeline-now.png" alphatest="on" />
 		<widget source="Event" render="Label" position="815,10" zPosition="1" size="300,50" font="Regular;24" halign="center" foregroundColor="white" >
 			<convert type="EventName">Name</convert>
@@ -742,15 +822,16 @@
 	</screen>
 	<screen name="HarddiskSelection" 		position="340,125" 	size="600,502"  title="Select HDD">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="hddlist" position="10,12" size="580,475"  transparent="1"/>
+		<widget name="hddlist" position="10,12" size="580,475" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 	</screen>
 	<screen name="HarddiskSetup" 			position="340,125" 	size="600,502"  title="Harddisk">
 		<eLabel position="0,0" 		size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="model" 		position="10,20" size="580,28" font="Regular;25" halign="center" />
 		<widget name="capacity" 	position="10,60" size="580,28" font="Regular;25" halign="center" />
 		<widget name="bus" 			position="10,100" size="580,28" font="Regular;25" halign="center" />
-		<eLabel position="0,460" 		size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="initializetext" position="20,467" size="580,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="red"/>
+		<eLabel position="0,450" 		size="600,2" backgroundColor="grey" zPosition="5"/>
+		<ePixmap pixmap="dTV-HD/button300.png"  position=" 150,464"  zPosition="1" size="300,38" alphatest="blend" />
+		<widget name="initializetext" 			position=" 150,463"	zPosition="2" size="300,38" font="Regular;24" halign="center" valign="center" foregroundColor="red"   backgroundColor="darkgrey" transparent="1"/>
 		<widget name="initialize" position="0,0" size="0,0" />
 	</screen>
 	<screen name="HarddiskWait" 			position="340,125" 	size="600,502" >
@@ -761,7 +842,7 @@
 		<eLabel text="help..." 		position="450,63" 		size="740,50" 	font="Regular;40" halign="center" backgroundColor="black" transparent="1"/>
 		<widget name="rc" 			position="150,105" 		size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
 		<widget name="long_key" 	position="80,585" 		size="300,30" 	font="Regular;24" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
-		<widget name="list" 		position="450,140" 		size="740,494" 	scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="list" 		position="450,140" 		size="740,494" 	scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select750_38.png" transparent="1" />
 		<widget name="arrowdown" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -769,7 +850,7 @@
 	</screen>
 	<screen name="LanguageSelection" 		position="340,125" 	size="600,502"  title="Language selection" >
 		<eLabel position="0,0" 		size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget source="languages" render="Listbox" position="0,2" size="600,500" scrollbarMode="showNever"  transparent="1">
+		<widget source="languages" render="Listbox" position="0,2" size="600,500" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select600_50.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (200, 10), size = (470, 30), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
@@ -781,28 +862,28 @@
 			</convert>
 		</widget>
 	</screen>
+	<screen name="LocationBox" 				position="90,90" 	size="1100,570">
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
+		<widget name="text" position="10,10" size="1080,27" font="Regular;23"/>
+		<eLabel position="10,50" size="20,27" backgroundColor="darkgrey"/>
+		<widget name="target" position="30,50" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
+		<widget name="filelist" position="30,85" size="1060,230" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" selectionDisabled="1" transparent="1"/>
+		<eLabel position="10,345" size="20,27" backgroundColor="darkgrey"/>
+		<widget name="textbook" position="30,345" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
+		<widget name="booklist" position="30,380" size="1060,125" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="key_yellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;23" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
+	</screen> 	
 	<screen name="MovieContextMenu" 		position="340,180"  size="600,400"  title="Movielist menu">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" />
-		<widget name="menu" position="20,20" size="560,360" scrollbarMode="showOnDemand"  transparent="1"/>
-	</screen>
-	<screen name="MovieLocationBox" 		position="90,90" 	size="1100,570" >
-		<eLabel position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="text" position="10,10" size="1080,27" font="Regular;23" />
-		<eLabel position="10,50" 		size="20,27" backgroundColor="darkgrey" />
-		<widget name="target" position="30,50" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
-		<widget name="filelist" position="30,85" zPosition="1" size="1060,230" scrollbarMode="showOnDemand" selectionDisabled="1"  transparent="1"/>
-		<eLabel position="10,345" 		size="20,27" backgroundColor="darkgrey" />
-		<widget name="textbook" position="30,345" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
-		<widget name="booklist" position="30,380" zPosition="2" size="1060,125" scrollbarMode="showOnDemand"  transparent="1"/>
-		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
-		<widget name="red" 		pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="green" 	pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="yellow" 	pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="blue" 	pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="key_red" 		position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_green" 	position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_yellow" 	position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_blue" 	position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="menu" position="20,20" size="560,360" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 	</screen>
 	<screen name="MoviePlayer" 				position="69,566" 	size="1142,132" backgroundColor="transparent2" title="InfoBar" flags="wfNoBorder" >
 		<ePixmap pixmap="dTV-HD/infobar_movie.png" position="1,1" size="1140,156" zPosition="-5" alphatest="blend"/>
@@ -861,7 +942,7 @@
 		<eLabel position="0,0" 		size="1100,2" backgroundColor="grey" />
 		<eLabel position="780,0" 	size="2,518" backgroundColor="grey" />
 		<widget name="waitingtext" position="10,20" size="760,450" zPosition="4" font="Regular;22" halign="center" valign="center" />
-		<widget name="list" position="10,20" size="760,450" scrollbarMode="showOnDemand"  />
+		<widget name="list" position="10,20" size="760,450" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_75.png" />
 
 		<eLabel position="10,18" size="740,1" backgroundColor="darkgrey" />
 		<eLabel position="10,93" size="740,1" backgroundColor="darkgrey" />
@@ -900,7 +981,7 @@
 	<screen name="NameserverSetup"			position="90,90" 	size="1100,570" title="Nameserver Setup" >
 		<eLabel 					position="0,0"   size="1100,2" 	backgroundColor="grey" />
 		<eLabel 					position="20,55" size="740,2" 	backgroundColor="grey" />
-		<widget name="config" 	 	position="20,70" size="740,375" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" 	 	position="20,70" size="740,375" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<widget name="introduction" position="20,470"  size="740,30" 	zPosition="10" font="Regular;24" halign="center" transparent="1" />
 		<eLabel 					 position="780,0" 	size="2,518" 	backgroundColor="grey" />
 		<eLabel 					 position="0,518" 	size="1100,2" backgroundColor="grey" />
@@ -913,12 +994,12 @@
 		<ePixmap position="970,400" size="110,110" zPosition="2" pixmap="dTV-HD/icons/net.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="NetworkAdapterSelection" 	position="90,90" 	size="1100,570" title="Select Network Adapter">
-		<eLabel 					position="0,0" 		size="1100,2" 	backgroundColor="grey" />
-		<eLabel 					position="0,55" 	size="760,2" 	backgroundColor="grey" />
-		<widget name="list" 	 	  position="0,70"  size="760,375" scrollbarMode="showOnDemand"  transparent="1" />
-		<widget name="introduction"   position="0,470" size="760,30" 	zPosition="10" font="Regular;24" halign="center" transparent="1" />
-		<eLabel 					  position="780,0" size="2,518" 	backgroundColor="grey" />
-		<eLabel 					  position="0,518" size="1100,2" backgroundColor="grey" />
+		<eLabel 					 position="0,0"   size="1100,2" backgroundColor="grey" />
+		<eLabel 					 position="0,55"  size="760,2" 	backgroundColor="grey" />
+		<widget name="list" 	 	 position="0,70"  size="760,375" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
+		<widget name="introduction"  position="0,470" size="760,30" zPosition="10" font="Regular;24" halign="center" transparent="1" />
+		<eLabel 					 position="780,0" size="2,518" 	backgroundColor="grey" />
+		<eLabel 					 position="0,518" size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position="820,532" size="250,38" zPosition="1" alphatest="blend" />
 		<widget name="ButtonRedtext" 		position="820,531" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1"/>
 		<widget name="ButtonBluetext" 		position="410,531" size="560,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1"/>
@@ -976,7 +1057,7 @@
 	</screen>
 	<screen name="NimSelection" 			position="340,125" 	size="600,422"  title="Choose Tuner">
 		<eLabel position="0,0" 		size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget source="nimlist" render="Listbox" position="0,0" size="600,420"  transparent="1">
+		<widget source="nimlist" render="Listbox" position="0,0" size="600,420" selectionPixmap="dTV-HD/menu/select1080_70.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (10, 5), size = (360, 30), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
@@ -990,7 +1071,7 @@
 	</screen>
 	<screen name="NimSetup" 				position="340,125" 	size="600,502"  title="Reception Settings">
 		<eLabel position="0,0" 		size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="config" position="10,12" size="580,475"  transparent="1"/>
+		<widget name="config" position="10,12" size="580,475" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 	</screen>
 	<screen name="NumberZap" 				position="440,355" 	size="400,60"   title="Channel">
 		<eLabel position="0,0" 		size="400,2" backgroundColor="grey" zPosition="5"/>
@@ -1011,19 +1092,19 @@
 	</screen>
 	<screen name="ParentalControlChangePin" position="340,125" 	size="600,502"  title="Change pin code">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="config" position="10,12" size="580,475"  transparent="1"/>
+		<widget name="config" position="10,12" size="580,475" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 	</screen>
 	<screen name="ParentalControlEditor" 	position="340,125" 	size="600,502"  title="Parental control services Editor">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="servicelist" position="10,12" size="580,475"  transparent="1"/>
+		<widget name="servicelist" position="10,12" size="580,475" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 	</screen>
 	<screen name="ParentalControlSetup" 	position="340,125" 	size="600,502"  title="Parental control setup">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="config" position="10,12" size="580,475"  transparent="1"/>
+		<widget name="config" position="10,12" size="580,475" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 	</screen>
 	<screen name="PluginBrowser" 			position="240,125" 	size="800,502"  title="Plugin browser">
 		<eLabel 				position="0,0" 		size="800,2" backgroundColor="grey" />
-		<widget name="list" 	position="0,0" 		size="801,452" scrollbarMode="showOnDemand" />
+		<widget name="list" 	position="0,0" 		size="801,452" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select800_50.png" />
 		<eLabel 				position="0,450" 	size="800,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button300.png"  position=" 80,464"  zPosition="1" size="300,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button300.png"  position="420,464"  zPosition="1" size="300,38" alphatest="blend" />
@@ -1033,13 +1114,13 @@
 	<screen name="PluginDownloadBrowser" 	position="240,125" 	size="800,502"  title="Downloadable plugins">
 		<eLabel 				position="0,0" 		size="800,2" backgroundColor="grey" />
 		<widget name="text" 	position="20,30" 	size="760,50" font="Regular;23" />
-		<widget name="list" 	position="0,0" 		size="801,452" scrollbarMode="showOnDemand" />
+		<widget name="list" 	position="0,0" 		size="801,452" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select800_50.png"/>
 		<eLabel 				position="0,450" 	size="800,2" backgroundColor="grey" />
 	</screen>
 	<screen name="PositionerSetup" 			position="240,125" 	size="800,492"  title="Positioner setup..." >
 		<eLabel 				position="0,0" 		size="800,2" backgroundColor="grey" />
 
-		<widget name="list" 			position="200,10"  size="400,155"  transparent="1"/>
+		<widget name="list" 			position="200,10"  size="400,155" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<widget name="red" 				position="0,  180" size="200,100" backgroundColor="red" 	halign="center" valign="center" font="Regular;21" />
 		<widget name="green" 			position="200,180" size="200,100" backgroundColor="green" 	halign="center" valign="center" font="Regular;21" />
 		<widget name="yellow" 			position="400,180" size="200,100" backgroundColor="yellow"	halign="center" valign="center" font="Regular;21" />
@@ -1181,19 +1262,19 @@
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
 		<eLabel position="0,152" size="600,1" backgroundColor="grey" zPosition="5"/>
-		<widget name="config" position="10,165" size="580,240" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="config" position="10,165" size="580,240" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 
 		<widget name="introduction" position="0,0" size="0,0" font="Regular;23" />
 	</screen>
 	<screen name="ScanSetup" 				position="340,125" 	size="600,502"  title="Service scan">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="config" position="10,12" size="580,425"  transparent="1"/>
+		<widget name="config" position="10,12" size="580,425" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<widget name="introduction" position="10,465" size="580,25" font="Regular;22" halign="center" />
 	</screen>
 	<screen name="ScanSimple" 				position="340,125" 	size="600,502"  title="Service scan">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="header" position="10,10" size="580,25" font="Regular;23" />
-		<widget name="config" position="10,55" size="580,350" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="config" position="10,55" size="580,350" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<widget name="footer" position="10,465" size="580,25" font="Regular;22" halign="center" />
 	</screen>
 	<screen name="ServiceInfo" 				position="90,90" 	size="1100,570" title="Serviceinfo">
@@ -1238,7 +1319,7 @@
 		<widget name="title" 	position="20,10" 	size="580,35" font="Regular;23" />
 		<eLabel 				position="0,45" 	size="900,2" backgroundColor="grey" />
 
-		<widget name="config" position="20,65" size="860,425" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="config" position="20,65" size="860,425" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 
 		<eLabel 					position="0,518" 	size="900,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position="190,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -1248,7 +1329,7 @@
 	</screen>
 	<screen name="SimpleChannelSelection" 	position="90,90" 	size="1100,570" title="Channel Selection" >
 		<eLabel 							position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="list" 				position="10,20" 	size="1080,475" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="list" 				position="10,20" 	size="1080,475" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 							position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -1261,7 +1342,7 @@
 	</screen>
 	<screen name="SkinSelector" 			position="340,125" 	size="600,502" 	title="Skin Selector" >
 		<eLabel position="0,0" 		size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="SkinList" 	position="10,10"	size="300,450" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="SkinList" 	position="10,10"	size="300,450" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel position="320,0" 	size="2,463" backgroundColor="grey" zPosition="5"/>
 		<widget name="Preview" 		position="340,130" 	size="250,200" alphatest="on" />
 		<eLabel 						position="0,463" size="600,2" backgroundColor="grey" />
@@ -1308,7 +1389,7 @@
 	<screen name="SubtitleDisplay" 			position="0,0" 		size="1280,720" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder" />
 	<screen name="TimerEditList" 			position="90,90" 	size="1100,570" title="Timer Editor">
 		<eLabel position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="timerlist"    position="10,14"  size="1080,490" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="timerlist"    position="10,14"  size="1080,490" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_70.png" transparent="1"/>
 		<eLabel 					position="10,84"  size="1050,1" backgroundColor="darkgrey" />
 		<eLabel 					position="10,154" size="1050,1" backgroundColor="darkgrey" />
 		<eLabel 					position="10,224" size="1050,1" backgroundColor="darkgrey" />
@@ -1327,7 +1408,7 @@
 	</screen>
 	<screen name="TimerEntry" 				position="90,90" 	size="1100,570" title="Timer entry">
 		<eLabel 					position="0,0" size="1100,2" backgroundColor="grey" />
-		<widget name="config" 		position="10,20" size="1080,350" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="config" 		position="10,20" size="1080,350" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<eLabel 					position="0,518" size="1100,2" backgroundColor="grey" />
 		<widget name="cancel" 		position=" 20,532" zPosition="1" size="250,38" pixmap="dTV-HD/button.png" alphatest="blend" />
 		<widget name="ok"			position="290,532" zPosition="1" size="250,38" pixmap="dTV-HD/button.png" alphatest="blend" />
@@ -1336,7 +1417,7 @@
 	</screen>
 	<screen name="TimerLog" 				position="90,90" 	size="1100,570" title="Timer log">
 		<eLabel position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="loglist"  position="10,10" size="1080,350" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="loglist"  position="10,10" size="1080,350" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<eLabel position="0,370" size="1100,2" backgroundColor="grey" />
 		<widget name="logentry" position="10,380" size="1080,130" font="Regular;20" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
@@ -1351,7 +1432,7 @@
 	</screen>
 	<screen name="TimerSanityConflict" 		position="90,90" 	size="1100,570" title="Timer sanity error">
 		<eLabel position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="list" position="10,10" size="1080,250" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="list" position="10,10" size="1080,250" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<eLabel position="0,270" 	size="1100,2" backgroundColor="grey" />
 		<eLabel position="549,0" 	size="2,248" backgroundColor="grey" />
 		<widget name="timer1" position="10,45"  size="530,225" scrollbarMode="showNever" />
@@ -1368,7 +1449,7 @@
 	</screen>
 	<screen name="TimerSelection" 			position="90,90" 	size="1100,570" title="Timer selection">
 		<eLabel position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="timerlist" position="10,20" size="1080,350" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="timerlist" position="10,20" size="1080,350" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_70.png" transparent="1"/>
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 	</screen>
 	<screen name="TimeshiftLocationBox"  	position="90,90" 	size="1100,570" >
@@ -1376,10 +1457,10 @@
 		<widget name="text" position="10,10" size="1080,27" font="Regular;23" />
 		<eLabel position="10,50" 		size="20,27" backgroundColor="darkgrey" />
 		<widget name="target" position="30,50" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
-		<widget name="filelist" position="30,85" zPosition="1" size="1060,230" scrollbarMode="showOnDemand" selectionDisabled="1"  transparent="1"/>
+		<widget name="filelist" position="30,85" zPosition="1" size="1060,230" scrollbarMode="showOnDemand" selectionDisabled="1" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<eLabel position="10,345" 		size="20,27" backgroundColor="darkgrey" />
 		<widget name="textbook" position="30,345" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
-		<widget name="booklist" position="30,380" zPosition="2" size="1060,125" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="booklist" position="30,380" zPosition="2" size="1060,125" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<widget name="red" pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<widget name="green" pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -1445,7 +1526,7 @@
 		<widget name="info" 		position="20,20" 	size="740,25"	zPosition="10" font="Regular;22" transparent="1" />
 		<eLabel 					position="20,55" 	size="740,2" 	backgroundColor="grey" />
 
-		<widget name="list" 		position="20,70" 	size="740,400" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="list" 		position="20,70" 	size="740,400" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_60.png" transparent="1"/>
 
 		<eLabel 					position="780,0" size="2,518" 	backgroundColor="grey" />
 		<eLabel 					position="0,518" size="1100,2" backgroundColor="grey" />
@@ -1462,7 +1543,7 @@
 	<screen name="ChoiceBox"				position="150,100"	size="550,400"	title="Input">
 		<eLabel position="0,0" 		size="1100,2" backgroundColor="grey" />
 		<widget name="text" position="10,10" size="550,25" font="Regular;20" />
-		<widget name="list" position="0,30" size="550,335" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="list" position="0,30" size="550,335" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
@@ -1507,7 +1588,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="ErrorPixmap" 	pixmap="skin_default/icons/input_error.png" 		position="5,5" 		size="53,53" alphatest="on" />
 		<widget name="QuestionPixmap" 	pixmap="skin_default/icons/input_question.png" 	position="5,5" 		size="53,53" alphatest="on" />
 		<widget name="InfoPixmap" 		pixmap="skin_default/icons/input_info.png" 		position="5,5" 		size="53,53" alphatest="on" />
-		<widget name="list" position="100,100" 	size="480,375"  transparent="1"/>
+		<widget name="list" position="100,100" 	size="480,375" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
@@ -1560,10 +1641,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<widget name="text" 						position="640,120" 	size="500,210" 	font="Regular;23" backgroundColor="background" transparent="1" />
 
-		<widget source="list" render="Listbox" 		position="460,340" 	size="730,200" 	zPosition="1" scrollbarMode="showOnDemand"  transparent="1" >
+		<widget source="list" render="Listbox" 		position="460,340" 	size="730,200" 	zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" >
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" 						position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand"  transparent="1" />            
+		<widget name="config" 						position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />            
 	</screen>
 	<screen name="NetworkWizard" 			position="0,0" 		size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Welcome..." 	position="500,63" 		size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1"/>
@@ -1578,10 +1659,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<widget name="text" 								position="640,120" 	size="500,240" 	font="Regular;23" backgroundColor="background" transparent="1" />
 
-		<widget source="list" render="Listbox" 				position="460,370" 	size="730,150" 	zPosition="13" scrollbarMode="showOnDemand"  transparent="1">
+		<widget source="list" render="Listbox" 				position="460,370" 	size="730,150" 	zPosition="13" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" 								position="460,370" 	size="730,150" 	zPosition="14" scrollbarMode="showOnDemand"  transparent="1"/>            
+		<widget name="config" 								position="460,370" 	size="730,150" 	zPosition="14" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>            
 	</screen>	
 	<screen name="DefaultSatLists" 			position="0,0"		size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Default Satlists" 			position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1"/>
@@ -1592,10 +1673,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<widget name="text" 						position="640,120" 	size="500,210" 	font="Regular;23" backgroundColor="background" transparent="1" />
 		
-		<widget source="list" render="Listbox" 		position="460,340" 	size="730,200" 	zPosition="1" scrollbarMode="showOnDemand"  transparent="1" >
+		<widget source="list" render="Listbox" 		position="460,340" 	size="730,200" 	zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" >
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" 						position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand"  transparent="1" />            
+		<widget name="config" 						position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />            
 
 		<eLabel text="OK = Exit" 	 				position="1080,587"	size="120,22" 	zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
 	</screen>
@@ -1608,12 +1689,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<widget name="text" 								position="640,120" 	size="500,210" 	font="Regular;23" backgroundColor="background" transparent="1" />
 
-		<widget source="list" render="Listbox" 				position="460,340" 	size="730,200" 	zPosition="1" scrollbarMode="showOnDemand"  transparent="1" >
+		<widget source="list" render="Listbox" 	position="460,340" 	size="730,200" 	zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" >
 				<convert type="StringList" />
 			</widget>
-		<widget name="config" 								position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand"  transparent="1" />            
+		<widget name="config" 					position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />            
 
-		<eLabel text="OK = Exit" 	 						position="1080,587"	size="120,22" 	zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
+		<eLabel text="OK = Exit" 	 			position="1080,587"	size="120,22" 	zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="DreamPackageWizard" 		position="0,0" 		size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="DreamPackageWizard" position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1"/>
@@ -1624,10 +1705,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<widget name="text" 								position="640,120" 	size="500,210" 	font="Regular;23" backgroundColor="background" transparent="1" />
 
-		<widget source="list" render="Listbox" 				position="450,350" 	size="750,200" 	zPosition="1" scrollbarMode="showOnDemand"  transparent="1" >
+		<widget source="list" render="Listbox" 				position="450,350" 	size="750,200" 	zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" >
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" 								position="450,350" 	size="750,200" 	zPosition="2" scrollbarMode="showOnDemand"  transparent="1" />            
+		<widget name="config" 								position="450,350" 	size="750,200" 	zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />            
 
 		<eLabel text="OK = Exit" 	 						position="1080,587"	size="120,22" 	zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
 	</screen>
@@ -1642,10 +1723,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dTV-HD/buttons/red.png" 		position="450,300" 	size="30,30" 	alphatest="on" />
 		<widget name="languagetext" 						position="485,305" 	size="150,23"	font="Regular;21" backgroundColor="#353e575e" transparent="1" />
 		<widget name="text" 								position="640,120" 	size="500,210" 	font="Regular;23" backgroundColor="#353e575e" transparent="1" />
-		<widget source="list" render="Listbox" 				position="460,340" 	size="730,200" 	zPosition="1" scrollbarMode="showOnDemand" transparent="1" >
+		<widget source="list" render="Listbox" 				position="460,340" 	size="730,200" 	zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" >
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" 								position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand" transparent="1" />            
+		<widget name="config" 								position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />            
 	</screen>
 	<screen name="LanguageWizard" 			position="0,0" 		size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Language selection" 	position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1"/>
@@ -1659,7 +1740,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<eLabel 			  						position="450,120" size="750,440"	zPosition="1" backgroundColor="#bbbbbb" />
 		<eLabel 			  						position="451,121" size="748,438" 	zPosition="2" backgroundColor="#252b4247" />
-		<widget source="languages" render="Listbox" position="460,130" size="730,420" 	zPosition="3" scrollbarMode="showOnDemand"  transparent="1" >
+		<widget source="languages" render="Listbox" position="460,130" size="730,420" 	zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_60.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (130, 17), size = (500, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
@@ -1693,29 +1774,30 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="languagetext" 						position="485,305" 	size="150,23"	font="Regular;21" backgroundColor="background" transparent="1" />
 		<widget name="text" 								position="640,120" 	size="520,240" 	font="Regular;23" backgroundColor="background" transparent="1" />
 		<widget name="portpic" 				 				position="450,370" 	size="150,150" zPosition="10" transparent="1" alphatest="on"/>
-		<widget source="list" render="Listbox" 				position="640,370" 	size="520,150" zPosition="13" scrollbarMode="showOnDemand"  transparent="1">
+		<widget source="list" render="Listbox" 				position="640,370" 	size="520,150" zPosition="13" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" 								position="640,370" 	size="520,150" zPosition="14" scrollbarMode="showOnDemand"  transparent="1"/>            
+		<widget name="config" 								position="640,370" 	size="520,150" zPosition="14" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>            
 	</screen>
 
-	<screen name="UpdatePluginMenu" 		position="319,74" 	size="642,572"  title="Softwaremanager..." backgroundColor="transparent2" flags="wfNoBorder">
-		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="1,1" size="640,570" zPosition="-5" alphatest="blend"/>
-		<eLabel position="21,99" size="600,2" backgroundColor="grey" zPosition="5"/>
+	<screen name="UpdatePluginMenu" 		position="319,74" 	size="772,572"  title="Softwaremanager..." backgroundColor="transparent2" flags="wfNoBorder">
+		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="1,1" size="600,570" zPosition="-5" alphatest="blend"/>
+		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="131,1" size="640,570" zPosition="-6" alphatest="blend"/>
+		<eLabel position="21,99" size="730,2" backgroundColor="grey" zPosition="5"/>
 		<eLabel position="320,101" size="2,450" backgroundColor="grey" zPosition="5"/>
 		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend"/>
 		<eLabel text="Softwaremanager..." position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="menu" render="Listbox" position="322,101" size="297,450" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" position="322,101" size="427,450" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select430_45.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 1), # index 0 is the MenuText,
+						MultiContentEntryText(pos = (0, 9), size = (427, 30), flags = RT_HALIGN_CENTER, text = 1), # index 0 is the MenuText,
 					],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 45
 				}
 			</convert>
 		</widget>
-		<widget source="menu" render="Listbox" 	position="25,105" size="290,300" zPosition="3" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+		<widget source="menu" render="Listbox" 	position="25,105" size="290,300" zPosition="3" scrollbarMode="showNever" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (0, 0), size = (290, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
@@ -1729,14 +1811,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="UpdatePlugin" 			position="340,125" 	size="600,502"  title="Software Update...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="activityslider" position="10,30" size="580,15" borderWidth="1" transparent="1"/>
-		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="black" transparent="1"/>
+		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="black" transparent="1"/>
 		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1"/>
 	</screen>
 	<screen name="PacketManager" 			position="240,125" 	size="800,502"  title="IPKG upgrade...">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
 
-		<widget source="list" render="Listbox"  position="5,15" size="790,420" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox"  position="5,15" size="790,420" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_60.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (5, 5), size = (690, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -1768,13 +1850,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="Ipkg" 					position="340,125" 	size="600,502"  title="Installing Software...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="activityslider" position="10,30" size="580,15" borderWidth="1" transparent="1"/>
-		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="black" />
+		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="black" />
 		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1"/>
 	</screen>
 	<screen name="IpkgInstaller" 			position="340,125" 	size="600,502"  title="Ipkg Installer...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="list" position="10,10" size="580,400" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="10,10" size="580,400" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" />
 		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<ePixmap pixmap="dTV-HD/button300.png" 			position="0,464"   size="300,38" zPosition="1" alphatest="blend" />
 		<eLabel text="OK to select/deselect" 			position="0,463"   size="300,38" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1" />	
@@ -1790,7 +1872,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="IPKGMenu" 				position="340,125" 	size="600,502"  title="Select IPKG source....." >
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
 		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<ePixmap pixmap="dTV-HD/button.png" position=" 40,464" size="250,38" zPosition="1" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="310,464" size="250,38" zPosition="1" alphatest="blend" />
@@ -1799,7 +1881,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="RestoreMenu" 				position="340,125" 	size="600,502"  title="Restore Backups">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
 		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<ePixmap pixmap="dTV-HD/button.png" position=" 40,464" size="250,38" zPosition="1" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="310,464" size="250,38" zPosition="1" alphatest="blend" />
@@ -1810,7 +1892,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="BackupSelection" 			position="240,125" 	size="800,502"  title="Select files/folders to backup...">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="checkList" position="10,10" size="780,425" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="checkList" position="10,10" size="780,425" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
 		<eLabel position="0,450" size="800,2" backgroundColor="grey" zPosition="5"/>
 		<ePixmap pixmap="dTV-HD/button.png" position="  0,464" size="250,38" zPosition="1" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="275,464" size="250,38" zPosition="1" alphatest="blend" />
@@ -1821,11 +1903,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="BackupScreen" 			position="340,125" 	size="600,502"  title="Backup running...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="config" 	position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" 	position="10,10" size="580,425" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
 	</screen>
 	<screen name="RestoreScreen" 			position="340,125" 	size="600,502"  title="Restore running...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="config" 	position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" 	position="10,10" size="580,425" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
 	</screen>
 
 	<!-- Plugins -->
@@ -1870,7 +1952,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<eLabel 					    position="70,100"  size="560,30" zPosition="4" backgroundColor="grey" />
 		<eLabel text="F i l e l i s t" 	position="72,102"  size="556,26" zPosition="5" font="Regular;22" halign="center" foregroundColor="black" backgroundColor="darkgrey" />
-		<widget name="filelist" 		position="80,145"  size="540,299" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1"/>
+		<widget name="filelist" 		position="80,145"  size="540,299" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_23.png" backgroundColor="black" transparent="1"/>
 		<eLabel 					    position="70,440"  size="2,20"  backgroundColor="darkgrey" />
 		<eLabel 					    position="72,458"  size="18,2"  backgroundColor="darkgrey" />
 		<eLabel 					    position="628,440" size="2,20"  backgroundColor="darkgrey" />
@@ -1878,7 +1960,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<eLabel 					    position="650,100"  size="560,30" zPosition="4" backgroundColor="grey" />
 		<eLabel text="P l a y l i s t" 	position="652,102"  size="556,26" zPosition="5" font="Regular;22" halign="center" foregroundColor="black" backgroundColor="darkgrey" />
-		<widget name="playlist" 		position="660,140"  size="540,310" scrollbarMode="showOnDemand" selectionDisabled="1" backgroundColor="black" />
+		<widget name="playlist" 		position="660,145"  size="540,299" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_23.png" selectionDisabled="1" backgroundColor="black" />
 		<eLabel 					    position="650,440"  size="2,20" backgroundColor="darkgrey" />
 		<eLabel 					    position="652,458"  size="18,2" backgroundColor="darkgrey" />
 		<eLabel 					    position="1208,440" size="2,20" backgroundColor="darkgrey" />
@@ -1921,7 +2003,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="DirectoryBrowser" 		position="340,125" 	size="600,512"  title="Directory browser">
 		<eLabel 				position="0,0" 		size="600,2" backgroundColor="grey" />
 
-		<widget name="filelist" 	position="0,10" size="600,480" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="filelist" 	position="0,10" size="600,480" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_22.png" transparent="1"/>
 
 		<eLabel 					position="0,460" 	size="600,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" 		position="40,474"   zPosition="1" size="250,38" alphatest="blend" />
@@ -1932,7 +2014,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="MediaPlayerSettings" 		position="340,125" 	size="600,512"  title="Edit settings">
 		<eLabel 				position="0,0" 		size="600,2" backgroundColor="grey" />
 
-		<widget name="config" 	position="0,10" size="600,480" scrollbarMode="showOnDemand" />
+		<widget name="config" 	position="0,10" size="600,480" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_22.png" />
 
 		<eLabel 					position="0,460" 	size="600,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" 		position="40,474"   zPosition="1" size="250,38" alphatest="blend" />
@@ -1946,7 +2028,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="label" position="20,20"  	size="260,160" font="Regular;20" transparent="1"/>
 		<widget name="thn"   position="20,200"	size="260,300" alphatest="on" />
 		<eLabel 					position="300,0"   size="2,518" backgroundColor="grey" />
-		<widget name="filelist" 	position="320,20"  size="760,480" zPosition="3" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="filelist" 	position="320,20"  size="760,480" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -1970,12 +2052,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="Pic_Setup" 				position="340,125" 	size="600,502"  title="Settings" >
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="liste" position="10,10" size="580,480" zPosition="3" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="liste" position="10,10" size="580,480" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 	</screen>
 	<!-- WebIF -->	
 	<screen name="WebIfConfigScreen" 		position="90,90" 	size="1100,570" title="Main Setup" >
 		<eLabel 				position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="config" 	position="10,20" 	size="1080,475" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" 	position="10,20" 	size="1080,475" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 				position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -1994,7 +2076,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="disabled" 	position="400,20" 	size="180,50"   font="Regular;20" halign="left" transparent="1" />
 
 		<eLabel 					position="10,70" 	size="800,2" backgroundColor="grey" />
-		<widget name="ifacelist" 	position="10,80" 	size="800,350"	zPosition="3" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="ifacelist" 	position="10,80" 	size="800,350"	zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 
 		<eLabel 					position="0,518" 	size="820,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2004,7 +2086,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="WebIfInterfaceConfigScreen" position="90,90" size="1100,570" title="edit Interface">
 		<eLabel 				position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="config" 	position="10,20" 	size="1080,475" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" 	position="10,20" 	size="1080,475" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 				position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2013,50 +2095,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
 		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
-	<!-- Backup Restore -->
-	<screen name="BackupSetup" 				position="90,90" 	size="1100,570" title="Backup and Restore" >
-		<eLabel 					position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="config" 		position="10,20" 	size="1080,475" scrollbarMode="showOnDemand"  transparent="1" />
-		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
-		<widget name="cancel" 	pixmap="dTV-HD/button.png" 	position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="ok" 		pixmap="dTV-HD/button.png" 	position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="restore"	pixmap="dTV-HD/button.png" 	position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="backup" 	pixmap="dTV-HD/button.png" 	position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="canceltext" 							position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="oktext" 								position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="restoretext" 							position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="backuptext" 							position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
-	</screen>
-	<screen name="RestoreMenu" 				position="90,90" 	size="1100,570" title="Restore Backups" >
-		<eLabel 				position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="filelist" position="10,20" 	size="1080,475" scrollbarMode="showOnDemand"  transparent="1" />
-		<eLabel 				position="0,518" 	size="1100,2" backgroundColor="grey" />
-		<widget name="cancel" 	pixmap="dTV-HD/button.png" 	position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="restore"	pixmap="dTV-HD/button.png" 	position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="canceltext" 							position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="restoretext" 							position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
-	</screen>
-	<!-- UpdatePlugin -->
-	<screen name="UpdatePlugin" 			position="340,125" 	size="600,502"  title="Software Update..." >
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="activityslider" position="10,30" 	size="580,15"	borderWidth="1" 	transparent="1" />
-		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="black" transparent="1" />
-		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="black" transparent="1" />
-		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1" />
-	</screen>
-	<screen name="UpdatePluginMenu" 		position="340,125" 	size="600,502"  title="Update..." >
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="menu" position="10,12" size="580,475" scrollbarMode="showOnDemand"  transparent="1"/>
-	</screen>
 	<!-- VLC Player -->
 	<screen name="VlcMediaListScreen" 		position="90,90" 	size="1100,570" title="VlcMediaListScreen" >
 		<widget name="filelist_button_sel" 	pixmap="dTV-HD/epg_now.png"  position="0,0"	zPosition="3" size="1100,35" alphatest="on" />
 		<widget name="playlist_button_sel"	pixmap="dTV-HD/epg_next.png" position="0,0"	zPosition="3" size="1100,35" alphatest="on" />
 		<widget name="filelist_text" 										 position="32,7" zPosition="4" size="250,25" font="Regular;20" halign="center" backgroundColor="black" transparent="1" />
 		<widget name="playlist_text" 										 position="282,7" zPosition="4" size="250,25" font="Regular;20" halign="center" backgroundColor="black" transparent="1" />
-		<widget name="filelist" position="10,45"  size="530,460" zPosition="3" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="filelist" position="10,45"  size="530,460" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 				position="550,45"  size="1,460" backgroundColor="grey" />
-		<widget name="playlist" position="560,45" size="530,460" zPosition="3" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="playlist" position="560,45" size="530,460" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2071,7 +2118,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel 					position="0,0" 	size="1100,2" backgroundColor="grey" />
 		<widget name="serverlabel"  position="10,10" size="1080,25" font="Regular;22" transparent="1" />
 		<eLabel 					position="10,43" size="1080,2" backgroundColor="grey" />
-		<widget name="serverlist" 	position="10,50" size="1080,437" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="serverlist" 	position="10,50" size="1080,437" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2084,7 +2131,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="VlcServerConfigScreen" 	position="90,90" 	size="1100,570" title="Edit VLC Server" >
 		<eLabel 					position="0,0" 	size="1100,2" backgroundColor="grey" />
-		<widget name="config" 		position="10,10" 	size="1080,500" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" 		position="10,10" 	size="1080,500" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2098,11 +2145,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- DVD Burn -->
 	<screen name="FileBrowser" 				position="90,90" 	size="1100,570" title="DVD File Browser" >
 		<eLabel 				position="0,0" 	 size="1100,2" backgroundColor="grey" />
-		<widget name="filelist" position="10,10" size="1080,500" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="filelist" position="10,10" size="1080,500" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 	</screen>
 	<screen name="ProjectSettings" 			position="90,90" 	size="1100,570" title="Collection settings" >
 		<eLabel 					position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="config" position="10,10" size="1080,350" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" position="10,10" size="1080,350" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<widget source="info" render="Label" position="10,380" size="1080,100" font="Regular;20" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2134,7 +2181,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel 					position="0,0" 		size="1100,2" backgroundColor="grey" />
 	    <widget source="title_label" render="Label" 	position="10,48"  size="1080,45" font="Regular;22" />
 	    <widget name="error_label" 						position="10,48"  size="1080,395" zPosition="3" font="Regular;20" />
-	    <widget source="titles" 	render="Listbox" 	position="10,100" size="1080,360" scrollbarMode="showOnDemand"  transparent="1" >
+	    <widget source="titles" 	render="Listbox" 	position="10,100" size="1080,360" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" >
 			<convert type="StaticMultiList" />
 	    </widget>
 	    <widget source="space_bar" render="Progress" 	position="10,480" size="1080,26" borderWidth="1" backgroundColor="grey" />
@@ -2152,7 +2199,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="TitleCutter" 				position="0,0" 		size="1280,720" title="Cutlist editor" flags="wfNoBorder" >
 		<eLabel 					position="80,125" size="300,420" 	zPosition="1" backgroundColor="grey" />
 		<eLabel 					position="81,126" size="298,418" 	zPosition="2" backgroundColor="black" />
-		<widget source="cutlist"    position="90,135" size="280,400" zPosition="3" scrollbarMode="showOnDemand" transparent="1" render="Listbox" >
+		<widget source="cutlist"    position="90,135" size="280,400" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" render="Listbox" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=(10,2), size=(170, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
@@ -2182,7 +2229,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	    <widget name="thumbnail" 					position="20,20"  size="260,160" alphatest="on" />
 		<widget source="serviceinfo" render="Label" position="320,20" size="740,160" font="Regular;21" backgroundColor="#252b4247" transparent="1"/>
 		<eLabel 					position="0,200" 	size="1100,2" backgroundColor="grey" />
-		<widget name="config" 		position="20,210"	size="1060,300" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" 		position="20,210"	size="1060,300" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" 		position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" 		position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2238,7 +2285,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen> 
 	<screen name="FileBrowser" 				position="90,90" 	size="1100,570" title="DVD File Browser" >
 		<eLabel 				position="0,0" 	 size="1100,2" backgroundColor="grey" />
-		<widget name="filelist" position="10,10" size="1080,500" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="filelist" position="10,10" size="1080,500" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 				position="0,518" 	size="1100,2" backgroundColor="grey" />
 	</screen>
 	<!-- CD-Info -->
@@ -2247,7 +2294,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	    <widget name="info" 		position="20,20"   size="260,200" font="Regular;21" transparent="1" />
 	    <widget name="info2" 		position="20,240"  size="260,260" font="Regular;21" transparent="1" />
 		<eLabel 					position="300,0"   size="2,518" backgroundColor="grey" />
-		<widget name="config" 		position="320,20"	size="760,475" zPosition="3" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" 		position="320,20"	size="760,475" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2260,7 +2307,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="NetworkBrowser" 			position="90,90" 	size="1100,570" title="Network Neighbourhood">
 		<eLabel 					  position="0,0" size="1100,2" 	backgroundColor="grey" />
 		<widget name="infotext" position="10,10" zPosition="1" size="760,420" font="Regular;22" halign="center" valign="center" />
-		<widget source="list" render="Listbox" position="20,20" size="740,420" zPosition="10" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="20,20" size="740,420" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_60.png" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 1), # index 1 is the expandable/expanded/verticalline icon
@@ -2287,7 +2334,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="AutoMountManager" 		position="90,90" 	size="1100,570" title="AutoMountManager">
 		<eLabel 					  position="0,0" size="1100,2" 	backgroundColor="grey" />
-		<widget source="config" render="Listbox" 	position="20,20" size="740,450" scrollbarMode="showOnDemand" transparent="1" >
+		<widget source="config" render="Listbox" 	position="20,20" size="740,450" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_60.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (60, 5), size = (660, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
@@ -2312,7 +2359,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="legend2" position="200,8" zPosition="1" size="400,60" font="Regular;20" halign="center" valign="center" />
 		<widget name="legend3" position="640,8" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center" />
 		<eLabel 			  position="0,75" size="780,2" 	backgroundColor="grey" />
-		<widget source="config" render="Listbox" position="10,90" size="750,420" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="config" render="Listbox" position="10,90" size="750,420" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_60.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (40, 6), size = (48, 48), png = 0), # index 0 is the isMounted pixmap
@@ -2338,7 +2385,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="AutoMountEdit" 			position="90,90" 	size="1100,570" title="MountEdit">
 		<eLabel 					  position="0,0" size="1100,2" 	backgroundColor="grey" />
-		<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					  position="780,0" size="2,518" 	backgroundColor="grey" />
 		<eLabel 					  position="0,518" size="1100,2" backgroundColor="grey" />
 		<widget name="HelpWindow"  position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
@@ -2351,7 +2398,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="UserDialog" 				position="90,90" 	size="1100,570" title="UserDialog">
 		<eLabel 					  position="0,0" size="1100,2" 	backgroundColor="grey" />
-		<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					  position="780,0" size="2,518" 	backgroundColor="grey" />
 		<eLabel 					  position="0,518" size="1100,2" backgroundColor="grey" />
 		<widget name="HelpWindow"  position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
@@ -2364,7 +2411,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="UserManager" 				position="90,90" 	size="1100,570" title="UserManager">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
-		<widget source="config" render="Listbox" position="10,20" size="750,420" scrollbarMode="showOnDemand" transparent="1" >
+		<widget source="config" render="Listbox" position="10,20" size="750,420" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_60.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (80, 7), size = (650, 50), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -2390,7 +2437,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- Suomipoeka -->	
 	<screen name="SuomipoekaMenu" 			position="90,90" 	size="1100,570" title="SuomipoekaMenu">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="config" position="20,20" size="740,475" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="config" position="20,20" size="740,475" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2404,7 +2451,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="MovieSelectionSP" 		position="90,90" 	size="1100,570" title=" ">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="list" position="10,15" size="760,475" zPosition="2" scrollbarMode="showOnDemand"  transparent="1"/>
+		<widget name="list" position="10,15" size="760,475" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<widget source="Service" render="Label" position="790,10" size="300,22" font="Regular;20" foregroundColor="white" halign="left">
 			<convert type="MovieInfo">RecordServiceName</convert>
@@ -2443,29 +2490,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
 		<eLabel text="MENU" position="1010,490" size="80,22" font="Regular;20"/>
 	</screen>
-	<screen name="LocationBox" 				position="90,90" 	size="1100,570">
-		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="text" position="10,10" size="1080,27" font="Regular;23"/>
-		<eLabel position="10,50" size="20,27" backgroundColor="darkgrey"/>
-		<widget name="target" position="30,50" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
-		<widget name="filelist" position="30,85" size="1060,230" scrollbarMode="showOnDemand" selectionDisabled="1"  transparent="1"/>
-		<eLabel position="10,345" size="20,27" backgroundColor="darkgrey"/>
-		<widget name="textbook" position="30,345" size="1060,27" valign="center" font="Regular;24" foregroundColor="black" backgroundColor="darkgrey"/>
-		<widget name="booklist" position="30,380" size="1060,125" scrollbarMode="showOnDemand"  transparent="1"/>
-		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_yellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
-	</screen> 	
 	<!-- ZapHistory -->	
 	<screen name="ZapHistoryBrowser" 		position="340,125" 	size="600,502"  title="Zap-History Browser">
 		<eLabel 				position="0,0" 		size="600,2" backgroundColor="grey" />
-		<widget name="list" 	position="10,10" size="580,480" scrollbarMode="showOnDemand" />
+		<widget name="list" 	position="10,10" size="580,480" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_22.png" />
 		<eLabel 					position="0,518" 	size="900,2" backgroundColor="grey" />
 
 		<ePixmap pixmap="dTV-HD/button.png" position="190,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -2476,7 +2504,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- InfoBarConfig -->	
 	<screen name="InfoBarConfig" 			position="340,125" 	size="600,170" title="InfoBar Config">
 		<eLabel 			 		position="0,0"   size="600,2" backgroundColor="grey" />
-		<widget name="config" 		position="0,20" size="600,100" scrollbarMode="showOnDemand"  transparent="1" />
+		<widget name="config" 		position="0,20" size="600,100" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 			 		position="  0,118" size="600,2" backgroundColor="grey" />
 		<ePixmap 				 	position="175,132" zPosition="1" size="250,38" pixmap="dTV-HD/button.png" alphatest="blend" />
 		<widget name="key_green" 	position="175,131" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1"/>
