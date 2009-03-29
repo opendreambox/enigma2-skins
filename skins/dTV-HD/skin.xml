@@ -122,7 +122,7 @@
 
 		<eLabel position="10,60" zPosition="1" size="1120,2" backgroundColor="white" />
 
-		<widget source="session.CurrentService" render="Picon" position="25,76" size="100,60" zPosition="10" transparent="1" alphatest="on">
+		<widget source="session.CurrentService" render="Picon" position="25,76" size="100,60" zPosition="10" transparent="1" alphatest="blend">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 
