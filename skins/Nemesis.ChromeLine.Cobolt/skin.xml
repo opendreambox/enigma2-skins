@@ -302,8 +302,8 @@
 		<eLabel position="85,186" zPosition="5" size="155,25" text="FileList" font="Regular;20" valign="top" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="filelist" position="71,217" zPosition="1" size="185,225" scrollbarMode="showOnDemand" />
 		<eLabel position="290,186" zPosition="5" size="330,25" text="PlayList" font="Regular;20" valign="top" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="playlist" position="262,217" zPosition="1" size="379,286" transparent="1" scrollbarMode="showOnDemand" selectionDisabled="1" />
-		<ePixmap position="257,238" zPosition="3" size="362,266" pixmap="Nemesis.ChromeLine.Cobolt/playlist_div.png" transparent="1" alphatest="on" />
+		<widget name="playlist" position="262,222" zPosition="1" size="379,276" transparent="1" scrollbarMode="showOnDemand" selectionDisabled="1" />
+		<ePixmap position="266,238" zPosition="3" size="362,255" pixmap="Nemesis.ChromeLine.Cobolt/playlist_div.png" transparent="1" alphatest="on" />
 		<widget name="currenttext" position="69,527" zPosition="3" size="597,22" font="Regular;18" halign="center" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
 	</screen>
 	<!-- Movieplayer -->
