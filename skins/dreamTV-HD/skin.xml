@@ -1771,6 +1771,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="ratinglabel" position="790,34" size="210,24" font="Regular;20" halign="center" foregroundColor="#f0b400" transparent="1"/>
 		<widget name="poster" position="30,60" size="110,180" alphatest="blend"/>
 		<widget name="detailslabel" position="170,60" size="650,175" font="Regular;20" transparent="1"/>
+		<widget name="menu" position="170,100" size="920,300" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png" />
 		<widget name="castlabel" position="20,245" size="1060,240" font="Regular;20" transparent="1"/>
 		<widget name="extralabel" position="20,170" size="1060,315" font="Regular;20" transparent="1"/>
 		<widget name="statusbar" position="10,490" size="1080,20" font="Regular;18" foregroundColor="#cccccc" transparent="1"/>
@@ -1840,7 +1841,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="MediaPlayerSettings" position="340,134" size="600,502" title="Edit settings">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey"/>
-		<widget name="config" position="10,10" size="580,480" scrollbarMode="showOnDemand"  selectionPixmap="dreamTV-HD/menu/select1080_25.png" />
+		<widget name="config" position="10,10" size="580,480" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png" />
 		<eLabel position="0,518" size="900,2" backgroundColor="grey"/>
 		<widget source="key_red" render="Label" position="190,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
 		<widget source="key_green" render="Label" position="460,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
