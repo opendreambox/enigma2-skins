@@ -1921,6 +1921,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<widget name="poster" 		position="30,60" 	size="110,180" 	alphatest="blend"/>
 		<widget name="detailslabel" position="170,60" 	size="650,175" 	font="Regular;20" transparent="1"/>
+		<widget name="menu" 		position="170,100" 	size="920,300" 	zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" />
 
 		<widget name="castlabel" 	position="20,245" 	size="1060,240" font="Regular;20" transparent="1"/>
 
@@ -2283,11 +2284,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="chapter" position="35,15" size="110,25" font="Regular;23" />
 		<widget name="number" position="145,15" size="80,25" halign="right" font="Regular;23" />
 	</screen> 
-	<screen name="FileBrowser" 				position="90,90" 	size="1100,570" title="DVD File Browser" >
-		<eLabel 				position="0,0" 	 size="1100,2" backgroundColor="grey" />
-		<widget name="filelist" position="10,10" size="1080,500" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
-		<eLabel 				position="0,518" 	size="1100,2" backgroundColor="grey" />
-	</screen>
 	<!-- CD-Info -->
 	<screen name="CDInfo" 					position="90,90" 	size="1100,570" title="CDInfo" >
 		<eLabel 					position="0,0" 	 	size="1100,2" backgroundColor="grey" />
@@ -2433,7 +2429,38 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="ButtonRedtext" 						position="820,531" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1"/>
 		<ePixmap position="970,400" size="110,110" zPosition="2" pixmap="dTV-HD/icons/net.png" transparent="1" alphatest="blend" />
 	</screen>
+	<!-- NETcaster -->
+	<screen name="NETcasterScreenBrowser" 	position="90,90" 	size="1100,570" title="SHOUTcaster" >
+		<eLabel 				  position="0,0"  size="1100,2" backgroundColor="grey" />
+		<widget name="streamlist" position="20,9" size="770,500" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select800_50.png" transparent="1"/>
 
+		<eLabel 				  position="20,58"  size="740,2" backgroundColor="darkgrey" />
+		<eLabel 				  position="20,108" size="740,2" backgroundColor="darkgrey" />
+		<eLabel 				  position="20,158" size="740,2" backgroundColor="darkgrey" />
+		<eLabel 				  position="20,208" size="740,2" backgroundColor="darkgrey" />
+		<eLabel 				  position="20,258" size="740,2" backgroundColor="darkgrey" />
+		<eLabel 				  position="20,308" size="740,2" backgroundColor="darkgrey" />
+		<eLabel 				  position="20,358" size="740,2" backgroundColor="darkgrey" />
+		<eLabel 				  position="20,408" size="740,2" backgroundColor="darkgrey" />
+		<eLabel 				  position="20,458" size="740,2" backgroundColor="darkgrey" />
+
+		<eLabel 				  position="800,0"  size="2,518"   backgroundColor="grey" />
+		<widget name="metadata"   position="820,20" size="260,480" transparent="1" halign="center" valign="center" foregroundColor="white" font="Regular;24" />
+		<eLabel 				  position="0,518" 	size="1100,2"  backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="pixred" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="pixgreen" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="pixyellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="pixblue" 				position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
+	</screen>
+	<screen name="NETcasterScreenHelp" 		position="90,90" 	size="1100,570" title="NETcaster Help" >
+		<eLabel 			position="0,0" 		size="1100,2" 	backgroundColor="grey" />
+		<widget name="help" position="20,20" 	size="1060,475" font="Regular;18" transparent="1"/>
+		<eLabel 			position="0,518" 	size="1100,2" 	backgroundColor="grey" />
+	</screen>
 	<!-- Suomipoeka -->	
 	<screen name="SuomipoekaMenu" 			position="90,90" 	size="1100,570" title="SuomipoekaMenu">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
