@@ -36,4 +36,9 @@ AC_OUTPUT([
 ./skins/dTV-HD/menu/Makefile
 ./skins/dTV-HD/icons/Makefile
 ./skins/dTV-HD/buttons/Makefile
+./skins/dmm-HD/Makefile
+./skins/dmm-HD/menu/Makefile
+./skins/dmm-HD/icons/Makefile
+./skins/dmm-HD/buttons/Makefile
+./skins/dmm-HD/mmp3/Makefile
 ])
