@@ -462,16 +462,6 @@
 
 		<eLabel text="Softwaremanager..." position="80,110" size="350,36" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
 
-		<widget source="menu" render="Listbox" position="80,180" size="300,300" zPosition="3" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (0, 0), size = (300, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
-					],
-				"fonts": [gFont("Regular", 24)],
-				"itemHeight": 300
-				}
-			</convert>
-		</widget>
 		<widget source="menu" render="Listbox" position="550,120" size="710,500" zPosition="3" selectionPixmap="dmm-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -479,6 +469,16 @@
 					],
 				"fonts": [gFont("Regular", 26)],
 				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<widget source="menu" render="Listbox" position="80,180" size="300,300" zPosition="3" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (0, 0), size = (300, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
+					],
+				"fonts": [gFont("Regular", 24)],
+				"itemHeight": 300
 				}
 			</convert>
 		</widget>
@@ -2377,7 +2377,7 @@
 		<widget source="global.CurrentTime" 	render="Label"  position="1173,3" size="30,25" font="Regular;17" valign="top" halign="left"  backgroundColor="#333333" transparent="1">
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label"  position="220,2"   size="300,25" font="Regular;23" valign="top" noWrap="1" backgroundColor="darkgrey" transparent="1">
+		<widget source="session.CurrentService" render="Label"  position="220,2"   size="850,25" font="Regular;23" valign="top" noWrap="1" backgroundColor="darkgrey" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<ePixmap 												pixmap="dmm-HD/ico_dolby_off.png" 	position="1090,47"  size="57,20" zPosition="1" alphatest="blend"/>
@@ -3205,6 +3205,273 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<!-- Partnerbox -->
+	<screen name="CurrentRemoteTV" 				position="210,160" 	size="300,240" 	title="Remote Player" 				flags="wfNoBorder">
+		<widget name="text" position="10,10" zPosition="1" size="290,225" font="Regular;20" halign="center" valign="center" />
+	</screen>
+	<screen name="PartnerboxEntryConfigScreen" 	position="0,0" 		size="1280,720" title="Edit Entry" 					flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="PartnerBox" position="80,40" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Edit Entry" position="80,110" size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="config" position="550,120" size="660,480" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="ParterboxEntryConfigScreen" 	position="0,0" 		size="1280,720" title="Edit Entry" 					flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="PartnerBox" position="80,40" size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Edit Entry" position="80,110" size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="config" position="550,120" size="660,480" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="PartnerboxEntriesListConfigScreen" position="0,0" size="1280,720" title="List of Entries" 			flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="PartnerBox" position="80,40" size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="List of Entries" position="80,110" size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="name" 		position="555,120" 	size="115,50" 	font="Regular;20" halign="left" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="ip" 			position="670,120" 	size="150,50" 	font="Regular;20" halign="left" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="port" 		position="820,120" 	size="140,50"	font="Regular;20" halign="left" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="type" 		position="960,120" 	size="260,50" 	font="Regular;20" halign="left" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel 					position="550,170"  size="660,2" backgroundColor="grey" />
+		<widget name="entrylist" 	position="550,185" 	size="660,300" 	scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="ParterboxEntriesListConfigScreen" position="0,0" 	size="1280,720" title="List of Entries" 			flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="PartnerBox" position="80,40" size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="List of Entries" position="80,110" size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="name" 		position="555,120" 	size="115,50" 	font="Regular;20" halign="left" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="ip" 			position="670,120" 	size="150,50" 	font="Regular;20" halign="left" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="port" 		position="820,120" 	size="140,50"	font="Regular;20" halign="left" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="type" 		position="960,120" 	size="260,50" 	font="Regular;20" halign="left" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel 					position="550,170"  size="660,2" backgroundColor="grey" />
+		<widget name="entrylist" 	position="550,185" 	size="660,300" 	scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="PartnerboxSetup" 				position="0,0" 		size="1280,720" title="Partnerbox Setup" 			flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="PartnerBox" position="80,40" size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Setup" position="80,110" size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="config" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="RemoteTimer" 					position="0,0" 		size="1280,720" title="RemoteTimer Timerlist"		flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="RemoteTimer" 		position="80,40" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="TimerList" 	position="80,110" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="text" 		position="550,120" zPosition="1" size="660,490" font="Regular;24" halign="center" valign="center" />
+		<widget name="timerlist" 	position="550,120" zPosition="2" size="660,490" scrollbarMode="showOnDemand" />
+
+		<eLabel 					position="550,119" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,189" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,259" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,329" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,399" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,469" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,539" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,609" size="632,2" zPosition="4" backgroundColor="grey" />
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png"  position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="RemoteTimerBouquetList" 		position="0,0" 		size="1280,720" title="Choose bouquet" 				flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="RemoteTimer" 		position="80,40" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Choose bouquet" 	position="80,110" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="text" 		position="550,120" zPosition="1" size="660,480" font="Regular;24" halign="center" valign="center" />
+		<widget name="bouquetlist" 	position="550,120" zPosition="2" size="660,480" scrollbarMode="showOnDemand"/>
+	</screen>
+	<screen name="RemoteTimerChannelList" 		position="0,0" 		size="1280,720" title ="Bouquet List" 				flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="RemoteTimer" 		position="80,40" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="ChannelList" 	position="80,110" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="text" 		position="550,120" zPosition="1" size="660,490" font="Regular;24" halign="center" valign="center" />
+		<widget name="channellist" 	position="550,120" zPosition="2" size="660,490" scrollbarMode="showOnDemand" />
+
+		<eLabel 					position="550,119" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,189" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,259" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,329" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,399" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,469" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,539" size="632,2" zPosition="4" backgroundColor="grey" />
+		<eLabel 					position="550,609" size="632,2" zPosition="4" backgroundColor="grey" />
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png"  position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="RemoteTimerEntry" 			position="0,0" 		size="1280,720" title="Timer entry" 				flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="RemoteTimer" 	position="80,40" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Timer entry" 	position="80,110" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="config" position="550,120" size="660,350" scrollbarMode="showOnDemand" />
+
+		<widget name="cancel" pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<widget name="ok" pixmap="dmm-HD/buttons/green.png"  	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="canceltext" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="oktext" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="RemoteTimerEPGList" 			position="0,0" 		size="1280,720" title ="EPG Selection"				flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="RemoteTimer" 		position="80,40" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="EPG Selection" 	position="80,110" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="text" 	position="550,120" zPosition="1" size="660,500" font="Regular;24" halign="center" valign="center" />
+		<widget name="epglist" 	position="550,120" zPosition="2" size="660,500" scrollbarMode="showOnDemand" />
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png"  position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="RemoteTimerEventView" 		position="0,0" 		size="1280,720" title="Eventview" 					flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="RemoteTimer" 		position="80,40" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Eventview" 	position="80,110" 	size="350,36" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="epg_description" 	position="550,120" 	size="660,330" font="Regular;22" backgroundColor="black" transparent="1"/>
+		<eLabel 						position="550,590"  size="660,2" backgroundColor="grey" />
+		<widget name="datetime" 		position="550,595" 	size="150,25" font="Regular;22" backgroundColor="black" transparent="1"/>
+		<widget name="duration" 		position="700,595" 	size="100,25" font="Regular;22" backgroundColor="black" transparent="1"/>
+		<widget name="channel" 			position="890,595" 	size="320,25" font="Regular;22" halign="right" backgroundColor="black" transparent="1"/>
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png"  position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="RemotePlayer" 				position="283,102" 	size="720,576"  title="Partnerbox - RemotePlayer" backgroundColor="#FFFFFFFF" flags="wfNoBorder" >
+		<ePixmap position="41,388" zPosition="-1" size="630,130" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Partnerbox/ExPlayer.png" alphatest="off" transparent="1"/>
+		<widget name="ServiceName" zPosition="1" position="50,404" size="610,59" valign="center" halign="center" font="Regular;21" foregroundColor="#F0F0F0" backgroundColor="#302C2C39" />
+		<widget name="DateTime" zPosition="1" position="52,473" size="500,30" halign="left" font="Regular;16" foregroundColor="#F0F0F0" backgroundColor="#302C2C39" transparent="1" />
+		<widget name="IP" zPosition="2" position="361,473" size="300,30" halign="right" font="Regular;16" foregroundColor="#F0F0F0" backgroundColor="#302C2C39" transparent="1" />
 	</screen>
 	<!-- Picture Player -->
 	<screen name="picshow" 						position="0,0" 		size="1280,720" title="PicturePlayer" 				flags="wfNoBorder">
