@@ -41,4 +41,10 @@ AC_OUTPUT([
 ./skins/dmm-HD/icons/Makefile
 ./skins/dmm-HD/buttons/Makefile
 ./skins/dmm-HD/mmp3/Makefile
+./skins/BrushedAlu-HD/Makefile
+./skins/BrushedAlu-HD/menu/Makefile
+./skins/BrushedAlu-HD/icons/Makefile
+./skins/BrushedAlu-HD/buttons/Makefile
+./skins/BrushedAlu-HD/mmp3/Makefile
+./skins/BrushedAlu-HD/frame/Makefile
 ])
