@@ -3917,6 +3917,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<!-- WebcamPicureViewer -->
+	<!-- WebcamPicureViewer -->
 	<screen name="PictureViewer" 				position="0,0" 		size="1280,720" title="" 							flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
@@ -3927,14 +3928,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel text="Picture Viewer" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
-		<widget name="pixmap" position="750,650" size="275,200" />
+		<widget name="pixmap" position="110,180" size="275,200" />
 
 		<eLabel text="Filelist" position="550,110" size="660,28" font="Regular;24" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<eLabel 				position="550,140" size="660,2" backgroundColor="black" />
 		<eLabel 				position="550,142" size="660,2" backgroundColor="grey" />
 		<widget name="menu" 	position="550,150" size="660,207" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
 
-		<eLabel text="SlideShow" position="550,380" size="660,28" font="Regular;24" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<eLabel text="SlideShowList" position="550,380" size="660,28" font="Regular;24" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<eLabel 				 position="550,410" size="660,2" backgroundColor="black" />
 		<eLabel 				 position="550,412" size="660,2" backgroundColor="grey" />
 		<widget name="slist" 	 position="550,420" size="660,200" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
