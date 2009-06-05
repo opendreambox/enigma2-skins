@@ -2,7 +2,6 @@
 <!-- dTV-HD Skin by Kerni-->
 <!-- This skin and all it's graphics are free. -->
 <!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications -->
-<!-- and please, don't remove this text -->
 	<output id="0">
 		<resolution xres="1280" yres="720" bpp="32" />
 	</output>
@@ -502,7 +501,7 @@
 		<widget name="DNS2text" 	 position="790,340" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="black" backgroundColor="grey"/>
 		<widget name="DNS2" 		 position="790,370" size="300,22" zPosition="1" font="Regular;20" halign="center" />
 		<eLabel 					 position="0,518" 	size="1100,2" backgroundColor="grey" />
-		<widget name="VKeyIcon"  		position=" 20,532" size="250,38" pixmap="dTV-HD/vkey_icon.png" zPosition="10" alphatest="blend" />
+		<widget name="VKeyIcon"  		position=" 20,532" size="250,38" pixmap="dTV-HD/vkey_icon_green.png" zPosition="10" alphatest="blend" />
 		<widget name="ButtonBlue" 		position="390,532" size="250,38" zPosition="1" pixmap="dTV-HD/button.png" alphatest="blend" />
 		<widget name="ButtonBluetext" 	position="390,531" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1"/>
 		<widget name="ButtonRed"  		position="820,532" size="250,38" zPosition="1" pixmap="dTV-HD/button.png" alphatest="blend" />
@@ -723,8 +722,19 @@
 	</screen>
 	<screen name="EPGSelection" 			position="90,90" 	size="1100,570" zPosition="10" title="EPG Selection" >
 		<eLabel 					position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="list" 		position="10,20" 	size="1080,475" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
+		<widget name="list" 		position="10,20" 	size="780,475" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
+		<eLabel position="800,0" 	size="2,518" backgroundColor="grey" />
+
+		<widget source="Event" render="Label" 	position="810,20" size="280,470" font="Regular;20" foregroundColor="white" backgroundColor="black" transparent="1">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+
+		<ePixmap pixmap="skin_default/icons/clock.png" 		position="1010,495" zPosition="1" size="14,14" alphatest="on" />
+		<widget source="global.CurrentTime" render="Label" 	position="1030,490" zPosition="1" size="70,20" font="Regular;22" halign="center">
+			<convert type="ClockToText"></convert>
+		</widget>
+
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -733,6 +743,9 @@
 		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
 		<widget name="key_yellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
 		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="Service" render="Label" position="0,0" size="0,0">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	</screen>
 	<screen name="EPGSelectionMulti" 		position="90,90" 	size="1100,570" title="EPG Selection Multi" >
 		<widget name="now_button_sel" 	pixmap="dTV-HD/epg_now.png" 	position="0,0"	zPosition="3" size="1100,35" alphatest="on" />
@@ -1084,7 +1097,7 @@
 		<widget name="channel" position="30,15" size="130,28" font="Regular;25" />
 		<widget name="number" position="190,15" size="80,28" halign="right" font="Regular;25" />
 	</screen>
-	<screen name="NumericalTextInputHelpDialog" position="338,480" zPosition="2" size="604,124" backgroundColor="#202020" flags="wfNoBorder">
+	<screen name="NumericalTextInputHelpDialog" position="338,480" zPosition="10" size="604,124" backgroundColor="#202020" flags="wfNoBorder">
 		<eLabel position="0,0" size="602,122" backgroundColor="#c0c0c0" zPosition="-1" />
 		<widget name="key1" position="2,2" 		size="200,40" font="Console;19" halign="center" valign="center" />
 		<widget name="key2" position="202,2" 	size="200,40" font="Console;19" halign="center" valign="center" />
@@ -1176,9 +1189,10 @@
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<eLabel position="10,60" zPosition="1" size="1102,2" backgroundColor="white" />
-		<widget source="session.CurrentService" render="Picon" position="30,73" zPosition="1" size="100,60" alphatest="on">
+		<ePixmap pixmap="dTV-HD/picon_default.png" position="30,73" size="100,60" zPosition="1" alphatest="blend"/>
+		<!-- widget source="session.CurrentService" render="Picon" position="30,73" zPosition="1" size="100,60" alphatest="on">
 			<convert type="ServiceName">Reference</convert>
-		</widget>
+		</widget-->
 		<widget source="session.Event_Now" render="Label" position="140,67" size="65,25"  halign="right"  font="Regular;22" backgroundColor="background" transparent="1" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
@@ -1222,7 +1236,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<eLabel position="1,145" zPosition="1" size="1120,1" backgroundColor="white" />
-		<widget source="RdsDecoder" render="Label" position="11,153" size="1100,30" font="LCD;30" halign="center" foregroundColor="yellow">
+		<widget source="RdsDecoder" render="Label" position="11,148" size="1100,30" font="LCD;30" halign="center" foregroundColor="yellow">
 			<convert type="RdsInfo">RadioText</convert>
 		</widget>
 	</screen>
@@ -2305,6 +2319,205 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
 		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
+	<!-- MyTubePlayer -->
+	<screen name="MyTubePlayer" 				position="69,566" 	size="1142,132" backgroundColor="transparent2" title="InfoBar" flags="wfNoBorder" >
+		<ePixmap pixmap="dTV-HD/infobar_movie.png" position="1,1" size="1140,156" zPosition="-5" alphatest="blend"/>
+		<ePixmap position="1010,76" size="100,40" zPosition="4" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyTube/plugin.png" alphatest="on" transparent="1" />
+
+		<widget source="global.CurrentTime" 	render="Label" position="1012,7" 	size="80,25" 	font="Regular;24" valign="top" halign="right" 	backgroundColor="#333333" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" 	render="Label" position="1094,9" 	size="30,30" 	font="Regular;18" valign="top" halign="left" 	backgroundColor="#333333" transparent="1">
+			<convert type="ClockToText">Format::%S</convert>
+		</widget>
+		<widget source="global.CurrentTime" 	render="Label" position="1013,35" 	size="110,20" 	font="Regular;18" halign="right" backgroundColor="black" foregroundColor="grey" transparent="1" >
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="15,6" 		size="800,54" 	font="Regular;24" backgroundColor="black" transparent="1" >
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<eLabel position="10,60" zPosition="1" size="1120,2" backgroundColor="white" />
+		<widget source="session.CurrentService" render="Label" 			position="60,73" size="100,25" font="Regular;22" halign="right" valign="center" backgroundColor="black" transparent="1" >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<ePixmap 														position="170,77" size="600,16" pixmap="dTV-HD/mpslider.png" zPosition="3" alphatest="blend" />
+		<widget source="session.CurrentService" render="PositionGauge" 	position="190,78" size="560,14" zPosition="2" pointer="dTV-HD/pointer.png:13,3" >
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" 			position="780,73" size="100,25" font="Regular;22" halign="left" valign="center" backgroundColor="black" transparent="1" >
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" 			position="410,98" size="120,25" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1" >
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+	</screen>
+	<screen name="MyTubePlayerMainScreen" 		position="90,90" 	size="1100,570" title="MyTubePlayerMainScreen...">
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+		<widget name="config" 	position="10,10" size="1080,28" zPosition="3" scrollbarMode="showNever" transparent="1"/>
+		<eLabel position="0,46" size="1100,2" backgroundColor="grey" />
+
+		<widget source="feedlist" render="Listbox" position="10,55" size="1080,400" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_100.png" backgroundPixmap="dTV-HD/menu/select1080_100_bg.png" transparent="1" >
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (100,[
+						MultiContentEntryPixmapAlphaTest(pos = (10, 12), size = (100, 75), png = 4), # index 4 is the thumbnail
+						MultiContentEntryText(pos = (120, 10), size = (920, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 1 is the Title
+						MultiContentEntryText(pos = (120, 40), size = (450, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5), # index 5 is the Published Date
+						MultiContentEntryText(pos = (120, 70), size = (450, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6), # index 6 is the Views Count
+						MultiContentEntryText(pos = (590, 40), size = (450, 20), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 7), # index 7 is the duration
+						MultiContentEntryText(pos = (590, 70), size = (450, 20), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 8), # index 8 is the ratingcount
+					]),
+				"state": (100,[
+						MultiContentEntryText(pos = (10, 10), size = (1040, 28), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (10, 40), size = (1040, 50), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 2 is the description
+					])
+				},
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18),gFont("Regular", 26),gFont("Regular", 20)],
+				"itemHeight": 100
+			}
+			</convert>
+		</widget>
+
+		<eLabel position="0,470" size="1100,2" backgroundColor="grey" />
+
+		<ePixmap position="20,475" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+
+		<eLabel text="INFO" position="960,485"	size="70,22" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
+		<eLabel text="MENU" position="1030,485"	size="70,22" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
+
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="ButtonBlue" 			position="830,531"  zPosition="1" size="250,38" alphatest="blend" pixmap="dTV-HD/vkey_icon_blue.png" />
+		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="key_yellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
+
+		<widget name="thumbnail" 	position="0,0" size="100,75" alphatest="on"/> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
+		<widget name="HelpWindow" 	position="330,480" size="1,1" zPosition="10" transparent="1" alphatest="on" />	
+
+		<widget name="VKeyIcon" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="MyTubeVideoHelpScreen" 		position="300,90" 	size="680,570"  title="MyTubePlayerHelpScreen...">
+		<eLabel position="0,0" size="680,2" backgroundColor="grey" />
+		<widget name="detailtext" position="10,10" size="660,550" zPosition="3" font="Regular;22" transparent="1" halign="left" valign="top" />
+
+		<eLabel position="0,518" size="680,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 50,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="key_red" 				position=" 50,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<ePixmap position="570,530" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+		<widget name="title" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="MyTubeVideoInfoScreen" 		position="90,90" 	size="1100,570" title="MyTubePlayerMainScreen...">
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+
+		<widget name="title" position="10,15" size="1080,30" zPosition="5" valign="center" halign="left" font="Regular;26" backgroundColor="#0b67a2" transparent="1" noWrap="1"/>
+
+		<widget name="author" 		position="20,70" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="duration" 	position="20,110" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="published" 	position="20,140" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="views" 		position="20,170" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="tags" 		position="20,200" size="300,75" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+
+		<widget name="starsbg" 		position="90,280" size="100,20" pixmap="~/starsbar_empty.png"  zPosition="5" transparent="1" alphatest="on" />
+		<widget name="stars" 		position="90,280" size="100,20" pixmap="~/starsbar_filled.png" zPosition="6" transparent="1" />
+
+
+		<widget source="infolist" render="Listbox" 	position="350,60" size="740,135" zPosition="6" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (135,[
+						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (180, 135), png = 0), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (190, 0), size = (180, 135), png = 1), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (370, 0), size = (180, 135), png = 2), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (550, 0), size = (180, 135), png = 3), # index 0 is the thumbnail							
+					]),
+				"state": (135,[
+						MultiContentEntryText(pos = (0, 35), size = (740, 65), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text = 0), # index 0 is the name
+					])
+				},
+				"fonts": [gFont("Regular", 20),gFont("Regular", 14),gFont("Regular", 28)],
+				"itemHeight": 135
+			}
+			</convert>
+		</widget>
+		<widget name="detailtext" 					position="350,225" size="730,280" zPosition="10" font="Regular;22" foregroundColor="white" backgroundColor="darkgrey" transparent="1" />
+
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 80,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="key_red" 				position=" 80,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+
+		<ePixmap position="980,530" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+
+		<widget name="thumbnail" position="0,0" size="180,135" alphatest="on"/> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
+	</screen>
+	<screen name="MyTubeSuggestionsListScreen" 	position="430,120" 	size="760,320" 	title="MyTubeSuggestionsListScreen..." zPosition="6" >
+		<eLabel position="0,0" size="760,2" backgroundColor="grey" />
+		<widget source="suggestionslist" render="Listbox" position="10,10" zPosition="7" size="740,300" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_30.png" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 2), size = (420, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (440, 2), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="MyTubeHistoryScreen" 			position="430,120" 	size="760,410"  title="MyTubeHistoryScreen..." zPosition="6" >
+		<eLabel position="0,0" size="760,2" backgroundColor="grey" />
+		<widget source="historylist" render="Listbox" position="10,10" zPosition="7" size="740,390" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_30.png" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 2), size = (420, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="MyTubeSettingsScreen" 		position="300,90" 	size="680,570"  title="MyTubeSettingsScreen" >
+		<eLabel position="0,0" size="680,2" backgroundColor="grey" zPosition="5"/>
+
+		<widget name="config" position="10,10" size="660,550" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
+
+		<ePixmap position="570,473" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+		<eLabel position="0,518" size="680,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 80,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="350,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="key_red" 				position=" 80,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="key_green" 			position="350,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="title" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="MyTubeTasksScreen" 			position="300,90" 	size="680,570" title="MyTubeTasksScreen" >
+		<eLabel position="0,0" size="680,2" backgroundColor="grey" zPosition="5"/>
+
+		<widget name="title" position="80,60" size="800,32" font="Regular;27" halign="center" backgroundColor="#0b67a2" transparent="1"/>
+
+		<widget source="tasklist" render="Listbox" position="10,10" size="660,410" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 3), size = (230, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
+						MultiContentEntryText(pos = (250, 3), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
+						MultiContentEntryProgress(pos = (440, 3), size = (100, 24), percent = -3), # index 3 should be progress 
+						MultiContentEntryText(pos = (550, 3), size = (70, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+
+		<eLabel position="0,518" size="680,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 80,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="key_red" 				position=" 80,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<ePixmap position="570,530" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+		<widget name="title" position="0,0" size="0,0"/>
+	</screen>	
 	<!-- NetworkBrowser -->
 	<screen name="NetworkBrowser" 			position="90,90" 	size="1100,570" title="Network Neighbourhood">
 		<eLabel 					  position="0,0" size="1100,2" 	backgroundColor="grey" />
@@ -2392,7 +2605,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel 					  position="0,518" size="1100,2" backgroundColor="grey" />
 		<widget name="HelpWindow"  position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
 		<widget name="introduction2" position="0,531" size="400,38" zPosition="10" font="Regular;24" valign="center"/>
-		<widget name="VKeyIcon"  pixmap="dTV-HD/vkey_icon.png" position="500,532" size="250,38" zPosition="10" alphatest="blend" />
+		<widget name="VKeyIcon"  pixmap="dTV-HD/vkey_icon_green.png" position="500,532" size="250,38" zPosition="10" alphatest="blend" />
 		<widget name="ButtonRed" pixmap="dTV-HD/button.png"    position="820,532" size="250,38" zPosition="1"  alphatest="blend" />
 		<widget name="ButtonRedtext" 						   position="820,531" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1"/>
 		<ePixmap position="970,400" size="110,110" zPosition="2" pixmap="dTV-HD/icons/net.png" transparent="1" alphatest="blend" />
@@ -2405,7 +2618,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel 					  position="0,518" size="1100,2" backgroundColor="grey" />
 		<widget name="HelpWindow"  position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
 		<widget name="introduction2" position="0,531" size="400,38" zPosition="10" font="Regular;24" valign="center"/>
-		<widget name="VKeyIcon"  pixmap="dTV-HD/vkey_icon.png" position="500,532" size="250,38" zPosition="10" alphatest="blend" />
+		<widget name="VKeyIcon"  pixmap="dTV-HD/vkey_icon_green.png" position="500,532" size="250,38" zPosition="10" alphatest="blend" />
 		<widget name="ButtonRed" pixmap="dTV-HD/button.png" position="820,532" size="250,38" zPosition="1" alphatest="blend" />
 		<widget name="ButtonRedtext" 						position="820,531" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1"/>
 		<ePixmap position="970,400" size="110,110" zPosition="2" pixmap="dTV-HD/icons/net.png" transparent="1" alphatest="blend" />
