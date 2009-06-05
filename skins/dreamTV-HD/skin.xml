@@ -2,7 +2,6 @@
 <!-- dreamTV-HD Skin by Kerni-->
 <!-- This skin and all it's graphics are free. -->
 <!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications -->
-<!-- and please, don't remove this text -->
 	<output id="0">
 		<resolution xres="1280" yres="720" bpp="32"/>
 	</output>
@@ -1189,7 +1188,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="NimSetup" position="340,134" size="600,502" title="Reception Settings">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="config" position="10,12" size="580,475" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
+		<widget name="config" position="10,12" size="580,475" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
 	</screen>
 	<screen name="NumberZap" position="440,355" size="400,60" title="Channel">
 		<eLabel position="0,0" size="400,2" backgroundColor="grey" zPosition="5"/>
