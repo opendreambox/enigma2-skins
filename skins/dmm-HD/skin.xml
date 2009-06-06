@@ -2195,9 +2195,10 @@
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 
-		<widget source="session.CurrentService" render="Picon" position="78,165" zPosition="4" size="100,60" alphatest="blend">
+		<ePixmap pixmap="dmm-HD/picon_default.png" position="78,165" size="100,60" zPosition="4" alphatest="blend"/>
+		<!-- widget source="session.CurrentService" render="Picon" position="78,165" zPosition="4" size="100,60" alphatest="blend">
 			<convert type="ServiceName">Reference</convert>
-		</widget>
+		</widget -->
 
 		<widget source="session.Event_Now" render="Label"	position="210,154"	size="70,24"	font="Regular;23" halign="right"	backgroundColor="darkgrey" transparent="1">
 			<convert type="EventTime">StartTime</convert>

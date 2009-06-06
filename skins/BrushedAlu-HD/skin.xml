@@ -2113,9 +2113,10 @@
 			<convert type="ServiceName">Provider</convert>
 		</widget>
 
-		<widget source="session.CurrentService" render="Picon" position="90,155" zPosition="1" size="100,60" alphatest="on">
+		<ePixmap position="90,155" zPosition="1" size="100,60" pixmap="BrushedAlu-HD/picon_default.png"/>
+		<!-- widget source="session.CurrentService" render="Picon" position="90,155" zPosition="1" size="100,60">
 			<convert type="ServiceName">Reference</convert>
-		</widget>
+		</widget -->
 
 		<widget source="session.Event_Now" render="Label"	position="210,165"	size="70,24"	font="Regular;23" halign="right"	backgroundColor="black" transparent="1">
 			<convert type="EventTime">StartTime</convert>
