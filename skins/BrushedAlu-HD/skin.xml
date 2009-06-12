@@ -2277,20 +2277,22 @@
 
 		<widget name="freeDiskSpace" 	position="425,580" size="780,30" zPosition="3" font="Regular;26" backgroundColor="darkgrey" halign="center" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
-		<widget source="Service" render="Label" position="80,105" zPosition="1" size="310,50"  font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+		<widget source="Service" render="Label" position="80,105" zPosition="1" size="310,50"  font="Regular;24" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="80,165" zPosition="1" size="310,48"  font="Regular;22" halign="center" foregroundColor="yellow" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+		<widget source="Service" render="Label" position="80,165" zPosition="1" size="310,48"  font="Regular;22" foregroundColor="yellow" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="80,225" zPosition="1" size="310,22"  font="Regular;22" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+		<widget source="Service" render="Label" position="80,225" zPosition="1" size="150,22"  font="Regular;22" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="240,225" zPosition="1" size="150,22"  font="Regular;22" halign="right" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"> 
+			<convert type="MovieInfo">FileSize</convert>
 		</widget>
 		<widget source="Service" render="Label" position="80,261" zPosition="1" size="325,344" font="Regular;20" foregroundColor="white" backgroundColor="darkgrey" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="100,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"   />
