@@ -49,4 +49,5 @@ AC_OUTPUT([
 ./skins/BrushedAlu-HD/frame/Makefile
 ./skins/SWAIN-HD/Makefile
 ./skins/SWAIN-HD/mmp3/Makefile
+./skins/SWAIN/Makefile
 ])
