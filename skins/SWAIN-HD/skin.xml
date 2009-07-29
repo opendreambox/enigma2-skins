@@ -272,13 +272,8 @@
 	<screen name="Menu" 						position="172,132" size="1108,588" title="Main menu" 			backgroundColor="transparent">
 		<eLabel 								position="5,5" 		size="460,470" zPosition="-1" backgroundColor="background" />
 		<widget source="title" render="Label" 	position="15,10" 	size="440,35" font="Regular;27" halign="center"/>
-		<widget source="menu" render="Listbox" 	position="15,55" 	size="440,420" scrollbarMode="showOnDemand" >
-			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (10, 2), size = (440, 25), flags = RT_HALIGN_LEFT, text = 0) ],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 30
-				}
-			</convert>
+		<widget source="menu" render="Listbox" 	position="15,55"    size="440,400" scrollbarMode="showOnDemand">
+			<convert type="StringList" />	
 		</widget>
 	</screen>
 	<screen name="menu_mainmenu" 				position="  0,  0" size="1280,720" title="Main menu" 			backgroundColor="transparent" flags="wfNoBorder">

@@ -492,14 +492,8 @@
 	<screen name="Menu" 						position="340,135" 	size="600,500"  title="Main menu">
 		<widget source="title" render="Label" position="10,10" size="580,35" font="Regular;27" halign="center"/>
 		<eLabel position="10,50" size="580,2" backgroundColor="grey" zPosition="5"/>
-		<widget source="menu" render="Listbox" position="10,55" size="580,420" scrollbarMode="showOnDemand" >
-			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (10, 2), size = (560, 25), flags = RT_HALIGN_LEFT, text = 0) ],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 30
-				}
-			</convert>
-			<!-- convert type="StringList"/ -->
+		<widget source="menu" render="Listbox" 	position="10,55"    size="580,400" scrollbarMode="showOnDemand">
+			<convert type="StringList" />	
 		</widget>
 	</screen>
 
