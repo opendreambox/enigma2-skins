@@ -437,7 +437,10 @@
 
 		<eLabel text="Softwaremanager..." 	position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
-		<widget source="menu" render="Listbox" 	position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
+		<widget source="menu" render="Listbox" 	position="550,120" size="660,350" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (35, 12), size = (590, 40), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
@@ -447,26 +450,37 @@
 				}
 			</convert>
 		</widget>
-		<widget source="menu" render="Listbox" 	position="100,150" size="320,340" zPosition="3" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="white" backgroundColor="darkgrey" transparent="1">
+		<widget source="menu" render="Listbox" 	position="550,460" size="660,140" zPosition="3" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="white" backgroundColor="darkgrey" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (0, 0), size = (320, 340), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
+						MultiContentEntryText(pos = (0, 0), size = (660, 140), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
 					],
 				"fonts": [gFont("Regular", 24)],
-				"itemHeight": 320
+				"itemHeight": 140
 				}
 			</convert>
 		</widget>
 		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
 	</screen>
-	<screen name="Menu" 						position="340,135" 	size="600,500"  title="Main menu">
-		<ePixmap position="0,0" zPosition="-10" size="600,500" pixmap="BrushedAlu-HD/menu/menu_bg.png" transparent="1" />
-		<widget source="title" render="Label" position="10,10" size="580,35" font="Regular;27" halign="center" backgroundColor="darkgrey" transparent="1"/>
-		<eLabel position="10,48" size="580,2" backgroundColor="black" zPosition="5"/>
-		<eLabel position="10,50" size="580,2" backgroundColor="grey" zPosition="5"/>
-		<widget source="menu" render="Listbox" position="10,65" size="580,400" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1">
+	<screen name="Menu" 						position="0,0" 		size="1280,720" title="Main menu" 					flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu2.png" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<widget source="title" render="Label" 	position="90,120" size="320,32" font="Regular;27" backgroundColor="darkgrey" transparent="1"/>
+
+		<eLabel 								position="80,155" size="340,420" zPosition="1" backgroundColor="grey"/>
+		<eLabel 								position="81,156" size="338,418" zPosition="2" backgroundColor="black"/>
+
+		<widget source="menu" render="Listbox" 	position="90,165" size="320,400" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1">
 			<convert type="StringList" />
 		</widget>
+
+		<widget source="session.VideoPicture" render="Pig"  position="479,124" size="696,377" zPosition="3" backgroundColor="#ff000000"/>
 	</screen>
 
 	<!-- Untertitel -->
@@ -1217,7 +1231,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="Preview" 				position="125,430" size="250,200" alphatest="on" />
+		<widget name="Preview" 								position="140,450" size="250,200" alphatest="on" />
 		<widget name="SkinList" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
 	</screen>
 		<!-- Netzwerk -->
@@ -1279,7 +1293,7 @@
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
- 		<widget name="description" 	position="80,130" size="322,250" zPosition="3" backgroundColor="darkgrey" font="Regular;22" halign="center" valign="center" transparent="1" />
+		<eLabel text="Adapter Setup" 	position="80,110" size="322,95" zPosition="3" font="Regular;27" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
@@ -1289,6 +1303,8 @@
 		<eLabel 				position="550,155" size="660,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 				position="550,157" size="660,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="menulist" position="550,180" size="660,250" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+
+ 		<widget name="description" 	position="550,450" size="660,150" zPosition="3" backgroundColor="darkgrey" font="Regular;22" halign="center" valign="center" transparent="1" />
 
 		<eLabel 				position="550,560" size="660,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 				position="550,562" size="660,2" backgroundColor="grey" zPosition="5"/>
@@ -2172,7 +2188,7 @@
 		<widget source="ServiceEvent" render="Label" 	position=" 70,340" size="395,25"	font="Regular;22" 	backgroundColor="darkgrey" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" transparent="1" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" 	position=" 70,367" size="395,55" 	font="Regular;22" 	backgroundColor="darkgrey" foregroundColor="yellow" shadowColor="black" shadowOffset="-2,-2" transparent="1" >
+		<widget source="ServiceEvent" render="Label" 	position=" 70,367" size="395,48" 	font="Regular;22" 	backgroundColor="darkgrey" foregroundColor="yellow" shadowColor="black" shadowOffset="-2,-2" transparent="1" >
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" 	position=" 70,421" size=" 60,22" 	font="Regular;19" 	backgroundColor="darkgrey" transparent="1" >
@@ -2343,15 +2359,15 @@
 		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<eLabel text="Channellist menu" 	position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
-
-		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
-		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
-
-		<widget name="menu" position="550,130" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_25_bg.png" transparent="1" />
-		<eLabel 			position="536,110" size="1,500" backgroundColor="black" zPosition="5"/>
-		<eLabel 			position="537,110" size="2,500" backgroundColor="grey" zPosition="5"/>
-		<ePixmap 			position="60,500"  size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
+		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+		<eLabel text="Channellist menu" position="510,110" size="700,35" zPosition="3" font="Regular;32" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<eLabel 			position="500,150" size="730,  2" backgroundColor="black" zPosition="5"/>
+		<eLabel 			position="500,152" size="730,  2" backgroundColor="grey" zPosition="5"/>
+		<widget name="menu" position="510,175" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_25_bg.png" transparent="1" />
+		<eLabel 			position="476,110" size="  1,500" backgroundColor="black" zPosition="5"/>
+		<eLabel 			position="477,110" size="  2,500" backgroundColor="grey" zPosition="5"/>
+		<ePixmap 			position=" 60,500"  size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="BouquetSelector" 				position="0,0" 		size="1280,720" title="Choose bouquet"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu2.png"/>
@@ -2361,15 +2377,15 @@
 		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<eLabel text="Choose bouquet" 	position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
-
-		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
-		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
-
-		<widget name="menu" position="550,130" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_25_bg.png" transparent="1" />
-		<eLabel 			position="536,110" size="1,500" backgroundColor="black" zPosition="5"/>
-		<eLabel 			position="537,110" size="2,500" backgroundColor="grey" zPosition="5"/>
-		<ePixmap 			position="60,500"  size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
+		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+		<eLabel text="Choose bouquet" position="510,110" size="700,35" zPosition="3" font="Regular;32" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<eLabel 			position="500,150" size="730,  2" backgroundColor="black" zPosition="5"/>
+		<eLabel 			position="500,152" size="730,  2" backgroundColor="grey" zPosition="5"/>
+		<widget name="menu" position="510,175" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_25_bg.png" transparent="1" />
+		<eLabel 			position="476,110" size="  1,500" backgroundColor="black" zPosition="5"/>
+		<eLabel 			position="477,110" size="  2,500" backgroundColor="grey" zPosition="5"/>
+		<ePixmap 			position=" 60,500"  size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
 	</screen>
 
 	<screen name="MovieSelection" 				position="0,0"		size="1280,720"	title="Select a movie"				flags="wfNoBorder">
@@ -2381,34 +2397,38 @@
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
-		<eLabel text="Select a movie" 	position="465,116" size="760,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<eLabel 						position="425,150" size="780,2" backgroundColor="black" zPosition="5"/>
-		<eLabel 						position="425,152" size="780,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="list" 			position="435,175" size="770,375" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_75.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_75_bg.png" transparent="1" />
-		<eLabel 						position="415,110" size="2,500" backgroundColor="black" zPosition="5"/>
-		<eLabel 						position="417,110" size="2,500" backgroundColor="grey" zPosition="5"/>
+		<eLabel text="Select a movie" 	position="525,116" size="700,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<eLabel 						position="485,150" size="730,2" backgroundColor="black" zPosition="5"/>
+		<eLabel 						position="485,152" size="730,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="list" 			position="490,175" size="730,375" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_75.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_75_bg.png" transparent="1" />
+		<eLabel 						position="476,110" size="1,500" backgroundColor="black" zPosition="5"/>
+		<eLabel 						position="477,110" size="2,500" backgroundColor="grey" zPosition="5"/>
 
-		<eLabel 						position="425,570" size="780,2" backgroundColor="black" zPosition="5"/>
-		<eLabel 						position="425,572" size="780,2" backgroundColor="grey" zPosition="5"/>
+		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="freeDiskSpace" 	position="425,580" size="780,30" zPosition="3" font="Regular;26" backgroundColor="darkgrey" halign="center" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<eLabel 						position="485,570" size="730,2" backgroundColor="black" zPosition="5"/>
+		<eLabel 						position="485,572" size="730,2" backgroundColor="grey" zPosition="5"/>
 
-		<widget source="Service" render="Label" position="80,105" zPosition="1" size="310,50"  font="Regular;24" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+		<widget name="freeDiskSpace" 	position="485,580" size="730,30" zPosition="3" font="Regular;26" backgroundColor="darkgrey" halign="center" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+
+		<widget source="Service" render="Label" position=" 80,345" zPosition="1" size="360, 25" font="Regular;22" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="80,165" zPosition="1" size="310,48"  font="Regular;22" foregroundColor="yellow" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+		<widget source="Service" render="Label" position=" 80,370" zPosition="1" size="360, 25" font="Regular;22" foregroundColor="yellow" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="80,225" zPosition="1" size="150,22"  font="Regular;22" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+		<widget source="Service" render="Label" position=" 80,400" zPosition="1" size="150, 22" font="Regular;19" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget source="Service" render="Label" position="240,225" zPosition="1" size="150,22"  font="Regular;22" halign="right" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"> 
+		<widget source="Service" render="Label" position="300,400" zPosition="1" size="150, 22" font="Regular;19" halign="right" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"> 
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
-		<widget source="Service" render="Label" position="80,261" zPosition="1" size="325,344" font="Regular;20" foregroundColor="white" backgroundColor="darkgrey" transparent="1">
+		<widget source="Service" render="Label" position=" 80,428" zPosition="1" size="380,183" font="Regular;20" foregroundColor="white" backgroundColor="darkgrey" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
+
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="100,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"   />
@@ -2476,11 +2496,17 @@
 		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<eLabel text="Movielist menu" 	position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
-		<widget name="menu" position="550,130" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_25_bg.png" transparent="1" />
-		<eLabel 			position="536,110" size="1,500" backgroundColor="black" zPosition="5"/>
-		<eLabel 			position="537,110" size="2,500" backgroundColor="grey" zPosition="5"/>
+		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
+		<eLabel text="Movielist menu" 	position="510,110" size="700,35" zPosition="3" font="Regular;32" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<eLabel 						position="500,150" size="730,2" backgroundColor="black" zPosition="5"/>
+		<eLabel 						position="500,152" size="730,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="menu" 			position="510,175" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_25_bg.png" transparent="1" />
+		<eLabel 						position="476,110" size="1,500" backgroundColor="black" zPosition="5"/>
+		<eLabel 						position="477,110" size="2,500" backgroundColor="grey" zPosition="5"/>
+
 		<ePixmap 			position="60,500"  size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
 	</screen>
 
@@ -2653,28 +2679,42 @@
 		<widget name="title" position="20,130" size="300,50" backgroundColor="darkgrey" transparent="1"/>
 	</screen>
 	<screen name="CutListEditor" 				position="0,0" 		size="1280,720" title="Cutlist editor" 				flags="wfNoBorder">
-		<eLabel position="80,125" size="300,420" zPosition="1" backgroundColor="grey"/>
-		<eLabel position="81,126" size="298,418" zPosition="2" backgroundColor="black"/>
-		<widget source="cutlist" render="Listbox" position="90,135" zPosition="3" size="280,400" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" >
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu2.png" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<eLabel text="Cutlist editor" 				position="90,120" size="320,32" font="Regular;27" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+
+		<eLabel 									position="80,155" size="340,420" zPosition="1" backgroundColor="grey"/>
+		<eLabel 									position="81,156" size="338,418" zPosition="2" backgroundColor="black"/>
+
+		<widget source="cutlist" render="Listbox" 	position="90,165" zPosition="3" size="320,400" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(size=(190, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
-						MultiContentEntryText(pos=(190,2), size=(90, 20), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
+						MultiContentEntryText(size=(220, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
+						MultiContentEntryText(pos=(220,2), size=(100, 20), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
 					],
 				 "fonts": [gFont("Regular", 20)],
 				 "itemHeight": 25
 				}
 			</convert>
 		</widget>
+
 		<eLabel position="479,124" zPosition="3" size="696,377" backgroundColor="#ff000000"/>
 		<widget name="Video" position="270,100" zPosition="-10" size="390,300"/>
+
 		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="450,550" size="790,25" zPosition="3" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="1">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Timeline" position="479,587" size="696,20" zPosition="3" backgroundColor="#808888" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black"/>
+
+		<widget name="Timeline" position="479,587" size="696,20" zPosition="3" backgroundColor="black" pointer="skin_default/position_arrow.png:3,5" foregroundColor="white"/>
 		<eLabel text="OK = Menu" position="1060,630" size="140,22" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1"/>
 	</screen>
 
@@ -3152,28 +3192,42 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_blue" 	render="Label" 	position="130,602"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
 	<screen name="TitleCutter" 					position="0,0" 		size="1280,720" title="Cutlist editor" 				flags="wfNoBorder">
-		<eLabel position="80,125" size="300,420" zPosition="1" backgroundColor="grey"/>
-		<eLabel position="81,126" size="298,418" zPosition="2" backgroundColor="black"/>
-		<widget source="cutlist" render="Listbox" position="90,135" zPosition="3" size="280,400" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" >
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu2.png" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<eLabel text="Cutlist editor" 				position="90,120" size="320,32" font="Regular;27" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+
+		<eLabel 									position="80,155" size="340,420" zPosition="1" backgroundColor="grey"/>
+		<eLabel 									position="81,156" size="338,418" zPosition="2" backgroundColor="black"/>
+
+		<widget source="cutlist" render="Listbox" 	position="90,165" zPosition="3" size="320,400" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(size=(190, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
-						MultiContentEntryText(pos=(190,2), size=(90, 20), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
+						MultiContentEntryText(size=(220, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
+						MultiContentEntryText(pos=(220,2), size=(100, 20), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
 					],
 				 "fonts": [gFont("Regular", 20)],
 				 "itemHeight": 25
 				}
 			</convert>
 		</widget>
+
 		<eLabel position="479,124" zPosition="3" size="696,377" backgroundColor="#ff000000"/>
 		<widget name="Video" position="270,100" zPosition="-10" size="390,300"/>
+
 		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="450,550" size="790,25" zPosition="3" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="1">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Timeline" position="479,587" size="696,20" zPosition="3" backgroundColor="#808888" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black"/>
+
+		<widget name="Timeline" position="479,587" size="696,20" zPosition="3" backgroundColor="black" pointer="skin_default/position_arrow.png:3,5" foregroundColor="white"/>
 		<eLabel text="OK = Menu" position="1060,630" size="140,22" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1"/>
 	</screen>
 	<screen name="TitleList" 					position="0,0" 		size="1280,720" title="DVD Tool"					flags="wfNoBorder">
