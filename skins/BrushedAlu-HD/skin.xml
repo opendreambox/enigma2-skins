@@ -1304,14 +1304,13 @@
 		<eLabel 				position="550,157" size="660,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="menulist" position="550,180" size="660,250" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
 
- 		<widget name="description" 	position="550,450" size="660,150" zPosition="3" backgroundColor="darkgrey" font="Regular;22" halign="center" valign="center" transparent="1" />
+ 		<widget name="description" 	position="550,495" size="660,100" zPosition="3" backgroundColor="darkgrey" font="Regular;24" halign="center" valign="center" transparent="1" />
 
-		<eLabel 				position="550,560" size="660,2" backgroundColor="black" zPosition="5"/>
-		<eLabel 				position="550,562" size="660,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel text="Press OK to edit the settings." position="550,570" size="660,27" zPosition="1" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<eLabel 				position="550,600" size="660,2" backgroundColor="black" zPosition="5"/>
+		<eLabel 				position="550,602" size="660,2" backgroundColor="grey" zPosition="5"/>
 
-		<widget name="Statustext" 		position="780,602" size="150,28" zPosition="10" font="Regular;24" halign="right" foregroundColor="white" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget name="statuspic" 		position="950,603" size="25,24"	zPosition="10" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="on"/>
+		<widget name="Statustext" 		position="780,610" size="150,28" zPosition="10" font="Regular;24" halign="right" foregroundColor="white" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget name="statuspic" 		position="950,611" size="25,24"	zPosition="10" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="on"/>
 
 		<widget name="ButtonRed" 		position="80,500"  size="30,30" alphatest="blend"  zPosition="1" pixmap="BrushedAlu-HD/buttons/red.png" />
 		<widget name="ButtonRedtext" 	position="130,502" size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
@@ -3142,6 +3141,28 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" 					position="130,552"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<widget name="key_blue" 					position="130,602"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
+	<!-- CrashlogAutoSubmit -->
+	<screen name="CrashlogAutoSubmitConfiguration" position="0,0" 	size="1280,720" title="CrashlogAutoSubmitConfiguration..." flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<eLabel text="CrashlogAutoSubmit Configuration" 	position="80,110" size="350,35" zPosition="3" font="Regular;30" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
+		<widget name="config" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
+		<widget name="closetext" 						position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="installtext" 					position="130,552"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+	</screen>
 	<!-- DVD Burner -->
 	<screen name="DVDToolbox" 					position="0,0" 		size="1280,720" title="DVD media toolbox" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
@@ -3280,6 +3301,63 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_red" 	render="Label" 	position="130,452"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<widget source="key_green" 	render="Label"  position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<widget source="key_blue" 	render="Label" 	position="130,602"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+	</screen>
+	<!-- FileBrowser -->
+	<screen name="FilebrowserScreen" 			position="0,0" 		size="1280,720" title="" 							flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu2.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+
+		<eLabel text="Filebrowser" 	position=" 80,110" size="1120,35" zPosition="3" font="Regular;32" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<eLabel 					position=" 80,150" size="1120,2" backgroundColor="black" zPosition="5"/>
+		<eLabel 					position=" 80,152" size="1120,2" backgroundColor="grey" zPosition="5"/>
+
+		<widget name="list_left" 	position=" 90,167" size="540,437" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+
+		<eLabel 					position="638,155" size="1,460" backgroundColor="black" zPosition="5"/>
+		<eLabel 					position="639,155" size="2,460" backgroundColor="grey" zPosition="5"/>
+
+		<widget name="list_right" 	position="650,167" size="540,437" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="100,643"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" 	position="970,643"  size="30,30" alphatest="blend"   />
+		<widget name="red" 		position="150,645"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="green" 	position="440,645"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="yellow" 	position="730,645"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="blue" 	position="1020,645" size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="FilebrowserConfigScreen" 		position="0,0" 		size="1280,720" title="" 							flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu2.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
+		<eLabel text="FilebrowserConfigScreen" 	position="510,110" size="700,35" zPosition="3" font="Regular;32" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<eLabel 				position="500,150" size="730,2" backgroundColor="black" zPosition="5"/>
+		<eLabel 				position="500,152" size="730,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="config" 	position="510,175" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_25_bg.png" transparent="1" />
+		<eLabel 				position="476,110" size="1,500" backgroundColor="black" zPosition="5"/>
+		<eLabel 				position="477,110" size="2,500" backgroundColor="grey" zPosition="5"/>
+
+		<ePixmap 			position="60,500"  size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
+		
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="100,643"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
+		<widget name="buttonred" 		position="150,645"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="buttongreen" 	position="440,645"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- Internet Movie Database -->
 	<screen name="IMDB" 						position="0,0" 		size="1280,720" title="IMDb Details Plugin"			flags="wfNoBorder">
