@@ -2552,8 +2552,8 @@
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
-		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
-		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 		<eLabel 								position="471,110" size="1,500" backgroundColor="black" zPosition="5"/>
 		<eLabel 								position="472,110" size="2,500" backgroundColor="grey" zPosition="5"/>
