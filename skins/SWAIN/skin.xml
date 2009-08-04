@@ -273,7 +273,6 @@
 		<eLabel position="56, 32" size="34, 64" backgroundColor="yellow" />
 		<eLabel position="95, 32" size="624, 64" backgroundColor="blue" />
 		<eLabel position="56, 104" size="34, 472" backgroundColor="lblue" />
-		<widget source="session.VideoPicture" render="Pig" position="71,200" size="392,225" zPosition="3" backgroundColor="#ff000000"/>
 		<widget source="title" render="Label" position="120, 65" size="300, 23" zPosition="3" font="Regular; 22" backgroundColor="blue" transparent="1" />
 		<widget source="menu" render="Listbox" position="95, 106" size="310, 440" zPosition="3" selectionPixmap="SWAIN/selmenu.png" backgroundPixmap="SWAIN/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -1848,9 +1847,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_red" 						position="  2,420" size="150, 28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
 		<widget name="thumbnail" 					position="  0,  0" size="100, 75" alphatest="on" /> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
 	</screen>
-	<screen name="MyTubeSuggestionsListScreen" 		position="145,100" size="500,310" zPosition="6" backgroundColor="yellow" flags="wfNoBorder">
-		<eLabel 											position="2,2" zPosition="6" size="496,306" backgroundColor="blue" />
-		<widget source="suggestionslist" render="Listbox" 	position="5,5" zPosition="7" size="490,300" backgroundColor="blue" scrollbarMode="showOnDemand">
+	<screen name="MyTubeSuggestionsListScreen" 		position="145,158" size="500,250" zPosition="6" backgroundColor="yellow" flags="wfNoBorder">
+		<eLabel 											position="2,2" zPosition="6" size="496,246" backgroundColor="blue" />
+		<widget source="suggestionslist" render="Listbox" 	position="5,5" zPosition="7" size="490,240" backgroundColor="blue" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (5, 2), size = (340, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -1862,7 +1861,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			</convert>
 		</widget>
 	</screen>
-	<screen name="MyTubeHistoryScreen" 				position="145,100" size="500,310" zPosition="6" backgroundColor="yellow" flags="wfNoBorder">
+	<screen name="MyTubeHistoryScreen" 				position="145,158" size="500,310" zPosition="6" backgroundColor="yellow" flags="wfNoBorder">
 		<eLabel 											position="2,2" zPosition="6" size="496,306" backgroundColor="blue" />
 		<widget source="historylist" render="Listbox" position="5,5" zPosition="7" size="490,300" backgroundColor="blue" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
