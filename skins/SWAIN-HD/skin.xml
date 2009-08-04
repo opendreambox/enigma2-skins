@@ -2274,8 +2274,8 @@
 
 		<widget name="thumbnail" position="0,0" size="180,135" alphatest="on"/> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
 	</screen>
-	<screen name="MyTubeSuggestionsListScreen" 	position="187,152" 	size="660,495" zPosition="6"  					flags="wfNoBorder">
-		<widget source="suggestionslist" render="Listbox" position="10,10" zPosition="7" size="640,290" scrollbarMode="showOnDemand">
+	<screen name="MyTubeSuggestionsListScreen" 	position="187,182" 	size="660,400" zPosition="6"  					flags="wfNoBorder">
+		<widget source="suggestionslist" render="Listbox" position="0,0" zPosition="7" size="660,290" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (10, 2), size = (420, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -2287,8 +2287,8 @@
 			</convert>
 		</widget>
 	</screen>
-	<screen name="MyTubeHistoryScreen" 			position="187,152" 	size="660,495" zPosition="6" 					flags="wfNoBorder">
-		<widget source="historylist" render="Listbox" position="10,10" zPosition="7" size="640,377" scrollbarMode="showOnDemand">
+	<screen name="MyTubeHistoryScreen" 			position="187,182" 	size="660,400" zPosition="6" 					flags="wfNoBorder">
+		<widget source="historylist" render="Listbox" position="0,0" zPosition="7" size="660,377" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (10, 2), size = (420, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
