@@ -885,10 +885,10 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
+		<widget name="text" position="550,120" size="660,50"  zPosition="2" font="Regular;23" halign="center" valign="center" transparent="1"/>
 		<widget name="list" position="550,120" size="660,500" zPosition="3" scrollbarMode="showNever" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_50.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_50_bg.png" transparent="1"/>
 
 		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
-		<widget name="text" position="0,0" size="0,0"/>
 	</screen>
 	<!-- Einstellungen -->
 		<!-- Kanalsuche -->
@@ -3144,10 +3144,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<eLabel text="CD-Info" 	position="80,110" size="350,35" zPosition="3" font="Regular;30" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
-		<widget name="info" 	position="80,160" size="350,120" font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
-	    <widget name="info2" 	position="80,280" size="350,200" font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="config" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+		<widget name="config" 	position="550,120" size="660,275" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+
+		<widget name="info" 	position="550,400" size="660, 80" font="Regular;21" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+	    <widget name="info2" 	position="550,480" size="660,120" font="Regular;21" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
@@ -3189,6 +3192,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel text="DVD media toolbox" 	position="80,110" size="350,70" zPosition="3" font="Regular;30" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
 		<widget source="info" render="Label" 			position="550,120" size="660,100" font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
 	    <widget name="details" 							position="550,250" size="660,250" font="Regular;20" backgroundColor="darkgrey" transparent="1"/>
 	    <widget source="space_bar" render="Progress" 	position="540,580" size="680,26" borderWidth="1" backgroundColor="grey"/>
@@ -3212,6 +3218,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<eLabel text="Collection settings" 	position="80,110" size="350,70" zPosition="3" font="Regular;30" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 		<widget name="config" 					position="550,120" 	size="660,350" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
 		<eLabel 								position="550,480" 	size="660,2" backgroundColor="black"/>
@@ -3276,6 +3285,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel text="TitleList" 	position="80,110" size="350,70" zPosition="3" font="Regular;30" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
 	    <widget source="title_label" render="Label" 	position="550,120" size="660,45" font="Regular;22" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<eLabel 										position="550,170" size="660,2" zPosition="2" backgroundColor="black"/>
 		<eLabel 										position="550,172" size="660,2" zPosition="2" backgroundColor="grey"/>
@@ -3304,6 +3316,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<eLabel text="Properties of current title" 	position="80,110" size="350,70" zPosition="3" font="Regular;30" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 	    <widget name="thumbnail" 					position="520,110" 	size="260,160" alphatest="on"/>
 		<widget source="serviceinfo" render="Label" position="800,110" 	size="410,170" font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
@@ -4179,6 +4194,93 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<widget name="list" position="550,130" size="660,475" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
 		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
+	</screen>
+	<!-- VLC -->
+	<screen name="VlcMediaListScreen" 			position="0,0" 		size="1280,720" title="VlcMediaListScreen" 			flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu2.png" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<ePixmap 							pixmap="BrushedAlu-HD/buttons/lgrey.png" position=" 84,114" zPosition="2" size="30,30" alphatest="blend"/>
+		<ePixmap 							pixmap="BrushedAlu-HD/buttons/lgrey.png" position="664,114" zPosition="2" size="30,30" alphatest="blend"/>
+
+		<widget name="filelist_button_sel" 	pixmap="BrushedAlu-HD/buttons/green.png" position=" 84,114" zPosition="3" size="30,30" alphatest="blend"/>
+		<widget name="playlist_button_sel"	pixmap="BrushedAlu-HD/buttons/green.png" position="664,114" zPosition="3" size="30,30" alphatest="blend"/>
+
+		<widget name="filelist_text" position="124,115"	zPosition="4" size="250,30" font="Regular;24" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="playlist_text" position="704,115"	zPosition="4" size="250,30" font="Regular;24" foregroundColor="white" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+
+		<eLabel 					position="70,154" size="1140,2" backgroundColor="black" zPosition="5"/>
+		<eLabel 					position="70,156" size="1140,2" backgroundColor="grey" zPosition="5"/>
+
+		<widget name="filelist" 	position=" 84,165" size="545,425" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel1100_25.png" transparent="1"/>
+		<eLabel 					position="639,165" size="  1,435" backgroundColor="black" zPosition="5"/>
+		<eLabel 					position="640,165" size="  2,435" backgroundColor="grey" zPosition="5"/>
+		<widget name="playlist" 	position="650,165" size="545,425" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel1100_25.png" transparent="1"/>
+
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="100,643"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" 	position="970,643"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 						position="150,645"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="440,645"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="730,645"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="1020,645" size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="VlcServerListScreen" 			position="0,0" 		size="1280,720" title="Select a VLC-Server Profile"	flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<eLabel text="Select a VLC-Server Profile" 	position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
+		<widget name="serverlabel"  position="550,120" size="660,28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel 					position="550,155" size="660,2" backgroundColor="black" zPosition="5"/>
+		<eLabel 					position="550,157" size="660,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="serverlist" 	position="550,180" size="660,250" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel1100_25.png" transparent="1"/>
+
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" 	position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 							position="130,452"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="key_green" 						position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="key_yellow" 						position="130,552"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="key_blue" 						position="130,602"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+	</screen>
+	<screen name="VlcServerConfigScreen" 		position="0,0" 		size="1280,720" title="Edit VLC Server"				flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<eLabel text="Edit VLC Server" 	position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
+		<widget name="config" position="550,120" size="660,475" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel1100_25.png" transparent="1"/>
+
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" 	position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget name="key_red" 							position="130,452"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="key_green" 						position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="key_yellow" 						position="130,552"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="key_blue" 						position="130,602"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
 	<!-- WebcamPicureViewer -->
 	<screen name="PictureViewer" 				position="0,0" 		size="1280,720" title="" 							flags="wfNoBorder">
