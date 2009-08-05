@@ -674,16 +674,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="timerlist"    position="550,120" size="660,490" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
-
-		<eLabel 					position="550,119" size="632,2" zPosition="4" backgroundColor="grey" />
-		<eLabel 					position="550,189" size="632,2" zPosition="4" backgroundColor="grey" />
-		<eLabel 					position="550,259" size="632,2" zPosition="4" backgroundColor="grey" />
-		<eLabel 					position="550,329" size="632,2" zPosition="4" backgroundColor="grey" />
-		<eLabel 					position="550,399" size="632,2" zPosition="4" backgroundColor="grey" />
-		<eLabel 					position="550,469" size="632,2" zPosition="4" backgroundColor="grey" />
-		<eLabel 					position="550,539" size="632,2" zPosition="4" backgroundColor="grey" />
-		<eLabel 					position="550,609" size="632,2" zPosition="4" backgroundColor="grey" />
+		<widget name="timerlist"    position="550,120" size="660,490" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="dmm-HD/sel.png" backgroundPixmap="dmm-HD/sep.png" transparent="1"/>
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
@@ -797,8 +788,7 @@
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 		<ePixmap position="60,540" size="270,105" pixmap="dmm-HD/db.png" transparent="1" alphatest="blend"/>
 
-
-		<widget name="timerlist" position="550,120" size="660,350" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="timerlist" position="550,120" size="660,350" scrollbarMode="showOnDemand" selectionPixmap="dmm-HD/sel.png" backgroundPixmap="dmm-HD/sep.png" transparent="1"/>
 	</screen>
 	<screen name="SleepTimerEdit" 				position="0,0" 		size="1280,720" title="Sleep Timer"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -2442,7 +2432,7 @@
 
 		<eLabel 							position="490,150" size="720,2" backgroundColor="grey" zPosition="5"/>
 
-		<widget name="list" 		position="490,170" 	size="720,375" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" 		position="490,170" 	size="720,375" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dmm-HD/sel.png" backgroundPixmap="dmm-HD/sep.png" transparent="1" />
 		<eLabel 					position="490,565" 	size="720,2"  backgroundColor="grey" />
 
 		<widget name="waitingtext" 	 position="490,580" size="720,25" zPosition="4" font="Regular;22" halign="center" valign="center" />
@@ -3148,6 +3138,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel text="DVD media toolbox" position="80,110" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
 
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
 		<widget source="info" render="Label" 			position="550,120" size="660,100" font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
 	    <widget name="details" 							position="550,250" size="660,250" font="Regular;20" backgroundColor="darkgrey" transparent="1"/>
 	    <widget source="space_bar" render="Progress" 	position="540,580" size="680,26" borderWidth="1" backgroundColor="grey"/>
@@ -3171,6 +3164,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="Collection settings" position="80,110" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 		<widget name="config" 					position="550,120" 	size="660,350" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
 		<eLabel 								position="550,480" 	size="660,2" backgroundColor="grey"/>
@@ -3220,6 +3216,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel text="TitleList" position="80,110" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
 
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
 	    <widget source="title_label" render="Label" 	position="550,120" size="660,45" font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
 	    <widget name="error_label" 						position="550,120" size="660,395" zPosition="3" font="Regular;20" backgroundColor="darkgrey" transparent="1"/>
 	    <widget source="titles" render="Listbox" 		position="550,190" size="660,375" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1">
@@ -3247,6 +3246,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel text="Properties of current title" position="80,110" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
 
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
 	    <widget name="thumbnail" 					position="520,110" 	size="260,160" alphatest="on"/>
 		<widget source="serviceinfo" render="Label" position="800,110" 	size="410,170" font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
 		<widget name="config" 						position="550,300" 	size="660,300" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
@@ -3270,10 +3272,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel text="CD-Info" position="80,40" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
 
-		<widget name="info" 	position="80,110" size="350,200" font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
-	    <widget name="info2" 	position="80,240" size="350,250" font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="config" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="config" position="550,120" size="660,275" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="info" 	position="550,400" size="660,80"  font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
+	    <widget name="info2" 	position="550,480" size="660,120" font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
@@ -3297,7 +3302,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="stars" 		position="145,120" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" zPosition="3" transparent="1"/>
 		<widget name="ratinglabel" 	position="145,154" size="210,24" font="Regular;20" halign="center" foregroundColor="#f0b400" backgroundColor="darkgrey" transparent="1"/>
 
-		<widget name="titellabel" 	position="550,110" 	size="660,28" font="Regular;25" valign="center" backgroundColor="darkgrey" transparent="1"/>
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
+		<widget name="titellabel" 	position="550,110" 	size="660,28" font="Regular;25" backgroundColor="darkgrey" transparent="1" noWrap="1" />
 		<widget name="poster" 		position="560,150" 	size="110,180" alphatest="blend"/>
 
 		<widget name="detailslabel" position="700,150" 	size="510,175" font="Regular;20" backgroundColor="darkgrey" transparent="1"/>
