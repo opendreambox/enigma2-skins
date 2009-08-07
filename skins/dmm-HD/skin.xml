@@ -1275,12 +1275,21 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="config" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="config" position="550,120" size="660,250" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
 
-		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
-		<widget name="closetext" 					position="130,502"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="installtext" 					position="130,552"  size="220,30"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="status" position="550,380" size="660,70" halign="center" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
+
+		<widget name="HelpWindow" position="588,470" size="1,1" zPosition="1" transparent="1"/>	
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500" size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550" size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/grey.png" 	position="80,600" size="30,30" alphatest="blend" zPosition="2"/>
+		<widget name="VKeyButton" pixmap="dmm-HD/buttons/yellow.png" position="80,600" size="30,30" zPosition="3" alphatest="blend" />
+
+		<widget name="closetext" 		position="130,502" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="installtext" 		position="130,552" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<eLabel text="Virtual KeyBoard" position="130,602" size="220,28" font="Regular;24" transparent="1" />
+		<widget name="VKeyIcon" position="0,0" size="0,0"/>
 	</screen>
 			<!-- Netzwerk -->
 	<screen name="AdapterSetup" 				position="0,0" 		size="1280,720" title="Network Setup" 				flags="wfNoBorder">
@@ -1316,7 +1325,7 @@
 		<widget name="DNS1" 		position="870,520" 	size="200,26" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="black" backgroundColor="white" transparent="1"/>
 		<widget name="DNS2"			position="870,560" 	size="200,26" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="black" backgroundColor="white" transparent="1"/>
 
-		<widget name="HelpWindow" 		position="588,470"  size="1,1" 		zPosition="1" transparent="1" alphatest="on" />	
+		<widget name="HelpWindow" 		position="588,470"  size="1,1" 	zPosition="1" transparent="1" alphatest="on" />	
 		<widget name="introduction2" 	position="550,610" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" transparent="1" />
 
 
@@ -2819,6 +2828,7 @@
 		<ePixmap 				position="617,197" size="542,52" pixmap="skin_default/vkey_text.png" zPosition="-4" alphatest="on"/>
 		<widget name="text" 	position="625,200" size="526,46" font="Regular;38" transparent="1" noWrap="1" halign="right"/>
 		<widget name="list" 	position="610,320" size="540,225" selectionDisabled="1" transparent="1"/>
+		<ePixmap position="60,540" size="270,105" pixmap="dmm-HD/db.png" transparent="1" alphatest="blend"/>
 	</screen>
 
 	<screen name="ChoiceBox"					position="130,100"	size="550,400"	title="Input">

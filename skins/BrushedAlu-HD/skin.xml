@@ -1249,6 +1249,36 @@
 		<widget name="Preview" 								position="140,450" size="250,200" alphatest="on" />
 		<widget name="SkinList" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
 	</screen>
+	<screen name="CrashlogAutoSubmitConfiguration" position="0,0" 	size="1280,720" title="CrashlogAutoSubmitConfiguration..." flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<eLabel text="CrashlogAutoSubmit Configuration" 	position="80,110" size="350,70" zPosition="3" font="Regular;30" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
+		<widget name="config" position="550,120" size="660,250" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+
+		<widget name="status" position="550,380" size="660,70" halign="center" font="Regular;24" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+
+		<widget name="HelpWindow" position="588,470" size="1,1" zPosition="1" transparent="1"/>	
+
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/grey.png" 	position="80,600" size="30,30" alphatest="blend" zPosition="2"/>
+		<widget name="VKeyButton" pixmap="BrushedAlu-HD/buttons/yellow.png" position="80,600" size="30,30" zPosition="3" alphatest="blend" />
+
+		<widget name="closetext" 		position="130,502"  size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="installtext" 		position="130,552"  size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<eLabel text="Virtual KeyBoard" position="130,602" 	size="220,28" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="VKeyIcon" position="0,0" size="0,0"/>
+	</screen>
 		<!-- Netzwerk -->
 	<screen name="AdapterSetup" 				position="0,0" 		size="1280,720" title="Network Setup" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
@@ -3158,28 +3188,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_red" 						position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<widget name="key_green" 					position="130,552"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<widget name="key_blue" 					position="130,602"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-	</screen>
-	<!-- CrashlogAutoSubmit -->
-	<screen name="CrashlogAutoSubmitConfiguration" position="0,0" 	size="1280,720" title="CrashlogAutoSubmitConfiguration..." flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-
-		<eLabel text="CrashlogAutoSubmit Configuration" 	position="80,110" size="350,35" zPosition="3" font="Regular;30" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
-
-		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
-		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
-
-		<widget name="config" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
-
-		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
-		<widget name="closetext" 						position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="installtext" 					position="130,552"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
 	<!-- DVD Burner -->
 	<screen name="DVDToolbox" 					position="0,0" 		size="1280,720" title="DVD media toolbox" 			flags="wfNoBorder">
