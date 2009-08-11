@@ -566,7 +566,7 @@
 
 
 		<ePixmap 						position="340,650" size="600,16" pixmap="dmm-HD/mpslider.png" zPosition="13" backgroundColor="black" alphatest="on"/>
-		<widget name="PositionGauge" 	position="360,651" size="560,14" zPosition="12" pointer="BrushedAlu-HD/pointer.png:13,3" transparent="0"/>
+		<widget name="PositionGauge" 	position="360,651" size="560,14" zPosition="12" pointer="dmm-HD/pointer.png:13,3" transparent="0"/>
 
 		<widget source="session.CurrentService" render="Label" position="170,642" size="150,28" font="Regular;28" halign="right" valign="center" backgroundColor="black" transparent="1" >
 			<convert type="ServicePosition">Position</convert>
