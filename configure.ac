@@ -50,4 +50,7 @@ AC_OUTPUT([
 ./skins/SWAIN-HD/Makefile
 ./skins/SWAIN-HD/mmp3/Makefile
 ./skins/SWAIN/Makefile
+./skins/simple/Makefile
+./skins/very-simple/Makefile
+./skins/very-very-simple/Makefile
 ])
