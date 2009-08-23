@@ -1116,7 +1116,7 @@
 	<screen name="MediaPlayer" 						position=" 40,65" size="640,483" title="MediaPlayer">
 		<widget name="coverArt" 	position=" 16, 30" size="116,116" zPosition="3" alphatest="blend" />
 
-		<widget name="repeat" 		position="580, 15" size=" 50,30" pixmaps="very-very-simple/repeat_off.png,very-simple/repeat_on.png" alphatest="on" />
+		<widget name="repeat" 		position="580, 15" size=" 50,30" pixmaps="very-simple/repeat_off.png,very-simple/repeat_on.png" alphatest="on" />
  
 		<widget name="artisttext" 	position="150, 16" size=" 90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
 		<widget name="albumtext" 	position="150, 40" size=" 90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
@@ -1137,14 +1137,17 @@
 
 		<eLabel 							position=" 10,175" size="300, 26" backgroundColor="background2" />
 		<eLabel text=" F i l e l i s t " 	position=" 15,176" size="290, 25" zPosition="1" font="Regular;20" halign="center" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget name="filelist" 			position=" 10,214" size="300,253" scrollbarMode="showOnDemand" />
+		<widget name="filelist" 			position=" 10,214" size="300,230" scrollbarMode="showOnDemand" />
 
 		<eLabel 							position="320,175" size="310, 26" backgroundColor="background2" />
 		<eLabel text=" P l a y l i s t " 	position="325,178" size="300, 23" zPosition="1" font="Regular;20" halign="center" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget name="playlist" 			position="320,214" size="310,253" scrollbarMode="showOnDemand" selectionDisabled="1" />
+		<widget name="playlist" 			position="320,214" size="310,230" scrollbarMode="showOnDemand" selectionDisabled="1" />
 
 		<widget name="PositionGauge" position="0, 0" size="0, 0" />
-		<widget name="currenttext" position="0, 0" size="0, 0" />
+
+		<eLabel						position="0,453" size="640,30" backgroundColor="background2" />
+		<widget name="currenttext" 	position="5,457" size="630,23" zPosition="1" font="Regular;20" halign="center" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
+
 		<widget name="titletext" position="0, 0" size="0, 0" />
 	</screen>
 	<screen name="DirectoryBrowser" 				position=" 50,90" size="620,430" title="Directorybrowser">
