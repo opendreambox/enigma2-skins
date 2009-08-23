@@ -1193,17 +1193,17 @@
 
 		<widget name="repeat" 		position="580, 15" size=" 50,30" pixmaps="very-simple/repeat_off.png,very-simple/repeat_on.png" alphatest="on" />
  
-		<widget name="artisttext" 	position="150, 16" size=" 90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
-		<widget name="albumtext" 	position="150, 40" size=" 90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
-		<widget name="yeartext" 	position="150, 64" size=" 90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
-		<widget name="genretext"	position="150, 88" size=" 90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
-		<eLabel name="nowPlaying" 	position="150,112" size="130,20" font="Regular;18" text="Now Playing" foregroundColor="yellow"/>
+		<widget name="artisttext" 	position="150, 16" size="90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
+		<widget name="albumtext" 	position="150, 40" size="90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
+		<widget name="yeartext" 	position="150, 64" size="90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
+		<widget name="genretext"	position="150, 88" size="90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
+		<widget name="titletext" 	position="150,112" size="90,20" font="Regular;18" valign="top" foregroundColor="grey"/>
 
 		<widget name="artist" 		position="250, 16" size="337,20" font="Regular;18" valign="top"/>
 		<widget name="album" 		position="250, 40" size="337,20" font="Regular;18" valign="top"/>
 		<widget name="year" 		position="250, 64" size="337,20" font="Regular;18" valign="top"/>
 		<widget name="genre" 		position="250, 88" size="337,20" font="Regular;18" valign="top"/>
-		<widget name="title" 		position="290,112" size="337,20" font="Regular;18" valign="top"/>
+		<widget name="title" 		position="250,112" size="337,20" font="Regular;18" valign="top"/>
 
 		<eLabel 													position="150,140" size="480,16" zPosition="1" backgroundColor="grey" />
 		<widget source="session.CurrentService" render="Progress" 	position="152,142" size="476,12" zPosition="3" borderWidth="3" borderColor="background">
@@ -1222,8 +1222,6 @@
 
 		<eLabel						position="0,453" size="640,30" backgroundColor="background2" />
 		<widget name="currenttext" 	position="5,457" size="630,23" zPosition="1" font="Regular;20" halign="center" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-
-		<widget name="titletext" position="0, 0" size="0, 0" />
 	</screen>
 	<screen name="DirectoryBrowser" 				position=" 50,90" size="620,430" title="Directorybrowser">
 		<widget source="key_red" 	render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2" />
