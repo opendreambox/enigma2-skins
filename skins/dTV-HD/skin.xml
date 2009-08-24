@@ -1451,13 +1451,13 @@
 		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<screen name="TimerSanityConflict" 		position="90,90" 	size="1100,570" title="Timer sanity error">
-		<eLabel position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="list" position="10,10" size="1080,250" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
-		<eLabel position="0,270" 	size="1100,2" backgroundColor="grey" />
-		<eLabel position="549,0" 	size="2,248" backgroundColor="grey" />
-		<widget name="timer1" position="10,45"  size="530,225" scrollbarMode="showNever" />
-		<widget name="timer2" position="560,45" size="530,225" scrollbarMode="showNever" />
-		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
+		<eLabel 				position="  0,  0" size="1100,  2" backgroundColor="grey" />
+		<widget name="list" 	position=" 10, 10" size=" 530,250" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
+		<eLabel 				position="  0,270" size="1100,  2" backgroundColor="grey" />
+		<eLabel 				position="549,272" size="   2,246" backgroundColor="grey" />
+		<widget name="timer1" 	position=" 10,282" size=" 530,225" scrollbarMode="showNever" />
+		<widget name="timer2" 	position="560,282" size=" 530,225" scrollbarMode="showNever" />
+		<eLabel 				position="  0,518" size="1100,  2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
