@@ -1064,11 +1064,11 @@
 	<!-- Informationen -->
 	<screen name="About" 						position="172,132" size="1108,588" title="About Dreambox" 		backgroundColor="transparent">
 		<eLabel position="5,5" size="470,350" zPosition="-1" backgroundColor="background" />
-		<widget source="EnigmaVersion" 	render="Label" position="25, 30" size="430,30" font="Regular;26" halign="center"/>
-		<widget source="ImageVersion" 	render="Label" position="25, 60" size="430,30" font="Regular;26" halign="center"/>
-		<widget source="FPVersion" 		render="Label" position="25,100" size="430,30" font="Regular;26" halign="center"/>
-		<widget source="HDDHeader" 		render="Label" position="25,160" size="430,30" font="Regular;26" halign="center"/>
-		<widget source="hddA" 			render="Label" position="25,210" size="430,50" font="Regular;22" halign="center"/>
+		<widget source="EnigmaVersion" 	render="Label" position="25, 30" size="430,60" font="Regular;26" halign="center"/>
+		<widget source="ImageVersion" 	render="Label" position="25,110" size="430,30" font="Regular;26" halign="center"/>
+		<widget source="FPVersion" 		render="Label" position="25,160" size="430,30" font="Regular;26" halign="center"/>
+		<widget source="HDDHeader" 		render="Label" position="25,230" size="430,30" font="Regular;26" halign="center"/>
+		<widget source="hddA" 			render="Label" position="25,280" size="430,50" font="Regular;22" halign="center"/>
 
 		<eLabel position="515,5" size="470,350" zPosition="-1" backgroundColor="background" />
 		<widget source="TunerHeader" 	render="Label" position="535, 30" size="430,30" font="Regular;26" halign="center"/>
