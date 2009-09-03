@@ -471,7 +471,7 @@
 		<widget name="key_yellow" 	position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2" />
 		<widget name="key_blue" 	position="466,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="blue"   shadowColor="background" shadowOffset="-2,-2" />
 
-		<widget name="epg_description" position="10,45" size="605,330" font="Regular;22" />
+		<widget name="epg_description" position="10,52" size="605,330" font="Regular;22" />
 
 		<eLabel					position="  0,397" size="620,33" backgroundColor="background2" />
 		<widget name="datetime" position=" 10,402" size="130,25" zPosition="1" font="Regular;22" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
@@ -559,7 +559,6 @@
 		<widget name="capacity" 	position="10,40" size="400,25" font="Regular;23" />
 		<widget name="bus" 			position="10,70" size="400,25" font="Regular;23" />
 		<widget name="initializetext" position="135,120" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="initialize" position="0,0" size="0,0"/>
 	</screen>
 	<screen name="HarddiskWait" 					position="100,90" size="520, 60">
 		<widget name="wait" position="10,10" size="500,25" font="Regular;23" />

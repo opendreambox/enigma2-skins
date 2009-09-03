@@ -913,7 +913,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="bus" position="10,100" size="580,28" font="Regular;25" halign="center"/>
 		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="initializetext" position="20,467" size="580,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="red"/>
-		<widget name="initialize" position="0,0" size="0,0"/>
 	</screen>
 	<screen name="HarddiskWait" position="340,134" size="600,502">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
@@ -1211,8 +1210,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="channel" position="30,15" size="130,28" font="Regular;25"/>
 		<widget name="number" position="190,15" size="80,28" halign="right" font="Regular;25"/>
 	</screen>
-	<screen name="NumericalTextInputHelpDialog" position="338,480" zPosition="2" size="604,124" backgroundColor="#202020" flags="wfNoBorder">
-		<eLabel position="0,0" size="602,122" backgroundColor="#c0c0c0" zPosition="-1"/>
+	<screen name="NumericalTextInputHelpDialog" position="338,480" zPosition="2" size="604,164" backgroundColor="#202020" flags="wfNoBorder">
+		<eLabel position="0,0" size="602,162" backgroundColor="#c0c0c0" zPosition="-1"/>
 		<widget name="key1" position="2,2" size="200,40" font="Console;19" halign="center" valign="center"/>
 		<widget name="key2" position="202,2" size="200,40" font="Console;19" halign="center" valign="center"/>
 		<widget name="key3" position="402,2" size="200,40" font="Console;19" halign="center" valign="center"/>
@@ -1222,6 +1221,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key7" position="2,82" size="200,40" font="Console;19" halign="center" valign="center"/>
 		<widget name="key8" position="202,82" size="200,40" font="Console;19" halign="center" valign="center"/>
 		<widget name="key9" position="402,82" size="200,40" font="Console;19" halign="center" valign="center"/>
+		<widget name="help1" position="2,122" 	size="200,40" font="Console;22" halign="center" valign="center" />
+		<widget name="key0"  position="202,122" size="200,40" font="Console;18" halign="center" valign="center" />
+		<widget name="help2" position="402,122" size="200,40" font="Console;22" halign="center" valign="center" />
 	</screen>
 	<screen name="ParentalControlChangePin" position="340,134" size="600,502" title="Change pin code">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>

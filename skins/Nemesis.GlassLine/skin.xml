@@ -427,7 +427,7 @@
 		<widget name="model" position="20,10" size="380,25" font="Regular;23" />
 		<widget name="capacity" position="20,40" size="380,25" font="Regular;23" />
 		<widget name="bus" position="20,70" size="380,25" font="Regular;23" />
-		<widget name="initialize" position="155,120" size="21,21" pixmap="Nemesis.GlassLine/key_red.png" alphatest="on" />
+		<ePixmap position="155,120" size="21,21" pixmap="Nemesis.GlassLine/key_red.png" alphatest="on" />
 		<widget name="initializetext" position="185,120" size="115,21" valign="center" halign="left" font="Regular;20" />
 	</screen>
 	<!-- IPKG -->
@@ -612,8 +612,8 @@
 		<widget name="number" position="26,12" size="100,30" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1" />
 	</screen>
 	<!-- Numerical help dialog -->
-	<screen name="NumericalTextInputHelpDialog" position="65,90" zPosition="2" size="400,100" backgroundColor="#9d9d9d" flags="wfNoBorder">
-		<eLabel position="2,2" size="396,96" backgroundColor="background" zPosition="-1" />
+	<screen name="NumericalTextInputHelpDialog" position="65,90" zPosition="2" size="400,130" backgroundColor="#9d9d9d" flags="wfNoBorder">
+		<eLabel position="2,2" size="396,126" backgroundColor="background" zPosition="-1" />
 		<widget name="key1" position="5,8" size="130,30" font="Console;16" halign="center" />
 		<widget name="key2" position="135,8" size="130,30" font="Console;16" halign="center" />
 		<widget name="key3" position="265,8" size="130,30" font="Console;16" halign="center" />
@@ -623,6 +623,10 @@
 		<widget name="key7" position="5,68" size="130,30" font="Console;16" halign="center" />
 		<widget name="key8" position="135,68" size="130,30" font="Console;16" halign="center" />
 		<widget name="key9" position="265,68" size="130,30" font="Console;16" halign="center" />
+
+		<widget name="help1" position="5,98" size="130,30" font="Console;16" halign="center" valign="center" />
+		<widget name="key0"  position="135,98" size="130,30" font="Console;12" halign="center" valign="center" />
+		<widget name="help2" position="265,98" size="130,30" font="Console;16" halign="center" valign="center" />
 	</screen>
 	<!-- Plugin browser -->
 	<screen name="PluginBrowser" position="145,85" size="430,410" title="Plugin browser">

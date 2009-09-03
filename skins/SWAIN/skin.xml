@@ -730,15 +730,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="number" 	position="106,12" size="45,22" halign="right" 	font="Regular;20" backgroundColor="grey" transparent="1" />
 	</screen>
 	<screen name="NumericalTextInputHelpDialog" 	position="130,400" size="366, 96" zPosition="10" backgroundColor="yellow" flags="wfNoBorder">
-		<widget name="key1" position="  2, 2" size="120,30" font="Console;15" halign="center" valign="center" />
-		<widget name="key2" position="123, 2" size="120,30" font="Console;15" halign="center" valign="center" />
-		<widget name="key3" position="244, 2" size="120,30" font="Console;15" halign="center" valign="center" />
-		<widget name="key4" position="  2,33" size="120,30" font="Console;15" halign="center" valign="center" />
-		<widget name="key5" position="123,33" size="120,30" font="Console;15" halign="center" valign="center" />
-		<widget name="key6" position="244,33" size="120,30" font="Console;15" halign="center" valign="center" />
-		<widget name="key7" position="  2,64" size="120,30" font="Console;15" halign="center" valign="center" />
-		<widget name="key8" position="123,64" size="120,30" font="Console;15" halign="center" valign="center" />
-		<widget name="key9" position="244,64" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key1"  position="  2, 2" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key2"  position="123, 2" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key3"  position="244, 2" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key4"  position="  2,33" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key5"  position="123,33" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key6"  position="244,33" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key7"  position="  2,64" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key8"  position="123,64" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key9"  position="244,64" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="help1" position="  2,95" size="120,30" font="Console;15" halign="center" valign="center" />
+		<widget name="key0"  position="123,95" size="120,30" font="Console;12" halign="center" valign="center" />
+		<widget name="help2" position="244,95" size="120,30" font="Console;15" halign="center" valign="center" />
 	</screen>
 	<screen name="RdsInfoDisplay" 					position="  0,  0" size="720,576" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="56, 468" size="28, 16" />
@@ -1150,7 +1153,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="capacity" 		position="14, 76" size="550,22" font="Regular;20" />
 		<widget name="bus" 				position="14,128" size="550,22" font="Regular;20" />
 		<widget name="initializetext" 	position="2,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
-		<widget name="initialize" position="0, 0" size="0, 0" />
 	</screen>
 	<screen name="HarddiskWait" 					position=" 96,105" size="623,470" title="HarddiskWait" backgroundColor="transparent">
 		<eLabel position="2,4" size="427,120" zPosition="-1" backgroundColor="background" />

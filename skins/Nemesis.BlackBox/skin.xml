@@ -359,7 +359,7 @@
 		<widget name="model" position="20,10" size="380,25" font="Regular;20" />
 		<widget name="capacity" position="20,40" size="380,25" font="Regular;20" />
 		<widget name="bus" position="20,70" size="380,25" font="Regular;20" />
-		<widget name="initialize" position="140,115" zPosition="1" size="140,30" pixmap="Nemesis.BlackBox/key_red.png" transparent="1" alphatest="on" />
+		<ePixmap position="140,115" zPosition="1" size="140,30" pixmap="Nemesis.BlackBox/key_red.png" transparent="1" alphatest="on" />
 		<widget name="initializetext" position="140,117" zPosition="2" size="140,28" font="Regular;18" valign="center" halign="center" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- Main menu -->

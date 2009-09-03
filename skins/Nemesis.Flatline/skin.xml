@@ -326,7 +326,7 @@
 		<widget name="model" position="20,10" size="380,25" font="Regular;23" foregroundColor="LabelForegroundText_1"  />
 		<widget name="capacity" position="20,40" size="380,25" font="Regular;23" foregroundColor="LabelForegroundText_1"  />
 		<widget name="bus" position="20,70" size="380,25" font="Regular;23" foregroundColor="LabelForegroundText_1"  />
-		<widget name="initialize" position="140,110" zPosition="1" size="140,40" pixmap="Nemesis.Flatline/key-red.png"  transparent="1" alphatest="on" />
+		<ePixmap position="140,110" zPosition="1" size="140,40" pixmap="Nemesis.Flatline/key-red.png"  transparent="1" alphatest="on" />
 		<widget name="initializetext" position="140,110" size="140,40" valign="center" halign="center" zPosition="2" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 	</screen>
 	<screen name="PluginBrowser" position="150,115" size="420,370" title="Plugin browser">
@@ -405,8 +405,8 @@
 		<widget name="loglist" position="0,45" size="560,250" scrollbarMode="showOnDemand" />
 		<widget name="logentry" position="0,300" size="560,140" font="Regular;20" foregroundColor="LabelForegroundText_1" />
 	</screen>
-	<screen name="NumericalTextInputHelpDialog" position="170,420" zPosition="2" size="394,94" backgroundColor="#202020" flags="wfNoBorder">
-		<eLabel position="0,0" size="392,92" backgroundColor="#c0c0c0" zPosition="-1" />
+	<screen name="NumericalTextInputHelpDialog" position="170,420" zPosition="2" size="394,124" backgroundColor="#202020" flags="wfNoBorder">
+		<eLabel position="0,0" size="392,122" backgroundColor="#c0c0c0" zPosition="-1" />
 		<widget name="key1" position="2,2" size="130,30" font="Console;16" halign="center" valign="center" />
 		<widget name="key2" position="132,2" size="130,30" font="Console;16" halign="center" valign="center" />
 		<widget name="key3" position="262,2" size="130,30" font="Console;16" halign="center" valign="center" />
@@ -416,7 +416,7 @@
 		<widget name="key7" position="2,62" size="130,30" font="Console;16" halign="center" valign="center" />
 		<widget name="key8" position="132,62" size="130,30" font="Console;16" halign="center" valign="center" />
 		<widget name="key9" position="262,62" size="130,30" font="Console;16" halign="center" valign="center" />
-	</screen>
+		<widget name="help1" position="2,92" size="130,30" font="Console;16" halign="center" valign="center" />		<widget name="key0"  position="132,92" size="130,30" font="Console;12" halign="center" valign="center" />		<widget name="help2" position="262,92" size="130,30" font="Console;16" halign="center" valign="center" />	</screen>
 	<screen name="NumberZap" position="235,255" size="250,60" title="Channel">
 		<widget name="channel" position="35,15" size="110,25" font="Regular;23" foregroundColor="LabelForegroundText_1" />
 		<widget name="number" position="145,15" size="80,25" halign="right" font="Regular;23" foregroundColor="LabelForegroundText_1" />

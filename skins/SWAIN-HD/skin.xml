@@ -796,7 +796,7 @@
 		<widget name="channel" position="30,15" size="130,28" font="Regular;25"  backgroundColor="grey" transparent="1"/>
 		<widget name="number" position="190,15" size="80,28" halign="right" font="Regular;25"  backgroundColor="grey" transparent="1"/>
 	</screen>
-	<screen name="NumericalTextInputHelpDialog" position="257,480" size=" 604,124" zPosition="10" backgroundColor="yellow" flags="wfNoBorder">
+	<screen name="NumericalTextInputHelpDialog" position="257,480" size=" 604,164" zPosition="10" backgroundColor="yellow" flags="wfNoBorder">
 		<widget name="key1" position="2,2" 		size="200,40" font="Console;22" halign="center" valign="center" />
 		<widget name="key2" position="202,2" 	size="200,40" font="Console;22" halign="center" valign="center" />
 		<widget name="key3" position="402,2" 	size="200,40" font="Console;22" halign="center" valign="center" />
@@ -806,6 +806,9 @@
 		<widget name="key7" position="2,82" 	size="200,40" font="Console;22" halign="center" valign="center" />
 		<widget name="key8" position="202,82" 	size="200,40" font="Console;22" halign="center" valign="center" />
 		<widget name="key9" position="402,82" 	size="200,40" font="Console;22" halign="center" valign="center" />
+		<widget name="help1" position="2,122" 	size="200,40" font="Console;22" halign="center" valign="center" />
+		<widget name="key0"  position="202,122" size="200,40" font="Console;18" halign="center" valign="center" />
+		<widget name="help2" position="402,122" size="200,40" font="Console;22" halign="center" valign="center" />
 	</screen>
 	<screen name="RdsInfoDisplay" 				position="  0,  0" size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="100,585" size="50,21"/>
@@ -1242,8 +1245,6 @@
 		<widget name="bus" 		position="25,110" size="720,28" font="Regular;25" />
 
 		<widget name="initializetext" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red"/>
-
-		<widget name="initialize" position="0,0" size="0,0" />
 	</screen>
 	<screen name="HarddiskWait" 				position="172,132" size="1108,588" title="HarddiskWait"			backgroundColor="transparent">
 		<eLabel 				position=" 5, 5" size="760,150" zPosition="-1" backgroundColor="background" />

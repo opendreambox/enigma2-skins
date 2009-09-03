@@ -1201,8 +1201,6 @@
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,550"  size="30,30" alphatest="blend"   />
 		<widget name="initializetext" 				position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-
-		<widget name="initialize" position="0,0" size="0,0" />
 	</screen>
 	<screen name="HarddiskWait" 				position="0,0" 		size="1280,720" title="HarddiskWait"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -2786,8 +2784,8 @@
 		<widget name="channel" position="30,15" size="130,28" font="Regular;25"/>
 		<widget name="number" position="190,15" size="80,28" halign="right" font="Regular;25"/>
 	</screen>
-	<screen name="NumericalTextInputHelpDialog" position="588,450" 	size="604,124" 	zPosition="10" backgroundColor="#202020" flags="wfNoBorder">
-		<eLabel position="0,0" size="602,122" backgroundColor="grey" zPosition="-1" />
+	<screen name="NumericalTextInputHelpDialog" position="588,450" 	size="604,164" 	zPosition="10" backgroundColor="#202020" flags="wfNoBorder">
+		<eLabel position="0,0" size="602,162" backgroundColor="grey" zPosition="-1" />
 		<widget name="key1" position="2,2" 		size="200,40" font="Console;19" halign="center" valign="center" />
 		<widget name="key2" position="202,2" 	size="200,40" font="Console;19" halign="center" valign="center" />
 		<widget name="key3" position="402,2" 	size="200,40" font="Console;19" halign="center" valign="center" />
@@ -2797,6 +2795,9 @@
 		<widget name="key7" position="2,82" 	size="200,40" font="Console;19" halign="center" valign="center" />
 		<widget name="key8" position="202,82" 	size="200,40" font="Console;19" halign="center" valign="center" />
 		<widget name="key9" position="402,82" 	size="200,40" font="Console;19" halign="center" valign="center" />
+		<widget name="help1" position="2,122" 	size="200,40" font="Console;22" halign="center" valign="center" />
+		<widget name="key0"  position="202,122" size="200,40" font="Console;18" halign="center" valign="center" />
+		<widget name="help2" position="402,122" size="200,40" font="Console;22" halign="center" valign="center" />
 	</screen>
 	<screen name="Standby" 						position="0,0" 		size="1280,720" title="Standby" flags="wfNoBorder"/>
 	<screen name="RdsInfoDisplay" 				position="0,0" 		size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">

@@ -1053,8 +1053,8 @@
 		<widget name="capacity" 	position="450,170" size="750,25" font="Regular;23" transparent="1"/>
 		<widget name="bus" 		position="450,210" size="750,25" font="Regular;23" transparent="1"/>
 
-		<widget name="initialize" pixmap="Kerni-HD1/buttons/red.png" 	position="620,588" size="21,21" alphatest="on" />
-		<widget name="initializetext" 								position="650,587" size="170,22" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="Kerni-HD1/buttons/red.png" position="620,588" size="21,21" alphatest="on" />
+		<widget name="initializetext" position="650,587" size="170,22" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
 		<ePixmap position="80,430" size="150,110" zPosition="2" pixmap="Kerni-HD1/icons/hdd.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="HarddiskWait" 				position="0,0" 		size="1280,720" 										flags="wfNoBorder">
@@ -1414,7 +1414,7 @@
 		<widget name="config" position="450,120" size="750,402" scrollbarMode="showOnDemand" transparent="1"/>
 		<ePixmap position="80,430" size="200,110" zPosition="2" pixmap="Kerni-HD1/icons/tuner.png" transparent="1" alphatest="blend" />
 	</screen>
-	<screen name="NumericalTextInputHelpDialog" position="530,445" 	size="608,128"  backgroundColor="#ffffff" 	flags="wfNoBorder" zPosition="8">
+	<screen name="NumericalTextInputHelpDialog" position="530,445" 	size="608,170"  backgroundColor="#ffffff" 	flags="wfNoBorder" zPosition="8">
 		<widget name="key1" position="2,2" 		size="200,40" font="Console;21" halign="center" valign="center" />
 		<widget name="key2" position="204,2" 	size="200,40" font="Console;21" halign="center" valign="center" />
 		<widget name="key3" position="406,2" 	size="200,40" font="Console;21" halign="center" valign="center" />
@@ -1424,6 +1424,9 @@
 		<widget name="key7" position="2,86" 	size="200,40" font="Console;21" halign="center" valign="center" />
 		<widget name="key8" position="204,86" 	size="200,40" font="Console;21" halign="center" valign="center" />
 		<widget name="key9" position="406,86" 	size="200,40" font="Console;21" halign="center" valign="center" />
+		<widget name="help1" position="2,128" 	size="200,40" font="Console;22" halign="center" valign="center" />
+		<widget name="key0"  position="204,128" size="200,40" font="Console;18" halign="center" valign="center" />
+		<widget name="help2" position="406,128" size="200,40" font="Console;22" halign="center" valign="center" />
 	</screen>
 	<screen name="ParentalControlChangePin"		position="0,0"		size="1280,720" 	title="Change pin code" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
