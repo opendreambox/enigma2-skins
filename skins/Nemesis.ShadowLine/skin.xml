@@ -294,7 +294,7 @@
 		<widget name="model" position="20,10" size="380,25" font="Regular;23"  />
 		<widget name="capacity" position="20,40" size="380,25" font="Regular;23"  />
 		<widget name="bus" position="20,70" size="380,25" font="Regular;23"  />
-		<widget name="initialize" position="160,120" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
+		<ePixmap position="160,120" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<widget name="initializetext" position="185,110" size="115,40" valign="center" halign="left" font="Regular;18" backgroundColor="background" transparent="1" />
 	</screen>
 	<!-- Main menu -->
