@@ -1184,45 +1184,41 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="AdapterSetup" 					position=" 96,105" size="623,470" title="Network Setup" backgroundColor="transparent">
 		<eLabel position="2, 4" size="600, 408" zPosition="-1" backgroundColor="background" />
 
-		<widget name="Adaptertext" 	position=" 12,12" size="100, 22" font="Regular;20" />
-		<widget name="Adapter" 		position="115,12" size="480, 22" font="Regular;20" />
+		<widget source="Adaptertext" render="Label" position=" 12,12" size="100, 22" font="Regular;20" />
+		<widget source="Adapter" 	render="Label" position="115,12" size="480, 22" font="Regular;20" />
 		<eLabel 					position=" 12,40" size="580,  1" backgroundColor="lgrey" />
 		<widget name="config" 		position=" 12,56" size="580,150" scrollbarMode="showOnDemand" />
 
+		<widget name="VKeyIcon" 	position="80,300" size="35,25" zPosition="10" pixmap="skin_default/buttons/key_text.png" transparent="1" alphatest="on" />
 		<widget name="HelpWindow" 	position="225,368" size="  0,  0" zPosition="1" />
 
-		<widget name="introduction" position=" 12,219" size="580,22" font="Regular;20" />
+		<widget source="introduction" render="Label" position=" 12,219" size="580,22" font="Regular;20" />
 		<eLabel 					position=" 12,247" size="580, 1" backgroundColor="lgrey" />
-		<widget name="IPtext" 		position="152,253" size="150,20" font="Regular;19" halign="right" valign="center" />
-		<widget name="Netmasktext" 	position="152,277" size="150,20" font="Regular;19" halign="right" valign="center" />
-		<widget name="Gatewaytext" 	position="152,301" size="150,20" font="Regular;19" halign="right" valign="center" />
-		<widget name="DNS1text" 	position="152,325" size="150,20" font="Regular;19" halign="right" valign="center" />
-		<widget name="DNS2text" 	position="152,349" size="150,20" font="Regular;19" halign="right" valign="center" />
-		<widget name="IP" 			position="302,253" size="150,20" font="Regular;19" halign="center" valign="center" />
-		<widget name="Mask" 		position="302,277" size="150,20" font="Regular;19" halign="center" valign="center" />
-		<widget name="Gateway" 		position="302,301" size="150,20" font="Regular;19" halign="center" valign="center" />
-		<widget name="DNS1" 		position="302,325" size="150,20" font="Regular;19" halign="center" valign="center" />
-		<widget name="DNS2" 		position="302,349" size="150,20" font="Regular;19" halign="center" valign="center" />
+		<widget source="IPtext" 	render="Label" position="152,253" size="150,20" font="Regular;19" halign="right" valign="center" />
+		<widget source="Netmasktext" render="Label" position="152,277" size="150,20" font="Regular;19" halign="right" valign="center" />
+		<widget source="Gatewaytext" render="Label" position="152,301" size="150,20" font="Regular;19" halign="right" valign="center" />
+		<widget source="DNS1text" 	render="Label" position="152,325" size="150,20" font="Regular;19" halign="right" valign="center" />
+		<widget source="DNS2text" 	render="Label" position="152,349" size="150,20" font="Regular;19" halign="right" valign="center" />
+		<widget source="IP" 		render="Label" position="302,253" size="150,20" font="Regular;19" halign="center" valign="center" />
+		<widget source="Mask" 		render="Label" position="302,277" size="150,20" font="Regular;19" halign="center" valign="center" />
+		<widget source="Gateway" 	render="Label" position="302,301" size="150,20" font="Regular;19" halign="center" valign="center" />
+		<widget source="DNS1" 		render="Label" position="302,325" size="150,20" font="Regular;19" halign="center" valign="center" />
+		<widget source="DNS2" 		render="Label" position="302,349" size="150,20" font="Regular;19" halign="center" valign="center" />
 
 		<eLabel 					 position="12,370" size="580, 1" backgroundColor="lgrey" zPosition="5" />
-		<widget name="introduction2" position="12,379" size="580,21" font="Regular;20" halign="center" />
+		<widget source="introduction2" render="Label" position="12,379" size="580,21" font="Regular;20" halign="center" />
 
-		<widget name="ButtonRedtext" 	position="  2,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
-		<widget name="ButtonGreen" 		position="152,420" size="150,28" pixmap="SWAIN/vkey_green.png"/>
-		<widget name="ButtonBluetext" 	position="452,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="blue" />
-
-		<widget name="ButtonRed" position="0, 0" size="0, 0" />
-		<widget name="ButtonBlue" position="0, 0" size="0, 0" />
-		<widget name="VKeyIcon" position="0, 0" size="0, 0" />
+		<widget source="key_red" render="Label" position="  2,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_blue" render="Label" position="452,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<screen name="AdapterSetupConfiguration" 		position=" 96,105" size="623,470" title="Network Configuration..." backgroundColor="transparent">
 		<eLabel position="2, 4" size="600, 408" zPosition="-1" backgroundColor="background" />
 
-		<widget name="IFtext" 		position=" 12, 12" size="100, 22" font="Regular;20" />
-		<widget name="IF" 			position="115, 12" size="470, 22" font="Regular;20" />
+		<widget source="IFtext" render="Label" position=" 12, 12" size="100, 22" font="Regular;20" />
+		<widget source="IF" 	render="Label" position="115, 12" size="470, 22" font="Regular;20" />
 		<eLabel 					position=" 12, 40" size="580,  1" backgroundColor="lgrey" />
 		<widget name="menulist" 	position=" 12, 56" size="340,200" scrollbarMode="showOnDemand" />
-		<widget name="Statustext" 	position=" 12,300" size="340, 28" font="Regular;20" halign="center" />
+		<widget source="Statustext" render="Label" position=" 12,300" size="340, 28" font="Regular;20" halign="center" />
 		<widget name="statuspic" 	position="173,332" size=" 25, 24" zPosition="2" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="on" />
 
 		<eLabel 					position="362, 41" size="  1,329" backgroundColor="lgrey" zPosition="5" />
@@ -1230,28 +1226,27 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel 					position="12,370" size="580,1" backgroundColor="lgrey" />
 		<eLabel text="Press OK to edit the settings." position="12,379" size="580,21" font="Regular;20" halign="center" />
 
-		<widget name="description" position="370, 4" size="225,250" font="Regular;20" halign="center" valign="center" />
+		<widget source="description" render="Label" position="370, 4" size="225,250" font="Regular;20" halign="center" valign="center" />
 
-		<widget name="ButtonRedtext" position="2, 420" size="150, 28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
-		<widget name="ButtonRed" position="0, 0" size="0, 0" />
+		<widget source="key_red" render="Label" position="2, 420" size="150, 28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
 	</screen>
 	<screen name="NameserverSetup" 					position=" 96,105" size="623,470" title="Nameserver Setup" backgroundColor="transparent">
 		<eLabel position="2, 4" size="371,408" zPosition="-1" backgroundColor="background" />
 		<widget name="config" position="8,16" size="360, 160" scrollbarMode="showOnDemand" />
 		<eLabel position="8,370" size="360,1" backgroundColor="lgrey" />
-		<widget name="introduction" position="8,379" size="360, 21" font="Regular;20" halign="center" />
-		<widget name="ButtonRedtext" 	position="  2,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
-		<widget name="ButtonGreentext" 	position="152,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="green" />
-		<widget name="ButtonYellowtext" position="302,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="introduction" render="Label" position="8,379" size="360, 21" font="Regular;20" halign="center" />
+		<widget source="key_red" render="Label" position="  2,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="152,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="302,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 	</screen>
 	<screen name="NetworkAdapterSelection" 			position=" 96,105" size="623,470" title="Select Network Adapter" backgroundColor="transparent">
 		<eLabel position="2, 4" size="600, 408" zPosition="-1" backgroundColor="background" />
 		<widget name="list" position="12, 12" size="580,160" scrollbarMode="showOnDemand" />
 		<eLabel position="12,370" size="580, 1" backgroundColor="lgrey" />
-		<widget name="introduction" position="12,379" size="580,21" font="Regular;20" halign="center" />
-		<widget name="ButtonRedtext" 	position="  2,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
-		<widget name="ButtonBluetext" 	position="152,420" size="450,28" font="Regular;20" halign="center" valign="center" backgroundColor="blue" />
-		<widget name="ButtonBlue" position="0, 0" size="0, 0" />
+		<widget source="introduction" render="Label" position="12,379" size="580,21" font="Regular;20" halign="center" />
+		<widget source="key_red" 	render="Label" position="  2,420" size="150, 28" font="Regular; 20" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" 	render="Label" position="152,420" size="150, 28" font="Regular; 20" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="302,420" size="150, 28" font="Regular; 20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 	</screen>
 	<screen name="NetworkAdapterTest" 				position=" 96,105" size="623,470" title="Network test..." backgroundColor="transparent">
 		<eLabel position="2,4" size="600,408" zPosition="-1" backgroundColor="background" />
@@ -1288,9 +1283,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="EditSettings_Text" 	position="390,356" size="200,28" zPosition="2" font="Regular;18" backgroundColor="grey" foregroundColors="yellow,lblue,white" halign="center" valign="center" transparent="1" />
 		<widget name="EditSettingsButton" 	position="390,356" size="200,28" zPosition="2" pixmaps="SWAIN/lan-sel200off.png,SWAIN/lan-sel200.png" alphatest="blend" />
 		<widget name="InfoText" position="16,16" size="575,394" zPosition="25" backgroundColor="grey" font="Regular;20" halign="center" valign="center" />
-		<widget name="ButtonRedtext" 	position="  2,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
-		<widget name="ButtonGreentext" 	position="152,420" size="180,28" font="Regular;20" halign="center" valign="center" backgroundColor="green" />
-		<widget name="ButtonYellowtext" position="332,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_red" render="Label" position="  2,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="152,420" size="180,28" font="Regular;20" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="332,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 	</screen>
 	<screen name="WlanScan" 						position=" 96,105" size="623,470" title="Choose a Wireless Network" backgroundColor="transparent">
 		<eLabel 					position="2, 4" size="371,408" zPosition="-1" backgroundColor="background" />
