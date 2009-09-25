@@ -526,45 +526,41 @@
 	</screen>
 	<screen name="AdapterSetup" position="90,100" size="1100,560" title="Network Setup">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="Adaptertext" position="20,20" size="140,25" zPosition="10" font="Regular;22" transparent="1"/>
-		<widget name="Adapter" position="160,20" size="400,25" zPosition="10" font="Regular;22" transparent="1"/>
+		<widget source="Adaptertext" render="Label" position="20,20" size="140,25" zPosition="10" font="Regular;22" transparent="1"/>
+		<widget source="Adapter" render="Label" position="160,20" size="400,25" zPosition="10" font="Regular;22" transparent="1"/>
 		<widget name="config" position="20,70" size="740,375" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png" />
-		<widget name="introduction2" position="20,470" size="740,30" zPosition="10" font="Regular;24" halign="center" transparent="1"/>
+		<widget source="introduction2" render="Label" position="20,470" size="740,30" zPosition="10" font="Regular;24" halign="center" transparent="1"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
-		<widget name="introduction" position="790,20" size="300,25" font="Regular;22" halign="center"/>
-		<widget name="IPtext" position="790,60" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
-		<widget name="IP" position="790,90" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
-		<widget name="Netmasktext" position="790,130" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
-		<widget name="Mask" position="790,160" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
-		<widget name="Gatewaytext" position="790,200" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
-		<widget name="Gateway" position="790,230" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
-		<widget name="DNS1text" position="790,270" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
-		<widget name="DNS1" position="790,300" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
-		<widget name="DNS2text" position="790,340" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
-		<widget name="DNS2" position="790,370" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
+		<widget source="introduction" render="Label" position="790,20" size="300,25" font="Regular;22" halign="center"/>
+		<widget source="IPtext" render="Label" position="790,60" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
+		<widget source="IP" render="Label" position="790,90" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
+		<widget source="Netmasktext" render="Label" position="790,130" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
+		<widget source="Mask" render="Label" position="790,160" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
+		<widget source="Gatewaytext" render="Label" position="790,200" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
+		<widget source="Gateway" render="Label" position="790,230" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
+		<widget source="DNS1text" render="Label" position="790,270" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
+		<widget source="DNS1" render="Label" position="790,300" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
+		<widget source="DNS2text" render="Label" position="790,340" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="transpBlack" backgroundColor="grey"/>
+		<widget source="DNS2" render="Label" position="790,370" size="300,22" zPosition="1" font="Regular;20" halign="center"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="ButtonGreen" position="20,529" size="21,21" zPosition="10" pixmap="dreamTV-HD/buttons/green.png" transparent="1" alphatest="on" />
-		<eLabel text="Virtual KeyBoard" position="50,525"  size="260,30" font="Regular;24" halign="left" valign="center" />
-		<widget name="ButtonBluetext" position="400,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
-		<widget name="ButtonRedtext" position="820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="HelpWindow" position="180,410" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
-		<widget name="ButtonBlue" position="0,0" size="0,0"/>
-		<widget name="BottomBG" position="0,0" size="0,0"/>
+		<widget name="HelpWindow" position="180,400" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
+
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="30,370" zPosition="10" size="35,25" transparent="1" alphatest="on" />
+
+		<widget source="key_red" render="Label" position="400,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_blue" render="Label" position="820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
 	<screen name="AdapterSetupConfiguration" position="90,100" size="1100,560" title="Network Configuration...">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="IFtext" position="20,20" size="140,25" zPosition="10" font="Regular;22" transparent="1"/>
-		<widget name="IF" position="160,20" size="400,25" zPosition="10" font="Regular;22" transparent="1"/>
+		<widget source="IFtext" render="Label" position="20,20" size="140,25" zPosition="10" font="Regular;22" transparent="1"/>
+		<widget source="IF" render="Label" position="160,20" size="400,25" zPosition="10" font="Regular;22" transparent="1"/>
 		<widget name="menulist" position="20,70" size="740,375" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
-		<widget name="description" position="790,20" size="300,480" font="Regular;22" halign="center" valign="center"/>
+		<widget source="description" render="Label" position="790,20" size="300,480" font="Regular;22" halign="center" valign="center"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="Statustext" position="20,525" size="150,30" zPosition="10" font="Regular;24" transparent="1"/>
+		<widget source="Statustext" render="Label" position="20,525" size="150,30" zPosition="10" font="Regular;24" transparent="1"/>
 		<widget name="statuspic" position="180,530" size="15,16" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" zPosition="10" transparent="1" alphatest="on"/>
-		<widget name="ButtonRedtext" position="820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="BottomBG" position="0,0" size="0,0"/>
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
+		<widget source="key_red" render="Label" position="820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
 	</screen>
 	<screen name="BouquetSelector" position="340,150" size="600,300" title="Choose bouquet">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey"/>
@@ -1109,22 +1105,23 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="NameserverSetup" position="90,100" size="1100,560" title="Nameserver Setup">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="config" position="20,70" size="740,375" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
-		<widget name="introduction" position="20,470" size="740,30" zPosition="10" font="Regular;24" halign="center" transparent="1"/>
+		<widget name="config" position="20,20" size="740,375" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
+		<widget source="introduction" render="Label" position="20,470" size="740,30" zPosition="10" font="Regular;24" halign="center" transparent="1"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="ButtonGreentext" position="200,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
-		<widget name="ButtonYellowtext" position="470,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
-		<widget name="ButtonRedtext" position=" 820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_red" render="Label" position=" 200,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="470,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
 	</screen>
 	<screen name="NetworkAdapterSelection" position="90,100" size="1100,560" title="Select Network Adapter">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="list" position="20,70" size="740,375" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_30.png"/>
-		<widget name="introduction" position="20,470" size="740,30" zPosition="10" font="Regular;24" halign="center" transparent="1"/>
+		<widget name="list" position="20,20" size="740,375" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_30.png"/>
+		<widget source="introduction" render="Label" position="20,470" size="740,30" zPosition="10" font="Regular;24" halign="center" transparent="1"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="ButtonBluetext" position="200,525" size="550,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
-		<widget name="ButtonRedtext" position=" 820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_red" render="Label" position=" 30,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="300,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="570,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="90,100" size="1100,560" title="Network test...">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
@@ -1163,13 +1160,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="InfoText" position="20,22" size="740,476" zPosition="25" font="Regular;24" halign="center" valign="center"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="ButtonGreen_Check" position="30,531" size="15,16" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" transparent="1" alphatest="on"/>
-		<widget name="ButtonGreentext" position="60,526" size="250,30" font="Regular;24" transparent="1" foregroundColor="green"/>
-		<widget name="ButtonYellow_Check" position="360,531" size="15,16" pixmaps="skin_default/buttons/button_yellow.png,skin_default/buttons/button_yellow_off.png" transparent="1" alphatest="on"/>
-		<widget name="ButtonYellowtext" position="390,526" size="250,30" font="Regular;24" transparent="1" foregroundColor="yellow"/>
-		<widget name="ButtonRedtext" position=" 820,526" size="250,30" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget source="key_red" render="Label" position=" 200,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="470,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="820,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
+
 		<widget name="InfoTextBorder" position="0,0" size="0,0"/>
-		<widget name="ButtonRed" position="0,0" size="0,0" pixmap="skin_default/buttons/button_red.png"/>
 	</screen>
 	<screen name="NetworkWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Welcome..." position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1"/>
