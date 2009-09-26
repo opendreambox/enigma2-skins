@@ -2,7 +2,6 @@
 <!-- Kerni-HD1 CVS Skin -->
 <!-- This skin and all it's graphics are free. -->
 <!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications -->
-<!-- and please, don't remove this text -->
 	<output id="0">
 		<resolution xres="1280" yres="720" bpp="32" />
 	</output>
@@ -448,6 +447,7 @@
 	</screen>
 	<screen name="menu_system" 			position="0,0" size="1280,720" title="Main menu" 		flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
+		<ePixmap position="45,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
 		<ePixmap position="870,380" zPosition="-9" size="310,200" pixmap="Kerni-HD1/menu/box.png" alphatest="blend" transparent="1" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="#0b67a2" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -457,9 +457,9 @@
 		</widget>
 
 		<widget source="title" render="Label" position="80,60" size="300,32" font="Regular;27" halign="center" backgroundColor="#0b67a2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="80,120" size="318,440" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" position="80,120" size="363,440" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (25, 7), size = (323, 30), flags = RT_HALIGN_LEFT, text = 0) ],
+				{"template": [ MultiContentEntryText(pos = (20, 7), size = (340, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
 				}
@@ -558,43 +558,30 @@
 		<widget source="global.CurrentTime" render="Label" position="890,70" size="320,22" font="Regular;20" halign="right" backgroundColor="#0b67a2" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-
-		<eLabel text="Network Setup" 	position="480,63" size="330,30" font="Regular;27" backgroundColor="#0b67a2" transparent="1"/>
-
-		<widget name="introduction" 	position="80,62" size="300,32" font="Regular;24" halign="center" backgroundColor="#0b67a2" transparent="1"/>
-
-		<widget name="IPtext" 		position="80,120" 	size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
-		<widget name="IP" 			position="80,155" 	size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
-		<widget name="Netmasktext" 	position="80,205" 	size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
-		<widget name="Mask" 		position="80,240" 	size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
-		<widget name="Gatewaytext" 	position="80,285" 	size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
-		<widget name="Gateway" 		position="80,320" 	size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
-		
-		<widget name="DNS1text" 	position="80,380" 	size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
-		<widget name="DNS1" 		position="80,415" 	size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
-		<widget name="DNS2text" 	position="80,460" 	size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
-		<widget name="DNS2"			position="80,495" 	size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
-
-		<eLabel 					position="470,120" size="690,370" zPosition="1" backgroundColor="#bbbbbb" />
-		<eLabel 					position="472,122" size="686,366" zPosition="2" backgroundColor="#202b4247" />
-		<widget name="config" 		position="480,130" size="670,350" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="#353e575e" transparent="1" />
-
-		<widget name="introduction2" 	position="470,540" size="690,27"  zPosition="10" font="Regular;24" halign="center" backgroundColor="#353e575e" transparent="1" />
-
-		<widget name="Adaptertext" 		position="70,587" 	size="170,22"	zPosition="10" font="Regular;20" transparent="1" />
-		<widget name="Adapter" 			position="190,587" 	size="380,22"	zPosition="10" font="Regular;20" transparent="1" />
-
-		<ePixmap 						position="580,587" 	size="21,21" 	zPosition="9"  pixmap="Kerni-HD1/buttons/grey.png" transparent="1" alphatest="on" />
-		<widget name="ButtonGreen" 		position="580,587" 	size="21,21" 	zPosition="10" pixmap="Kerni-HD1/buttons/green.png" transparent="1" alphatest="on" />
-		<eLabel text="Virtual KeyBoard" position="610,587"  size="170,22" 	zPosition="10" font="Regular;20" transparent="1" />
-
-		<widget name="ButtonBlue" 		position="810,587" 	size="21,21" 	zPosition="10" pixmap="Kerni-HD1/buttons/blue.png" transparent="1" alphatest="on" />
-		<widget name="ButtonBluetext" 	position="840,587" 	size="170,22"	zPosition="10" font="Regular;20" transparent="1" />
-		<widget name="ButtonRed" 		position="1020,587" size="21,21" 	zPosition="10" pixmap="Kerni-HD1/buttons/red.png" transparent="1" alphatest="on" />
-		<widget name="ButtonRedtext" 	position="1050,587" size="120,22"	zPosition="10" font="Regular;20" transparent="1" />
+		<eLabel text="Network Setup" position="480,63" size="330,30" font="Regular;27" backgroundColor="#0b67a2" transparent="1"/>
+		<widget source="introduction" render="Label" position="80,62" size="300,32" font="Regular;24" halign="center" backgroundColor="#0b67a2" transparent="1"/>
+		<widget source="IPtext" render="Label" position="80,120" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
+		<widget source="IP" render="Label" position="80,155" size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
+		<widget source="Netmasktext" render="Label" position="80,205" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
+		<widget source="Mask" render="Label" position="80,240" 	size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
+		<widget source="Gatewaytext" render="Label" position="80,285" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
+		<widget source="Gateway" render="Label" position="80,320" size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
+		<widget source="DNS1text" render="Label" position="80,380" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
+		<widget source="DNS1" render="Label" position="80,415" size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
+		<widget source="DNS2text" render="Label" position="80,460" size="300,22" zPosition="1" font="Regular;20" halign="center" foregroundColor="#bbbbbb" backgroundColor="#353e575e" transparent="1"/>
+		<widget source="DNS2" render="Label" position="80,495" size="300,22" zPosition="1" font="Regular;20" halign="center" backgroundColor="#353e575e" transparent="1"/>
+		<eLabel position="470,120" size="690,370" zPosition="1" backgroundColor="#bbbbbb" />
+		<eLabel position="472,122" size="686,366" zPosition="2" backgroundColor="#202b4247" />
+		<widget name="config" position="480,130" size="670,350" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="#353e575e" transparent="1" />
+		<widget source="introduction2" render="Label" position="470,540" size="690,27" zPosition="10" font="Regular;24" halign="center" backgroundColor="#353e575e" transparent="1" />
+		<widget source="Adaptertext" render="Label" position="70,587" size="170,22"	zPosition="10" font="Regular;20" transparent="1" />
+		<widget source="Adapter" render="Label" position="190,587" size="380,22" zPosition="10" font="Regular;20" transparent="1" />
+		<ePixmap position="750,587" size="21,21" zPosition="10" pixmap="Kerni-HD1/buttons/red.png" transparent="1" alphatest="on" />
+		<widget source="key_red" render="Label" position="780,587" size="120,22" zPosition="10" font="Regular;20" transparent="1" />
+		<ePixmap position="1020,587" size="21,21" zPosition="10" pixmap="Kerni-HD1/buttons/blue.png" transparent="1" alphatest="on" />
+		<widget source="key_blue" render="Label" position="1050,587" size="170,22" zPosition="10" font="Regular;20" transparent="1" />
 		<widget name="HelpWindow" 		position="520,410" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
-
-		<widget name="VKeyIcon" position="0,0" size="0,0" />
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="430,550" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="AdapterSetupConfiguration"	position="0,0"		size="1280,720"		title="Network Configuration..." 	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
@@ -604,23 +591,17 @@
 		<widget source="global.CurrentTime" render="Label" position="890,70" size="320,22" font="Regular;20" halign="right" backgroundColor="#0b67a2" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-
 		<eLabel text="Network Configuration..." position="120,63" size="330,30" font="Regular;27" backgroundColor="#0b67a2" transparent="1"/>
-
-		<widget name="menulist" 	position="80,120" 	size="318,260" zPosition="10" scrollbarMode="showOnDemand" transparent="1" />
-
-		<eLabel 					position="470,140" size="690,370" zPosition="1" backgroundColor="#bbbbbb" />
-		<eLabel 					position="472,142" size="686,366" zPosition="2" backgroundColor="#202b4247" />
-		<widget name="description" 	position="480,150" size="670,350" zPosition="3" backgroundColor="#353e575e" font="Regular;22" halign="center" valign="center" transparent="1" />
-
-
-		<widget name="IFtext" 			position="80,587" 	size="120,22"	zPosition="10" font="Regular;20" transparent="1" />
-		<widget name="IF" 				position="200,587" 	size="380,22"	zPosition="10" font="Regular;20" transparent="1" />
-		<widget name="Statustext" 		position="650,587" 	size="150,22"	zPosition="10" font="Regular;20" transparent="1"/>
-		<widget name="statuspic" 		position="800,587" 	size="21,21"	zPosition="10" pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/grey.png" transparent="1" alphatest="on"/>
-
-		<widget name="ButtonRed" 		position="1020,587" 	size="21,21" 	zPosition="10" pixmap="Kerni-HD1/buttons/red.png" transparent="1" alphatest="on" />
-		<widget name="ButtonRedtext" 	position="1050,587" 	size="120,22"	zPosition="10" font="Regular;20" transparent="1" />
+		<widget name="menulist" position="80,120" 	size="318,260" zPosition="10" scrollbarMode="showOnDemand" transparent="1" />
+		<eLabel position="470,140" size="690,370" zPosition="1" backgroundColor="#bbbbbb" />
+		<eLabel position="472,142" size="686,366" zPosition="2" backgroundColor="#202b4247" />
+		<widget source="description" render="Label" position="480,150" size="670,350" zPosition="3" backgroundColor="#353e575e" font="Regular;22" halign="center" valign="center" transparent="1" />
+		<widget source="IFtext" render="Label" position="80,587" size="120,22" zPosition="10" font="Regular;20" transparent="1" />
+		<widget source="IF" render="Label" position="200,587" size="380,22" zPosition="10" font="Regular;20" transparent="1" />
+		<widget source="Statustext" render="Label" position="650,587" size="150,22"	zPosition="10" font="Regular;20" transparent="1"/>
+		<widget name="statuspic" position="800,587" size="21,21" zPosition="10" pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/grey.png" transparent="1" alphatest="on"/>
+		<ePixmap position="1020,587" size="21,21" zPosition="10" pixmap="Kerni-HD1/buttons/red.png" transparent="1" alphatest="on" />
+		<widget source="key_red" render="Label" position="1050,587" size="120,22" zPosition="10" font="Regular;20" transparent="1" />
 		<ePixmap position="80,430" size="110,110" zPosition="2" pixmap="Kerni-HD1/icons/net.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="BouquetSelector" 				position="465,200" 	size="550,320" 		title="Choose bouquet">
@@ -1273,19 +1254,15 @@
 		<widget source="global.CurrentTime" render="Label" position="900,70" size="310,22" font="Regular;20" halign="right" backgroundColor="#0b67a2" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-
 		<eLabel text="Nameserver Setup" 	position="120,63" size="330,30" font="Regular;27" backgroundColor="#0b67a2" transparent="1"/>
-
 		<widget name="config" position="450,130" size="750,175" scrollbarMode="showOnDemand" transparent="1" />
-
-		<widget name="introduction" position="450,540" 	size="750,27" 	zPosition="10" font="Regular;24" halign="center" backgroundColor="#353e575e" transparent="1" />
-
-		<ePixmap pixmap="Kerni-HD1/buttons/red.png" 	position="450,588" size="21,21"		zPosition="10" transparent="1" alphatest="on" />
-		<ePixmap pixmap="Kerni-HD1/buttons/green.png" 	position="640,588" size="21,21"		zPosition="10" transparent="1" alphatest="on" />
-		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" 	position="830,588" size="21,21"		zPosition="10" transparent="1" alphatest="on" />
-		<widget name="ButtonRedtext" 					position="480,587" size="170,22"	zPosition="10" font="Regular;20" transparent="1" />
-		<widget name="ButtonGreentext" 					position="670,587" size="160,22"	zPosition="10" font="Regular;20" transparent="1" />
-		<widget name="ButtonYellowtext" 				position="860,587" size="160,22"	zPosition="10" font="Regular;20" transparent="1" />
+		<widget source="introduction" render="Label" position="450,540" size="750,27" zPosition="10" font="Regular;24" halign="center" backgroundColor="#353e575e" transparent="1" />
+		<ePixmap pixmap="Kerni-HD1/buttons/red.png" position="450,588" size="21,21"	zPosition="10" transparent="1" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/green.png" position="640,588" size="21,21" zPosition="10" transparent="1" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" position="830,588" size="21,21" zPosition="10" transparent="1" alphatest="on" />
+		<widget source="key_red" render="Label" position="480,587" size="170,22" zPosition="10" font="Regular;20" transparent="1" />
+		<widget source="key_green" render="Label" position="670,587" size="160,22" zPosition="10" font="Regular;20" transparent="1" />
+		<widget source="key_yellow" render="Label" position="860,587" size="160,22"	zPosition="10" font="Regular;20" transparent="1" />
 		<ePixmap position="80,430" size="110,110" zPosition="2" pixmap="Kerni-HD1/icons/net.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="NetworkAdapterSelection" 		position="0,0" 		size="1280,720" 	title="Select Network Adapter" 		flags="wfNoBorder">
@@ -1297,15 +1274,17 @@
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="Select Network Adapter" position="120,63" size="330,30" font="Regular;25" backgroundColor="#0b67a2" transparent="1"/>
-
-		<eLabel 			position="450,120" size="750,370" zPosition="1" backgroundColor="#bbbbbb" />
-		<eLabel 			position="452,122" size="746,366" zPosition="2" backgroundColor="#202b4247" />
+		<eLabel position="450,120" size="750,370" zPosition="1" backgroundColor="#bbbbbb" />
+		<eLabel position="452,122" size="746,366" zPosition="2" backgroundColor="#202b4247" />
 		<widget name="list" position="460,130" size="730,350" zPosition="3" scrollbarMode="showOnDemand" />    
-		<widget name="introduction" position="450,540" size="750,27" zPosition="10" font="Regular;24" halign="center" backgroundColor="#353e575e" transparent="1" />
-		<ePixmap pixmap="Kerni-HD1/buttons/red.png" 	position="420,587" size="21,21" alphatest="on" />
-		<ePixmap pixmap="Kerni-HD1/buttons/blue.png" position="650,587" size="21,21" alphatest="on" />
-		<widget name="ButtonRedtext" 	position="450,587" size="200,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="ButtonBluetext" 	position="680,587" size="560,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="introduction" render="Label" position="450,540" size="750,27" zPosition="10" font="Regular;24" halign="center" backgroundColor="#353e575e" transparent="1" />
+		<ePixmap pixmap="Kerni-HD1/buttons/red.png" position="450,588" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/green.png" position="640,588" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" position="830,588" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/blue.png" position="1020,588" size="21,21" alphatest="on" />
+		<widget source="key_red" render="Label" position="480,587" size="160,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="670,587" size="160,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="860,587" size="160,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<ePixmap position="80,430" size="110,110" zPosition="2" pixmap="Kerni-HD1/icons/net.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="NetworkAdapterTest" 			position="0,0" 		size="1280,720" 	title="Network test..." 			flags="wfNoBorder">
@@ -1316,60 +1295,46 @@
 		<widget source="global.CurrentTime" render="Label" position="900,70" size="310,22" font="Regular;20" halign="right" backgroundColor="#0b67a2" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-
 		<eLabel text="Network test..." position="120,63" size="330,30" font="Regular;27" backgroundColor="#0b67a2" transparent="1"/>
-
-		<widget name="Adaptertext" 																		position="430,120"  size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
-		<widget name="Adapter" 																			position="430,150"  size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
-		<widget name="AdapterInfo_OK" pixmap="Kerni-HD1/buttons/green.png" 								position="965,136"  size="21,21"  zPosition="2" alphatest="on" />
-		<widget name="AdapterInfo_Text" 																position="1000,131" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
-		<widget name="AdapterInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" 	position="1000,130" size="200,35" zPosition="1" alphatest="on" />
-
-		<eLabel 			  																			position="430,185" size="770,2" backgroundColor="darkgrey" />
-
-		<widget name="Networktext" 																			position="430,200"  size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
-		<widget name="Network" 																  				position="430,230"  size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
-		<widget name="NetworkInfo_Check" pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/red.png"	position="965,216"  size="21,21"  zPosition="2" alphatest="on" />
-		<widget name="NetworkInfo_Text" 																	position="1000,211" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
-		<widget name="NetworkInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" 		position="1000,210" size="200,35"  zPosition="1" alphatest="on" />
-
-		<eLabel 			  																			position="430,265" size="770,2" backgroundColor="darkgrey" />
-
-		<widget name="Dhcptext" 															  			position="430,280"  size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
-		<widget name="Dhcp" 																  			position="430,310"  size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
-		<widget name="DhcpInfo_Check" pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/red.png"	position="965,296"  size="21,21"  zPosition="2" alphatest="on" />
-		<widget name="DhcpInfo_Text" 																	position="1000,290" size="200,35" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
-		<widget name="DhcpInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" 		position="1000,290" size="200,35" zPosition="1" alphatest="on" />
-
-		<eLabel 			  																			position="430,345" size="770,2" backgroundColor="darkgrey" />
-
-		<widget name="IPtext" 															  			position="430,360"  size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
-		<widget name="IP" 																  			position="430,390"  size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
+		<widget name="Adaptertext" position="430,120" size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
+		<widget name="Adapter" position="430,150" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
+		<widget name="AdapterInfo_OK" pixmap="Kerni-HD1/buttons/green.png" position="965,136"  size="21,21"  zPosition="2" alphatest="on" />
+		<widget name="AdapterInfo_Text" position="1000,131" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
+		<widget name="AdapterInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" position="1000,130" size="200,35" zPosition="1" alphatest="on" />
+		<eLabel position="430,185" size="770,2" backgroundColor="darkgrey" />
+		<widget name="Networktext" position="430,200" size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
+		<widget name="Network" position="430,230" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
+		<widget name="NetworkInfo_Check" pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/red.png" position="965,216"  size="21,21"  zPosition="2" alphatest="on" />
+		<widget name="NetworkInfo_Text" position="1000,211" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
+		<widget name="NetworkInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" position="1000,210" size="200,35"  zPosition="1" alphatest="on" />
+		<eLabel position="430,265" size="770,2" backgroundColor="darkgrey" />
+		<widget name="Dhcptext" position="430,280" size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
+		<widget name="Dhcp" position="430,310" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
+		<widget name="DhcpInfo_Check" pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/red.png" position="965,296"  size="21,21"  zPosition="2" alphatest="on" />
+		<widget name="DhcpInfo_Text" position="1000,290" size="200,35" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
+		<widget name="DhcpInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" position="1000,290" size="200,35" zPosition="1" alphatest="on" />
+		<eLabel position="430,345" size="770,2" backgroundColor="darkgrey" />
+		<widget name="IPtext" position="430,360"  size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
+		<widget name="IP" position="430,390"  size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
 		<widget name="IPInfo_Check" pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/red.png"	position="965,376"  size="21,21"  zPosition="2" alphatest="on" />
-		<widget name="IPInfo_Text" 																	position="1000,371" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
-		<widget name="IPInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" 	position="1000,370" size="200,35"  zPosition="1" alphatest="on" />
-
-		<eLabel 			  																			position="430,425" size="770,2" backgroundColor="darkgrey" />
-
-		<widget name="DNStext" 															  				position="430,440"  size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
-		<widget name="DNS" 																  				position="430,470"  size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
-		<widget name="DNSInfo_Check" pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/red.png"	position="965,456"  size="21,21"  zPosition="2" alphatest="on" />
-		<widget name="DNSInfo_Text" 																	position="1000,451" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
-		<widget name="DNSInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" 		position="1000,450" size="200,35"  zPosition="1" alphatest="on" />
-
-		<eLabel 			  																			position="430,505" size="770,2" backgroundColor="darkgrey" />
-
-		<widget name="EditSettings_Text" 																		position="900,531" size="300,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#cccccc,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
+		<widget name="IPInfo_Text" position="1000,371" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
+		<widget name="IPInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" position="1000,370" size="200,35"  zPosition="1" alphatest="on" />
+		<eLabel position="430,425" size="770,2" backgroundColor="darkgrey" />
+		<widget name="DNStext" position="430,440" size="400,25" zPosition="1" font="Regular;22" backgroundColor="#353e575e" transparent="1" />			
+		<widget name="DNS" position="430,470" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="#353e575e" transparent="1" />
+		<widget name="DNSInfo_Check" pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/red.png" position="965,456" size="21,21" zPosition="2" alphatest="on" />
+		<widget name="DNSInfo_Text" position="1000,451" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
+		<widget name="DNSInfo" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel.png" position="1000,450" size="200,35" zPosition="1" alphatest="on" />
+		<eLabel position="430,505" size="770,2" backgroundColor="darkgrey" />
+		<widget name="EditSettings_Text" position="900,531" size="300,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#cccccc,#cccccc,#ffffff" backgroundColor="#353e575e" transparent="1" />
 		<widget name="EditSettingsButton" pixmaps="Kerni-HD1/menu/lan-seloff.png,Kerni-HD1/menu/lan-sel300.png"	position="900,530" size="300,35" zPosition="2" alphatest="on" />
-
 		<widget name="InfoText" position="400,100" size="825,480" zPosition="25" font="Regular;22" valign="center" halign="center" />
-
-		<widget name="ButtonRed" 			pixmap="Kerni-HD1/buttons/red.png" 								position="420,588" zPosition="10" size="21,21" alphatest="on" />
-		<widget name="ButtonGreen_Check" 	pixmaps="Kerni-HD1/buttons/green.png,Kerni-HD1/buttons/grey.png" 	position="670,588" zPosition="10" size="21,21" alphatest="on" />
-		<widget name="ButtonYellow_Check" 	pixmaps="Kerni-HD1/buttons/yellow.png,Kerni-HD1/buttons/grey.png" 	position="920,588" zPosition="10" size="21,21" alphatest="on" />
-		<widget name="ButtonRedtext" 		position="450,587" 	size="170,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="ButtonGreentext" 		position="700,587" 	size="170,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="ButtonYellowtext" 	position="950,587" 	size="170,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="Kerni-HD1/buttons/red.png" position="450,588" size="21,21"	zPosition="10" transparent="1" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/green.png" position="640,588" size="21,21" zPosition="10" transparent="1" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" position="830,588" size="21,21" zPosition="10" transparent="1" alphatest="on" />
+		<widget source="key_red" render="Label" position="480,587" size="170,22" zPosition="10" font="Regular;20" transparent="1" />
+		<widget source="key_green" render="Label" position="670,587" size="160,22" zPosition="10" font="Regular;20" transparent="1" />
+		<widget source="key_yellow" render="Label" position="860,587" size="160,22"	zPosition="10" font="Regular;20" transparent="1" />
 		<ePixmap position="80,430" size="110,110" zPosition="2" pixmap="Kerni-HD1/icons/net.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="NimSelection" 				position="0,0" 		size="1280,720" 	title="Choose Tuner" 				flags="wfNoBorder">
