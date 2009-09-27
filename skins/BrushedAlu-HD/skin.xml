@@ -1563,16 +1563,13 @@
 		<widget name="config" 			position="550,120" size="660,275" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundColor="darkgrey" transparent="1"/>
 		<eLabel 						position="550,608" size="660,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 						position="550,610" size="660,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="introduction2" 	position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget source="introduction" render="Label" position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
-		<widget name="HelpWindow" 		position="588,400"  size="1,1" 	  zPosition="1" transparent="1" alphatest="on" />	
-		<widget name="ButtonRed" 		position="80,500"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
-		<widget name="ButtonRedtext" 	position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<ePixmap 						position="80,550" 	size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/grey.png" />
-		<widget name="ButtonGreen" 		position="80,550" 	size="30,30"  zPosition="2" alphatest="blend" pixmap="BrushedAlu-HD/buttons/green.png" />
-		<eLabel text="Virtual KeyBoard" position="130,552"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="HelpWindow" position="588,400"  size="1,1" 	  zPosition="1" transparent="1" alphatest="on" />	
+		<ePixmap position="80,500" size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
+		<widget source="key_red" render="Label" position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 
-		<widget name="VKeyIcon" position="0,0" size="0,0" />
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="520,430" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="AutoMountManager" 			position="0,0" 		size="1280,720" title="MountManager"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
@@ -1602,9 +1599,9 @@
 		</widget>
 		<eLabel 						position="550,608" size="660,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 						position="550,610" size="660,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="introduction" 	position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="ButtonRed" 		position="80,500"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
-		<widget name="ButtonRedtext" 	position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="introduction" render="Label" position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<ePixmap position="80,500"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
+		<widget source="key_red" render="Label" position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
 	<screen name="AutoMountView" 				position="0,0" 		size="1280,720" title="MountView"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
@@ -1620,9 +1617,9 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="legend1" position="550,115"  zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="legend2" position="680,113"  zPosition="1" size="400,60" font="Regular;20" halign="center" valign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="legend3" position="1080,113" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget source="legend1" render="Label" position="550,115"  zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget source="legend2" render="Label" position="680,113"  zPosition="1" size="400,60" font="Regular;20" halign="center" valign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget source="legend3" render="Label" position="1080,113" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 		<eLabel 			   position="550,180"  size="660,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 			   position="550,182"  size="660,2" backgroundColor="grey" zPosition="5"/>
 		<widget source="config" render="Listbox" position="550,185" size="660,420" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_60.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_60_bg.png" transparent="1">
@@ -1643,12 +1640,12 @@
 
 		<eLabel 						position="550,608" size="660,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 						position="550,610" size="660,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="introduction" 	position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget source="introduction" render="Label" position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
-		<ePixmap 						position="80,500"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
-		<widget name="ButtonRedtext" 	position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<ePixmap 						position="80,550"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/yellow.png" />
-		<widget name="deletetext" 		position="130,552"  size="220,56" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<ePixmap position="80,500"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
+		<widget source="key_red" render="Label" position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<ePixmap position="80,550"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/yellow.png" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="220,56" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 	</screen>
 	<screen name="NetworkBrowser" 				position="0,0" 		size="1280,720" title="Network Neighbourhood"		flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
@@ -1680,19 +1677,19 @@
 			</convert>
 		</widget>
 
-		<eLabel 					position="550,608" size="660,2" backgroundColor="black" zPosition="5"/>
-		<eLabel 					position="550,610" size="660,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="infotext" 	position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<eLabel 							     position="550,608" size="660,2" backgroundColor="black" zPosition="5"/>
+		<eLabel 								 position="550,610" size="660,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="infotext" render="Label" position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
 
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" 	position="80,620"  size="30,30" alphatest="blend"   />
-		<widget name="closetext" 					position="130,452"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="mounttext" 					position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="rescantext" 					position="130,552"  size="320,54"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="searchtext" 					position="130,622"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="320,54"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,622"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
 	<screen name="UserManager" 					position="0,0" 		size="1280,720" title="UserManager"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
@@ -1722,12 +1719,12 @@
 
 		<eLabel 					position="550,608" size="660,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 					position="550,610" size="660,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="introduction" position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget source="introduction" render="Label" position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
-		<widget name="ButtonRed" 		position="80,500"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
-		<widget name="ButtonRedtext" 	position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<ePixmap 						position="80,550"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/yellow.png" />
-		<widget name="deletetext" 		position="130,552"  size="220,56" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<ePixmap position="80,500"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
+		<widget source="key_red" render="Label" position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<ePixmap position="80,550"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/yellow.png" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="220,56" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 	</screen>
 	<screen name="UserDialog" 					position="0,0" 		size="1280,720" title="UserDialog"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
@@ -1738,7 +1735,7 @@
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
-		<eLabel text="UserDialog" position="80,110" size="322,75" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="UserDialog" 	position="80,110" size="322,95" zPosition="3" font="Regular;27" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
@@ -1746,16 +1743,13 @@
 		<widget name="config" 		 position="550,120" size="660,275" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundColor="darkgrey" transparent="1"/>
 		<eLabel 					 position="550,608" size="660,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 					 position="550,610" size="660,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="introduction2" position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget source="introduction" render="Label" position="550,615" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
-		<widget name="HelpWindow" 		position="588,400"  size="1,1" 	  zPosition="1" transparent="1" alphatest="on" />	
-		<widget name="ButtonRed" 		position="80,500"   size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
-		<widget name="ButtonRedtext" 	position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<ePixmap 						position="80,550" 	size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/grey.png" />
-		<widget name="ButtonGreen" 		position="80,550" 	size="30,30"  zPosition="2" alphatest="blend" pixmap="BrushedAlu-HD/buttons/green.png" />
-		<eLabel text="Virtual KeyBoard" position="130,552"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget name="HelpWindow" position="588,400"  size="1,1" 	  zPosition="1" transparent="1" alphatest="on" />	
+		<ePixmap position="80,500" size="30,30"  zPosition="1" alphatest="blend" pixmap="BrushedAlu-HD/buttons/red.png" />
+		<widget source="key_red" render="Label" position="130,502"  size="220,28" zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 
-		<widget name="VKeyIcon" position="0,0" size="0,0" />
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="520,430" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="ScanIP" 						position="0,0" 		size="1280,720" title="Scan IP" 					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
@@ -1777,9 +1771,9 @@
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget name="closetext" 					position="130,452"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="edittext" 					position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="scanaddress" 					position="130,552"  size="320,54"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="320,54"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>		
 		<!-- Common Interface -->
 	<screen name="CiSelection" 					position="0,0" 		size="1280,720" title="Common Interface"			flags="wfNoBorder">
