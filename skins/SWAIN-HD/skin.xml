@@ -1441,15 +1441,13 @@
 
 		<widget name="config" 			position="15,20" size="640,275" zPosition="3" scrollbarMode="showOnDemand"/>
 		<eLabel 						position="15,460" size="640,2" backgroundColor="lgrey" zPosition="5"/>
-		<widget name="introduction2" 	position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
+		<widget source="introduction" render="Label" position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
 
-		<widget name="HelpWindow" 		position="206,450"  size="1,1" 	  zPosition="1" transparent="1" alphatest="on" />
+		<widget name="HelpWindow" 		position="206,420"  size="1,1" 	  zPosition="1" transparent="1" alphatest="on" />
 		
-		<widget name="ButtonRedtext" 	position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="ButtonGreen" 	  	position="270,525" size="265,35" pixmap="SWAIN-HD/vkey_green.png" />
+		<widget source="key_red" render="Label" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
-		<widget name="VKeyIcon" position="0,0" size="0,0" />
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="600,525" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="AutoMountManager" 			position="172,132" size="1108,588" title="MountManager"			backgroundColor="transparent">
 		<eLabel 						position="5,5" size="660,510" zPosition="-1" backgroundColor="background" />
@@ -1467,18 +1465,16 @@
 			</convert>
 		</widget>
 		<eLabel 						position="15,460" size="640,2" backgroundColor="lgrey"/>
-		<widget name="introduction" 	position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
+		<widget source="introduction" render="Label" position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
 
-		<widget name="ButtonRedtext" 	position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
+		<widget source="key_red" render="Label" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 	</screen>
 	<screen name="AutoMountView" 				position="172,132" size="1108,588" title="MountView"			backgroundColor="transparent">
 		<eLabel position="5,5" size="660,510" zPosition="-1" backgroundColor="background" />
 
-		<widget name="legend1" position="15,15"  zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center"/>
-		<widget name="legend2" position="145,13" zPosition="1" size="380,60" font="Regular;20" halign="center" valign="center"/>
-		<widget name="legend3" position="525,13" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center"/>
+		<widget source="legend1" render="Label" position="15,15"  zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center"/>
+		<widget source="legend2" render="Label" position="145,13" zPosition="1" size="380,60" font="Regular;20" halign="center" valign="center"/>
+		<widget source="legend3" render="Label" position="525,13" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center"/>
 		<eLabel 			   position="15,80"  size="640,2" backgroundColor="lgrey" zPosition="5"/>
 		<widget source="config" render="Listbox" position="15,85"  size="640,420" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
@@ -1497,10 +1493,10 @@
 		</widget>
 
 		<eLabel 						position="15,460" size="640,2" backgroundColor="lgrey"/>
-		<widget name="introduction" 	position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
+		<widget source="introduction" render="Label" position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
 
-		<widget name="ButtonRedtext" 	position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="deletetext" 		position="535,525" size="530,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_red" render="Label" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_yellow" render="Label" position="535,525" size="530,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 	</screen>
 	<screen name="NetworkBrowser" 				position="172,132" size="1108,588" title="Network Neighbourhood" backgroundColor="transparent">
 		<eLabel position="5,5" size="660,510" zPosition="-1" backgroundColor="background" />
@@ -1522,13 +1518,13 @@
 		</widget>
 
 		<eLabel 					position="15,460" size="640,2" backgroundColor="lgrey"/>
-		<widget name="infotext" 	position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
+		<widget source="infotext" render="Label" position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
 
 
-		<widget name="closetext" 	position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="mounttext" 	position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget name="rescantext" 	position="535,525" size="355,35" font="Regular;23" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
-		<widget name="searchtext" 	position="890,525" size="175,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
+		<widget source="key_red" render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="535,525" size="355,35" font="Regular;23" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" render="Label" position="890,525" size="175,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<screen name="UserManager" 					position="172,132" size="1108,588" title="UserManager"			backgroundColor="transparent">
 		<eLabel position="5,5" size="660,510" zPosition="-1" backgroundColor="background" />
@@ -1546,37 +1542,32 @@
 		</widget>
 
 		<eLabel 						position="15,460" size="640,2" backgroundColor="lgrey"/>
-		<widget name="introduction" 	position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
+		<widget source="introduction" render="Label" position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
 
-		<widget name="ButtonRedtext" 	position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="deletetext" 		position="535,525" size="530,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
-
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
+		<widget source="key_red" render="Label" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_yellow" render="Label" position="535,525" size="530,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 	</screen>
 	<screen name="UserDialog" 					position="172,132" size="1108,588" title="UserDialog"			backgroundColor="transparent">
 		<eLabel 						position="5,5" size="660,510" zPosition="-1" backgroundColor="background" />
 
 		<widget name="config" 			position="15,20" size="640,275" zPosition="3" scrollbarMode="showOnDemand"/>
 		<eLabel 						position="15,460" size="640,2" backgroundColor="lgrey" zPosition="5"/>
-		<widget name="introduction2" 	position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
+		<widget source="introduction" render="Label" position="15,470" size="640,27" zPosition="1" font="Regular;24" halign="center"/>
 
-		<widget name="HelpWindow" 		position="206,450"  size="1,1" 	  zPosition="1" transparent="1" alphatest="on" />
+		<widget name="HelpWindow" 		position="206,420"  size="1,1" 	  zPosition="1" transparent="1" alphatest="on" />
 		
-		<widget name="ButtonRedtext" 	position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="ButtonGreen" 	  position="270,525" size="265,35" pixmap="SWAIN-HD/vkey_green.png" />
+		<widget source="key_red" render="Label" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
-		<widget name="VKeyIcon" position="0,0" size="0,0" />
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="600,525" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="ScanIP" 						position="172,132" size="1108,588" title="Scan IP" 				backgroundColor="transparent">
 		<eLabel position="5,5" size="660,510" zPosition="-1" backgroundColor="background" />
 
-		<ePixmap 				position="49,197" size="542,52" pixmap="skin_default/vkey_text.png" zPosition="-4" alphatest="on"/>
 		<widget name="config" 	position="57,210" size="526,30" transparent="1"/>
 
-		<widget name="closetext" 	position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="edittext" 	position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget name="scanaddress" 	position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_red" render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 	</screen>		
 	<!-- Common Interface -->
 	<screen name="CiSelection" 					position="172,132" size="1108,588" title="Common Interface"		backgroundColor="transparent">
