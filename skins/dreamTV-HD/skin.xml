@@ -2286,12 +2286,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="introduction2" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
-		<widget name="ButtonRedtext" position="820,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
-		<widget name="ButtonGreen" pixmap="skin_default/buttons/button_green.png" position="990,470" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
-		<widget name="VKeyIcon" pixmap="skin_default/vkey_icon.png" position="1020,450" zPosition="10" size="60,48" transparent="1" alphatest="on"/>
-		<widget name="HelpWindow" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on"/>	
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
+		<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget source="key_red" render="Label" position="820,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="20,420" zPosition="10" size="35,25" transparent="1" alphatest="on" />
+		<widget name="HelpWindow" position="180,430" zPosition="1" size="1,1" transparent="1" alphatest="on"/>	
 	</screen>
 	<screen name="AutoMountManager" position="90,100" size="1100,560" title="MountManager">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
@@ -2309,15 +2307,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="introduction" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
-		<widget name="ButtonRedtext" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
+		<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget source="key_red" render="Label" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
 	</screen>
 	<screen name="AutoMountView" position="90,100" size="1100,560" title="MountView">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="legend1" position="10,10"  zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center" />
-		<widget name="legend2" position="200,8" zPosition="1" size="400,60" font="Regular;20" halign="center" valign="center" />
-		<widget name="legend3" position="640,8" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center" />
+		<widget source="legend1" render="Label" position="10,10"  zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center" />
+		<widget source="legend2" render="Label" position="200,8" zPosition="1" size="400,60" font="Regular;20" halign="center" valign="center" />
+		<widget source="legend3" render="Label" position="640,8" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center" />
 		<eLabel position="0,75" size="780,2" backgroundColor="grey"/>
 		<widget source="config" render="Listbox" position="10,90" size="750,420" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_60.png">
 			<convert type="TemplatedMultiContent">
@@ -2336,9 +2333,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="introduction" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
-		<widget name="deletetext" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
-		<widget name="ButtonRedtext" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget source="key_yellow" render="Label" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
+		<widget source="key_red" render="Label" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
 	</screen>
 	<screen name="NetworkBrowser" position="90,100" size="1100,560" title="Network Neighbourhood">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
@@ -2359,21 +2356,22 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="mounttext" position="20,525" size="300,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="green"/>
-		<widget name="rescantext" position="320,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
-		<widget name="closetext" position="820,525" size="300,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget source="key_red" render="Label" position=" 20,525" size="240,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="260,525" size="310,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="570,525" size="240,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
+		<widget source="key_blue" render="Label" position="830,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
+		<widget source="infotext" render="Label" position="20,480" size="740,30" zPosition="10" font="Regular;24" halign="center" valign="center"/>
 	</screen>
+
 	<screen name="UserDialog" position="90,100" size="1100,560" title="UserDialog">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
 		<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="introduction2" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
-		<widget name="ButtonRedtext" position="820,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
-		<widget name="ButtonGreen" pixmap="skin_default/buttons/button_green.png" position="990,470" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
-		<widget name="VKeyIcon" pixmap="skin_default/vkey_icon.png" position="1020,450" zPosition="10" size="60,48" transparent="1" alphatest="on"/>
-		<widget name="HelpWindow" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="on"/>	
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
+		<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget source="key_red" render="Label" position="820,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
+		<widget name="HelpWindow" position="180,430" zPosition="1" size="1,1" transparent="1" alphatest="on"/>	
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="20,420" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="UserManager" position="90,100" size="1100,560" title="UserManager">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
@@ -2390,65 +2388,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="introduction" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
-		<widget name="deletetext" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
-		<widget name="ButtonRedtext" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
-	</screen>
-
-	<screen name="SuomipoekaMenu" position="90,100" size="1100,560" title="SuomipoekaMenu">
-		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="config" position="20,20" size="740,475" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
-		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
-		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="key_red" position=" 30,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="key_green" position="300,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
-		<widget name="key_yellow" position="570,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
-		<widget name="key_blue" position="840,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
-	</screen>
-	<screen name="MovieSelectionSP" position="90,100" size="1100,560" title=" ">
-		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>
-		<widget name="list" position="10,15" size="760,475" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
-		<eLabel position="780,0" size="2,518" backgroundColor="grey"/>
-		<widget source="Service" render="Label" position="790,10" size="300,22" font="Regular;20" foregroundColor="white" halign="left">
-			<convert type="MovieInfo">RecordServiceName</convert>
-		</widget>
-		<widget source="Service" render="Label" position="790,40" size="300,57" font="Regular;20" foregroundColor="#cccccc">
-			<convert type="MovieInfo">ShortDescription</convert>
-		</widget>
-		<widget source="Service" render="Label" position="790,100" size="300,24" font="Regular;20" foregroundColor="white" halign="left">
-			<convert type="ServiceTime">StartTime</convert>
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<widget source="Service" render="Label" position="795,130" size="50,19" font="Regular;17" foregroundColor="white" halign="left">
-			<convert type="ServiceTime">StartTime</convert>
-			<convert type="ClockToText"/>
-		</widget>
-		<widget source="Service" render="Label" position="845,130" size="70,19" font="Regular;17" foregroundColor="white" halign="left">
-			<convert type="ServiceTime">EndTime</convert>
-			<convert type="ClockToText">Format:- %H:%M </convert>
-		</widget>
-		<widget source="Service" render="Label" position="915,130" size="55,19" font="Regular;17" foregroundColor="white" halign="left">
-			<convert type="ServiceTime">Duration</convert>
-			<convert type="ClockToText">AsLength</convert>
-		</widget>
-		<widget name="FileSize" position="970,130" size="100,19" font="Regular;17" foregroundColor="white" halign="left"/>
-		<widget source="Service" render="Label" position="790,155" size="300,308" font="Regular;19" foregroundColor="#bbbbbb">
-			<convert type="EventName">ExtendedDescription</convert>
-		</widget>
-		<eLabel position="0,518" size="1100,2" backgroundColor="grey"/>
-		<widget name="key_red" position=" 30,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="key_green" position="300,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
-		<widget name="key_yellow" position="570,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
-		<widget name="key_blue" position="840,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
-		<eLabel text="MENU" position="1010,490" size="80,22" font="Regular;20"/>
-	</screen>
-	<screen name="ZapHistoryBrowser" position="340,134" size="600,502" title="Zap-History Browser">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey"/>
-		<widget name="list" position="10,10" size="580,480" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
-		<eLabel position="0,518" size="900,2" backgroundColor="grey"/>
-		<widget name="key_red" position="190,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="key_green" position="460,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+		<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center"/>
+		<widget source="key_yellow" render="Label" position="420,525" size="400,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="yellow"/>
+		<widget source="key_red" render="Label" position="820,525" size="260,30" zPosition="10" font="Regular;24" halign="center" foregroundColor="red"/>
 	</screen>
 
 	<screen name="ChannelSelection_summary" position="0,0" size="132,64">
