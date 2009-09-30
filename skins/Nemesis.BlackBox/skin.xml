@@ -499,11 +499,11 @@
 		<ePixmap position="10,10" size="140,30" pixmap="Nemesis.BlackBox/key_red.png" transparent="1" alphatest="on" />
 		<ePixmap position="160,10" size="140,30" pixmap="Nemesis.BlackBox/key_green.png" transparent="1" alphatest="on" />
 		<ePixmap position="310,10" size="140,30" pixmap="Nemesis.BlackBox/key_yellow.png" transparent="1" alphatest="on" />
-		<widget name="ButtonRedtext" position="10,12" zPosition="2" size="140,28" font="Regular;18" valign="center" halign="center" transparent="1" />
-		<widget name="ButtonGreentext" position="160,12" zPosition="2" size="140,28" font="Regular;18" valign="center" halign="center" transparent="1" />
-		<widget name="ButtonYellowtext" position="310,12" zPosition="2" size="140,28" font="Regular;18" valign="center" halign="center" transparent="1" />
+		<widget source="key_red" render="Label" position="10,12" zPosition="2" size="140,28" font="Regular;18" valign="center" halign="center" transparent="1" />
+		<widget source="key_green" render="Label" position="160,12" zPosition="2" size="140,28" font="Regular;18" valign="center" halign="center" transparent="1" />
+		<widget source="key_yellow" render="Label" position="310,12" zPosition="2" size="140,28" font="Regular;18" valign="center" halign="center" transparent="1" />
 		<widget name="config" position="10,50" size="440,175" scrollbarMode="showOnDemand" />
-		<widget name="introduction" position="10,305" size="440,23" zPosition="10" font="Regular;20" halign="center" transparent="1" />
+		<widget source="introduction" render="Label" position="10,305" size="440,23" zPosition="10" font="Regular;20" halign="center" transparent="1" />
 	</screen>
 	<!-- Plugin browser -->
 	<screen name="PluginBrowser" position="150,85" size="420,410" title="Plugin browser">

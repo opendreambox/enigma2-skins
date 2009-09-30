@@ -600,11 +600,11 @@
 		<ePixmap pixmap="Nemesis.GlassLine/key_red.png" 	position="10,10" size="21,21" alphatest="on" />
 		<ePixmap pixmap="Nemesis.GlassLine/key_green.png" 	position="160,10" size="21,21" alphatest="on" />
 		<ePixmap pixmap="Nemesis.GlassLine/key_yellow.png" 	position="310,10" size="21,21" alphatest="on" />
-		<widget name="ButtonRedtext" 						position="40,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
-		<widget name="ButtonGreentext" 						position="190,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
-		<widget name="ButtonYellowtext" 					position="340,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
-		<widget name="config" 		position="10,50" size="440,175" scrollbarMode="showOnDemand" />
-		<widget name="introduction" position="10,305" size="440,23" zPosition="10" font="Regular;20" halign="center" transparent="1" />
+		<widget source="key_red" render="Label" 			position="40,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
+		<widget source="key_green" render="Label" 			position="190,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
+		<widget source="key_yellow" render="Label" 			position="340,10" zPosition="1" size="110,20" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="config" position="10,50" size="440,175" scrollbarMode="showOnDemand" />
+		<widget source="introduction" render="Label" position="10,305" size="440,23" zPosition="10" font="Regular;20" halign="center" transparent="1" />
 	</screen>
 	<!-- Numberzap -->
 	<screen name="NumberZap" position="70,50" size="150,55" backgroundColor="transparent" flags="wfNoBorder">
