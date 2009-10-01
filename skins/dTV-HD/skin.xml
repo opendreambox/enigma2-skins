@@ -1512,55 +1512,46 @@
 		<ePixmap position="915,390" size="165,110" zPosition="2" pixmap="dTV-HD/icons/keyb.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="WlanStatus" 				position="90,90" 	size="1100,570" title="Wireless Network State" >
-		<eLabel 					position="0,0" 		size="1100,2" 	backgroundColor="grey" />
-		<widget name="IFtext" 		position="20,20" 	size="140,25"	zPosition="10" font="Regular;22" transparent="1" />
-		<widget name="IF" 			position="160,20" 	size="400,25"	zPosition="10" font="Regular;22" transparent="1" />
-		<eLabel 					position="20,55" 	size="740,2" 	backgroundColor="grey" />
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+		<widget source="IFtext" render="Label" position="20,20" size="140,25" zPosition="10" font="Regular;22" transparent="1" />
+		<widget source="IF" render="Label" position="160,20" size="400,25"	zPosition="10" font="Regular;22" transparent="1" />
+		<eLabel position="20,55" size="740,2" backgroundColor="grey" />
 
-		<widget name="LabelBSSID" 	position="50,80" 	size="250,35" valign="left" 	font="Regular;22" transparent="1"/>
-		<widget name="LabelESSID" 	position="50,120" 	size="250,35" valign="center" 	font="Regular;22" transparent="1"/>
-		<widget name="LabelQuality" position="50,160" 	size="250,35" valign="center" 	font="Regular;22" transparent="1"/>
-		<widget name="LabelSignal" 	position="50,200" 	size="250,35" valign="center" 	font="Regular;22" transparent="1"/>
-		<widget name="LabelBitrate" position="50,240" 	size="250,35" valign="center" 	font="Regular;22" transparent="1"/>
-		<widget name="LabelEnc" 	position="50,280" 	size="250,35" valign="center" 	font="Regular;22" transparent="1"/>
+		<widget source="LabelBSSID" render="Label" position="50,80" size="250,35" valign="left" font="Regular;22" transparent="1"/>
+		<widget source="LabelESSID" render="Label" position="50,120" size="250,35" valign="center" font="Regular;22" transparent="1"/>
+		<widget source="LabelQuality" render="Label" position="50,160" size="250,35" valign="center" font="Regular;22" transparent="1"/>
+		<widget source="LabelSignal" render="Label" position="50,200" size="250,35" valign="center" font="Regular;22" transparent="1"/>
+		<widget source="LabelBitrate" render="Label" position="50,240" size="250,35" valign="center" font="Regular;22" transparent="1"/>
+		<widget source="LabelEnc" render="Label" position="50,280" size="250,35" valign="center" font="Regular;22" transparent="1"/>
 		
-		<widget name="BSSID" 		position="380,80" 	size="280,35" valign="center" 	font="Regular;22" transparent="1"/>
-		<widget name="ESSID" 		position="380,120" 	size="280,35" valign="center" 	font="Regular;22" transparent="1"/>
-		<widget name="quality" 		position="380,160" 	size="280,35" valign="center" 	font="Regular;22" transparent="1"/>
-		<widget name="signal" 		position="380,200" 	size="280,35" valign="center" 	font="Regular;22" transparent="1"/>
-		<widget name="bitrate" 		position="380,240" 	size="280,35" valign="center" 	font="Regular;22" transparent="1"/>
-		<widget name="enc" 			position="380,280" 	size="280,35" valign="center" 	font="Regular;22" transparent="1"/>
-		
-		<eLabel 					  position="780,0" size="2,518" 	backgroundColor="grey" />
-		<eLabel 					  position="0,518" size="1100,2" backgroundColor="grey" />
-
-		<widget name="statuspic_inactive" 	position="50,527" 	size="30,30" 	zPosition="9"  pixmap="dTV-HD/buttons/grey.png" transparent="1" alphatest="on" />
-		<widget name="statuspic_active" 	position="50,527" 	size="30,30" 	zPosition="10" pixmap="dTV-HD/buttons/green.png" transparent="1" alphatest="on" />
-		<widget name="Statustext" 			position="90,530"  size="270,27" 	zPosition="10" font="Regular;24" transparent="1" />
-
-		<widget name="ButtonRed" 			position="420,527" size="30,30" 	zPosition="10" pixmap="dTV-HD/buttons/red.png" transparent="1" alphatest="on" />
-		<widget name="ButtonRedtext" 		position="450,530" size="120,27"	zPosition="10" font="Regular;24" transparent="1" />
-
+		<widget source="BSSID" render="Label" position="380,80" size="280,35" valign="center" font="Regular;22" transparent="1"/>
+		<widget source="ESSID" render="Label" position="380,120" size="280,35" valign="center" font="Regular;22" transparent="1"/>
+		<widget source="quality" render="Label" position="380,160" size="280,35" valign="center" font="Regular;22" transparent="1"/>
+		<widget source="signal" render="Label" position="380,200" size="280,35" valign="center" font="Regular;22" transparent="1"/>
+		<widget source="bitrate" render="Label" position="380,240" size="280,35" valign="center" font="Regular;22" transparent="1"/>
+		<widget source="enc" render="Label" position="380,280" size="280,35" valign="center" font="Regular;22" transparent="1"/>
+	
+		<eLabel position="780,0" size="2,518" backgroundColor="grey" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
+		<widget name="statuspic" position="50,527" size="30,30" zPosition="10" pixmaps="dTV-HD/buttons/green.png,dTV-HD/buttons/grey.png" transparent="1" alphatest="on" />
+		<widget source="Statustext" render="Label" position="90,530" size="270,27" zPosition="10" font="Regular;24" transparent="1" />
+		<ePixmap position="420,527" size="30,30" zPosition="10" pixmap="dTV-HD/buttons/red.png" transparent="1" alphatest="on" />
+		<widget source="key_red" render="Label" position="450,530" size="120,27"	zPosition="10" font="Regular;24" transparent="1" />
 		<ePixmap position="940,400" size="140,110" zPosition="2" pixmap="dTV-HD/icons/wlan.png" transparent="1" alphatest="blend" />
-		<widget name="BottomBG" position="0,0" size="0,0"/>
 	</screen>
 	<screen name="WlanScan" 				position="90,90" 	size="1100,570" title="Choose a Wireless Network">
-		<eLabel 					position="0,0" 		size="1100,2" 	backgroundColor="grey" />
-		<widget name="info" 		position="20,20" 	size="740,25"	zPosition="10" font="Regular;22" transparent="1" />
-		<eLabel 					position="20,55" 	size="740,2" 	backgroundColor="grey" />
-
-		<widget name="list" 		position="20,70" 	size="740,400" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_60.png" transparent="1"/>
-
-		<eLabel 					position="780,0" size="2,518" 	backgroundColor="grey" />
-		<eLabel 					position="0,518" size="1100,2" backgroundColor="grey" />
-
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+		<widget source="info" render="Label" position="20,20" 	size="740,25"	zPosition="10" font="Regular;22" transparent="1" />
+		<eLabel position="20,55" size="740,2" backgroundColor="grey" />
+		<widget name="list" position="20,70" size="740,400" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_60.png" transparent="1"/>
+		<eLabel position="780,0" size="2,518" backgroundColor="grey" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position="150,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="420,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="690,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="canceltext" 			position="150,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="selecttext" 			position="420,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="rescantext" 			position="690,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
-
+		<widget source="key_red" render="Label" position="150,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="420,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="690,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
 		<ePixmap position="940,400" size="140,110" zPosition="2" pixmap="dTV-HD/icons/wlan.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="ChoiceBox"				position="150,100"	size="550,400"	title="Input">
