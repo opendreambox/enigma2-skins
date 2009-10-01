@@ -1485,35 +1485,32 @@
 		</widget>
 		<eLabel text="Wireless Network State" position="80,110" size="322,75" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
 
-		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
+		<ePixmap position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="IFtext"   position="550,120" size="150,28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="IF" 		position="700,120" size="400,28" zPosition="1" font="Regular;24" foregroundColor="white" backgroundColor="darkgrey" transparent="1" />
-		<eLabel 				position="550,155" size="660,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="IFtext" render="Label" position="550,120" size="150,28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="IF" render="Label" position="700,120" size="400,28" zPosition="1" font="Regular;24" foregroundColor="white" backgroundColor="darkgrey" transparent="1" />
+		<eLabel position="550,155" size="660,2" backgroundColor="grey" zPosition="5"/>
 
-		<widget name="LabelBSSID" 	position="550,180" 	size="250,35" valign="left" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="LabelESSID" 	position="550,220" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="LabelQuality" position="550,260" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="LabelSignal" 	position="550,300" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="LabelBitrate" position="550,340" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="LabelEnc" 	position="550,380" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="LabelBSSID" render="Label" position="550,180" 	size="250,35" valign="left" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="LabelESSID" render="Label" position="550,220" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="LabelQuality" render="Label" position="550,260" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="LabelSignal" render="Label" position="550,300" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="LabelBitrate" render="Label" position="550,340" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="LabelEnc" render="Label" position="550,380" 	size="250,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
 		
-		<widget name="BSSID" 		position="880,180" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="ESSID" 		position="880,220" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="quality" 		position="880,260" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="signal" 		position="880,300" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="bitrate" 		position="880,340" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="enc" 			position="880,380" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="BSSID" render="Label" position="880,180" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="ESSID" render="Label" position="880,220" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="quality" render="Label" position="880,260" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="signal" render="Label" position="880,300" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="bitrate" render="Label" position="880,340" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="enc" render="Label" position="880,380" 	size="280,35" valign="center" 	font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
 		
-		<widget name="Statustext" 			position="780,602" size="150,28" zPosition="10" font="Regular;24" halign="right" transparent="1"/>
-		<widget name="statuspic_inactive" 	position="950,603" size="25,24"	 zPosition="10" pixmap="skin_default/icons/lock_error.png" alphatest="on"/>
-		<widget name="statuspic_active" 	position="950,603" size="25,24"	 zPosition="10" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
+		<widget source="Statustext" render="Label" position="780,602" size="150,28" zPosition="10" font="Regular;24" halign="right" transparent="1"/>
+		<widget name="statuspic" 	position="950,603" size="25,24"	 zPosition="10" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="on"/>
 
-		<widget name="ButtonRed" 			position="80,500"  size="30,30" alphatest="blend" pixmap="dmm-HD/buttons/red.png" />
-		<widget name="ButtonRedtext" 		position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-
-		<widget name="BottomBG" position="0,0" size="0,0"/>
+		<ePixmap position="80,500"  size="30,30" alphatest="blend" pixmap="dmm-HD/buttons/red.png" />
+		<widget source="key_red" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="WlanScan" 					position="0,0" 		size="1280,720" title="Choose a Wireless Network"	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -1528,29 +1525,19 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="info" position="550,120" 	size="660,28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1" />
+		<widget source="info" render="Label" position="550,120" 	size="660,28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1" />
 		<eLabel 			position="550,155"  size="660,2" backgroundColor="grey" zPosition="5"/>
 
 		<widget name="list" position="550,180" 	size="660,420" scrollbarMode="showOnDemand" transparent="1"/>
 
-		<eLabel position="550,179" size="632,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel position="550,239" size="632,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel position="550,299" size="632,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel position="550,359" size="632,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel position="550,419" size="632,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel position="550,479" size="632,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel position="550,539" size="632,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel position="550,599" size="632,2" backgroundColor="grey" zPosition="5"/>
-
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,600"  size="30,30" alphatest="blend"   />
-		<widget name="canceltext" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="selecttext" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="rescantext" 					position="130,602"  size="320,54"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-
+		<widget source="key_red" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,602"  size="320,54"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
-			<!-- NetzwerkManager -->
+	<!-- NetzwerkManager -->
 	<screen name="AutoMountEdit" 				position="0,0" 		size="1280,720" title="MountEdit"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
