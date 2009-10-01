@@ -1396,44 +1396,33 @@
 	</screen>
 	<screen name="WlanScan" 					position="172,132" size="1108,588" title="Choose a Wireless Network" backgroundColor="transparent">
 		<eLabel 			position=" 5, 5" size="660,510" zPosition="-1" backgroundColor="background" />
-		<widget name="info" position="15,15" size="640,28" font="Regular;24"/>
+		<widget source="info" render="Label" position="15,15" size="640,28" font="Regular;24"/>
 		<eLabel 			position="15,55" size="640,2" backgroundColor="lgrey"/>
-
 		<widget name="list" position="15,65" 	size="640,420" scrollbarMode="showOnDemand" />
-
-		<widget name="canceltext" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="selecttext" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget name="rescantext" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_red" render="Label" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label"  position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 	</screen>
 	<screen name="WlanStatus" 					position="172,132" size="1108,588" title="Wireless Network State" backgroundColor="transparent">
-		<eLabel 					position="5,5" size="660,510" zPosition="-1" backgroundColor="background" />
-
-		<widget name="IFtext"  		position="15,15"  size="150,28" font="Regular;24"/>
-		<widget name="IF" 			position="170,15" size="470,28" font="Regular;24"/>
-		<eLabel 					position="15,50"  size="640,2" backgroundColor="lgrey"/>
-
-		<widget name="LabelBSSID" 	position="80,80" 	size="250,35" valign="left" 	font="Regular;22"/>
-		<widget name="LabelESSID" 	position="80,120" 	size="250,35" valign="center" 	font="Regular;22"/>
-		<widget name="LabelQuality" position="80,160" 	size="250,35" valign="center" 	font="Regular;22"/>
-		<widget name="LabelSignal" 	position="80,200" 	size="250,35" valign="center" 	font="Regular;22"/>
-		<widget name="LabelBitrate" position="80,240" 	size="250,35" valign="center" 	font="Regular;22"/>
-		<widget name="LabelEnc" 	position="80,280" 	size="250,35" valign="center" 	font="Regular;22"/>
-		
-		<widget name="BSSID" 		position="360,80" 	size="250,35" valign="center" 	font="Regular;22"/>
-		<widget name="ESSID" 		position="360,120" 	size="250,35" valign="center" 	font="Regular;22"/>
-		<widget name="quality" 		position="360,160" 	size="250,35" valign="center" 	font="Regular;22"/>
-		<widget name="signal" 		position="360,200" 	size="250,35" valign="center" 	font="Regular;22"/>
-		<widget name="bitrate" 		position="360,240" 	size="250,35" valign="center" 	font="Regular;22"/>
-		<widget name="enc" 			position="360,280" 	size="250,35" valign="center" 	font="Regular;22"/>
-	
-		<widget name="Statustext" 			position="15,430" size="640,35" font="Regular;24" halign="center"/>
-		<widget name="statuspic_inactive" 	position="327,470" size="25,24"	 zPosition="2" pixmap="skin_default/icons/lock_error.png" alphatest="on"/>
-		<widget name="statuspic_active" 	position="327,470" size="25,24"	 zPosition="2" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
-
-		<widget name="ButtonRedtext" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-
-		<widget name="ButtonRed" position="0,0" size="0,0"/>
-		<widget name="BottomBG" position="0,0" size="0,0"/>
+		<eLabel position="5,5" size="660,510" zPosition="-1" backgroundColor="background" />
+		<widget source="IFtext" render="Label" position="15,15"  size="150,28" font="Regular;24"/>
+		<widget source="IF" render="Label" position="170,15" size="470,28" font="Regular;24"/>
+		<eLabel position="15,50"  size="640,2" backgroundColor="lgrey"/>
+		<widget source="LabelBSSID" render="Label" position="80,80" size="250,35" valign="left" font="Regular;22"/>
+		<widget source="LabelESSID" render="Label" position="80,120" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="LabelQuality" render="Label" position="80,160" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="LabelSignal" render="Label" position="80,200" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="LabelBitrate" render="Label" position="80,240" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="LabelEnc" render="Label" position="80,280" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="BSSID" render="Label" position="360,80" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="ESSID" render="Label" position="360,120" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="quality" render="Label" position="360,160" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="signal" render="Label" position="360,200" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="bitrate" render="Label" position="360,240" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="enc" render="Label" position="360,280" size="250,35" valign="center" font="Regular;22"/>
+		<widget source="Statustext" render="Label" position="15,430" size="640,35" font="Regular;24" halign="center"/>
+		<widget name="statuspic" position="327,470" size="25,24" zPosition="2" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="on"/>
+		<widget source="key_red" render="Label" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 	</screen>
 	<!-- NetzwerkManager -->
 	<screen name="AutoMountEdit" 				position="172,132" size="1108,588" title="MountEdit"			backgroundColor="transparent">
