@@ -486,6 +486,8 @@
 				}
 			</convert>
 		</widget>
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<ePixmap position="60,540" size="270,105" pixmap="dmm-HD/db.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="Menu" 						position="0,0" 		size="1280,720" title="Main menu" 					flags="wfNoBorder">
@@ -1262,12 +1264,15 @@
 		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Choose your Skin" 	position="80,110" size="322,95" zPosition="3" font="Regular;27" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Choose your Skin" 	position="80,110" size="322,95" zPosition="3" font="Regular;25" backgroundColor="darkgrey" transparent="1"/>
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="Preview" 				position="140,450" size="250,200" alphatest="on" />
-		<widget name="SkinList" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="SkinList" position="550,120" size="660,250" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="Preview" 	position="755,390" size="250,520" alphatest="on" />
+		<widget source="introduction" render="Label" position="550,610" size="660,30" zPosition="10" font="Regular;24" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/red.png" position="80,450"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="320,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="CrashlogAutoSubmitConfiguration" position="0,0" 	size="1280,720" title="CrashlogAutoSubmit settings..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -1285,19 +1290,15 @@
 
 		<widget name="status" position="550,380" size="660,70" halign="center" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
 
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="520,540" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 		<widget name="HelpWindow" position="588,470" size="1,1" zPosition="1" transparent="1"/>	
 
-		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500" size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550" size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/grey.png" 	position="80,600" size="30,30" alphatest="blend" zPosition="2"/>
-		<widget name="VKeyButton" pixmap="dmm-HD/buttons/yellow.png" position="80,600" size="30,30" zPosition="3" alphatest="blend" />
-
-		<widget name="closetext" 		position="130,502" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="installtext" 		position="130,552" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<eLabel text="Virtual KeyBoard" position="130,602" size="220,28" font="Regular;24" transparent="1" />
-		<widget name="VKeyIcon" position="0,0" size="0,0"/>
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
-			<!-- Netzwerk -->
+	<!-- Netzwerk -->
 	<screen name="AdapterSetup" 				position="0,0" 		size="1280,720" title="Network Setup" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
@@ -1985,7 +1986,7 @@
 
 		<widget name="config" 	position="550,120" size="660,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
-	<screen name="BackupSelection" 				position="0,0"		size="1280,720" title="Select files/folders to backup..." flags="wfNoBorder">
+	<screen name="RestoreScreen" 				position="0,0" 		size="1280,720" title="Restore running..." 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -1994,18 +1995,12 @@
 			<convert type="ClockToText">Date</convert>
 		</widget>
 
-		<eLabel text="Select files/folders to backup..." position="80,110" size="350,70" zPosition="3" font="Regular;28" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Restore running..." 	position="80,110" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+		<ePixmap position="60,540" size="270,105" pixmap="dmm-HD/db.png" transparent="1" alphatest="blend"/>
 
-		<widget name="checkList" 	position="550,120" size="660,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1"/>
-
-		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="130,552"  size="280,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="config" 	position="550,120" size="660,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="Ipkg" 						position="0,0" 		size="1280,720" title="Installing Software..." 		flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -2027,7 +2022,8 @@
 
 		<widget name="activityslider" 	position="43,670" size="1194,6" pixmap="dmm-HD/slider100.png" transparent="1"/>
 	</screen>
-	<screen name="IPKGMenu" 					position="0,0" 		size="1280,720" title="Select IPKG source....."  	flags="wfNoBorder">
+
+	<screen name="BackupSelection" 				position="0,0"		size="1280,720" title="Select files/folders to backup..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -2036,16 +2032,18 @@
 			<convert type="ClockToText">Date</convert>
 		</widget>
 
-		<eLabel text="Select IPKG source....." 	position="80,110" size="350,70" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Select files/folders to backup..." position="80,110" size="350,70" zPosition="3" font="Regular;28" backgroundColor="darkgrey" transparent="1"/>
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="filelist" position="550,120" size="660,480" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
+		<widget name="checkList" 	position="550,120" size="660,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1"/>
 
-		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   zPosition="3" />
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   zPosition="3" />
-		<widget name="closetext" 					position="130,500"  size="220,26" zPosition="3" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="edittext" 					position="130,550"  size="220,26" zPosition="3" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="280,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="IpkgInstaller" 				position="0,0" 		size="1280,720" title="Ipkg Installer..." 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -2061,13 +2059,32 @@
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 		<widget name="list" position="550,120" size="660,480" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
+		<widget name="introduction" 	position="550,600" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" transparent="1" />
 
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	 position="80,550"  size="30,30"  alphatest="blend"   zPosition="3" />
-		<widget name="green" text="Install selected" position="130,550" size="220,53" zPosition="3" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="IPKGMenu" 					position="0,0" 		size="1280,720" title="Select IPKG source....."  	flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
 
-		<widget name="red" position="0,0" size="0,0"/>
-		<widget name="yellow" position="0,0" size="0,0"/>
-		<widget name="blue" position="0,0" size="0,0"/>
+		<eLabel text="Select IPKG source....." 	position="80,110" size="350,70" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
+		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
+
+		<widget name="filelist" position="550,120" size="660,480" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
+
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="IPKGSource" 					position="0,0" 		size="1280,720" title="IPKG source" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png"/>
@@ -2084,6 +2101,10 @@
 		<ePixmap position="60,540" size="270,105" pixmap="dmm-HD/db.png" transparent="1" alphatest="blend"/>
 
 		<widget name="text" position="80,180" size="1120,25" font="Regular;22" foregroundColor="white" backgroundColor="darkgrey" transparent="1"/>
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="PacketManager" 				position="0,0" 		size="1280,720" title="IPKG upgrade..." 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -2112,10 +2133,10 @@
 			</convert>
 		</widget>
 
-		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   zPosition="3" />
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   zPosition="3" />
-		<widget name="closetext" 					position="130,500"  size="220,26" zPosition="3" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="reloadtext" 					position="130,550"  size="220,26" zPosition="3" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="RestoreMenu" 					position="0,0" 		size="1280,720" title="Restore Backups" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -2132,28 +2153,12 @@
 
 		<widget name="filelist" position="550,120" size="660,480" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
 
-		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   zPosition="3" />
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   zPosition="3" />
-		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,600"  size="30,30" alphatest="blend"   zPosition="3" />
-		<widget name="canceltext" 					position="130,500"  size="220,26" zPosition="3" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="restoretext" 					position="130,550"  size="220,26" zPosition="3" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="deletetext" 					position="130,600"  size="220,26" zPosition="3" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-	</screen>
-	<screen name="RestoreScreen" 				position="0,0" 		size="1280,720" title="Restore running..." 			flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-
-		<eLabel text="Restore running..." 	position="80,110" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
-		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
-		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
-		<ePixmap position="60,540" size="270,105" pixmap="dmm-HD/db.png" transparent="1" alphatest="blend"/>
-
-		<widget name="config" 	position="550,120" size="660,440" zPosition="3" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="280,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="UpdatePlugin" 				position="0,0" 		size="1280,720" title="Software Update..." 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -2163,16 +2168,13 @@
 		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-
 		<eLabel text="Software Update..." 	position="80,110" size="350,70" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 		<ePixmap position="60,540" size="270,105" pixmap="dmm-HD/db.png" transparent="1" alphatest="blend"/>
-
-		<widget name="package" 			position="550,130" size="660,28" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="status" 			position="550,170" size="660,56" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="package" render="Label" position="550,130" size="660,28" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="status" render="Label" position="550,170" size="660,56" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
 		<widget name="slider" 			position="550,290" size="660,20" borderWidth="1" transparent="1"/>
-
 		<widget name="activityslider" 	position="43,670" size="1194,6" pixmap="dmm-HD/slider100.png" transparent="1"/>
 	</screen>
 	<!-- Sonstiges -->

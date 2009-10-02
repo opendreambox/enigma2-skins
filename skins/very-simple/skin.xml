@@ -440,22 +440,18 @@
 		</widget>
 	</screen>
 	<screen name="CrashlogAutoSubmitConfiguration" 	position=" 50,90" size="620,430" title="CrashlogAutoSubmit settings..." >
-		<widget name="closetext" 	position="  4,5" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
-		<widget name="installtext" 	position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_red" render="Label" position="  4,5" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
 		<eLabel						position="312,5" size="150,35" backgroundColor="yellow"/>
-		<widget name="VKeyIcon" 	position="312,5" size="150,35" zPosition="1" pixmap="very-simple/vkey.png" transparent="1" alphatest="on" />
 		<eLabel						position="466,5" size="150,35" backgroundColor="blue"/>
 
 		<widget name="config" position="10,45" size="600,300" scrollbarMode="showOnDemand"/>
 
-
 		<widget name="HelpWindow" position="160,355" zPosition="1" size="1,1" transparent="1" />
-
+		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="40,310" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 
 		<eLabel 				position=" 0,370" size="620,60" backgroundColor="background2" />
-		<widget name="status" 	position="10,370" size="600,60" zPosition="1" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
-		
-		<widget name="VKeyButton" position="0,0" size="0,0"/>
+		<widget source="status" render="Label" position="10,370" size="600,60" zPosition="1" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
 	</screen>	
 	<screen name="CiSelection" 						position="150,90" size="420,195" title="Common Interface">
 		<eLabel	position="10,12" size="400,31" backgroundColor="background2" />
@@ -1008,6 +1004,18 @@
 		<eLabel				  position=" 0,397" size="420,33" backgroundColor="background2" />
 		<widget name="footer" position="10,402" size="400,25" zPosition="1" font="Regular;22"  backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center"/>
 	</screen>
+	<screen name="SkinSelector" 					position=" 50,90" size="620,430" title="Choose your Skin">
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<eLabel	position="158,5" size="150,35" backgroundColor="green"/>
+		<eLabel	position="312,5" size="150,35" backgroundColor="yellow"/>
+		<eLabel	position="466,5" size="150,35" backgroundColor="blue"/>
+
+		<widget name="SkinList" position="10,45" size="290,350" scrollbarMode="showOnDemand" />
+		<widget name="Preview" position="320,110" size="280,210" alphatest="on"/>
+
+		<eLabel	position=" 0,397" size="620,33" backgroundColor="background2" />
+		<widget source="introduction" render="Label" position="10,402" size="600,25" zPosition="1" font="Regular;22"  backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center"/>
+	</screen>
 	<screen name="ServiceInfo" 						position=" 50,90" size="620,430" title="Serviceinfo">
 		<widget name="red" 		position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
 		<widget name="green" 	position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
@@ -1259,48 +1267,43 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		</applet>
 	</screen>
 
-	<screen name="UpdatePluginMenu" 				position=" 50,90" size="620,330" title="Softwaremanager..." >
-		<widget source="menu" render="Listbox" position=" 10,10" size="320,300" scrollbarMode="showOnDemand">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (2, 2), size = (320, 22), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
-					],
-				"fonts": [gFont("Regular", 20)],
-				"itemHeight": 25
-				}
-			</convert>
-		</widget>
-		<eLabel								   position="339,10" size="  2,310" backgroundColor="grey"/>
-		<widget source="menu" render="Listbox" position="350,10" size="260,300" scrollbarMode="showNever" selectionDisabled="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (2, 2), size = (260, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
-					],
-				"fonts": [gFont("Regular", 20)],
-				"itemHeight": 300
-				}
-			</convert>
-		</widget>
+	<screen name="BackupSelection" 					position=" 50,90" size="620,430" title="Select files/folders to backup...">
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_yellow" render="Label" position="312,5" zPosition="1" size="200,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
+		<eLabel						position="516,5" size="100,35" backgroundColor="blue"/>
+
+		<widget name="checkList" position="10,45" size="600,375" transparent="1" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="IpkgInstaller" 					position=" 50,90" size="620,430" title="Ipkg Installer..." >
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" text="Install selected" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
+		<eLabel 					position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
+		<eLabel 					position="466,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="blue"   shadowColor="background" shadowOffset="-2,-2"/>
+
+		<widget name="list" position="6,45" size="608,350" />
+		<eLabel	position=" 0,397" size="620,33" backgroundColor="background2" />
+		<widget source="introduction" render="Label" position="10,402" size="600,25" zPosition="1" font="Regular;22"  backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center"/>
 	</screen>
 	<screen name="IPKGMenu" 						position=" 50,90" size="620,430" title="Select IPKG source......" >
-		<widget name="closetext" 	position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="edittext" 	position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
 		<eLabel						position="312,5" size="150,35" backgroundColor="yellow"/>
 		<eLabel						position="466,5" size="150,35" backgroundColor="blue"/>
 
 		<widget name="filelist" position="10,45" size="600,360" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="IPKGSource" 						position=" 50,90" size="620, 85" title="IPKG source" >
-		<widget name="closetext" 	position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="edittext" 	position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
 		<eLabel						position="312,5" size="150,35" backgroundColor="yellow"/>
 		<eLabel						position="466,5" size="150,35" backgroundColor="blue"/>
 
 		<widget name="text" position="4,50" size="616,25" font="Regular;20" foregroundColor="#cccccc" />
 	</screen>
 	<screen name="PacketManager" 					position=" 50,90" size="620,430" title="IPKG upgrade..." >
-		<widget name="closetext" 	position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="reloadtext" 	position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
 		<eLabel						position="312,5" size="150,35" backgroundColor="yellow"/>
 		<eLabel						position="466,5" size="150,35" backgroundColor="blue"/>
 
@@ -1317,42 +1320,57 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 			</convert>
 		</widget>
 	</screen>
-	<screen name="UpdatePlugin" 					position="100,90" size="520,156" title="Installing Software...">
-		<widget name="activityslider" 	position=" 2,  2" size="516,8"/>
-		<eLabel							position=" 0, 12" size="520,2" backgroundColor="white"/>
-		<widget name="package" 			position="10, 35" size="500,22" font="Regular;20" />
-		<widget name="status" 			position="10, 70" size="500,44" font="Regular;20" />
-		<eLabel							position=" 0,130" size="520,2" backgroundColor="white"/>
-		<widget name="slider" 			position=" 3,135" size="514,18"/>
-	</screen>
-	<screen name="IpkgInstaller" 					position=" 50,90" size="620,430" title="Ipkg Installer..." >
-		<widget name="red" 		position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="green" 	position="158,5" zPosition="1" size="150,35" text="Install selected" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="yellow" 	position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="blue" 	position="466,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="blue"   shadowColor="background" shadowOffset="-2,-2"/>
-
-		<widget name="list" position="6,45" size="608,360" />
-	</screen>
-	<screen name="BackupScreen" 					position="150,90" size="420,320" title="Backup running..." >
-		<widget name="config" position="10,10" size="400,300" transparent="1" scrollbarMode="showOnDemand" />
-	</screen>
-	<screen name="BackupSelection" 					position=" 50,90" size="620,430" title="Select files/folders to backup...">
-		<widget name="key_red" 		position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="key_green" 	position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="key_yellow" 	position="312,5" zPosition="1" size="200,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
-		<eLabel						position="516,5" size="100,35" backgroundColor="blue"/>
-
-		<widget name="checkList" position="10,45" size="600,375" transparent="1" scrollbarMode="showOnDemand" />
-	</screen>
 	<screen name="RestoreMenu" 						position=" 50,90" size="620,430" title="Restore backups..." >
-		<widget name="canceltext" 	position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="restoretext" 	position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="deletetext" 	position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
-		<eLabel						position="466,5" size="150,35" backgroundColor="blue"/>
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_yellow" render="Label" position="312,5" zPosition="1" size="200,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
+		<eLabel						position="516,5" size="100,35" backgroundColor="blue"/>
 
 		<widget name="filelist" position="10,45" size="600,375" transparent="1" scrollbarMode="showOnDemand" />
 	</screen>
+	<screen name="UpdatePlugin" 					position="100,90" size="520,156" title="Installing Software...">
+		<widget name="activityslider" 	position=" 2,  2" size="516,8"/>
+		<eLabel							position=" 0, 12" size="520,2" backgroundColor="white"/>
+		<widget source="package" render="Label"	position="10, 35" size="500,22" font="Regular;20" />
+		<widget source="status" render="Label" position="10, 70" size="500,44" font="Regular;20" />
+		<eLabel							position=" 0,130" size="520,2" backgroundColor="white"/>
+		<widget name="slider" 			position=" 3,135" size="514,18"/>
+	</screen>
+	<screen name="UpdatePluginMenu" 				position=" 50,90" size="620,350" title="Softwaremanager..." >
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<eLabel						position="158,5" size="150,35" backgroundColor="green"/>
+		<eLabel						position="312,5" size="150,35" backgroundColor="yellow"/>
+		<eLabel						position="466,5" size="150,35" backgroundColor="blue"/>
+
+		<widget source="menu" render="Listbox" position=" 10,45" size="320,300" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (2, 2), size = (320, 22), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+		<eLabel								   position="339,45" size="  2,310" backgroundColor="grey"/>
+		<widget source="menu" render="Listbox" position="350,45" size="260,300" scrollbarMode="showNever" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (2, 2), size = (260, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 300
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="BackupScreen" 					position="150,90" size="420,320" title="Backup running..." >
+		<widget name="config" position="10,10" size="400,300" transparent="1" scrollbarMode="showOnDemand" />
+	</screen>
 	<screen name="RestoreScreen" 					position="150,90" size="420,320" title="Restore running..." >
+		<widget name="config" position="10,10" size="400,300" transparent="1" scrollbarMode="showOnDemand" />
+	</screen>
 		<widget name="config" position="10,10" size="400,300" transparent="1" scrollbarMode="showOnDemand" />
 	</screen>
 

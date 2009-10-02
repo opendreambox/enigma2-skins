@@ -1453,11 +1453,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_yellow" position="560,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
 		<widget name="key_blue" position="830,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue"/>
 	</screen>
-	<screen name="SkinSelector" position="240,134" size="800,502" title="Choose your Skin">
+	<screen name="SkinSelector" position="240,100" size="800,560" title="Choose your Skin">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="SkinList" position="10,10" size="450,475" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
-		<eLabel position="470,2" size="2,500" backgroundColor="grey" zPosition="5"/>
+		<eLabel position="470,2" size="2,516" backgroundColor="grey" zPosition="5"/>
 		<widget name="Preview" position="500,140" size="280,210" alphatest="on"/>
+		<eLabel position="0,518" size="800,2" backgroundColor="grey"/>
+		<widget source="key_red" render="Label" position="10,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="introduction" render="Label" position="300,525" size="490,30" zPosition="10" font="Regular;24" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
 	</screen>
 	<screen name="Standby" position="0,0" size="1280,720" title="Standby" flags="wfNoBorder"/>
 	<screen name="StartWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
@@ -1642,6 +1645,73 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="940,400" size="140,110" zPosition="2" pixmap="dreamTV-HD/icons/wlan.png" transparent="1" alphatest="blend"/>
 	</screen>
 
+	<screen name="BackupSelection" position="340,134" size="600,502" title="Select files/folders to backup...">
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="checkList" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
+
+		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="key_red" render="Label" position=" 0,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="200,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="400,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
+	</screen>
+	<screen name="IpkgInstaller" position="340,134" size="600,502" title="Ipkg Installer...">
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="list" position="10,10" size="580,400" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
+		<widget source="introduction" render="Label" position="10,430" size="580,30" zPosition="10" font="Regular;24" halign="center" transparent="1"/>
+		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="key_red" render="Label" position=" 0,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="200,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+	</screen>
+	<screen name="IPKGMenu" position="340,134" size="600,502" title="Select IPKG source....." >
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
+		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="key_red" render="Label" position=" 0,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="200,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+	</screen>
+	<screen name="IPKGSource" position="100,134" size="1080,132" title="IPKG source">
+		<eLabel position="0,0" size="1080,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="text" position="10,40" size="1060,25" font="Regular;22" foregroundColor="white" />
+		<widget source="key_red" render="Label" position=" 0,102" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="200,102" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+	</screen>
+	<screen name="PacketManager" position="240,134" size="800,502" title="IPKG upgrade...">
+		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="list" render="Listbox"  position="15,20" size="770,424" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_60.png">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 5), size = (670, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (10, 35), size = (670, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (690, 5), size = (48, 48), png = 4), # index 4 is the status pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (5, 58), size = (0, 0), png = 5), # index 4 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+
+		<eLabel position="15,19"  size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,79"  size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,139" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,199" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,259" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,319" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,379" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+		<eLabel position="15,439" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
+
+		<eLabel position="0,460" size="800,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="key_red" render="Label" position=" 0,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="200,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+	</screen>
+	<screen name="RestoreMenu" position="340,134" size="600,502" title="Restore Backups">
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
+		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="key_red" render="Label" position=" 0,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="200,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="400,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
+	</screen>
 	<screen name="UpdatePluginMenu" position="339,84" size="672,553" title="Softwaremanager..." backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel position="1,1" size="670,552" backgroundColor="transpBlack" zPosition="-1"/>
 		<eLabel position="1,1" size="670,2" backgroundColor="grey" zPosition="5"/>
@@ -1672,14 +1742,17 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
+		<widget source="key_red" render="Label" position=" 10,520" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
 	</screen>
 	<screen name="UpdatePlugin" position="340,134" size="600,502" title="Software Update...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="activityslider" position="10,30" size="580,15" borderWidth="1" transparent="1"/>
-		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="package" render="Label" position="20,60" size="560,25" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="status" render="Label" position="20,100" size="560,50" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1"/>
 	</screen>
+
+
 	<screen name="ImageWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Welcome..." position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="#0b67a2" transparent="1"/>
 		<widget name="rc" 			position="150,105" 		size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
@@ -1696,80 +1769,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget name="config" 								position="460,340" 	size="730,200" 	zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>            
 	</screen>
-	<screen name="PacketManager" position="240,134" size="800,502" title="IPKG upgrade...">
-		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
-		<widget source="list" render="Listbox"  position="15,20" size="770,424" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_60.png">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (10, 5), size = (670, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (10, 35), size = (670, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-						MultiContentEntryPixmapAlphaTest(pos = (690, 5), size = (48, 48), png = 4), # index 4 is the status pixmap
-						MultiContentEntryPixmapAlphaTest(pos = (5, 58), size = (0, 0), png = 5), # index 4 is the div pixmap
-					],
-				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
-				"itemHeight": 60
-				}
-			</convert>
-		</widget>
-
-		<eLabel position="15,19"  size="742,2" backgroundColor="darkgrey" zPosition="5"/>
-		<eLabel position="15,79"  size="742,2" backgroundColor="darkgrey" zPosition="5"/>
-		<eLabel position="15,139" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
-		<eLabel position="15,199" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
-		<eLabel position="15,259" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
-		<eLabel position="15,319" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
-		<eLabel position="15,379" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
-		<eLabel position="15,439" size="742,2" backgroundColor="darkgrey" zPosition="5"/>
-
-		<eLabel position="0,460" size="800,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="closetext" 	position="150,467" size="250,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="red"/>
-		<widget name="reloadtext" 	position="400,467" size="250,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="green"/>
-	</screen>
 	<screen name="Ipkg" position="340,134" size="600,502" title="Installing Software...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="activityslider" position="10,30" size="580,15" borderWidth="1" transparent="1"/>
 		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1"/>
-	</screen>
-	<screen name="IpkgInstaller" position="340,134" size="600,502" title="Ipkg Installer...">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="list" position="10,10" size="580,450" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
-
-		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="green" text="Install selected"	position="150,467" size="300,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="green"/>
-
-		<widget name="red" position="0,0" size="0,0"/>
-		<widget name="yellow" position="0,0" size="0,0"/>
-		<widget name="blue" position="0,0" size="0,0"/>
-	</screen>
-	<screen name="IPKGMenu" position="340,134" size="600,502" title="Select IPKG source....." >
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
-		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="closetext" 			position=" 40,467" size="250,30" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
-		<widget name="edittext" 			position="310,467" size="250,30" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
-	</screen>
-	<screen name="IPKGSource" position="100,134" size="1080,102" title="IPKG source">
-		<eLabel position="0,0" size="1080,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="text" position="10,40" size="1060,25" font="Regular;22" foregroundColor="white" />
-	</screen>
-	<screen name="RestoreMenu" position="340,134" size="600,502" title="Restore Backups">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
-		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="canceltext" 	position="0,468" size="200,30" zPosition="1" font="Regular;22" halign="center" transparent="1" foregroundColor="red"/>
-		<widget name="restoretext" 	position="200,468" size="200,30" zPosition="1" font="Regular;22" halign="center" transparent="1" foregroundColor="green"/>
-		<widget name="deletetext"   position="400,468" size="200,30" zPosition="1" font="Regular;22" halign="center" transparent="1" foregroundColor="yellow"/>
-	</screen>
-	<screen name="BackupSelection" position="340,134" size="600,502" title="Select files/folders to backup...">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="checkList" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
-
-		<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="key_red" position=" 0,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="key_green" position="200,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
-		<widget name="key_yellow" position="400,467" size="200,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow"/>
 	</screen>
 	<screen name="BackupScreen" position="340,134" size="600,502" title="Backup running...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>

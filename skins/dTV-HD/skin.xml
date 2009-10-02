@@ -1363,13 +1363,15 @@
 		<widget name="key_yellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
 		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
-	<screen name="SkinSelector" 			position="340,125" 	size="600,502" 	title="Skin Selector" >
+	<screen name="SkinSelector" 			position="340,90" 	size="600,570" 	title="Skin Selector" >
 		<eLabel position="0,0" 		size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="SkinList" 	position="10,10"	size="300,450" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel position="320,0" 	size="2,463" backgroundColor="grey" zPosition="5"/>
 		<widget name="Preview" 		position="340,130" 	size="250,200" alphatest="on" />
 		<eLabel 						position="0,463" size="600,2" backgroundColor="grey" />
-		<eLabel text="Choose your Skin" position="0,472" size="600,30" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1"/>
+		<widget source="introduction" render="Label" position="0,472" size="600,30" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1"/>
+		<ePixmap position="175,532" size="250,38" zPosition="1" pixmap="dTV-HD/button.png" alphatest="blend" />
+		<widget source="key_red" render="Label" position="175,531" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1"/>
 	</screen>
 	<screen name="SleepTimerEdit" 			position="340,250"  size="600,252"  title="Sleep Timer">
 		<eLabel position="0,0" 		size="600,2" backgroundColor="grey" zPosition="5"/>
@@ -1794,40 +1796,43 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" 								position="640,370" 	size="520,150" zPosition="14" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>            
 	</screen>
 
-	<screen name="UpdatePluginMenu" 		position="319,74" 	size="712,572"  title="Softwaremanager..." backgroundColor="transparent2" flags="wfNoBorder">
-		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="1,1" size="600,570" zPosition="-5" alphatest="blend"/>
-		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="71,1" size="640,570" zPosition="-6" alphatest="blend"/>
-		<eLabel position="21,99" size="670,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel position="320,101" size="2,450" backgroundColor="grey" zPosition="5"/>
-		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend"/>
-		<eLabel text="Softwaremanager..." position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="menu" render="Listbox" position="322,101" size="367,450" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select430_45.png">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (0, 9), size = (367, 30), flags = RT_HALIGN_CENTER, text = 1), # index 0 is the MenuText,
-					],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 45
-				}
-			</convert>
-		</widget>
-		<widget source="menu" render="Listbox" 	position="25,125" size="290,300" zPosition="3" scrollbarMode="showNever" selectionDisabled="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (0, 0), size = (290, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
-					],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 280
-				}
-			</convert>
-		</widget>
+	<screen name="BackupSelection" 			position="240,125" 	size="800,502"  title="Select files/folders to backup...">
+		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="checkList" position="10,10" size="780,425" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<eLabel position="0,450" size="800,2" backgroundColor="grey" zPosition="5"/>
+		<ePixmap pixmap="dTV-HD/button.png" position="  0,464" size="250,38" zPosition="1" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="275,464" size="250,38" zPosition="1" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="550,464" size="250,38" zPosition="1" alphatest="blend" />
+		<widget source="key_red" render="Label" position="  0,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="red" 		transparent="1"/>
+		<widget source="key_green" render="Label" position="275,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	transparent="1"/>
+		<widget source="key_yellow" render="Label" position="550,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	transparent="1"/>
 	</screen>
-	<screen name="UpdatePlugin" 			position="340,125" 	size="600,502"  title="Software Update...">
+	<screen name="IpkgInstaller" 			position="340,125" 	size="600,502"  title="Ipkg Installer...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="activityslider" position="10,30" size="580,15" borderWidth="1" transparent="1"/>
-		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="black" transparent="1"/>
-		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="black" transparent="1"/>
-		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1"/>
+		<widget name="list" position="10,10" size="580,400" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" />
+		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget source="introduction" render="Label" position="5,420" zPosition="10" size="590,30" halign="center" valign="center" font="Regular;24" transparent="1"/>
+		<ePixmap pixmap="dTV-HD/button.png" position="  0,464" size="250,38" zPosition="1" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="275,464" size="250,38" zPosition="1" alphatest="blend" />
+		<widget source="key_red" render="Label" position="  0,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="red" 		transparent="1"/>
+		<widget source="key_green" render="Label" position="275,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	transparent="1"/>
+	</screen>
+	<screen name="IPKGMenu" 				position="340,125" 	size="600,502"  title="Select IPKG source....." >
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<ePixmap pixmap="dTV-HD/button.png" position=" 40,464" size="250,38" zPosition="1" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="310,464" size="250,38" zPosition="1" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 40,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="310,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
+	</screen>
+	<screen name="IPKGSource" 				position="150,125" 	size="980,162"  title="IPKG source">
+		<eLabel position="0,0" size="1080,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="text" position="10,40" size="1060,25" font="Regular;22" foregroundColor="white" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 40,124" size="250,38" zPosition="1" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="310,124" size="250,38" zPosition="1" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 40,123" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="310,123" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
 	</screen>
 	<screen name="PacketManager" 			position="240,125" 	size="800,502"  title="IPKG upgrade...">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
@@ -1858,40 +1863,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="0,450" size="800,2" backgroundColor="grey" zPosition="5"/>
 		<ePixmap pixmap="dTV-HD/button.png" position="140,464" size="250,38" zPosition="1" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="410,464" size="250,38" zPosition="1" alphatest="blend" />
-		<widget name="closetext" 			position="140,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
-		<widget name="reloadtext" 			position="410,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
-	</screen>
-	<screen name="Ipkg" 					position="340,125" 	size="600,502"  title="Installing Software...">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="activityslider" position="10,30" size="580,15" borderWidth="1" transparent="1"/>
-		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="black" />
-		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="black" />
-		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1"/>
-	</screen>
-	<screen name="IpkgInstaller" 			position="340,125" 	size="600,502"  title="Ipkg Installer...">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="list" position="10,10" size="580,400" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" />
-		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<ePixmap pixmap="dTV-HD/button300.png" 			position="0,464"   size="300,38" zPosition="1" alphatest="blend" />
-		<eLabel text="OK to select/deselect" 			position="0,463"   size="300,38" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1" />	
-		<ePixmap pixmap="dTV-HD/button.png" 			position="330,464" size="250,38" zPosition="1" alphatest="blend" />
-		<widget name="green" text="Install selected"	position="330,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="green" transparent="1" />
-		<widget name="red" position="0,0" size="0,0"/>
-		<widget name="yellow" position="0,0" size="0,0"/>
-		<widget name="blue" position="0,0" size="0,0"/>
-	</screen>
-	<screen name="IPKGSource" 				position="150,125" 	size="980,102"  title="IPKG source">
-		<eLabel position="0,0" size="1080,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="text" position="10,40" size="1060,25" font="Regular;22" foregroundColor="white" />
-	</screen>
-	<screen name="IPKGMenu" 				position="340,125" 	size="600,502"  title="Select IPKG source....." >
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="filelist" position="10,10" size="580,440" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
-		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<ePixmap pixmap="dTV-HD/button.png" position=" 40,464" size="250,38" zPosition="1" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="310,464" size="250,38" zPosition="1" alphatest="blend" />
-		<widget name="closetext" 			position=" 40,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
-		<widget name="edittext" 			position="310,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
+		<widget source="key_red" render="Label" position="140,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="410,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
 	</screen>
 	<screen name="RestoreMenu" 				position="245,125" 	size="790,502"  title="Restore Backups">
 		<eLabel position="0,0" size="790,2" backgroundColor="grey" zPosition="5"/>
@@ -1900,20 +1873,54 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dTV-HD/button.png" position=" 10,464" size="250,38" zPosition="1" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="270,464" size="250,38" zPosition="1" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="530,464" size="250,38" zPosition="1" alphatest="blend" />
-		<widget name="canceltext" 			position=" 10,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
-		<widget name="restoretext" 			position="270,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
-		<widget name="deletetext"   		position="530,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="yellow"/>
+		<widget source="key_red" render="Label" position=" 10,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="270,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="530,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" transparent="1" foregroundColor="yellow"/>
 	</screen>
-	<screen name="BackupSelection" 			position="240,125" 	size="800,502"  title="Select files/folders to backup...">
-		<eLabel position="0,0" size="800,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="checkList" position="10,10" size="780,425" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
-		<eLabel position="0,450" size="800,2" backgroundColor="grey" zPosition="5"/>
-		<ePixmap pixmap="dTV-HD/button.png" position="  0,464" size="250,38" zPosition="1" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="275,464" size="250,38" zPosition="1" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="550,464" size="250,38" zPosition="1" alphatest="blend" />
-		<widget name="key_red" 				position="  0,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="red" 		transparent="1"/>
-		<widget name="key_green" 			position="275,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	transparent="1"/>
-		<widget name="key_yellow" 			position="550,463" size="250,38" zPosition="2" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	transparent="1"/>
+	<screen name="UpdatePlugin" 			position="340,125" 	size="600,502"  title="Software Update...">
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="activityslider" position="10,30" size="580,15" borderWidth="1" transparent="1"/>
+		<widget source="package" render="Label" position="20,60" size="560,25" font="Regular;20" backgroundColor="black" transparent="1"/>
+		<widget source="status" render="Label" position="20,100" size="560,50" font="Regular;20" backgroundColor="black" transparent="1"/>
+		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1"/>
+	</screen>
+	<screen name="UpdatePluginMenu" 		position="319,74" 	size="712,572"  title="Softwaremanager..." backgroundColor="transparent2" flags="wfNoBorder">
+		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="1,1" size="600,570" zPosition="-5" alphatest="blend"/>
+		<ePixmap pixmap="dTV-HD/menu/menuback.png" position="71,1" size="640,570" zPosition="-6" alphatest="blend"/>
+		<eLabel position="21,99" size="670,2" backgroundColor="grey" zPosition="5"/>
+		<eLabel position="320,101" size="2,420" backgroundColor="grey" zPosition="5"/>
+		<ePixmap position="81,11" size="480,66" pixmap="dTV-HD/menu/db.png" alphatest="blend"/>
+		<eLabel text="Softwaremanager..." position="21,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="menu" render="Listbox" position="322,101" size="367,405" scrollbarMode="showNever" selectionPixmap="dTV-HD/menu/select430_45.png">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (0, 9), size = (367, 30), flags = RT_HALIGN_CENTER, text = 1), # index 0 is the MenuText,
+					],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 45
+				}
+			</convert>
+		</widget>
+		<widget source="menu" render="Listbox" 	position="25,125" size="290,300" zPosition="3" scrollbarMode="showNever" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (0, 0), size = (290, 300), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
+					],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 280
+				}
+			</convert>
+		</widget>
+		<ePixmap pixmap="dTV-HD/button.png" position="35,524" zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position="35,523" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+	</screen>
+
+	<screen name="Ipkg" 					position="340,125" 	size="600,502"  title="Installing Software...">
+		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
+		<widget name="activityslider" position="10,30" size="580,15" borderWidth="1" transparent="1"/>
+		<widget name="package" position="20,60" size="560,25" font="Regular;20" backgroundColor="black" />
+		<widget name="status" position="20,100" size="560,50" font="Regular;20" backgroundColor="black" />
+		<widget name="slider" position="10,190" size="580,20" borderWidth="1" transparent="1"/>
 	</screen>
 	<screen name="BackupScreen" 			position="340,125" 	size="600,502"  title="Backup running...">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
