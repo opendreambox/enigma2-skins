@@ -2084,27 +2084,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_yellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
-	</screen>
-	<screen name="WebIfInterfaceListConfigScreen" position="230,90" size="820,570" title="list of configured Interfaces" >
-		<eLabel 				position="0,0" 		size="820,2" backgroundColor="grey" />
-
-		<widget name="address" 		position="10,20" 	size="120,50"   font="Regular;20" halign="left" transparent="1" />
-		<widget name="port" 		position="130,20" 	size="50,50"   	font="Regular;20" halign="left" transparent="1" />
-		<widget name="ssl" 			position="180,20" 	size="50,50"   	font="Regular;20" halign="left" transparent="1" />
-		<widget name="auth" 		position="240,20" 	size="200,50"   font="Regular;20" halign="left" transparent="1" />
-		<widget name="disabled" 	position="400,20" 	size="180,50"   font="Regular;20" halign="left" transparent="1" />
-
-		<eLabel 					position="10,70" 	size="800,2" backgroundColor="grey" />
-		<widget name="ifacelist" 	position="10,80" 	size="800,350"	zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
-
-		<eLabel 					position="0,518" 	size="820,2" backgroundColor="grey" />
-		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_yellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_red" render="Label" position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<screen name="WebIfInterfaceConfigScreen" position="90,90" size="1100,570" title="edit Interface">
 		<eLabel 				position="0,0" 		size="1100,2" backgroundColor="grey" />
@@ -2113,9 +2095,31 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_red" render="Label" position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
+	</screen>
+	<screen name="WebIfInterfaceListConfigScreen" position="90,90" size="1100,570" title="list of configured Interfaces" >
+		<eLabel 				position="0,0" 		size="1100,2" backgroundColor="grey" />
+
+		<widget source="address" render="Label" position="10,20" 	size="120,50"   font="Regular;20" halign="left" transparent="1" />
+		<widget source="port" render="Label" position="130,20" 	size="50,50"   	font="Regular;20" halign="left" transparent="1" />
+		<widget source="ssl" render="Label" position="180,20" 	size="50,50"   	font="Regular;20" halign="left" transparent="1" />
+		<widget source="auth" render="Label" position="240,20" 	size="200,50"   font="Regular;20" halign="left" transparent="1" />
+		<widget source="disabled" render="Label" position="400,20" 	size="180,50"   font="Regular;20" halign="left" transparent="1" />
+
+		<eLabel 					position="10,70" 	size="1080,2" backgroundColor="grey" />
+		<widget name="ifacelist" 	position="10,80" 	size="1080,350"	zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
+
+		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<!-- VLC Player -->
 	<screen name="VlcMediaListScreen" 		position="90,90" 	size="1100,570" title="VlcMediaListScreen" >

@@ -1371,8 +1371,6 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 	<screen name="RestoreScreen" 					position="150,90" size="420,320" title="Restore running..." >
 		<widget name="config" position="10,10" size="400,300" transparent="1" scrollbarMode="showOnDemand" />
 	</screen>
-		<widget name="config" position="10,10" size="400,300" transparent="1" scrollbarMode="showOnDemand" />
-	</screen>
 
 	<!-- Plugins -->
 	<screen name="CDInfo" 							position=" 50,90" size="620,430" title="CDInfo" >
@@ -1409,43 +1407,43 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 	</screen>
 
 	<screen name="WebIfConfigScreen" 				position=" 50,90" size="620,430" title="WebIfConfigScreen">
-		<widget name="key_red" 		position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="key_green" 	position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
-		<widget name="key_yellow" 	position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_yellow" render="Label" position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
 		<eLabel 					position="466,5" zPosition="1" size="150,35" backgroundColor="blue"/>
 
 		<widget name="config" position="10,50" size="600,360" scrollbarMode="showOnDemand" zPosition="1"/>
 	</screen>
-	<screen name="WebIfInterfaceListConfigScreen" 	position=" 50,90" size="620,430" title="WebIfInterfaceListConfigScreen" >
-		<widget name="key_red" 		position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"   shadowColor="background" shadowOffset="-2,-2" />
-		<eLabel 					position="158,5" zPosition="1" size="150,35" backgroundColor="green"/>
-		<widget name="key_yellow" 	position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2" />
-		<eLabel 					position="466,5" zPosition="1" size="150,35" backgroundColor="blue"/>
-
-		<eLabel 			  	position=" 10,50" size="105,26" zPosition="1" backgroundColor="background2"/>
-		<widget name="address"  position=" 15,50" size=" 95,26" zPosition="2" font="Regular;20" halign="left" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-
-		<eLabel 			  	position="119,50" size=" 50,26" zPosition="1" backgroundColor="background2"/>
-		<widget name="port"  	position="124,50" size=" 40,26" zPosition="2" font="Regular;20" halign="center" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		
-		<eLabel 			  	position="173,50" size=" 55,26" zPosition="1" backgroundColor="background2"/>
-		<widget name="ssl"  	position="178,50" size=" 45,26" zPosition="2" font="Regular;20" halign="center" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-
-		<eLabel 			  	position="232,50" size="165,26" zPosition="1" backgroundColor="background2"/>
-		<widget name="auth"  	position="237,54" size="155,22" zPosition="2" font="Regular;20" halign="left" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-
-		<eLabel 			  	position="401,50" size="209,26" zPosition="1" backgroundColor="background2"/>
-		<widget name="disabled" position="406,50" size="199,26" zPosition="2" font="Regular;20" halign="left" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-
-		<widget name="ifacelist" position="10,90" size="600,325" scrollbarMode="showOnDemand"/>
-	</screen>
 	<screen name="WebIfInterfaceConfigScreen" 		position=" 50,90" size="620,430" title="WebIfInterfaceConfigScreen">
-		<widget name="key_red" 		position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"   shadowColor="background" shadowOffset="-2,-2" />
-		<widget name="key_green" 	position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"   shadowColor="background" shadowOffset="-2,-2" />
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
 		<eLabel 					position="312,5" zPosition="1" size="150,35" backgroundColor="yellow"/>
-		<widget name="key_blue" 	position="466,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="blue"  shadowColor="background" shadowOffset="-2,-2" />
+		<widget source="key_blue" render="Label" position="466,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="blue"  shadowColor="background" shadowOffset="-2,-2" />
 
 		<widget name="config" position="10,50" size="600,360" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="WebIfInterfaceListConfigScreen" 	position=" 50,90" size="620,430" title="WebIfInterfaceListConfigScreen" >
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_yellow" render="Label" position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
+		<widget source="key_blue" render="Label" position="466,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="blue"  shadowColor="background" shadowOffset="-2,-2" />
+
+		<eLabel 			  	position=" 10,50" size="105,26" zPosition="1" backgroundColor="background2"/>
+		<widget source="address" render="Label" position=" 15,50" size=" 95,26" zPosition="2" font="Regular;20" halign="left" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
+
+		<eLabel 			  	position="119,50" size=" 50,26" zPosition="1" backgroundColor="background2"/>
+		<widget source="port" render="Label" position="124,50" size=" 40,26" zPosition="2" font="Regular;20" halign="center" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
+		
+		<eLabel 			  	position="173,50" size=" 55,26" zPosition="1" backgroundColor="background2"/>
+		<widget source="ssl" render="Label" position="178,50" size=" 45,26" zPosition="2" font="Regular;20" halign="center" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
+
+		<eLabel 			  	position="232,50" size="165,26" zPosition="1" backgroundColor="background2"/>
+		<widget source="auth" render="Label" position="237,54" size="155,22" zPosition="2" font="Regular;20" halign="left" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
+
+		<eLabel 			  	position="401,50" size="209,26" zPosition="1" backgroundColor="background2"/>
+		<widget source="disabled" render="Label" position="406,50" size="199,26" zPosition="2" font="Regular;20" halign="left" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
+
+		<widget name="ifacelist" position="10,90" size="600,325" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="DVDToolbox" 						position=" 50,90" size="620,445" title="DVD media toolbox" >

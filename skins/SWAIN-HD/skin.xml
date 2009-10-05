@@ -2316,32 +2316,34 @@
 
 		<widget name="config" position="15,20" size="640,475" scrollbarMode="showOnDemand"/>
 
-		<widget name="key_red" 		position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="key_green" 	position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget name="key_yellow" 	position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
-	</screen>
-	<screen name="WebIfInterfaceListConfigScreen" position="172,132" size="1108,588" title="list of configured Interfaces" backgroundColor="transparent">
-		<eLabel 			position=" 5, 5" size="680,510" zPosition="-1" backgroundColor="background" />
-
-		<widget name="address" 		position=" 15, 20" size="120, 50" 	font="Regular;20" halign="left"/>
-		<widget name="port" 		position="135, 20" size=" 50, 50" 	font="Regular;20" halign="left"/>
-		<widget name="ssl" 			position="185, 20" size=" 50, 50" 	font="Regular;20" halign="left"/>
-		<widget name="auth" 		position="245, 20" size="200, 50" 	font="Regular;20" halign="left"/>
-		<widget name="disabled" 	position="415, 20" size="180, 50" 	font="Regular;20" halign="left"/>
-		<eLabel 					position=" 15, 70" size="660,  2" 	backgroundColor="lgrey"/>
-		<widget name="ifacelist" 	position=" 15, 80" size="660,400" 	scrollbarMode="showOnDemand"/>
-
-		<widget name="key_red" 		position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="key_yellow" 	position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_red" render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 	</screen>
 	<screen name="WebIfInterfaceConfigScreen" 	position="172,132" size="1108,588" title="edit Interface"		backgroundColor="transparent">
 		<eLabel 			position=" 5, 5" size="660,510" zPosition="-1" backgroundColor="background" />
 
 		<widget name="config" position="15,20" size="640,475" scrollbarMode="showOnDemand"/>
 
-		<widget name="key_red" 		position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="key_green" 	position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget name="key_blue" 	position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
+		<widget source="key_red" render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_blue" render="Label" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
+	</screen>
+	<screen name="WebIfInterfaceListConfigScreen" position="172,132" size="1108,588" title="list of configured Interfaces" backgroundColor="transparent">
+		<eLabel 			position=" 5, 5" size="680,510" zPosition="-1" backgroundColor="background" />
+
+		<widget source="address" render="Label" position=" 15, 20" size="120, 50" 	font="Regular;20" halign="left"/>
+		<widget source="port" render="Label" position="135, 20" size=" 50, 50" 	font="Regular;20" halign="left"/>
+		<widget source="ssl" render="Label" position="185, 20" size=" 50, 50" 	font="Regular;20" halign="left"/>
+		<widget source="auth" render="Label" position="245, 20" size="200, 50" 	font="Regular;20" halign="left"/>
+		<widget source="disabled" render="Label" position="415, 20" size="180, 50" 	font="Regular;20" halign="left"/>
+		<eLabel 					position=" 15, 70" size="660,  2" 	backgroundColor="lgrey"/>
+		<widget name="ifacelist" 	position=" 15, 80" size="660,400" 	scrollbarMode="showOnDemand"/>
+
+		<widget source="key_red" render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" render="Label" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<!-- Suomipoeka -->
 	<screen name="MovieSelectionSP" 			position="172,132" size="1108,588" title=" " 					backgroundColor="transparent">
