@@ -1899,7 +1899,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="Pic_Setup" position="340,134" size="600,502" title="Settings">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="liste" position="10,10" size="580,480" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
+		<widget name="config" position="10,10" size="580,480" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
 		<widget source="key_red" render="Label" position=" 20,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
 		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
 	</screen>
