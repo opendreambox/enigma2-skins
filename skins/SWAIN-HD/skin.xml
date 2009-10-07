@@ -972,6 +972,8 @@
 	<screen name="FileBrowser" 					position="172,132" size="1108,588" title="DVD File Browser" backgroundColor="transparent">
 		<eLabel position="5,5" size="660,510" zPosition="-1" backgroundColor="background" />
 		<widget name="filelist" position="15,15" size="640,490" zPosition="2" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget source="key_red" 	render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" 	render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
 	</screen>
 	<!-- Timer -->
 	<screen name="TimerEditList" 				position="172,132" size="1108,588" title="Timer Editor"		 	backgroundColor="transparent">
@@ -1577,13 +1579,14 @@
 		<widget source="key_green" 	render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
 	</screen>
 	<screen name="CIconfigMenu" 				position="172,132" size="1108,588" title="CIconfigMenu" 		backgroundColor="transparent">
-		<eLabel 						position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
-		<widget name="CAidList.desc" 	position="15, 20" size="640,30" font="Regular;24"/>
-		<eLabel 						position="15, 59" size="640,2" backgroundColor="lgrey" />
-		<widget name="CAidList" 		position="15, 70" size="640,75" font="Regular;22"/>
-		<widget name="ServiceList.desc" position="15,165" size="640,30" font="Regular;24"/>
-		<eLabel 						position="15,204" size="640,2" backgroundColor="lgrey" />
-		<widget name="ServiceList" 		position="15,215" size="640,300" scrollbarMode="showOnDemand"/>
+		<eLabel position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
+		<widget source="CAidList_desc" render="Label" position="15, 20" size="640,30" font="Regular;24"/>
+		<eLabel position="15, 59" size="640,2" backgroundColor="lgrey" />
+		<widget source="CAidList" render="Label" position="15, 70" size="640,75" font="Regular;22"/>
+		<widget source="ServiceList_desc" render="Label" position="15,165" size="640,30" font="Regular;24"/>
+		<eLabel position="15,204" size="640,2" backgroundColor="lgrey" />
+		<widget name="ServiceList" position="15,215" size="640,300" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget source="ServiceList_info" render="Label" 	position="15,215" size="640,300" font="Regular;22" transparent="1"/>
 
 		<widget source="key_red" 	render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 		<widget source="key_green" 	render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
@@ -1591,39 +1594,39 @@
 		<widget source="key_blue" 	render="Label" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<screen name="easyCIconfigMenu" 			position="172,132" size="1108,588" title="easyCIconfigMenu" 	backgroundColor="transparent">
-		<eLabel 						position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
-		<widget name="ServiceList.desc" position="15,20" size="640,30" font="Regular;24"/>
-		<eLabel 						position="15,59" size="640,2" backgroundColor="lgrey" />
-		<widget name="ServiceList" 		position="15,70" size="640,400" font="Regular;22"/>
-
-		<widget source="key_red" 	render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget source="key_green" 	render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<eLabel position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
+		<widget source="ServiceList_desc" render="Label" position="15,20" size="640,30" font="Regular;24"/>
+		<eLabel position="15,59" size="640,2" backgroundColor="lgrey" />
+		<widget name="ServiceList" position="15,70" size="640,400" font="Regular;22"/>
+		<widget source="ServiceList_info" render="Label" 	position="15,70" size="640,400" font="Regular;22"/>
 	</screen>
 	<screen name="CAidSelect" 					position="172,132" size="1108,588" title="select CAId's"		backgroundColor="transparent">
-		<eLabel 						position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
-		<widget name="list" position="15,20" size="640,450" scrollbarMode="showOnDemand"/>
-
+		<eLabel position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
+		<widget name="list" position="15,20" size="640,425" scrollbarMode="showOnDemand"/>
+		<eLabel position="15,460" size="640,2" backgroundColor="lgrey"/>
+		<widget source="introduction" render="Label" 	position="15,470" size="640,27" font="Regular;24" halign="center"/>
 		<widget source="key_red" 	render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 		<widget source="key_green" 	render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
 	</screen>
 	<screen name="myProviderSelection" 			position="172,132" size="1108,588" title="Select provider to add..." backgroundColor="transparent">
-		<eLabel 						position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
-		<widget name="list" position="15,20" size="640,476" scrollbarMode="showOnDemand"/>
-
-		<widget name="key_red" 		position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="key_green" 	position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget name="key_yellow" 	position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
-		<widget name="key_blue" 	position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
+		<eLabel position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
+		<widget name="list" position="15,20" size="640,425" scrollbarMode="showOnDemand"/>
+		<eLabel position="15,460" size="640,2" backgroundColor="lgrey"/>
+		<widget source="introduction" render="Label" 	position="15,470" size="640,27" font="Regular;24" halign="center"/>
+		<widget source="key_red" 	render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" 	render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" 	render="Label" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<screen name="myChannelSelection" 			position="172,132" size="1108,588" title="Select service to add..."	backgroundColor="transparent">
-		<eLabel 						position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
-		<widget name="list" position="15,20" size="640,476" scrollbarMode="showOnDemand"/>
-
-		<widget name="key_red" 		position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="key_green" 	position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget name="key_yellow" 	position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
-		<widget name="key_blue" 	position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
+		<eLabel position=" 5,  5" size="660,510" zPosition="-1" backgroundColor="background" />
+		<widget name="list" position="15,20" size="640,425" scrollbarMode="showOnDemand"/>
+		<eLabel position="15,460" size="640,2" backgroundColor="lgrey"/>
+		<widget source="introduction" render="Label" 	position="15,470" size="640,27" font="Regular;24" halign="center"/>
+		<widget source="key_red" 	render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" 	render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" 	render="Label" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>	
 	<!-- Jugendschutz -->
 	<screen name="ParentalControlChangePin" 	position="172,132" size="1108,588" title="Change pin code"	    backgroundColor="transparent">
@@ -1886,16 +1889,13 @@
 	<!-- CD-Info -->
 	<screen name="CDInfo" 						position="172,132" size="1108,588" title="CDInfo" 				backgroundColor="transparent">
 		<eLabel 			position=" 5, 5" size="660,510" zPosition="-1" backgroundColor="background" />
-
 		<widget name="config" position="15,20" size="640,475" scrollbarMode="showOnDemand"/>
-
 		<eLabel 				position="700, 5"  size="320,510" zPosition="-1" backgroundColor="background" />
-		<widget name="info" 	position="710,20"  size="300,120" font="Regular;21"/>
-	    <widget name="info2" 	position="710,140" size="300,200" font="Regular;21"/>
-
-		<widget name="key_red" 		position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="key_green" 	position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget name="key_blue" 	position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
+		<widget source="info" render="Label" position="710,20"  size="300,120" font="Regular;21"/>
+	    <widget source="info2" render="Label" position="710,140" size="300,200" font="Regular;21"/>
+		<widget source="key_red" render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_blue" render="Label" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<!-- DVD Burner -->
 	<screen name="DVDToolbox" 					position="172,132" size="1108,588" title="DVD media toolbox" 	backgroundColor="transparent">
@@ -1909,7 +1909,6 @@
 		<widget source="key_red" 	render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 		<widget source="key_green" 	render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
 		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
-		<widget source="key_blue" 	render="Label" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<screen name="ProjectSettings" 				position="172,132" size="1108,588" title="Collection settings"	backgroundColor="transparent">
 		<eLabel 			position=" 5, 5" size="860,510" zPosition="-1" backgroundColor="background" />
@@ -1979,16 +1978,13 @@
 	<!-- Picture Player -->
 	<screen name="picshow" 						position="172,132" size="1108,588" title="PicturePlayer" 		backgroundColor="transparent">
 		<eLabel 			position=" 5, 5" size="1060,510" zPosition="-1" backgroundColor="background" />
-
 		<widget name="thn"   position="30,20"  size="300,240" alphatest="on" />
-		<widget name="label" position="30,280" size="300,75" font="Regular;22" transparent="1"/>
-
+		<widget source="label" render="Label" position="30,280" size="300,75" font="Regular;22" transparent="1"/>
 		<widget name="filelist" position="380,20" size="660,483" zPosition="3" scrollbarMode="showOnDemand"/>
-
-		<widget name="key_red" 		position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="key_green" 	position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-		<widget name="key_yellow" 	position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
-		<widget name="key_blue" 	position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
+		<widget source="key_red" render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" render="Label" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<screen name="Pic_Exif" 					position="172,132" size="1108,588" title="Exif Info"			backgroundColor="transparent">
 		<eLabel 			position=" 5, 5" size="760,510" zPosition="-1" backgroundColor="background" />
@@ -2000,10 +1996,13 @@
 				"itemHeight": 35 }
 			</convert>
 		</widget>
+		<widget source="key_red" render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 	</screen>
 	<screen name="Pic_Setup" 					position="172,132" size="1108,588" title="Settings"				backgroundColor="transparent">
+		<widget source="key_red" render="Label" position="5,525"  size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
 		<eLabel 			position=" 5, 5" size="660,510" zPosition="-1" backgroundColor="background" />
-		<widget name="liste" position="15,20" size="640,480" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="15,20" size="640,480" scrollbarMode="showOnDemand"/>
 	</screen>
 	<!-- MerlinMP3Player -->
 	<screen name="CurrentPlaylist" 				position="172,132" size="1108,588" title="CurrentPlaylist"		backgroundColor="transparent">
