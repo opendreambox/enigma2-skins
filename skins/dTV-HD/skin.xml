@@ -606,13 +606,14 @@
 	</screen>
 	<screen name="CIconfigMenu" 			position="90,90" 	size="1100,570" title="CI Assignment">
 		<eLabel 						position="0,0" 	  	size="1100,2"   backgroundColor="grey" />
-		<widget name="CAidList.desc" 	position="20,10"  	size="1060,30"  font="Regular;24" />
+		<widget source="CAidList_desc" render="Label" position="20,10"  	size="1060,30"  font="Regular;24" />
 		<eLabel 						position="10,50"   	size="1080,2" 	backgroundColor="grey" />
-		<widget name="CAidList" 		position="20,60"  	size="1060,75" 	zPosition="3" font="Regular;22" />
+		<widget source="CAidList" render="Label" position="20,60"  	size="1060,75" 	zPosition="3" font="Regular;22" />
 		<eLabel 						position="10,145"  	size="1080,2" 	backgroundColor="grey" />
-		<widget name="ServiceList.desc" position="20,155" 	size="1060,30" 	zPosition="3" font="Regular;24" />
+		<widget source="ServiceList_desc" render="Label" position="20,155" 	size="1060,30" 	zPosition="3" font="Regular;24" />
 		<eLabel 						position="10,195"  	size="1080,2" 	backgroundColor="grey" />
-		<widget name="ServiceList" 		position="20,205" 	size="1060,300" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<widget name="ServiceList" 							position="20,205" 	size="1060,300" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
+		<widget source="ServiceList_info" render="Label" 	position="20,205" 	size="1060,300" zPosition="3" font="Regular;24" transparent="1"/>
 		<eLabel 						position="10,518" 	size="1080,2" 	backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -625,10 +626,10 @@
 	</screen>
 	<screen name="easyCIconfigMenu" 		position="90,90" 	size="1100,570" title="CI Assignment">
 		<eLabel 						position="0,0" 	  	size="1100,2"  backgroundColor="grey" />
-		<widget name="ServiceList.desc" position="10,10"  	size="1080,30" font="Regular;24" />
+		<widget source="ServiceList_desc" render="Label" position="10,10"  	size="1080,30" font="Regular;24" />
 		<eLabel 						position="0,50"   	size="1100,2" backgroundColor="grey" />
-		<widget name="ServiceList" 		position="10,60"  	size="1080,450" 	zPosition="3" font="Regular;22" />
-
+		<widget name="ServiceList" 							position="10,60"  	size="1080,450" zPosition="3" font="Regular;22" transparent="1"/>
+		<widget source="ServiceList_info" render="Label" 	position="10,60"  	size="1080,450" font="Regular;24" transparent="1"/>
 		<eLabel 						position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position="145,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="415,532"  zPosition="1" size="250,38" alphatest="blend" />
@@ -640,7 +641,8 @@
 	<screen name="CAidSelect" 				position="340,125" 	size="600,502"  title="select CAId's">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 
-		<widget name="list" position="0,10" size="600,425" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<widget name="list" 						 position="0,10" size="600,400" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<widget source="introduction" render="Label" position="0,420" size="600,30" zPosition="10" font="Regular;24" halign="center" transparent="1" />
 
 		<eLabel 				position="0,450" size="600,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" 		position=" 40,464" zPosition="1" size="250,38" alphatest="blend" />
@@ -650,29 +652,31 @@
 	</screen>
 	<screen name="myProviderSelection" 		position="90,90" 	size="1100,570" title="Select provider to add...">
 		<eLabel position="0,0" size="1140,2" backgroundColor="grey" />
-		<widget name="list" position="10,20" size="1080,480" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<widget name="list" position="10,20" size="1080,450" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<widget source="introduction" render="Label" position="0,480" size="600,30" zPosition="10" font="Regular;24" halign="center" transparent="1" />
 		<eLabel position="0,518" size="1120,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 30,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="300,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="570,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="840,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="key_red" 				position=" 30,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="black" transparent="1"/>
-		<widget name="key_green" 			position="300,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="black" transparent="1"/>
-		<widget name="key_yellow" 			position="570,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="black" transparent="1"/>
-		<widget name="key_blue" 			position="840,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_red" render="Label" position=" 30,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_green" render="Label" position="300,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_yellow" render="Label" position="570,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_blue" render="Label" position="840,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="black" transparent="1"/>
 	</screen>
 	<screen name="myChannelSelection" 		position="90,90" 	size="1100,570" title="Select service to add...">
 		<eLabel position="0,0" size="1140,2" backgroundColor="grey" />
-		<widget name="list" position="10,20" size="1080,480" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<widget name="list" position="10,20" size="1080,450" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png"/>
+		<widget source="introduction" render="Label" position="0,480" size="600,30" zPosition="10" font="Regular;24" halign="center" transparent="1" />
 		<eLabel position="0,518" size="1120,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 30,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="300,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="570,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="840,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="key_red" 				position=" 30,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="black" transparent="1"/>
-		<widget name="key_green" 			position="300,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="black" transparent="1"/>
-		<widget name="key_yellow" 			position="570,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="black" transparent="1"/>
-		<widget name="key_blue" 			position="840,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_red" render="Label" position=" 30,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_green" render="Label" position="300,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_yellow" render="Label" position="570,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="black" transparent="1"/>
+		<widget source="key_blue" render="Label" position="840,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="black" transparent="1"/>
 	</screen>
 	<screen name="Console" 					position="90,90"    size="1100,570" title="Command execution...">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
@@ -2047,7 +2051,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- Picture Player -->
 	<screen name="picshow" 					position="90,90" 	size="1100,570" title="PicturePlayer" >
 		<eLabel 					position="0,0" 		size="1100,2" backgroundColor="grey" />
-		<widget name="label" position="20,20"  	size="260,160" font="Regular;20" transparent="1"/>
+		<widget source="label" render="Label" position="20,20"  	size="260,160" font="Regular;20" transparent="1"/>
 		<widget name="thn"   position="20,200"	size="260,300" alphatest="on" />
 		<eLabel 					position="300,0"   size="2,518" backgroundColor="grey" />
 		<widget name="filelist" 	position="320,20"  size="760,480" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
@@ -2056,12 +2060,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_yellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_red" render="Label" position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
-	<screen name="Pic_Exif" 				position="340,125" 	size="600,502"  title="Info" >
+	<screen name="Pic_Exif" 				position="340,90" 	size="600,570"  title="Info" >
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget source="menu" render="Listbox"  position="10,10" size="580,480" zPosition="3" scrollbarMode="showOnDemand" selectionDisabled="1" >
 			<convert type="TemplatedMultiContent">
@@ -2071,10 +2075,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				"itemHeight": 35 }
 			</convert>
 		</widget>
+		<eLabel position="0,518" size="600,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
-	<screen name="Pic_Setup" 				position="340,125" 	size="600,502"  title="Settings" >
+	<screen name="Pic_Setup" 				position="340,90" 	size="600,570"  title="Settings" >
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="liste" position="10,10" size="580,480" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
+		<eLabel position="0,518" size="600,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<!-- WebIF -->	
 	<screen name="WebIfConfigScreen" 		position="90,90" 	size="1100,570" title="Main Setup" >
@@ -2172,6 +2184,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="FileBrowser" 				position="90,90" 	size="1100,570" title="DVD File Browser" >
 		<eLabel 				position="0,0" 	 size="1100,2" backgroundColor="grey" />
 		<widget name="filelist" position="10,10" size="1080,500" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
+		<eLabel 				position="0,518" 	size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
+		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<screen name="ProjectSettings" 			position="90,90" 	size="1100,570" title="Collection settings" >
 		<eLabel 					position="0,0" 		size="1100,2" backgroundColor="grey" />
@@ -2197,11 +2214,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="560,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
 		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
 		<widget name="key_yellow" 			position="560,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<screen name="TitleList" 				position="90,90" 	size="1100,570" title="DVD Tool" >
 		<eLabel 					position="0,0" 		size="1100,2" backgroundColor="grey" />
@@ -2312,17 +2327,17 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- CD-Info -->
 	<screen name="CDInfo" 					position="90,90" 	size="1100,570" title="CDInfo" >
 		<eLabel 					position="0,0" 	 	size="1100,2" backgroundColor="grey" />
-	    <widget name="info" 		position="20,20"   size="260,200" font="Regular;21" transparent="1" />
-	    <widget name="info2" 		position="20,240"  size="260,260" font="Regular;21" transparent="1" />
+	    <widget source="info" render="Label" position="20,20"   size="260,200" font="Regular;21" transparent="1" />
+	    <widget source="info2" render="Label" position="20,240"  size="260,260" font="Regular;21" transparent="1" />
 		<eLabel 					position="300,0"   size="2,518" backgroundColor="grey" />
 		<widget name="config" 		position="320,20"	size="760,475" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 		<eLabel 					position="0,518" 	size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="830,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="key_red" 				position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_green" 			position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
-		<widget name="key_blue" 			position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_red" render="Label" position=" 20,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" 	backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" 	backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<!-- MyTubePlayer -->
 	<screen name="MyTubePlayer" 				position="69,566" 	size="1142,132" backgroundColor="transparent2" title="InfoBar" flags="wfNoBorder" >

@@ -595,10 +595,10 @@
 
 		<widget name="filelist"    position="550,120" size="660,490" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
 
-		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,550"  size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" 	render="Label"  position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="MediaPlayerSettings" 			position="0,0" 		size="1280,720" title="Edit settings"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -670,6 +670,10 @@
 		<eLabel text="DVD File Browser" position="80,110" size="350,72" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
 
 		<widget name="filelist"    position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" 	render="Label"  position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- Timer -->
 	<screen name="TimerEditList" 				position="0,0" 		size="1280,720" title="Timer Editor"				flags="wfNoBorder">
@@ -1818,13 +1822,14 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="CAidList.desc" 	position="550,120" size="660,30" font="Regular;24" backgroundColor="background" transparent="1"/>
+		<widget source="CAidList_desc" render="Label" position="550,120" size="660,30" font="Regular;24" backgroundColor="background" transparent="1"/>
 		<eLabel 						position="550,160" size="660,2" backgroundColor="grey" />
-		<widget name="CAidList" 		position="550,170" size="660,75" font="Regular;22" backgroundColor="background" transparent="1"/>
-		<widget name="ServiceList.desc" position="550,265" size="660,30" font="Regular;24" backgroundColor="background" transparent="1"/>
+		<widget source="CAidList" render="Label" position="550,170" size="660,75" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget source="ServiceList_desc" render="Label" position="550,265" size="660,30" font="Regular;24" backgroundColor="background" transparent="1"/>
 		<eLabel 						position="550,305" size="660,2" backgroundColor="grey" />
 
-		<widget name="ServiceList" 		position="550,315" size="660,300" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
+		<widget name="ServiceList" 							position="550,315" size="660,300" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
+		<widget source="ServiceList_info" render="Label" 	position="550,315" size="660,300" font="Regular;22" backgroundColor="background" transparent="1"/>
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
@@ -1847,9 +1852,10 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="ServiceList.desc" position="550,120" size="660,30" font="Regular;24" backgroundColor="background" transparent="1"/>
+		<widget source="ServiceList_desc" render="Label" position="550,120" size="660,30" font="Regular;24" backgroundColor="background" transparent="1"/>
 		<eLabel 						position="550,160" size="660,2" backgroundColor="grey" />
-		<widget name="ServiceList" 		position="550,170" size="660,400" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget name="ServiceList" 							position="550,170" size="660,400" backgroundColor="background" transparent="1"/>
+		<widget source="ServiceList_info" render="Label" 	position="550,170" size="660,400" font="Regular;24" backgroundColor="background" transparent="1"/>
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
@@ -1871,6 +1877,7 @@
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 		<widget name="list" position="550,120" size="660,450" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
+		<widget source="introduction" render="Label" position="550,560" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" transparent="1" />
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
@@ -1890,15 +1897,16 @@
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 		<widget name="list" position="550,120" size="660,450" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
+		<widget source="introduction" render="Label" position="550,560" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" transparent="1" />
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="myChannelSelection" 			position="0,0" 		size="1280,720" title="Select service to add..."	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -1913,15 +1921,16 @@
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 		<widget name="list" position="550,120" size="660,450" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
+		<widget source="introduction" render="Label" position="550,560" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" transparent="1" />
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>	
 		<!-- Jugendschutz -->
 	<screen name="ParentalControlChangePin" 	position="0,0" 		size="1280,720" title="Change pin code"				flags="wfNoBorder">
@@ -3162,15 +3171,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<widget name="config" position="550,120" size="660,275" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
 
-		<widget name="info" 	position="550,400" size="660,80"  font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
-	    <widget name="info2" 	position="550,480" size="660,120" font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="info" render="Label" position="550,400" size="660,80"  font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
+	    <widget source="info2" render="Label" position="550,480" size="660,120" font="Regular;21" backgroundColor="darkgrey" transparent="1"/>
 
-		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,550"  size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" 	render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- DVD Burner -->
 	<screen name="DVDToolbox" 					position="0,0" 		size="1280,720" title="DVD media toolbox" 			flags="wfNoBorder">
@@ -3194,11 +3203,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
 		<widget source="key_red" 	render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" 	render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="ProjectSettings" 				position="0,0" 		size="1280,720" title="Collection settings"			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -3674,7 +3681,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel text="PicturePlayer" position="80,40" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
 
-		<widget name="label" position="100,110" size="300,75" font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="label" render="Label" position="100,110" size="300,75" font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
 		<widget name="thn"   position="100,200"	size="300,240" alphatest="on" />
 
 		<widget name="filelist" position="550,120" size="660,480" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
@@ -3683,10 +3690,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="Pic_Exif" 					position="0,0" 		size="1280,720" title="Info"						flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -3706,6 +3713,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				"itemHeight": 35 }
 			</convert>
 		</widget>
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="Pic_Setup" 					position="0,0" 		size="1280,720" title="Settings"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -3716,7 +3725,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="Settings" position="80,110" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="liste" position="550,120" size="660,480" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="550,120" size="660,480" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- MerlinMP3Player -->
 	<screen name="CurrentPlaylist" 				position="0,0" 		size="1280,720" title=""							flags="wfNoBorder">
