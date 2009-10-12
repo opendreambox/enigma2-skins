@@ -1047,7 +1047,7 @@
 		<eLabel position="15,504" size="1040,2" zPosition="1" backgroundColor="#444444" />
 	</screen>
 	<screen name="SleepTimerEdit" 				position="172,132" size="1108,588" title="Sleep Timer"			backgroundColor="transparent">
-		<eLabel position="5,5" size="660,325" zPosition="-1" backgroundColor="background" />
+		<eLabel position="5,5" size="660,370" zPosition="-1" backgroundColor="background" />
 
 		<widget name="current_status" 	position="35,20" size="600,32" font="Regular;27"/>
 		<eLabel 						position="35,60" size="600,2" />
@@ -1056,16 +1056,16 @@
 		<widget name="red_text" 		position="35,100" size="500,30" font="Regular;24" foregroundColor="red"/>
 		<widget name="green_text" 		position="35,150" size="500,30" font="Regular;24" foregroundColor="green"/>
 		<widget name="yellow_text" 		position="35,200" size="500,30" font="Regular;24" foregroundColor="yellow"/>
+		<widget name="blue_text" 		position="35,250" size="500,30" font="Regular;24" foregroundColor="blue"/>
 
-		<widget name="pretext" 			position="35,280"  size="280,30" font="Regular;24"/>
-		<widget name="input" 			position="325,280" size="60,30"  font="Regular;24"/>
-		<widget name="aftertext" 		position="385,280" size="100,30" font="Regular;24"/>
+		<widget name="pretext" 			position="35,320"  size="280,30" font="Regular;24"/>
+		<widget name="input" 			position="325,320" size="60,30"  font="Regular;24"/>
+		<widget name="aftertext" 		position="385,320" size="100,30" font="Regular;24"/>
 
 		<widget name="red" position="0,0" size="0,0" />
 		<widget name="green" position="0,0" size="0,0"/>
 		<widget name="yellow" position="0,0" size="0,0"/>
 		<widget name="blue" position="0,0" size="0,0" />
-		<widget name="blue_text" position="0,0" size="0,0"/>
 	</screen>
 	<!-- Informationen -->
 	<screen name="About" 						position="172,132" size="1108,588" title="About Dreambox" 		backgroundColor="transparent">

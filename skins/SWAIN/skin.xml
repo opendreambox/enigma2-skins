@@ -967,7 +967,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="8,434" size="585,1" zPosition="1" backgroundColor="color02" />
 	</screen>
 	<screen name="SleepTimerEdit" 					position=" 96,105" size="623,470" title="Sleep Timer" backgroundColor="transparent">
-		<eLabel position="2, 4" size="404, 260" zPosition="-1" backgroundColor="background" />
+		<eLabel position="2, 4" size="404, 285" zPosition="-1" backgroundColor="background" />
 
 		<widget name="current_status" position="19,16" size="337,25" font="Regular;20" />
 		<eLabel position="19, 48" size="337, 1" />
@@ -975,16 +975,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="red_text" 	position="19, 80" size="380,24" font="Regular;20" foregroundColor="red" />
 		<widget name="green_text" 	position="19,120" size="380,24" font="Regular;20" foregroundColor="green" />
 		<widget name="yellow_text" 	position="19,160" size="380,24" font="Regular;20" foregroundColor="yellow" />
+		<widget name="blue_text" 	position="19,200" size="380,24" font="Regular;20" foregroundColor="blue" />
 
-		<widget name="pretext" 		position=" 15,224" size="240,24" font="Regular;20" />
-		<widget name="input" 		position="260,224" size=" 50,24" font="Regular;20" />
-		<widget name="aftertext" 	position="315,224" size=" 80,24" font="Regular;20" />
+		<widget name="pretext" 		position=" 15,254" size="240,24" font="Regular;20" />
+		<widget name="input" 		position="260,254" size=" 50,24" font="Regular;20" />
+		<widget name="aftertext" 	position="315,254" size=" 80,24" font="Regular;20" />
 
 		<widget name="red" position="0, 0" size="0, 0" />
 		<widget name="green" position="0, 0" size="0, 0" />
 		<widget name="yellow" position="0, 0" size="0, 0" />
 		<widget name="blue" position="0, 0" size="0, 0" />
-		<widget name="blue_text" position="0, 0" size="0, 0" />
 	</screen>
 	<!-- Informationen -->
 	<screen name="About" 							position=" 96,105" size="623,470" title="About Dreambox" backgroundColor="transparent">

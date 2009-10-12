@@ -823,17 +823,17 @@
 		<widget name="red" 		pixmap="dmm-HD/buttons/red.png" 	position="550,200"  size="30,30" alphatest="blend"/>
 		<widget name="green" 	pixmap="dmm-HD/buttons/green.png" 	position="550,250"  size="30,30" alphatest="blend"/>
 		<widget name="yellow" 	pixmap="dmm-HD/buttons/yellow.png"	position="550,300"  size="30,30" alphatest="blend"/>
+		<widget name="blue"    	pixmap="dmm-HD/buttons/blue.png"	position="550,350"  size="30,30" alphatest="blend"/>
 
 		<widget name="red_text" 									position="600,202" size="500,30" font="Regular;24"/>
 		<widget name="green_text" 									position="600,252" size="500,30" font="Regular;24"/>
 		<widget name="yellow_text" 									position="600,302" size="500,30" font="Regular;24"/>
+		<widget name="blue_text"  									position="600,352" size="500,30" font="Regular;24"/>
 
-		<widget name="pretext" 										position="550,410" size="280,30" font="Regular;24"/>
-		<widget name="input" 										position="840,410" size="60,30"  font="Regular;24"/>
-		<widget name="aftertext" 									position="900,410" size="100,30" font="Regular;24"/>
+		<widget name="pretext" 										position="550,450" size="280,30" font="Regular;24"/>
+		<widget name="input" 										position="840,450" size="60,30"  font="Regular;24"/>
+		<widget name="aftertext" 									position="900,450" size="100,30" font="Regular;24"/>
 
-		<widget name="blue" position="0,0" size="0,0" />
-		<widget name="blue_text" position="0,0" size="0,0"/>
 	</screen>
 	<!-- Informationen -->
 	<screen name="ServiceInfo" 					position="0,0" 		size="1280,720" title="Serviceinfo"					flags="wfNoBorder">

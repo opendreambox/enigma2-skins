@@ -1819,22 +1819,22 @@
 
 		<eLabel text="Sleep Timer" position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="#0b67a2" transparent="1"/>
 
-		<widget name="pretext" 		position="450,120" size="250,25" 	font="Regular;20" backgroundColor="#353e575e" transparent="1"/>
+		<widget name="pretext" 			position="450,120" size="250,25" 	font="Regular;20" backgroundColor="#353e575e" transparent="1"/>
 		<widget name="input" 			position="700,120" size="50,25" 	font="Regular;20" backgroundColor="#353e575e" transparent="1"/>
 		<widget name="aftertext" 		position="750,120" size="120,25" 	font="Regular;20" backgroundColor="#353e575e" transparent="1"/>
 		<widget name="current_status" 	position="450,160" size="750,30" 	font="Regular;20" backgroundColor="#353e575e" transparent="1"/>
 
-		<widget name="red" 	pixmap="Kerni-HD1/buttons/red.png"		position="450,231" 	size="21,21" alphatest="on" />
+		<widget name="red" 		pixmap="Kerni-HD1/buttons/red.png"		position="450,231" 	size="21,21" alphatest="on" />
 		<widget name="green" 	pixmap="Kerni-HD1/buttons/green.png" 	position="450,271" 	size="21,21" alphatest="on" />
 		<widget name="yellow" 	pixmap="Kerni-HD1/buttons/yellow.png" 	position="450,311" 	size="21,21" alphatest="on" />
+		<widget name="blue" 	pixmap="Kerni-HD1/buttons/blue.png" 	position="450,351" 	size="21,21" alphatest="on" />
 		<widget name="red_text" 									position="480,230" 	size="600,22" font="Regular;20" halign="left" backgroundColor="#353e575e" transparent="1" />
 		<widget name="green_text" 									position="480,270" 	size="600,22" font="Regular;20" halign="left" backgroundColor="#353e575e" transparent="1" />
-		<widget name="yellow_text" 								position="480,310" 	size="600,22" font="Regular;20" halign="left" backgroundColor="#353e575e" transparent="1" />
+		<widget name="yellow_text" 									position="480,310" 	size="600,22" font="Regular;20" halign="left" backgroundColor="#353e575e" transparent="1" />
+		<widget name="blue_text" 									position="480,350" 	size="600,22" font="Regular;20" halign="left" backgroundColor="#353e575e" transparent="1" />
 
 		<ePixmap position="80,430" size="90,125" zPosition="2" pixmap="skin_default/sleeptimer.png" transparent="1" alphatest="blend" />
 
-		<widget name="blue" 	pixmap="Kerni-HD1/buttons/blue.png" position="1280,720" size="21,21" alphatest="on" />
-		<widget name="blue_text" 								position="1280,720" size="400,30" valign="center" font="Regular;20" />
 	</screen>
 	<screen name="Subtitles" 					position="0,0" 		size="1280,720" 	title="Subtitle selection" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />

@@ -1484,12 +1484,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget name="config" position="460,340" size="730,200" zPosition="2" scrollbarMode="showOnDemand" transparent="1"/>            
 	</screen>
-	<screen name="SleepTimerEdit" position="390,300" size="500,200" title="Sleep Timer">
+	<screen name="SleepTimerEdit" position="390,300" size="500,240" title="Sleep Timer">
 		<widget name="current_status" position="40,40" size="400,30" valign="center" font="Regular;20"/>
 		<widget name="red" pixmap="skin_default/buttons/button_red.png" position="10,88" size="12,12" alphatest="on"/>
 		<widget name="green" pixmap="skin_default/buttons/button_green.png" position="10,128" size="12,12" alphatest="on"/>
 		<widget name="yellow" pixmap="skin_default/buttons/button_yellow.png" position="10,168" size="12,12" alphatest="on"/>
-		<widget name="blue" pixmap="skin_default/buttons/button_blue.png" position="10,168" size="12,12" alphatest="on"/>
+		<widget name="blue" pixmap="skin_default/buttons/button_blue.png" position="10,208" size="12,12" alphatest="on"/>
 		<widget name="red_text" position="40,80" size="400,30" valign="center" font="Regular;20"/>
 		<widget name="green_text" position="40,120" size="400,30" valign="center" font="Regular;20"/>
 		<widget name="yellow_text" position="40,160" size="400,30" valign="center" font="Regular;20"/>
