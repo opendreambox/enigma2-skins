@@ -1,5 +1,7 @@
 AC_INIT(enigma2-skins, 1.0)
 AM_INIT_AUTOMAKE(enigma2-skins, 1.0)
+AM_PATH_PYTHON()
+
 
 AC_OUTPUT([
 ./Makefile
