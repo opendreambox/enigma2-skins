@@ -37,23 +37,8 @@
 		<color name="MenuTitleForeground" 	value="#ffffff" />				
 		<color name="KeyForeground" 	value="#ffffff" />	
 	</colors>
-	<fonts>
-		<font filename="md_khmurabi_10.ttf" name="Regular" scale="100" />
-		<font filename="ArenaCdBd.ttf" name="eventFont" scale="100" />
-		<font filename="ArenaCdBd.ttf" name="keyFont" scale="100" />
-		<font filename="ArenaCdBd.ttf" name="titleFont" scale="100" />
-		<font filename="ArenaCdBd.ttf" name="smallFont" scale="100" />
-		<font filename="ae_AlMateen.ttf" name="Replacement" scale="90" is_replacement="1" />
-		<font filename="tuxtxt.ttf" name="Console" scale="100" />
-	</fonts>
-	<subtitles>
-		<sub name="Subtitle_TTX" font="Regular;30" shadowColor="#40101010" shadowOffset="3,3" />
-		<sub name="Subtitle_Regular" font="Regular;30" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="3,3" />
-		<sub name="Subtitle_Bold" font="Replacement;30" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="3,3" />
-		<sub name="Subtitle_Italic" font="Regular;30" foregroundColor="#DCAAAA" shadowColor="#40101010" shadowOffset="3,3" />
-		<!-- omitting foregroundColor attribute will enable auto-assignment of color -->
-	</subtitles>
-	<windowstyle type="skinned">
+	<!-- Main screen colors (id=0 for Menu's, id=1 for LCD) -->
+	<windowstyle type="skinned" id="0">
 		<title offset="30,12" font="titleFont;22" shadowColor="black" shadowOffset="-2,-2" />
 		<color name="Background" color="#33294a6b" />
 		<color name="LabelForeground" color="#22ffffff" />
@@ -78,6 +63,38 @@
 			<pixmap pos="bpBottomRight" filename="Nemesis.Flatline.Blue/bs_br.png" />
 		</borderset>
 	</windowstyle>
+	<!-- this is for LCD -->
+	<windowstyle type="skinned" id="1">
+		<color name="Background" color="#000000" />
+		<color name="LabelForeground" color="#ffffff" />
+		<color name="ListboxBackground" color="#000000" />
+		<color name="ListboxForeground" color="#ffffff" />
+		<color name="ListboxSelectedBackground" color="#000000" />
+		<color name="ListboxSelectedForeground" color="#ffffff" />
+		<color name="ListboxMarkedBackground" color="#000000" />
+		<color name="ListboxMarkedForeground" color="#ffffff" />
+		<color name="ListboxMarkedAndSelectedBackground" color="#000000" />
+		<color name="ListboxMarkedAndSelectedForeground" color="#ffffff" />
+		<color name="WindowTitleForeground" color="#ffffff" />
+		<color name="WindowTitleBackground" color="#000000" />
+	</windowstyle>
+	<!-- Fonts -->
+	<fonts>
+		<font filename="md_khmurabi_10.ttf" name="Regular" scale="100" />
+		<font filename="ArenaCdBd.ttf" name="eventFont" scale="100" />
+		<font filename="ArenaCdBd.ttf" name="keyFont" scale="100" />
+		<font filename="ArenaCdBd.ttf" name="titleFont" scale="100" />
+		<font filename="ArenaCdBd.ttf" name="smallFont" scale="100" />
+		<font filename="ae_AlMateen.ttf" name="Replacement" scale="90" is_replacement="1" />
+		<font filename="tuxtxt.ttf" name="Console" scale="100" />
+	</fonts>
+	<subtitles>
+		<sub name="Subtitle_TTX" font="Regular;30" shadowColor="#40101010" shadowOffset="3,3" />
+		<sub name="Subtitle_Regular" font="Regular;30" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="3,3" />
+		<sub name="Subtitle_Bold" font="Replacement;30" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="3,3" />
+		<sub name="Subtitle_Italic" font="Regular;30" foregroundColor="#DCAAAA" shadowColor="#40101010" shadowOffset="3,3" />
+		<!-- omitting foregroundColor attribute will enable auto-assignment of color -->
+	</subtitles>
 	<screen name="InfoBar" position="10,30" size="720,576" flags="wfNoBorder" title="InfoBar">
 		<eLabel position="0,0" zPosition="-3" size="720,576" backgroundColor="transparent" />
 		<ePixmap name="InfoBarBackground" pixmap="Nemesis.Flatline.Blue/infobar.png" position="48,346" zPosition="3" size="617,169" transparent="1" alphatest="on" />
@@ -303,15 +320,15 @@
 		<widget name="freeDiskSpace" position="80,475" zPosition="4" size="580,45" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColor="LabelForegroundText_2" shadowColor="black" shadowOffset="-2,-2" />
 		<ePixmap position="0,0" zPosition="3" size="720,576" pixmap="Nemesis.Flatline.Blue/movieselection.png" transparent="1" alphatest="on" />
 	</screen>
-	<screen name="Setup" position="100,150" size="540,310" title="Setup">
-		<widget name="title" position="10,10" size="280,35" font="Regular;23" foregroundColor="MenuTitleForeground"  />
-		<widget name="config" position="10,50" size="520,200" scrollbarMode="showOnDemand" />
-		<widget name="cancel" position="10,260" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
-		<widget name="canceltext" position="10,260" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="ok" position="390,260" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png"  transparent="1" alphatest="on" />
-		<widget name="oktext" position="390,260" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
+	<!-- Setup -->
+	<screen name="Setup" position="center,center" size="560,430" title="Setup">
+		<ePixmap pixmap="Nemesis.Flatline.Blue/key-red.png" position="0,0" size="140,40" alphatest="on" />
+		<ePixmap pixmap="Nemesis.Flatline.Blue/key-green.png" position="140,0" size="140,40" alphatest="on" />
+		<widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;18" valign="center" halign="center"  foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;18" valign="center" halign="center"  foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" transparent="1" />
+		<widget name="config" position="5,50" size="550,350" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="configOSD" position="130,113" size="460,350" title="OSD Settings">
+	<screen name="configOSD" position="center,center" size="460,350" title="OSD Settings">
 		<widget name="okbutton" position="150,270" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png"  transparent="1" alphatest="on" />
 		<eLabel name="oktext" position="150,270" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="txt_alpha" position="20,20" size="110,20" />
@@ -321,24 +338,24 @@
 		<widget name="txt_gamma" position="20,100" size="120,20" />
 		<widget name="sld_gamma" position="150,100" size="290,20" />
 	</screen>
-	<screen name="HarddiskWait" position="100,150" size="540,60">
+	<screen name="HarddiskWait" position="center,center" size="540,60">
 		<widget name="wait" position="20,10" size="500,25" font="Regular;23" foregroundColor="LabelForegroundText_1" />
 	</screen>
-	<screen name="HarddiskSetup" position="140,150" size="420,160" title="Harddisk">
+	<screen name="HarddiskSetup" position="center,center" size="420,160" title="Harddisk">
 		<widget name="model" position="20,10" size="380,25" font="Regular;23" foregroundColor="LabelForegroundText_1"  />
 		<widget name="capacity" position="20,40" size="380,25" font="Regular;23" foregroundColor="LabelForegroundText_1"  />
 		<widget name="bus" position="20,70" size="380,25" font="Regular;23" foregroundColor="LabelForegroundText_1"  />
 		<ePixmap position="140,110" zPosition="1" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png"  transparent="1" alphatest="on" />
 		<widget name="initializetext" position="140,110" size="140,40" valign="center" halign="center" zPosition="2" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 	</screen>
-	<screen name="PluginBrowser" position="150,115" size="420,370" title="Plugin browser">
+	<screen name="PluginBrowser" position="center,center" size="420,370" title="Plugin browser">
 		<widget name="list" position="10,10" size="400,300" scrollbarMode="showOnDemand" />
 		<ePixmap name="remove" position="5,325" size="200,40" pixmap="Nemesis.Flatline.Blue/key-red_200.png" transparent="1" alphatest="on" />
 		<ePixmap name="download" position="215,325" size="200,40" pixmap="Nemesis.Flatline.Blue/key-green_200.png" transparent="1" alphatest="on" />
 		<widget name="red" position="5,325" zPosition="2" size="200,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="green" position="215,325" zPosition="2" size="200,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 	</screen>
-	<screen name="ServiceInfo" position="90,120" size="560,370" title="Serviceinfo">
+	<screen name="ServiceInfo" position="center,center" size="560,370" title="Serviceinfo">
 		<ePixmap name="bg_red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="bg_green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="bg_yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />
@@ -349,7 +366,7 @@
 		<widget name="blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="infolist" position="20,50" size="560,365" selectionDisabled="1"/>
 	</screen>
-	<screen name="TimerEdit" position="70,100" size="590,335" title="Timer Edit">
+	<screen name="TimerEdit" position="center,center" size="590,335" title="Timer Edit">
 		<widget name="description" position="10,10" size="580,40" font="Regular;25" foregroundColor="LabelForegroundText_1" />
 		<widget name="lbegin" position="405,102" size="103,30" font="Regular;25" foregroundColor="red" />
 		<widget name="lend" position="405,158" size="103,30" font="Regular;25" foregroundColor="green" />
@@ -357,7 +374,7 @@
 		<widget name="end" position="508,150" size="72,35" font="Regular;25" foregroundColor="LabelForegroundText_1" />
 		<widget name="apply" position="10,240" size="250,35" foregroundColor="LabelForegroundText_1" />
 	</screen>
-	<screen name="TimerEditList" position="90,100" size="560,417" title="Timer Editor">
+	<screen name="TimerEditList" position="center,center" size="560,417" title="Timer Editor">
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />
@@ -368,21 +385,21 @@
 		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="timerlist" position="0,45" size="560,364" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="TimerEntry" position="90,95" size="560,430" title="Timer entry">
+	<screen name="TimerEntry" position="center,center" size="560,430" title="Timer entry">
 		<widget name="config" position="10,10" size="540,350" scrollbarMode="showOnDemand" />
 		<widget name="cancel" position="10,375" zPosition="1" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png"  transparent="1" alphatest="on" />
 		<widget name="canceltext" position="10,375" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="ok" position="410,375" zPosition="1" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png"  transparent="1" alphatest="on" />
 		<widget name="oktext" position="410,375" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 	</screen>
-	<screen name="TimeDateInput" position="150,150" size="400,270" title="Time/Date Input">
+	<screen name="TimeDateInput" position="center,center" size="400,270" title="Time/Date Input">
 		<widget name="config" position="10,10" size="380,200" />
 		<widget name="cancel" position="10,220" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png"  transparent="1" alphatest="on" />
 		<widget name="canceltext" position="10,220" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="ok" position="250,220" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png"  transparent="1" alphatest="on" />
 		<widget name="oktext" position="250,220" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 	</screen>
-	<screen name="TimerSanityConflict" position="60,100" size="600,400" title="Timer sanity error">
+	<screen name="TimerSanityConflict" position="center,center" size="600,400" title="Timer sanity error">
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="145,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="310,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />
@@ -395,7 +412,7 @@
 		<widget name="timer2" position="310,45" size="280,80" scrollbarMode="showOnDemand" />
 		<widget name="list" position="0,160" size="250,240" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="TimerLog" position="90,100" size="560,400" title="Timer log">
+	<screen name="TimerLog" position="center,center" size="560,400" title="Timer log">
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />
@@ -417,8 +434,12 @@
 		<widget name="key6" position="262,32" size="130,30" font="Console;16" halign="center" valign="center" />
 		<widget name="key7" position="2,62" size="130,30" font="Console;16" halign="center" valign="center" />
 		<widget name="key8" position="132,62" size="130,30" font="Console;16" halign="center" valign="center" />
-		<widget name="key9" position="262,62" size="130,30" font="Console;16" halign="center" valign="center" />		<widget name="help1" position="2,92" size="130,30" font="Console;16" halign="center" valign="center" />		<widget name="key0"  position="132,92" size="130,30" font="Console;12" halign="center" valign="center" />		<widget name="help2" position="262,92" size="130,30" font="Console;16" halign="center" valign="center" />	</screen>
-	<screen name="NumberZap" position="235,255" size="250,60" title="Channel">
+		<widget name="key9" position="262,62" size="130,30" font="Console;16" halign="center" valign="center" />
+		<widget name="help1" position="2,92" size="130,30" font="Console;16" halign="center" valign="center" />
+		<widget name="key0"  position="132,92" size="130,30" font="Console;12" halign="center" valign="center" />
+		<widget name="help2" position="262,92" size="130,30" font="Console;16" halign="center" valign="center" />
+	</screen>
+	<screen name="NumberZap" position="170,420" size="250,60" title="Channel">
 		<widget name="channel" position="35,15" size="110,25" font="Regular;23" foregroundColor="LabelForegroundText_1" />
 		<widget name="number" position="145,15" size="80,25" halign="right" font="Regular;23" foregroundColor="LabelForegroundText_1" />
 	</screen>
@@ -430,7 +451,7 @@
 	<screen name="Mute" position="343,90" zPosition="10" size="34,45" title="Mute" flags="wfNoBorder" >
 		<ePixmap position="0,0" size="34,45" pixmap="Nemesis.Flatline.Blue/mute.png"/>
 	</screen>
-	<screen name="SimpleChannelSelection" position="90,100" size="560,417" title="Channel Selection">
+	<screen name="SimpleChannelSelection" position="170,420" size="560,417" title="Channel Selection">
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />
@@ -459,7 +480,7 @@
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 	</screen>
-	<screen name="ChannelSelection" position="90,95" size="560,422" title="Channel Selection" >
+	<screen name="ChannelSelection" position="170,420" size="560,422" title="Channel Selection" >
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />
@@ -488,7 +509,7 @@
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 	</screen>
-	<screen name="ChannelSelectionRadio" position="90,100" size="560,307" title="Channel Selection" >
+	<screen name="ChannelSelectionRadio" position="170,420" size="560,307" title="Channel Selection" >
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />
@@ -535,7 +556,7 @@
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 	</screen>	
-	<screen name="EPGSelection" position="90,90" size="560,430" title="EPG Selection">
+	<screen name="EPGSelection" position="170,420" size="560,430" title="EPG Selection">
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />
@@ -546,7 +567,7 @@
 		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="list" position="10,45" size="540,375" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="EPGSelectionMulti" position="90,90" size="560,430" title="EPG Selection">
+	<screen name="EPGSelectionMulti" position="170,420" size="560,430" title="EPG Selection">
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />
@@ -568,7 +589,7 @@
 		<widget name="date" position="410,35" size="140,45" valign="center" halign="right" font="Regular;18" foregroundColor="LabelForegroundText_1" />
 		<widget name="list" position="11,75" size="540,350" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="EventView" position="90,90" size="560,430" title="Eventview">
+	<screen name="EventView" position="170,420" size="560,430" title="Eventview">
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />

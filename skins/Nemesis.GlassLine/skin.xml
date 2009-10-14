@@ -760,12 +760,11 @@
 	</screen>
 	<!-- Setup -->
 	<screen name="Setup" position="90,150" size="540,310" title="Setup">
-		<widget name="title" position="10,10" size="280,35" font="Regular;23"  />
-		<widget name="config" position="10,50" size="520,200" scrollbarMode="showOnDemand" />
-		<widget name="cancel" position="25,280" size="21,21" pixmap="Nemesis.GlassLine/key_red.png" alphatest="on" />
-		<widget name="canceltext" position="55,280" size="115,21" valign="top" halign="left" font="Regular;20" />
-		<widget name="ok" position="490,280" size="21,21" pixmap="Nemesis.GlassLine/key_green.png" alphatest="on" />
-		<widget name="oktext" position="360,280" size="120,20" valign="top" halign="right" font="Regular;20" />
+		<widget name="config" position="10,10" size="520,250" scrollbarMode="showOnDemand" />
+		<ePixmap pixmap="Nemesis.GlassLine/key_red.png" position="25,280" size="21,21" alphatest="on" />
+		<widget source="key_red" render="Label" position="50,280" size="115,21" zPosition="1" font="Regular;18" valign="center" halign="left" />
+		<ePixmap pixmap="Nemesis.GlassLine/key_green.png" position="490,280" size="21,21" alphatest="on" />
+		<widget source="key_green" render="Label" position="370,280" size="115,21" zPosition="1" font="Regular;18" valign="center" halign="right" />
 	</screen>
 	<!-- Simple channel selection -->
 	<screen name="SimpleChannelSelection" position="90,98" size="560,417" title="Channel Selection">

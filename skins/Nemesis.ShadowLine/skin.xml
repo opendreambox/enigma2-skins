@@ -150,7 +150,7 @@
 		</widget>
 	</screen>
 	<!-- Channel selection (tv) -->
-	<screen name="ChannelSelection" position="90,95" size="560,433" title="Channel Selection">
+	<screen name="ChannelSelection" position="center,center" size="560,433" title="Channel Selection">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -186,7 +186,7 @@
 		</widget>
 	</screen>
 	<!-- Channel selection (radio) -->
-	<screen name="ChannelSelectionRadio" position="85,90" size="560,298" title="Channel Selection">
+	<screen name="ChannelSelectionRadio" position="center,center" size="560,298" title="Channel Selection">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -198,7 +198,7 @@
 		<widget name="list" position="0,45" zPosition="2" size="560,252" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Epg selection (single) -->
-	<screen name="EPGSelection" position="90,95" size="560,430" title="EPG Selection">
+	<screen name="EPGSelection" position="center,center" size="560,430" title="EPG Selection">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -210,7 +210,7 @@
 		<widget name="list" position="0,40" size="560,375" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Epg selection (multi) -->
-	<screen name="EPGSelectionMulti" position="90,95" size="560,430" title="EPG Selection">
+	<screen name="EPGSelectionMulti" position="center,center" size="560,430" title="EPG Selection">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -233,7 +233,7 @@
 		<widget name="list" position="11,75" size="540,350" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Event view -->
-	<screen name="EventView" position="90,95" size="560,420" title="Eventview">
+	<screen name="EventView" position="center,center" size="560,420" title="Eventview">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -248,7 +248,7 @@
 		<widget name="channel" position="240,395" size="305,25" font="Regular;22" halign="right" />
 	</screen>
 	<!-- Graphical Multi EPG -->
-	<screen name="GraphMultiEPG" position="90,95" size="560,435" title="Electronic Program Guide">
+	<screen name="GraphMultiEPG" position="center,center" size="560,435" title="Electronic Program Guide">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<widget name="key_red" position="35,0" size="115,40" halign="left" valign="center" font="Regular;18" transparent="1" />
@@ -290,7 +290,7 @@
 		</widget>
 	</screen>
 	<!-- Harddisk setup -->
-	<screen name="HarddiskSetup" position="150,208" size="420,160" title="Harddisk">
+	<screen name="HarddiskSetup" position="center,center" size="420,160" title="Harddisk">
 		<widget name="model" position="20,10" size="380,25" font="Regular;23"  />
 		<widget name="capacity" position="20,40" size="380,25" font="Regular;23"  />
 		<widget name="bus" position="20,70" size="380,25" font="Regular;23"  />
@@ -298,7 +298,7 @@
 		<widget name="initializetext" position="185,110" size="115,40" valign="center" halign="left" font="Regular;18" backgroundColor="background" transparent="1" />
 	</screen>
 	<!-- Main menu -->
-	<screen name="menu_mainmenu" position="170,150" size="380,285" title="Main menu">
+	<screen name="menu_mainmenu" position="center,center" size="380,285" title="Main menu">
 		<widget source="title" render="Label" position="170,10" size="200,35" font="Regular;23" />
 		<widget source="menu" render="Listbox" position="170,55" size="200,225" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
@@ -341,7 +341,7 @@
 		</widget>
 	</screen>
 	<!-- Mediaplayer -->
-	<screen name="MediaPlayer" position="70,70" size="580,475" title="MediaPlayer">
+	<screen name="MediaPlayer" position="center,center" size="580,475" title="MediaPlayer">
 		<ePixmap pixmap="Nemesis.ShadowLine/mediaplayer_bg.png" position="13,9" zPosition="0" size="554,460" alphatest="on" />
 		<widget name="artisttext" position="20,11" zPosition="1" size="60,17" font="Regular;16" valign="top" foregroundColor="#cccccc" transparent="1" />
 		<widget name="artist" position="80,11" zPosition="1" size="353,17" font="Regular;16" valign="top" transparent="1" />
@@ -382,7 +382,7 @@
 		</widget>
 	</screen>
 	<!-- Movieselection -->
-	<screen name="MovieSelection" position="90,83" size="560,445" title="Select a movie">
+	<screen name="MovieSelection" position="center,center" size="560,445" title="Select a movie">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -414,7 +414,7 @@
 		<ePixmap position="0,0" size="34,45" pixmap="Nemesis.ShadowLine/mute.png"/>
 	</screen>
 	<!-- Plugin browser -->
-	<screen name="PluginBrowser" position="150,115" size="420,370" title="Plugin browser">
+	<screen name="PluginBrowser" position="center,center" size="420,370" title="Plugin browser">
 		<widget name="list" position="10,10" size="400,300" scrollbarMode="showOnDemand" />
 		<ePixmap name="remove" position="10,335" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="download" position="390,335" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
@@ -469,7 +469,7 @@
 		</widget>
 	</screen>
 	<!-- Service Info -->
-	<screen name="ServiceInfo" position="90,95" size="560,430" title="Serviceinfo">
+	<screen name="ServiceInfo" position="center,center" size="560,430" title="Serviceinfo">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -481,20 +481,15 @@
 		<widget name="infolist" position="10,50" size="540,378" selectionDisabled="1"/>
 	</screen>
 	<!-- Setup -->
-	<screen name="Setup" position="90,95" size="560,425" title="Setup">
-		<widget name="cancel" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
-		<widget name="ok" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
-		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
-		<ePixmap name="blue" position="420,10" size="17,17" pixmap="Nemesis.ShadowLine/key-blue.png" alphatest="on" />
-		<widget name="canceltext" position="35,0" size="115,40" halign="left" valign="center" font="Regular;18" backgroundColor="background" transparent="1" />
-		<widget name="oktext" position="165,0" size="115,40" halign="left" valign="center" font="Regular;18" text="Save" backgroundColor="background" transparent="1" />
-		<eLabel name="key_yellow" position="305,0" size="115,40" halign="left" valign="center" font="Regular;18" backgroundColor="background" transparent="1" />
-		<eLabel name="key_blue" position="445,0" size="115,40" halign="left" valign="center" font="Regular;18" backgroundColor="background" transparent="1" />
-		<widget name="title" position="10,45" size="560,25" font="Regular;20" foregroundColor="#cccccc" />
-		<widget name="config" position="10,75" size="550,350" scrollbarMode="showOnDemand" />
+	<screen name="Setup" position="center,center" size="560,425" title="Setup">
+		<ePixmap pixmap="Nemesis.ShadowLine/key-red.png" position="10,10" size="17,17" alphatest="on" />
+		<ePixmap pixmap="Nemesis.ShadowLine/key-green.png" position="140,10" size="17,17" alphatest="on" />
+		<widget source="key_red" render="Label" position="35,0" size="115,40" halign="left" valign="center" font="Regular;18" backgroundColor="background" transparent="1" />
+		<widget source="key_green" render="Label" position="165,0" size="115,40" halign="left" valign="center" font="Regular;18" text="Save" backgroundColor="background" transparent="1" />
+		<widget name="config" position="10,40" size="540,380" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Simple channel selection -->
-	<screen name="SimpleChannelSelection" position="90,95" size="560,425" title="Channel Selection">
+	<screen name="SimpleChannelSelection" position="center,center" size="560,425" title="Channel Selection">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -506,7 +501,7 @@
 		<widget name="list" position="0,45" size="560,364" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Time and date input -->
-	<screen name="TimeDateInput" position="130,135" size="460,330" title="Nameserver Setup">
+	<screen name="TimeDateInput" position="center,center" size="460,330" title="Nameserver Setup">
 		<widget name="cancel" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<widget name="canceltext" position="35,10" size="115,20" halign="left" valign="top" font="Regular;18" backgroundColor="background" transparent="1" />
 		<widget name="ok" position="430,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
@@ -514,7 +509,7 @@
 		<widget name="config" position="10,50" size="440,275" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Timer edit list -->
-	<screen name="TimerEditList" position="90,95" size="560,425" title="Timer Editor">
+	<screen name="TimerEditList" position="center,center" size="560,425" title="Timer Editor">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -526,7 +521,7 @@
 		<widget name="timerlist" position="10,60" size="550,350" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Timer entry -->
-	<screen name="TimerEntry" position="90,95" size="560,425" title="Timer entry">
+	<screen name="TimerEntry" position="center,center" size="560,425" title="Timer entry">
 		<widget name="cancel" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<widget name="ok" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="blue" position="420,10" size="17,17" pixmap="Nemesis.ShadowLine/key-blue.png" alphatest="on" />
@@ -536,7 +531,7 @@
 		<widget name="config" position="10,45" size="540,378" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Timer log -->
-	<screen name="TimerLog" position="90,95" size="560,425" title="Timer log">
+	<screen name="TimerLog" position="center,center" size="560,425" title="Timer log">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
@@ -549,7 +544,7 @@
 		<widget name="logentry" position="10,300" size="550,140" font="Regular;18" />
 	</screen>
 	<!-- Timer sanity conflict -->
-	<screen name="TimerSanityConflict" position="90,95" size="560,425" title="Timer sanity error">
+	<screen name="TimerSanityConflict" position="center,center" size="560,425" title="Timer sanity error">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />
