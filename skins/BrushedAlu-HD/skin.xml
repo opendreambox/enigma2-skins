@@ -866,7 +866,7 @@
 		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<eLabel text="Plugin browser" 	position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<widget source="Title" render="Label" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
@@ -885,7 +885,7 @@
 		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<eLabel text="Download/Remove Plugins" 	position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<widget source="Title" render="Label" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
@@ -1104,17 +1104,17 @@
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
-		<widget name="title" position="80,110" size="322,75" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<widget source="Title" render="Label" position="80,110" size="322,75" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 		<widget name="config" position="550,120" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1" />
 
-		<widget name="cancel" pixmap="BrushedAlu-HD/buttons/red.png"   position="80,550"  size="30,30" alphatest="blend"   zPosition="2"/>
-		<widget name="ok" pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,600"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget name="canceltext" 								position="130,552"  size="220,30" zPosition="2" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
-		<widget name="oktext" 									position="130,602"  size="220,30" zPosition="2" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png"   position="80,550"  size="30,30" alphatest="blend"   zPosition="2"/>
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,600"  size="30,30" alphatest="blend"   zPosition="2" />
+		<widget source="key_red" render="Label" position="130,552"  size="220,30" zPosition="2" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<widget source="key_green" render="Label" position="130,602"  size="220,30" zPosition="2" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 	</screen>
 	<screen name="LanguageSelection" 			position="0,0" 		size="1280,720" title="Language selection" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" transparent="1" />
@@ -2223,7 +2223,8 @@
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
-		<eLabel text="Channel Selection" 	position="525,116" size="700,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+
+		<widget source="Title" render="Label" position="525,116" size="700,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<eLabel 							position="485,150" size="730,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 							position="485,152" size="730,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="list" 				position="490,168" size="720,435" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" foregroundColorServiceNotAvail="black" serviceItemHeight="29" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
@@ -2343,7 +2344,7 @@
 		<ePixmap position="0,0" zPosition="-10" size="1280,430" pixmap="BrushedAlu-HD/frame/radio_bg2.png" transparent="1" />
 		<eLabel 					position="60,0" size="1160,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 					position="60,2" size="1160,2" backgroundColor="grey" zPosition="5"/>
-		<eLabel text="Channel Selection" position="430,16" size="770,32" zPosition="3" font="Regular;27" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="Title" render="Label" position="430,16" size="770,32" zPosition="3" font="Regular;27" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<widget name="list" position="430,59" size="770,290" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" foregroundColorServiceNotAvail="#666666" serviceItemHeight="29" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
 
 
@@ -2364,7 +2365,7 @@
 		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<eLabel text="Command execution..." 	position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<widget source="Title" render="Label" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
@@ -2381,7 +2382,7 @@
 			<convert type="ClockToText">Date</convert>
 		</widget>
 
-		<eLabel text="Channel Selection" 	position="465,116" size="760,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="Title" render="Label" position="465,116" size="760,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<eLabel 							position="425,150" size="780,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 							position="425,152" size="780,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="list" 				position="435,168" size="770,435" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" foregroundColorServiceNotAvail="black" serviceItemHeight="29" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
@@ -2445,7 +2446,7 @@
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
-		<eLabel text="Select a movie" 	position="525,116" size="700,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="Title" render="Label" position="525,116" size="700,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<eLabel 						position="485,150" size="730,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 						position="485,152" size="730,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="list" 			position="490,175" size="730,375" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_75.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_75_bg.png" transparent="1" />
@@ -2652,7 +2653,7 @@
 
 		<eLabel 								position="476,110" size="  1,500" backgroundColor="black" zPosition="5"/>
 		<eLabel 								position="477,110" size="  2,500" backgroundColor="grey" zPosition="5"/>
-		<widget name="epg_description" 			position="495,120" size="710,480" font="Regular;24" backgroundColor="grey" transparent="1" />
+		<widget source="Title" render="Label" position="495,120" size="710,480" font="Regular;24" backgroundColor="grey" transparent="1" />
 
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="100,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />

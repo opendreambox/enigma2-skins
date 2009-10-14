@@ -1211,17 +1211,13 @@
 	</screen>
 	<!-- Systm -->
 	<screen name="Setup" 						position="172,132" size="1108,588" title="Setup"  				backgroundColor="transparent">
-		<eLabel 					position="5,5" size="760,510" zPosition="-1" backgroundColor="background" />
+		<eLabel position="5,5" size="760,510" zPosition="-1" backgroundColor="background" />
+		<widget source="Title" render="Label" position="15,10" size="740,32" font="Regular;27" />
+		<eLabel position="15,48" size="740,1"  backgroundColor="white" />
+		<widget name="config" position="15,60" size="740,450" scrollbarMode="showOnDemand" />
 
-		<widget name="title" 		position="15,10" size="740,32"  font="Regular;27" />
-		<eLabel 					position="15,48" size="740,1"   backgroundColor="white" />
-		<widget name="config"		position="15,60" size="740,450" scrollbarMode="showOnDemand" />
-
-		<widget name="canceltext" 	position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
-		<widget name="oktext"		position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-
-		<widget name="cancel" position="0,0" size="0,0"/>
-		<widget name="ok" position="0,0" size="0,0"/>
+		<widget source="key_red" render="Label" position="5,525"   size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
 	</screen>
 	<screen name="LanguageSelection" 			position="172,132" size="1108,588" title="Language selection" 	backgroundColor="transparent">
 		<eLabel 					position="5,5" size="760,510" zPosition="-1" backgroundColor="background" />

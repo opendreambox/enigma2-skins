@@ -1442,12 +1442,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="Setup" position="190,100" size="900,560" title="Setup">
 		<eLabel position="0,0" size="900,2" backgroundColor="grey"/>
-		<widget name="title" position="20,10" size="580,35" font="Regular;23"/>
+		<widget source="Title" render="Label" position="20,10" size="580,35" font="Regular;23"/>
 		<eLabel position="0,45" size="900,2" backgroundColor="grey"/>
 		<widget name="config" position="20,65" size="860,425" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png"/>
 		<eLabel position="0,518" size="900,2" backgroundColor="grey"/>
-		<widget name="canceltext" position="190,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
-		<widget name="oktext" position="460,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
+		<widget source="key_red" render="Label" position="190,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red"/>
+		<widget source="key_green" render="Label" position="460,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green"/>
 	</screen>
 	<screen name="SimpleChannelSelection" position="90,100" size="1100,560" title="Channel Selection">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey"/>

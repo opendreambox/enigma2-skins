@@ -1343,7 +1343,7 @@
 	</screen>
 	<screen name="Setup" 					position="190,90" 	size="900,570"  title="Setup">
 		<eLabel 				position="0,0" 		size="900,2" backgroundColor="grey" />
-		<widget name="title" 	position="20,10" 	size="580,35" font="Regular;23" />
+		<widget source="Title" render="Label" position="20,10" 	size="580,35" font="Regular;23" />
 		<eLabel 				position="0,45" 	size="900,2" backgroundColor="grey" />
 
 		<widget name="config" position="20,65" size="860,425" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1"/>
@@ -1351,8 +1351,8 @@
 		<eLabel 					position="0,518" 	size="900,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position="190,532"  zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="460,532"  zPosition="1" size="250,38" alphatest="blend" />
-		<widget name="canceltext" 			position="190,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1"/>
-		<widget name="oktext" 				position="460,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1"/>
+		<widget source="key_red" render="Label" position="190,531"	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1"/>
+		<widget source="key_green" render="Label" position="460,531" 	zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1"/>
 	</screen>
 	<screen name="SimpleChannelSelection" 	position="90,90" 	size="1100,570" title="Channel Selection" >
 		<eLabel 							position="0,0" 		size="1100,2" backgroundColor="grey" />

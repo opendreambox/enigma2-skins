@@ -892,7 +892,7 @@
 		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Plugin browser" 	position="80,110" size="350,72" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="Title" render="Label" position="80,110" size="350,72" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
@@ -911,7 +911,7 @@
 		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Download/Remove Plugins" 	position="80,110" size="322,72" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="Title" render="Label" position="80,110" size="322,72" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
@@ -1135,17 +1135,17 @@
 			<convert type="ClockToText">Date</convert>
 		</widget>
 
-		<widget name="title" position="80,110" size="322,75" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="Title" render="Label" position="80,110" size="322,75" zPosition="3" font="Regular;32" backgroundColor="darkgrey" transparent="1"/>
 
 		<widget name="config" position="550,120" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="cancel" pixmap="dmm-HD/buttons/red.png"   position="80,550"  size="30,30" alphatest="blend"   zPosition="2"/>
-		<widget name="ok" pixmap="dmm-HD/buttons/green.png" 	position="80,600"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget name="canceltext" 								position="130,552"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="oktext" 									position="130,602"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/red.png"   position="80,550"  size="30,30" alphatest="blend"   zPosition="2"/>
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,600"  size="30,30" alphatest="blend"   zPosition="2" />
+		<widget source="key_red" render="Label" position="130,552"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,602"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="LanguageSelection" 			position="0,0" 		size="1280,720" title="Language selection" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -2222,7 +2222,7 @@
 
 		<eLabel 							position="480,115" size="  1,500" backgroundColor="grey" zPosition="5"/>
 
-		<eLabel text="Channel Selection" 	position="495,116" size="710, 28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="Title" render="Label" position="495,116" size="710, 28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
 
 		<eLabel 							position="490,150" size="720,  2" backgroundColor="grey" zPosition="5"/>
 		<widget name="list" 				position="490,160" size="720,450" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" serviceItemHeight="30" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
@@ -2315,7 +2315,7 @@
 	</screen>
 	<screen name="ChannelSelectionRadio" 		position="0,340" 	size="1280,380" title="Channel Selection" backgroundColor="black" flags="wfNoBorder">
 		<eLabel 							position=" 50, 0" size="1180,1" backgroundColor="grey" zPosition="5"/>
-		<eLabel text="Channel Selection" 	position="410,20" size="800,30" zPosition="3" font="Regular;26" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="Title" render="Label" position="405,20" size="800,30" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
 		<eLabel 							position="400,55" size="810,2" backgroundColor="grey" zPosition="5"/>
 		<widget name="list" 				position="400,65" size="810,240" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" serviceItemHeight="30" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
 
@@ -2337,7 +2337,7 @@
 			<convert type="ClockToText">Date</convert>
 		</widget>
 
-		<eLabel text="Command execution..." 	position="80,110" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="Title" render="Label" position="80,110" size="350,72" zPosition="3" font="Regular;30" backgroundColor="darkgrey" transparent="1"/>
 
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
@@ -2359,7 +2359,7 @@
 
 		<eLabel 							position="480,115" size="  1,500" backgroundColor="grey" zPosition="5"/>
 
-		<eLabel text="Channel Selection" position="494,116" size="710,28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="Title" render="Label" position="494,116" size="710,28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
 
 		<eLabel 							position="490,150" size="720,  2" backgroundColor="grey" zPosition="5"/>
 		<widget name="list" 				position="490,160" size="720,450" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" serviceItemHeight="30" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
@@ -2452,7 +2452,7 @@
 
 		<eLabel 							position="480,115" size="1,500" backgroundColor="grey" zPosition="5"/>
 
-		<eLabel text="Select a movie" 		position="495,116" size="710,28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="Title" render="Label" position="495,116" size="710,28" zPosition="3" font="Regular;24" backgroundColor="darkgrey" transparent="1"/>
 
 		<eLabel 							position="490,150" size="720,2" backgroundColor="grey" zPosition="5"/>
 
