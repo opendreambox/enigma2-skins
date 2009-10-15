@@ -4074,34 +4074,4 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
-	<screen name="SetupSummary" 				position="0,0" 	size="132,64">
-		<widget name="SetupTitle" position="6,0" size="120,16" font="Regular;14" />
-		<widget name="SetupEntry" position="6,18" size="120,30" font="Regular;13" />
-		<widget name="SetupValue" position="6,48" size="120,16" font="Regular;13" />
-	</screen>
-	<screen name="SimpleSummary" 				position="0,0" 	size="132,64">
-		<widget source="global.CurrentTime" render="Label" position="56,46" size="82,18" font="Regular;16">
-			<convert type="ClockToText">WithSeconds</convert>
-		</widget>
-		<widget name="Title" position="6,4" size="120,42" font="Regular;18" />
-	</screen>
-	<screen name="StandbySummary" 				position="0,0"  size="132,64">
-		<widget source="global.CurrentTime" render="Label" position="6,4"  size="120,24" font="Regular;22" halign="center" valign="center">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<eLabel 			 							   position="0,28" size="132,1"  backgroundColor="white" />
-		<widget source="global.CurrentTime" render="Label" position="6,32" size="120,32" font="Regular;28" halign="center" valign="center">
-		<convert type="ClockToText">Format:%H:%M</convert>
-	</widget>
-		<widget source="session.RecordState" render="FixedLabel" position="6,0" zPosition="1" size="120,64" text=" ">
-			<convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
-			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
-	</screen>
-	<screen name="VideoWizardSummary" 			position="0,0" 	size="132,64">
-		<widget name="text" position="6,4" size="120,20" font="Regular;13" transparent="1" />
-		<widget source="parent.list" render="Label" position="6,25" size="120,34" font="Regular;16">
-			<convert type="StringListSelection" />
-		</widget>
-	</screen>
 </skin>
