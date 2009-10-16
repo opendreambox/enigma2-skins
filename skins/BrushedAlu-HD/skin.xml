@@ -2651,9 +2651,9 @@
 		<widget name="datetime" 							position="70,410" size="400,25" font="Regular;25" backgroundColor="grey" shadowColor="black" shadowOffset="-1,-1" transparent="1" />
 		<widget name="duration" 							position="70,460" size="400,25" font="Regular;25" backgroundColor="grey" shadowColor="black" shadowOffset="-1,-1" transparent="1" />
 
-		<eLabel 								position="476,110" size="  1,500" backgroundColor="black" zPosition="5"/>
-		<eLabel 								position="477,110" size="  2,500" backgroundColor="grey" zPosition="5"/>
-		<widget source="Title" render="Label" position="495,120" size="710,480" font="Regular;24" backgroundColor="grey" transparent="1" />
+		<eLabel 						position="476,110" size="  1,500" backgroundColor="black" zPosition="5"/>
+		<eLabel 						position="477,110" size="  2,500" backgroundColor="grey" zPosition="5"/>
+		<widget name="epg_description" 	position="495,120" size="710,480" font="Regular;24" backgroundColor="grey" transparent="1" />
 
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="100,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
