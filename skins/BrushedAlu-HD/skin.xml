@@ -842,18 +842,18 @@
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
-		<widget source="EnigmaVersion" 	render="Label" position="80,150" size="500,32" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="ImageVersion" 	render="Label" position="80,190" size="500,32" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="FPVersion" 		render="Label" position="80,230" size="500,32" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="EnigmaVersion" 	render="Label" position="80,150" size="600,32" font="Regular;26" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="ImageVersion" 	render="Label" position="80,190" size="600,32" font="Regular;26" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="FPVersion" 		render="Label" position="80,230" size="600,32" font="Regular;26" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 
-		<widget source="HDDHeader" 		render="Label" position="80,320" size="500,32" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="hddA" 			render="Label" position="80,370" size="500,70" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="HDDHeader" 		render="Label" position="80,320" size="600,32" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="hddA" 			render="Label" position="80,370" size="600,70" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 
-		<widget source="TunerHeader" 	render="Label" position="650,150" size="500,32" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="Tuner0" 		render="Label" position="650,200" size="500,32" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="Tuner1" 		render="Label" position="650,240" size="500,32" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="Tuner2" 		render="Label" position="650,280" size="500,32" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="Tuner3" 		render="Label" position="650,320" size="500,32" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="TunerHeader" 	render="Label" position="730,150" size="470,32" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="Tuner0" 		render="Label" position="730,200" size="470,32" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="Tuner1" 		render="Label" position="730,240" size="470,32" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="Tuner2" 		render="Label" position="730,280" size="470,32" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="Tuner3" 		render="Label" position="730,320" size="470,32" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<ePixmap pixmap="BrushedAlu-HD/alu.png"  	position="80,570" 	size="780,40" />
 		<ePixmap pixmap="BrushedAlu-HD/kerni.png"  	position="980,500" size="200,110" alphatest="blend" />
 	</screen>

@@ -868,17 +868,17 @@
 		</widget>
 		<eLabel text="About DreamBox" position="80,40" size="330,30" font="Regular;25" backgroundColor="darkgrey" transparent="1"/>
 
-		<widget source="EnigmaVersion" 	render="Label" position="110,150" size="500,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
-		<widget source="ImageVersion" 	render="Label" position="110,180" size="500,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
-		<widget source="FPVersion" 		render="Label" position="110,220" size="500,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
-		<widget source="HDDHeader" 		render="Label" position="110,280" size="500,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
-		<widget source="hddA" 			render="Label" position="110,330" size="500,50" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="EnigmaVersion" 	render="Label" position="80,150" size="600,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="ImageVersion" 	render="Label" position="80,180" size="600,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="FPVersion" 		render="Label" position="80,220" size="600,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="HDDHeader" 		render="Label" position="80,280" size="600,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="hddA" 			render="Label" position="80,330" size="600,50" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
 
-		<widget source="TunerHeader" 	render="Label" position="670,150" size="500,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
-		<widget source="Tuner0" 		render="Label" position="670,195" size="500,30" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
-		<widget source="Tuner1" 		render="Label" position="670,225" size="500,30" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
-		<widget source="Tuner2" 		render="Label" position="670,255" size="500,30" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
-		<widget source="Tuner3" 		render="Label" position="670,285" size="500,30" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="TunerHeader" 	render="Label" position="730,150" size="470,30" font="Regular;26" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="Tuner0" 		render="Label" position="730,195" size="470,30" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="Tuner1" 		render="Label" position="730,225" size="470,30" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="Tuner2" 		render="Label" position="730,255" size="470,30" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="Tuner3" 		render="Label" position="730,285" size="470,30" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
 
 		<ePixmap pixmap="dmm-HD/menu/db.png"	position="120,530" size="480,66"  alphatest="blend" />
 		<ePixmap pixmap="dmm-HD/kerni.png"  	position="830,500" size="200,110" alphatest="blend" />
