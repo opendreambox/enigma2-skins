@@ -3176,10 +3176,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<widget source="key_red" 	render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- DVD Burner -->
 	<screen name="DVDToolbox" 					position="0,0" 		size="1280,720" title="DVD media toolbox" 			flags="wfNoBorder">
