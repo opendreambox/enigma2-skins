@@ -511,34 +511,35 @@
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
-		<widget name="title" 			position=" 80,120" size="440,62" font="Regular;28" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-	
-		<widget name="artisttext" 		position=" 80,200" size="440,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" foregroundColor="grey" transparent="1" />
-		<widget name="artist" 			position=" 80,230" size="440,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="artisttext" 		position="550,120" size="150,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="artist" 			position="700,120" size="370,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
-		<widget name="albumtext" 		position=" 80,270" size="440,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" foregroundColor="grey" transparent="1" />
-		<widget name="album" 			position=" 80,300" size="440,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="albumtext" 		position="550,160" size="150,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="album" 			position="700,160" size="370,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
-		<widget name="yeartext" 		position=" 80,340" size="440,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" foregroundColor="grey" transparent="1" />
-		<widget name="year" 			position=" 80,370" size="440,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="yeartext" 		position="550,200" size="150,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="year" 			position="700,200" size="370,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
-		<widget name="genretext" 		position=" 80,410" size="440,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" foregroundColor="grey" transparent="1" />
-		<widget name="genre" 			position=" 80,440" size="440,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="genretext" 		position="550,240" size="150,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="genre" 			position="700,240" size="370,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 
-		<widget name="coverArt" 		position="240,490" size="116,116" pixmap="skin_default/no_coverArt.png" transparent="1" alphatest="blend" />
+		<widget name="titletext" 		position="550,280" size="150,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="title" 			position="700,280" size="510,28" font="Regular;24" valign="top" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+
+		<widget name="coverArt" 		position="1070,120" size="116,116" pixmap="skin_default/no_coverArt.png" transparent="1" alphatest="blend" />
 
 		<eLabel 						position="530,110" size="2,500" backgroundColor="black" zPosition="5"/>
 		<eLabel 						position="532,110" size="2,500" backgroundColor="grey" zPosition="5"/>
 
-		<eLabel text="F i l e l i s t" 	position="550,110" size="660,28" font="Regular;24" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<eLabel 						position="550,144" size="660,2" 	backgroundColor="black" />
-		<eLabel 						position="550,146" size="660,2" 	backgroundColor="grey" />
-		<widget name="filelist" 		position="550,160" size="660,184" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+		<eLabel text="F i l e l i s t" 	position="80,110" size="430,28" font="Regular;24" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<eLabel 						position="80,144" size="430,2" 	backgroundColor="black" />
+		<eLabel 						position="80,146" size="430,2" 	backgroundColor="grey" />
+		<widget name="filelist" 		position="80,160" size="430,450" itemHeight="25" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
 
 		<eLabel text="P l a y l i s t" 	position="550,360" size="660,28"  font="Regular;24" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<eLabel 						position="550,394" size="660,2"   backgroundColor="black" />
 		<eLabel 						position="550,396" size="660,2"   backgroundColor="grey" />
-		<widget name="playlist" 		position="550,410" size="660,184" scrollbarMode="showOnDemand" selectionDisabled="1" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+		<widget name="playlist" 		position="550,410" size="660,200" itemHeight="25" scrollbarMode="showOnDemand" selectionDisabled="1" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
 
 
 		<ePixmap 						position="340,650" size="600,16" pixmap="BrushedAlu-HD/mpslider.png" zPosition="13" backgroundColor="black" alphatest="on"/>
@@ -555,7 +556,6 @@
 
 		<eLabel name="nowPlaying" 	position="0,0" size="0,0" />
 		<widget name="currenttext" 	position="0,0" size="0,0" />
-		<widget name="titletext" 	position="0,0" size="0,0" />
 	</screen>
 	<screen name="DirectoryBrowser" 			position="0,0" 		size="1280,720" title="Directorybrowser"			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
@@ -652,7 +652,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="filelist"    position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+		<widget name="filelist"    position="550,130" size="660,493" zPosition="3" itemHeight="29" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" transparent="1"/>
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,600"  size="30,30" alphatest="blend"   />
 		<widget source="key_red" 	render="Label"  position="130,552"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
@@ -1109,7 +1109,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget name="config" position="550,120" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1" />
+		<widget name="config" position="550,120" size="660,435" zPosition="3" itemHeight="29" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" transparent="1" />
 
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png"   position="80,550"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" 	position="80,600"  size="30,30" alphatest="blend"   zPosition="2" />
@@ -1250,7 +1250,7 @@
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
 		<widget name="SkinList" position="550,120" size="660,250" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
-		<widget name="Preview" 	position="755,390" size="250,520" alphatest="on" />
+		<widget name="Preview" 	position="740,390" size="280,520" alphatest="on" />
 		<ePixmap 						position="80,500"  size="30,30" alphatest="blend"   zPosition="1" pixmap="BrushedAlu-HD/buttons/red.png" />
 		<widget source="key_red" 		render="Label" position="130,502"  size="220,28"	zPosition="1" font="Regular;24" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<widget source="introduction" render="Label" position="550,610" size="660,30" zPosition="10" font="Regular;24" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
@@ -2431,7 +2431,7 @@
 		<eLabel text="Choose bouquet" position="510,110" size="700,35" zPosition="3" font="Regular;32" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<eLabel 			position="500,150" size="730,  2" backgroundColor="black" zPosition="5"/>
 		<eLabel 			position="500,152" size="730,  2" backgroundColor="grey" zPosition="5"/>
-		<widget name="menu" position="510,175" size="660,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel660_25_bg.png" transparent="1" />
+		<widget name="menu" position="510,175" size="660,450" zPosition="3" itemHeight="29" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" transparent="1" />
 		<eLabel 			position="476,110" size="  1,500" backgroundColor="black" zPosition="5"/>
 		<eLabel 			position="477,110" size="  2,500" backgroundColor="grey" zPosition="5"/>
 		<ePixmap 			position=" 60,500"  size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
@@ -2573,7 +2573,7 @@
 		</widget>
 		<eLabel 								position="485,150" size="730,2" backgroundColor="black" zPosition="5"/>
 		<eLabel 								position="485,152" size="730,2" backgroundColor="grey" zPosition="5"/>
-		<widget name="list" 					position="490,168" size="720,425" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel1100_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel1100_25_bg.png" transparent="1" />
+		<widget name="list" 					position="490,168" size="720,435" zPosition="3" itemHeight="29" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" transparent="1" />
 		<eLabel 								position="476,110" size="1,500" backgroundColor="black" zPosition="5"/>
 		<eLabel 								position="477,110" size="2,500" backgroundColor="grey" zPosition="5"/>
 
@@ -2622,7 +2622,7 @@
 
 		<widget name="date" position="1020,117" size="180,24" font="Regular;22" valign="center" halign="right" backgroundColor="darkgrey" transparent="1"/>
 
-		<widget name="list" position="485,160" size="730,450" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel1100_25.png" backgroundPixmap="BrushedAlu-HD/frame/sel1100_25_bg.png" transparent="1"/>
+		<widget name="list" position="485,160" size="730,435" zPosition="3" itemHeight="29" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" transparent="1"/>
 
 		<ePixmap 			position="60,500"  size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
 
@@ -4110,7 +4110,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="label" render="Label" position="100,110" size="300,75" font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
 		<widget name="thn"   position="100,200"	size="300,240" alphatest="on" />
 
-		<widget name="filelist" position="550,120" size="660,480" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+		<widget name="filelist" position="550,120" size="660,493" zPosition="3" itemHeight="29" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" transparent="1"/>
 
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png"  position="80,500"  size="30,30" alphatest="blend"   />
@@ -4151,7 +4151,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<eLabel text="Settings" 	position="80,110" size="380,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
-		<widget name="config" position="550,120" size="660,480" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1"/>
+		<widget name="config" position="550,120" size="660,493" itemHeight="29" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" transparent="1"/>
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png"  position="80,500"  size="30,30" alphatest="blend"   />
 		<widget source="key_red" render="Label" position="130,452"  size="220,30"  font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
