@@ -1,6 +1,5 @@
 SUBDIRS = skins
 
-# please leave this untouched -acid-burn-!
 #LANGS := $(shell cat $(srcdir)/LINGUAS)
 
 #install-exec-hook:

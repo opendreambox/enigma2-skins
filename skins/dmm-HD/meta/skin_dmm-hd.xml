@@ -1,0 +1,24 @@
+<default>
+	  <prerequisites>
+                    <tag type="Skin" />
+	  </prerequisites>
+          <info language="en">
+                    <author>Kerni</author>
+                    <name>dmm-HD</name>
+                    <packagename>enigma2-skin-dmm-hd</packagename>
+                    <shortdescription>Kerni's dmm-HD skin</shortdescription>
+                    <description>A nice looking HD skin from Kerni</description>
+		    <screenshot src="http://www.dreamboxupdate.com/preview/dmm-hd.jpg" />                    
+          </info>
+          <info language="de">
+                    <author>Kerni</author>
+                    <name>dmm-HD</name>
+                    <packagename>enigma2-skin-dmm-hd</packagename>
+                    <shortdescription>Kerni's dmm-HD skin</shortdescription>
+                    <description>Ein HD Skin von Kerni</description>
+		    <screenshot src="http://www.dreamboxupdate.com/preview/dmm-hd.jpg" />       
+          </info>
+	  <files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-dmm-hd" />
+	  </files>
+</default>

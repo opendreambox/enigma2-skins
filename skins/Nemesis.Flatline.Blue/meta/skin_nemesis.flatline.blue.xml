@@ -1,0 +1,24 @@
+<default>
+	<prerequisites>
+                <tag type="Skin" />
+	</prerequisites>
+        <info language="en">
+                <author>Nemesis</author>
+                <name>Nemesis Flatline Blue Skin</name>
+                <packagename>enigma2-skin-nemesis.flatline.blue</packagename>
+                <shortdescription>Nemesis Flatline Blue Skin</shortdescription>
+                <description>Nemesis Flatline Blue Skin for the Dreambox</description>
+		<screenshot src="http://www.dreamboxupdate.com/preview/skin_nemesis.flatline.blue.jpg" />                    
+        </info>
+        <info language="de">
+                <author>Nemesis</author>
+                <name>Nemesis Flatline Blue Skin</name>
+                <packagename>enigma2-skin-nemesis.flatline.blue</packagename>
+                <shortdescription>Nemesis Flatline Blue Skin</shortdescription>
+                <description>Nemesis Flatline Blue Skin für die Dreambox</description>
+		<screenshot src="http://www.dreamboxupdate.com/preview/skin_nemesis.flatline.blue.jpg" />       
+        </info>
+	<files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-nemesis.flatline.blue" />
+	</files>
+</default>

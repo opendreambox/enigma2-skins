@@ -1,0 +1,24 @@
+<default>
+	<prerequisites>
+                <tag type="Skin" />
+	</prerequisites>
+        <info language="en">
+                <author>Nemesis</author>
+                <name>Nemesis Greyline Extended Skin</name>
+                <packagename>enigma2-skin-nemesis.greyline.extended</packagename>
+                <shortdescription>Nemesis Greyline Extended Skin</shortdescription>
+                <description>Nemesis Greyline Extended Skin for the Dreambox</description>
+		<screenshot src="http://www.dreamboxupdate.com/preview/skin_nemesis.greyline.extended.jpg" />                    
+        </info>
+        <info language="de">
+                <author>Nemesis</author>
+                <name>Nemesis Greyline Extended Skin</name>
+                <packagename>enigma2-skin-nemesis.greyline.extended</packagename>
+                <shortdescription>Nemesis Greyline Extended Skin</shortdescription>
+                <description>Nemesis Greyline Extended Skin für die Dreambox</description>
+		<screenshot src="http://www.dreamboxupdate.com/preview/skin_nemesis.greyline.extended.jpg" />       
+        </info>
+	<files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-nemesis.greyline.extended" />
+	</files>
+</default>

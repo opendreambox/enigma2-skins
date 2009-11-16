@@ -1,0 +1,24 @@
+<default>
+	  <prerequisites>
+                    <tag type="Skin" />
+	  </prerequisites>
+          <info language="en">
+                    <author>Kerni</author>
+                    <name>SWAIN-HD</name>
+                    <packagename>enigma2-skin-swain-hd</packagename>
+                    <shortdescription>Kerni's SWAIN-HD skin</shortdescription>
+                    <description>A nice looking skin from Kerni</description>
+		    <screenshot src="http://www.dreamboxupdate.com/preview/swain-hd.jpg" />                    
+          </info>
+          <info language="de">
+                    <author>Kerni</author>
+                    <name>SWAIN-HD</name>
+                    <packagename>enigma2-skin-swain-hd</packagename>
+                    <shortdescription>Kerni's SWAIN-HD skin</shortdescription>
+                    <description>Ein Skin von Kerni</description>
+		    <screenshot src="http://www.dreamboxupdate.com/preview/swain-hd.jpg" />       
+          </info>
+	  <files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-swain-hd" />
+	  </files>
+</default>
