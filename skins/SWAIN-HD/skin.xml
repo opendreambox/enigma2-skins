@@ -272,7 +272,7 @@
 	<screen name="Menu" 						position="172,132" size="1108,588" title="Main menu" 			backgroundColor="transparent">
 		<eLabel 								position="5,5" 		size="460,470" zPosition="-1" backgroundColor="background" />
 		<widget source="title" render="Label" 	position="15,10" 	size="440,35" font="Regular;27" halign="center"/>
-		<widget source="menu" render="Listbox" 	position="15,55"    size="440,400" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="15,55"    size="440,400" scrollbarMode="showOnDemand">
 			<convert type="StringList" />	
 		</widget>
 	</screen>
@@ -285,7 +285,7 @@
 
 		<widget source="title" render="Label" position="220,80" size="350,72" zPosition="3" font="Regular;32" backgroundColor="blue" transparent="1"/>
 
-		<widget source="menu" render="Listbox" 	position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (50, 10), size = (440, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -303,7 +303,7 @@
 
 		<widget source="title" render="Label" position="220,80" size="350,72" zPosition="3" font="Regular;32" backgroundColor="blue" transparent="1"/>
 
-		<widget source="menu" render="Listbox" 	position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (50, 10), size = (440, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -321,7 +321,7 @@
 
 		<widget source="title" render="Label" position="220,80" size="350,72" zPosition="3" font="Regular;32" backgroundColor="blue" transparent="1"/>
 
-		<widget source="menu" render="Listbox" 	position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (50, 10), size = (440, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -339,7 +339,7 @@
 
 		<widget source="title" render="Label" position="220,80" size="350,72" zPosition="3" font="Regular;32" backgroundColor="blue" transparent="1"/>
 
-		<widget source="menu" render="Listbox" 	position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (50, 10), size = (440, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -357,7 +357,7 @@
 
 		<widget source="title" render="Label" position="220,80" size="350,72" zPosition="3" font="Regular;32" backgroundColor="blue" transparent="1"/>
 
-		<widget source="menu" render="Listbox" 	position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (50, 10), size = (440, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -375,7 +375,7 @@
 
 		<widget source="title" render="Label" position="220,80" size="350,72" zPosition="3" font="Regular;32" backgroundColor="blue" transparent="1"/>
 
-		<widget source="menu" render="Listbox" 	position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (50, 10), size = (440, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -393,7 +393,7 @@
 
 		<widget source="title" render="Label" position="220,80" size="350,72" zPosition="3" font="Regular;32" backgroundColor="blue" transparent="1"/>
 
-		<widget source="menu" render="Listbox" 	position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="170,133" size="500,552" zPosition="3" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (50, 10), size = (440, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -411,7 +411,7 @@
 
 		<eLabel text="Softwaremanager..." position="220,80" size="350,72" zPosition="3" font="Regular;32" backgroundColor="blue" transparent="1"/>
 
-		<widget source="menu" render="Listbox"  position="170,133" size="500,368" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="170,133" size="500,368" selectionPixmap="SWAIN-HD/selmenu.png" backgroundPixmap="SWAIN-HD/selmenu_bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (50, 10), size = (440, 40), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
