@@ -269,7 +269,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget source="menu" render="Listbox" 	position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (35, 12), size = (590, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -278,9 +278,6 @@
 			</convert>
 		</widget>
 		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
-
-		<!-- eLabel position="71,200" zPosition="3" size="392,225" backgroundColor="#ff000000"/>
-		<widget source="session.VideoPicture" render="Pig" position="40,160" size="220,180" zPosition="-10" backgroundColor="transparent"/ -->
 	</screen>
 	<screen name="menu_information" 			position="0,0" 		size="1280,720" title="Main menu" 					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" transparent="1" />
@@ -296,7 +293,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget source="menu" render="Listbox" 	position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (35, 12), size = (590, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -320,7 +317,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget source="menu" render="Listbox" 	position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (35, 12), size = (590, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -344,7 +341,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget source="menu" render="Listbox" 	position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (35, 12), size = (590, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -368,7 +365,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget source="menu" render="Listbox" 	position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (35, 12), size = (590, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -392,7 +389,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget source="menu" render="Listbox" 	position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (35, 12), size = (590, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -416,7 +413,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget source="menu" render="Listbox" 	position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="550,120" size="660,500" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (35, 12), size = (590, 40), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 23)],
@@ -440,7 +437,7 @@
 		<ePixmap 											position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 
-		<widget source="menu" render="Listbox" 	position="550,120" size="660,350" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="550,120" size="660,350" zPosition="3" selectionPixmap="BrushedAlu-HD/menu/sel50.png" backgroundPixmap="BrushedAlu-HD/menu/sel50-2.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (35, 12), size = (590, 40), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
@@ -478,7 +475,7 @@
 		<eLabel 								position="80,155" size="340,420" zPosition="1" backgroundColor="grey"/>
 		<eLabel 								position="81,156" size="338,418" zPosition="2" backgroundColor="black"/>
 
-		<widget source="menu" render="Listbox" 	position="90,165" size="320,400" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="90,165" size="320,400" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1">
 			<convert type="StringList" />
 		</widget>
 

@@ -295,7 +295,7 @@
 		<eLabel position="599,1" size="2,552" backgroundColor="grey" zPosition="5"/>
 		<ePixmap position="61,11" size="480,66" pixmap="dreamTV-HD/menu/db.png" alphatest="blend"/>
 		<widget source="title" render="Label" position="1,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="menu" render="Listbox" position="3,101" size="298,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="3,101" size="298,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -354,7 +354,7 @@
 		<eLabel position="599,1" size="2,552" backgroundColor="grey" zPosition="5"/>
 		<ePixmap position="61,11" size="480,66" pixmap="dreamTV-HD/menu/db.png" alphatest="blend"/>
 		<widget source="title" render="Label" position="1,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="menu" render="Listbox" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -374,7 +374,7 @@
 		<eLabel position="649,1" size="2,552" backgroundColor="grey" zPosition="5"/>
 		<ePixmap position="61,11" size="480,66" pixmap="dreamTV-HD/menu/db.png" alphatest="blend"/>
 		<widget source="title" render="Label" position="1,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="menu" render="Listbox" position="302,101" size="347,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select430_45.png" transparent="1">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="302,101" size="347,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select430_45.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (347, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -425,7 +425,7 @@
 		<eLabel position="599,1" size="2,552" backgroundColor="grey" zPosition="5"/>
 		<ePixmap position="61,11" size="480,66" pixmap="dreamTV-HD/menu/db.png" alphatest="blend"/>
 		<widget source="title" render="Label" position="1,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="menu" render="Listbox" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png" >
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png" >
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -445,7 +445,7 @@
 		<eLabel position="599,1" size="2,552" backgroundColor="grey" zPosition="5"/>
 		<ePixmap position="61,11" size="480,66" pixmap="dreamTV-HD/menu/db.png" alphatest="blend"/>
 		<widget source="title" render="Label" position="1,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="menu" render="Listbox" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -465,7 +465,7 @@
 		<eLabel position="599,1" size="2,552" backgroundColor="grey" zPosition="5"/>
 		<ePixmap position="61,11" size="480,66" pixmap="dreamTV-HD/menu/db.png" alphatest="blend"/>
 		<widget source="title" render="Label" position="1,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="menu" render="Listbox" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -485,7 +485,7 @@
 		<eLabel position="599,1" size="2,552" backgroundColor="grey" zPosition="5"/>
 		<ePixmap position="61,11" size="480,66" pixmap="dreamTV-HD/menu/db.png" alphatest="blend"/>
 		<widget source="title" render="Label" position="1,66" size="600,32" font="Regular;25" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="menu" render="Listbox" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="302,101" size="297,450" scrollbarMode="showNever" selectionPixmap="dreamTV-HD/menu/select300_45.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (0, 9), size = (299, 30), flags = RT_HALIGN_CENTER, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -499,7 +499,7 @@
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5"/>
 		<widget source="title" render="Label" position="10,10" size="580,35" font="Regular;27" halign="center"/>
 		<eLabel position="10,50" size="580,2" backgroundColor="grey" zPosition="5"/>
-		<widget source="menu" render="Listbox" position="10,55" size="580,450" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png" >
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="10,55" size="580,450" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select1080_25.png" >
 			<convert type="StringList"/>
 		</widget>
 	</screen>

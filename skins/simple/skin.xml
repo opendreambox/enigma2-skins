@@ -224,56 +224,56 @@
 	<screen name="Menu" 							position="200,90" size="320,430" title="Main menu">
 		<eLabel	position="10,12" size="300,31" backgroundColor="background2" />
 		<widget source="title" render="Label" position="15,16" size="290,26" zPosition="1" font="Regular;23" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="10,55" size="300,375" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="10,55" size="300,375" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
 	<screen name="menu_mainmenu" 					position="200,90" size="320,430" title="Main menu">
 		<eLabel	position="10,12" size="300,31" backgroundColor="background2" />
 		<widget source="title" render="Label" position="15,16" size="290,26" zPosition="1" font="Regular;23" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="10,55" size="300,375" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="10,55" size="300,375" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
 	<screen name="menu_information" 				position="200,90" size="320,430" title="Main menu">
 		<eLabel	position="10,12" size="300,31" backgroundColor="background2" />
 		<widget source="title" render="Label" position="15,16" size="290,26" zPosition="1" font="Regular;23" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="10,55" size="300,375" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="10,55" size="300,375" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
 	<screen name="menu_setup" 						position="200,90" size="320,430" title="Main menu">
 		<eLabel	position="10,12" size="300,31" backgroundColor="background2" />
 		<widget source="title" render="Label" position="15,16" size="290,26" zPosition="1" font="Regular;23" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="10,55" size="300,375" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="10,55" size="300,375" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
 	<screen name="menu_scan" 						position="200,90" size="320,430" title="Main menu">
 		<eLabel	position="10,12" size="300,31" backgroundColor="background2" />
 		<widget source="title" render="Label" position="15,16" size="290,26" zPosition="1" font="Regular;23" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="10,55" size="300,375" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="10,55" size="300,375" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
 	<screen name="menu_system" 						position="200,90" size="320,430" title="Main menu">
 		<eLabel	position="10,12" size="300,31" backgroundColor="background2" />
 		<widget source="title" render="Label" position="15,16" size="290,26" zPosition="1" font="Regular;23" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="10,55" size="300,375" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="10,55" size="300,375" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
 	<screen name="menu_harddisk" 					position="200,90" size="320,430" title="Main menu">
 		<eLabel	position="10,12" size="300,31" backgroundColor="background2" />
 		<widget source="title" render="Label" position="15,16" size="290,26" zPosition="1" font="Regular;23" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="10,55" size="300,375" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="10,55" size="300,375" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
 	<screen name="menu_shutdown" 					position="200,90" size="320,430" title="Main menu">
 		<eLabel	position="10,12" size="300,31" backgroundColor="background2" />
 		<widget source="title" render="Label" position="15,16" size="290,26" zPosition="1" font="Regular;23" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1"/>
-		<widget source="menu" render="Listbox" position="10,55" size="300,375" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="10,55" size="300,375" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
 	</screen>
