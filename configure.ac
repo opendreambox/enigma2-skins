@@ -13,12 +13,6 @@ AC_OUTPUT([
 ./skins/BrushedAlu-HD/mmp3/Makefile
 ./skins/BrushedAlu-HD/frame/Makefile
 ./skins/BrushedAlu-HD/meta/Makefile
-./skins/dmm-HD/Makefile
-./skins/dmm-HD/menu/Makefile
-./skins/dmm-HD/icons/Makefile
-./skins/dmm-HD/buttons/Makefile
-./skins/dmm-HD/mmp3/Makefile
-./skins/dmm-HD/meta/Makefile
 ./skins/dreamTV-HD/Makefile
 ./skins/dreamTV-HD/menu/Makefile
 ./skins/dreamTV-HD/icons/Makefile
@@ -29,11 +23,6 @@ AC_OUTPUT([
 ./skins/dTV-HD/icons/Makefile
 ./skins/dTV-HD/buttons/Makefile
 ./skins/dTV-HD/meta/Makefile
-./skins/Kerni-HD1/Makefile
-./skins/Kerni-HD1/menu/Makefile
-./skins/Kerni-HD1/icons/Makefile
-./skins/Kerni-HD1/buttons/Makefile
-./skins/Kerni-HD1/meta/Makefile
 ./skins/Nemesis.BlackBox/Makefile
 ./skins/Nemesis.BlackBox/menu/Makefile
 ./skins/Nemesis.BlackBox/meta/Makefile
