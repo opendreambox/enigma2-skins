@@ -1101,7 +1101,7 @@
 		<widget name="channel" position="30,15" size="130,28" font="Regular;25" />
 		<widget name="number" position="190,15" size="80,28" halign="right" font="Regular;25" />
 	</screen>
-	<screen name="NumericalTextInputHelpDialog" position="338,480" zPosition="10" size="604,164" backgroundColor="#202020" flags="wfNoBorder">
+	<screen name="NumericalTextInputHelpDialog" position="338,430" zPosition="10" size="604,164" backgroundColor="#202020" flags="wfNoBorder">
 		<eLabel position="0,0" size="602,162" backgroundColor="#c0c0c0" zPosition="-1" />
 		<widget name="key1" position="2,2" 		size="200,40" font="Console;19" halign="center" valign="center" />
 		<widget name="key2" position="202,2" 	size="200,40" font="Console;19" halign="center" valign="center" />
