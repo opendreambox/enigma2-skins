@@ -1444,7 +1444,7 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget source="global.CurrentTime" render="Label" position="6,44" size="58,20" font="Regular;20" halign="left" valign="top">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="session.RecordState" render="FixedLabel" text="" position="6,44" zPosition="1" size="58,20">
+		<widget source="session.RecordState" render="FixedLabel" text=" " position="6,44" zPosition="1" size="58,20">
 			<convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
