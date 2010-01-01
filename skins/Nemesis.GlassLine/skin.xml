@@ -878,8 +878,8 @@
 		</widget>
 		<eLabel position="483,88" size="174,134" backgroundColor="#505555" />
 		<widget source="session.VideoPicture" render="Pig" position="485,90" zPosition="1" size="170,130" backgroundColor="transparent" />
-		<widget name="timer1" position="60,90" zPosition="2" size="415,60" font="Regular;19" backgroundColor="background" transparent="1" />
-		<widget name="timer2" position="60,150" zPosition="2" size="415,60" font="Regular;19" backgroundColor="background" transparent="1" />
+		<widget name="timer1" position="60,90" zPosition="2" size="415,60" backgroundColor="background" transparent="1" />
+		<widget name="timer2" position="60,150" zPosition="2" size="415,60" backgroundColor="background" transparent="1" />
 		<widget name="list" position="80,245" zPosition="2" size="565,250" backgroundColor="background" transparent="1" />
 		<ePixmap pixmap="Nemesis.GlassLine/key_red.png" position="80,525" size="21,21" alphatest="on" />
 		<ePixmap pixmap="Nemesis.GlassLine/key_green.png" position="220,525" size="21,21" alphatest="on" />
