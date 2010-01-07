@@ -7,6 +7,13 @@ AC_OUTPUT([
 ./Makefile
 ./skins/Makefile
 ./skins/BASIC-HD/Makefile
+./skins/BASIC-HD/button/Makefile
+./skins/BASIC-HD/dvdplayer/Makefile
+./skins/BASIC-HD/graphepg/Makefile
+./skins/BASIC-HD/icon/Makefile
+./skins/BASIC-HD/listbox/Makefile
+./skins/BASIC-HD/menu/Makefile
+./skins/BASIC-HD/window/Makefile
 ./skins/BrushedAlu-HD/Makefile
 ./skins/BrushedAlu-HD/menu/Makefile
 ./skins/BrushedAlu-HD/icons/Makefile
