@@ -6,6 +6,7 @@ AM_PATH_PYTHON()
 AC_OUTPUT([
 ./Makefile
 ./skins/Makefile
+./skins/BASIC-HD/Makefile
 ./skins/BrushedAlu-HD/Makefile
 ./skins/BrushedAlu-HD/menu/Makefile
 ./skins/BrushedAlu-HD/icons/Makefile
