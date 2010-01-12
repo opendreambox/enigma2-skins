@@ -754,11 +754,15 @@
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
 		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="key_yellow" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="key_blue" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="timer1" position="10,45" size="780,75" scrollbarMode="showNever" />
-		<widget name="timer2" position="10,150" size="780,75" scrollbarMode="showNever" />
-		<widget name="list" position="10,260" size="780,230" scrollbarMode="showOnDemand" />
+		<ePixmap position="8,144" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,144" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,144" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,144" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="key_yellow" position="404,144" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="602,144" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="timer2" position="10,180" size="780,75" scrollbarMode="showNever" />
+		<widget name="list" position="10,290" size="780,200" scrollbarMode="showOnDemand" />
 	</screen>
 
 	<!-- Timer Selection -->
@@ -1043,8 +1047,8 @@
 						MultiContentEntryPixmap(pos = (10, 5), size = (60, 40), png = 2), # index 2 is the pixmap
 						MultiContentEntryText(pos = (80, 10), size = (200, 50), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name
 					],
-				 "fonts": [gFont("Regular", 24)],
-				 "itemHeight": 50
+				"fonts": [gFont("Regular", 24)],
+				"itemHeight": 50
 				}
 			</convert>
 		</widget>
@@ -1305,10 +1309,10 @@
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
+		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 	<!-- Language Wizard -->
@@ -1341,10 +1345,10 @@
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
+		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1358,10 +1362,10 @@
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
+		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1375,10 +1379,10 @@
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
+		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1725,10 +1729,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
+		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1744,10 +1748,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
+		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1854,10 +1858,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="text" position="340,80" size="600,230" font="Regular;24" halign="center" />
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
+		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1999,10 +2003,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="portpic" pixmap="%s" position="60,320" zPosition="10" size="150,150" transparent="1" alphatest="on" />
 		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" />
 		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
+		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -2071,75 +2075,65 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 <!-- Extensions Begins -->
 
-	<!-- CutListEditor BETA -->
-	<screen name="CutListEditor" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
-		<eLabel text="Cutlist editor" position="340,80" size="600,60" font="Regular;40" />
-		<widget source="global.CurrentTime" render="Label" position="268,60" size="394,20" font="Regular;24" halign="right">
-			<convert type="ClockToText">Format:%A %B %d, %H:%M</convert>
-		</widget>
-		<!--
-		<eLabel position="500,100" size="640,360" backgroundColor="#505555" />
-		-->
-		<widget name="Video" position="500,100" zPosition="1" size="640,360" backgroundColor="transparent" />
-		<widget source="session.CurrentService" render="Label" position="135,405" size="450,50" font="Regular;22" halign="center" valign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="50,450" zPosition="1" size="620,25" font="Regular;20" halign="center" valign="center">
-			<convert type="ServicePosition">Position,Detailed</convert>
-		</widget>
-		<!--
-		<eLabel position="62,98" size="179,274" backgroundColor="#505555" />
-		<eLabel position="64,100" size="175,270" backgroundColor="#000000" />
-		-->
-		<widget source="cutlist" position="100,100" zPosition="1" size="300,400" scrollbarMode="showOnDemand" render="Listbox">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(size=(125, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
-						MultiContentEntryText(pos=(125,0), size=(50, 20), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
-					],
-				 "fonts": [gFont("Regular", 18)],
-				 "itemHeight": 20
-				}
-			</convert>
-		</widget>
-		<widget name="Timeline" position="100,600" size="615,20" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
-		<ePixmap pixmap="skin_default/icons/mp_buttons.png" position="500,650" size="109,13" alphatest="on" />
-	</screen>
-	<!--// CutListEditor -->
-
 	<!-- CutListEditor & TitleCutter BETA -->
-	<screen name="TitleCutter" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
-		<eLabel text="Cutlist editor" position="60,60" size="300,25" font="Regular;24" />
-		<widget source="global.CurrentTime" render="Label" position="268,60" size="394,20" font="Regular;24" halign="right">
+	<screen name="CutListEditor" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
+		<eLabel text="Cutlist editor" position="340,80" size="600,60" font="Regular;40" valign="center" halign="center" />
+		<widget source="global.CurrentTime" render="Label" position="940,80" size="340,20" font="Regular;24" halign="right">
 			<convert type="ClockToText">Format:%A %B %d, %H:%M</convert>
 		</widget>
-		<!--
-		<eLabel position="500,100" size="640,360" backgroundColor="#505555" />
-		-->
-		<widget name="Video" position="500,100" zPosition="1" size="640,360" backgroundColor="transparent" />
-		<widget source="session.CurrentService" render="Label" position="135,405" size="450,50" font="Regular;22" halign="center" valign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="50,450" zPosition="1" size="620,25" font="Regular;20" halign="center" valign="center">
-			<convert type="ServicePosition">Position,Detailed</convert>
-		</widget>
-		<!--
-		<eLabel position="62,98" size="179,274" backgroundColor="#505555" />
-		<eLabel position="64,100" size="175,270" backgroundColor="#000000" />
-		-->
-		<widget source="cutlist" position="100,100" zPosition="1" size="300,400" scrollbarMode="showOnDemand" render="Listbox">
+
+		<widget source="cutlist" render="Listbox" position="80,160" size="400,400" zPosition="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(size=(125, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
-						MultiContentEntryText(pos=(125,0), size=(50, 20), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
+						MultiContentEntryText(size=(125, 22), text = 1, backcolor = MultiContentTemplateColor(3)),
+						MultiContentEntryText(pos=(125,0), size=(50, 22), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
 					],
-				 "fonts": [gFont("Regular", 18)],
-				 "itemHeight": 20
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 25
 				}
 			</convert>
 		</widget>
-		<widget name="Timeline" position="100,600" size="615,20" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
-		<ePixmap pixmap="skin_default/icons/mp_buttons.png" position="500,650" size="109,13" alphatest="on" />
+
+		<widget name="Video" position="800,160" zPosition="1" size="400,400" backgroundColor="transparent" />
+		<widget source="session.CurrentService" render="Label" position="135,405" size="450,50" font="Regular;22" halign="center" valign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="300,580" zPosition="1" size="680,25" font="Regular;22" halign="center" valign="center">
+			<convert type="ServicePosition">Position,Detailed</convert>
+		</widget>
+		<widget name="Timeline" position="300,610" size="680,25" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
+		<ePixmap pixmap="skin_default/icons/mp_buttons.png" position="500,650" size="340,13" alphatest="on" />
+	</screen>
+
+	<screen name="TitleCutter" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
+		<eLabel text="Cutlist editor" position="340,80" size="600,60" font="Regular;40" valign="center" halign="center" />
+		<widget source="global.CurrentTime" render="Label" position="940,80" size="340,20" font="Regular;24" halign="right">
+			<convert type="ClockToText">Format:%A %B %d, %H:%M</convert>
+		</widget>
+
+		<widget source="cutlist" render="Listbox" position="80,160" size="400,400" zPosition="1" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(size=(125, 22), text = 1, backcolor = MultiContentTemplateColor(3)),
+						MultiContentEntryText(pos=(125,0), size=(50, 22), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
+					],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+
+		<widget name="Video" position="800,160" zPosition="1" size="400,400" backgroundColor="transparent" />
+		<widget source="session.CurrentService" render="Label" position="135,405" size="450,50" font="Regular;22" halign="center" valign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="300,580" zPosition="1" size="680,25" font="Regular;22" halign="center" valign="center">
+			<convert type="ServicePosition">Position,Detailed</convert>
+		</widget>
+		<widget name="Timeline" position="300,610" size="680,25" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
+		<ePixmap pixmap="skin_default/icons/mp_buttons.png" position="500,650" size="340,13" alphatest="on" />
 	</screen>
 	<!--// CutListEditor -->
 
