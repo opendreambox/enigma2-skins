@@ -1296,7 +1296,7 @@
 		<eLabel text="Welcome..." position="340,80" size="600,60" font="Regular;40" halign="center" />
 		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
 		<widget name="list" position="340,320" size="600,300" zPosition="1" />
-		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
+		<widget name="rc" pixmaps="skin_default/rc.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1313,6 +1313,10 @@
 			<convert type="StringList" />
 		</widget>
 		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="rc" pixmaps="skin_default/rc.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
+		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
+		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 	</screen>
 
 	<!-- Language Wizard -->
@@ -1349,7 +1353,7 @@
 			<convert type="StringList" />
 		</widget>
 		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
+		<widget name="rc" pixmaps="skin_default/rc.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
