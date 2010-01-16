@@ -974,8 +974,8 @@
 	</screen>
 
 	<!-- Console -->
-	<screen name="Console" position="140,100" size="1000,560" title="Command execution...">
-		<widget name="text" position="10,10" size="780,550" font="Console;22" backgroundColor="Background" />
+	<screen name="Console" position="140,130" size="1000,520" title="Command execution...">
+		<widget name="text" position="10,10" size="780,500" font="Console;22" backgroundColor="Background" />
 	</screen>
 
 	<!-- Clock display -->
