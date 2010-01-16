@@ -1686,8 +1686,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="list" render="Listbox" position="10,40" size="780,448" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (10, 1), size = (730, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (30, 29), size = (710, 25), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+						MultiContentEntryText(pos = (10, 1), size = (680, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (30, 29), size = (660, 25), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
 						MultiContentEntryPixmapAlphaTest(pos = (700, 4), size = (48, 48), png = 4), # index 4 is the status pixmap
 						MultiContentEntryPixmapAlphaTest(pos = (5, 54), size = (770, 2), png = 5), # index 4 is the div pixmap
 					],
