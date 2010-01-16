@@ -646,7 +646,7 @@
 		<widget source="ServiceEvent" render="Progress" position="170,437" size="560,18" zPosition="1" borderWidth="2" pixmap="skin_default/progress_big.png" borderColor="#cccccc">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="740,434" size="90,25" zPosition="1" font="Regular;22">
+		<widget source="ServiceEvent" render="Label" position="740,434" size="120,25" zPosition="1" font="Regular;22">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -847,8 +847,8 @@
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
-		<widget name="red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;18" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;18" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="list" position="10,40" size="780,450" backgroundColor="Background" scrollbarMode="showOnDemand" />
 	</screen>
 
@@ -1676,23 +1676,23 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="text" position="10,50" size="780,30" font="Regular;22" backgroundColor="background" foregroundColor="#cccccc" />
 	</screen>
-	<screen name="PacketManager" position="240,130" size="800,518" title="Packet manager">
+	<screen name="PacketManager" position="240,130" size="800,500" title="Packet manager">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
 		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget source="list" render="Listbox" position="10,40" size="780,468" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="10,40" size="780,448" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (10, 1), size = (680, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (10, 26), size = (680, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-						MultiContentEntryPixmapAlphaTest(pos = (700, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
-						MultiContentEntryPixmapAlphaTest(pos = (5, 50), size = (770, 2), png = 5), # index 4 is the div pixmap
+						MultiContentEntryText(pos = (10, 1), size = (730, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (30, 29), size = (710, 25), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (700, 4), size = (48, 48), png = 4), # index 4 is the status pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (5, 54), size = (770, 2), png = 5), # index 4 is the div pixmap
 					],
-				"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
-				"itemHeight": 52
+				"fonts": [gFont("Regular", 24),gFont("Regular", 22)],
+				"itemHeight": 56
 				}
 			</convert>
 		</widget>
@@ -1909,8 +1909,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="10,10" size="780,450" scrollbarMode="showOnDemand" />
 		<widget name="introduction" position="10,460" size="780,40" valign="center" halign="center" font="Regular;20" />
 	</screen>
-	<screen name="RotorNimSelection" position="center,center" size="780,520" title="select Slot">
-		<widget name="nimlist" position="10,10" size="800,500" />
+	<screen name="RotorNimSelection" position="240,130" size="800,520" title="select Slot">
+		<widget name="nimlist" position="10,10" size="780,500" />
 	</screen>
 	<!--// Rotor Diseqc -->
 
@@ -1963,7 +1963,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="10,165" size="780,325" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="SatNimSelection" position="240,130" size="800,520" title="select Slot">
-		<widget name="nimlist" position="10,10" size="800,500" />
+		<widget name="nimlist" position="10,10" size="780,500" />
 	</screen>
 	<!--// Satfinder -->
 
@@ -2067,12 +2067,81 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<!--// Wireless LAN -->
 
+	<!-- DefaultServiceScan -->
+	<screen name="DefaultServiceScan" position="240,130" size="800,500" title="Service Scan">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="10,10" size="64,64" transparent="1" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-c.png" position="10,10" size="64,64" transparent="1" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-t.png" position="10,10" size="64,64" transparent="1" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget name="network" position="100,10" size="690,25" font="Regular;22" />
+		<widget name="transponder" position="100,45" size="690,25" font="Regular;22" />
+		<widget name="scan_state" position="10,80" zPosition="2" size="780,25" font="Regular;22" />
+		<widget name="pass" position="10,110" size="780,25" font="Regular;22" />
+		<widget name="scan_progress" position="10,150" size="780,15" pixmap="BASIC-HD/progress.png" borderWidth="2" borderColor="#cccccc" />
+		<widget name="servicelist" position="10,190" size="780,300" selectionDisabled="1" />
+	</screen>
+	<screen name="DefaultServicesScannerPlugin" position="240,130" size="800,520" title="Service scan">
+		<widget name="config" position="10,10" size="780,450" scrollbarMode="showOnDemand" />
+		<widget name="introduction" position="10,480" size="780,30" font="Regular;22" halign="center" />
+	</screen>
+	<!--// DefaultServiceScan -->
+
+	<!-- NFIFlash -->
+	<screen name="NFIFlash" position="240,130" size="800,500" title="Image flash utility">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+
+		<widget source="listlabel" render="Label" position="16,44" size="200,21" valign="center" font="Regular;18" />
+		<widget name="filelist" position="0,68" size="260,260" scrollbarMode="showOnDemand" />
+		<widget source="infolabel" render="Label" position="270,44" size="280,284" font="Regular;16" />
+		<widget source="job_progressbar" render="Progress" position="10,374" size="540,26" borderWidth="1" backgroundColor="#254f7497" />
+		<widget source="job_progresslabel" render="Label" position="180,378" zPosition="2" font="Regular;18" halign="center" transparent="1" size="200,22" foregroundColor="#000000" />
+		<widget source="statusbar" render="Label" position="10,404" size="540,16" font="Regular;16" foregroundColor="#cccccc" />
+	</screen>
+	<screen name="NFOViewer" position="240,130" size="800,520" title="Changelog viewer" >
+		<widget name="changelog" position="10,10" size="780,500" font="Regular;22" />
+	</screen>
+	<screen name="NFIDownload" position="240,130" size="780,500" title="Image download utility">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+
+		<widget source="label_top" render="Label" position="10,44" size="240,20" font="Regular;16" />
+		<widget name="feedlist" position="10,66" size="250,222" scrollbarMode="showOnDemand" />
+		<widget name="destlist" position="0,66" size="260,222" scrollbarMode="showOnDemand" />
+
+		<widget source="label_bottom" render="Label" position="10,312" size="240,18" font="Regular;16"/>
+		<widget source="path_bottom" render="Label" position="10,330" size="250,42" font="Regular;18" />
+			
+		<widget source="infolabel" render="Label" position="270,44" size="280,284" font="Regular;16" />
+		<widget source="job_progressbar" render="Progress" position="10,374" size="540,26" borderWidth="1" backgroundColor="#254f7497" />
+		<widget source="job_progresslabel" render="Label" position="130,378" zPosition="2" font="Regular;18" halign="center" transparent="1" size="300,22" foregroundColor="#000000" />
+		<widget source="statusbar" render="Label" position="10,404" size="540,16" font="Regular;16" foregroundColor="#cccccc" />
+	</screen>
+	<!--// NFIFlash -->
+
 <!--// System Plugins Ends-->
-
-
-
-
-
 
 
 
