@@ -974,8 +974,8 @@
 	</screen>
 
 	<!-- Console -->
-	<screen name="Console" position="240,130" size="800,520" title="Command execution...">
-		<widget name="text" position="10,10" size="780,500" font="Console;22" backgroundColor="Background" />
+	<screen name="Console" position="140,100" size="1000,560" title="Command execution...">
+		<widget name="text" position="10,10" size="780,550" font="Console;22" backgroundColor="Background" />
 	</screen>
 
 	<!-- Clock display -->
@@ -1098,7 +1098,7 @@
 		<widget name="key8" position="132,62" size="130,30" font="Console;16" halign="center" valign="center" />
 		<widget name="key9" position="262,62" size="130,30" font="Console;16" halign="center" valign="center" />
 		<widget name="help1" position="2,92" size="130,30" font="Console;16" halign="center" valign="center" />
-		<widget name="key0" position="132,92" size="130,30" font="Console;12" halign="center" valign="center" />
+		<widget name="key0" position="132,92" size="130,30" font="Console;16" halign="center" valign="center" />
 		<widget name="help2" position="262,92" size="130,30" font="Console;16" halign="center" valign="center" />
 	</screen>
  
