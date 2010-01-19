@@ -121,8 +121,8 @@
 	<screen name="menu_mainmenu" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
-		<widget source="title" render="Label" position="230,46" size="450,30" font="Regular;26" transparent="1" />
-		<widget source="menu" render="Listbox" position="230,96" size="450,320" scrollbarMode="showOnDemand">
+		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
+		<widget source="menu" render="Listbox" position="244,114" size="490,320" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{	"template": [ MultiContentEntryText(pos = (10, 0), size = (430, 32), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
 					"fonts": [gFont("Regular", 24)],
@@ -130,39 +130,39 @@
 				}
 			</convert>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/shutdown.png" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/shutdown.png" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">standby_restart_list</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/setup.png" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/setup.png" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">setup_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/plugins.png" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/plugins.png" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">plugin_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/information.png" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/information.png" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/scart.png" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/scart.png" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">scart_switch</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/timer.png" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/timer.png" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">timer_edit</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/media_player.png" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/media_player.png" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">media_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/dvdplayer/menu_icon.png" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/dvdplayer/menu_icon.png" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">dvd_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/subtitles.png" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/subtitles.png" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">subtitle_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -171,8 +171,8 @@
 	<screen name="menu_setup" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
-		<widget source="title" render="Label" position="230,46" size="450,30" font="Regular;26" transparent="1" />
-		<widget source="menu" render="Listbox" position="230,96" size="450,320" scrollbarMode="showOnDemand">
+		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
+		<widget source="menu" render="Listbox" position="244,114" size="490,320" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{	"template": [ MultiContentEntryText(pos = (10, 0), size = (430, 32), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
 					"fonts": [gFont("Regular", 24)],
@@ -180,27 +180,27 @@
 				}
 			</convert>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/search.png" zPosition="2" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/search.png" zPosition="2" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">service_searching_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/config.png" zPosition="2" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/config.png" zPosition="2" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">system_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/lock.png" zPosition="2" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/lock.png" zPosition="2" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">parental_setup</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/revert.png" zPosition="2" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/revert.png" zPosition="2" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">default_wizard</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/factory.png" zPosition="2" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/factory.png" zPosition="2" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">factory_reset</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/paket.png" zPosition="2" position="50,96" size="128,128" alphatest="on">
+		<widget source="menu" render="Pixmap" pixmap="BASIC-HD/menu/paket.png" zPosition="2" position="66,114" size="128,128" alphatest="on">
 			<convert type="MenuEntryCompare">software_manager</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -209,8 +209,8 @@
 	<screen name="menu_scan" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
-		<widget source="title" render="Label" position="230,46" size="450,30" font="Regular;26" transparent="1" />
-		<widget source="menu" render="Listbox" position="230,96" size="450,320" scrollbarMode="showOnDemand">
+		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
+		<widget source="menu" render="Listbox" position="244,114" size="490,320" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{	"template": [ MultiContentEntryText(pos = (10, 0), size = (430, 32), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
 					"fonts": [gFont("Regular", 24)],
@@ -218,14 +218,14 @@
 				}
 			</convert>
 		</widget>
-		<ePixmap pixmap="BASIC-HD/menu/search.png" zPosition="2" position="50,96" size="128,128" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/menu/search.png" zPosition="2" position="66,114" size="128,128" alphatest="on" />
 	</screen>
 
 	<screen name="menu_system" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
-		<widget source="title" render="Label" position="230,46" size="450,30" font="Regular;26" transparent="1" />
-		<widget source="menu" render="Listbox" position="230,96" size="450,320" scrollbarMode="showOnDemand">
+		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
+		<widget source="menu" render="Listbox" position="244,114" size="490,320" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{	"template": [ MultiContentEntryText(pos = (10, 0), size = (430, 32), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
 					"fonts": [gFont("Regular", 24)],
@@ -233,14 +233,14 @@
 				}
 			</convert>
 		</widget>
-		<ePixmap pixmap="BASIC-HD/menu/setup.png" position="50,96" size="128,128" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/menu/setup.png" position="66,114" size="128,128" alphatest="on" />
 	</screen>
 
 	<screen name="menu_harddisk" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
-		<widget source="title" render="Label" position="230,46" size="450,30" font="Regular;26" transparent="1" />
-		<widget source="menu" render="Listbox" position="230,96" size="450,320" scrollbarMode="showOnDemand">
+		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
+		<widget source="menu" render="Listbox" position="244,114" size="490,320" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{	"template": [ MultiContentEntryText(pos = (10, 0), size = (430, 32), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
 					"fonts": [gFont("Regular", 24)],
@@ -248,14 +248,14 @@
 				}
 			</convert>
 		</widget>
-	<ePixmap pixmap="BASIC-HD/menu/hdd.png" position="50,96" size="128,128" alphatest="on" />
+	<ePixmap pixmap="BASIC-HD/menu/hdd.png" position="66,114" size="128,128" alphatest="on" />
 	</screen>
 
 	<screen name="menu_shutdown" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
-		<widget source="title" render="Label" position="230,46" size="450,30" font="Regular;26" transparent="1" />
-		<widget source="menu" render="Listbox" position="230,96" size="450,320" scrollbarMode="showOnDemand">
+		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
+		<widget source="menu" render="Listbox" position="244,114" size="490,320" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{	"template": [ MultiContentEntryText(pos = (10, 0), size = (430, 32), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
 					"fonts": [gFont("Regular", 24)],
@@ -263,14 +263,14 @@
 				}
 			</convert>
 		</widget>
-		<ePixmap pixmap="skin_default/menu/shutdown.png" position="50,96" size="128,128" alphatest="on" />
+		<ePixmap pixmap="skin_default/menu/shutdown.png" position="66,114" size="128,128" alphatest="on" />
 	</screen>
 
 	<screen name="menu_information" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
-		<widget source="title" render="Label" position="230,46" size="450,30" font="Regular;26" transparent="1" />
-		<widget source="menu" render="Listbox" position="230,96" size="450,320" scrollbarMode="showOnDemand">
+		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
+		<widget source="menu" render="Listbox" position="244,114" size="490,320" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{	"template": [ MultiContentEntryText(pos = (10, 0), size = (430, 32), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
 					"fonts": [gFont("Regular", 24)],
@@ -278,7 +278,7 @@
 				}
 			</convert>
 		</widget>
-		<ePixmap pixmap="skin_default/menu/information.png" position="50,96" size="128,128" alphatest="on" />
+		<ePixmap pixmap="skin_default/menu/information.png" position="66,114" size="128,128" alphatest="on" />
 	</screen>
 
 	<!-- Setup -->
@@ -1294,8 +1294,8 @@
 	<!-- Tutorial Wizard -->
 	<screen name="TutorialWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Welcome..." position="340,80" size="600,60" font="Regular;40" halign="center" />
-		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget name="list" position="340,320" size="600,300" zPosition="1" />
+		<widget name="text" position="340,160" size="600,200" font="Regular;24" halign="center" />
+		<widget name="list" position="340,370" size="600,250" zPosition="1" />
 		<widget name="rc" pixmap="skin_default/rc.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1308,11 +1308,11 @@
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="80,80" zPosition="10" size="110,174" alphatest="on" />
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
+		<widget name="text" position="340,160" size="600,200" font="Regular;24" halign="center" />
+		<widget source="list" render="Listbox" position="340,370" size="600,250" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="340,370" size="600,250" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmap="skin_default/rc.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1323,8 +1323,8 @@
 	<screen name="LanguageWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Welcome..." position="340,80" size="600,60" font="Regular;40" halign="center" />
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="80,80" zPosition="10" size="110,174" alphatest="on" />
-		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget source="languages" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
+		<widget name="text" position="340,160" size="600,200" font="Regular;24" halign="center" />
+		<widget source="languages" render="Listbox" position="340,370" size="600,250" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{	"template": [
 						MultiContentEntryText(pos = (80, 10), size = (200, 50), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
@@ -1348,11 +1348,11 @@
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="80,80" zPosition="10" size="110,174" alphatest="on" />
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
+		<widget name="text" position="340,160" size="600,200" font="Regular;24" halign="center" />
+		<widget source="list" render="Listbox" position="340,370" size="600,250" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="340,370" size="600,250" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmap="skin_default/rc.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1365,11 +1365,11 @@
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="80,80" zPosition="10" size="110,174" alphatest="on" />
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
+		<widget name="text" position="340,160" size="600,200" font="Regular;24" halign="center" />
+		<widget source="list" render="Listbox" position="340,370" size="600,250" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="340,370" size="600,250" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmap="skin_default/rc.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1382,11 +1382,11 @@
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="80,80" zPosition="10" size="110,174" alphatest="on" />
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
+		<widget name="text" position="340,160" size="600,200" font="Regular;24" halign="center" />
+		<widget source="list" render="Listbox" position="340,370" size="600,250" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="340,370" size="600,250" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1732,11 +1732,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="80,80" zPosition="10" size="110,174" alphatest="on" />
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
+		<widget name="text" position="340,160" size="600,200" font="Regular;24" halign="center" />
+		<widget source="list" render="Listbox" position="340,370" size="600,250" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="340,370" size="600,250" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1751,11 +1751,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="80,80" zPosition="10" size="110,174" alphatest="on" />
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
+		<widget name="text" position="340,160" size="600,200" font="Regular;24" halign="center" />
+		<widget source="list" render="Listbox" position="340,370" size="600,250" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="340,370" size="600,250" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1861,11 +1861,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="80,80" zPosition="10" size="110,174" alphatest="on" />
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="text" position="340,80" size="600,230" font="Regular;24" halign="center" />
-		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
+		<widget name="text" position="340,80" size="600,280" font="Regular;24" halign="center" />
+		<widget source="list" render="Listbox" position="340,370" size="600,250" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="340,370" size="600,250" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
@@ -1942,7 +1942,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel name="ber" text="BER:" position="170,85" size="70,25" font="Regular;22" halign="right" transparent="1" />
-		<widget source="Frontend" render="Progress" position="260,85" size="400,20" borderWidth="2" borderColor="#cccccc">
+		<widget source="Frontend" render="Progress" position="260,85" size="400,20" borderWidth="2" borderColor="#cccccc" foregroundColor="white">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="680,85" size="70,25" font="Regular;22">
@@ -2005,12 +2005,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="80,80" zPosition="10" size="110,174" alphatest="on" />
 		<ePixmap position="60,265" size="150,32" pixmap="BASIC-HD/button/button_red_s.png" alphatest="on" />
 		<widget name="languagetext" position="60,265" size="150,32" valign="center" halign="center" zPosition="1" font="Regular;21" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="portpic" pixmap="%s" position="60,320" zPosition="10" size="150,150" transparent="1" alphatest="on" />
-		<widget name="text" position="340,160" size="600,150" font="Regular;24" halign="center" />
-		<widget source="list" render="Listbox" position="340,320" size="600,300" scrollbarMode="showOnDemand">
+		<widget name="portpic" pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/Videomode/Scart.png" position="60,320" zPosition="10" size="150,150" transparent="1" alphatest="on" />
+		<widget name="text" position="340,160" size="600,200" font="Regular;24" halign="center" />
+		<widget source="list" render="Listbox" position="340,370" size="600,250" scrollbarMode="showOnDemand">
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="340,320" size="600,300" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="340,370" size="600,250" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1030,160" zPosition="10" size="154,500" alphatest="on" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
