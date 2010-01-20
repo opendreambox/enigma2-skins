@@ -708,6 +708,16 @@
 		<widget name="list" position="10,65" size="980,475" scrollbarMode="showOnDemand" />
 	</screen>
 
+ 	<!-- Timer edit -->
+ 	<screen name="TimerEdit" position="240,130" size="800,500" title="Timer Edit">
+ 		<widget name="description" position="10,10" size="780,26" font="Regular;24" />
+ 		<widget name="lbegin" position="405,102" size="103,30" font="Regular;25" foregroundColor="red" />
+ 		<widget name="lend" position="405,158" size="103,30" font="Regular;25" foregroundColor="green" />
+ 		<widget name="begin" position="508,105" size="72,35" font="Regular;25" />
+ 		<widget name="end" position="508,150" size="72,35" font="Regular;25" />
+ 		<widget name="apply" position="10,240" size="250,35" />
+	</screen>
+
 	<!-- Timer edit list -->
 	<screen name="TimerEditList" position="240,130" size="800,500" title="Timer Editor">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
@@ -1166,7 +1176,7 @@
 	<!-- Scan setup -->
 	<screen name="ScanSetup" position="240,130" size="800,500" title="Service scan">
 		<widget name="config" position="10,10" size="780,425" scrollbarMode="showOnDemand" />
-		<widget name="introduction" position="10,435" size="780,55" font="Regular;22" halign="center" valign="center" />
+		<widget name="introduction" position="10,445" size="780,45" font="Regular;22" halign="center" valign="center" />
 	</screen>
 
 	<!-- Scan simple -->
@@ -1888,26 +1898,34 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="yellow" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="blue" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="list" position="10,40" size="780,200" />
-		<widget name="snr_db" position="60,245" size="150,22" halign="center" valign="center" font="Regular;21" />
-		<eLabel text="SNR:" position="0,270" size="60,22" font="Regular;21" />
-		<eLabel text="BER:" position="0,295" size="60,22" font="Regular;21" />
-		<eLabel text="Lock:" position="0,320" size="60,22" font="Regular;21" />
-		<widget name="snr_percentage" position="220,270" size="60,22" font="Regular;21" />
-		<widget name="ber_value" position="220,295" size="60,22" font="Regular;21" />
-		<widget name="lock_state" position="60,320" size="150,22" font="Regular;21" />
-		<widget name="snr_bar" position="60,270" size="150,22" />
-		<widget name="ber_bar" position="60,295" size="150,22" />
-		<eLabel text="Frequency:" position="300,245" size="120,22" font="Regular;21" />
-		<eLabel text="Symbolrate:" position="300,270" size="120,22" font="Regular;21" />
-		<eLabel text="FEC:" position="300,295" size="120,22" font="Regular;21" />
-		<widget name="frequency_value" position="420,245" size="120,22" font="Regular;21" />
-		<widget name="symbolrate_value" position="420,270" size="120,22" font="Regular;21" />
-		<widget name="fec_value" position="420,295" size="120,22" font="Regular;21" />
+
+		<eLabel text="SNR:" position="80,60" size="160,25" font="Regular;22" />
+		<widget name="snr_bar" position="260,60" size="360,22" borderWidth="2" />
+		<widget name="snr_percentage" position="640,60" size="70,25" font="Regular;22" />
+
+		<eLabel text="BER:" position="80,90" size="160,25" font="Regular;22" />
+		<widget name="ber_bar" position="260,90" size="360,22" borderWidth="2" />
+		<widget name="ber_value" position="640,90" size="70,25" font="Regular;22" />
+
+		<eLabel text="Frequency:" position="80,130" size="160,25" font="Regular;22" />
+		<widget name="frequency_value" position="260,130" size="360,25" font="Regular;22" />
+
+		<eLabel text="Symbolrate:" position="80,160" size="160,25" font="Regular;22" />
+		<widget name="symbolrate_value" position="260,160" size="360,25" font="Regular;22" />
+
+		<eLabel text="FEC:" position="80,190" size="160,25" font="Regular;22" />
+		<widget name="fec_value" position="260,190" size="360,25" font="Regular;22" />
+
+		<eLabel text="Lock:" position="80,220" size="160,25" font="Regular;22" />
+		<widget name="lock_state" position="260,220" size="120,25" font="Regular;22" />
+
+		<widget name="snr_db" position="400,220" size="240,25" font="Regular;22" />
+
+		<widget name="list" position="10,290" size="780,200" />
 	</screen>
 	<screen name="TunerScreen" position="240,130" size="800,500" title="Tune">
-		<widget name="config" position="10,10" size="780,450" scrollbarMode="showOnDemand" />
-		<widget name="introduction" position="10,460" size="780,40" valign="center" halign="center" font="Regular;20" />
+		<widget name="config" position="10,10" size="780,425" scrollbarMode="showOnDemand" />
+		<widget name="introduction" position="10,445" size="780,45" valign="center" halign="center" font="Regular;22" />
 	</screen>
 	<screen name="RotorNimSelection" position="240,130" size="800,520" title="select Slot">
 		<widget name="nimlist" position="10,10" size="780,500" />
@@ -1942,7 +1960,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel name="ber" text="BER:" position="170,85" size="70,25" font="Regular;22" halign="right" transparent="1" />
-		<widget source="Frontend" render="Progress" position="260,85" size="400,20" borderWidth="2" borderColor="#cccccc" foregroundColor="white">
+		<widget source="Frontend" render="Progress" position="260,85" size="400,20" pixmap="BASIC-HD/signalbar_ber.png" borderWidth="2" borderColor="#cccccc">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="680,85" size="70,25" font="Regular;22">
@@ -2091,9 +2109,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="scan_progress" position="10,150" size="780,15" pixmap="BASIC-HD/progress.png" borderWidth="2" borderColor="#cccccc" />
 		<widget name="servicelist" position="10,190" size="780,300" selectionDisabled="1" />
 	</screen>
-	<screen name="DefaultServicesScannerPlugin" position="240,130" size="800,520" title="Service scan">
-		<widget name="config" position="10,10" size="780,450" scrollbarMode="showOnDemand" />
-		<widget name="introduction" position="10,480" size="780,30" font="Regular;22" halign="center" />
+	<screen name="DefaultServicesScannerPlugin" position="240,130" size="800,500" title="Service scan">
+		<widget name="config" position="10,10" size="780,425" scrollbarMode="showOnDemand" />
+		<widget name="introduction" position="10,445" size="780,45" font="Regular;22" valign="center" halign="center" />
 	</screen>
 	<!--// DefaultServiceScan -->
 
@@ -2114,7 +2132,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="job_progresslabel" render="Label" position="180,378" zPosition="2" font="Regular;18" halign="center" transparent="1" size="200,22" foregroundColor="#000000" />
 		<widget source="statusbar" render="Label" position="10,404" size="540,16" font="Regular;16" foregroundColor="#cccccc" />
 	</screen>
-	<screen name="NFOViewer" position="240,130" size="800,520" title="Changelog viewer" >
+	<screen name="NFOViewer" position="240,130" size="800,520" title="Changelog viewer">
 		<widget name="changelog" position="10,10" size="780,500" font="Regular;22" />
 	</screen>
 	<screen name="NFIDownload" position="240,130" size="780,500" title="Image download utility">
@@ -2131,9 +2149,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="feedlist" position="10,66" size="250,222" scrollbarMode="showOnDemand" />
 		<widget name="destlist" position="0,66" size="260,222" scrollbarMode="showOnDemand" />
 
-		<widget source="label_bottom" render="Label" position="10,312" size="240,18" font="Regular;16"/>
+		<widget source="label_bottom" render="Label" position="10,312" size="240,18" font="Regular;16" />
 		<widget source="path_bottom" render="Label" position="10,330" size="250,42" font="Regular;18" />
-			
+
 		<widget source="infolabel" render="Label" position="270,44" size="280,284" font="Regular;16" />
 		<widget source="job_progressbar" render="Progress" position="10,374" size="540,26" borderWidth="1" backgroundColor="#254f7497" />
 		<widget source="job_progresslabel" render="Label" position="130,378" zPosition="2" font="Regular;18" halign="center" transparent="1" size="300,22" foregroundColor="#000000" />
@@ -2150,12 +2168,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- CutListEditor & TitleCutter BETA -->
 	<screen name="CutListEditor" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
-		<eLabel text="Cutlist editor" position="340,80" size="600,60" font="Regular;40" valign="center" halign="center" />
-		<widget source="global.CurrentTime" render="Label" position="940,80" size="340,20" font="Regular;24" halign="right">
-			<convert type="ClockToText">Format:%A %B %d, %H:%M</convert>
+		<eLabel text="Cutlist editor" position="340,80" size="600,60" font="Regular;40" halign="center" />
+
+		<widget source="session.CurrentService" render="Label" position="80,160" size="500,50" font="Regular;24">
+			<convert type="ServiceName">Name</convert>
 		</widget>
 
-		<widget source="cutlist" render="Listbox" position="80,160" size="400,400" zPosition="1" scrollbarMode="showOnDemand">
+		<widget source="cutlist" render="Listbox" position="80,220" size="500,300" zPosition="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(size=(125, 22), text = 1, backcolor = MultiContentTemplateColor(3)),
@@ -2167,25 +2186,27 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			</convert>
 		</widget>
 
-		<widget name="Video" position="800,160" zPosition="1" size="400,400" backgroundColor="transparent" />
-		<widget source="session.CurrentService" render="Label" position="135,405" size="450,50" font="Regular;22" halign="center" valign="center">
-			<convert type="ServiceName">Name</convert>
+		<widget source="global.CurrentTime" render="Label" position="700,160" size="500,50" font="Regular;24" halign="right">
+			<convert type="ClockToText">Format:%A %B %d, %H:%M</convert>
 		</widget>
 
-		<widget source="session.CurrentService" render="Label" position="300,580" zPosition="1" size="680,25" font="Regular;22" halign="center" valign="center">
+		<widget name="Video" position="700,220" zPosition="1" size="500,300" backgroundColor="transparent" />
+
+		<widget source="session.CurrentService" render="Label" position="300,580" zPosition="1" size="680,25" font="Regular;24" halign="center" valign="center">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
 		<widget name="Timeline" position="300,610" size="680,25" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
-		<ePixmap pixmap="skin_default/icons/mp_buttons.png" position="500,650" size="340,13" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/icon/mp_buttons.png" position="500,650" size="168,20" alphatest="on" />
 	</screen>
 
 	<screen name="TitleCutter" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
-		<eLabel text="Cutlist editor" position="340,80" size="600,60" font="Regular;40" valign="center" halign="center" />
-		<widget source="global.CurrentTime" render="Label" position="940,80" size="340,20" font="Regular;24" halign="right">
-			<convert type="ClockToText">Format:%A %B %d, %H:%M</convert>
+		<eLabel text="Cutlist editor" position="340,80" size="600,60" font="Regular;40" halign="center" />
+
+		<widget source="session.CurrentService" render="Label" position="80,160" size="500,50" font="Regular;24">
+			<convert type="ServiceName">Name</convert>
 		</widget>
 
-		<widget source="cutlist" render="Listbox" position="80,160" size="400,400" zPosition="1" scrollbarMode="showOnDemand">
+		<widget source="cutlist" render="Listbox" position="80,220" size="500,300" zPosition="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(size=(125, 22), text = 1, backcolor = MultiContentTemplateColor(3)),
@@ -2197,16 +2218,17 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			</convert>
 		</widget>
 
-		<widget name="Video" position="800,160" zPosition="1" size="400,400" backgroundColor="transparent" />
-		<widget source="session.CurrentService" render="Label" position="135,405" size="450,50" font="Regular;22" halign="center" valign="center">
-			<convert type="ServiceName">Name</convert>
+		<widget source="global.CurrentTime" render="Label" position="700,160" size="500,50" font="Regular;24" halign="right">
+			<convert type="ClockToText">Format:%A %B %d, %H:%M</convert>
 		</widget>
 
-		<widget source="session.CurrentService" render="Label" position="300,580" zPosition="1" size="680,25" font="Regular;22" halign="center" valign="center">
+		<widget name="Video" position="700,220" zPosition="1" size="500,300" backgroundColor="transparent" />
+
+		<widget source="session.CurrentService" render="Label" position="300,580" zPosition="1" size="680,25" font="Regular;24" halign="center" valign="center">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
 		<widget name="Timeline" position="300,610" size="680,25" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
-		<ePixmap pixmap="skin_default/icons/mp_buttons.png" position="500,650" size="340,13" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/icon/mp_buttons.png" position="500,650" size="168,20" alphatest="on" />
 	</screen>
 	<!--// CutListEditor -->
 
