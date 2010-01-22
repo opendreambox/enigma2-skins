@@ -578,7 +578,8 @@
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="670,55" size="100,30" font="Regular;24" halign="right" backgroundColor="#06224f" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
-			<convert type="ServicePosition">Remaining.Negate</convert>
+			<!--convert type="ServicePosition">Remaining.Negate</convert-->
+			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="200,118" size="133,30" font="Regular;24" halign="center" backgroundColor="#06224f" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
 			<convert type="ServicePosition">Position</convert>
