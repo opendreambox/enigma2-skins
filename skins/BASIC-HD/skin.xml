@@ -566,8 +566,8 @@
 	<!-- MoviePlayer & DVDPlayer -->
 	<screen name="MoviePlayer" position="240,520" size="800,150" title="InfoBar" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-1" size="800,150" backgroundColor="content" />
-		<ePixmap position="0,0" pixmap="BASIC-HD/movieplayer.png" zPosition="-1" size="800,150" alphatest="on" />
-		<ePixmap pixmap="BASIC-HD/icon/mp_event.png" position="30,30" size="30,20" alphatest="on" />
+		<ePixmap position="0,0" pixmap="BASIC-HD/dvdplayer/infobar.png" zPosition="-1" size="800,150" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/dvdplayer/event.png" position="30,30" size="30,20" alphatest="on" />
 		<widget source="session.CurrentService" render="Label" position="76,25" size="580,65" font="Regular;26" backgroundColor="#263c59" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -578,12 +578,12 @@
 			<convert type="ServicePosition">Remaining,Negate</convert>
 		</widget>
 		<ePixmap position="16,115" pixmap="BASIC-HD/relief.png" size="190,30" alphatest="on" />
-		<ePixmap position="27,121" pixmap="BASIC-HD/icon/mp_buttons.png" size="168,20" alphatest="on" />
+		<ePixmap position="27,121" pixmap="BASIC-HD/icon/dvr.png" size="168,20" alphatest="on" />
 		<widget source="session.CurrentService" render="Label" position="210,118" size="120,30" font="Regular;24" halign="center" backgroundColor="#06224f" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<ePixmap position="334,115" pixmap="BASIC-HD/relief.png" size="450,30" alphatest="on" />
-		<widget source="session.CurrentService" render="PositionGauge" position="337,115" size="444,30" zPosition="2" pointer="BASIC-HD/mp_progress.png:444,0" transparent="1" foregroundColor="#20224f">
+		<widget source="session.CurrentService" render="PositionGauge" position="337,115" size="444,30" zPosition="2" pointer="BASIC-HD/dvdplayer/progress.png:444,0" transparent="1" foregroundColor="#20224f">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
 	</screen>
@@ -2196,7 +2196,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
 		<widget name="Timeline" position="300,610" size="680,25" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
-		<ePixmap pixmap="BASIC-HD/icon/mp_buttons.png" position="556,650" size="168,20" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/icon/dvr.png" position="556,650" size="168,20" alphatest="on" />
 	</screen>
 
 	<screen name="TitleCutter" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
@@ -2228,7 +2228,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
 		<widget name="Timeline" position="300,610" size="680,25" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
-		<ePixmap pixmap="BASIC-HD/icon/mp_buttons.png" position="556,650" size="168,20" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/icon/dvr.png" position="556,650" size="168,20" alphatest="on" />
 	</screen>
 	<!--// CutListEditor -->
 
@@ -2330,8 +2330,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- MoviePlayer & DVDPlayer -->
 	<screen name="DVDPlayer" position="240,520" size="800,150" title="InfoBar" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-1" size="800,150" backgroundColor="content" />
-		<ePixmap position="0,0" pixmap="BASIC-HD/movieplayer.png" zPosition="-1" size="800,150" alphatest="on" />
-		<ePixmap pixmap="BASIC-HD/icon/mp_event.png" position="30,30" size="30,20" alphatest="on" />
+		<ePixmap position="0,0" pixmap="BASIC-HD/dvdplayer/infobar.png" zPosition="-1" size="800,150" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/dvdplayer/event.png" position="30,30" size="30,20" alphatest="on" />
 		<widget source="session.CurrentService" render="Label" position="76,25" size="580,65" font="Regular;26" backgroundColor="#263c59" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -2342,12 +2342,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ServicePosition">Remaining,Negate</convert>
 		</widget>
 		<ePixmap position="16,115" pixmap="BASIC-HD/relief.png" size="190,30" alphatest="on" />
-		<ePixmap position="27,121" pixmap="BASIC-HD/icon/mp_buttons.png" size="168,20" alphatest="on" />
+		<ePixmap position="27,121" pixmap="BASIC-HD/icon/dvr.png" size="168,20" alphatest="on" />
 		<widget source="session.CurrentService" render="Label" position="210,118" size="120,30" font="Regular;24" halign="center" backgroundColor="#06224f" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<ePixmap position="334,115" pixmap="BASIC-HD/relief.png" size="450,30" alphatest="on" />
-		<widget source="session.CurrentService" render="PositionGauge" position="337,115" size="444,30" zPosition="2" pointer="BASIC-HD/mp_progress.png:444,0" transparent="1" foregroundColor="#20224f">
+		<widget source="session.CurrentService" render="PositionGauge" position="337,115" size="444,30" zPosition="2" pointer="BASIC-HD/dvdplayer/progress.png:444,0" transparent="1" foregroundColor="#20224f">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
 	</screen>
