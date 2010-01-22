@@ -2196,7 +2196,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
 		<widget name="Timeline" position="300,610" size="680,25" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
-		<ePixmap pixmap="BASIC-HD/icon/mp_buttons.png" position="500,650" size="168,20" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/icon/mp_buttons.png" position="556,650" size="168,20" alphatest="on" />
 	</screen>
 
 	<screen name="TitleCutter" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
