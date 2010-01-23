@@ -388,13 +388,13 @@
 
 
 		<!-- Record (blinking) -->
-		<widget source="session.RecordState" render="Pixmap" pixmap="BASIC-HD/icon/key_red.png" position="20,167" zPosition="1" size="35,25" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="BASIC-HD/icon/key_red.png" position="20,170" zPosition="1" size="30,20" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 
 		<!-- Red button (is recording possible?) -->
-		<ePixmap pixmap="BASIC-HD/icon/key_grey.png" position="20,167" size="35,25" alphatest="on" />
-		<widget source="RecordingPossible" render="Pixmap" pixmap="BASIC-HD/icon/key_red.png" position="20,167" zPosition="1" size="35,25" alphatest="on">
+		<ePixmap pixmap="BASIC-HD/icon/key_grey.png" position="20,170" size="30,20" alphatest="on" />
+		<widget source="RecordingPossible" render="Pixmap" pixmap="BASIC-HD/icon/key_red.png" position="20,170" zPosition="1" size="30,20" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="ShowRecordOnRed" render="FixedLabel" text="Record" position="60,168" size="140,23" zPosition="1" font="Regular;20" backgroundColor="#182946" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
@@ -405,8 +405,8 @@
 		</widget>
 
 		<!-- Green button (is subservices available?) -->
-		<ePixmap pixmap="BASIC-HD/icon/key_grey.png" position="200,167" size="35,25" alphatest="on" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="BASIC-HD/icon/key_green.png" position="200,167" zPosition="1" size="35,25" alphatest="on">
+		<ePixmap pixmap="BASIC-HD/icon/key_grey.png" position="200,170" size="30,20" alphatest="on" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="BASIC-HD/icon/key_green.png" position="200,170" zPosition="1" size="30,20" alphatest="on">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -420,8 +420,8 @@
 		</widget>
 
 		<!-- Yellow button (is timeshift possible?) -->
-		<ePixmap pixmap="BASIC-HD/icon/key_grey.png" position="380,167" size="35,25" alphatest="on" />
-		<widget source="TimeshiftPossible" render="Pixmap" pixmap="BASIC-HD/icon/key_yellow.png" position="380,167" zPosition="1" size="35,25" alphatest="on">
+		<ePixmap pixmap="BASIC-HD/icon/key_grey.png" position="380,170" size="30,20" alphatest="on" />
+		<widget source="TimeshiftPossible" render="Pixmap" pixmap="BASIC-HD/icon/key_yellow.png" position="380,170" zPosition="1" size="30,20" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="ShowTimeshiftOnYellow" render="FixedLabel" text="Timeshift" position="420,168" size="140,23" zPosition="1" font="Regular;20" backgroundColor="#182946" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
@@ -432,7 +432,7 @@
 		</widget>
 
 		<!-- Yellow button (used for audio on boxes with new rc?) -->
-		<widget source="ShowAudioOnYellow" render="Pixmap" pixmap="BASIC-HD/icon/key_yellow.png" position="380,167" zPosition="1" size="35,25" alphatest="on">
+		<widget source="ShowAudioOnYellow" render="Pixmap" pixmap="BASIC-HD/icon/key_yellow.png" position="380,170" zPosition="1" size="30,20" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="ShowAudioOnYellow" render="FixedLabel" text="Audio" position="420,168" zPosition="1" size="140,23" font="Regular;20" backgroundColor="#182946" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
@@ -440,8 +440,8 @@
 		</widget>
 
 		<!-- Blue button (is extensions available?) -->
-		<ePixmap pixmap="BASIC-HD/icon/key_grey.png" position="560,167" size="35,25" alphatest="on" />
-		<widget source="ExtensionsAvailable" render="Pixmap" pixmap="BASIC-HD/icon/key_blue.png" position="560,167" zPosition="2" size="35,25" alphatest="on">
+		<ePixmap pixmap="BASIC-HD/icon/key_grey.png" position="560,170" size="30,20" alphatest="on" />
+		<widget source="ExtensionsAvailable" render="Pixmap" pixmap="BASIC-HD/icon/key_blue.png" position="560,170" zPosition="2" size="30,20" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="ExtensionsAvailable" render="FixedLabel" text="Extensions" position="600,168" zPosition="2" size="160,23" font="Regular;20" backgroundColor="#182946" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
@@ -563,7 +563,7 @@
 		</widget>
 	</screen>
 
-	<!-- MoviePlayer & DVDPlayer -->
+	<!-- MoviePlayer & DVDPlayer & MyTubePlayer -->
 	<screen name="MoviePlayer" position="240,520" size="800,150" title="InfoBar" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-1" size="800,150" backgroundColor="content" />
 		<ePixmap position="0,0" pixmap="BASIC-HD/dvdplayer/infobar.png" zPosition="-1" size="800,150" alphatest="on" />
@@ -2327,7 +2327,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<!--// DVD Burn -->
 		
-	<!-- MoviePlayer & DVDPlayer -->
+	<!-- MoviePlayer & DVDPlayer & MyTubePlayer-->
 	<screen name="DVDPlayer" position="240,520" size="800,150" title="InfoBar" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-1" size="800,150" backgroundColor="content" />
 		<ePixmap position="0,0" pixmap="BASIC-HD/dvdplayer/infobar.png" zPosition="-1" size="800,150" alphatest="on" />
@@ -2479,6 +2479,176 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 	</screen>
 	<!--// Picture Player -->
+
+	<!-- MoviePlayer & DVDPlayer & MyTubePlayer BETA -->
+	<screen name="MyTubePlayer" position="240,520" size="800,150" title="InfoBar" flags="wfNoBorder">
+		<eLabel position="0,0" zPosition="-1" size="800,150" backgroundColor="content" />
+		<ePixmap position="0,0" pixmap="BASIC-HD/dvdplayer/infobar.png" zPosition="-1" size="800,150" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/dvdplayer/event.png" position="30,30" size="30,20" alphatest="on" />
+		<widget source="session.CurrentService" render="Label" position="76,25" size="580,65" font="Regular;26" backgroundColor="#263c59" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="670,25" size="100,30" font="Regular;24" halign="right" backgroundColor="#4e5a74" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="670,55" size="100,30" font="Regular;24" halign="right" backgroundColor="#06224f" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
+			<convert type="ServicePosition">Remaining,Negate</convert>
+		</widget>
+		<ePixmap position="16,115" pixmap="BASIC-HD/relief.png" size="190,30" alphatest="on" />
+		<ePixmap position="27,121" pixmap="BASIC-HD/icon/dvr.png" size="168,20" alphatest="on" />
+		<widget source="session.CurrentService" render="Label" position="210,118" size="120,30" font="Regular;24" halign="center" backgroundColor="#06224f" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<ePixmap position="334,115" pixmap="BASIC-HD/relief.png" size="450,30" alphatest="on" />
+		<widget source="session.CurrentService" render="PositionGauge" position="337,115" size="444,30" zPosition="2" pointer="BASIC-HD/dvdplayer/progress.png:444,0" transparent="1" foregroundColor="#20224f">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+	</screen>
+	<screen name="MyTubePlayerMainScreen" position="240,130" size="800,500" title="MyTubePlayerMainScreen..." >
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="feedlist" render="Listbox" position="10,40" size="780,300" zPosition="2" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (75,[
+						MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (100, 75), png = 4), # index 4 is the thumbnail
+						MultiContentEntryText(pos = (110, 1), size = (640, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 1 is the Title
+						MultiContentEntryText(pos = (110, 30), size = (400, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5), # index 5 is the Published Date
+						MultiContentEntryText(pos = (110, 52), size = (400, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6), # index 6 is the Views Count
+						MultiContentEntryText(pos = (500, 30), size = (240, 20), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 7), # index 7 is the duration
+						MultiContentEntryText(pos = (500, 52), size = (240, 20), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 8), # index 8 is the ratingcount
+					]),
+				"state": (75,[
+						MultiContentEntryText(pos = (10, 1), size = (760, 28), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (10, 30), size = (760, 44), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 2 is the description
+					])
+				},
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18),gFont("Regular", 26),gFont("Regular", 20)],
+				"itemHeight": 75
+			}
+			</convert>
+		</widget>
+		<ePixmap position="10,350" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+		<widget name="VKeyIcon" pixmap="BASIC-HD/icon/icon_vkey.png" position="130,352" size="50,35" transparent="1" alphatest="on" />
+		<ePixmap pixmap="BASIC-HD/icon/key_menu.png" position="190,352" size="50,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="BASIC-HD/icon/key_info.png" position="250,352" size="50,35" alphatest="on" transparent="1" />
+		<widget name="ButtonBlue" pixmap="BASIC-HD/icon/key_blue.png" position="310,360" size="30,20" transparent="1" alphatest="on" />
+		<widget name="HelpWindow" position="630,490" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+		<widget name="config" position="10,440" size="370,50" scrollbarMode="showNever" />
+		<!--  # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on"/>
+	</screen>
+	<screen name="MyTubeVideoInfoScreen" position="240,130" size="800,500" title="MyTube Information" >
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" halign="left" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+		<widget source="infolist" render="Listbox" position="140,115" size="520,100" zPosition="6" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (100,[
+						MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (130, 98), png = 0), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (130, 1), size = (130, 98), png = 1), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (260, 1), size = (130, 98), png = 2), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (390, 1), size = (130, 98), png = 3), # index 0 is the thumbnail
+					]),
+				"state": (100,[
+						MultiContentEntryText(pos = (10, 10), size = (500, 80), font=2, flags = RT_HALIGN_CENTER | RT_VALIGN_TOP| RT_WRAP, text = 0), # index 0 is the name
+					])
+				},
+				"fonts": [gFont("Regular", 20),gFont("Regular", 14),gFont("Regular", 28)],
+				"itemHeight": 100
+			}
+			</convert>
+		</widget>
+		<widget name="author" position="60,230" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="duration" position="350,230" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="starsbg" pixmap="~/starsbar_empty.png" position="640,230" zPosition="5" size="100,20" transparent="1" alphatest="on" />
+		<widget name="stars" pixmap="~/starsbar_filled.png" position="640,230" zPosition="6" size="100,20"  transparent="1" />
+		<widget name="published" position="60,260" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="views" position="350,260" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="tags" position="60,290" size="680,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="detailtext" position="10,340" size="780,150" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top"/>
+		<!--  # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+		<widget name="thumbnail" position="0,0" size="130,98" alphatest="on"/>
+	</screen>
+	<screen name="MyTubeVideoHelpScreen" position="240,130" size="800,500" title="MyTube Help" >
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" halign="left" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+		<widget name="detailtext" position="10,115" size="780,375" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top"/>
+	</screen>
+	<screen name="MyTubeSettingsScreen" position="240,130" size="800,500" title="MyTube Settings">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" halign="left" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+		<widget name="config" position="10,115" size="780,375" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="MyTubeTasksScreen" position="240,130" size="800,500" title="MyTube Tasks" >
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" halign="left" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
+		<widget source="tasklist" render="Listbox" position="10,115" size="780,375" zPosition="7" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (0, 1), size = (200, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
+						MultiContentEntryText(pos = (210, 1), size = (150, 24), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
+						MultiContentEntryProgress(pos = (370, 1), size = (100, 24), percent = -3), # index 3 should be progress 
+						MultiContentEntryText(pos = (480, 1), size = (100, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="MyTubeSuggestionsListScreen" position="240,170" zPosition="6" size="800,308" flags="wfNoBorder">
+		<widget source="suggestionslist" render="Listbox" position="10,0" zPosition="7" size="780,300" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (0, 1), size = (340, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (350, 1), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="MyTubeHistoryScreen" position="240,130" zPosition="6" size="800,500" title="MyTube History">
+		<widget source="historylist" render="Listbox" position="10,10" zPosition="7" size="780,480" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (0, 0), size = (780, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 24
+				}
+			</convert>
+		</widget>
+	</screen>
+	<!--// MyTubePlayer -->
 
 	<!-- Webinterface -->
 	<screen name="WebIfConfigScreen" position="240,130" size="800,500" title="Webinterface: Main Setup">
