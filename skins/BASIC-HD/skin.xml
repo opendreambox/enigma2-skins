@@ -2534,12 +2534,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			</convert>
 		</widget>
 		<ePixmap position="10,350" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="on" transparent="1" />
-		<widget name="VKeyIcon" pixmap="BASIC-HD/icon/icon_vkey.png" position="130,352" size="50,35" transparent="1" alphatest="on" />
-		<ePixmap pixmap="BASIC-HD/icon/key_menu.png" position="190,352" size="50,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="BASIC-HD/icon/key_info.png" position="250,352" size="50,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="BASIC-HD/icon/key_menu.png" position="130,352" size="50,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="BASIC-HD/icon/key_info.png" position="190,352" size="50,35" alphatest="on" transparent="1" />
+		<widget name="VKeyIcon" pixmap="BASIC-HD/icon/icon_vkey.png" position="250,352" size="50,35" transparent="1" alphatest="on" />
 		<widget name="ButtonBlue" pixmap="BASIC-HD/icon/key_blue.png" position="310,360" size="30,20" transparent="1" alphatest="on" />
 		<widget name="HelpWindow" position="630,490" zPosition="1" size="1,1" transparent="1" alphatest="on" />
-		<widget name="config" position="10,440" size="370,50" scrollbarMode="showNever" />
+		<widget name="config" position="10,415" size="370,75" scrollbarMode="showNever" />
 		<!--  # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on"/>
 	</screen>
