@@ -2689,10 +2689,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_yellow" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_blue" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="titellabel" position="10,50" size="560,50" font="Regular;20"/>
+		<widget name="titellabel" position="10,50" size="560,50" font="Regular;20" />
 		<widget name="starsbg" position="580,50" zPosition="0" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" transparent="1" alphatest="on" />
 		<widget name="stars" position="580,50" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" transparent="1" />
-		<widget name="ratinglabel" position="580,80" size="210,20" halign="center" font="Regular;18" foregroundColor="#f0b400"/>
+		<widget name="ratinglabel" position="580,80" size="210,20" halign="center" font="Regular;18" foregroundColor="#f0b400" />
 		<widget name="poster" position="10,120" size="100,150" alphatest="on" />
 		<widget name="detailslabel" position="120,120" size="670,150" font="Regular;18" />
 		<widget name="castlabel" position="10,300" size="780,150" font="Regular;18" />
@@ -2703,24 +2703,24 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- WeatherPlugin -->
 	<screen name="WeatherPlugin" position="240,130" size="800,500" title="Weather Plugin">
-		<widget render="Label" source="caption" position="10,20" zPosition="1" size="300,23" font="Regular;22" transparent="1" />
-		<widget render="Label" source="currentTemp" position="10,45" zPosition="1" size="300,23" font="Regular;22" transparent="1" />
-		<widget render="Label" source="condition" position="10,80" zPosition="1" size="300,20" font="Regular;18" transparent="1" />
-		<widget render="Label" source="wind_condition" position="10,105" zPosition="1" size="300,20" font="Regular;18" transparent="1" />
-		<widget render="Label" source="humidity" position="10,130" zPosition="1" size="300,20" font="Regular;18" valign="bottom" transparent="1" />
-		<widget render="Label" source="weekday1" position="255,30" zPosition="1" size="72,20" halign="center" valign="center" font="Regular;18" transparent="1" />
-		<widget name="weekday1_icon" position="255,50" zPosition="1" size="72,72" alphatest="blend" />
-		<widget render="Label" source="weekday1_temp" position="241,130" zPosition="1" size="100,20" halign="center" valign="bottom" font="Regular;18" transparent="1" />
-		<widget render="Label" source="weekday2" position="358,30" zPosition="1" size="72,20" halign="center" valign="center" font="Regular;18" transparent="1" />
-		<widget name="weekday2_icon" position="358,50" zPosition="1" size="72,72" alphatest="blend" />
-		<widget render="Label" source="weekday2_temp" position="344,130" zPosition="1" size="100,20" halign="center" valign="bottom" font="Regular;18" transparent="1" />
-		<widget render="Label" source="weekday3" position="461,30" zPosition="1" size="72,20" halign="center" valign="center" font="Regular;18" transparent="1" />
-		<widget name="weekday3_icon" position="461,50" zPosition="1" size="72,72" alphatest="blend" />
-		<widget render="Label" source="weekday3_temp" position="448,130" zPosition="1" size="100,20" halign="center" valign="bottom" font="Regular;18" transparent="1" />
-		<widget render="Label" source="weekday4" position="564,30" zPosition="1" size="72,20" halign="center" valign="center" font="Regular;18" transparent="1" />
-		<widget name="weekday4_icon" position="564,50" zPosition="1" size="72,72" alphatest="blend" />
-		<widget render="Label" source="weekday4_temp" position="550,130" zPosition="1" size="100,20" halign="center" valign="bottom" font="Regular;18" transparent="1" />
-		<widget render="Label" source="statustext" position="0,0" zPosition="1" size="664,170" font="Regular;20" halign="center" valign="center" transparent="1" />
+		<widget render="Label" source="caption" position="40,40" size="400,30" font="Regular;26" transparent="1" />
+		<widget render="Label" source="currentTemp" position="40,80" size="400,25" font="Regular;22" transparent="1" />
+		<widget render="Label" source="condition" position="40,115" size="400,25" font="Regular;22" transparent="1" />
+		<widget render="Label" source="wind_condition" position="40,150" size="400,25" font="Regular;22" transparent="1" />
+		<widget render="Label" source="humidity" position="40,185" size="400,25" font="Regular;22" transparent="1" />
+		<widget render="Label" source="weekday1" position="191,300" size="100,20" halign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday1_icon" position="205,320" size="72,72" alphatest="blend" />
+		<widget render="Label" source="weekday1_temp" position="191,400" size="100,20" halign="center" font="Regular;18" transparent="1" />
+		<widget render="Label" source="weekday2" position="297,300" size="100,20" halign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday2_icon" position="311,320" size="72,72" alphatest="blend" />
+		<widget render="Label" source="weekday2_temp" position="297,400" size="100,20" halign="center" font="Regular;18" transparent="1" />
+		<widget render="Label" source="weekday3" position="403,300" size="100,20" halign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday3_icon" position="417,320" size="72,72" alphatest="blend" />
+		<widget render="Label" source="weekday3_temp" position="403,400" size="100,20" halign="center" font="Regular;18" transparent="1" />
+		<widget render="Label" source="weekday4" position="509,300" size="100,20" halign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday4_icon" position="523,320" size="72,72" alphatest="blend" />
+		<widget render="Label" source="weekday4_temp" position="509,400" size="100,20" halign="center" font="Regular;18" transparent="1" />
+		<widget render="Label" source="statustext" position="10,460" size="780,30" font="Regular;22" valign="center" transparent="1" />
 	</screen>
 	<screen name="WeatherPluginEntriesListConfigScreen" position="240,130" size="800,500" title="WeatherPlugin: List of Entries">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
@@ -2731,8 +2731,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="entrylist" position="10,40" size="780,350" scrollbarMode="showOnDemand" />
-		<widget render="Label" source="city" position="10,440" size="300,50" font="Regular;22" halign="left" />
-		<widget render="Label" source="language" position="350,440" size="440,50" font="Regular;22" halign="left" />
+		<widget render="Label" source="city" position="60,440" size="300,50" font="Regular;22" halign="left" />
+		<widget render="Label" source="language" position="400,440" size="390,50" font="Regular;22" halign="left" />
 	</screen>
 	<screen name="WeatherPluginEntryConfigScreen" position="240,130" size="800,500" title="WeatherPlugin: Edit Entry">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
@@ -2746,7 +2746,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<!--// WeatherPlugin -->
 
-	<!-- WebcamViewer -->
+	<!-- WebcamViewer & PictureViewer -->
 	<screen name="ViewerSelectScreen" position="240,130" size="800,500" title="ViewerSelectScreen">
 		<widget name="list" position="10,10" size="780,480" />
 	</screen>
@@ -2768,8 +2768,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="buttonyellow" position="404,4" size="190,32" backgroundColor="yellow" valign="center" halign="center" zPosition="2" foregroundColor="white" font="Regular;18" />
 		<widget name="buttonblue" position="602,4" size="190,32" backgroundColor="blue" valign="center" halign="center" zPosition="2" foregroundColor="white" font="Regular;18" />
 		<widget name="menu" position="10,40" size="390,450" scrollbarMode="showOnDemand" />
-		<widget name="pixmap" position="590,40" size="275,200" backgroundColor="red" />
-		<widget name="slist" position="410,250" size="380,200" scrollbarMode="showOnDemand" />
+		<widget name="pixmap" position="515,40" size="275,200" backgroundColor="red" />
+		<widget name="slist" position="410,265" size="380,225" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="PictureScreen" position="0,0" size="1280,720" title="PictureScreen" flags="wfNoBorder">
 		<widget name="pixmap" position="0,0" size="1280,720" backgroundColor="black" />
@@ -2805,9 +2805,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			}
 			</convert>
 		</widget>
-		<widget name="count" position="10,430" zPosition="5" size="260,60" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="page" position="270,430" zPosition="5" size="260,60" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="currentnumbers" position="530,430" zPosition="5" size="260,60" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="count" position="60,430" zPosition="5" size="220,60" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="page" position="290,430" zPosition="5" size="220,60" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="currentnumbers" position="520,430" zPosition="5" size="220,60" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<!-- # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" />
 	</screen>
