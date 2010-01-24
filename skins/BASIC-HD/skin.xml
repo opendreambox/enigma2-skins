@@ -708,14 +708,14 @@
 		<widget name="list" position="10,65" size="980,475" scrollbarMode="showOnDemand" />
 	</screen>
 
- 	<!-- Timer edit -->
- 	<screen name="TimerEdit" position="240,130" size="800,500" title="Timer Edit">
- 		<widget name="description" position="10,10" size="780,26" font="Regular;24" />
- 		<widget name="lbegin" position="405,102" size="103,30" font="Regular;25" foregroundColor="red" />
- 		<widget name="lend" position="405,158" size="103,30" font="Regular;25" foregroundColor="green" />
- 		<widget name="begin" position="508,105" size="72,35" font="Regular;25" />
- 		<widget name="end" position="508,150" size="72,35" font="Regular;25" />
- 		<widget name="apply" position="10,240" size="250,35" />
+	<!-- Timer edit -->
+	<screen name="TimerEdit" position="240,130" size="800,500" title="Timer Edit">
+		<widget name="description" position="10,10" size="780,26" font="Regular;24" />
+		<widget name="lbegin" position="405,102" size="103,30" font="Regular;25" foregroundColor="red" />
+		<widget name="lend" position="405,158" size="103,30" font="Regular;25" foregroundColor="green" />
+		<widget name="begin" position="508,105" size="72,35" font="Regular;25" />
+		<widget name="end" position="508,150" size="72,35" font="Regular;25" />
+		<widget name="apply" position="10,240" size="250,35" />
 	</screen>
 
 	<!-- Timer edit list -->
@@ -1186,7 +1186,7 @@
 		<widget name="footer" position="10,460" size="780,30" font="Regular;22" halign="center" valign="center" />
 	</screen>
 
-	<!-- Service scan -->
+	<!-- Service scan & DefaultServiceScan-->
 	<screen name="ServiceScan" position="240,130" size="800,500" title="Service Scan">
 		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="10,10" size="64,64" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
@@ -2085,7 +2085,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<!--// Wireless LAN -->
 
-	<!-- DefaultServiceScan -->
+	<!-- ServiceScan & DefaultServiceScan -->
 	<screen name="DefaultServiceScan" position="240,130" size="800,500" title="Service Scan">
 		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="10,10" size="64,64" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
@@ -2198,7 +2198,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="Timeline" position="300,610" size="680,25" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
 		<ePixmap pixmap="BASIC-HD/icon/dvr.png" position="556,650" size="168,20" alphatest="on" />
 	</screen>
-
 	<screen name="TitleCutter" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
 		<eLabel text="Cutlist editor" position="340,80" size="600,60" font="Regular;40" halign="center" />
 
@@ -2408,7 +2407,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 	</screen>
-	<!--// Graphical Multi EPG -->
 
 	<!-- Media Player -->
 	<screen name="MediaPlayer" position="center,center" size="580,475" title="MediaPlayer">
@@ -2432,7 +2430,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="currenttext" position="0,0" size="0,0" /> 
 		<widget name="titletext" position="0,0" size="0,0" /> 
 	</screen>
-	<!--// Media Player -->
 
 	<!-- Modem -->
 	<screen name="ModemSetup" position="240,130" size="800,500" title="Modem">
@@ -2445,7 +2442,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="list" position="10,40" size="780,350" scrollbarMode="showOnDemand" />
 		<widget name="state" position="10,400" size="780,90" font="Regular;22" />
 	</screen>
-	<!--// Modem -->
 
 	<!-- Picture Player -->
 	<screen name="picshow" position="140,100" size="1000,550" title="PicturePlayer">
@@ -2504,7 +2500,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
 	</screen>
-	<screen name="MyTubePlayerMainScreen" position="240,130" size="800,500" title="MyTubePlayerMainScreen..." >
+	<screen name="MyTubePlayerMainScreen" position="240,130" size="800,500" title="MyTubePlayerMainScreen...">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
@@ -2513,6 +2509,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_yellow" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="feedlist" render="Listbox" position="10,40" size="780,300" zPosition="2" scrollbarMode="showOnDemand">
+			<!-- Identical to MytubePlayerMainScreen and TravelWebcamviewer except status/state -->
 			<convert type="TemplatedMultiContent">
 			{"templates":
 				{"default": (75,[
@@ -2540,10 +2537,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="ButtonBlue" pixmap="BASIC-HD/icon/key_blue.png" position="310,360" size="30,20" transparent="1" alphatest="on" />
 		<widget name="HelpWindow" position="630,490" zPosition="1" size="1,1" transparent="1" alphatest="on" />
 		<widget name="config" position="10,415" size="370,75" scrollbarMode="showNever" />
-		<!--  # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
-		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on"/>
+		<!-- # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" />
 	</screen>
-	<screen name="MyTubeVideoInfoScreen" position="240,130" size="800,500" title="MyTube Information" >
+	<screen name="MyTubeVideoInfoScreen" position="240,130" size="800,500" title="MyTube Information">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
@@ -2572,15 +2569,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="author" position="60,230" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
 		<widget name="duration" position="350,230" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
 		<widget name="starsbg" pixmap="~/starsbar_empty.png" position="640,230" zPosition="5" size="100,20" transparent="1" alphatest="on" />
-		<widget name="stars" pixmap="~/starsbar_filled.png" position="640,230" zPosition="6" size="100,20"  transparent="1" />
+		<widget name="stars" pixmap="~/starsbar_filled.png" position="640,230" zPosition="6" size="100,20" transparent="1" />
 		<widget name="published" position="60,260" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
 		<widget name="views" position="350,260" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
 		<widget name="tags" position="60,290" size="680,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
-		<widget name="detailtext" position="10,340" size="780,150" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top"/>
-		<!--  # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
-		<widget name="thumbnail" position="0,0" size="130,98" alphatest="on"/>
+		<widget name="detailtext" position="10,340" size="780,150" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<!-- # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+		<widget name="thumbnail" position="0,0" size="130,98" alphatest="on" />
 	</screen>
-	<screen name="MyTubeVideoHelpScreen" position="240,130" size="800,500" title="MyTube Help" >
+	<screen name="MyTubeVideoHelpScreen" position="240,130" size="800,500" title="MyTube Help">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
@@ -2588,7 +2585,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" halign="left" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
-		<widget name="detailtext" position="10,115" size="780,375" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top"/>
+		<widget name="detailtext" position="10,115" size="780,375" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
 	</screen>
 	<screen name="MyTubeSettingsScreen" position="240,130" size="800,500" title="MyTube Settings">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
@@ -2601,7 +2598,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
 		<widget name="config" position="10,115" size="780,375" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="MyTubeTasksScreen" position="240,130" size="800,500" title="MyTube Tasks" >
+	<screen name="MyTubeTasksScreen" position="240,130" size="800,500" title="MyTube Tasks">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
@@ -2661,6 +2658,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="10,40" size="780,450" scrollbarMode="showOnDemand" />
 	</screen>
 
+	<!-- Traffic -->
 	<screen name="TrafficInfoMain" position="240,130" size="800,500" title="Verkehrsinfo">
 		<widget name="sectionlist" position="10,10" size="780,125" scrollbarMode="showOnDemand" />
 		<widget name="itemlist" position="10,145" size="780,175" scrollbarMode="showOnDemand" />
@@ -2668,6 +2666,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="statuslabel" position="10,470" size="780,25" font="Regular;20" /> 
 	</screen>
 
+	<!-- Genuine Dreambox -->
 	<screen name="genuineDreambox" position="240,130" size="800,500" title="Genuine Dreambox">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
@@ -2679,6 +2678,140 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="resulttext" position="50,250" zPosition="1" size="680,100" font="Regular;22" halign="center" valign="center" transparent="1" />
 		<widget name="infotext2" position="50,350" zPosition="1" size="680,75" font="Regular;22" halign="center" valign="center" transparent="1" />
 	</screen>
+
+	<!-- IMDB -->
+	<screen name="IMDB" position="240,130" size="800,500" title="Internet Movie Database Details Plugin">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="titellabel" position="10,50" size="560,50" font="Regular;20"/>
+		<widget name="starsbg" position="580,50" zPosition="0" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" transparent="1" alphatest="on" />
+		<widget name="stars" position="580,50" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" transparent="1" />
+		<widget name="ratinglabel" position="580,80" size="210,20" halign="center" font="Regular;18" foregroundColor="#f0b400"/>
+		<widget name="poster" position="10,120" size="100,150" alphatest="on" />
+		<widget name="detailslabel" position="120,120" size="670,150" font="Regular;18" />
+		<widget name="castlabel" position="10,300" size="780,150" font="Regular;18" />
+		<widget name="menu" position="10,120" size="780,325" zPosition="3" scrollbarMode="showOnDemand" />
+		<widget name="extralabel" position="10,120" size="780,325" font="Regular;22" />
+		<widget name="statusbar" position="10,470" size="780,20" font="Regular;18" />
+	</screen>
+
+	<!-- WeatherPlugin -->
+	<screen name="WeatherPlugin" position="240,130" size="800,500" title="Weather Plugin">
+		<widget render="Label" source="caption" position="10,20" zPosition="1" size="300,23" font="Regular;22" transparent="1" />
+		<widget render="Label" source="currentTemp" position="10,45" zPosition="1" size="300,23" font="Regular;22" transparent="1" />
+		<widget render="Label" source="condition" position="10,80" zPosition="1" size="300,20" font="Regular;18" transparent="1" />
+		<widget render="Label" source="wind_condition" position="10,105" zPosition="1" size="300,20" font="Regular;18" transparent="1" />
+		<widget render="Label" source="humidity" position="10,130" zPosition="1" size="300,20" font="Regular;18" valign="bottom" transparent="1" />
+		<widget render="Label" source="weekday1" position="255,30" zPosition="1" size="72,20" halign="center" valign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday1_icon" position="255,50" zPosition="1" size="72,72" alphatest="blend" />
+		<widget render="Label" source="weekday1_temp" position="241,130" zPosition="1" size="100,20" halign="center" valign="bottom" font="Regular;18" transparent="1" />
+		<widget render="Label" source="weekday2" position="358,30" zPosition="1" size="72,20" halign="center" valign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday2_icon" position="358,50" zPosition="1" size="72,72" alphatest="blend" />
+		<widget render="Label" source="weekday2_temp" position="344,130" zPosition="1" size="100,20" halign="center" valign="bottom" font="Regular;18" transparent="1" />
+		<widget render="Label" source="weekday3" position="461,30" zPosition="1" size="72,20" halign="center" valign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday3_icon" position="461,50" zPosition="1" size="72,72" alphatest="blend" />
+		<widget render="Label" source="weekday3_temp" position="448,130" zPosition="1" size="100,20" halign="center" valign="bottom" font="Regular;18" transparent="1" />
+		<widget render="Label" source="weekday4" position="564,30" zPosition="1" size="72,20" halign="center" valign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday4_icon" position="564,50" zPosition="1" size="72,72" alphatest="blend" />
+		<widget render="Label" source="weekday4_temp" position="550,130" zPosition="1" size="100,20" halign="center" valign="bottom" font="Regular;18" transparent="1" />
+		<widget render="Label" source="statustext" position="0,0" zPosition="1" size="664,170" font="Regular;20" halign="center" valign="center" transparent="1" />
+	</screen>
+	<screen name="WeatherPluginEntriesListConfigScreen" position="240,130" size="800,500" title="WeatherPlugin: List of Entries">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="entrylist" position="10,40" size="780,350" scrollbarMode="showOnDemand" />
+		<widget render="Label" source="city" position="10,440" size="300,50" font="Regular;22" halign="left" />
+		<widget render="Label" source="language" position="350,440" size="440,50" font="Regular;22" halign="left" />
+	</screen>
+	<screen name="WeatherPluginEntryConfigScreen" position="240,130" size="800,500" title="WeatherPlugin: Edit Entry">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="config" position="10,40" size="780,450" scrollbarMode="showOnDemand" />
+	</screen>
+	<!--// WeatherPlugin -->
+
+	<!-- WebcamViewer -->
+	<screen name="ViewerSelectScreen" position="240,130" size="800,500" title="ViewerSelectScreen">
+		<widget name="list" position="10,10" size="780,480" />
+	</screen>
+	<screen name="WebcamViewer" position="240,130" size="800,500" title="WebcamViewer">
+		<widget name="menu" position="10,10" size="780,480" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="WebcamViewerMenu" position="240,130" size="800,500" title="Setup">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="buttonred" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="buttongreen" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="config" position="10,40" size="780,450" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="PictureViewer" position="240,130" size="800,500" title="PictureViewer">
+		<widget name="buttonred" position="8,4" size="190,32" backgroundColor="red" valign="center" halign="center" zPosition="2" foregroundColor="white" font="Regular;18" />
+		<widget name="buttongreen" position="206,4" size="190,32" backgroundColor="green" valign="center" halign="center" zPosition="2" foregroundColor="white" font="Regular;18" />
+		<widget name="buttonyellow" position="404,4" size="190,32" backgroundColor="yellow" valign="center" halign="center" zPosition="2" foregroundColor="white" font="Regular;18" />
+		<widget name="buttonblue" position="602,4" size="190,32" backgroundColor="blue" valign="center" halign="center" zPosition="2" foregroundColor="white" font="Regular;18" />
+		<widget name="menu" position="10,40" size="390,450" scrollbarMode="showOnDemand" />
+		<widget name="pixmap" position="590,40" size="275,200" backgroundColor="red" />
+		<widget name="slist" position="410,250" size="380,200" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="PictureScreen" position="0,0" size="1280,720" title="PictureScreen" flags="wfNoBorder">
+		<widget name="pixmap" position="0,0" size="1280,720" backgroundColor="black" />
+	</screen>
+	<screen name="TravelWebcamviewer" position="240,130" size="800,500" title="Webcams provided by webcams.travel">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_yellow" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="key_blue" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="list" render="Listbox" position="10,40" size="780,375" zPosition="1" scrollbarMode="showOnDemand">
+			<!-- Identical to MytubePlayerMainScreen and TravelWebcamviewer except status/state -->
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (75,[
+						MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (100, 75), png = 4), # index 4 is the thumbnail
+						MultiContentEntryText(pos = (110, 1), size = (640, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 1 is the Title
+						MultiContentEntryText(pos = (110, 30), size = (400, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5), # index 5 is the Published Date
+						MultiContentEntryText(pos = (110, 52), size = (400, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6), # index 6 is the Views Count
+						MultiContentEntryText(pos = (500, 30), size = (240, 20), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 7), # index 7 is the duration
+						MultiContentEntryText(pos = (500, 52), size = (240, 20), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 8), # index 8 is the ratingcount
+					]),
+				"status": (75,[
+						MultiContentEntryText(pos = (10, 1), size = (760, 28), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (10, 30), size = (760, 44), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 2 is the description
+					])
+				},
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18),gFont("Regular", 26),gFont("Regular", 20)],
+				"itemHeight": 75
+			}
+			</convert>
+		</widget>
+		<widget name="count" position="10,430" zPosition="5" size="260,60" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="page" position="270,430" zPosition="5" size="260,60" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="currentnumbers" position="530,430" zPosition="5" size="260,60" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<!-- # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" />
+	</screen>
+	<!-- WebcamViewer -->
 
 <!--// Extensions Ends -->
 
