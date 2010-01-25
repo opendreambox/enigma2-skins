@@ -77,7 +77,7 @@
 		</borderset>
 
 		<borderset name="bsListboxEntry">
-			<pixmap pos="bpTopLeft"	filename="BASIC-HD/listbox/topleft.png" />
+			<pixmap pos="bpTopLeft" filename="BASIC-HD/listbox/topleft.png" />
 			<pixmap pos="bpTop" filename="BASIC-HD/listbox/top.png" />
 			<pixmap pos="bpTopRight" filename="BASIC-HD/listbox/topright.png" />
 			<pixmap pos="bpLeft" filename="BASIC-HD/listbox/left.png" />
