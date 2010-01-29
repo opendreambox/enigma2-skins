@@ -118,7 +118,7 @@
 	</screen>
 
 	<!-- Mainmenu -->
-	<screen name="menu_mainmenu" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
+	<screen name="menu_mainmenu" position="center,center" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
 		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
@@ -168,7 +168,7 @@
 		</widget>
 	</screen>
 
-	<screen name="menu_setup" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
+	<screen name="menu_setup" position="center,center" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
 		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
@@ -206,7 +206,7 @@
 		</widget>
 	</screen>
 
-	<screen name="menu_scan" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
+	<screen name="menu_scan" position="center,center" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
 		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
@@ -221,7 +221,7 @@
 		<ePixmap pixmap="BASIC-HD/menu/search.png" zPosition="2" position="66,114" size="128,128" alphatest="on" />
 	</screen>
 
-	<screen name="menu_system" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
+	<screen name="menu_system" position="center,center" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
 		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
@@ -236,7 +236,7 @@
 		<ePixmap pixmap="BASIC-HD/menu/setup.png" position="66,114" size="128,128" alphatest="on" />
 	</screen>
 
-	<screen name="menu_harddisk" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
+	<screen name="menu_harddisk" position="center,center" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
 		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
@@ -251,7 +251,7 @@
 	<ePixmap pixmap="BASIC-HD/menu/hdd.png" position="66,114" size="128,128" alphatest="on" />
 	</screen>
 
-	<screen name="menu_shutdown" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
+	<screen name="menu_shutdown" position="center,center" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
 		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
@@ -266,7 +266,7 @@
 		<ePixmap pixmap="skin_default/menu/shutdown.png" position="66,114" size="128,128" alphatest="on" />
 	</screen>
 
-	<screen name="menu_information" position="240,130" size="800,500" title="Main menu" flags="wfNoBorder">
+	<screen name="menu_information" position="center,center" size="800,500" title="Main menu" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-2" size="800,500" backgroundColor="menubackground" />
 		<ePixmap pixmap="BASIC-HD/menu/border.png" position="0,0" size="800,500" zPosition="-1" alphatest="on" />
 		<widget source="title" render="Label" position="244,50" size="490,30" font="Regular;28" transparent="1" />
@@ -930,6 +930,7 @@
 		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="list" position="10,40" size="780,400" scrollbarMode="showOnDemand" zPosition="10" />
 		<widget name="introduction" render="Label" position="10,460" size="780,30" zPosition="10" font="Regular;22" valign="center" halign="center" transparent="1" />
 	</screen>
@@ -2453,7 +2454,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="259,4" size="235,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_yellow" render="Label" position="506,4" size="235,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_blue" render="Label" position="753,4" size="235,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="filelist" position="20,55" size="540,475" scrollbarMode="showOnDemand" />
+		<widget name="filelist" position="20,50" size="540,483" scrollbarMode="showOnDemand" />
 		<widget name="thn" position="600,55" size="360,320" alphatest="on" />
 		<widget source="label" render="Label" position="600,390" size="360,150" font="Regular;22" />
 	</screen>
