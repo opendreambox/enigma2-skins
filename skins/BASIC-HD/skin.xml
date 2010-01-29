@@ -930,8 +930,7 @@
 		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<!-- add after release -->
-		<!--widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" /-->
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="list" position="10,40" size="780,400" scrollbarMode="showOnDemand" zPosition="10" />
 		<widget name="introduction" render="Label" position="10,460" size="780,30" zPosition="10" font="Regular;22" valign="center" halign="center" transparent="1" />
 	</screen>
