@@ -2005,10 +2005,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
-		<widget name="key_red" position=" 20,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red" />
-		<widget name="key_green" position="290,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green" />
-		<widget name="key_yellow" position="560,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" />
-		<widget name="key_blue" position="830,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="blue" />
+		<widget source="key_red" render="Label" position=" 20,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="red" />
+		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="green" />
+		<widget source="key_yellow" render="Label" position="560,525" size="250,30" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" />
 		<widget name="DescriptionBorder" position="0,0" size="0,0" />
 	</screen>
 	<screen name="DVDToolbox" position="90,100" size="1100,560" title="DVD media toolbox">

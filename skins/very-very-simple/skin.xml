@@ -195,7 +195,6 @@
 			<convert type="StringList" />
 		</widget>
 	</screen>
-
 	<screen name="CutListEditor" position=" 0, 0" size="720,576" title="Cutlist editor" flags="wfNoBorder" backgroundColor="#28333e">
 		<eLabel text="Cutlist Editor" position="65,60" size="300,25" font="Regular;20" backgroundColor="#28333e" />
 		<widget source="global.CurrentTime" render="Label" position="268,60" size="394,20" font="Regular;20" halign="right" backgroundColor="#28333e">
@@ -573,7 +572,7 @@
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_yellow" render="Label" position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2" />
-		<eLabel position="466,5" size="150,35" backgroundColor="blue" />
+		<widget source="key_blue" render="Label" position="466,5" zPosition="1" size="150,35" font="Regular;17" halign="center" valign="center" backgroundColor="blue" shadowColor="background" shadowOffset="-2,-2" />
 		<widget name="list" position="10,50" size="600,300" scrollbarMode="showOnDemand" />
 		<eLabel position=" 0,397" size="620,33" backgroundColor="background2" />
 		<widget source="introduction" render="Label" position="10,402" size="600,25" zPosition="1" font="Regular;22" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center" />
@@ -625,10 +624,10 @@
 		<widget source="introduction" render="Label" position="10,402" size="600,25" zPosition="1" font="Regular;22" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center" />
 	</screen>
 	<screen name="AutoMountManager" position=" 50,90" size="620,430" title="AutoMountManager">
-		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
-		<eLabel position="158,5" size="150,35" backgroundColor="green" />
-		<eLabel position="312,5" size="150,35" backgroundColor="yellow" />
-		<eLabel position="466,5" size="150,35" backgroundColor="blue" />
+		<widget source="key_red" render="Label" position="  4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
+		<eLabel	position="158,5" size="150,35" backgroundColor="green"/>
+		<eLabel	position="312,5" size="150,35" backgroundColor="yellow"/>
+		<eLabel	position="466,5" size="150,35" backgroundColor="blue"/>
 		<widget source="config" render="Listbox" position="10,50" size="600,300" scrollbarMode="showOnDemand" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -682,7 +681,7 @@
 		<eLabel	position="  0,397" size="620,33" backgroundColor="background2" />
 		<widget source="introduction" render="Label" position=" 10,402" size="600,25" zPosition="1" font="Regular;22" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center"/>
 	</screen>
-	<screen name="NetworkBrowser" position=" 50,90" size="620,430" title="Network Neighbourhood">
+	<screen name="NetworkBrowser" position="50,90" size="620,430" title="Network Neighbourhood">
 		<widget source="key_red" render="Label" position="  8, 5" zPosition="1" size="300,30" font="Regular;20" halign="center" valign="center" backgroundColor="red"    shadowColor="background" shadowOffset="-2,-2"/>
 		<widget source="key_green" render="Label" position="312, 5" zPosition="1" size="300,30" font="Regular;20" halign="center" valign="center" backgroundColor="green"  shadowColor="background" shadowOffset="-2,-2"/>
 		<widget source="key_yellow" render="Label" position="  8,39" zPosition="1" size="300,30" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2"/>
@@ -732,8 +731,8 @@
 				}
 			</convert>
 		</widget>
-		<eLabel	position="  0,397" size="620,33" backgroundColor="background2" />
-		<widget source="introduction" render="Label" position=" 10,402" size="600,25" zPosition="1" font="Regular;22"  backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center"/>
+		<eLabel position=" 0,397" size="620,33" backgroundColor="background2" />
+		<widget source="introduction" render="Label" position="10,402" size="600,25" zPosition="1" font="Regular;22" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center" />
 	</screen>
 	<screen name="ScanIP" position=" 50,90" size="620, 85" title="Scan IP">
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
@@ -788,6 +787,7 @@
 			</convert>
 		</widget>
 	</screen>
+
 	<screen name="NimSelection" position="150,90" size="420,300" title="Choose Tuner">
 		<widget source="nimlist" render="Listbox" position="10,10" size="400,280" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
@@ -874,6 +874,14 @@
 		<widget name="RadioText" position="50,481" size="620,29" font="Regular;21" valign="center" noWrap="1" backgroundColor="transpBlack" shadowOffset="-2,-2" shadowColor="black" />
 		<widget name="RtpText" position="50,510" size="620,29" font="Regular;21" valign="center" halign="right" noWrap="1" backgroundColor="transpBlack" shadowOffset="-2,-2" shadowColor="black" />
 		<widget name="RassLogo" position="50,445" size="50,21" pixmap="skin_default/icons/rass_logo.png" />
+	</screen>
+	<screen name="RecordPathsSettings" position=" 50,90" size="620,430" title="Recording paths...">
+		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
+		<eLabel position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" />
+		<eLabel position="466,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="blue" />
+		<eLabel position="10,50" size="600,35" backgroundColor="background2" />
+		<widget name="config" position="10,56" size="600,325" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="ScanSetup" position="100,90" size="520,430" title="Service scan">
 		<widget name="config" position="10,10" size="500,350" scrollbarMode="showOnDemand" />
@@ -1124,7 +1132,6 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 
 		</applet>
 	</screen>
-
 	<screen name="BackupSelection" position=" 50,90" size="620,430" title="Select files/folders to backup...">
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
@@ -1155,7 +1162,7 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<eLabel position="466,5" size="150,35" backgroundColor="blue" />
 		<widget name="text" position="4,50" size="616,25" font="Regular;20" foregroundColor="#cccccc" />
 	</screen>
-	<screen name="PacketManager" position=" 50,90" size="620,430" title="IPKG upgrade..." >
+	<screen name="PacketManager" position=" 50,90" size="620,430" title="IPKG upgrade...">
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
 		<eLabel position="312,5" size="150,35" backgroundColor="yellow" />
@@ -1203,7 +1210,7 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 				}
 			</convert>
 		</widget>
-		<eLabel position="339,45" size=" 2,310" backgroundColor="grey" />
+		<eLabel								   position="339,45" size="  2,310" backgroundColor="grey"/>
 		<widget source="menu" render="Listbox" position="350,45" size="260,300" scrollbarMode="showNever" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1215,7 +1222,6 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 			</convert>
 		</widget>
 	</screen>
-
 	<screen name="BackupScreen" position="150,90" size="420,320" title="Backup running...">
 		<widget name="config" position="10,10" size="400,300" transparent="1" scrollbarMode="showOnDemand" />
 	</screen>
@@ -1280,6 +1286,20 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget source="disabled" render="Label" position="406,50" size="199,26" zPosition="2" font="Regular;20" halign="left" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" />
 		<widget name="ifacelist" position="10,90" size="600,325" scrollbarMode="showOnDemand" />
 	</screen>
+
+	<screen name="DVDMovieSelection" position=" 50,80" size="620,450" title="Select a movie">
+		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
+		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
+		<widget source="key_yellow" render="Label" position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2" />
+		<eLabel position="466,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="blue" shadowColor="background" shadowOffset="-2,-2" />
+		<widget name="list" position="7,45" size="606,375" zPosition="2" scrollbarMode="showOnDemand" />
+		<widget name="DescriptionBorder" position="0,345" zPosition="1" size="620,75" />
+		<widget source="Service" render="Label" position="10,348" size="605,72" zPosition="1" font="Regular;18" foregroundColor="#bbbbbb">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<eLabel position=" 0,425" size="620,25" zPosition="1" backgroundColor="background2" />
+		<widget name="freeDiskSpace" position=" 10,427" size="600,20" zPosition="2" font="Regular;19" valign="center" halign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" />
+	</screen>
 	<screen name="DVDToolbox" position=" 50,90" size="620,445" title="DVD media toolbox">
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
@@ -1313,7 +1333,7 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		</widget>
 		<eLabel position="52,98" size="199,274" backgroundColor="#505555" />
 		<eLabel position="54,100" size="195,270" backgroundColor="#000000" />
-		<widget source="cutlist" position="54,100" zPosition="1" size="195,270" scrollbarMode="showOnDemand" transparent="1" render="Listbox" >
+		<widget source="cutlist" position="54,100" zPosition="1" size="195,270" scrollbarMode="showOnDemand" transparent="1" render="Listbox">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=(5,0), size=(125, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
@@ -1364,7 +1384,7 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<eLabel position="158,5" zPosition="1" size="150,35" backgroundColor="green" />
 		<eLabel position="312,5" zPosition="1" size="150,35" backgroundColor="yellow" />
 		<eLabel position="466,5" zPosition="1" size="150,35" backgroundColor="blue" />
-		<widget source="menu" render="Listbox" position="10,45" size="600,390" scrollbarMode="showOnDemand" selectionDisabled="1" >
+		<widget source="menu" render="Listbox" position="10,45" size="600,390" scrollbarMode="showOnDemand" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [  
 					MultiContentEntryText(pos = (5, 5), size = (260, 30), flags = RT_HALIGN_LEFT, text = 0), 
@@ -1465,6 +1485,22 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget source="parent.title" render="Label" position="6,0" size="120,32" font="Regular;14" halign="center" valign="center" />
 		<widget source="parent.menu" render="Label" position="6,32" size="120,32" font="Regular;15" halign="center" valign="center">
 			<convert type="StringListSelection" />
+		</widget>
+	</screen>
+	<screen name="InfoBarMoviePlayerSummary" position="0,0" size="132,64">
+		<widget source="session.CurrentService" render="Label" position="6,3" size="120,34" font="Regular;16" halign="center" valign="top">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<eLabel position="0,43" size="132,1" backgroundColor="white" />
+		<widget source="session.CurrentService" render="Progress" position="68,51" size="55,8" borderWidth="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="6,44" size="58,20" font="Regular;20" halign="left" valign="top">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="session.RecordState" render="FixedLabel" text=" " position="6,44" zPosition="1" size="58,20">
+			<convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
+			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
 </skin>

@@ -2890,11 +2890,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="100,643" size="30,30" alphatest="blend" />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="390,643" size="30,30" alphatest="blend" />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="680,643" size="30,30" alphatest="blend" />
-		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" position="970,643" size="30,30" alphatest="blend" />
-		<widget name="key_red" position="150,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" position="440,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" position="730,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" position="1020,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="150,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="440,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="730,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget name="DescriptionBorder" position="0,0" size="0,0" />
 	</screen>
 	<screen name="ProjectSettings" position="0,0" size="1280,720" title="Collection settings" flags="wfNoBorder">
