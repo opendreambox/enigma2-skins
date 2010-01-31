@@ -604,7 +604,7 @@
 			</convert>
 		</widget>
 		<eLabel position="479,124" zPosition="3" size="696,377" backgroundColor="#ff000000"/>
-		<widget name="Video" position="270,100" zPosition="-10" size="390,300"/>
+		<widget name="Video" position="479,124" zPosition="-10" size="696,377"/>
 		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -1147,6 +1147,12 @@
 	<screen name="VideoFinetune" position=" 0, 0" size="1280,720" backgroundColor="black">
 		<widget source="Canvas" render="Canvas" position="280,70" size="720,576" />
 	</screen>
+	<screen name="RecordPathsSettings" position="172,132" size="1108,588" title="Recording paths..." backgroundColor="transparent">
+		<eLabel position="5,5" size="760,510" zPosition="-1" backgroundColor="background" />
+		<widget name="config" position="15,10" size="740,450" scrollbarMode="showOnDemand" />
+		<widget source="key_red" render="Label" position="5,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+	</screen>
 	<screen name="SkinSelector" position="172,132" size="1108,588" title="Skin Selector" backgroundColor="transparent">
 		<eLabel position=" 5, 5" size="800,510" zPosition="-1" backgroundColor="background" />
 		<widget name="Preview" position="40,40" size="250,200" alphatest="on" />
@@ -1210,6 +1216,7 @@
 		<widget source="key_red" render="Label" position="5,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
 		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" render="Label" position="800,525" size="265,35" font="Regular;22" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<screen name="NetworkAdapterTest" position="172,132" size="1108,588" title="Network test..." backgroundColor="transparent">
 		<eLabel position=" 5, 5" size="700,510" zPosition="-1" backgroundColor="background" />
@@ -1705,6 +1712,33 @@
 		<widget source="key_blue" render="Label" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<!-- DVD Burner -->
+	<screen name="DVDMovieSelection" position="172,132" size="1108,588" title="Select a movie" backgroundColor="transparent">
+		<eLabel position="5,5" size="1060,510" zPosition="-1" backgroundColor="background" />
+		<widget name="list" position="15,15" size="730,450" zPosition="3" scrollbarMode="showOnDemand" />
+		<widget source="Service" render="Label" position="760,10" zPosition="1" size="220,50" font="Regular;22" foregroundColor="#aaaaaa">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="960,10" zPosition="1" size="90,22" font="Regular;22" halign="right">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="930,35" zPosition="1" size="120,22" font="Regular;22" halign="right">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		<widget source="Service" render="Label" position="760,63" zPosition="2" size="300,25" font="Regular;22">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="760,92" zPosition="1" size="300,418" font="Regular;19" foregroundColor="#aaaaaa">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<eLabel position="15,472" size="730,2" backgroundColor="lgrey" />
+		<widget name="freeDiskSpace" position="15,480" size="730,25" font="Regular;22" halign="center" />
+		<widget source="key_red" render="Label" position="5,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
+		<widget source="key_green" render="Label" position="270,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
+		<widget source="key_yellow" render="Label" position="535,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<eLabel position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
+		<widget name="DescriptionBorder" position="0,0" size="0,0" />
+	</screen>
 	<screen name="DVDToolbox" position="172,132" size="1108,588" title="DVD media toolbox" backgroundColor="transparent">
 		<eLabel position=" 5, 5" size="860,510" zPosition="-1" backgroundColor="background" />
 		<widget source="info" render="Label" position="15, 20" size="840,100" font="Regular;22" />
@@ -1740,7 +1774,7 @@
 			</convert>
 		</widget>
 		<eLabel position="479,124" zPosition="3" size="696,377" backgroundColor="#ff000000" />
-		<widget name="Video" position="270,100" zPosition="-10" size="390,300" />
+		<widget name="Video" position="479,124" zPosition="-10" size="696,377" />
 		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
