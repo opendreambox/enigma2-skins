@@ -1225,12 +1225,14 @@
 		<eLabel position="550,590" size="660,2" backgroundColor="black" zPosition="5" />
 		<eLabel position="550,592" size="660,2" backgroundColor="grey" zPosition="5" />
 		<widget source="introduction" render="Label" position="550,600" size="660,27" zPosition="1" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<ePixmap position="80,500" size="30,30" pixmap="BrushedAlu-HD/buttons/red.png" alphatest="blend" />
-		<ePixmap position="80,550" size="30,30" pixmap="BrushedAlu-HD/buttons/green.png" alphatest="blend" />
-		<ePixmap position="80,600" size="30,30" pixmap="BrushedAlu-HD/buttons/yellow.png" alphatest="blend" />
-		<widget source="key_red" render="Label" position="130,502" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget source="key_green" render="Label" position="130,552" size="300,55" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget source="key_yellow" render="Label" position="130,602" size="300,55" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,450" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="80,500" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="80,550" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" position="80,600" size="30,30" alphatest="blend" />
+		<widget source="key_red" render="Label" position="130,452" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552" size="320,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602" size="320,54" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
 	<screen name="NetworkAdapterTest" position="0,0" size="1280,720" title="Network test..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
@@ -2416,7 +2418,7 @@
 			</convert>
 		</widget>
 		<eLabel position="479,124" zPosition="3" size="696,377" backgroundColor="#ff000000" />
-		<widget name="Video" position="270,100" zPosition="-10" size="390,300" />
+		<widget name="Video" position="479,124" zPosition="-10" size="696,377" />
 		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -2463,6 +2465,23 @@
 		<widget name="help2" position="402,122" size="200,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<screen name="Standby" position="0,0" size="1280,720" title="Standby" flags="wfNoBorder" />
+	<screen name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths..." flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="Title" render="Label" position="80,110" size="322,75" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<ePixmap position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
+		<widget source="session.VideoPicture" render="Pig" position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000" />
+		<widget name="config" position="550,120" size="660,435" zPosition="3" itemHeight="29" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" transparent="1" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,550" size="30,30" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="80,600" size="30,30" alphatest="blend" zPosition="2" />
+		<widget source="key_red" render="Label" position="130,552" size="220,30" zPosition="2" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_green" render="Label" position="130,602" size="220,30" zPosition="2" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+	</screen>
 	<screen name="RdsInfoDisplay" position="0,0" size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="100,585" size="50,21" />
 		<widget name="RadioText" position="100,620" size="1080,30" font="Regular;24" noWrap="1" backgroundColor="transpBlack" />
@@ -2833,6 +2852,51 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="130,502" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<widget source="key_yellow" render="Label" position="130,552" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
+	<screen name="DVDMovieSelection" position="0,0" size="1280,720" title="Select a movie" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu2.png" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="Title" render="Label" position="525,116" size="700,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<eLabel position="485,150" size="730,2" backgroundColor="black" zPosition="5" />
+		<eLabel position="485,152" size="730,2" backgroundColor="grey" zPosition="5" />
+		<widget name="list" position="490,175" size="730,375" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_75.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_75_bg.png" transparent="1" />
+		<eLabel position="476,110" size="1,500" backgroundColor="black" zPosition="5" />
+		<eLabel position="477,110" size="2,500" backgroundColor="grey" zPosition="5" />
+		<ePixmap position="70,110" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
+		<widget source="session.VideoPicture" render="Pig" position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000" />
+		<eLabel position="485,570" size="730,2" backgroundColor="black" zPosition="5" />
+		<eLabel position="485,572" size="730,2" backgroundColor="grey" zPosition="5" />
+		<widget name="freeDiskSpace" position="485,580" size="730,30" zPosition="3" font="Regular;26" backgroundColor="darkgrey" halign="center" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget source="Service" render="Label" position=" 80,345" zPosition="1" size="360, 25" font="Regular;22" foregroundColor="white" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position=" 80,370" zPosition="1" size="360, 25" font="Regular;22" foregroundColor="yellow" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position=" 80,400" zPosition="1" size="150, 22" font="Regular;19" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="300,400" zPosition="1" size="150, 22" font="Regular;19" halign="right" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		<widget source="Service" render="Label" position=" 80,428" zPosition="1" size="380,183" font="Regular;20" foregroundColor="white" backgroundColor="darkgrey" transparent="1">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="100,643" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="390,643" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="680,643" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" position="970,643" size="30,30" alphatest="blend" />
+		<widget name="key_red" position="150,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" position="440,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" position="730,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" position="1020,645" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="DescriptionBorder" position="0,0" size="0,0" />
+	</screen>
 	<screen name="ProjectSettings" position="0,0" size="1280,720" title="Collection settings" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
@@ -2880,7 +2944,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			</convert>
 		</widget>
 		<eLabel position="479,124" zPosition="3" size="696,377" backgroundColor="#ff000000" />
-		<widget name="Video" position="270,100" zPosition="-10" size="390,300" />
+		<widget name="Video" position="479,124" zPosition="-10" size="696,377" />
 		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
