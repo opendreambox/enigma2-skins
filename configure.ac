@@ -74,6 +74,14 @@ AC_OUTPUT([
 ./skins/SWAIN-HD/meta/Makefile
 ./skins/SWAIN/Makefile
 ./skins/SWAIN/meta/Makefile
+./skins/UltraViolet/Makefile
+./skins/UltraViolet/buttons/Makefile
+./skins/UltraViolet/extensions/Makefile
+./skins/UltraViolet/icons/Makefile
+./skins/UltraViolet/menu/Makefile
+./skins/UltraViolet/selpic/Makefile
+./skins/UltraViolet/skin_default/Makefile
+./skins/UltraViolet/skin_default/icons/Makefile
 ./skins/very-simple/Makefile
 ./skins/very-simple/meta/Makefile
 ./skins/very-very-simple/Makefile
