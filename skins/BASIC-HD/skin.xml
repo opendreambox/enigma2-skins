@@ -386,7 +386,6 @@
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 
-
 		<!-- Record (blinking) -->
 		<widget source="session.RecordState" render="Pixmap" pixmap="BASIC-HD/icon/key_red.png" position="20,170" zPosition="1" size="30,20" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
@@ -447,7 +446,6 @@
 		<widget source="ExtensionsAvailable" render="FixedLabel" text="Extensions" position="600,168" zPosition="2" size="160,23" font="Regular;20" backgroundColor="#182946" shadowColor="#1d354c" shadowOffset="-1,-1" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-
 
 		<ePixmap position="873,166" zPosition="0" size="140,28" pixmap="BASIC-HD/relief.png" />
 
@@ -728,7 +726,7 @@
 		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_yellow" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_blue" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="timerlist" position="10,40" size="780,420" scrollbarMode="showOnDemand" />
+		<widget name="timerlist" position="10,40" size="780,450" itemHeight="75" scrollbarMode="showOnDemand" />
 	</screen>
 
 	<!-- Timer entry -->
