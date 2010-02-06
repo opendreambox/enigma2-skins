@@ -13,6 +13,7 @@ AC_OUTPUT([
 ./skins/BASIC-HD/icon/Makefile
 ./skins/BASIC-HD/listbox/Makefile
 ./skins/BASIC-HD/menu/Makefile
+./skins/BASIC-HD/meta/Makefile
 ./skins/BASIC-HD/window/Makefile
 ./skins/BrushedAlu-HD/Makefile
 ./skins/BrushedAlu-HD/menu/Makefile
@@ -25,6 +26,7 @@ AC_OUTPUT([
 ./skins/DreamMM-HD/buttons/Makefile
 ./skins/DreamMM-HD/icons/Makefile
 ./skins/DreamMM-HD/menu/Makefile
+./skins/DreamMM-HD/meta/Makefile
 ./skins/DreamMM-HD/selpic/Makefile
 ./skins/DreamMM-HD/skin_default/Makefile
 ./skins/dreamTV-HD/Makefile
@@ -41,6 +43,7 @@ AC_OUTPUT([
 ./skins/Elgato-HD/buttons/Makefile
 ./skins/Elgato-HD/extensions/Makefile
 ./skins/Elgato-HD/icons/Makefile
+./skins/Elgato-HD/meta/Makefile
 ./skins/Elgato-HD/micon/Makefile
 ./skins/Elgato-HD/selpic/Makefile
 ./skins/Elgato-HD/skin_default/Makefile
@@ -93,6 +96,7 @@ AC_OUTPUT([
 ./skins/UltraViolet/extensions/Makefile
 ./skins/UltraViolet/icons/Makefile
 ./skins/UltraViolet/menu/Makefile
+./skins/UltraViolet/meta/Makefile
 ./skins/UltraViolet/selpic/Makefile
 ./skins/UltraViolet/skin_default/Makefile
 ./skins/UltraViolet/skin_default/icons/Makefile
@@ -104,6 +108,7 @@ AC_OUTPUT([
 ./skins/YADS-HD/buttons/Makefile
 ./skins/YADS-HD/extensions/Makefile
 ./skins/YADS-HD/icons/Makefile
+./skins/YADS-HD/meta/Makefile
 ./skins/YADS-HD/selpic/Makefile
 ./skins/YADS-HD/skin_default/Makefile
 ./skins/YADS-HD/skin_default/icons/Makefile

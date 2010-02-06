@@ -1,0 +1,24 @@
+<default>
+	  <prerequisites>
+                    <tag type="Skin" />
+	  </prerequisites>
+          <info language="en">
+                    <author>Kerni</author>
+                    <name>UltraViolet</name>
+                    <packagename>enigma2-skin-ultraviolet</packagename>
+                    <shortdescription>Kerni's UltraViolet skin</shortdescription>
+                    <description>a HD skin from Kerni</description>
+		    <screenshot src="http://www.dreamboxupdate.com/preview/ultraviolet.jpg" />                    
+          </info>
+          <info language="de">
+                    <author>Kerni</author>
+                    <name>UltraViolet
+                    <packagename>enigma2-skin-ultraviolet</packagename>
+                    <shortdescription>Kerni's UltraViolet skin</shortdescription>
+                    <description>Ein HD Skin von Kerni</description>
+		    <screenshot src="http://www.dreamboxupdate.com/preview/ultraviolet.jpg" />       
+          </info>
+	  <files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-ultraviolet" />
+	  </files>
+</default>

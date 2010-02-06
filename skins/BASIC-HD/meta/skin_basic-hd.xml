@@ -1,0 +1,24 @@
+<default>
+	  <prerequisites>
+                    <tag type="Skin" />
+	  </prerequisites>
+          <info language="en">
+                    <author>IsmailDemir</author>
+                    <name>BASIC-HD</name>
+                    <packagename>enigma2-skin-basic-hd</packagename>
+                    <shortdescription>IsmailDemir's BASIC-HD skin</shortdescription>
+                    <description>a HD skin from IsmailDemir</description>
+		    <screenshot src="http://www.dreamboxupdate.com/preview/basic-hd.jpg" />                    
+          </info>
+          <info language="de">
+                    <author>Ismail Demir</author>
+                    <name>BASIC-HD</name>
+                    <packagename>enigma2-skin-basic-hd</packagename>
+                    <shortdescription>IsmailDemir's BASIC-HD skin</shortdescription>
+                    <description>Ein HD Skin von IsmailDemir</description>
+		    <screenshot src="http://www.dreamboxupdate.com/preview/basic-hd.jpg" />       
+          </info>
+	  <files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-basic-hd" />
+	  </files>
+</default>
