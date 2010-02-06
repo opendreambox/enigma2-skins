@@ -2861,4 +2861,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="FileSize" position="10,515" size="980,25" font="Regular;22" valign="center" halign="right" />
 	</screen>
 
+	<!-- Ali Plugin -->
+	<screen name="InfoBarConfig" position="240,130" size="800,500" title="InfoBar Config">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="config" position="10,40" size="780,450" scrollbarMode="showOnDemand" />
+	</screen>
 </skin>
