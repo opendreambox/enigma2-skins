@@ -1399,7 +1399,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 
 		<eLabel 					position="477,172" size="700,381" zPosition="2" backgroundColor="grey" />
 		<eLabel 					position="479,174" size="696,377" zPosition="3"  backgroundColor="#ff000000" />
-		<widget name="Video" 		position="270,150" zPosition="-10" size="390,300" />
+		<widget name="Video" 		position="479,174" zPosition="-10" size="696,377" />
 
 		<widget source="session.CurrentService" render="Label" 	position="450,570" 	size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1" >
 			<convert type="ServiceName">Name</convert>
@@ -1573,7 +1573,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 
 		<eLabel 					position="477,172" size="700,381" zPosition="2" backgroundColor="grey" />
 		<eLabel 					position="479,174" size="696,377" zPosition="3"  backgroundColor="#ff000000" />
-		<widget name="Video" 		position="270,150" zPosition="-10" size="390,300" />
+		<widget name="Video" 		position="479,174" zPosition="-10" size="696,377" />
 
 		<widget source="session.CurrentService" render="Label" 	position="450,570" 	size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="black" transparent="1" >
 			<convert type="ServiceName">Name</convert>
