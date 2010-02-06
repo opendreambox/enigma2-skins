@@ -6,4 +6,4 @@ SUBDIRS = \
 	Nemesis.ChromeLine Nemesis.ChromeLine.Cobolt Nemesis.GlassLine \
 	Nemesis.ShadowLine dreamTV-HD dTV-HD BrushedAlu-HD SWAIN-HD \
 	SWAIN simple very-simple very-very-simple BASIC-HD UltraViolet \
-	DreamMM-HD YADS-HD
+	DreamMM-HD YADS-HD Elgato-HD

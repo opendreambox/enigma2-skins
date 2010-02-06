@@ -37,6 +37,14 @@ AC_OUTPUT([
 ./skins/dTV-HD/icons/Makefile
 ./skins/dTV-HD/buttons/Makefile
 ./skins/dTV-HD/meta/Makefile
+./skins/Elgato-HD/Makefile
+./skins/Elgato-HD/buttons/Makefile
+./skins/Elgato-HD/extensions/Makefile
+./skins/Elgato-HD/icons/Makefile
+./skins/Elgato-HD/micon/Makefile
+./skins/Elgato-HD/selpic/Makefile
+./skins/Elgato-HD/skin_default/Makefile
+./skins/Elgato-HD/skin_default/icons/Makefile
 ./skins/Nemesis.BlackBox/Makefile
 ./skins/Nemesis.BlackBox/menu/Makefile
 ./skins/Nemesis.BlackBox/meta/Makefile
