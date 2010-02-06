@@ -92,4 +92,11 @@ AC_OUTPUT([
 ./skins/very-simple/meta/Makefile
 ./skins/very-very-simple/Makefile
 ./skins/very-very-simple/meta/Makefile
+./skins/YADS-HD/Makefile
+./skins/YADS-HD/buttons/Makefile
+./skins/YADS-HD/extensions/Makefile
+./skins/YADS-HD/icons/Makefile
+./skins/YADS-HD/selpic/Makefile
+./skins/YADS-HD/skin_default/Makefile
+./skins/YADS-HD/skin_default/icons/Makefile
 ])
