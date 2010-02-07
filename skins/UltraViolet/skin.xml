@@ -582,7 +582,7 @@
 		<eLabel position="446,163" size="748,473" zPosition="1" backgroundColor="background"/>
 		<eLabel position="450,167" size="744,469" zPosition="2" backgroundColor="background2"/>
 		<eLabel position="450,167" size="740,465" zPosition="2" backgroundColor="background1"/>
-		<widget name="menu" position="455,172" size="730,455" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel25-740.png"/>
+		<widget name="menu" position="455,172" size="730,434" zPosition="3" scrollbarMode="showOnDemand" itemHeight="31" selectionPixmap="UltraViolet/selpic/sel31-740.png" transparent="1"/>
 	</screen>
 	<screen name="CAidSelect" position="0,0" size="1280,720" title="select CAId's" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>
@@ -643,7 +643,7 @@
 		<eLabel position="446,163" size="748,473" zPosition="1" backgroundColor="background"/>
 		<eLabel position="450,167" size="744,469" zPosition="2" backgroundColor="background2"/>
 		<eLabel position="450,167" size="740,465" zPosition="2" backgroundColor="background1"/>
-		<widget name="menu" position="455,172" size="730,455" zPosition="3" scrollbarMode="showOnDemand"/>
+		<widget name="menu" position="455,172" size="730,434" zPosition="3" scrollbarMode="showOnDemand" itemHeight="31" selectionPixmap="UltraViolet/selpic/sel31-740.png" transparent="1"/>
 	</screen>
 	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg2.png"/>
@@ -2545,7 +2545,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Serviceinfo" position="180,50" size="550,36" zPosition="3" font="Regular;32" backgroundColor="background2" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<eLabel position="122,210" size="496,301" zPosition="2" backgroundColor="white"/>
 		<widget source="session.VideoPicture" render="Pig" position="125,213" size="490,295" zPosition="3" backgroundColor="#ff000000"/>
-		<widget name="infolist" position="640,170" size="580,375" scrollbarMode="showOnDemand" selectionDisabled="1"/>
+		<widget name="infolist" position="640,170" size="580,385" scrollbarMode="showOnDemand"  itemHeight="35" selectionDisabled="1"/>
 		<ePixmap pixmap="UltraViolet/buttons/red.png" position="210,662" size="35,35" alphatest="blend"/>
 		<ePixmap pixmap="UltraViolet/buttons/green.png" position="460,662" size="35,35" alphatest="blend"/>
 		<ePixmap pixmap="UltraViolet/buttons/yellow.png" position="710,662" size="35,35" alphatest="blend"/>
@@ -2900,6 +2900,28 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="655,174" size="530,1" zPosition="7"/>
 		<widget name="timerlist" position="655,174" size="530,420" zPosition="6" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel75-730.png" backgroundPixmap="UltraViolet/selpic/sep.png" transparent="1"/>
 	</screen>
+
+	<!-- Timeshift state -->
+	<screen name="TimeshiftState" position="center,70" zPosition="2" size="860,60" backgroundColor="transpBlack" flags="wfNoBorder">
+		<widget name="state" 										position=" 10, 3" size="150,27" font="Regular;22" halign="center" 	backgroundColor="transpBlack" />
+		<widget source="session.CurrentService" render="Label" 		position="160, 5" size="150,27" font="Regular;22" halign="left" 	foregroundColor="white" backgroundColor="transpBlack">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" 		position="650, 5" size=" 80,27" font="Regular;22" halign="right" 	foregroundColor="white" backgroundColor="transpBlack">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel 									text="/" 		position="740, 5" size=" 10,27" font="Regular;22" halign="center" 	foregroundColor="white" backgroundColor="transpBlack"/>
+		<widget source="session.CurrentService" render="Label" 		position="760, 5" size=" 80,27" font="Regular;22" halign="left" 	foregroundColor="white" backgroundColor="transpBlack">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+
+		<ePixmap 													position=" 10,33" size="840,15" zPosition="1" pixmap="UltraViolet/slider_back.png" 	alphatest="on"/>
+        <widget source="session.CurrentService" render="Progress" 	position=" 10,33" size="840,15" zPosition="2" pixmap="UltraViolet/slider.png" 		transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+	</screen>
+
 	<screen name="TitleCutter" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="UltraViolet/menu/menubg2.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1060,35" size=" 80,26" font="Regular;26" halign="right" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
