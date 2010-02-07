@@ -1703,7 +1703,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_blue" position="1000,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
 	</screen>
-	<screen name="Mute" position="80,50" size="  50, 50" title="Mute" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
+	<screen name="Mute" position="50,50" size="  50, 50" title="Mute" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
 		<ePixmap position="0,0" size="50,50" pixmap="UltraViolet/mute.png"/>
 	</screen>
 	<screen name="myChannelSelection" position="0,0" size="1280,720" title="Select service to add..." flags="wfNoBorder">
@@ -2936,6 +2936,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="500,610" size="700,24" zPosition="4" backgroundColor="background2"/>
 		<widget name="Timeline" position="500,610" size="696,20" zPosition="5" backgroundColor="lblue" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black"/>
 	</screen>
+	<screen name="UnhandledKey" position="70,70" size="60,60" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="UnhandledKeyPixmap" position="0,0" size="60,60" pixmap="UltraViolet/skin_default/nk.png"/>
+	</screen>
 	<screen name="UpdatePlugin" position="0,0" size="1280,720" title="Software Update..." flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1060,35" size=" 80,26" font="Regular;26" halign="right" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
@@ -3090,9 +3093,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="640,282" size="560,245" zPosition="5" backgroundColor="background1"/>
 		<widget name="list" position="650,292" size="540,225" zPosition="6" selectionDisabled="1" transparent="1"/>
 	</screen>
-	<screen name="Volume" position="370,50" size=" 540, 25" title="Volume" backgroundColor="transparent" flags="wfNoBorder" zPosition="1">
-		<ePixmap position="0,0" size="540,25" zPosition="1" pixmap="UltraViolet/volbg.png"/>
-		<widget name="Volume" position="0,0" size="535,25" zPosition="2" pixmap="UltraViolet/vol.png" transparent="1"/>
+	<screen name="Volume" position="50,165" size="16,360" title="Volume" backgroundColor="transparent" flags="wfNoBorder" zPosition="1">
+		<ePixmap position="0,0" size="16,360" zPosition="1" pixmap="UltraViolet/volbg.png"/>
+		<widget name="Volume" position="0,0" size="16,360" zPosition="2" pixmap="UltraViolet/vol.png" orientation="orBottomToTop" transparent="1"/>
 	</screen>
 	<screen name="WebIfConfigScreen" position="0,0" size="1280,720" title="Main Setup" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>
