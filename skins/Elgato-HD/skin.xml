@@ -279,13 +279,13 @@
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" 		position="215,90" size="120,28" font="Regular;23" halign="left" 	backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
-			<convert type="ServicePosition">Position,ShowHours</convert>
+			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" 		position="335,90" size="435,30" font="Regular;23" halign="center" 	backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
-			<convert type="ServicePosition">Length,ShowHours</convert>
+			<convert type="ServicePosition">Length</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" 		position="770,90" size="120,28" font="Regular;23" halign="right"  	backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
-			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+			<convert type="ServicePosition">Remaining,Negate</convert>
 		</widget>
 		<eLabel position="930,10" size="2,110" backgroundColor="white"/>
 		<widget source="global.CurrentTime" render="Label" 		position=" 960,10" size="120,24" font="Regular;24" backgroundColor="background1" shadowColor="black" shadowOffset="-2,-2" transparent="1" >
