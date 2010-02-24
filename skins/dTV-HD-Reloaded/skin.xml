@@ -2098,7 +2098,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position=" 21,469" size="700,  2" backgroundColor="grey" zPosition="5" />
 		<eLabel position=" 21,499" size="700,  2" backgroundColor="grey" zPosition="5" />
 
-		<widget name="list" position="26,106" size="690,360" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparebt="1"/>
+		<widget name="list" position="26,106" size="690,360" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1"/>
 
 		<widget source="introduction" render="Label" position="21,469" size="700,30" font="Regular;22" halign="center" valign="center" backgroundColor="black" transparent="1" />
 
