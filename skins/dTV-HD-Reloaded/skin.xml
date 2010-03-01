@@ -838,8 +838,8 @@
 		<widget source="Event" render="Label" position="810,20" size="280,464" font="Regular;20" foregroundColor="white" backgroundColor="black" transparent="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<ePixmap pixmap="skin_default/icons/clock.png" position="1010,495" zPosition="1" size="14,14" alphatest="on" />
-		<widget source="global.CurrentTime" render="Label" position="1030,490" zPosition="1" size="70,20" font="Regular;22" halign="center">
+		<ePixmap pixmap="skin_default/icons/clock.png" position="1005,495" zPosition="1" size="14,14" alphatest="on" />
+		<widget source="global.CurrentTime" render="Label" position="1025,490" zPosition="1" size="70,20" font="Regular;22" halign="center">
 			<convert type="ClockToText"></convert>
 		</widget>
 		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position=" 20,532" zPosition="1" size="250,38" />
@@ -1056,7 +1056,7 @@
 		<widget name="key_yellow" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="key_blue" position="830,531" zPosition="2" size="250,38" font="Regular;23" halign="center" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="MovieContextMenu" 				position="center,150" size="600,340" title="Channellist menu">
+	<screen name="MovieContextMenu" 				position="center,150" size="600,340" title="Movielist menu">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" />
 		<widget name="menu" position="10,20" size="580,300" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_30.png"/>
 	</screen>
@@ -2177,10 +2177,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="131,11" size="480,66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<widget source="Title" render="Label" position="71,66" size="600,32" font="Regular;25" halign="center"/>
 
-		<widget name="activityslider" 			position="60,130" size="580,15" borderWidth="1" transparent="1" />
-		<widget source="package" render="Label" position="70,160" size="560,25" font="Regular;20" backgroundColor="black" transparent="1" />
-		<widget source="status" render="Label" 	position="70,200" size="560,50" font="Regular;20" backgroundColor="black" transparent="1" />
-		<widget name="slider" 					position="60,290" size="580,20" borderWidth="1" transparent="1" />
+		<widget name="activityslider" 			position="80,130" size="580,15" borderWidth="1" transparent="1" />
+		<widget source="package" render="Label" position="90,160" size="560,25" font="Regular;20" backgroundColor="black" transparent="1" />
+		<widget source="status" render="Label" 	position="90,200" size="560,50" font="Regular;20" backgroundColor="black" transparent="1" />
+		<widget name="slider" 					position="80,290" size="580,20" borderWidth="1" transparent="1" />
 	</screen>
 	<screen name="Ipkg" 							position="center,74" size="742,572" title="Installing Software..." backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
@@ -2191,10 +2191,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="131,11" size="480,66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<widget source="Title" render="Label" position="71,66" size="600,32" font="Regular;25" halign="center"/>
 
-		<widget name="activityslider" 	position="60,130" size="580,15" borderWidth="1" transparent="1" />
-		<widget name="package" 			position="70,160" size="560,25" font="Regular;20" backgroundColor="black" />
-		<widget name="status" 			position="70,200" size="560,50" font="Regular;20" backgroundColor="black" />
-		<widget name="slider" 			position="60,290" size="580,20" borderWidth="1" transparent="1" />
+		<widget name="activityslider" 	position="80,130" size="580,15" borderWidth="1" transparent="1" />
+		<widget name="package" 			position="90,160" size="560,25" font="Regular;20" backgroundColor="black" />
+		<widget name="status" 			position="90,200" size="560,50" font="Regular;20" backgroundColor="black" />
+		<widget name="slider" 			position="80,290" size="580,20" borderWidth="1" transparent="1" />
 	</screen>
 	<screen name="BackupScreen" 					position="center,74" size="742,572" title="Backup running..." backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
