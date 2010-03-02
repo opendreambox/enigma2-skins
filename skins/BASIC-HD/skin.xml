@@ -305,20 +305,20 @@
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 
-		<widget source="session.Event_Now" render="Progress" position="20,82" size="140,10" pixmap="BASIC-HD/progress.png" borderWidth="2" borderColor="#cccccc">
+		<widget source="session.Event_Now" render="Progress" position="20,82" size="140,15" pixmap="BASIC-HD/progress.png" borderWidth="2" borderColor="#cccccc">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 
-		<eLabel text="SNR:" position="20,98" size="50,20" font="Regular;18" backgroundColor="content" foregroundColor="snragc" shadowColor="black" shadowOffset="-2,-2" />
-		<widget source="session.FrontendStatus" render="Label" position="70,98" size="90,20" font="Regular;18" halign="right" backgroundColor="content" foregroundColor="snragc" shadowColor="black" shadowOffset="-2,-2">
-			<convert type="FrontendInfo">SNRdB</convert>
-		</widget>
-
-		<widget source="session.FrontendStatus" render="Progress" position="20,120" size="140,16" pixmap="BASIC-HD/signalbar_140.png" borderWidth="2" borderColor="#cccccc">
+		<widget source="session.FrontendStatus" render="Progress" position="20,101" size="140,15" pixmap="BASIC-HD/signalbar_140.png" borderWidth="2" borderColor="#cccccc">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 
-		<widget source="session.CurrentService" render="Label" position="180,18" size="865,35" zPosition="1" font="Regular;30" halign="left" backgroundColor="content" foregroundColor="extra" shadowColor="black" shadowOffset="-2,-2">
+		<eLabel text="SNR:" position="20,120" size="50,20" font="Regular;18" backgroundColor="content" foregroundColor="snragc" shadowColor="black" shadowOffset="-2,-2" />
+		<widget source="session.FrontendStatus" render="Label" position="70,120" size="90,20" font="Regular;18" halign="right" backgroundColor="content" foregroundColor="snragc" shadowColor="black" shadowOffset="-2,-2">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+
+		<widget source="session.CurrentService" render="Label" position="180,18" size="865,32" zPosition="1" font="Regular;30" backgroundColor="content" foregroundColor="extra" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 
@@ -332,15 +332,15 @@
 
 		<eLabel text="x" position="248,52" size="13,28" font="Regular;23" halign="center" backgroundColor="content" foregroundColor="extra" shadowColor="black" shadowOffset="-2,-2" />
 
-		<widget source="session.CurrentService" render="Label" position="264,52" size="64,28" font="Regular;24" halign="left" backgroundColor="content" foregroundColor="extra" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.CurrentService" render="Label" position="264,52" size="64,28" font="Regular;24" backgroundColor="content" foregroundColor="extra" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="ServiceInfo">VideoHeight</convert>
 		</widget>
 
-		<widget source="session.CurrentService" render="Label" position="355,52" size="515,28" font="Regular;24" halign="left" backgroundColor="content" foregroundColor="extra" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.CurrentService" render="Label" position="355,52" size="535,28" font="Regular;24" backgroundColor="content" foregroundColor="extra" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="ServiceName">Provider</convert>
 		</widget>
 
-		<widget source="global.CurrentTime" render="Label" position="880,52" size="300,28" font="Regular;24" halign="right" backgroundColor="content" foregroundColor="extra" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="global.CurrentTime" render="Label" position="900,52" size="280,28" font="Regular;24" halign="right" backgroundColor="content" foregroundColor="extra" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
 		</widget>
 
@@ -351,7 +351,7 @@
 
 		<eLabel text="-" position="247,82" size="14,28" font="Regular;24" halign="center" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2" />
 
-		<widget source="session.Event_Now" render="Label" position="264,82" size="64,28" font="Regular;24" halign="left" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Now" render="Label" position="264,82" size="64,28" font="Regular;24" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -363,16 +363,16 @@
 
 		<eLabel text="-" position="247,112" size="14,28" font="Regular;24" halign="center" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2" />
 
-		<widget source="session.Event_Next" render="Label" position="264,112" size="64,28" font="Regular;24" halign="left" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Next" render="Label" position="264,112" size="64,28" font="Regular;24" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 
-		<widget source="session.Event_Now" render="Label" position="355,82" size="695,28" font="Regular;24" halign="left" foregroundColor="white" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Now" render="Label" position="355,82" size="695,28" font="Regular;24" foregroundColor="white" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventName">Name</convert>
 		</widget>
 
-		<widget source="session.Event_Next" render="Label" position="355,112" size="695,28" font="Regular;24" halign="left" foregroundColor="white" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2">
+		<widget source="session.Event_Next" render="Label" position="355,112" size="695,28" font="Regular;24" foregroundColor="white" backgroundColor="content" shadowColor="black" shadowOffset="-2,-2">
 			<convert type="EventName">Name</convert>
 		</widget>
 
@@ -637,7 +637,7 @@
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"></convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="83,434" size="77,25" halign="left" zPosition="1" font="Regular;22">
+		<widget source="ServiceEvent" render="Label" position="83,434" size="77,25" zPosition="1" font="Regular;22">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
@@ -1091,7 +1091,7 @@
 	<!-- Numberzap -->
 	<screen name="NumberZap" position="515,300" size="250,60" title="Channel">
 		<widget name="channel" position="35,15" size="110,30" font="Regular;24" />
-		<widget name="number" position="145,15" size="80,30" halign="left" font="Regular;24" />
+		<widget name="number" position="145,15" size="80,30" font="Regular;24" />
 	</screen>
 
 	<!-- Numerical help dialog -->
@@ -1233,10 +1233,20 @@
 	</screen>
 
 	<!-- Timeshift state -->
-	<screen name="TimeshiftState" position="565,300" zPosition="2" size="150,60" backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget name="state" position="0,0" size="150,30" font="Regular;25" halign="center" backgroundColor="transpBlack" />
-		<widget source="session.CurrentService" render="Label" position="0,30" size="150,30" font="Regular;25" halign="center" foregroundColor="white" backgroundColor="transpBlack">
+	<screen name="TimeshiftState" position="center,70" zPosition="2" size="860,60" backgroundColor="transpBlack" flags="wfNoBorder">
+		<widget name="state" position="10,3" size="150,27" font="Regular;22" halign="center" backgroundColor="transpBlack" />
+		<widget source="session.CurrentService" render="Label" position="160,5" size="150,27" font="Regular;22" foregroundColor="white" backgroundColor="transpBlack">
 			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="650,5" size="80,27" font="Regular;22" halign="right" foregroundColor="white" backgroundColor="transpBlack">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel text="/" position="740,5" size="10,27" font="Regular;22" halign="center" foregroundColor="white" backgroundColor="transpBlack" />
+		<widget source="session.CurrentService" render="Label" position="760,5" size="80,27" font="Regular;22" foregroundColor="white" backgroundColor="transpBlack">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Progress" position="10,33" size="800,15" zPosition="2" pixmap="BASIC-HD/progress.png" transparent="1">
+			<convert type="ServicePosition">Position</convert>
 		</widget>
 	</screen>
 
@@ -1653,7 +1663,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="author" render="Label" position="30,50" size="500,25" zPosition="10" font="Regular;22" transparent="1" />
 		<widget name="statuspic" position="720,40" size="48,48" alphatest="on" />
 		<widget name="divpic" position="30,88" size="740,2" alphatest="on" />
-		<widget name="detailtext" position="30,110" size="420,380" zPosition="10" font="Regular;21" transparent="1" halign="left" valign="top" />
+		<widget name="detailtext" position="30,110" size="420,380" zPosition="10" font="Regular;21" transparent="1" valign="top" />
 		<widget name="screenshot" position="470,110" size="300,380" alphatest="on" />
 	</screen>
 	<screen name="UpdatePlugin" position="240,130" size="800,200" title="Software update">
@@ -2058,9 +2068,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="bitrate" render="Label" position="320,220" size="180,25" valign="center" font="Regular;20" transparent="1" foregroundColor="#FFFFFF" />
 		<widget source="enc" render="Label" position="320,260" size="180,25" valign="center" font="Regular;20" transparent="1" foregroundColor="#FFFFFF" />
 		<ePixmap pixmap="skin_default/div-h.png" position="0,350" zPosition="1" size="560,2" />		
-		<widget source="IFtext" render="Label" position="10,355" size="120,21" zPosition="10" font="Regular;20" halign="left" backgroundColor="#25062748" transparent="1" />
-		<widget source="IF" render="Label" position="120,355" size="400,21" zPosition="10" font="Regular;20" halign="left" backgroundColor="#25062748" transparent="1" />
-		<widget source="Statustext" render="Label" position="10,375" size="115,21" zPosition="10" font="Regular;20" halign="left" backgroundColor="#25062748" transparent="1" />
+		<widget source="IFtext" render="Label" position="10,355" size="120,21" zPosition="10" font="Regular;20" backgroundColor="#25062748" transparent="1" />
+		<widget source="IF" render="Label" position="120,355" size="400,21" zPosition="10" font="Regular;20" backgroundColor="#25062748" transparent="1" />
+		<widget source="Statustext" render="Label" position="10,375" size="115,21" zPosition="10" font="Regular;20" backgroundColor="#25062748" transparent="1" />
 		<widget name="statuspic" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" position="130,380" zPosition="10" size="15,16" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="WlanScan" position="center,center" size="560,400" title="Choose a Wireless Network">
@@ -2392,7 +2402,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"></convert>
 		</widget>
-		<widget source="Event" render="Label" position="83,439" size="77,25" halign="left" zPosition="1" font="Regular;22">
+		<widget source="Event" render="Label" position="83,439" size="77,25" zPosition="1" font="Regular;22">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
@@ -2480,7 +2490,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<!--// Picture Player -->
 
-	<!-- MoviePlayer & DVDPlayer & MyTubePlayer BETA -->
+	<!-- MoviePlayer & DVDPlayer & MyTubePlayer -->
 	<screen name="MyTubePlayer" position="240,520" size="800,150" title="InfoBar" flags="wfNoBorder">
 		<eLabel position="0,0" zPosition="-1" size="800,150" backgroundColor="content" />
 		<ePixmap position="0,0" pixmap="BASIC-HD/dvdplayer/infobar.png" zPosition="-1" size="800,150" alphatest="on" />
@@ -2550,7 +2560,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
 		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" halign="left" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
 		<widget source="infolist" render="Listbox" position="140,115" size="520,100" zPosition="6" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -2570,14 +2580,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			}
 			</convert>
 		</widget>
-		<widget name="author" position="60,230" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
-		<widget name="duration" position="350,230" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="author" position="60,230" size="280,25" zPosition="10" font="Regular;22" transparent="1" valign="top" />
+		<widget name="duration" position="350,230" size="280,25" zPosition="10" font="Regular;22" transparent="1" valign="top" />
 		<widget name="starsbg" pixmap="~/starsbar_empty.png" position="640,230" zPosition="5" size="100,20" transparent="1" alphatest="on" />
 		<widget name="stars" pixmap="~/starsbar_filled.png" position="640,230" zPosition="6" size="100,20" transparent="1" />
-		<widget name="published" position="60,260" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
-		<widget name="views" position="350,260" size="280,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
-		<widget name="tags" position="60,290" size="680,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
-		<widget name="detailtext" position="10,340" size="780,150" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="published" position="60,260" size="280,25" zPosition="10" font="Regular;22" transparent="1" valign="top" />
+		<widget name="views" position="350,260" size="280,25" zPosition="10" font="Regular;22" transparent="1" valign="top" />
+		<widget name="tags" position="60,290" size="680,25" zPosition="10" font="Regular;22" transparent="1" valign="top" />
+		<widget name="detailtext" position="10,340" size="780,150" zPosition="10" font="Regular;22" transparent="1" valign="top" />
 		<!-- # fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 		<widget name="thumbnail" position="0,0" size="130,98" alphatest="on" />
 	</screen>
@@ -2587,9 +2597,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
 		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" halign="left" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
-		<widget name="detailtext" position="10,115" size="780,375" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="detailtext" position="10,115" size="780,375" zPosition="10" font="Regular;22" transparent="1" valign="top" />
 	</screen>
 	<screen name="MyTubeSettingsScreen" position="240,130" size="800,500" title="MyTube Settings">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
@@ -2598,7 +2608,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
 		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" halign="left" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
 		<widget name="config" position="10,115" size="780,375" scrollbarMode="showOnDemand" />
 	</screen>
@@ -2608,7 +2618,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
 		<widget name="key_red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" halign="left" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="title" position="10,50" size="670,40" zPosition="5" valign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<ePixmap position="690,50" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
 		<widget source="tasklist" render="Listbox" position="10,115" size="780,375" zPosition="7" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
@@ -2724,7 +2734,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget render="Label" source="weekday4" position="509,300" size="100,20" halign="center" font="Regular;18" transparent="1" />
 		<widget name="weekday4_icon" position="523,320" size="72,72" alphatest="blend" />
 		<widget render="Label" source="weekday4_temp" position="509,400" size="100,20" halign="center" font="Regular;18" transparent="1" />
-		<widget render="Label" source="statustext" position="10,460" size="780,30" font="Regular;22" valign="center" transparent="1" />
+		<widget render="Label" source="statustext" position="10,440" size="780,50" font="Regular;22" valign="center" transparent="1" />
 	</screen>
 	<screen name="WeatherPluginEntriesListConfigScreen" position="240,130" size="800,500" title="WeatherPlugin: List of Entries">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
@@ -2735,8 +2745,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="entrylist" position="10,40" size="780,350" scrollbarMode="showOnDemand" />
-		<widget render="Label" source="city" position="60,440" size="300,50" font="Regular;22" halign="left" />
-		<widget render="Label" source="language" position="400,440" size="390,50" font="Regular;22" halign="left" />
+		<widget render="Label" source="city" position="60,440" size="300,50" font="Regular;22" />
+		<widget render="Label" source="language" position="400,440" size="390,50" font="Regular;22" />
 	</screen>
 	<screen name="WeatherPluginEntryConfigScreen" position="240,130" size="800,500" title="WeatherPlugin: Edit Entry">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
