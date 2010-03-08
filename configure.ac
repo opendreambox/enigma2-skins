@@ -56,6 +56,16 @@ AC_OUTPUT([
 ./skins/Elgato-HD/selpic/Makefile
 ./skins/Elgato-HD/skin_default/Makefile
 ./skins/Elgato-HD/skin_default/icons/Makefile
+./skins/Kerni-HD1R2/Makefile
+./skins/Kerni-HD1R2/buttons/Makefile
+./skins/Kerni-HD1R2/extensions/Makefile
+./skins/Kerni-HD1R2/fonts/Makefile
+./skins/Kerni-HD1R2/icons/Makefile
+./skins/Kerni-HD1R2/menu/Makefile
+./skins/Kerni-HD1R2/meta/Makefile
+./skins/Kerni-HD1R2/mmp/Makefile
+./skins/Kerni-HD1R2/skin_default/Makefile
+./skins/Kerni-HD1R2/skin_default/icons/Makefile
 ./skins/Nemesis.BlackBox/Makefile
 ./skins/Nemesis.BlackBox/menu/Makefile
 ./skins/Nemesis.BlackBox/meta/Makefile
