@@ -95,9 +95,22 @@
 
 	<screen name="InfoBar" 						position="0,537" 	size="1280,163" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="1280,163" pixmap="Kerni-HD1R2/infobar.png"/>
+
+		<!-- with channelnr -->
+		<!-- eLabel 											   position=" 65, 7" size="  1,50" backgroundColor="grey"/>
+		<widget source="session.CurrentService" render="Label" position=" 66,12" size=" 74,36" font="Arial;32" halign="center" valign="top" noWrap="1" foregroundColor="yellow" backgroundColor="backtop" transparent="1">
+			<convert type="ExtendedServiceInfo">ServiceNumber</convert>
+		</widget>
+		<eLabel 											   position="140, 7" size="  1,50" backgroundColor="grey"/>
+		<widget source="session.CurrentService" render="Label" position="160,10" size="690,36" font="Regular;30" valign="top" noWrap="1" backgroundColor="backtop" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget -->
+
+		<!-- without channelnr -->
 		<widget source="session.CurrentService" render="Label" position="70,10" size="600,36" font="Regular;30" valign="top" noWrap="1" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
+
 		<ePixmap pixmap="Kerni-HD1R2/icons/ico_dolby_off.png" 													position=" 860,8" size="57,20" zPosition="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="Kerni-HD1R2/icons/ico_dolby_on.png"		position=" 860,8" size="57,20" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsMultichannel</convert>
@@ -252,12 +265,19 @@
 		</widget>
 	</screen>
 		
-	<screen name="Volume" 						position="70,200" 	size="70,315" 	title="Volume" 	zPosition="10"			flags="wfNoBorder">
-		<ePixmap 				position=" 0, 0" zPosition="2" size="70,315" pixmap="Kerni-HD1R2/vol_back.png"/>
-		<widget  name="Volume"  position="37,38" zPosition="3" size=" 22,266" pixmap="Kerni-HD1R2/vol.png" orientation="orBottomToTop" transparent="1"/>
+	<screen name="Volume" 						position="35,170" 	size="32,360" 	title="Volume" 	zPosition="10"			flags="wfNoBorder">
+		<ePixmap 				position="0, 0" zPosition="2" size="32,360" pixmap="Kerni-HD1R2/vol_back.png"/>
+		<widget  name="Volume"  position="9,45" zPosition="3" size="16,302" pixmap="Kerni-HD1R2/vol.png" orientation="orBottomToTop" transparent="1"/>
 	</screen>
-	<screen name="Mute" 						position="73,70" 	size="64,64" 	title="Mute" 	zPosition="11" 			flags="wfNoBorder">
+	<screen name="Mute" 						position="35,50" 	size="64,64" 	title="Mute" 	zPosition="11" 			flags="wfNoBorder">
 		<ePixmap position="0,0" size="64,64" pixmap="Kerni-HD1R2/mute.png" alphatest="on" />
+	</screen>
+
+	<screen name="Menu" 						position="center,center" size="450,390" title="Main menu">
+		<widget source="title" render="Label" position="10,10" size="430,35" font="Regular;23" />
+		<widget source="menu" render="Listbox" position="10,60" size="430,330" itemHeight="30" scrollbarMode="showOnDemand">
+			<convert type="StringList" />
+		</widget>
 	</screen>
 
 	<screen name="menu_mainmenu" 				position="0,0" 		size="1280,720" title="Main menu"	 					flags="wfNoBorder">
@@ -595,7 +615,7 @@
 		<widget source="ServiceEvent" render="Label" 	position="795,375" 	size="430,25"	font="Regular;22" 	foregroundColor="yellow" backgroundColor="background2" transparent="1" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" 	position="795,405" 	size="430,45" 	font="Regular;19" 	backgroundColor="background2" transparent="1" >
+		<widget source="ServiceEvent" render="Label" 	position="795,405" 	size="430,50" 	font="Regular;19" 	backgroundColor="background2" transparent="1" >
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" 	position="795,462" 	size="67,22" 	font="Regular;19" 	backgroundColor="background2" transparent="1" >
@@ -1036,9 +1056,35 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 
 		<widget name="epg_description" 	position="70,115" 	size="700,500" 	font="Regular;22" backgroundColor="background" transparent="1" />
 
-		<widget name="channel" 			position="795,440"	size="430,25" 	font="Regular;22" halign="center" backgroundColor="background" transparent="1" />
-		<widget name="datetime" 		position="795,490"	size="430,25" 	font="Regular;22" halign="center" backgroundColor="background" transparent="1" />
-		<widget name="duration" 		position="795,540"	size="430,25" 	font="Regular;22" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Kerni-HD1R2/icons/ico_dolby_on.png"		position=" 805,381" size="57,20" zPosition="2" alphatest="blend">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Kerni-HD1R2/icons/ico_format_on.png" 	position=" 875,380" size="36,20" zPosition="2" alphatest="blend">
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Kerni-HD1R2/icons/ico_txt_on.png" 		position=" 925,380" size="33,20" zPosition="2" alphatest="blend">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Kerni-HD1R2/icons/ico_hd_on.png" 		position=" 972,380" size="29,20" zPosition="2" alphatest="blend">
+			<convert type="ServiceInfo">VideoWidth</convert>
+			<convert type="ValueRange">721,1980</convert>
+			<convert type="ConditionalShowHide" />
+    	</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="Kerni-HD1R2/icons/ico_crypt_on.png"		position="1015,380" size="21,20" zPosition="2" alphatest="blend">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+
+		<widget source="session.Event_Now" render="Progress" position="1055,387" size="170, 6" backgroundColor="background" borderWidth="1" borderColor="grey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+
+		<widget name="channel" 			position="795,450"	size="430,25" 	font="Regular;22" halign="center" backgroundColor="background" transparent="1" />
+		<widget name="datetime" 		position="795,500"	size="430,25" 	font="Regular;22" halign="center" backgroundColor="background" transparent="1" />
+		<widget name="duration" 		position="795,550"	size="430,25" 	font="Regular;22" halign="center" backgroundColor="background" transparent="1" />
 
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position=" 70,635" 	size="24,24" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" 	position="360,635" 	size="24,24" alphatest="on" />
@@ -1591,6 +1637,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Reception Settings" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 		<widget name="config" position="70,115" size="700,510" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
+	<screen name="NumberZap" 					position="center,center" size="250,60" title="QuickZap">
+		<widget name="channel" position="25,14" size="100,28" font="Regular;24" />
+		<widget name="number" position="125,14" size="100,28" halign="right" font="Regular;24" />
+	</screen>
 	<screen name="NumericalTextInputHelpDialog" position="120,490" 	size="604,125" 		backgroundColor="grey" flags="wfNoBorder" zPosition="8">
 		<widget name="key1" 	position="  1, 1" size="200,30" font="Console;21" halign="center" valign="center" />
 		<widget name="key2" 	position="202, 1" size="200,30" font="Console;21" halign="center" valign="center" />
@@ -2040,13 +2090,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="current_status" 	position="100,180" size="750,30" 	font="Regular;22" backgroundColor="background" transparent="1"/>
 
 		<widget name="red" 				position="100,251" 	size="24,24" pixmap="Kerni-HD1R2/buttons/red.png"		alphatest="on" />
-		<widget name="green" 			position="100,291" 	size="24,24" pixmap="Kerni-HD1R2/buttons/green.png" 		alphatest="on" />
-		<widget name="yellow" 			position="100,331" 	size="24,24" pixmap="Kerni-HD1R2/buttons/yellow.png" 	alphatest="on" />
-		<widget name="blue" 			position="100,371" 	size="24,24" pixmap="Kerni-HD1R2/buttons/blue.png" 	alphatest="on" />
-		<widget name="red_text" 		position="140,250" 	size="600,22" font="Regular;22" halign="left" backgroundColor="background" transparent="1" />
-		<widget name="green_text" 		position="140,290" 	size="600,22" font="Regular;22" halign="left" backgroundColor="background" transparent="1" />
-		<widget name="yellow_text" 		position="140,330" 	size="600,22" font="Regular;22" halign="left" backgroundColor="background" transparent="1" />
-		<widget name="blue_text" 		position="140,370" 	size="600,22" font="Regular;22" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="green" 			position="100,301" 	size="24,24" pixmap="Kerni-HD1R2/buttons/green.png" 		alphatest="on" />
+		<widget name="yellow" 			position="100,351" 	size="24,24" pixmap="Kerni-HD1R2/buttons/yellow.png" 	alphatest="on" />
+		<widget name="blue" 			position="100,401" 	size="24,24" pixmap="Kerni-HD1R2/buttons/blue.png" 	alphatest="on" />
+		<widget name="red_text" 		position="140,250" 	size="600,27" font="Regular;22" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="green_text" 		position="140,300" 	size="600,27" font="Regular;22" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="yellow_text" 		position="140,350" 	size="600,27" font="Regular;22" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="blue_text" 		position="140,400" 	size="600,27" font="Regular;22" halign="left" backgroundColor="background" transparent="1" />
 	</screen>
 	<screen name="Standby" 						position="0,0" 		size="1280,720" 	title="Standby" 					flags="wfNoBorder" />
 	<screen name="SubservicesQuickzap" 			position="380,600" 	size="560,100"		title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
@@ -2202,7 +2252,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<eLabel text="Timer Editor" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 
-		<widget name="Timer selection" 	position="70,115" size="700,500" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="timerlist" 	position="70,115" size="700,500" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 	<screen name="TimeshiftState" 				position="center,70" zPosition="2" size="860,60" backgroundColor="transpBlack" flags="wfNoBorder">
 		<widget name="state" 										position=" 10, 3" size="150,27" font="Arial;22" halign="center" 	backgroundColor="transpBlack" />
