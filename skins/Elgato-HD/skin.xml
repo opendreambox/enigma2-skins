@@ -2142,14 +2142,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap 				position="25,16" size="15,20" pixmap="Elgato-HD/al.png" alphatest="on"/>
 		<ePixmap 				position="690,10" size="35,35" pixmap="Elgato-HD/micon/setup.png" alphatest="blend"/>
 		<eLabel 				position="20,55" size="710,1" zPosition="1" backgroundColor="white" />
-		<widget source="nimlist" render="Listbox" position="20,65" size="710,300" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel75.png" backgroundPixmap="Elgato-HD/selpic/sep750.png" transparent="1">
+		<widget source="nimlist" render="Listbox" position="20,65" size="710,400" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel100_710.png" backgroundPixmap="Elgato-HD/selpic/sep750.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (10, 10), size = (680, 30), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
-						MultiContentEntryText(pos = (50, 40), size = (640, 30), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+						MultiContentEntryText(pos = (50, 40), size = (640, 55), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
 					],
 				 "fonts": [gFont("Regular", 26), gFont("Regular", 22)],
-				 "itemHeight": 75 
+				 "itemHeight": 100 
 				}
 			</convert>
 		</widget>
