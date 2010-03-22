@@ -2341,7 +2341,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 	position=" 70,635" 	size="24,24" alphatest="on" />
 		<widget source="key_red" render="Label"			position="100,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="VideoEnhancementPreview" 		position="center,480" size="600,190" title="VideoEnhancementPreview">
+	<screen name="VideoEnhancementPreview" 		position="center,480" size="600,190" 	title="VideoEnhancementPreview">
 		<widget name="config" 							position="10, 10" size="580,90" itemHeight="30" scrollbarMode="showOnDemand" />
 		<eLabel 										position="10,110" size="580,2" backgroundColor="grey" />
 		<widget source="introduction" render="Label" 	position="10,123" size="580,26" font="Regular;22" halign="center" valign="center" transparent="1" />
@@ -4273,6 +4273,91 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" 	position="360,635" 	size="24,24" alphatest="on" />
 		<widget source="key_red" render="Label"				position="100,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_green" render="Label"			position="390,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<!-- WeatherPlugin -->
+	<screen name="WeatherPluginEntriesListConfigScreen" position="0,0" size="1280,720" 	title="WeatherPlugin: List of Entries" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
+		<eLabel 											position="800,120" size="430,244" zPosition="2" backgroundColor="white"/>
+		<widget source="session.VideoPicture" render="Pig" 	position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000"/>
+		<ePixmap position="870,560" zPosition="-9" size="350,44" pixmap="Kerni-HD1R2/menu/db.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="WeatherPlugin: List of Entries" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+
+		<widget source="city" 		render="Label" 	position=" 70,115" size="150,28" font="Regular;24" backgroundColor="background" transparent="1" />
+		<widget source="language" 	render="Label" 	position="225,115" size="500,28" font="Regular;24" backgroundColor="background" transparent="1" />
+		<eLabel 									position=" 70,155" size="700,2" backgroundColor="grey" />
+		<widget name="entrylist"					position=" 70,165" size="700,450" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
+
+		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position=" 70,635" 	size="24,24" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1R2/buttons/yellow.png"	position="650,635" 	size="24,24" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1R2/buttons/blue.png" 		position="940,635" 	size="24,24" alphatest="on" />
+		<widget source="key_red" render="Label"				position="100,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"			position="680,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label"			position="970,635"  size="360,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="WeatherPluginEntryConfigScreen" position="0,0" 	size="1280,720" 	title="WeatherPlugin: Edit Entry" 	flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
+		<eLabel 											position="800,120" size="430,244" zPosition="2" backgroundColor="white"/>
+		<widget source="session.VideoPicture" render="Pig" 	position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000"/>
+		<ePixmap position="870,560" zPosition="-9" size="350,44" pixmap="Kerni-HD1R2/menu/db.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="WeatherPlugin: Edit Entry" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+
+		<widget name="config" position=" 70,115" size="700,510" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
+
+		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position=" 70,635" 	size="24,24" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" 	position="360,635" 	size="24,24" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1R2/buttons/blue.png" 		position="940,635" 	size="24,24" alphatest="on" />
+		<widget source="key_red" render="Label"				position="100,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label"			position="390,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label"			position="970,635"  size="360,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="WeatherPlugin" 				position="0,0" 		size="1280,720" 	title="Weather Plugin"  			flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
+		<eLabel 											position="800,120" size="430,244" zPosition="2" backgroundColor="white"/>
+		<widget source="session.VideoPicture" render="Pig" 	position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000"/>
+		<ePixmap position="870,560" zPosition="-9" size="350,44" pixmap="Kerni-HD1R2/menu/db.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="Weather Plugin" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+
+		<widget source="caption" 		render="Label" 	position=" 70,150" 	size="370,27" font="Regular;24" backgroundColor="background" transparent="1"/>
+		<widget source="currentTemp" 	render="Label" 	position=" 70,190" 	size="370,27" font="Regular;24" backgroundColor="background" transparent="1"/>
+		<widget source="condition" 		render="Label" 	position=" 70,250" 	size="370,25" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget source="wind_condition" render="Label" 	position=" 70,280" 	size="370,25" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget source="humidity" 		render="Label" 	position=" 70,310" 	size="370,25" font="Regular;22" backgroundColor="background" transparent="1"/>
+
+		<widget source="weekday1" 		render="Label" 	position="460,155" 	size="150,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget source="weekday1_temp" 	render="Label" 	position="460,185" 	size="150,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget name="weekday1_icon" 					position="640,150" 	size=" 72,72" alphatest="blend"/>
+
+		<widget source="weekday2" 		render="Label" 	position="460,275" 	size="150,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget source="weekday2_temp" 	render="Label" 	position="460,305" 	size="150,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget name="weekday2_icon" 					position="640,270" 	size=" 72,72" alphatest="blend"/>
+
+		<widget source="weekday3" 		render="Label" 	position="460,395" 	size="150,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget source="weekday3_temp" 	render="Label" 	position="460,425" 	size="150,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget name="weekday3_icon" 					position="640,390" 	size=" 72,72" alphatest="blend"/>
+
+		<widget source="weekday4" 		render="Label" 	position="460,515" 	size="150,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget source="weekday4_temp" 	render="Label" 	position="460,545" 	size="150,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1"/>
+		<widget name="weekday4_icon" 					position="640,510" 	size=" 72,72" alphatest="blend"/>
+
+		<widget source="statustext" 	render="Label" 	position=" 70,150" 	size="700,200" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1"/>
 	</screen>
 
 	<!-- Wizards -->
