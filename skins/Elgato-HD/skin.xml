@@ -1,5 +1,7 @@
 <skin>
-	<!-- Elgato-HD skin by Kerni-->
+<!-- Elgato-HD Dreambox skin by Kerni-->
+<!-- This skin and all it's graphics are free. -->
+<!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications -->
 	<output id="0">
 		<resolution xres="1280" yres="720" bpp="32" />
 	</output>
@@ -74,7 +76,6 @@
 		<sub name="Subtitle_Regular" font="Regular;30" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="3,3" />
 		<sub name="Subtitle_Bold" font="Replacement;30" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="3,3" />
 		<sub name="Subtitle_Italic" font="Regular;30" foregroundColor="#DCAAAA" shadowColor="#40101010" shadowOffset="3,3" />
-		<!-- omitting foregroundColor attribute will enable auto-assignment of color -->
 	</subtitles>
 	<screen name="InfoBar" 							position="50,550" size="1180,130" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1180,130" zPosition="-1" pixmap="Elgato-HD/info_bg.png" />
@@ -1094,25 +1095,41 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="text" position="20,65" size="710,515" font="Console;20" transparent="1"/>
 	</screen>
 	<!-- DVD Burn Start -->
-	<screen name="FileBrowser" 						position="center,center" size="1100,600" title="DVD File Browser" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="TitleList" 						position="center,center" size="1100,600" title="DVD Tool" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1100,600" zPosition="-1" pixmap="Elgato-HD/menu_bg3.png"/>
 		<widget source="Title" render="Label" position=" 50,12" size="1050, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<ePixmap position="1040,10" size="35,35" pixmap="Elgato-HD/micon/dvd.png" alphatest="blend"/>
 		<eLabel position=" 20,55" size="1080,1" backgroundColor="white" />
-		<widget name="filelist" position="20,65" size="710,480" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Elgato-HD/selpic/sel30.png" transparent="1"/>
-		<eLabel 										position="20,555" size="1060,1" backgroundColor="white" />
-		<ePixmap pixmap="Elgato-HD/buttons/red.png" 	position=" 50,590" size="250,2" alphatest="on"/>
-		<ePixmap pixmap="Elgato-HD/buttons/green.png" 	position="300,590" size="250,2" alphatest="on"/>
-		<widget source="key_red" 	render="Label" position=" 50,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-		<widget source="key_green" 	render="Label" position="300,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-	</screen>
-	<screen name="ProjectSettings" 					position="center,center" size="1100,600" title="Collection settings" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap position="0,0" size="1100,600" zPosition="-1" pixmap="Elgato-HD/menu_bg3.png"/>
-		<widget source="Title" render="Label" position=" 50,12" size="1050, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
-		<ePixmap position="1040,10" size="35,35" pixmap="Elgato-HD/micon/dvd.png" alphatest="blend"/>
-		<eLabel position=" 20,55" size="1080,1" backgroundColor="white" />
-		<widget name="config" 	position="20,65" size="710,480" zPosition="1" itemHeight="32" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel32.png" transparent="1"/>
-		<widget source="info" render="Label" 	position="750,100" size="320,400" font="Regular;26" halign="center" valign="center" backgroundColor="background" transparent="1"/>
+
+	    <widget source="title_label" render="Label" 	position="20, 65" size="710,50" font="Regular;24" backgroundColor="background" transparent="1"/>
+	    <widget source="error_label" render="Label" 	position="20, 65" size="710,50" zPosition="3" font="Regular;24" backgroundColor="background" transparent="1"/>
+		<ePixmap 										position="20,120" size="710, 1" zPosition="3" pixmap="Elgato-HD/selpic/sep750.png"/>
+
+		<widget source="titles" render="Listbox" 		position="20,125" size="720,300" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel75.png" backgroundColor="background" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = ( 10,  7), size = (520, 27), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
+						MultiContentEntryText(pos = ( 10, 40), size = (430, 24), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 description,
+						MultiContentEntryText(pos = (540,  7), size = (170, 24), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 begin time,
+						MultiContentEntryText(pos = (450, 40), size = (160, 24), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 channel,
+						MultiContentEntryText(pos = (610, 40), size = (100, 24), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # index 5 duration,
+					],
+				"fonts": [gFont("Regular", 24), gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<eLabel 										position="750,65" size="1,425" backgroundColor="white" />
+
+		<widget name="medium_label"  					position="760,260" size="320,120" font="Regular;20" halign="center" foregroundColors="white,yellow,red" backgroundColor="background" transparent="1"/>
+		<ePixmap pixmap="Elgato-HD/buttons/menu.png" 	position="790,457" size=" 70, 30" alphatest="on"/>
+		<widget source="hint" render="Label" 			position="870,460" size="210, 24" font="Regular;20" halign="left" backgroundColor="background" transparent="1"/>
+
+	    <widget source="space_bar_single" render="Progress" position="20,500" size="530,30"  zPosition="2" borderWidth="1" backgroundColor="grey" />
+	    <widget source="space_label_single" render="Label"  position="30,504" size="510,26"  zPosition="3" font="Regular;22" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey"/>
+	    <widget source="space_bar_dual" render="Progress" 	position="20,500" size="1060,30" zPosition="1" borderWidth="1" backgroundColor="grey" />
+	    <widget source="space_label_dual" render="Label"  	position="30,504" size="1040,26" zPosition="2" font="Regular;22" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey"/>
+
 		<eLabel 										position="20,555" size="1060,1" backgroundColor="white" />
 		<ePixmap pixmap="Elgato-HD/buttons/red.png" 	position=" 50,590" size="250,2" alphatest="on"/>
 		<ePixmap pixmap="Elgato-HD/buttons/green.png" 	position="300,590" size="250,2" alphatest="on"/>
@@ -1202,32 +1219,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		</widget>
 		<widget name="Timeline" 								position="479,620"	size="696,20" zPosition="3" backgroundColor="#808888" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
 	</screen>
-	<screen name="TitleList" 						position="center,center" size="1100,600" title="DVD Tool" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="ProjectSettings" 					position="center,center" size="1100,600" title="Collection settings" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1100,600" zPosition="-1" pixmap="Elgato-HD/menu_bg3.png"/>
 		<widget source="Title" render="Label" position=" 50,12" size="1050, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<ePixmap position="1040,10" size="35,35" pixmap="Elgato-HD/micon/dvd.png" alphatest="blend"/>
 		<eLabel position=" 20,55" size="1080,1" backgroundColor="white" />
-	    <widget source="title_label" render="Label" 	position="20, 65" size="710,50" font="Regular;24" backgroundColor="background" transparent="1"/>
-	    <widget source="error_label" render="Label" 	position="20, 65" size="710,50" zPosition="3" font="Regular;24" backgroundColor="background" transparent="1"/>
-		<ePixmap 										position="20,120" size="710, 1" zPosition="3" pixmap="Elgato-HD/selpic/sep750.png"/>
-
-		<widget source="titles" render="Listbox" position="20,125" size="710,350" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel50.png" transparent="1" >
-			<convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (10, 2), size = (520, 23), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
-						MultiContentEntryText(pos = (10, 25), size = (428, 20), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 description,
-						MultiContentEntryText(pos = (540, 4), size = (120, 20), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 begin time,
-						MultiContentEntryText(pos = (448, 25), size = (154, 20), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 channel,
-						MultiContentEntryText(pos = (602, 25), size = (58, 20), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # index 4 channel,
-					],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
-				"itemHeight": 50
-				}
-			</convert>
-		</widget>
-
-	    <widget source="space_bar" render="Progress" 	position="20,500" size="1060,30" borderWidth="1" backgroundColor="grey" />
-	    <widget source="space_label" render="Label"  	position="30,504" size="1040,26" zPosition="2" font="Regular;22" halign="center" transparent="1" foregroundColor="#000000" />
+		<widget name="config" 	position="20,65" size="710,480" zPosition="1" itemHeight="32" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel32.png" transparent="1"/>
+		<widget source="info" render="Label" 	position="750,100" size="320,400" font="Regular;26" halign="center" valign="center" backgroundColor="background" transparent="1"/>
 		<eLabel 										position="20,555" size="1060,1" backgroundColor="white" />
 		<ePixmap pixmap="Elgato-HD/buttons/red.png" 	position=" 50,590" size="250,2" alphatest="on"/>
 		<ePixmap pixmap="Elgato-HD/buttons/green.png" 	position="300,590" size="250,2" alphatest="on"/>
@@ -1243,15 +1241,18 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget source="Title" render="Label" position=" 50,12" size="1050, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<ePixmap position="1040,10" size="35,35" pixmap="Elgato-HD/micon/dvd.png" alphatest="blend"/>
 		<eLabel position=" 20,55" size="1080,1" backgroundColor="white" />
-		<widget name="thumbnail" 					position=" 20,65" size="260,160" alphatest="on" />
-		<widget source="serviceinfo" render="Label" position="300,65" size="440,160" font="Regular;21" backgroundColor="background" transparent="1"/>
-		<widget name="config" 	position="20,235" size="710,310" zPosition="1" itemHeight="31" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel30.png" transparent="1" />
+		<widget name="thumbnail" 						position="55, 65" size="260,160" alphatest="on" />
+		<widget source="serviceinfo" render="Label" 	position="20,240" size="330,310" font="Regular;20" backgroundColor="background" transparent="1"/>
+		<eLabel 										position="360,65" size="1,480" backgroundColor="white" />
+		<widget name="config" 							position="370,65" size="710,480" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel30.png" transparent="1" />
 		<eLabel 										position="20,555" size="1060,1" backgroundColor="white" />
 		<ePixmap pixmap="Elgato-HD/buttons/red.png" 	position=" 50,590" size="250,2" alphatest="on"/>
 		<ePixmap pixmap="Elgato-HD/buttons/green.png" 	position="300,590" size="250,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/yellow.png" 	position="550,590" size="250,2" alphatest="on"/>
 		<ePixmap pixmap="Elgato-HD/buttons/blue.png" 	position="800,590" size="250,2" alphatest="on"/>
 		<widget source="key_red" 	render="Label" position=" 50,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
 		<widget source="key_green" 	render="Label" position="300,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_yellow" render="Label" position="550,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
 		<widget source="key_blue" 	render="Label" position="800,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
 	</screen>
 	<!-- DVD Burn End -->
@@ -1294,6 +1295,18 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget name="subtitleLabel" 							 	position="990,100" size="150,20" font="Regular;19" backgroundColor="background" transparent="1" />
+	</screen>
+	<screen name="FileBrowser" 						position="center,center" size="1100,600" title="DVD File Browser" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap position="0,0" size="1100,600" zPosition="-1" pixmap="Elgato-HD/menu_bg3.png"/>
+		<widget source="Title" render="Label" position=" 50,12" size="1050, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
+		<ePixmap position="1040,10" size="35,35" pixmap="Elgato-HD/micon/dvd.png" alphatest="blend"/>
+		<eLabel position=" 20,55" size="1080,1" backgroundColor="white" />
+		<widget name="filelist" position="20,65" size="710,480" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Elgato-HD/selpic/sel30.png" transparent="1"/>
+		<eLabel 										position="20,555" size="1060,1" backgroundColor="white" />
+		<ePixmap pixmap="Elgato-HD/buttons/red.png" 	position=" 50,590" size="250,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/green.png" 	position="300,590" size="250,2" alphatest="on"/>
+		<widget source="key_red" 	render="Label" position=" 50,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_green" 	render="Label" position="300,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
 	</screen>
 	<!-- DVD Player End -->
 	<screen name="EPGSelection" 					position="center,center" size="1100,600" zPosition="10" title="EPG Selection" backgroundColor="transparent" flags="wfNoBorder">
