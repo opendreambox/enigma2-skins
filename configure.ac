@@ -72,6 +72,7 @@ AC_OUTPUT([
 ./skins/Kerni-HD1R2/meta/Makefile
 ./skins/Kerni-HD1R2/mmp/Makefile
 ./skins/Kerni-HD1R2/skin_default/Makefile
+./skins/Kerni-HD1R2/skin_default/buttons/Makefile
 ./skins/Kerni-HD1R2/skin_default/icons/Makefile
 ./skins/Nemesis.BlackBox/Makefile
 ./skins/Nemesis.BlackBox/menu/Makefile
