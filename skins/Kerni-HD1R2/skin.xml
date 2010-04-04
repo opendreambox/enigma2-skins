@@ -609,8 +609,14 @@
 		<eLabel text="Channel Selection" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 
 		<widget source="Title" render="Label" 	position="70,115" size="700,28" font="Regular;23" backgroundColor="background" transparent="1"/>
-		<eLabel 								position="70,155" size="700,2" backgroundColor="grey" />
-		<widget name="list" 					position="70,165" size="700,450" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#777777" serviceItemHeight="30" serviceNumberFont="Arial;23" serviceNameFont="Regular;23" serviceInfoFont="RegularLight;21" transparent="1" />
+		<eLabel 			position="70,155" size="700,2" backgroundColor="grey" />
+		<widget name="list" position="70,165" size="700,450" scrollbarMode="showOnDemand" 
+			colorServiceDescription="yellow" 	colorServiceDescriptionSelected="yellow" 
+			colorEventProgressbar="yellow" 	colorEventProgressbarSelected="yellow" 
+			colorEventProgressbarBorder="grey" 	colorEventProgressbarBorderSelected="grey"
+			foregroundColorServiceNotAvail="#777777" serviceItemHeight="30"
+			serviceNumberFont="Arial;23" serviceNameFont="Regular;23" serviceInfoFont="RegularLight;21" transparent="1" 
+		/>
 
 		<widget source="ServiceEvent" render="Label" 	position="795,375" 	size="430,25"	font="Regular;22" 	foregroundColor="yellow" backgroundColor="background2" transparent="1" >
 			<convert type="ServiceName">Name</convert>
@@ -669,7 +675,6 @@
 		<widget name="key_blue" 							position="640,635"  size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="ChoiceBox"					position="150,100" 	size=" 550,400" 	title="Input">
-		<eLabel position="0,0" 		size="1100,2" backgroundColor="grey" />
 		<widget name="text" position="10,10" size="550,25" font="Regular;22" />
 		<widget name="list" position="0,30" size="550,320" itemHeight="32" scrollbarMode="showOnDemand" transparent="1"/>
 		<applet type="onLayoutFinish">
@@ -1130,15 +1135,15 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget source="Event" render="Label" 		position=" 70,120" size="700, 28" 	font="Regular;22" foregroundColor="yellow" backgroundColor="background2" transparent="1" >
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" 		position=" 70,160" size=" 60, 22" 	font="Regular;19" backgroundColor="background2" transparent="1" >
+		<widget source="Event" render="Label" 		position=" 70,160" size=" 65, 22" 	font="Regular;19" halign="right" backgroundColor="background2" transparent="1" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"></convert>
 		</widget>
-		<widget source="Event" render="Label" 		position="130,160" size=" 70, 22" 	font="Regular;19" backgroundColor="background2" transparent="1" >
+		<widget source="Event" render="Label" 		position="140,160" size=" 80, 22" 	font="Regular;19" backgroundColor="background2" transparent="1" >
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="Event" render="Progress" 	position="220,165" size="120, 12"	borderWidth="1" borderColor="grey" backgroundColor="background2" transparent="1" >
+		<widget source="Event" render="Progress" 	position="230,167" size="120, 12"	borderWidth="1" borderColor="grey" backgroundColor="background2" transparent="1" >
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="Event" render="Label" 		position=" 70,195" size="700,161"	font="Regular;19" foregroundColor="grey" backgroundColor="background2" transparent="1" >
@@ -1333,7 +1338,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="PositionGauge" position="0,0" size="0,0"/>
 	</screen>
 	<screen name="MessageBox" 					position="240,175" 	size="800,10" 		title="Message">
-		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<widget name="text" position="110,8" size="680,0" font="Regular;22" />
 		<widget name="ErrorPixmap" 		pixmap="skin_default/icons/input_error.png" 	position="30,30" size="53,53" alphatest="blend"/>
 		<widget name="QuestionPixmap" 	pixmap="skin_default/icons/input_question.png" 	position="30,30" size="53,53" alphatest="blend"/>
@@ -2598,7 +2602,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Collection settings" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+		<widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 
 		<widget name="config" 					position="70,140" size="700,300" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
 
@@ -2669,7 +2673,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="DVD media toolbox" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+		<widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 
 		<widget source="info" render="Label" 			position="70,130"	size="700,100" font="Regular;22" transparent="1"/>
 		<eLabel 										position="70,250" 	size="700,2" backgroundColor="grey"/>
@@ -2697,7 +2701,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="DVD Tool" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+		<widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+
+		<eLabel text="Menu:" 					position="800,395" size=" 60,24" font="Regular;20" halign="left" backgroundColor="backtop" transparent="1"/>
+		<widget source="hint" render="Label" 	position="880,395" size="350,24" font="Regular;20" halign="left" backgroundColor="backtop" transparent="1"/>
 
 		<widget source="title_label" render="Label" position="70,115" size="700,56" font="Regular;23" backgroundColor="background" transparent="1" />
 	    <widget name="error_label" 					position="70,115" size="700,400" zPosition="3" font="Regular;20" backgroundColor="background" />
@@ -2718,8 +2725,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			</convert>
 		</widget>
 
-	    <widget source="space_bar" render="Progress" 	position="70,590" size="700,26" borderWidth="1" backgroundColor="grey" />
-	    <widget source="space_label" render="Label" 	position="80,592" size="680,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
+
+		<widget name="medium_label"  						position="70,565" size="700,23" font="Regular;19" halign="left" foregroundColors="white,yellow,red" backgroundColor="background" transparent="1"/>
+
+	    <widget source="space_bar_single" render="Progress" position="70,595" size="350,26" zPosition="2" borderWidth="1" backgroundColor="grey" />
+	    <widget source="space_label_single" render="Label" 	position="75,597" size="340,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
+	    <widget source="space_bar_dual" render="Progress" 	position="70,595" size="700,26" zPosition="1" borderWidth="1" backgroundColor="grey" />
+	    <widget source="space_label_dual" render="Label" 	position="75,597" size="690,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
 
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position=" 70,635" 	size="24,24" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" 	position="360,635" 	size="24,24" alphatest="on" />
@@ -2738,7 +2750,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Cutlist editor" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+		<widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 
 		<eLabel 				position="70,130" zPosition="1" size="700,381" backgroundColor="white" />
 		<eLabel 				position="72,132" zPosition="3" size="696,377" backgroundColor="#ff000000" />
@@ -2778,7 +2790,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Properties of current title" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+		<widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 
 	    <widget name="thumbnail" 					position=" 70,120" size="260,160" alphatest="on" />
 
@@ -3880,34 +3892,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_red" render="Label"				position="100,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_green" render="Label"			position="390,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label"			position="680,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-	</screen>
-	<screen name="BackupScreen" 				position="0,0" 		size="1280,720" 	title="Backup running..." 			flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
-		<eLabel 											position="800,120" size="430,244" zPosition="2" backgroundColor="white"/>
-		<widget source="session.VideoPicture" render="Pig" 	position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000"/>
-		<ePixmap position="870,560" zPosition="-9" size="350,44" pixmap="Kerni-HD1R2/menu/db.png"/>
-		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<eLabel text="Backup running..." position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-		<widget name="config" position="70,130" size="700,480" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
-	</screen>
-	<screen name="RestoreScreen" 				position="0,0" 		size="1280,720" 	title="Restore running..." 			flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
-		<eLabel 											position="800,120" size="430,244" zPosition="2" backgroundColor="white"/>
-		<widget source="session.VideoPicture" render="Pig" 	position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000"/>
-		<ePixmap position="870,560" zPosition="-9" size="350,44" pixmap="Kerni-HD1R2/menu/db.png"/>
-		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<eLabel text="Restore running..." position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-		<widget name="config" position="70,130" size="700,480" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="Ipkg" 						position="0,0" 		size="1280,720" 	title="Installing Software..." 		flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
