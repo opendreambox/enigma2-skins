@@ -22,6 +22,13 @@ AC_OUTPUT([
 ./skins/BrushedAlu-HD/mmp3/Makefile
 ./skins/BrushedAlu-HD/frame/Makefile
 ./skins/BrushedAlu-HD/meta/Makefile
+./skins/dmm-HD/Makefile
+./skins/dmm-HD/buttons/Makefile
+./skins/dmm-HD/icons/Makefile
+./skins/dmm-HD/menu/Makefile
+./skins/dmm-HD/meta/Makefile
+./skins/dmm-HD/skin_default/Makefile
+./skins/dmm-HD/skin_default/icons/Makefile
 ./skins/DreamMM-HD/Makefile
 ./skins/DreamMM-HD/buttons/Makefile
 ./skins/DreamMM-HD/icons/Makefile
