@@ -1,5 +1,5 @@
 <skin>
-	<!-- BrushedAlu-HD CVS Skin by Kerni -->
+	<!-- BrushedAlu-HD Dreambox CVS Skin by Kerni -->
 	<!-- This skin and all it's graphics are free. -->
 	<!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications -->
 	<output id="0">
@@ -15,6 +15,7 @@
 		<color name="green" value="#389416" />
 		<color name="blue" value="#0064c7" />
 		<color name="yellow" value="#bab329" />
+		<color name="colorevent" value="#ffcb65" />
 		<color name="transparent" value="#ffffffff" />
 		<color name="transpBlack" value="#80000000" />
 		<color name="background" value="#444444" />
@@ -102,7 +103,7 @@
 		<widget source="session.CurrentService" render="Label" position="220,124" size="400,22" font="Regular;19" valign="top" noWrap="1" backgroundColor="darkgrey" transparent="1">
 			<convert type="ServiceName">Provider</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Picon" position="78,45" zPosition="1" size="100,60" alphatest="on">
+		<widget source="session.CurrentService" render="Picon" position="78,45" zPosition="1" size="100,60" alphatest="blend">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="210,37" size="70,24" font="Regular;23" halign="right" backgroundColor="black" transparent="1">
@@ -144,6 +145,9 @@
 		<widget source="session.Event_Next" render="Label" position="505,91" size="560,24" font="Regular;22" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="BrushedAlu-HD/ico_rec_on.png" position="940,6" size="20,20" zPosition="2" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
 		<ePixmap pixmap="BrushedAlu-HD/ico_dolby_off.png" position="970,6" size="57,20" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="BrushedAlu-HD/ico_dolby_on.png" position="970,6" size="57,20" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsMultichannel</convert>
@@ -159,14 +163,16 @@
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="BrushedAlu-HD/ico_crypt_off.png" position="1137,5" size="26,20" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="BrushedAlu-HD/ico_crypt_on.png" position="1137,5" size="26,20" zPosition="2" alphatest="blend">
+		<ePixmap pixmap="BrushedAlu-HD/ico_hd_off.png" position="1137,5" size="29,20" zPosition="1" alphatest="blend"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="BrushedAlu-HD/ico_hd_on.png" position="1137,5" size="29,20" zPosition="2" alphatest="blend">
+			<convert type="ServiceInfo">VideoWidth</convert>
+			<convert type="ValueRange">721,1980</convert>
+			<convert type="ConditionalShowHide" />
+    	</widget>
+		<ePixmap pixmap="BrushedAlu-HD/ico_crypt_off.png" position="1177,5" size="26,20" zPosition="1" alphatest="blend" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="BrushedAlu-HD/ico_crypt_on.png" position="1177,5" size="26,20" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
-		</widget>
-		<ePixmap pixmap="BrushedAlu-HD/ico_rec_off.png" position="1177,6" size="28,20" zPosition="1" alphatest="on" />
-		<widget source="session.RecordState" render="Pixmap" pixmap="BrushedAlu-HD/ico_rec_on.png" position="1177,6" size="28,20" zPosition="2" alphatest="on">
-			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<eLabel text="SNR" position="998,125" size="45,22" font="Regular;18" valign="center" backgroundColor="darkgrey" foregroundColor="#e5b243" transparent="1" />
 		<widget source="session.FrontendStatus" render="Label" position="1043,125" size="80,22" font="Regular;18" valign="center" backgroundColor="darkgrey" transparent="1">
@@ -1951,7 +1957,15 @@
 		<widget source="Title" render="Label" position="525,116" size="700,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 		<eLabel position="485,150" size="730,2" backgroundColor="black" zPosition="5" />
 		<eLabel position="485,152" size="730,2" backgroundColor="grey" zPosition="5" />
-		<widget name="list" position="490,168" size="720,435" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" foregroundColorServiceNotAvail="black" serviceItemHeight="29" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
+		<widget name="list" position="490,168" size="720,435" 
+			zPosition="3" scrollbarMode="showOnDemand" 
+			selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" 
+			foregroundColorServiceNotAvail="black" serviceItemHeight="29" 
+			serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;20" transparent="1" 
+			colorServiceDescription="colorevent" colorServiceDescriptionSelected="colorevent"
+			picServiceEventProgressbar="BrushedAlu-HD/progress.png"
+			colorEventProgressbarBorder="white" 	colorEventProgressbarBorderSelected="white"
+		/>
 		<eLabel position="476,110" size="1,500" backgroundColor="black" zPosition="5" />
 		<eLabel position="477,110" size="2,500" backgroundColor="grey" zPosition="5" />
 		<ePixmap position="70,110" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
@@ -1993,8 +2007,7 @@
 		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<ePixmap pixmap="BrushedAlu-HD/ico_rec_off.png" position="1160,170" size="28,20" zPosition="1" alphatest="blend" />
-		<widget source="session.RecordState" render="Pixmap" pixmap="BrushedAlu-HD/ico_rec_on.png" position="1160,170" size="28,20" zPosition="2" alphatest="blend">
+		<widget source="session.RecordState" render="Pixmap" pixmap="BrushedAlu-HD/ico_rec_on.png" position="1168,170" size="20,20" zPosition="2" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="220,132" size="580,28" font="Regular;24" valign="top" noWrap="1" backgroundColor="darkgrey" transparent="1">
@@ -2059,7 +2072,15 @@
 		<eLabel position="60,0" size="1160,2" backgroundColor="black" zPosition="5" />
 		<eLabel position="60,2" size="1160,2" backgroundColor="grey" zPosition="5" />
 		<widget source="Title" render="Label" position="430,16" size="770,32" zPosition="3" font="Regular;27" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="list" position="430,59" size="770,290" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" foregroundColorServiceNotAvail="#666666" serviceItemHeight="29" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
+		<widget name="list" position="430,59" size="770,290" 
+			zPosition="3" scrollbarMode="showOnDemand" 
+			selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" 
+			foregroundColorServiceNotAvail="black" serviceItemHeight="29" 
+			serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;20" transparent="1" 
+			colorServiceDescription="colorevent" colorServiceDescriptionSelected="colorevent"
+			picServiceEventProgressbar="BrushedAlu-HD/progress.png"
+			colorEventProgressbarBorder="white" 	colorEventProgressbarBorderSelected="white"
+		/>
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,170" size="30,30" alphatest="blend" />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="80,220" size="30,30" alphatest="blend" />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="80,270" size="30,30" alphatest="blend" />
@@ -2094,7 +2115,15 @@
 		<widget source="Title" render="Label" position="465,116" size="760,32" zPosition="3" font="Regular;27" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 		<eLabel position="425,150" size="780,2" backgroundColor="black" zPosition="5" />
 		<eLabel position="425,152" size="780,2" backgroundColor="grey" zPosition="5" />
-		<widget name="list" position="435,168" size="770,435" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" foregroundColorServiceNotAvail="black" serviceItemHeight="29" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
+		<widget name="list" position="435,168" size="770,435" 
+			zPosition="3" scrollbarMode="showOnDemand" 
+			selectionPixmap="BrushedAlu-HD/frame/sel770_29.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_29_bg.png" 
+			foregroundColorServiceNotAvail="black" serviceItemHeight="29" 
+			serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;20" transparent="1" 
+			colorServiceDescription="colorevent" colorServiceDescriptionSelected="colorevent"
+			picServiceEventProgressbar="BrushedAlu-HD/progress.png"
+			colorEventProgressbarBorder="white" 	colorEventProgressbarBorderSelected="white"
+		/>
 		<eLabel position="415,110" size="1,500" backgroundColor="black" zPosition="5" />
 		<eLabel position="416,110" size="2,500" backgroundColor="grey" zPosition="5" />
 		<ePixmap position="60,500" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend" />
@@ -2211,8 +2240,7 @@
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="BrushedAlu-HD/ico_rec_off.png" position="1177,6" size="28,20" zPosition="1" alphatest="on" />
-		<widget source="session.RecordState" render="Pixmap" pixmap="BrushedAlu-HD/ico_rec_on.png" position="1177,6" size="28,20" zPosition="2" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="BrushedAlu-HD/ico_rec_on.png" position="940,6" size="28,20" zPosition="2" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" font="Regular;18" position="1074,86" size="55,18" halign="right" foregroundColor="#e5b243" backgroundColor="black" transparent="1">
@@ -2970,8 +2998,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="titles" render="Listbox" position="550,180" size="660,375" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_30.png" transparent="1">
 			<convert type="StaticMultiList" />
 		</widget>
-		<widget source="space_bar" render="Progress" position="550,590" size="660,26" borderWidth="1" backgroundColor="grey" />
-		<widget source="space_label" render="Label" position="560,594" size="640,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
+
+		<widget name="medium_label"  position="550,570" size="660,24" font="Regular;20" halign="left" foregroundColors="white,green,red" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+
+		<widget source="space_bar_single" render="Progress" position="550,600" size="330,26" zPosition="2" borderWidth="1" backgroundColor="grey" />
+		<widget source="space_label_single" render="Label" position="560,603" size="310,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
+		<widget source="space_bar_dual" render="Progress" position="550,600" size="660,26" zPosition="1" borderWidth="1" backgroundColor="grey" />
+		<widget source="space_label_dual" render="Label" position="560,603" size="640,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
+
 		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,450" size="30,30" alphatest="blend" />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="80,500" size="30,30" alphatest="blend" />
 		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="80,550" size="30,30" alphatest="blend" />
@@ -2980,6 +3014,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="130,502" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<widget source="key_yellow" render="Label" position="130,552" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<widget source="key_blue" render="Label" position="130,602" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+
+		<ePixmap pixmap="skin_default/buttons/key_menu.png" position="80,652" size="35,25" alphatest="on" />
+		<widget source="hint" render="Label" position="130,652" size="300,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
 	<screen name="TitleProperties" position="0,0" size="1280,720" title="Properties of current title" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
@@ -3077,194 +3114,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" position="130,502" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget name="key_yellow" position="130,552" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget name="key_blue" position="130,602" size="220,30" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-	</screen>
-	<!-- MerlinMP3Player -->
-	<screen name="CurrentPlaylist" position="0,0" size="1280,720" title="" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<eLabel text="Current Playlist" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="listbox" position="550,130" size="660,480" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1" />
-		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend" />
-	</screen>
-	<screen name="iDream" position="0,0" size="1280,720" title="" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<eLabel text="iDream" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="Caption" position="550,120" size="660,28" font="Regular;24" valign="left" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<eLabel position="550,155" size="660,2" backgroundColor="black" zPosition="5" />
-		<eLabel position="550,157" size="660,2" backgroundColor="grey" zPosition="5" />
-		<widget name="listbox" position="550,180" size="660,400" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1" />
-		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend" />
-	</screen>
-	<screen name="iDreamAddItemDisplay" position="0,0" size="1280,720" title="" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<eLabel text="iDream Add Item" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="Display" position="550,130" size="660,480" font="Regular;24" backgroundColor="darkgrey" transparent="1" />
-		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend" />
-	</screen>
-	<screen name="iDreamDatabaseMaintenance" position="0,0" size="1280,720" title="" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<eLabel text="iDream Database Maintenance" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="listbox" position="550,130" size="660,480" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1" />
-		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend" />
-	</screen>
-	<screen name="LyricsView" position="0,0" size="1280,720" title="" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<eLabel text="Lyrics View" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="lyric_text" position="550,130" size="660,480" font="Regular;28" backgroundColor="darkgrey" transparent="1" />
-		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend" />
-	</screen>
-	<screen name="MerlinMP3Player" position="0,0" size="1280,720" title="MerlinMP3Player" flags="wfNoBorder">
-		<ePixmap position="0,0" size="1280,720" zPosition="-5" pixmap="BrushedAlu-HD/mmp3/1280_720.png" />
-		<widget source="global.CurrentTime" render="Label" position="1110,36" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="980,68" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<ePixmap position="117,163" size="278,278" pixmap="BrushedAlu-HD/mmp3/nocover.png" />
-		<widget name="Current" position="1095,490" size="100,22" font="Regular;18" halign="right" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="Remain" position="1095,550" size="100,22" font="Regular;18" halign="right" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<eLabel text="Title:" position="540,182" size="80,22" font="Regular;18" foregroundColor="grey" backgroundColor="darkgrey" transparent="1" />
-		<eLabel text="Album:" position="540,320" size="80,22" font="Regular;18" foregroundColor="grey" backgroundColor="darkgrey" transparent="1" />
-		<eLabel text="Artist:" position="540,254" size="80,22" font="Regular;18" foregroundColor="grey" backgroundColor="darkgrey" transparent="1" />
-		<eLabel text="Genre:" position="540,384" size="80,22" font="Regular;18" foregroundColor="grey" backgroundColor="darkgrey" transparent="1" />
-		<widget name="Title" position="630,182" size="500,36" font="Regular;32" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="Album" position="630,320" size="500,26" font="Regular;22" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="Artist" position="630,254" size="500,26" font="Regular;22" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="Genre" position="630,384" size="240,26" font="Regular;22" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="NextTitleCaption" position="86,650" size="85,20" font="Regular;16" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="NextTitle" position="190,650" size="610,26" font="Regular;22" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="Progressbar" position="177,522" size="928,20" transparent="1" pixmap="BrushedAlu-HD/mmp3/progressbar.png" />
-		<widget name="coverArt" position="117,163" size="278,278" zPosition="1" />
-		<widget name="shuffleArt" position="1023,635" size="80,50" pixmap="BrushedAlu-HD/mmp3/shuffle.png" />
-		<widget name="repeatArt" position="1119,635" size="80,50" pixmap="BrushedAlu-HD/mmp3/repeat.png" />
-		<widget name="playArt" position="86,508" size="50,50" pixmap="BrushedAlu-HD/mmp3/play.png" />
-		<widget name="pauseArt" position="86,508" size="50,50" pixmap="BrushedAlu-HD/mmp3/pause.png" />
-		<widget name="nextArt" position="86,508" size="80,50" pixmap="BrushedAlu-HD/mmp3/next.png" />
-		<widget name="previousArt" position="86,508" size="80,50" pixmap="BrushedAlu-HD/mmp3/previous.png" />
-		<widget name="rewindArt" position="86,508" size="80,50" pixmap="BrushedAlu-HD/mmp3/rewind.png" />
-		<widget name="forwardArt" position="86,508" size="80,50" pixmap="BrushedAlu-HD/mmp3/forward.png" />
-		<widget name="2xArt" position="615,552" size="50,25" pixmap="BrushedAlu-HD/mmp3/2x.png" />
-		<widget name="4xArt" position="615,552" size="50,25" pixmap="BrushedAlu-HD/mmp3/4x.png" />
-		<widget name="8xArt" position="615,552" size="50,25" pixmap="BrushedAlu-HD/mmp3/8x.png" />
-		<widget name="16xArt" position="615,552" size="50,25" pixmap="BrushedAlu-HD/mmp3/16x.png" />
-		<eLabel text="MerlinMP3Player" position="799,68" size="200,22" font="Regular;20" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-	</screen>
-	<screen name="MerlinMP3PlayerFileList" position="0,0" size="1280,720" title="MerlinMP3Player" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<eLabel text="Merlin MP3 Player FileList" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="filelist" position="550,130" size="660,483" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1" />
-		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,550" size="30,30" alphatest="blend" zPosition="2" />
-		<eLabel text="add files to database" position="130,552" size="280,52" zPosition="2" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-	</screen>
-	<screen name="MerlinMP3PlayerSetup" position="0,0" size="1280,720" title="" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<eLabel text="Merlin MP3 Player Setup" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="config" position="550,130" size="660,480" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1" />
-		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,550" size="30,30" alphatest="blend" zPosition="2" />
-		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="80,600" size="30,30" alphatest="blend" zPosition="2" />
-		<widget name="key_red" position="130,552" size="220,30" zPosition="2" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="key_green" position="130,602" size="220,30" zPosition="2" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-	</screen>
-	<screen name="MerlinMP3PlayerStart" position="0,0" size="1280,720" title="" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<eLabel text="Merlin MP3 Player Start" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<widget name="selection" position="550,130" size="660,480" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1" />
-		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend" />
-	</screen>
-	<screen name="MerlinMusicPlayer" position="0,0" size="1280,720" title="MerlinMP3Player" flags="wfNoBorder">
-		<ePixmap position="0,0" size="1280,720" zPosition="-5" pixmap="BrushedAlu-HD/mmp3/1280_720.png" />
-		<widget source="global.CurrentTime" render="Label" position="1110,36" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="980,68" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<ePixmap position="117,163" size="278,278" pixmap="BrushedAlu-HD/mmp3/nocover.png" />
-		<widget source="session.CurrentService" render="Label" position="1045,490" size="150,22" font="Regular;18" halign="right" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1">
-			<convert type="ServicePosition">Position,ShowHours</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="1045,550" size="150,22" font="Regular;18" halign="right" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1">
-			<convert type="ServicePosition">Remaining,ShowHours</convert>
-		</widget>
-		<eLabel text="Title:" position="540,182" size="80,22" font="Regular;18" foregroundColor="grey" backgroundColor="darkgrey" transparent="1" />
-		<eLabel text="Album:" position="540,320" size="80,22" font="Regular;18" foregroundColor="grey" backgroundColor="darkgrey" transparent="1" />
-		<eLabel text="Artist:" position="540,254" size="80,22" font="Regular;18" foregroundColor="grey" backgroundColor="darkgrey" transparent="1" />
-		<eLabel text="Genre:" position="540,384" size="80,22" font="Regular;18" foregroundColor="grey" backgroundColor="darkgrey" transparent="1" />
-		<widget name="Title" position="630,182" size="500,36" font="Regular;32" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="Album" position="630,320" size="500,26" font="Regular;22" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="Artist" position="630,254" size="500,26" font="Regular;22" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="Genre" position="630,384" size="240,26" font="Regular;22" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="NextTitleCaption" position="86,650" size="85,20" font="Regular;16" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="NextTitle" position="190,650" size="610,26" font="Regular;22" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="Progressbar" position="177,513" size="928,29" pointer="BrushedAlu-HD/mmp3/progressbar.png:928,0" transparent="1" />
-		<widget name="coverArt" position="117,163" size="278,278" zPosition="1" />
-		<widget name="shuffleArt" position="1023,635" size="80,50" pixmap="BrushedAlu-HD/mmp3/shuffle.png" />
-		<widget name="repeatArt" position="1119,635" size="80,50" pixmap="BrushedAlu-HD/mmp3/repeat.png" />
-		<widget name="playArt" position="86,508" size="50,50" pixmap="BrushedAlu-HD/mmp3/play.png" />
-		<widget name="pauseArt" position="86,508" size="50,50" pixmap="BrushedAlu-HD/mmp3/pause.png" />
-		<eLabel text="MerlinMusicPlayer" position="799,68" size="200,22" font="Regular;20" backgroundColor="black" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-	</screen>
-	<screen name="ScreenSaver" position="0,0" size="1280,720" backgroundColor="#00000000" flags="wfNoBorder">
-		<widget name="coverArt" zPosition="2" position="100,77" size="300,300" transparent="1" alphatest="blend" />
-		<widget name="display" position="100,430" zPosition="1" size="700,30" font="Regular;26" valign="left" transparent="1" foregroundColor="white" />
-	</screen>
-	<screen name="LCDScreen" position="0,0" size="132,64" title="Merlin MP3 Player">
-		<widget name="text3" position="4,0" size="132,14" font="Regular;10" />
-		<widget name="text1" position="4,14" size="132,35" font="Regular;16" />
-		<widget name="text4" position="4,49" size="132,14" font="Regular;10" />
-	</screen>
-	<screen name="LCDPlayerScreen" position="0,0" size="132,64" title="Merlin MP3 Player">
-		<widget name="text3" position="4,0" size="132,12" halign="center" valign="top" font="Regular;10" />
-		<widget name="text1" position="4,14" size="132,35" halign="center" valign="top" font="Regular;16" />
-		<widget name="text4" position="4,51" size="132,12" halign="center" valign="top" font="Regular;10" />
 	</screen>
 	<!-- MyTubePlayer -->
 	<screen name="MyTubePlayer" position="0,550" size="1280,150" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
