@@ -510,56 +510,7 @@
 	<!--  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
 	<!--  +++++++++++++++++++++++++++++++++++++++++++++ MAIN CODE ++++++++++++++++++++++++++++++++++++++++++++++++++  -->
 	<!--  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
-	<screen flags="wfNoBorder" backgroundColor="background" name="SecondInfoBar" position="0,0" size="1024,73" title=" " zPosition="-1">
-		<widget backgroundColor="background" font="Replacement;18" foregroundColor="foreground" halign="left" position="200,8" render="Label" size="824,70" source="session.CurrentService" transparent="1" valign="center" zPosition="7">
-			<convert type="vSmartInfo">ExpertInfo</convert>
-		</widget>
-		<eLabel backgroundColor="background" font="OLED;19" text="A" foregroundColor="#66666a" position="50,32" size="30,20" transparent="1" zPosition="7"/>
-		<eLabel backgroundColor="background" font="OLED;19" text="B" foregroundColor="#66666a" position="80,32" size="30,20" transparent="1" zPosition="7"/>
-		<eLabel backgroundColor="background" font="OLED;19" text="C" foregroundColor="#66666a" position="110,32" size="30,20" transparent="1" zPosition="7"/>
-		<eLabel backgroundColor="background" font="OLED;19" text="D" foregroundColor="#66666a" position="140,32" size="30,20" transparent="1" zPosition="7"/>
-		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="50,32" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">1</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="80,32" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">2</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" text="C" position="110,32" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">4</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" text="D" position="140,32" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">8</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="A" position="50,32" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">0,0</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="B" position="80,32" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">1,1</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="C" position="110,32" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">2,2</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="D" position="140,32" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">3,3</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<ePixmap alphatest="off" pixmap="Vali-XD/border/down-shadow.png" position="0,65" size="1024,8" zPosition="10"/>
-	</screen>
+	
 
 	<!--  ##### Radio-InfoBar ##### -->
 	<screen backgroundColor="background" flags="wfNoBorder" name="RadioInfoBar" position="0,400" size="1024,176">
