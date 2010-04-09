@@ -2576,8 +2576,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = ( 10,  5), size = (445, 28), font = 0, flags = RT_HALIGN_LEFT,  text = 1), # index 1 Title,
-						MultiContentEntryText(pos = ( 10, 33), size = (375, 23), font = 1, flags = RT_HALIGN_LEFT,  text = 2), # index 2 description,
-						MultiContentEntryText(pos = (455,  5), size = (180, 23), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 channel,
+						MultiContentEntryText(pos = ( 10, 33), size = (385, 23), font = 1, flags = RT_HALIGN_LEFT,  text = 2), # index 2 description,
+						MultiContentEntryText(pos = (455,  5), size = (170, 23), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 channel,
 						MultiContentEntryText(pos = (395, 33), size = (150, 23), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 begin time,
 						MultiContentEntryText(pos = (545, 33), size = ( 80, 23), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # index 5 duration,
 					],
