@@ -2572,21 +2572,22 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	    <widget source="title_label" render="Label" 	position="550,120" size="660,50" font="Regular;22" backgroundColor="darkgrey" transparent="1"/>
 		<eLabel 										position="550,180" 	size="660,2" backgroundColor="grey"/>
 	    <widget name="error_label" 						position="550,120" size="660,510" zPosition="3" font="Regular;20" backgroundColor="background"/>
-	    <widget source="titles" render="Listbox" 		position="550,190" size="660,360" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1">
+	    <widget source="titles" render="Listbox" 		position="550,190" size="660,360" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="dmm-HD/sel.png" backgroundPixmap="dmm-HD/sep.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (  5,  5), size = (470, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 1), # index 1 Title,
-						MultiContentEntryText(pos = (  5, 35), size = (420, 20), font = 1, flags = RT_HALIGN_LEFT,  text = 2), # index 2 description,
-						MultiContentEntryText(pos = (480,  5), size = (170, 20), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 channel,
-						MultiContentEntryText(pos = (430, 35), size = (140, 20), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 begin time,
-						MultiContentEntryText(pos = (580, 35), size = ( 70, 20), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # index 5 duration,
+						MultiContentEntryText(pos = ( 10,  5), size = (445, 28), font = 0, flags = RT_HALIGN_LEFT,  text = 1), # index 1 Title,
+						MultiContentEntryText(pos = ( 10, 33), size = (375, 23), font = 1, flags = RT_HALIGN_LEFT,  text = 2), # index 2 description,
+						MultiContentEntryText(pos = (455,  5), size = (180, 23), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 channel,
+						MultiContentEntryText(pos = (395, 33), size = (150, 23), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 begin time,
+						MultiContentEntryText(pos = (545, 33), size = ( 80, 23), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # index 5 duration,
 					],
 				"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
 				"itemHeight": 60
 				}
 			</convert>
 	    </widget>
-		<widget name="medium_label"  						position="550,565" size="540,24" font="Regular;20" halign="left" foregroundColors="white,yellow,red" backgroundColor="background"/>
+		<eLabel 										position="550,560" 	size="660,2" backgroundColor="grey"/>
+		<widget name="medium_label"  						position="550,568" size="540,24" font="Regular;20" halign="left" foregroundColors="white,yellow,red" backgroundColor="background"/>
 	    <widget source="space_bar_single" render="Progress" position="550,600" size="330,26" zPosition="2" borderWidth="1" backgroundColor="grey"/>
 	    <widget source="space_label_single" render="Label" 	position="560,602" size="310,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey"/>
 	    <widget source="space_bar_dual" render="Progress" 	position="550,600" size="660,26" zPosition="1" borderWidth="1" backgroundColor="grey"/>
