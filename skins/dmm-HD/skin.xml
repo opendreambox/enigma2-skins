@@ -480,7 +480,7 @@
 			</convert>
 		</widget>
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 
 	<screen name="About" 						position="0,0" 		size="1280,720" title="About" 						flags="wfNoBorder">
@@ -645,10 +645,10 @@
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="390,643"  size="30,30" 	alphatest="on"/>
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="680,643"  size="30,30" 	alphatest="on"/>
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="970,643"  size="30,30" 	alphatest="on"/>
-		<widget name="key_red" 						position="150,645"  size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="440,645"  size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="730,645"  size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="1020,645" size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="150,645"  size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="440,645"  size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="730,645"  size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="1020,645" size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="CrashlogAutoSubmitConfiguration" position="0,0" 	size="1280,720" title="CrashlogAutoSubmit settings..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
@@ -672,8 +672,8 @@
 		<eLabel 									position=" 70,627" 	size="1140,1"  	backgroundColor="grey" />
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="100,643"  size="30,30" 	alphatest="on"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="390,643"  size="30,30" 	alphatest="on"/>
-		<widget source="key_red" render="Label" 	position="150,645"  size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="440,645"  size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="150,645"  size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="440,645"  size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="ChannelSelectionRadio" 		position="0,340" 	size="1280,380" title="Channel Selection" backgroundColor="black" flags="wfNoBorder">
 		<eLabel 							position=" 50, 0" size="1180,1" backgroundColor="grey" zPosition="5"/>
@@ -692,10 +692,10 @@
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,160"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,210"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,260"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,112"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,162"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="130,212"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="130,262"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="130,112"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,162"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,212"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,262"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="ChannelContextMenu" 			position="0,0" 		size="1280,720" title="Channellist menu"			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
@@ -819,10 +819,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="970,643"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="150,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="440,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="730,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="1020,645" size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="150,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="440,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="730,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="1020,645" size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="EPGSelectionMulti" 			position="0,0" 		size="1280,720" title="EPG Selection" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
@@ -850,10 +850,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="970,643"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="150,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="440,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="730,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="1020,645" size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="150,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="440,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="730,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="1020,645" size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="EventView" 					position="0,0" 		size="1280,720"	title="Eventview" 					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
@@ -875,10 +875,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="970,643"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="150,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="440,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="730,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="1020,645" size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="150,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="440,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="730,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="1020,645" size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="genuineDreambox" 				position="0,0" 		size="1280,720" title="Genuine Dreambox" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -898,8 +898,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget name="kRed" position="130,452"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="kGreen" position="130,502"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="kRed" position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="kGreen" position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="GraphMultiEPG" 				position="0,0" 		size="1280,720" title="Electronic Program Guide"	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
@@ -936,7 +936,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="500,300"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="700,300"  size="30,30" alphatest="blend"   />
 		<widget name="key_red" 						position="550,302"  size="150,26"  font="Regular;24" halign="left" backgroundColor="background" transparent="1" />
-		<widget name="key_green" 					position="750,302"  size="220,26"  font="Regular;24" halign="left" backgroundColor="background" transparent="1" />
+		<widget name="key_green" 					position="750,302"  size="340,26"  font="Regular;24" halign="left" backgroundColor="background" transparent="1" />
 
 		<eLabel 						position="70,343" size="1140,1"  backgroundColor="grey"/>
 		<widget name="timeline_text" 	position=" 0,348" size="1280,28" backgroundColor="darkgrey" transparent="1"/>
@@ -984,7 +984,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="bus" 			position="550,200" size="660,28" font="Regular;25" halign="center" />
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
-		<widget name="initializetext" 				position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="initializetext" 				position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="HarddiskWait" 				position="0,0" 		size="1280,720" title="HarddiskWait"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1149,10 +1149,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"/>
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"/>
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="970,643"  size="30,30" alphatest="blend"/>
-		<widget name="key_red" 						position="150,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="440,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="730,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="1020,645" size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="150,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="440,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="730,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="1020,645" size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
 	</screen>
 	<screen name="MoviePlayer" 					position="0,550" 	size="1280,150" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
@@ -1246,9 +1246,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="NetworkAdapterSelection" 		position="0,0" 		size="1280,720" title="Select Network Adapter" 		flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1267,10 +1267,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="NetworkAdapterTest" 			position="0,0" 		size="1280,720" title="Network test..." 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1322,9 +1322,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="NimSelection" 				position="0,0" 		size="1280,720" title="Choose Tuner"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1572,8 +1572,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="550,120" size="660,510" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
 		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="RdsInfoDisplay" 				position="0,0" 		size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="100,585" size="50,21"/>
@@ -1706,10 +1706,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget name="red" 							position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="green" 						position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="yellow" 						position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="blue" 						position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="red" 							position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="green" 						position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="yellow" 						position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="blue" 						position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="Setup" 						position="0,0" 		size="1280,720" title="Setup"						flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1725,8 +1725,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="550,120" size="660,510" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
 		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="SimpleChannelSelection" 		position="0,0" 		size="1280,720" title="Channel Selection"			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
@@ -1756,10 +1756,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="390,643"  size="30,30" 	alphatest="on"/>
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="680,643"  size="30,30" 	alphatest="on"/>
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="970,643"  size="30,30" 	alphatest="on"/>
-		<widget name="key_red" 						position="150,645"  size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="440,645"  size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="730,645"  size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="1020,645" size="220,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="150,645"  size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="440,645"  size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="730,645"  size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="1020,645" size="340,26"  	font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="SkinSelector" 				position="0,0" 		size="1280,720" title="Skin Selector" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1845,10 +1845,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="TimerEntry" 					position="0,0" 		size="1280,720" title="Timer entry"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1864,8 +1864,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" 		position="550,120" size="660,300" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
 		<widget name="cancel" 		position="80,450"  size="30,30" alphatest="blend"   pixmap="dmm-HD/buttons/red.png" />
 		<widget name="ok"  			position="80,500"  size="30,30" alphatest="blend"   pixmap="dmm-HD/buttons/green.png"/>
-		<widget name="canceltext" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="oktext" 		position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="canceltext" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="oktext" 		position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="TimerLog" 					position="0,0" 		size="1280,720" title="Timer log"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1885,10 +1885,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="TimerSanityConflict" 			position="0,0" 		size="1280,720" title="Timer sanity error"			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -1910,10 +1910,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,340"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,292"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,342"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="130,292"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,342"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="TimerSelection" 				position="0,0" 		size="1280,720" title="Timer selection"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1961,10 +1961,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="VirtualKeyBoard" 				position="0,0" 		size="1280,720" zPosition="99" flags="wfNoBorder" title="VirtualKeyBoard">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2011,7 +2011,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="Statustext" render="Label" position="780,602" size="150,28" zPosition="10" font="Regular;24" halign="right" transparent="1"/>
 		<widget name="statuspic" 	position="950,603" size="25,24"	 zPosition="10" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="on"/>
 		<ePixmap pixmap="dmm-HD/buttons/red.png" position="80,450"  size="30,30" alphatest="blend"/>
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="WlanScan" 					position="0,0" 		size="1280,720" title="Choose a Wireless Network"	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2030,8 +2030,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,54"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 
@@ -2052,8 +2052,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="help" render="Label" 	position="550,580" size="660,50" font="Regular;20" backgroundColor="background" transparent="1"/>
 		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="AutoTimerEditor" 				position="0,0"		size="1280,720"	title="Edit AutoTimer" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2073,10 +2073,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="AutoTimerFilterEditor" 		position="0,0"		size="1280,720"	title="Edit AutoTimer Filters" 		flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2094,10 +2094,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="AutoTimerServiceEditor" 		position="0,0"		size="1280,720"	title="Edit AutoTimer Services" 	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2115,10 +2115,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="AutoTimerImporter" 			position="0,0"		size="1280,720"	title="Import AutoTimer"		 	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2136,10 +2136,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="AutoTimerOverview" 			position="0,0"		size="1280,720"	title="AutoTimer Overview" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2156,9 +2156,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="AutoTimerPreview" 			position="0,0"		size="1280,720"	title="Preview AutoTimer" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2186,8 +2186,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,502"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- CD-Info -->
 	<screen name="CDInfo" 						position="0,0" 		size="1280,720" title="CDInfo" 						flags="wfNoBorder">
@@ -2209,9 +2209,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" 	render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" 	render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" 	render="Label"  position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- CleanupWizard -->
 	<screen name="CleanupWizard" 				position="0,0" 		size="1280,720" title="Welcome..." 					flags="wfNoBorder">
@@ -2259,8 +2259,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- Common Interface -->
 	<screen name="CiSelection" 					position="0,0" 		size="1280,720" title="Common Interface"			flags="wfNoBorder">
@@ -2310,8 +2310,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="CiList" position="550,120" size="660,510" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label"  position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" 	render="Label"  position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="CIconfigMenu" 				position="0,0"	 	size="1280,720" title="CI Assignment" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2358,9 +2358,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label"  position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" 	render="Label"  position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"  position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="CAidSelect" 					position="0,0" 		size="1280,720" title="select CAId's"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2377,8 +2377,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="introduction" render="Label" position="550,605" size="660,27" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" transparent="1" />
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label"  position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" 	render="Label"  position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="myProviderSelection" 			position="0,0" 		size="1280,720" title="Select provider to add..."	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2397,10 +2397,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="myChannelSelection" 			position="0,0" 		size="1280,720" title="Select service to add..."	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2430,10 +2430,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>	
 	<!-- DVD Burner -->
 	<screen name="DVDToolbox" 					position="0,0" 		size="1280,720" title="DVD media toolbox" 			flags="wfNoBorder">
@@ -2454,9 +2454,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" 	render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"  position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="DVDMovieSelection" 			position="0,0"		size="1280,720"	title="Select a movie"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
@@ -2496,9 +2496,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="100,643"  size="30,30" alphatest="blend"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"/>
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"/>
-		<widget source="key_red" render="Label"		position="150,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label"	position="440,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label"	position="730,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label"		position="150,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label"	position="440,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"	position="730,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
 	</screen>
 	<screen name="ProjectSettings" 				position="0,0" 		size="1280,720" title="Collection settings"			flags="wfNoBorder">
@@ -2519,10 +2519,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" 	render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" 	render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"  position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" 	render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="TitleCutter" 					position="0,0" 		size="1280,720" title="TitleCutter" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
@@ -2598,10 +2598,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"/>
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position=" 80,550"  size="30,30" alphatest="blend"/>
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position=" 80,600"  size="30,30" alphatest="blend"/>
-		<widget source="key_red" 	render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
-		<widget source="key_yellow" render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
-		<widget source="key_blue" 	render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
+		<widget source="key_red" 	render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
+		<widget source="key_yellow" render="Label"  position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
+		<widget source="key_blue" 	render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1"/>
 	</screen>
 	<screen name="TitleProperties" 				position="0,0" 		size="1280,720" title="Properties of current title" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2621,10 +2621,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label"  position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" 	render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" 	render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"  position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" 	render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- DVD Player -->
 	<screen name="ChapterZap" 					position="500,600" 	size="280,60" 	title="Chapter">
@@ -2678,8 +2678,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="filelist"    position="550,120" size="660,510" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label"  position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" 	render="Label"  position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- EPGRefresh -->
 	<screen name="EPGRefreshServiceEditor" 		position="0,0" 		size="1280,720" title="Edit Services to refresh"  	flags="wfNoBorder">
@@ -2700,10 +2700,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="EPGRefreshConfiguration" 		position="0,0" 		size="1280,720" title="Configure EPGRefresh"	  	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -2725,10 +2725,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- FileBrowser -->
 	<screen name="FilebrowserScreen" 			position="0,0" 		size="1280,720" title="" 							flags="wfNoBorder">
@@ -2777,8 +2777,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="550,120" size="660,510" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
 		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget name="buttonred" 	position="130,452"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="buttongreen" 	position="130,502"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="buttonred" 	position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="buttongreen" 	position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- Internet Movie Database -->
 	<screen name="IMDB" 						position="0,0" 		size="1280,720" title="IMDb Details Plugin"			flags="wfNoBorder">
@@ -2812,10 +2812,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_green" 					position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_yellow" 					position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="key_blue" 					position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 					position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_yellow" 					position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_blue" 					position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- Media Player -->
 	<screen name="MediaPlayer" 					position="0,0" 		size="1280,720" title="MediaPlayer" 				flags="wfNoBorder" >
@@ -2867,8 +2867,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config"    position="550,120" size="660,510" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" 	render="Label"  position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label"  position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" 	render="Label"  position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" 	render="Label"  position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>		
 	<!-- MyTubePlayer -->
 	<screen name="MyTubePlayer" 				position="0,550" 	size="1280,150" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
@@ -3004,7 +3004,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget name="detailtext" 					position="450,320" size="730,280" zPosition="10" font="Regular;22" foregroundColor="white" backgroundColor="darkgrey" transparent="1" />
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="100,643"  size="30,30" alphatest="blend"   />
-		<widget name="key_red" 						position="150,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_red" 						position="150,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<ePixmap position="1110,635" size="100,40" zPosition="0" pixmap="~/plugin.png" alphatest="on" transparent="1" />
 		<widget name="thumbnail" position="0,0" size="180,135" alphatest="on"/> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
 	</screen>
@@ -3195,10 +3195,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" position="130,552"  size="320,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="UserManager" 					position="0,0" 		size="1280,720" title="UserManager"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3262,8 +3262,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" position="130,552"  size="320,54"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>		
 	<!-- Picture Player -->
@@ -3283,10 +3283,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="Pic_Exif" 					position="0,0" 		size="1280,720" title="Info"						flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -3306,7 +3306,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			</convert>
 		</widget>
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="Pic_Setup" 					position="0,0" 		size="1280,720" title="Settings"					flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
@@ -3320,8 +3320,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="550,120" size="660,510" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- SHOUTcast -->
 	<screen name="SHOUTcastWidget" 				position="0,0" 		size="1280,720" title="SHOUTcast" 					flags="wfNoBorder">
@@ -3346,10 +3346,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="390,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="680,643"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="970,643"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label"		position="150,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label"	position="440,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow"	render="Label"	position="730,645"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label"	position="1020,645" size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label"		position="150,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label"	position="440,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow"	render="Label"	position="730,645"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label"	position="1020,645" size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="SHOUTcastSetup" 				position="0,0" 		size="1280,720" title="SHOUTcast Setup" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3363,8 +3363,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="550,120" size="660,510" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
 		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="SHOUTcastStreamripperRecordingPath" position="0,0" size="1280,720" title="Select record path for streamripper" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3380,8 +3380,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="filelist"	position="550,170" size="660,450" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
 		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- SimpleRSS -->
 	<screen name="RSSSetup" 					position="0,0" 		size="1280,720" title="Simple RSS Reader Setup" 	flags="wfNoBorder">
@@ -3400,10 +3400,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="RSSEntryView" 				position="0,0" 		size="1280,720" title="Simple RSS Reader" 		 	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3495,8 +3495,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" position="130,552"  size="280,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="IpkgInstaller" 				position="0,0" 		size="1280,720" title="Ipkg Installer..." 			flags="wfNoBorder">
@@ -3516,8 +3516,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="IPKGMenu" 					position="0,0" 		size="1280,720" title="Select IPKG source....."  	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3535,8 +3535,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="IPKGSource" 					position="0,0" 		size="1280,720" title="IPKG source" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png"/>
@@ -3552,8 +3552,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="text" position="80,380" size="1120,25" font="Regular;22" foregroundColor="white" backgroundColor="darkgrey" transparent="1"/>
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="PacketManager" 				position="0,0" 		size="1280,720" title="IPKG upgrade..." 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3581,8 +3581,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="PluginDetails" 				position="0,0" 		size="1280,720" title="Plugin details" 				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3604,8 +3604,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 
 		<widget name="divpic" position="0,0" size="0,0"/>
 	</screen>
@@ -3646,10 +3646,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="PluginManagerInfo" 			position="0,0" 		size="1280,720" title="Plugin manager activity" 	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3709,7 +3709,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="status" render="Label" 	position="550,600" size="660,27" halign="center" font="Regular;24" backgroundColor="background" transparent="1"/>
 
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="RestoreMenu" 					position="0,0" 		size="1280,720" title="Restore Backups" 			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3726,8 +3726,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" position="130,552"  size="280,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="UpdatePlugin" 				position="0,0" 		size="1280,720" title="Software Update..." 			flags="wfNoBorder">
@@ -3762,9 +3762,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- WeatherPlugin -->
 	<screen name="WeatherPluginEntriesListConfigScreen" position="0,0" size="1280,720" title="WeatherPlugin: List of Entries" flags="wfNoBorder">
@@ -3785,9 +3785,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" 	position="130,552"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="WeatherPluginEntryConfigScreen" position="0,0" 	size="1280,720" title="WeatherPlugin: Edit Entry" 	flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -3804,9 +3804,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
 		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
-		<widget source="key_red" render="Label" 	position="130,452"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" 	position="130,602"  size="220,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="WeatherPlugin" 				position="0,0" 		size="1280,720" title="Weather Plugin"  			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
