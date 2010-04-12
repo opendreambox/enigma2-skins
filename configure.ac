@@ -63,6 +63,11 @@ AC_OUTPUT([
 ./skins/Elgato-HD/selpic/Makefile
 ./skins/Elgato-HD/skin_default/Makefile
 ./skins/Elgato-HD/skin_default/icons/Makefile
+./skins/Kerni-HD1/Makefile
+./skins/Kerni-HD1/buttons/Makefile
+./skins/Kerni-HD1/icons/Makefile
+./skins/Kerni-HD1/menu/Makefile
+./skins/Kerni-HD1/meta/Makefile
 ./skins/Kerni-HD1R2/Makefile
 ./skins/Kerni-HD1R2/buttons/Makefile
 ./skins/Kerni-HD1R2/extensions/Makefile
