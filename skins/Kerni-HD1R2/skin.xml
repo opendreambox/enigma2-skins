@@ -532,7 +532,7 @@
 		<ePixmap pixmap="Kerni-HD1R2/buttons/blue.png" 		position="940,635" size="24,24"  alphatest="on" />
 		<widget source="key_red" render="Label"				position="100,635" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_blue" render="Label"			position="970,635" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-		<widget name="VKeyIcon" text="Text" 				position="430,635" size="70,24"  zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="VKeyIcon" pixmap="Kerni-HD1R2/buttons/text.png" position="700,633" zPosition="10" size="70,30" transparent="1" alphatest="on" />
 		
 		<widget name="HelpWindow" position="120,460" size="1,1" transparent="1" alphatest="on" />	
 	</screen>
@@ -750,7 +750,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" position="360,635" 	size="24,24" alphatest="on" />
 		<widget source="key_red" render="Label" 		position="100,635" 	size="260,24" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
 		<widget source="key_green" render="Label" 		position="390,635" 	size="260,24" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
-		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="900,635" zPosition="10" size="35,25" transparent="1" alphatest="on" />
+		<widget name="VKeyIcon" pixmap="Kerni-HD1R2/buttons/text.png" position="700,633" zPosition="10" size="70,30" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="CutListEditor" 				position="0,0" 		size="1280,720" 	title="Cutlist editor" 				flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
@@ -2067,7 +2067,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Skin Selector" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+		<eLabel text="Choose your Skin" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 		<widget name="SkinList" position="70,120" size="370,450" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
 		<widget name="Preview" 	position="470,120" size="280,210" alphatest="on" />
 		<widget source="introduction" render="Label" position="70,595" size="700,28" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
@@ -2590,6 +2590,54 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label"			position="390,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_blue" render="Label"			position="970,635"  size="360,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
+	<!-- CleanupWizard -->
+	<screen name="CleanupWizard" 				position="0,0" 		size="1280,720" 	title="Welcome..." 					flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back1.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="CleanupWizard" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+		<widget name="rc" 			position="175,115" 	size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="arrowdown" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+		<widget name="arrowdown2" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+		<widget name="arrowup" 		position="-100,-100" size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+		<widget name="arrowup2" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
+		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position="500,305" 	size="24,24" 	alphatest="on" />
+		<widget name="languagetext" 						position="535,303" 	size="150,23"	font="Regular;21" backgroundColor="background" transparent="1" />
+		<widget name="text" 								position="670,120" 	size="540,300" 	font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget source="list" render="Listbox" 				position="510,430" 	size="700,160" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 32
+				}
+			</convert>
+		</widget>
+		<widget name="config" 								position="510,430" 	size="700,160" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
+	</screen>
+	<screen name="CleanupWizardConfiguration" 	position="0,0" 		size="1280,720" title="CleanupWizard settings" 		flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
+		<eLabel 											position="800,120" size="430,244" zPosition="2" backgroundColor="white"/>
+		<widget source="session.VideoPicture" render="Pig" 	position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000"/>
+		<ePixmap position="870,560" zPosition="-9" size="350,44" pixmap="Kerni-HD1R2/menu/db.png"/>
+		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
+		<widget name="config" 					position="70,120" size="700,450" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>    
+		<widget source="status" render="Label" 	position="70,600" size="700,25" font="Regular;22" halign="center" backgroundColor="black" transparent="1"/>
+		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 	position=" 70,635" 	size="24,24" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" position="360,635" 	size="24,24" alphatest="on" />
+		<widget name="key_red" 		position="100,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="key_green" 	position="390,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
 	<!-- DVDBurn -->
 	<screen name="ProjectSettings" 				position="0,0" 		size="1280,720" 	title="Collection settings" 		flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
@@ -2703,30 +2751,30 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 
-		<eLabel text="Menu:" 					position="800,395" size=" 60,24" font="Regular;20" halign="left" backgroundColor="backtop" transparent="1"/>
-		<widget source="hint" render="Label" 	position="880,395" size="350,24" font="Regular;20" halign="left" backgroundColor="backtop" transparent="1"/>
+		<ePixmap pixmap="Kerni-HD1R2/buttons/menu.png" 	position="870,394" size="70,30" alphatest="blend"/>
+		<widget source="hint" render="Label" 			position="960,395" size="350,25" font="Regular;20" halign="left" backgroundColor="background" transparent="1"/>
 
 		<widget source="title_label" render="Label" position="70,115" size="700,56" font="Regular;23" backgroundColor="background" transparent="1" />
 	    <widget name="error_label" 					position="70,115" size="700,400" zPosition="3" font="Regular;20" backgroundColor="background" />
 		<eLabel 									position="70,185" size="700,2" backgroundColor="grey" />
-
-		<widget source="titles" render="Listbox" 	position="70,200" size="700,360" scrollbarMode="showOnDemand" transparent="1" >
+		<widget source="titles" render="Listbox" 	position="70,195" size="700,360" scrollbarMode="showOnDemand" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = ( 10,  2), size = (500, 28), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
-						MultiContentEntryText(pos = ( 10, 30), size = (370, 25), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 description,
-						MultiContentEntryText(pos = (510,  4), size = (160, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 begin time,
-						MultiContentEntryText(pos = (395, 30), size = (180, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 channel,
-						MultiContentEntryText(pos = (585, 30), size = ( 80, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # index 4 channel,
+						MultiContentEntryText(pos = ( 10,  2), size = (490, 28), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
+						MultiContentEntryText(pos = ( 15, 30), size = (370, 25), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 description,
+						MultiContentEntryText(pos = (505,  4), size = (150, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 begin time,
+						MultiContentEntryText(pos = (390, 30), size = (180, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 channel,
+						MultiContentEntryText(pos = (580, 30), size = ( 80, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # index 4 channel,
 					],
 				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
 				"itemHeight": 60
 				}
 			</convert>
 		</widget>
+		<eLabel 									position="70,555" size="700,2" backgroundColor="grey" />
 
 
-		<widget name="medium_label"  						position="70,565" size="700,23" font="Regular;19" halign="left" foregroundColors="white,yellow,red" backgroundColor="background" transparent="1"/>
+		<widget name="medium_label"  						position="70,563" size="700,25" font="Regular;19" halign="left" foregroundColors="white,yellow,red" backgroundColor="background" transparent="1"/>
 
 	    <widget source="space_bar_single" render="Progress" position="70,595" size="350,26" zPosition="2" borderWidth="1" backgroundColor="grey" />
 	    <widget source="space_label_single" render="Label" 	position="75,597" size="340,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
@@ -3515,7 +3563,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="MountEdit" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 		<widget name="config" 	position="70,120" size="700,450" itemHeight="30" scrollbarMode="showOnDemand"  transparent="1" />
 		<widget name="HelpWindow" 		position="120,470" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
-		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="600,635" zPosition="10" size="35,25" transparent="1" alphatest="on" />
+		<widget name="VKeyIcon" pixmap="Kerni-HD1R2/buttons/text.png" position="700,633" zPosition="10" size="70,30" transparent="1" alphatest="on" />
 		<widget source="introduction" render="Label" position="70,598" size="700,30" font="Regular;22" halign="center" transparent="1"/>
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position=" 70,635" 	size="24,24" alphatest="on" />
 		<widget source="key_red" render="Label"				position="100,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
@@ -3636,7 +3684,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="UserDialog" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 		<widget name="config" 	position="70,120" size="700,350" zPosition="3" scrollbarMode="showOnDemand"  transparent="1" />
 		<widget name="HelpWindow" position="120,470" zPosition="1" size="1,1" transparent="1" alphatest="on" />	
-		<widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="600,635" zPosition="10" size="35,25" transparent="1" alphatest="on" />
+		<widget name="VKeyIcon" pixmap="Kerni-HD1R2/buttons/text.png" position="700,633" zPosition="10" size="70,30" transparent="1" alphatest="on" />
 		<widget source="introduction" render="Label" position="70,598" size="700,30" font="Regular;22" halign="center" backgroundColor="background" transparent="1"/>
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position=" 70,635" 	size="24,24" alphatest="on" />
 		<widget source="key_red" render="Label"				position="100,635" 	size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
@@ -4354,14 +4402,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="DefaultSatLists" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-
 		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position="500,305" 	size="24,24" 	alphatest="on" />
 		<widget name="languagetext" 						position="535,303" 	size="150,23"	font="Regular;21" backgroundColor="background" transparent="1" />
-
-		<widget name="text" 								position="670,120" 	size="540,250" 	font="Regular;22" backgroundColor="background" transparent="1" />
-
-		<widget source="list" render="Listbox" 				position="510,380" 	size="700,198" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="text" 								position="670,120" 	size="540,300" 	font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget source="list" render="Listbox" 				position="510,430" 	size="700,160" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -4369,7 +4414,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
-		<widget name="config" 								position="510,380" 	size="700,198" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
+		<widget name="config" 								position="510,430" 	size="700,160" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
 	</screen>
 	<screen name="DefaultWizard" 				position="0,0" 	size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back1.png"/>
@@ -4380,14 +4425,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="DefaultWizard" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-
 		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position="500,305" 	size="24,24" 	alphatest="on" />
 		<widget name="languagetext" 						position="535,303" 	size="150,23"	font="Regular;21" backgroundColor="background" transparent="1" />
-
-		<widget name="text" 								position="670,120" 	size="540,250" 	font="Regular;22" backgroundColor="background" transparent="1" />
-
-		<widget source="list" render="Listbox" 				position="510,380" 	size="700,198" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="text" 								position="670,120" 	size="540,300" 	font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget source="list" render="Listbox" 				position="510,430" 	size="700,160" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -4395,7 +4437,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
-		<widget name="config" 								position="510,380" 	size="700,198" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
+		<widget name="config" 								position="510,430" 	size="700,160" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
 	</screen>
 	<screen name="DreamPackageWizard" 			position="0,0" 	size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back1.png"/>
@@ -4405,15 +4447,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="DreamPackageWizard" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-
-		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
+		<eLabel text="DreamPackageWizard" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position="500,305" 	size="24,24" 	alphatest="on" />
 		<widget name="languagetext" 						position="535,303" 	size="150,23"	font="Regular;21" backgroundColor="background" transparent="1" />
-
-		<widget name="text" 								position="670,120" 	size="540,250" 	font="Regular;22" backgroundColor="background" transparent="1" />
-
-		<widget source="list" render="Listbox" 				position="510,380" 	size="700,198" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="text" 								position="670,120" 	size="540,300" 	font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget source="list" render="Listbox" 				position="510,430" 	size="700,160" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -4421,7 +4459,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
-		<widget name="config" 								position="510,380" 	size="700,198" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
+		<widget name="config" 								position="510,430" 	size="700,160" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
 	</screen>
 	<screen name="ImageWizard" 					position="0,0" 	size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back1.png"/>
@@ -4432,20 +4470,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="ImageWizard" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-
 		<widget name="rc" 			position="175,115" 	size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
-
 		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position="500,305" 	size="24,24" 	alphatest="on" />
 		<widget name="languagetext" 						position="535,303" 	size="150,23"	font="Regular;21" backgroundColor="background" transparent="1" />
-
-		<widget name="text" 								position="670,120" 	size="540,250" 	font="Regular;22" backgroundColor="background" transparent="1" />
-
-		<widget source="list" render="Listbox" 				position="510,380" 	size="700,198" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="text" 								position="670,120" 	size="540,300" 	font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget source="list" render="Listbox" 				position="510,430" 	size="700,160" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -4453,7 +4487,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
-		<widget name="config" 								position="510,380" 	size="700,198" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
+		<widget name="config" 								position="510,430" 	size="700,160" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
 	</screen>
 	<screen name="LanguageWizard" 				position="0,0" 	size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back1.png"/>
@@ -4470,8 +4504,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="arrowup" 		position="-100,-100" size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
-		<widget name="text" 								position="670,120" 	size="540,250" 	font="Regular;22" backgroundColor="background" transparent="1" />
-		<widget source="languages" render="Listbox" 		position="510,400" 	size="700,180" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="text" 								position="670,120" 	size="540,300" 	font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget source="languages" render="Listbox" 		position="510,430" 	size="700,180" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (130, 17), size = (530, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
@@ -4492,20 +4526,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="NetworkWizard" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-
 		<widget name="rc" 			position="175,115" 	size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" 	position="-100,-100" size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
-
 		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position="500,305" 	size="24,24" 	alphatest="on" />
 		<widget name="languagetext" 						position="535,303" 	size="150,23"	font="Regular;21" backgroundColor="background" transparent="1" />
-
-		<widget name="text" 								position="670,120" 	size="540,250" 	font="Regular;22" backgroundColor="background" transparent="1" />
-
-		<widget source="list" render="Listbox" 				position="510,380" 	size="700,198" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="text" 								position="670,120" 	size="540,300" 	font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget source="list" render="Listbox" 				position="510,430" 	size="700,160" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -4513,7 +4543,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
-		<widget name="config" 								position="510,380" 	size="700,198" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
+		<widget name="config" 								position="510,430" 	size="700,160" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
 	</screen>	
 	<screen name="StartWizard" 					position="0,0" 	size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back1.png"/>
@@ -4532,8 +4562,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position="500,305" 	size="24,24" 	alphatest="on" />
 		<widget name="languagetext" 						position="535,303" 	size="150,23"	font="Regular;21" backgroundColor="background" transparent="1" />
-		<widget name="text" 								position="670,120" 	size="540,250" 	font="Regular;22" backgroundColor="background" transparent="1" />
-		<widget source="list" render="Listbox" 				position="510,380" 	size="700,192" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="text" 								position="670,120" 	size="540,300" 	font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget source="list" render="Listbox" 				position="510,430" 	size="700,160" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -4541,7 +4571,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
-		<widget name="config" 								position="510,380" 	size="700,210" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
+		<widget name="config" 								position="510,430" 	size="700,160" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
 	</screen>
 	<screen name="VideoWizard" 					position="0,0" 	size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back1.png"/>
@@ -4560,9 +4590,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="wizard" 								position="500,120" 	size="110,174" 	pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="on"/>
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position="500,305" 	size="24,24" 	alphatest="on" />
 		<widget name="languagetext" 						position="535,303" 	size="150,23"	font="Regular;21" backgroundColor="background" transparent="1" />
-		<widget name="text" 								position="670,120" 	size="540,250" 	font="Regular;22" backgroundColor="background" transparent="1" />
-		<widget name="portpic" 				 				position="510,420" 	size="150,150" zPosition="10" transparent="1" alphatest="on"/>
-		<widget source="list" render="Listbox" 				position="700,380" 	size="510,198" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="text" 								position="670,120" 	size="540,300" 	font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget name="portpic" 				 				position="510,435" 	size="150,150" zPosition="10" transparent="1" alphatest="on"/>
+		<widget source="list" render="Listbox" 				position="700,430" 	size="510,160" 	zPosition="13" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -4570,7 +4600,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
-		<widget name="config" 								position="700,380" 	size="510,198" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
+		<widget name="config" 								position="700,430" 	size="510,160" 	itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>            
 	</screen>
 	<!-- LCD/OLED Screens -->
 	<screen name="ChannelSelection_summary"		position="0,0" 	size="132,64">
