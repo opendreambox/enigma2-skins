@@ -964,7 +964,21 @@
 	<screen name="NetworkAdapterSelection" position="90,90" size="1100,570" title="Select Network Adapter">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,55" size="760,2" backgroundColor="grey" />
-		<widget name="list" position="0,70" size="760,375" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_30.png" transparent="1" />
+
+ 		<widget source="list" render="Listbox" position="0,70" size="760,375" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_75.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (54, 54), png = 3), # index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaTest(pos = (71, 46), size = (15, 16), png = 4), # index 4 is the default pixmap
+					MultiContentEntryText(pos = (100, 2), size = (520, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
+					MultiContentEntryText(pos = (100, 42), size = (520, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
+				],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		
 		<widget source="introduction" render="Label" position="0,470" size="760,30" zPosition="10" font="Regular;24" halign="center" transparent="1" />
 		<eLabel position="780,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
@@ -2161,8 +2175,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="titles" render="Listbox" position="10,100" size="1080,360" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1">
 			<convert type="StaticMultiList" />
 		</widget>
-		<widget source="space_bar" render="Progress" position="10,480" size="1080,26" borderWidth="1" backgroundColor="grey" />
-		<widget source="space_label" render="Label" position="20,484" size="1060,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+
+		<widget source="space_bar_single" 	render="Progress" 	position="10,480" size=" 540,26" zPosition="2" borderWidth="1" backgroundColor="grey" />
+		<widget source="space_label_single" render="Label" 		position="20,484" size=" 520,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+		<widget source="space_bar_dual" 	render="Progress" 	position="10,480" size="1080,26" zPosition="1" borderWidth="1" backgroundColor="grey" />
+		<widget source="space_label_dual" 	render="Label" 		position="20,484" size="1060,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532" zPosition="1" size="250,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button.png" position="290,532" zPosition="1" size="250,38" alphatest="blend" />
