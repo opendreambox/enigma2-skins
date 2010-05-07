@@ -1227,7 +1227,19 @@
 		<eLabel text="Select Network Adapter" position="80,110" size="322,95" zPosition="3" font="Regular;27" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<ePixmap position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
 		<widget source="session.VideoPicture" render="Pig" position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000" />
-		<widget name="list" position="550,120" size="660,200" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_30.png" transparent="1" />
+ 		<widget source="list" render="Listbox" position="550,120" size="660,225" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_75.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_75_bg.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (54, 54), png = 3), # index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaTest(pos = (71, 46), size = (15, 16), png = 4), # index 4 is the default pixmap
+					MultiContentEntryText(pos = (100, 2), size = (520, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
+					MultiContentEntryText(pos = (100, 42), size = (520, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
+				],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
 		<eLabel position="550,590" size="660,2" backgroundColor="black" zPosition="5" />
 		<eLabel position="550,592" size="660,2" backgroundColor="grey" zPosition="5" />
 		<widget source="introduction" render="Label" position="550,600" size="660,27" zPosition="1" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
