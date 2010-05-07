@@ -1227,7 +1227,7 @@
 		<eLabel text="Select Network Adapter" position="80,110" size="322,95" zPosition="3" font="Regular;27" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
 		<ePixmap position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
 		<widget source="session.VideoPicture" render="Pig" position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000" />
- 		<widget source="list" render="Listbox" position="550,120" size="660,225" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_75.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_75_bg.png" transparent="1">
+ 		<widget source="list" render="Listbox" position="550,120" size="660,450" scrollbarMode="showOnDemand" selectionPixmap="BrushedAlu-HD/frame/sel770_75.png" backgroundPixmap="BrushedAlu-HD/frame/sel770_75_bg.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (54, 54), png = 3), # index 3 is the interface pixmap
