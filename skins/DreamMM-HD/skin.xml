@@ -974,8 +974,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 			</convert>
 		</widget>
 
-	    <widget source="space_bar" render="Progress" 	position="10,390" size="1020,26" borderWidth="1" backgroundColor="grey" />
-	    <widget source="space_label" render="Label"  	position="20,394" size="1000,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+	    <widget source="space_bar_single" render="Progress" position="10,390" size=" 510,26" zPosition="2" borderWidth="1" backgroundColor="grey" />
+	    <widget source="space_label_single" render="Label"  position="20,394" size=" 490,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+	    <widget source="space_bar_dual" render="Progress" 	position="10,390" size="1020,26" zPosition="1" borderWidth="1" backgroundColor="grey" />
+	    <widget source="space_label_dual" render="Label"  	position="20,394" size="1000,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
 	</screen>
 	<screen name="TitleCutter" 						position="0,0" size="1280,720" title="Cutlist editor" backgroundColor="#18252e" flags="wfNoBorder" >
 		<eLabel text="TitleCutter" 						position="100,70" size="300,30" font="Regular;28" backgroundColor="#18252e" transparent="1"/>
@@ -1501,12 +1503,22 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="260,2" zPosition="1" size="260,38" font="Regular;24" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
 		<widget source="key_yellow" render="Label" position="520,2" zPosition="1" size="260,38" font="Regular;24" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
 		<widget source="key_blue" render="Label" position="780,2" zPosition="1" size="260,38" font="Regular;22" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
-
-		<eLabel 			position="10,50" size="1020,323" zPosition="-2" backgroundColor="background1"/>
-		<eLabel 			position="14,54" size="1016,319" zPosition="-1" backgroundColor="background2"/>
-		<widget name="list" position="14,54" size="1012,315" scrollbarMode="showOnDemand" selectionPixmap="DreamMM-HD/selpic/sel32.png"/>
-
-		<widget source="introduction" render="Label" position=" 10,385" size="760,30" zPosition="1" font="Regular;24" halign="center" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
+		<eLabel position="20,55" size="1000,308" zPosition="-2" backgroundColor="background1"/>
+		<eLabel position="24,59" size=" 996,304" zPosition="-1" backgroundColor="background2"/>
+ 		<widget source="list" render="Listbox" position="24,59" size="992,300" scrollbarMode="showOnDemand" selectionPixmap="DreamMM-HD/selpic/sel75.png">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (54, 54), png = 3), # index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaTest(pos = (71, 46), size = (15, 16), png = 4), # index 4 is the default pixmap
+					MultiContentEntryText(pos = (100, 2), size = (520, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
+					MultiContentEntryText(pos = (100, 42), size = (520, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
+				],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position=" 20,385" size="1000,30" zPosition="1" font="Regular;24" halign="center" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 	</screen>
 	<!-- Network adapter test -->
 	<screen name="NetworkAdapterTest" 				position="center,110" size="1040,540" title="Network test...">
