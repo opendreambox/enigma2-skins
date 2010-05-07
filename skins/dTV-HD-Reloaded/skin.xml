@@ -1165,7 +1165,19 @@
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="0,55" size="780,2" backgroundColor="grey" />
-		<widget name="list" position="20,70" size="740,375" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_30.png" transparent="1" />
+ 		<widget source="list" render="Listbox" position="20,70" size="740,375" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select780_75.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (54, 54), png = 3), # index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaTest(pos = (71, 46), size = (15, 16), png = 4), # index 4 is the default pixmap
+					MultiContentEntryText(pos = (100, 2), size = (520, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
+					MultiContentEntryText(pos = (100, 42), size = (520, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
+				],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
 		<widget source="introduction" render="Label" position="0,470" size="760,30" zPosition="10" font="Regular;24" halign="center" transparent="1" />
 		<eLabel position="780,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
@@ -2550,17 +2562,17 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="10,393" size="740,1" backgroundColor="black" />
 		<eLabel position="10,472" size="740,1" backgroundColor="black" />
 		<widget name="freeDiskSpace" position="10,485" size="760,25" font="Regular;22" halign="center" />
-		<widget source="Service" render="Label" position="790,10" zPosition="1" size="310,50" font="Regular;24" halign="center" foregroundColor="white">
+		<widget source="Service" render="Label" position="790,10" zPosition="1" size="300,50" font="Regular;24" halign="center" foregroundColor="white">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="790,70" zPosition="1" size="310,48" font="Regular;22" halign="center" foregroundColor="#cccccc">
+		<widget source="Service" render="Label" position="790,70" zPosition="1" size="300,48" font="Regular;22" halign="center" foregroundColor="#cccccc">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="790,130" zPosition="1" size="310,22" font="Regular;22" halign="center">
+		<widget source="Service" render="Label" position="790,130" zPosition="1" size="300,22" font="Regular;22" halign="center">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget source="Service" render="Label" position="790,166" zPosition="1" size="310,344" font="Regular;20" foregroundColor="#dddddd">
+		<widget source="Service" render="Label" position="790,166" zPosition="1" size="300,344" font="Regular;20" foregroundColor="#dddddd">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
@@ -2592,13 +2604,32 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
-		<widget source="title_label" render="Label" position="10,48" size="1080,45" font="Regular;22" />
-		<widget name="error_label" position="10,48" size="1080,395" zPosition="3" font="Regular;20" />
-		<widget source="titles" render="Listbox" position="10,100" size="1080,360" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1">
-			<convert type="StaticMultiList" />
+		<widget source="title_label" render="Label" position="10,10" size="770,50" font="Regular;22" />
+		<widget name="error_label" position="10,10" size="1080,433" zPosition="3" font="Regular;20" />
+
+		<widget source="titles" render="Listbox" position="10,70" size="1080,360" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_60.png" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (5, 2), size = (680, 28), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
+						MultiContentEntryText(pos = (5, 30), size = (680, 25), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 description,
+						MultiContentEntryText(pos = (685, 5), size = (255, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 begin time,
+						MultiContentEntryText(pos = (685, 30), size = (255, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 channel,
+						MultiContentEntryText(pos = (940, 30), size = (100, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # index 4 channel,
+					],
+				"fonts": [gFont("Regular", 24), gFont("Regular", 20)],
+				"itemHeight": 60
+				}
+			</convert>
 		</widget>
-		<widget source="space_bar" render="Progress" position="10,480" size="1080,26" borderWidth="1" backgroundColor="grey" />
-		<widget source="space_label" render="Label" position="20,484" size="1060,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+
+		<widget source="space_bar_single" 	render="Progress" 	position="10,480" size=" 540,26" zPosition="2" borderWidth="1" backgroundColor="grey" />
+		<widget source="space_label_single" render="Label" 		position="20,484" size=" 520,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+		<widget source="space_bar_dual" 	render="Progress" 	position="10,480" size="1080,26" zPosition="1" borderWidth="1" backgroundColor="grey" />
+		<widget source="space_label_dual" 	render="Label" 		position="20,484" size="1060,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+
+		<ePixmap pixmap="dTV-HD-Reloaded/buttons/menu.png" 	position="770,12" size="70,30" alphatest="on" />
+		<widget source="hint" render="Label" 				position="860,14" size="230,30" font="Regular;22" halign="left"/>
+
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position=" 20,532" zPosition="1" size="250,38" />
 		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="290,532" zPosition="1" size="250,38" />
