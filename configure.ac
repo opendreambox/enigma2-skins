@@ -148,10 +148,6 @@ AC_OUTPUT([
 ./skins/Vali-XD/Validator/Makefile
 ./skins/Vali-XD/Vision/Makefile
 ./skins/Vali-XD/window/Makefile
-./skins/very-simple/Makefile
-./skins/very-simple/meta/Makefile
-./skins/very-very-simple/Makefile
-./skins/very-very-simple/meta/Makefile
 ./skins/YADS-HD/Makefile
 ./skins/YADS-HD/buttons/Makefile
 ./skins/YADS-HD/extensions/Makefile

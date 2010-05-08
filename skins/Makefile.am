@@ -5,6 +5,5 @@ SUBDIRS = \
 	Nemesis.Greyline.Extended Nemesis.Greyline.Single Nemesis.BlackBox \
 	Nemesis.ChromeLine Nemesis.ChromeLine.Cobolt Nemesis.GlassLine \
 	Nemesis.ShadowLine dreamTV-HD dTV-HD BrushedAlu-HD SWAIN-HD \
-	SWAIN simple very-simple very-very-simple BASIC-HD UltraViolet \
-	DreamMM-HD YADS-HD Elgato-HD dTV-HD-Reloaded Kerni-HD1R2 dmm-HD Vali-XD \
-	Kerni-HD1
+	SWAIN simple BASIC-HD UltraViolet DreamMM-HD YADS-HD Elgato-HD \
+	dTV-HD-Reloaded Kerni-HD1R2 dmm-HD Vali-XD Kerni-HD1
