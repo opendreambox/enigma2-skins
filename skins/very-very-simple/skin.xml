@@ -573,7 +573,19 @@
 		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_yellow" render="Label" position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_blue" render="Label" position="466,5" zPosition="1" size="150,35" font="Regular;17" halign="center" valign="center" backgroundColor="blue" shadowColor="background" shadowOffset="-2,-2" />
-		<widget name="list" position="10,50" size="600,300" scrollbarMode="showOnDemand" />
+		<widget source="list" render="Listbox" position="10,50" size="600,300" zPosition="10" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (85, 3), size = (500, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
+						MultiContentEntryText(pos = (85, 43), size = (500, 24), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (54, 54), png = 3), # index 3 is the interface pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (63, 46), size = (15, 16), png = 4), # index 4 is the default pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
 		<eLabel position=" 0,397" size="620,33" backgroundColor="background2" />
 		<widget source="introduction" render="Label" position="10,402" size="600,25" zPosition="1" font="Regular;22" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center" />
 	</screen>
@@ -1357,8 +1369,10 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget source="titles" render="Listbox" position="10,86" size="600,312" scrollbarMode="showOnDemand">
 			<convert type="StaticMultiList" />
 		</widget>
-		<widget source="space_bar" render="Progress" position="10,410" size="600,26" borderWidth="1" backgroundColor="#254f7497" />
-		<widget source="space_label" render="Label" position="40,414" size="540,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+		<widget source="space_bar_single" 	render="Progress" 	position="10,410" size="300,26" zPosition="2" borderWidth="1" backgroundColor="#254f7497" />
+		<widget source="space_label_single" render="Label" 		position="20,414" size="280,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+		<widget source="space_bar_dual" 	render="Progress"	position="10,410" size="600,26" zPosition="1" borderWidth="1" backgroundColor="#254f7497" />
+		<widget source="space_label_dual" 	render="Label" 		position="20,414" size="580,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
 	</screen>
 	<screen name="TitleProperties" position=" 50,90" size="620,445" title="Properties of current title">
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
