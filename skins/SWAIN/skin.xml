@@ -1171,7 +1171,19 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="NetworkAdapterSelection" position=" 96,105" size="623,470" title="Select Network Adapter" backgroundColor="transparent">
 		<eLabel position="2, 4" size="600, 408" zPosition="-1" backgroundColor="background" />
-		<widget name="list" position="12, 12" size="580,160" scrollbarMode="showOnDemand" />
+		<widget source="list" render="Listbox" position="12,12" size="580,150" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent"> <!--  iface, name, description, interfacepng, defaultpng, activepng, divpng  -->
+				{"template": [
+						MultiContentEntryText(pos = (85, 6), size = (440, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
+						MultiContentEntryText(pos = (85, 43), size = (440, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (54, 54), png = 3), # index 3 is the interface pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (63, 46), size = (15, 16), png = 4), # index 4 is the default pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 70
+				}
+			</convert>
+		</widget>
 		<eLabel position="12,370" size="580, 1" backgroundColor="lgrey" />
 		<widget source="introduction" render="Label" position="12,379" size="580,21" font="Regular;20" halign="center" />
 		<widget source="key_red" render="Label" position=" 2,420" size="150, 28" font="Regular; 20" halign="center" valign="center" backgroundColor="red" />
@@ -1587,8 +1599,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="titles" render="Listbox" position="8,64" size="572,300" scrollbarMode="showOnDemand">
 			<convert type="StaticMultiList" />
 		</widget>
-		<widget source="space_bar" render="Progress" position="8,376" size="572,20" borderWidth="1" backgroundColor="lgrey" />
-		<widget source="space_label" render="Label" position="14,379" size="561,17" zPosition="2" font="Regular;17" halign="center" transparent="1" foregroundColor="black" backgroundColor="lgrey" />
+		<widget source="space_bar_single" 	render="Progress" 	position="8,376"  size="572,20" zPosition="2" borderWidth="1" backgroundColor="lgrey" />
+		<widget source="space_label_single" render="Label" 		position="14,379" size="561,17" zPosition="3" font="Regular;17" halign="center" transparent="1" foregroundColor="black" backgroundColor="lgrey" />
+		<widget source="space_bar_dual" 	render="Progress" 	position="8,376"  size="572,20" zPosition="1" borderWidth="1" backgroundColor="lgrey" />
+		<widget source="space_label_dual" 	render="Label" 		position="14,379" size="561,17" zPosition="2" font="Regular;17" halign="center" transparent="1" foregroundColor="black" backgroundColor="lgrey" />
 		<widget source="key_red" render="Label" position=" 2,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
 		<widget source="key_green" render="Label" position="152,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="green" />
 		<widget source="key_yellow" render="Label" position="302,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
