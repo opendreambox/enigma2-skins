@@ -1367,7 +1367,20 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Select Network Adapter" 	position="480,110" size="730,30" font="Regular;24" backgroundColor="backtop" transparent="1"/>
 		<eLabel 								position="480,146" size="730,440" zPosition="1" backgroundColor="grey" />
 		<eLabel 								position="482,148" size="726,436" zPosition="2" backgroundColor="background" />
-		<widget name="list" 					position="490,156" size="710,420" zPosition="3" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+
+ 		<widget source="list" render="Listbox" position="490,156" size="710,420" zPosition="3" enableWrapAround="1" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (54, 54), png = 3), # index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaTest(pos = (71, 46), size = (15, 16), png = 4), # index 4 is the default pixmap
+					MultiContentEntryText(pos = (100, 2), size = (520, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
+					MultiContentEntryText(pos = (100, 42), size = (520, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
+				],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
 
 		<widget source="introduction" render="Label" position="480,595" size="730,27" zPosition="10" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
 
