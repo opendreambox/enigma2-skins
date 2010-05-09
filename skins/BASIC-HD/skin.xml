@@ -919,7 +919,7 @@
 		<widget source="introduction" render="Label" position="10,460" size="780,30" zPosition="10" font="Regular;22" valign="center" halign="center" transparent="1" />
 	</screen>
 
-	<!-- Network adapter selection -->
+	<!-- Network adapter selection --> <!-- beta can't test on dm800 -->
 	<screen name="NetworkAdapterSelection" position="240,130" size="800,500" title="Select Network Adapter">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
@@ -929,7 +929,21 @@
 		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="list" position="10,40" size="780,400" scrollbarMode="showOnDemand" zPosition="10" />
+		<widget source="list" render="Listbox" position="10,40" size="780,400" zPosition="10" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent"> <!--  iface, name, description, interfacepng, defaultpng, activepng, divpng  -->
+                                  {"template": [
+                                                  MultiContentEntryText(pos = (85, 6), size = (440, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
+                                                  MultiContentEntryText(pos = (85, 43), size = (440, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
+                                                  MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (54, 54), png = 3), # index 3 is the interface pixmap
+                                                  MultiContentEntryPixmapAlphaTest(pos = (63, 46), size = (15, 16), png = 4), # index 4 is the default pixmap
+                                         ],
+                                  "fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+                                  "itemHeight": 70
+                                  }
+                          </convert>
+                  </widget>
+ 
+
 		<widget name="introduction" render="Label" position="10,460" size="780,30" zPosition="10" font="Regular;22" valign="center" halign="center" transparent="1" />
 	</screen>
 
