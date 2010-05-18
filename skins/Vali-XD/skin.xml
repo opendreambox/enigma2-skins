@@ -1,5 +1,5 @@
 <skin>
-  <!--  Skin:  Vali-XD   by Vali (c)2010     -->
+  <!--  Skin:  Vali-XD   by Vali (c)2009-2010     -->
   <!--  This skin is a Freeware. Everyone can modify and use it in other images.    -->
   <!--  BUT DO NOT REMOVE OR CHANGE THE SECOND LINE !!!    -->
 
@@ -24,8 +24,7 @@
 	<screen flags="wfNoBorder" name="Volume" position="40,30" size="200,35" title="Volume">
 		<ePixmap pixmap="Vali-XD/infobar/volumeslider.png" position="0,0" size="200,35" zPosition="2"/>
 		<widget name="Volume" pixmap="Vali-XD/infobar/volumeslider_bar.png" position="37,10" size="158,15" transparent="1" zPosition="3"/>
-		<ePixmap pixmap="Vali-XD/infobar/vol_box.png" position="1,1" size="31,33" zPosition="3"/>
-		<!-- <widget backgroundColor="#444444" font="Regular;18" foregroundColor="#f0f0f0" name="VolumeText" position="7,7" size="30,20" transparent="1" zPosition="4"/> -->
+		<widget backgroundColor="#444444" font="Regular;18" foregroundColor="#f0f0f0" render="vRendVolumeText" source="global.CurrentTime" position="7,7" size="30,20" transparent="1" zPosition="4"/>
 	</screen>
 	
 	<screen flags="wfNoBorder" name="Mute" position="40,30" size="45,45" title="Mute" zPosition="10">
@@ -67,6 +66,9 @@
 		<color name="transparent" value="#ff000000"/>
 		<color name="transpBlack" value="#65000000"/>
 		<color name="transpWhite" value="#80ffffff"/>
+		<color name="movieRecording" value="#ff4A3C"/>
+		<color name="movieWatching" value="#a0b0e9"/>
+		<color name="movieFinished" value="#56C856"/>
 	</colors>
 	
 	<!--  ##### Window ##### -->
@@ -105,16 +107,15 @@
 	<!--  ##### InfoBars ##### -->
 	<screen backgroundColor="background" flags="wfNoBorder" name="InfoBar" position="0,429" size="1024,176" title="InfoBar">
 		<ePixmap alphatest="off" pixmap="Vali-XD/Vision/v2.png" position="0,0" size="1024,176" zPosition="0"/>
-		<widget alphatest="blend" position="45,19" render="Picon" size="100,60" source="session.CurrentService" transparent="1" zPosition="4">
-			<convert type="ServiceName">Reference</convert>
-		</widget>
-		<widget backgroundColor="secondBG" font="Regular;22" foregroundColor="secondFG" halign="right" position="15,83" render="Label" size="90,24" source="global.CurrentTime" transparent="1" zPosition="3">	
+		<widget backgroundColor="secondBG" font="Regular;18" foregroundColor="foreground" halign="left" position="890,24" render="vRendVideoSize" size="102,20" source="session.CurrentService" transparent="1" zPosition="3"/>
+		<widget backgroundColor="secondBG" font="Regular;30" foregroundColor="grey" halign="center" position="35,90" render="vRendChNumber" size="120,30" source="session.CurrentService" transparent="1" zPosition="3"/>
+		<widget backgroundColor="secondBG" font="Regular;28" foregroundColor="secondFG" halign="right" position="25,20" render="Label" size="90,32" source="global.CurrentTime" transparent="1" zPosition="3">	
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget backgroundColor="secondBG" font="Regular;22" foregroundColor="secondFG" halign="left" position="105,83" render="Label" size="42,24" source="global.CurrentTime" transparent="1" zPosition="3">
-			<convert type="ClockToText">Format::%S</convert>
+		<widget backgroundColor="secondBG" font="Regular;18" foregroundColor="secondFG" halign="left" position="120,20" render="Label" size="42,24" source="global.CurrentTime" transparent="1" zPosition="3">
+			<convert type="ClockToText">Format:%S</convert>
 		</widget>
-		<widget backgroundColor="secondBG" font="Regular;16" foregroundColor="secondFG" halign="center" position="35,106" render="Label" size="120,27" source="global.CurrentTime" transparent="1" zPosition="3">
+		<widget backgroundColor="secondBG" font="Regular;16" foregroundColor="secondFG" halign="center" position="35,55" render="Label" size="120,22" source="global.CurrentTime" transparent="1" zPosition="3">
 			<convert type="ClockToText">Format:%a %d. %b</convert>
 		</widget>
 		<widget backgroundColor="background" font="OLED;21" foregroundColor="foreground" halign="left" position="180,24" render="Label" size="500,28" source="session.CurrentService" transparent="1" zPosition="3">
@@ -140,9 +141,9 @@
 		</widget>
 		<widget font="Regular;22" halign="right" position="770,96" render="Label" size="90,28" source="session.Event_Next" transparent="1" zPosition="3">
 			<convert type="EventTime">Duration</convert>
-			<convert type="ClockToText">InMinutes</convert>
+			<convert type="vConvClockToText">InStunden</convert>
 		</widget>
-		<widget pixmap="Vali-XD/infobar/p_bar.png" position="165,57" render="Progress" size="695,5" source="session.Event_Now" transparent="1" zPosition="3">
+		<widget backgroundColor="#04404043" pixmap="Vali-XD/infobar/p_bar.png" position="165,57" render="Progress" size="695,5" source="session.Event_Now" transparent="1" zPosition="3">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget alphatest="on" pixmap="Vali-XD/Avalon/ico_crypt_on.png" position="710,25" render="Pixmap" size="24,20" source="session.CurrentService" zPosition="3">
@@ -179,59 +180,13 @@
 		<widget backgroundColor="secondBG" font="Regular;19" foregroundColor="grey" halign="left" position="890,70" render="Label" size="71,20" source="session.FrontendStatus" transparent="1" zPosition="5">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<widget backgroundColor="secondBG" font="Regular;19" foregroundColor="grey" halign="left" position="890,96" render="Label" size="121,20" source="session.FrontendStatus" transparent="1" zPosition="5">
-			<convert type="FrontendInfo">BER</convert>
-		</widget>
-		<eLabel backgroundColor="background" font="OLED;19" text="A" foregroundColor="#66666a" position="890,24" size="30,20" transparent="1" zPosition="7"/>
-		<eLabel backgroundColor="background" font="OLED;19" text="B" foregroundColor="#66666a" position="910,24" size="30,20" transparent="1" zPosition="7"/>
-		<eLabel backgroundColor="background" font="OLED;19" text="C" foregroundColor="#66666a" position="930,24" size="30,20" transparent="1" zPosition="7"/>
-		<eLabel backgroundColor="background" font="OLED;19" text="D" foregroundColor="#66666a" position="950,24" size="30,20" transparent="1" zPosition="7"/>
-		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="890,24" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">1</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="910,24" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">2</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" text="C" position="930,24" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">4</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.TunerInfo" render="FixedLabel" text="D" position="950,24" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">8</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="A" position="890,24" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">0,0</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="B" position="910,24" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">1,1</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="C" position="930,24" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">2,2</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="D" position="950,24" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">3,3</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
+		<widget backgroundColor="secondBG" font="Regular;19" foregroundColor="grey" position="890,96" render="vRendMaxTemp" size="121,20" source="global.CurrentTime" transparent="1" zPosition="5"/>
 	</screen>
 
 	<screen backgroundColor="background" flags="wfNoBorder" name="MoviePlayer" position="0,429" size="1024,176" title="MoviePlayer">
 		<ePixmap alphatest="off" pixmap="Vali-XD/Vision/v2.png" position="0,0" size="1024,176" zPosition="0"/>
 		<ePixmap alphatest="on" pixmap="Vali-XD/dvr/dvr_klein.png" position="460,60" size="103,26" transparent="1" zPosition="2"/>
-		<!-- <widget backgroundColor="secondBG" font="Regular;18" foregroundColor="foreground" halign="left" position="875,85" render="vSize" size="120,21" source="session.CurrentService" transparent="1" zPosition="3"/> -->
+		<widget backgroundColor="secondBG" font="Regular;18" foregroundColor="foreground" halign="left" position="875,85" render="vRendVideoSize" size="120,21" source="session.CurrentService" transparent="1" zPosition="3"/>
 		<widget backgroundColor="secondBG" font="Regular;28" foregroundColor="secondFG" halign="right" position="20,35" render="Label" size="90,32" source="global.CurrentTime" transparent="1" zPosition="3">	
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -275,7 +230,7 @@
 	<screen backgroundColor="background" flags="wfNoBorder" name="DVDPlayer" position="0,429" size="1024,176" title="DVDPlayer">
 		<ePixmap alphatest="off" pixmap="Vali-XD/Vision/v2.png" position="0,0" size="1024,176" zPosition="0"/>
 		<ePixmap alphatest="on" pixmap="Vali-XD/dvr/dvr_klein.png" position="460,60" size="103,26" transparent="1" zPosition="2"/>
-		<!-- <widget backgroundColor="secondBG" font="Regular;18" foregroundColor="foreground" halign="left" position="875,85" render="vSize" size="120,21" source="session.CurrentService" transparent="1" zPosition="3"/> -->
+		<widget backgroundColor="secondBG" font="Regular;18" foregroundColor="foreground" halign="left" position="875,85" render="vRendVideoSize" size="120,21" source="session.CurrentService" transparent="1" zPosition="3"/>
 		<widget backgroundColor="secondBG" font="Regular;28" foregroundColor="secondFG" halign="right" position="20,35" render="Label" size="90,32" source="global.CurrentTime" transparent="1" zPosition="3">	
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -364,6 +319,7 @@
 			<convert type="ClockToText">Format:%A %d.%b  %H:%M</convert>
 		</widget>
 	</screen>
+	
 	
 	
 
@@ -510,17 +466,52 @@
 	<!--  +++++++++++++++++++++++++++++++++++++++++++++ MAIN CODE ++++++++++++++++++++++++++++++++++++++++++++++++++  -->
 	<!--  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
 	<screen flags="wfNoBorder" backgroundColor="background" name="SecondInfoBar" position="0,0" size="1024,73" title=" " zPosition="-1">
-		<widget source="session.CurrentService" render="Label" font="Regular;18" position="50,32" size="100,22" halign="right" transparent="1" zPosition="7">
-			<convert type="ServiceInfo">VideoWidth</convert>
+		<widget backgroundColor="background" font="Replacement;18" foregroundColor="foreground" halign="left" position="200,8" render="Label" size="824,70" source="session.CurrentService" transparent="1" valign="center" zPosition="7">
+			<convert type="vConvSmartInfo">ExpertInfo</convert>
 		</widget>
-		<eLabel backgroundColor="background" font="Regular;18" halign="center" text="x" foregroundColor="#88888a" position="150,32" size="30,22" transparent="1" zPosition="7"/>
-		<widget source="session.CurrentService" render="Label" font="Regular;18" position="180,32" size="100,22" halign="left" transparent="1" zPosition="7">
-			<convert type="ServiceInfo">VideoHeight</convert>
+		<eLabel backgroundColor="background" font="OLED;19" text="A" foregroundColor="#66666a" position="50,32" size="30,20" transparent="1" zPosition="7"/>
+		<eLabel backgroundColor="background" font="OLED;19" text="B" foregroundColor="#66666a" position="80,32" size="30,20" transparent="1" zPosition="7"/>
+		<eLabel backgroundColor="background" font="OLED;19" text="C" foregroundColor="#66666a" position="110,32" size="30,20" transparent="1" zPosition="7"/>
+		<eLabel backgroundColor="background" font="OLED;19" text="D" foregroundColor="#66666a" position="140,32" size="30,20" transparent="1" zPosition="7"/>
+		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="50,32" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel backgroundColor="background" font="Regular;18" halign="right" text="provider: " foregroundColor="#88888a" position="300,32" size="150,22" transparent="1" zPosition="7"/>
-		
-		<widget source="session.CurrentService" render="Label" position="460,32" size="524,22" font="Regular;18" transparent="1" zPosition="7">
-			<convert type="ServiceName">Provider</convert>
+		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="80,32" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="C" position="110,32" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="FixedLabel" text="D" position="140,32" zPosition="8" size="30,20" font="OLED;19" foregroundColor="orange" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="A" position="50,32" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="B" position="80,32" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="C" position="110,32" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="D" position="140,32" zPosition="9" size="30,20" font="OLED;19" foregroundColor="green" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<ePixmap alphatest="off" pixmap="Vali-XD/border/down-shadow.png" position="0,65" size="1024,8" zPosition="10"/>
 	</screen>
@@ -1020,7 +1011,19 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 		<widget font="Regular;20" halign="left" position="50,0" render="Label" size="220,50" source="key_red" transparent="1" valign="center" zPosition="1"/>
 		<widget font="Regular;20" halign="left" position="345,0" render="Label" size="220,50" source="key_green" transparent="1" valign="center" zPosition="1"/>
 		<widget font="Regular;20" halign="left" position="630,0" render="Label" size="220,50" source="key_yellow" transparent="1" valign="center" zPosition="1"/>
-		<widget name="list" position="55,65" scrollbarMode="showOnDemand" size="785,280" zPosition="10"/>
+		<widget source="list" render="Listbox" position="55,65" size="785,280" zPosition="10" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (85, 6), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+						MultiContentEntryText(pos = (85, 43), size = (700, 24), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2),
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (54, 54), png = 3),
+						MultiContentEntryPixmapAlphaTest(pos = (63, 46), size = (15, 16), png = 4),
+					],
+				"fonts": [gFont("Regular", 26),gFont("Regular", 20)],
+				"itemHeight": 70
+				}
+			</convert>
+		</widget>
 		<widget font="Regular;21" halign="center" position="50,375" render="Label" size="800,60" source="introduction" transparent="1" valign="center" zPosition="10"/>
 	</screen>
 	
@@ -1187,7 +1190,7 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 		<widget font="Regular;17" position="60,445" render="Label" size="904,82" source="Service" zPosition="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget name="freeDiskSpace" foregroundColor="secondFG" position="620,52" size="355,40" font="Regular;17" valign="center" transparent="1" zPosition="4"/>
+		<widget font="Regular;17" foregroundColor="secondFG" position="620,52" render="vRendMovieDirSize" size="355,40" source="global.CurrentTime" transparent="1" valign="center" zPosition="4"/>
 		<eLabel backgroundColor="darkgrey" position="50,415" size="924,2" zPosition="5"/>
 		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
 	</screen>
@@ -1706,7 +1709,7 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 		<eLabel backgroundColor="secondBG" position="872,8" size="152,169" zPosition="1"/>
 		<eLabel backgroundColor="#0444444a" position="330,24" size="420,4" zPosition="2"/>
 		<ePixmap alphatest="on" pixmap="Vali-XD/dvr/dvr.png" position="165,15" size="150,20" transparent="1" zPosition="2"/>
-		<!-- <widget backgroundColor="secondBG" font="Regular;18" foregroundColor="grey" halign="center" position="30,37" render="vSize" size="120,20" source="session.CurrentService" transparent="1" zPosition="3"/> -->
+		<!-- <widget backgroundColor="secondBG" font="Regular;18" foregroundColor="grey" halign="center" position="30,37" render="vRendVideoSize" size="120,20" source="session.CurrentService" transparent="1" zPosition="3"/> -->
 		<widget backgroundColor="secondBG" font="Regular;30" foregroundColor="secondFG" halign="right" position="20,58" render="Label" size="90,32" source="global.CurrentTime" transparent="1" zPosition="3">
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -2010,14 +2013,13 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 		<ePixmap alphatest="on" pixmap="Vali-XD/buttons/key-yellow.png" position="285,5" size="140,40" transparent="1"/>
 		<ePixmap alphatest="on" pixmap="Vali-XD/buttons/key-blue.png" position="425,5" size="140,40" transparent="1"/>
 	</screen>
-
 	
 	
 	
 	
 	
 	
-	
+	<!--  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
 	<!--  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
 	<!--  +++++++++++++++++++++++++++++++++++++++++++++ OLED +++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
 	<!--  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
@@ -2045,9 +2047,6 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 		</widget>
 		<widget borderWidth="1" position="3,36" render="Progress" size="126,4" source="session.Event_Now">
 			<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="session.RecordState" render="FixedLabel" text="R" position="2,43" size="20,20" font="Regular;20" >
-			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget font="Regular;20" halign="left" position="26,40" render="Label" size="106,24" source="global.CurrentTime">
 			<convert type="ClockToText">WithSeconds</convert>
@@ -2079,9 +2078,6 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 		</widget>
 		<widget borderWidth="1" position="3,36" render="Progress" size="126,4" source="session.CurrentService">
 			<convert type="ServicePosition">Position</convert>
-		</widget>
-		<widget source="session.RecordState" render="FixedLabel" text="R" position="2,43" size="20,20" font="Regular;20" >
-			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget font="Regular;20" halign="left" position="26,40" render="Label" size="106,20" source="global.CurrentTime">
 			<convert type="ClockToText">WithSeconds</convert>
