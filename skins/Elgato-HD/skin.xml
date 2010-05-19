@@ -79,7 +79,7 @@
 	</subtitles>
 	<screen name="InfoBar" 							position="50,550" size="1180,130" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1180,130" zPosition="-1" pixmap="Elgato-HD/info_bg.png" />
-		<widget source="session.RecordState" render="Pixmap" 	position="2,2" size="38,38" zPosition="1" pixmap="Elgato-HD/rec.png" alphatest="blend">
+		<widget source="session.RecordState" render="Pixmap" 	position="2,2" size="38,38" zPosition="2" pixmap="Elgato-HD/rec.png" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Picon" 	position=" 40,35" size="100,60" zPosition="1" alphatest="on">
@@ -267,6 +267,9 @@
 	</screen>
 	<screen name="MoviePlayer" 						position="50,550" size="1180,130" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1180,130" zPosition="-1" pixmap="Elgato-HD/info_bg.png" />
+		<widget source="session.RecordState" render="Pixmap" 	position="2,2" size="38,38" zPosition="2" pixmap="Elgato-HD/rec.png" alphatest="blend">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
 		<ePixmap position="45,20" size="120,90" pixmap="Elgato-HD/movie.png" alphatest="blend"/>
 		<eLabel position="180,10" size="2,110" backgroundColor="white"/>
 		<widget source="session.CurrentService" render="Label" position="200,9" size="710,30" font="Regular;28" backgroundColor="background" transparent="1">
