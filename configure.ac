@@ -24,6 +24,7 @@ AC_OUTPUT([
 ./skins/BrushedAlu-HD/meta/Makefile
 ./skins/dmm-HD/Makefile
 ./skins/dmm-HD/buttons/Makefile
+./skins/dmm-HD/extensions/Makefile
 ./skins/dmm-HD/icons/Makefile
 ./skins/dmm-HD/menu/Makefile
 ./skins/dmm-HD/meta/Makefile
