@@ -30,6 +30,7 @@ AC_OUTPUT([
 ./skins/dmm-HD/meta/Makefile
 ./skins/dmm-HD/skin_default/Makefile
 ./skins/dmm-HD/skin_default/icons/Makefile
+./skins/dmm-HD/skin_default/buttons/Makefile
 ./skins/DreamMM-HD/Makefile
 ./skins/DreamMM-HD/buttons/Makefile
 ./skins/DreamMM-HD/icons/Makefile
