@@ -158,13 +158,13 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="(" 										position="370,56" size=" 10,20"	font="Regular;21" halign="center"	backgroundColor="black" transparent="1"/>
-		<widget source="session.Event_Now" render="Label"		position="380,56" size="100,20"	font="Regular;21" halign="center"	backgroundColor="black" transparent="1">
+		<eLabel text="(" 										position="365,55" size=" 10,20"	font="Regular;21" halign="center"	backgroundColor="black" transparent="1"/>
+		<widget source="session.Event_Now" render="Label"		position="375,55" size="100,20"	font="Regular;21" halign="center"	backgroundColor="black" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<eLabel text=")" 										position="480,56" size=" 10,20"	font="Regular;21" halign="center"	backgroundColor="black" transparent="1"/>
-		<widget source="session.Event_Now" render="Label"		position="505,54" size="440,52"	font="Regular;23" halign="left"		backgroundColor="black" transparent="1">
+		<eLabel text=")" 										position="475,55" size=" 10,20"	font="Regular;21" halign="center"	backgroundColor="black" transparent="1"/>
+		<widget source="session.Event_Now" render="Label"		position="495,54" size="440,52"	font="Regular;23" halign="left"		backgroundColor="black" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
 
@@ -181,13 +181,13 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="(" 										position="370,112" size=" 10,20" font="Regular;21" halign="center"	foregroundColor="grey" backgroundColor="black" transparent="1"/>
-		<widget source="session.Event_Next" render="Label" 		position="380,112" size="100,20" font="Regular;21" halign="center"	foregroundColor="grey" backgroundColor="black" transparent="1">
+		<eLabel text="(" 										position="365,111" size=" 10,20" font="Regular;21" halign="center"	foregroundColor="grey" backgroundColor="black" transparent="1"/>
+		<widget source="session.Event_Next" render="Label" 		position="375,111" size="100,20" font="Regular;21" halign="center"	foregroundColor="grey" backgroundColor="black" transparent="1">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
-		<eLabel text=")" 										position="480,112" size=" 10,20" font="Regular;21" halign="center"	foregroundColor="grey" backgroundColor="black" transparent="1"/>
-		<widget source="session.Event_Next" render="Label" 		position="505,112" size="440,24" font="Regular;22" halign="left"		foregroundColor="grey" backgroundColor="black" transparent="1">
+		<eLabel text=")" 										position="475,111" size=" 10,20" font="Regular;21" halign="center"	foregroundColor="grey" backgroundColor="black" transparent="1"/>
+		<widget source="session.Event_Next" render="Label" 		position="495,112" size="440,24" font="Regular;22" halign="left"		foregroundColor="grey" backgroundColor="black" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
 
@@ -2938,7 +2938,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<!-- Media Player -->
 	<screen name="MediaPlayer" 					position="0,0" 		size="1280,720" title="MediaPlayer" 				flags="wfNoBorder" >
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-mp.png" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -2946,33 +2946,33 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="M e d i a P l a y e r" position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="filelist" 		position=" 80,110" size="400,575" enableWrapAround="1" itemHeight="25" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
-		<eLabel 						position="500,110" size="  2,575" backgroundColor="grey" zPosition="5"/>
+		<widget name="filelist" 		position=" 80,120" size="400,550" enableWrapAround="1" itemHeight="25" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel 						position="505,120" size="  2,550" backgroundColor="grey" zPosition="5"/>
 		<widget name="coverArt" 		position="520,110" size="220,220" pixmap="dmm-HD/no_coverArt.png" transparent="1" alphatest="blend" />
-		<widget name="title" 			position="760,110" size="450,70" font="Regular;28" valign="top" backgroundColor="darkgrey" transparent="1" />
+		<widget name="title" 			position="760,110" size="450,70" font="Regular;28" valign="top" foregroundColor="yellow" backgroundColor="darkgrey" transparent="1" />
 		<widget name="artist" 			position="760,180" size="450,25" font="Regular;20" valign="top" foregroundColor="grey2" backgroundColor="darkgrey" transparent="1" />
 		<widget name="album" 			position="760,210" size="450,25" font="Regular;20" valign="top" foregroundColor="grey2" backgroundColor="darkgrey" transparent="1" />
-		<widget name="year" 			position="760,240" size="450,25" font="Regular;20" valign="top" foregroundColor="grey2" backgroundColor="darkgrey" transparent="1" />
-		<widget name="genre" 			position="760,270" size="450,25" font="Regular;20" valign="top" foregroundColor="grey2" backgroundColor="darkgrey" transparent="1" />
-		<ePixmap 						position="760,310" size="450,20" pixmap="dmm-HD/mpb.png" 		zPosition="1"/>
-		<widget name="PositionGauge" 	position="761,304" size="448,25" pointer="dmm-HD/mps.png:448,0" zPosition="2" transparent="1"/>
-		<widget source="session.CurrentService" render="Label" 		position="1060,345" size="60,25" font="Regular;22" halign="right" 	backgroundColor="black" transparent="1">
+		<ePixmap 						position="760,285" size="450,20" pixmap="dmm-HD/mpb.png" 		zPosition="1"/>
+		<widget name="PositionGauge" 	position="761,279" size="448,25" pointer="dmm-HD/mps.png:448,0" zPosition="2" transparent="1"/>
+		<widget source="session.CurrentService" render="Label" 		position="1060,320" size="60,25" font="Regular;22" halign="right" 	backgroundColor="black" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<eLabel text="/"											position="1130,345" size="10,25" font="Regular;22" halign="center"	backgroundColor="black" transparent="1"/>
-		<widget source="session.CurrentService" render="Label" 		position="1150,345" size="60,25" font="Regular;22" halign="left"		backgroundColor="black" transparent="1">
+		<eLabel text="/"											position="1130,320" size="10,25" font="Regular;22" halign="center"	backgroundColor="black" transparent="1"/>
+		<widget source="session.CurrentService" render="Label" 		position="1150,320" size="60,25" font="Regular;22" halign="left"		backgroundColor="black" transparent="1">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
-		<eLabel text="P l a y l i s t" 	position=" 520,390" size="690, 24" font="Regular;22" foregroundColor="grey" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="repeat" 			position="1160,384" size=" 50, 30" pixmaps="dmm-HD/icons/repeat_off.png,dmm-HD/icons/repeat_on.png" transparent="1" alphatest="blend"/>
-		<eLabel 						position=" 520,421" size="690,  2" backgroundColor="grey" />
-		<widget name="playlist" 		position=" 520,435" size="690,250" enableWrapAround="1" itemHeight="25" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
+		<eLabel text="P l a y l i s t" 	position=" 530,365" size="670, 24" font="Regular;22" foregroundColor="grey" backgroundColor="darkgrey" transparent="1"/>
+		<widget name="repeat" 			position="1160,359" size=" 50, 30" pixmaps="dmm-HD/icons/repeat_off.png,dmm-HD/icons/repeat_on.png" transparent="1" alphatest="blend"/>
+		<eLabel 						position=" 520,396" size="690,  2" backgroundColor="grey" />
+		<widget name="playlist" 		position=" 530,420" size="670,250" enableWrapAround="1" itemHeight="25" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
 		<widget name="currenttext" 	position="0,0" size="0,0"/>
 		<widget name="titletext" 	position="0,0" size="0,0"/>
 		<widget name="albumtext" 	position="0,0" size="0,0"/>
 		<widget name="artisttext" 	position="0,0" size="0,0"/>
 		<widget name="yeartext" 	position="0,0" size="0,0"/>
 		<widget name="genretext" 	position="0,0" size="0,0"/>
+		<widget name="year" 		position="0,0" size="0,0"/>
+		<widget name="genre" 		position="0,0" size="0,0"/>
 	</screen>
 	<screen name="MediaPlayerSettings" 			position="0,0" 		size="1280,720" title="Edit settings"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png"/>
