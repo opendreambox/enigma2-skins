@@ -355,9 +355,6 @@
 		<widget source="hddA" render="Label" position="10,315" size="400,40" font="Regular;20" halign="center" />
 		<ePixmap pixmap="skin_default/icons/dmm_logo.png" position="110,410" size="200,10" alphatest="on" />
 	</screen>
-	<screen name="AudioSelection" position="150,90" size="420,230" title="Audio">
-		<widget name="tracks" position="10,10" size="400,200" scrollbarMode="showOnDemand" />
-	</screen>
 	<screen name="BouquetSelector" position="150,90" size="420,430" title="Choose bouquet">
 		<widget name="menu" position="10,10" size="400,400" scrollbarMode="showOnDemand" />
 	</screen>
