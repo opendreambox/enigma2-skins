@@ -34,7 +34,6 @@
 		<font filename="ae_AlMateen.ttf" 	name="Replacement" 	scale="100" replacement="1"/>
 		<font filename="tuxtxt.ttf" 		name="Console" 		scale="100"/>
 		<font filename="nmsbd.ttf" 			name="Arial" 		scale="100"/>
-		<font filename="/usr/share/enigma2/Kerni-HD1R2/fonts/HandelGotD.ttf" 	name="RegularLight" scale="100"/>
 		<font filename="/usr/share/enigma2/Kerni-HD1R2/fonts/HandelGotDBol.ttf" name="Regular" scale="100"/>
 	</fonts>
 	<subtitles>
@@ -615,7 +614,7 @@
 			colorEventProgressbar="yellow" 	colorEventProgressbarSelected="yellow" 
 			colorEventProgressbarBorder="grey" 	colorEventProgressbarBorderSelected="grey"
 			foregroundColorServiceNotAvail="#777777" serviceItemHeight="30"
-			serviceNumberFont="Arial;23" serviceNameFont="Regular;23" serviceInfoFont="RegularLight;21" transparent="1" 
+			serviceNumberFont="Arial;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" 
 		/>
 
 		<widget source="ServiceEvent" render="Label" 	position="795,375" 	size="430,25"	font="Regular;22" 	foregroundColor="yellow" backgroundColor="background2" transparent="1" >
@@ -663,7 +662,7 @@
 
 		<widget source="Title" render="Label" 	position="70,115" size="700,28" font="Regular;23" backgroundColor="background" transparent="1"/>
 		<eLabel 								position="70,155" size="700,2" backgroundColor="grey" />
-		<widget name="list" 					position="70,165" size="700,450" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#777777" serviceItemHeight="30" serviceNumberFont="Arial;23" serviceNameFont="Regular;23" serviceInfoFont="RegularLight;21" transparent="1" />
+		<widget name="list" 					position="70,165" size="700,450" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#777777" serviceItemHeight="30" serviceNumberFont="Arial;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
 
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position=" 70,635" 	size="24,24" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" 	position="250,635" 	size="24,24" alphatest="on" />
