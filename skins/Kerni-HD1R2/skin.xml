@@ -16,6 +16,7 @@
 		<color name="green" 			value="#389416"/>
 		<color name="blue" 				value="#0064c7"/>
 		<color name="yellow" 			value="#e5b243"/>
+		<color name="orange" 			value="#f47d19"/>
 		<color name="transparent" 		value="#ffffffff"/>
 		<color name="transpBlack" 		value="#80000000"/>
 		<color name="background" 		value="#343c4f"/>
@@ -33,7 +34,6 @@
 		<font filename="lcd.ttf" 			name="LCD" 			scale="100"/>
 		<font filename="ae_AlMateen.ttf" 	name="Replacement" 	scale="100" replacement="1"/>
 		<font filename="tuxtxt.ttf" 		name="Console" 		scale="100"/>
-		<font filename="nmsbd.ttf" 			name="Arial" 		scale="100"/>
 		<font filename="/usr/share/enigma2/Kerni-HD1R2/fonts/HandelGotDBol.ttf" name="Regular" scale="100"/>
 	</fonts>
 	<subtitles>
@@ -94,18 +94,6 @@
 
 	<screen name="InfoBar" 						position="0,537" 	size="1280,163" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="1280,163" pixmap="Kerni-HD1R2/infobar.png"/>
-
-		<!-- with channelnr -->
-		<!-- eLabel 											   position=" 65, 7" size="  1,50" backgroundColor="grey"/>
-		<widget source="session.CurrentService" render="Label" position=" 66,12" size=" 74,36" font="Arial;32" halign="center" valign="top" noWrap="1" foregroundColor="yellow" backgroundColor="backtop" transparent="1">
-			<convert type="ExtendedServiceInfo">ServiceNumber</convert>
-		</widget>
-		<eLabel 											   position="140, 7" size="  1,50" backgroundColor="grey"/>
-		<widget source="session.CurrentService" render="Label" position="160,10" size="690,36" font="Regular;30" valign="top" noWrap="1" backgroundColor="backtop" transparent="1">
-			<convert type="ServiceName">Name</convert>
-		</widget -->
-
-		<!-- without channelnr -->
 		<widget source="session.CurrentService" render="Label" position="70,10" size="600,36" font="Regular;30" valign="top" noWrap="1" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -207,16 +195,16 @@
 		<widget source="session.CurrentService" render="Picon" position="82,82" zPosition="4" size="100,60" transparent="1" alphatest="blend">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label"	position=" 200, 78" size=" 70,26" font="Arial;22" halign="right"	backgroundColor="background" transparent="1">
+		<widget source="session.Event_Now" render="Label"	position=" 200, 75" size=" 70,26" font="Regular;22" halign="right"	backgroundColor="background" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-"									position=" 270, 78" size=" 15,26" font="Arial;22" halign="center" 	backgroundColor="background" transparent="1"/>
-		<widget source="session.Event_Now" render="Label"	position=" 285, 78" size=" 70,26" font="Arial;22" halign="left"	backgroundColor="background" transparent="1">
+		<eLabel text="-"									position=" 270, 75" size=" 15,26" font="Regular;22" halign="center" 	backgroundColor="background" transparent="1"/>
+		<widget source="session.Event_Now" render="Label"	position=" 285, 75" size=" 70,26" font="Regular;22" halign="left"	backgroundColor="background" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label"	position=" 360, 75" size="550,26" font="Regular;22" halign="left"	backgroundColor="background" transparent="1">
+		<widget source="session.Event_Now" render="Label"	position=" 370, 75" size="540,26" font="Regular;22" halign="left"	backgroundColor="background" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<eLabel text="(" 									position=" 920, 75" size=" 10,26" font="Regular;20" halign="center"	backgroundColor="background" transparent="1"/>
@@ -225,19 +213,19 @@
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<eLabel text=")" 									position="1030, 75" size=" 10,26" font="Regular;20" halign="center"	backgroundColor="background" transparent="1"/>
-		<widget source="session.Event_Now" render="Progress" position="360,110" size="550, 5" backgroundColor="background" borderWidth="1" borderColor="grey" transparent="1">
+		<widget source="session.Event_Now" render="Progress" position="370,110" size="540, 5" backgroundColor="background" borderWidth="1" borderColor="grey" transparent="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label"	position=" 200,121" size=" 70,26" font="Arial;22" halign="right" 	backgroundColor="background" foregroundColor="grey2" transparent="1">
+		<widget source="session.Event_Next" render="Label"	position=" 200,118" size=" 70,26" font="Regular;22" halign="right" 	backgroundColor="background" foregroundColor="grey2" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-" 									position=" 270,121" size=" 15,26" font="Arial;22" halign="center"	backgroundColor="background" foregroundColor="grey2" transparent="1"/>
-		<widget source="session.Event_Next" render="Label" 	position=" 285,121" size=" 70,26" font="Arial;22" halign="left"		backgroundColor="background" foregroundColor="grey2" transparent="1">
+		<eLabel text="-" 									position=" 270,118" size=" 15,26" font="Regular;22" halign="center"	backgroundColor="background" foregroundColor="grey2" transparent="1"/>
+		<widget source="session.Event_Next" render="Label" 	position=" 285,118" size=" 70,26" font="Regular;22" halign="left"		backgroundColor="background" foregroundColor="grey2" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" 	position=" 360,118" size="550,26" font="Regular;22" halign="left"	backgroundColor="background" foregroundColor="grey2" transparent="1">
+		<widget source="session.Event_Next" render="Label" 	position=" 370,118" size="540,26" font="Regular;22" halign="left"	backgroundColor="background" foregroundColor="grey2" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<eLabel text="(" 									position=" 920,118" size=" 10,26" font="Regular;20" halign="center"	backgroundColor="background" foregroundColor="grey2" transparent="1"/>
@@ -246,7 +234,7 @@
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<eLabel text=")" 									position="1030,118" size=" 10,26" font="Regular;20" halign="center"	backgroundColor="background" foregroundColor="grey2" transparent="1"/>
-		<eLabel 											position="1055,75"  size="  1,70" backgroundColor="grey"/>
+		<eLabel 											position="1055, 75" size="  1,70" backgroundColor="grey"/>
 		<widget source="session.CurrentService" render="Label"	position="1075,75" size="55,18" font="Regular;18" halign="right" 	foregroundColor="yellow" backgroundColor="black" transparent="1">
 			<convert type="ServiceInfo">VideoWidth</convert>
 		</widget>
@@ -292,7 +280,7 @@
 		</widget>
 
 		<widget source="title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-		<widget source="menu" render="Listbox" position="70,120" size="402,440" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+		<widget source="menu" render="Listbox" position="70,120" size="402,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 5), size = (372, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -314,7 +302,7 @@
 		</widget>
 
 		<widget source="title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-		<widget source="menu" render="Listbox" position="70,120" size="402,440" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+		<widget source="menu" render="Listbox" position="70,120" size="402,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 5), size = (372, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -336,7 +324,7 @@
 		</widget>
 
 		<widget source="title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-		<widget source="menu" render="Listbox" position="70,120" size="402,440" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+		<widget source="menu" render="Listbox" position="70,120" size="402,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 5), size = (372, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -358,7 +346,7 @@
 		</widget>
 
 		<widget source="title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-		<widget source="menu" render="Listbox" position="70,120" size="402,440" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+		<widget source="menu" render="Listbox" position="70,120" size="402,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 5), size = (372, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -380,7 +368,7 @@
 		</widget>
 
 		<widget source="title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-		<widget source="menu" render="Listbox" position="70,120" size="402,440" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+		<widget source="menu" render="Listbox" position="70,120" size="402,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 5), size = (372, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -402,7 +390,7 @@
 		</widget>
 
 		<widget source="title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-		<widget source="menu" render="Listbox" position="70,120" size="402,440" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+		<widget source="menu" render="Listbox" position="70,120" size="402,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 5), size = (372, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -424,7 +412,7 @@
 		</widget>
 
 		<widget source="title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
-		<widget source="menu" render="Listbox" position="70,120" size="402,440" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+		<widget source="menu" render="Listbox" position="70,120" size="402,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 5), size = (372, 30), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -610,11 +598,11 @@
 		<widget source="Title" render="Label" 	position="70,115" size="700,28" font="Regular;23" backgroundColor="background" transparent="1"/>
 		<eLabel 			position="70,155" size="700,2" backgroundColor="grey" />
 		<widget name="list" position="70,165" size="700,450" scrollbarMode="showOnDemand" 
-			colorServiceDescription="yellow" 	colorServiceDescriptionSelected="yellow" 
-			colorEventProgressbar="yellow" 	colorEventProgressbarSelected="yellow" 
+			colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" 
+			picServiceEventProgressbar="DMConcinnity-HD/progcl.png"			
 			colorEventProgressbarBorder="grey" 	colorEventProgressbarBorderSelected="grey"
 			foregroundColorServiceNotAvail="#777777" serviceItemHeight="30"
-			serviceNumberFont="Arial;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" 
+			serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" 
 		/>
 
 		<widget source="ServiceEvent" render="Label" 	position="795,375" 	size="430,25"	font="Regular;22" 	foregroundColor="yellow" backgroundColor="background2" transparent="1" >
@@ -662,7 +650,13 @@
 
 		<widget source="Title" render="Label" 	position="70,115" size="700,28" font="Regular;23" backgroundColor="background" transparent="1"/>
 		<eLabel 								position="70,155" size="700,2" backgroundColor="grey" />
-		<widget name="list" 					position="70,165" size="700,450" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#777777" serviceItemHeight="30" serviceNumberFont="Arial;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" />
+		<widget name="list" 					position="70,165" size="700,450" scrollbarMode="showOnDemand" 
+			colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" 
+			picServiceEventProgressbar="DMConcinnity-HD/progcl.png"			
+			colorEventProgressbarBorder="grey" 	colorEventProgressbarBorderSelected="grey"
+			foregroundColorServiceNotAvail="#777777" serviceItemHeight="30"
+			serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" 
+		/>
 
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position=" 70,635" 	size="24,24" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" 	position="250,635" 	size="24,24" alphatest="on" />
@@ -768,7 +762,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget source="session.CurrentService" render="Label" 	position="70,520" size="700,30" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" 	position="70,560" size="700,25" font="Arial;20" halign="center" valign="center" backgroundColor="background" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 	position="70,560" size="700,25" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" >
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
 		<widget name="Timeline" 								position="70,597" size="700,20" backgroundColor="#808888" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
@@ -1303,7 +1297,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 
 		<widget name="coverArt" 	position="970,120" size="250,250" pixmap="Kerni-HD1R2/no_coverArt.png" transparent="1" alphatest="blend" />
 
-		<widget name="title" 		position="510,120" size="400,54" font="Regular;27" valign="top" backgroundColor="background2" transparent="1" />
+		<widget name="title" 		position="510,120" size="400,54" font="Regular;27" valign="top" foregroundColor="orange" backgroundColor="background2" transparent="1" />
 		<widget name="artist" 		position="530,200" size="400,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background2" transparent="1" />
 		<widget name="album" 		position="530,235" size="400,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background2" transparent="1" />
 		<widget name="year" 		position="530,270" size="400,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background2" transparent="1" />
@@ -1316,11 +1310,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="repeat" pixmaps="Kerni-HD1R2/repeat_off.png,Kerni-HD1R2/repeat_on.png" position="110,632" size="50,30" transparent="1" alphatest="blend"/>
  
 
-		<widget source="session.CurrentService" render="Label" 		position="280,636" size="90,25" font="Arial;22" halign="right" 	backgroundColor="black" transparent="1">
+		<widget source="session.CurrentService" render="Label" 		position="280,634" size="90,25" font="Regular;22" halign="right" 	backgroundColor="black" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<eLabel text="/"											position="380,636" size="10,25" font="Arial;22" halign="center"	backgroundColor="black" transparent="1"/>
-		<widget source="session.CurrentService" render="Label" 		position="400,636" size="90,25" font="Arial;22" halign="left"		backgroundColor="black" transparent="1">
+		<eLabel text="/"											position="380,634" size="10,25" font="Regular;22" halign="center"	backgroundColor="black" transparent="1"/>
+		<widget source="session.CurrentService" render="Label" 		position="400,634" size="90,25" font="Regular;22" halign="left"		backgroundColor="black" transparent="1">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 
@@ -1434,7 +1428,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="session.RecordState" 	render="Pixmap" pixmap="Kerni-HD1R2/icons/ico_rec_on.png"		position="1115,7" size="20,20" zPosition="3" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" 			position="  90, 93" size="100,28" font="Arial;24" halign="center" valign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 			position="  90, 93" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1" >
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget source="session.CurrentService" render="PositionGauge"	position=" 220, 83" size="840,10" transparent="1" >
@@ -1443,7 +1437,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="session.CurrentService" render="Progress" 		position=" 220,100" size="840,12" backgroundColor="background" borderWidth="2" borderColor="grey" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" 			position="1090, 93" size="100,28" font="Arial;24" halign="center" valign="center" backgroundColor="background" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 			position="1090, 93" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1" >
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" 			position=" 565,120" size="150,24" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" >
@@ -1887,7 +1881,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<eLabel text="Satfinder" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 
-		<widget source="Frontend" render="Label" 	position="120,120" 	size="600,22" zPosition="2" font="Arial;21" backgroundColor="backtop" halign="center" transparent="1">
+		<widget source="Frontend" render="Label" 	position="120,120" 	size="600,22" zPosition="2" font="Regular;21" backgroundColor="backtop" halign="center" transparent="1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 
@@ -2056,7 +2050,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<eLabel text="Channel Selection" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1"/>
 
-		<widget name="list" position="70,120" size="700,480" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="70,120" size="700,480" scrollbarMode="showOnDemand" 
+			colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" 
+			picServiceEventProgressbar="DMConcinnity-HD/progcl.png"			
+			colorEventProgressbarBorder="grey" 	colorEventProgressbarBorderSelected="grey"
+			foregroundColorServiceNotAvail="#777777" serviceItemHeight="30"
+			serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" 
+		/>
 
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" 		position=" 70,635" 	size="24,24" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" 	position="360,635" 	size="24,24" alphatest="on" />
@@ -2270,16 +2270,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="timerlist" 	position="70,115" size="700,500" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 	<screen name="TimeshiftState" 				position="center,70" zPosition="2" size="860,60" backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget name="state" 										position=" 10, 3" size="150,27" font="Arial;22" halign="center" 	backgroundColor="transpBlack" />
-		<widget source="session.CurrentService" render="Label" 		position="160, 5" size="150,27" font="Arial;22" halign="left" 	foregroundColor="white" backgroundColor="transpBlack">
+		<widget name="state" 										position=" 10, 3" size="150,27" font="Regular;22" halign="center" 	backgroundColor="transpBlack" />
+		<widget source="session.CurrentService" render="Label" 		position="160, 5" size="150,27" font="Regular;22" halign="left" 	foregroundColor="white" backgroundColor="transpBlack">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 
-		<widget source="session.CurrentService" render="Label" 		position="650, 5" size=" 80,27" font="Arial;22" halign="right" 	foregroundColor="white" backgroundColor="transpBlack">
+		<widget source="session.CurrentService" render="Label" 		position="650, 5" size=" 80,27" font="Regular;22" halign="right" 	foregroundColor="white" backgroundColor="transpBlack">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<eLabel 									text="/" 		position="740, 5" size=" 10,27" font="Arial;22" halign="center" 	foregroundColor="white" backgroundColor="transpBlack"/>
-		<widget source="session.CurrentService" render="Label" 		position="760, 5" size=" 80,27" font="Arial;22" halign="left" 	foregroundColor="white" backgroundColor="transpBlack">
+		<eLabel 									text="/" 		position="740, 5" size=" 10,27" font="Regular;22" halign="center" 	foregroundColor="white" backgroundColor="transpBlack"/>
+		<widget source="session.CurrentService" render="Label" 		position="760, 5" size=" 80,27" font="Regular;22" halign="left" 	foregroundColor="white" backgroundColor="transpBlack">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 
@@ -2818,7 +2818,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="session.CurrentService" render="Label" 	position="70,520" size="700,30" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" 	position="70,560" size="700,25" font="Arial;20" halign="center" valign="center" backgroundColor="background" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 	position="70,560" size="700,25" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" >
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
 		<widget name="Timeline" 								position="70,597" size="700,20" backgroundColor="#808888" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
@@ -2896,13 +2896,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
-		<widget source="session.CurrentService" render="Label" 			position="  90, 93" size="100,28" font="Arial;24" halign="center" valign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 			position="  90, 93" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1" >
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Progress" 		position=" 220,100" size="840,12" backgroundColor="background" borderWidth="2" borderColor="grey" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" 			position="1090, 93" size="100,28" font="Arial;24" halign="center" valign="center" backgroundColor="background" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 			position="1090, 93" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1" >
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" 			position=" 565,120" size="150,24" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" >
@@ -3242,10 +3242,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="session.CurrentService" render="Progress" 	position=" 80,580" size="665,10" backgroundColor="background" borderWidth="2" borderColor="grey" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" 		position=" 80,600" size="100,22" font="Arial;20" halign="left" backgroundColor="background" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 		position=" 80,600" size="100,22" font="Regular;20" halign="left" backgroundColor="background" transparent="1" >
 				<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" 		position="645,600" size="100,22" font="Arial;20" halign="right" backgroundColor="background" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 		position="645,600" size="100,22" font="Regular;20" halign="right" backgroundColor="background" transparent="1" >
 				<convert type="ServicePosition">Remaining</convert>
 		</widget>
 
@@ -3377,13 +3377,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<ePixmap position="80,90" size="100,40" zPosition="4" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyTube/plugin.png" alphatest="on" transparent="1" />
-		<widget source="session.CurrentService" render="Label" 			position=" 190, 93" size="100,28" font="Arial;24" halign="center" valign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 			position=" 190, 93" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1" >
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Progress" 		position=" 320,100" size="740,12" backgroundColor="background" borderWidth="2" borderColor="grey" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" 			position="1090, 93" size="100,28" font="Arial;24" halign="center" valign="center" backgroundColor="background" transparent="1" >
+		<widget source="session.CurrentService" render="Label" 			position="1090, 93" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1" >
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" 			position=" 615,120" size="150,24" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" >
