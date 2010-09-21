@@ -2,7 +2,7 @@
 	<prerequisites>
                 <tag type="Skin" />
 	</prerequisites>
-        <info language="en">
+        <info>
                 <author>Nemesis</author>
                 <name>Nemesis Greyline Skin</name>
                 <packagename>enigma2-skin-nemesis.greyline</packagename>
@@ -10,14 +10,7 @@
                 <description>Nemesis Greyline Skin for the Dreambox</description>
 		<screenshot src="http://www.dreamboxupdate.com/preview/skin_nemesis.greyline.jpg" />                    
         </info>
-        <info language="de">
-                <author>Nemesis</author>
-                <name>Nemesis Greyline Skin</name>
-                <packagename>enigma2-skin-nemesis.greyline</packagename>
-                <shortdescription>Nemesis Greyline Skin</shortdescription>
-                <description>Nemesis Greyline Skin für die Dreambox</description>
-		<screenshot src="http://www.dreamboxupdate.com/preview/skin_nemesis.greyline.jpg" />       
-        </info>
+
 	<files type="package"> <!-- without version, without .ipk -->
 		<file type="package" name="enigma2-skin-nemesis.greyline" />
 	</files>

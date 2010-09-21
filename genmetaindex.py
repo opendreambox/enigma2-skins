@@ -1,9 +1,6 @@
-# usage: genmetaindex.py <language> <xml-files>  > index.xml
+# usage: genmetaindex.py <xml-files>  > index.xml
 import sys, os
 from xml.etree.ElementTree import ElementTree, Element
-
-language = sys.argv[1]
-
 
 root = Element("index")
 
@@ -14,23 +11,23 @@ for file in sys.argv[2:]:
 	package = Element("package")
 	package.set("details", os.path.basename(file))
 	
-	# we need all prerequisuited
+	# we need all prerequisites
 	package.append(p.find("prerequisites"))
 	
 	info = None
-	# we need some of the info, but only our locale
+	# we need some of the info, but not all
 	for i in p.findall("info"):
-		if not info or i.get("language") == language:
+		if not info:
 			info = i
 	assert info
 	
 	for i in info[:]:
-		if i.tag not in ["name", "packagename", "shortdescription"]:
+		if i.tag not in ["name", "packagename", "packagetype", "shortdescription"]:
 			info.remove(i)
 
 	for i in info[:]:
 		package.set(i.tag, i.text)
-		
+
 	root.append(package)
 
 def indent(elem, level=0):

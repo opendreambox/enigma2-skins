@@ -2,7 +2,7 @@
 	<prerequisites>
                 <tag type="Skin" />
 	</prerequisites>
-        <info language="en">
+        <info>
                 <author>Nemesis</author>
                 <name>Nemesis ChromeLine Cobolt Skin</name>
                 <packagename>enigma2-skin-nemesis.chromeline.cobolt</packagename>
@@ -10,14 +10,7 @@
                 <description>Nemesis ChromeLine Cobolt Skin for the Dreambox</description>
 		<screenshot src="http://www.dreamboxupdate.com/preview/skin_nemesis.chromeline.cobolt.jpg" />                    
         </info>
-        <info language="de">
-                <author>Nemesis</author>
-                <name>Nemesis ChromeLine Cobolt Skin</name>
-                <packagename>enigma2-skin-nemesis.chromeline.cobolt</packagename>
-                <shortdescription>Nemesis ChromeLine Cobolt Skin</shortdescription>
-                <description>Nemesis ChromeLine Cobolt Skin für die Dreambox</description>
-		<screenshot src="http://www.dreamboxupdate.com/preview/skin_nemesis.chromeline.cobolt.jpg" />       
-        </info>
+
 	<files type="package"> <!-- without version, without .ipk -->
 		<file type="package" name="enigma2-skin-nemesis.chromeline.cobolt" />
 	</files>

@@ -2,22 +2,15 @@
 	  <prerequisites>
                     <tag type="Skin" />
 	  </prerequisites>
-          <info language="en">
+          <info>
                     <author>Kerni</author>
                     <name>SWAIN</name>
                     <packagename>enigma2-skin-swain</packagename>
                     <shortdescription>Kerni's SWAIN skin</shortdescription>
                     <description>A nice looking skin from Kerni</description>
-		    <screenshot src="http://www.dreamboxupdate.com/preview/swain.jpg" />                    
+		    <screenshot src="http://www.dreamboxupdate.com/preview/skin_swain.jpg" />                    
           </info>
-          <info language="de">
-                    <author>Kerni</author>
-                    <name>SWAIN</name>
-                    <packagename>enigma2-skin-swain</packagename>
-                    <shortdescription>Kerni's SWAIN skin</shortdescription>
-                    <description>Ein Skin von Kerni</description>
-		    <screenshot src="http://www.dreamboxupdate.com/preview/swain.jpg" />       
-          </info>
+
 	  <files type="package"> <!-- without version, without .ipk -->
 		<file type="package" name="enigma2-skin-swain" />
 	  </files>
