@@ -1055,9 +1055,9 @@
   <screen flags="wfNoBorder" name="Console" position="0,0" size="1280,720" title="Command execution...">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
     <eLabel backgroundColor="background" position="0,630" size="1280,90" zPosition="-1" />
-    <widget backgroundColor="darkgrey" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1" />
-    <widget backgroundColor="darkgrey" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="vhdConvClockToText">LocaleLang:%w %d %m</convert>
+    <widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+      <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
     </widget>
     <widget font="Console;19" name="text" position="70,110" size="1140,585" />
   </screen>
@@ -3434,8 +3434,8 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/green.png" position="390,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/yellow.png" position="680,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
   </screen>
   <screen flags="wfNoBorder" name="AutoTimerEditor" position="0,0" size="1280,720" title="Edit AutoTimer">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
@@ -3452,10 +3452,10 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/green.png" position="390,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/yellow.png" position="680,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
   </screen>
   <screen flags="wfNoBorder" name="AutoTimerFilterEditor" position="0,0" size="1280,720" title="Edit AutoTimer Filters">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
@@ -3470,10 +3470,10 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/green.png" position="390,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/yellow.png" position="680,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
   </screen>
   <screen flags="wfNoBorder" name="AutoTimerServiceEditor" position="0,0" size="1280,720" title="Edit AutoTimer Services">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
@@ -3488,10 +3488,10 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/green.png" position="390,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/yellow.png" position="680,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
   </screen>
   <screen flags="wfNoBorder" name="AutoTimerImporter" position="0,0" size="1280,720" title="Import AutoTimer">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
@@ -3506,10 +3506,10 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/green.png" position="390,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/yellow.png" position="680,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
   </screen>
   <screen flags="wfNoBorder" name="AutoTimerOverview" position="0,0" size="1280,720" title="AutoTimer Overview">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
@@ -3524,9 +3524,9 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/green.png" position="390,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/yellow.png" position="680,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1" />
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
   </screen>
   <screen flags="wfNoBorder" name="AutoTimerPreview" position="0,0" size="1280,720" title="Preview AutoTimer">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
@@ -3553,8 +3553,9 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/green.png" position="390,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/yellow.png" position="680,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1" />
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
   </screen>
   
   
