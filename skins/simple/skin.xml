@@ -1091,7 +1091,7 @@
 	</screen>
 	<screen name="MediaPlayer" position=" 40,65" size="640,483" title="MediaPlayer">
 		<widget name="coverArt" position=" 16, 30" size="116,116" zPosition="3" alphatest="blend" />
-		<widget name="repeat" position="580, 15" size=" 50,30" pixmaps="very-simple/repeat_off.png,very-simple/repeat_on.png" alphatest="on" />
+		<widget name="repeat" position="580, 15" size=" 50,30" pixmaps="simple/repeat_off.png,simple/repeat_on.png" alphatest="on" />
 		<widget name="artisttext" position="150, 16" size="90,20" font="Regular;18" valign="top" foregroundColor="grey" />
 		<widget name="albumtext" position="150, 40" size="90,20" font="Regular;18" valign="top" foregroundColor="grey" />
 		<widget name="yeartext" position="150, 64" size="90,20" font="Regular;18" valign="top" foregroundColor="grey" />
