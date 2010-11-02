@@ -2420,7 +2420,7 @@
     </widget>
     <widget backgroundColor="background" font="Regular;24" position="520,121" render="Label" size="495,28" source="IF" transparent="1" />
     <widget font="Regular;24" position="1017,121" render="Label" size="160,28" source="Statustext" transparent="1" />
-    <widget alphatest="on" name="statuspic" pixmaps="Vali.HD.nano/buttons/green.png,Vali.HD.nano/buttons/grey.png" position="1181,117" size="35,35" transparent="1" />
+    <widget alphatest="on" name="statuspic" pixmaps="Vali.HD.nano/green.png,Vali.HD.nano/grey.png" position="1181,117" size="35,35" transparent="1" />
     <eLabel backgroundColor="grey" position="520,155" size="700,2" />
     <widget backgroundColor="background" font="Regular;22" foregroundColor="grey" position="579,266" render="Label" size="250,35" source="LabelBSSID" transparent="1" valign="center" />
     <widget backgroundColor="background" font="Regular;22" foregroundColor="grey" position="579,306" render="Label" size="250,35" source="LabelESSID" transparent="1" valign="center" />
@@ -2652,7 +2652,7 @@
     <eLabel backgroundColor="secondBG" font="Regular;20" position="145,645" size="220,26" text="Delete" transparent="1" zPosition="2" />
     <eLabel backgroundColor="secondBG" font="Regular;20" position="435,645" size="220,26" text="Rename" transparent="1" zPosition="2" />
     <eLabel backgroundColor="secondBG" font="Regular;20" position="725,645" size="220,26" text="Move/Copy" transparent="1" zPosition="2" />
-    <eLabel backgroundColor="secondBG" font="Regular;20" position="1015,645" size="220,26" text="Options" transparent="1" zPosition="2" />
+    <eLabel backgroundColor="secondBG" font="Regular;20" position="1015,645" size="220,26" text="Bookmarks" transparent="1" zPosition="2" />
   </screen>
   <screen flags="wfNoBorder" name="vEditor" position="0,0" size="1280,720" title="File-Explorer">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
