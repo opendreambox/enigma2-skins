@@ -2947,10 +2947,10 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/green.png" position="390,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/yellow.png" position="680,643" size="30,30" />
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1" />
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="145,645" render="Label" size="220,26" source="key_red" transparent="1" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" render="Label" size="220,26" source="key_green" transparent="1" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="725,645" render="Label" size="220,26" source="key_yellow" transparent="1" zPosition="1" />
+    <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="1015,645" render="Label" size="220,26" source="key_blue" transparent="1" zPosition="1" />
   </screen>
   
   
