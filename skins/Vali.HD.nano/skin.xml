@@ -3178,7 +3178,7 @@
   </screen>
   <screen flags="wfNoBorder" name="MyTubeSettingsScreen" position="128,70" size="1024,576" title="MyTubePlayerMainScreen...">
     <widget backgroundColor="transparent" position="-256,100" render="Pig" size="256,144" source="session.VideoPicture" zPosition="1" />
-    <ePixmap alphatest="on" pixmap="~/plugin.png" position="50,50" size="100,40" transparent="1" zPosition="1" />
+    <!-- <ePixmap alphatest="on" pixmap="~/plugin.png" position="50,50" size="100,40" transparent="1" zPosition="1" /> -->
     <ePixmap alphatest="on" name="red" pixmap="Vali.HD.nano/red.png" position="155,55" size="30,30" transparent="1" />
     <ePixmap alphatest="on" name="green" pixmap="Vali.HD.nano/green.png" position="335,55" size="30,30" transparent="1" />
     <widget font="Regular;18" halign="left" name="key_red" position="190,50" size="140,40" transparent="1" valign="center" zPosition="2" />
@@ -3188,7 +3188,7 @@
   </screen>
   <screen flags="wfNoBorder" name="MyTubeVideoHelpScreen" position="128,70" size="1024,576" title="MyTubePlayerMainScreen...">
     <widget backgroundColor="transparent" position="-256,100" render="Pig" size="256,144" source="session.VideoPicture" zPosition="1" />
-    <ePixmap alphatest="on" pixmap="~plugin.png" position="50,50" size="100,40" transparent="1" zPosition="1" />
+    <!-- <ePixmap alphatest="on" pixmap="~/plugin.png" position="50,50" size="100,40" transparent="1" zPosition="1" /> -->
     <ePixmap alphatest="on" name="red" pixmap="Vali.HD.nano/red.png" position="155,55" size="30,30" transparent="1" />
     <widget font="Regular;18" halign="left" name="key_red" position="190,50" size="140,40" transparent="1" valign="center" zPosition="2" />
     <widget font="Regular;20" foregroundColor="foreground" halign="left" name="title" position="415,45" size="597,50" transparent="1" valign="center" zPosition="5" />
@@ -3196,7 +3196,7 @@
   </screen>
   <screen flags="wfNoBorder" name="MyTubeTasksScreen" position="128,70" size="1024,576" title="MyTubePlayerMainScreen...">
     <widget backgroundColor="transparent" position="-256,100" render="Pig" size="256,144" source="session.VideoPicture" zPosition="1" />
-    <ePixmap alphatest="on" pixmap="~/plugin.png" position="50,50" size="100,40" transparent="1" zPosition="1" />
+    <!-- <ePixmap alphatest="on" pixmap="~/plugin.png" position="50,50" size="100,40" transparent="1" zPosition="1" /> -->
     <ePixmap alphatest="on" name="red" pixmap="Vali.HD.nano/red.png" position="155,55" size="30,30" transparent="1" />
     <widget font="Regular;18" halign="left" name="key_red" position="190,50" size="140,40" transparent="1" valign="center" zPosition="2" />
     <widget font="Regular;20" foregroundColor="foreground" halign="left" name="title" position="385,45" size="597,50" transparent="1" valign="center" zPosition="5" />
@@ -3217,7 +3217,7 @@
   <screen flags="wfNoBorder" name="MyTubeVideoInfoScreen" position="128,70" size="1024,576" title="MyTubePlayerMainScreen...">
     <widget backgroundColor="transparent" position="-256,100" render="Pig" size="256,144" source="session.VideoPicture" zPosition="1" />
     <widget alphatest="on" name="thumbnail" position="0,0" size="130,98" />
-    <ePixmap alphatest="on" pixmap="~/plugin.png" position="50,50" size="100,40" transparent="1" zPosition="1" />
+    <!-- <ePixmap alphatest="on" pixmap="~/plugin.png" position="50,50" size="100,40" transparent="1" zPosition="1" /> -->
     <ePixmap alphatest="on" name="red" pixmap="Vali.HD.nano/red.png" position="155,55" size="30,30" transparent="1" />
     <widget font="Regular;18" halign="left" name="key_red" position="190,50" size="140,40" transparent="1" valign="center" zPosition="2" />
     <widget font="Regular;20" foregroundColor="foreground" halign="left" name="title" position="360,45" size="597,50" transparent="1" valign="center" zPosition="5" />
@@ -3251,7 +3251,7 @@
   <screen flags="wfNoBorder" name="MyTubePlayerMainScreen" position="128,70" size="1024,576" title="MyTubePlayerMainScreen...">
     <widget backgroundColor="transparent" position="-256,100" render="Pig" size="256,144" source="session.VideoPicture" zPosition="1" />
     <widget alphatest="on" name="thumbnail" position="0,0" size="130,98" />
-    <ePixmap alphatest="on" pixmap="~/plugin.png" position="50,40" size="100,40" transparent="1" zPosition="1" />
+    <!--  <ePixmap alphatest="on" pixmap="~/plugin.png" position="50,40" size="100,40" transparent="1" zPosition="1" /> -->
     <ePixmap alphatest="on" name="red" pixmap="Vali.HD.nano/red.png" position="155,45" size="30,30" transparent="1" />
     <ePixmap alphatest="on" name="green" pixmap="Vali.HD.nano/green.png" position="340,45" size="30,30" transparent="1" />
     <ePixmap alphatest="on" name="yellow" pixmap="Vali.HD.nano/yellow.png" position="520,45" size="30,30" transparent="1" />
