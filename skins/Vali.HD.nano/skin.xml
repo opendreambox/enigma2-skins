@@ -3555,7 +3555,6 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
 	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
 	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
-	<widget backgroundColor="secondBG" font="Regular;22" halign="left" render="Label" source="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
   </screen>
   
   
