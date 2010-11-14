@@ -1,6 +1,5 @@
 <skin>
-
-	<!-- BASIC-HD FOR CVS created by ismail -->
+	<!-- BASIC-HD FOR OPENDREAMBOX 1.6 Images created by ismail -->
 
 	<!-- This skin and all it's graphics are free. -->
 	<!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications-->
@@ -29,9 +28,6 @@
 		<color name="foreground" value="#ffffff" />
 		<color name="snragc" value="#a2f688" />
 		<color name="extra" value="#ffc600" />
-		<color name="crypt_back" value="#33dbdbdb" />
-		<color name="crypt_emm" value="#33f9c21c" />
-		<color name="crypt_ecm" value="#33389416" />
 	</colors>
 
 	<fonts>
@@ -50,6 +46,11 @@
 		<!-- omitting foregroundColor attribute will enable auto-assignment of color -->
 	</subtitles>
 
+	<!-- Subtitle selection -->
+	<screen name="Subtitles" position="240,130" size="800,500" title="Subtitle selection">
+		<widget name="config" position="10,10" zPosition="1" size="780,480" scrollbarMode="showOnDemand" />
+	</screen>
+
 	<windowstyle type="skinned" id="0">
 		<title offset="32,8" font="Regular;22" />
 		<color name="Background" color="#201f416a" />
@@ -64,7 +65,6 @@
 		<color name="ListboxMarkedAndSelectedForeground" color="#ffffff" />
 		<color name="WindowTitleForeground" color="#ffffff" />
 		<color name="WindowTitleBackground" color="#00072343" />
-
 		<borderset name="bsWindow">
 			<pixmap pos="bpTopLeft" filename="BASIC-HD/window/bs_tl.png" />
 			<pixmap pos="bpTop" filename="BASIC-HD/window/bs_t.png" />
@@ -75,7 +75,6 @@
 			<pixmap pos="bpBottom" filename="BASIC-HD/window/bs_b.png" />
 			<pixmap pos="bpBottomRight" filename="BASIC-HD/window/bs_br.png" />
 		</borderset>
-
 		<borderset name="bsListboxEntry">
 			<pixmap pos="bpTopLeft" filename="BASIC-HD/listbox/topleft.png" />
 			<pixmap pos="bpTop" filename="BASIC-HD/listbox/top.png" />
@@ -103,6 +102,7 @@
 		<color name="WindowTitleBackground" color="#000000" />
 	</windowstyle>
 
+	<!-- About -->
 	<screen name="About" position="360,130" size="560,420" title="Skin created by Ismail Demir">
 		<widget source="EnigmaVersion" render="Label" position="10,10" size="480,25" font="Regular;22" />
 		<widget source="ImageVersion" render="Label" position="10,40" size="480,25" font="Regular;22" />
@@ -305,11 +305,6 @@
 		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="config" position="10,40" size="780,450" scrollbarMode="showOnDemand" />
-	</screen>
-
-	<!-- Subtitle selection -->
-	<screen name="Subtitles" position="240,130" size="800,500" title="Subtitle selection">
-		<widget name="config" position="10,10" zPosition="1" size="780,480" scrollbarMode="showOnDemand" />
 	</screen>
 
 	<screen name="InfoBar" position="40,503" size="1200,200" flags="wfNoBorder" title="InfoBar">
@@ -1621,8 +1616,43 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</applet>
 	</screen>
 
+	<screen name="InputDeviceSelection" position="240,130" size="800,500" title="Select input device">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="list" render="Listbox" position="10,40" size="780,410" zPosition="10" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+			<!--  device, description, devicepng, divpng  -->
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (10, 2), size = (54, 54), png = 2), # index 3 is the interface pixmap
+						MultiContentEntryText(pos = (80, 10), size = (690, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 1), # index 1 is the interfacename
+					],
+				"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+				"itemHeight": 58
+				}
 
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="10,460" size="780,30" zPosition="10" font="Regular;22" halign="center" valign="center" backgroundColor="#25062748" transparent="1"/>
+	</screen>
 
+	<screen name="InputDeviceSetup" position="240,130" size="800,500" title="Input device setup">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="config" position="10,40" size="780,410" scrollbarMode="showOnDemand" />
+		<widget source="introduction" render="Label" position="10,460" size="780,30" zPosition="10" font="Regular;22" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
+	</screen>
 	<!-- System Plugins Begins-->
 
 	<!-- Software Manager -->
@@ -2250,10 +2280,85 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<!--// NFIFlash -->
 
+	<screen name="TempFanControl" position="240,130" size="800,500" title="Fan Control" >
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget source="red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="config" position="10,40" size="780,200" scrollbarMode="showOnDemand" />
+
+		<widget source="SensorTempText0" render="Label" position="10,250" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorTemp0" render="Label" position="100,250" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText1" render="Label" position="10,270" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorTemp1" render="Label" position="100,270" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText2" render="Label" position="10,290" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorTemp2" render="Label" position="100,290" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText3" render="Label" position="10,310" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorTemp3" render="Label" position="100,310" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText4" render="Label" position="10,330" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorTemp4" render="Label" position="100,330" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText5" render="Label" position="10,350" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorTemp5" render="Label" position="100,350" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText6" render="Label" position="10,370" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorTemp6" render="Label" position="100,370" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText7" render="Label" position="10,390" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorTemp7" render="Label" position="100,390" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+
+		<widget source="SensorFanText0" render="Label" position="290,250" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorFan0" render="Label" position="380,250" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText1" render="Label" position="290,270" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorFan1" render="Label" position="380,270" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText2" render="Label" position="290,290" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorFan2" render="Label" position="380,290" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText3" render="Label" position="290,310" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorFan3" render="Label" position="380,310" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText4" render="Label" position="290,330" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorFan4" render="Label" position="380,330" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText5" render="Label" position="290,350" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorFan5" render="Label" position="380,350" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText6" render="Label" position="290,370" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorFan6" render="Label" position="380,370" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText7" render="Label" position="290,390" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget source="SensorFan7" render="Label" position="380,390" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+	</screen>
+
 	<!--// System Plugins Ends-->
-
-
-
 
 	<!-- Extensions Begins -->
 
@@ -2927,10 +3032,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<!-- WebcamViewer -->
 
-	<!--// Extensions Ends -->
-
-	<!-- Plugins -->
-
 	<!-- Suomipoeka -->
 	<screen name="SuomipoekaMenu" position="240,130" size="800,500" title="SuomipoekaMenu">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
@@ -2980,4 +3081,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="config" position="10,40" size="780,450" scrollbarMode="showOnDemand" />
 	</screen>
+
+	<!-- Extensions Ends -->
+
 </skin>
