@@ -137,6 +137,10 @@ AC_OUTPUT([
 ./skins/Vali.HD.nano/extensions/Makefile
 ./skins/Vali.HD.nano/meta/Makefile
 ./skins/Vali.HD.nano/pics/Makefile
+./skins/Vali.HD.warp/Makefile
+./skins/Vali.HD.warp/extensions/Makefile
+./skins/Vali.HD.warp/meta/Makefile
+./skins/Vali.HD.warp/images/Makefile
 ./skins/Vali-XD/Makefile
 ./skins/Vali-XD/Atlantis/Makefile
 ./skins/Vali-XD/Avalon/Makefile
