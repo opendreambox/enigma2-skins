@@ -133,6 +133,10 @@ AC_OUTPUT([
 ./skins/UltraViolet/selpic/Makefile
 ./skins/UltraViolet/skin_default/Makefile
 ./skins/UltraViolet/skin_default/icons/Makefile
+./skins/Vali.HD.atlantis/Makefile
+./skins/Vali.HD.atlantis/extensions/Makefile
+./skins/Vali.HD.atlantis/meta/Makefile
+./skins/Vali.HD.atlantis/images/Makefile
 ./skins/Vali.HD.nano/Makefile
 ./skins/Vali.HD.nano/extensions/Makefile
 ./skins/Vali.HD.nano/meta/Makefile
