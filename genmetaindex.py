@@ -4,7 +4,7 @@ from xml.etree.ElementTree import ElementTree, Element
 
 root = Element("index")
 
-for file in sys.argv[2:]:
+for file in sys.argv[1:]:
 	p = ElementTree()
 	p.parse(file)
 	
