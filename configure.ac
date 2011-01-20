@@ -1,7 +1,11 @@
-AC_INIT(enigma2-skins, 1.0)
-AM_INIT_AUTOMAKE(enigma2-skins, 1.0)
-AM_PATH_PYTHON()
+AC_INIT([enigma2-skins],3.0.0,[enigma2-devel@lists.elitedvb.net])
+AM_INIT_AUTOMAKE([foreign])
 
+# Silent rules are available since 1.11, but older versions
+# are still in use. So don't use them unconditionally.
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+
+AM_PATH_PYTHON
 
 AC_OUTPUT([
 Makefile
