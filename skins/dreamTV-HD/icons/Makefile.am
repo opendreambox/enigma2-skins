@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/dreamTV-HD/icons/
+installdir = $(datadir)/enigma2/dreamTV-HD/icons
 install_DATA = *.png

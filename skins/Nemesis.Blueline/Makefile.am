@@ -1,5 +1,5 @@
 SUBDIRS = meta
 
-installdir = /usr/share/enigma2/Nemesis.Blueline/
+installdir = $(datadir)/enigma2/Nemesis.Blueline
 
 install_DATA = *.png *.xml

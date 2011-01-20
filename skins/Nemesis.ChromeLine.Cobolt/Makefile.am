@@ -1,3 +1,3 @@
 SUBDIRS = menu meta
-installdir = /usr/share/enigma2/Nemesis.ChromeLine.Cobolt/
+installdir = $(datadir)/enigma2/Nemesis.ChromeLine.Cobolt
 install_DATA = *.png *.xml

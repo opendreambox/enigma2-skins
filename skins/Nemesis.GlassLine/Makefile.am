@@ -1,3 +1,3 @@
 SUBDIRS = menu meta
-installdir = /usr/share/enigma2/Nemesis.GlassLine/
+installdir = $(datadir)/enigma2/Nemesis.GlassLine
 install_DATA = *.png *.xml

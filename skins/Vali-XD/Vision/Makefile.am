@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/Vali-XD/Vision/
+installdir = $(datadir)/enigma2/Vali-XD/Vision
 install_DATA = *.png

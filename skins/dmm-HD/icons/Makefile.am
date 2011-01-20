@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/dmm-HD/icons/
+installdir = $(datadir)/enigma2/dmm-HD/icons
 install_DATA = *.png

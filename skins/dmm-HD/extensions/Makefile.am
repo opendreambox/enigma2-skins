@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/extensions/buttons/
+installdir = $(datadir)/enigma2/extensions/buttons
 install_DATA = *.png

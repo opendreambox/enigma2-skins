@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/dTV-HD/buttons/
+installdir = $(datadir)/enigma2/dTV-HD/buttons
 install_DATA = *.png

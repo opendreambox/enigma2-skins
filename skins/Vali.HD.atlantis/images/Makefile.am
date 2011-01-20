@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/Vali.HD.atlantis/images/
+installdir = $(datadir)/enigma2/Vali.HD.atlantis/images
 install_DATA = *.png

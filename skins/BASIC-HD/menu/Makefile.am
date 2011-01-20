@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/BASIC-HD/menu/
+installdir = $(datadir)/enigma2/BASIC-HD/menu
 install_DATA = *.png

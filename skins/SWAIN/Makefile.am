@@ -1,4 +1,4 @@
 SUBDIRS = meta
 
-installdir = /usr/share/enigma2/SWAIN/
+installdir = $(datadir)/enigma2/SWAIN
 install_DATA = *.png *.xml

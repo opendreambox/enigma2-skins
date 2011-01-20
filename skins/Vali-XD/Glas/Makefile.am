@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/Vali-XD/Glas/
+installdir = $(datadir)/enigma2/Vali-XD/Glas
 install_DATA = *.png

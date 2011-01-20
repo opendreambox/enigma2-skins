@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/BrushedAlu-HD/buttons/
+installdir = $(datadir)/enigma2/BrushedAlu-HD/buttons
 install_DATA = *.png

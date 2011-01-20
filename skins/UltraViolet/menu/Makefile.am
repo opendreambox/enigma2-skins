@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/UltraViolet/menu/
+installdir = $(datadir)/enigma2/UltraViolet/menu
 install_DATA = *.png

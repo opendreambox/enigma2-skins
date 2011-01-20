@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/Vali-XD/ProfiLine/
+installdir = $(datadir)/enigma2/Vali-XD/ProfiLine
 install_DATA = *.png

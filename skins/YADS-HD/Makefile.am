@@ -1,3 +1,3 @@
 SUBDIRS = buttons extensions icons meta selpic skin_default
-installdir = /usr/share/enigma2/YADS-HD/
+installdir = $(datadir)/enigma2/YADS-HD
 install_DATA = *.png *.xml

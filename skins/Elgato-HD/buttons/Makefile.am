@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/Elgato-HD/buttons/
+installdir = $(datadir)/enigma2/Elgato-HD/buttons
 install_DATA = *.png

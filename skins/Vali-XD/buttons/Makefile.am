@@ -1,2 +1,2 @@
-installdir = /usr/share/enigma2/Vali-XD/buttons/
+installdir = $(datadir)/enigma2/Vali-XD/buttons
 install_DATA = *.png
