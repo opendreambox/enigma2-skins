@@ -24,7 +24,7 @@
   
  <!--Colors ##### -->
   <colors>
-    <color name="background" value="#300e1018"/>
+    <color name="background" value="#280e1018"/>
 	<color name="secondBG" value="#162b3447"/>
     <color name="selectedBG" value="#08202529"/>
 	<color name="foreground" value="#00f0f0f0"/>
@@ -76,8 +76,8 @@
     <color color="foreground" name="ListboxMarkedForeground"/>
     <color color="listBoxMarkandSel" name="ListboxMarkedAndSelectedBackground"/>
     <color color="foreground" name="ListboxMarkedAndSelectedForeground"/>
-    <color color="black" name="WindowTitleForeground"/>
-    <color color="#797979" name="WindowTitleBackground"/>
+    <color color="foreground" name="WindowTitleForeground"/>
+    <color color="background" name="WindowTitleBackground"/>
     <borderset name="bsWindow">
       <pixmap filename="Vali.HD.atlantis/oben_links.png" pos="bpTopLeft"/>
       <pixmap filename="Vali.HD.atlantis/oben.png" pos="bpTop"/>
@@ -124,8 +124,7 @@
  
 <!--InfoBars ##### -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,512" size="1280,220" title="InfoBar">
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
-    <eLabel backgroundColor="background" position="0,112" size="1280,110" zPosition="-2"/>
+    <ePixmap alphatest="off" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
     <widget alphatest="blend" position="90,122" render="Picon" size="100,60" source="session.CurrentService" transparent="1" zPosition="1">
       <convert type="ServiceName">Reference</convert>
     </widget>
@@ -254,8 +253,7 @@
     </widget>
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayer" position="0,512" size="1280,220" title="InfoBar">
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
-    <eLabel backgroundColor="background" position="0,112" size="1280,110" zPosition="-2"/>
+    <ePixmap alphatest="off" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
     <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/dvr.png" position="85,142" size="122,19" transparent="1" zPosition="1"/>
     <widget backgroundColor="background" font="Regular;24" foregroundColor="foreground" halign="center" position="240,110" render="Label" size="800,77" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
       <convert type="ServiceName">Name</convert>
@@ -305,8 +303,7 @@
     </widget>
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="DVDPlayer" position="0,512" size="1280,220" title="InfoBar">
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
-    <eLabel backgroundColor="background" position="0,112" size="1280,110" zPosition="-2"/>
+    <ePixmap alphatest="off" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
     <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/dvr.png" position="85,142" size="122,19" transparent="1" zPosition="1"/>
     <widget backgroundColor="background" font="Regular;22" foregroundColor="foreground" halign="center" position="240,110" render="Label" size="800,50" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
       <convert type="ServiceName">Name</convert>
@@ -352,8 +349,7 @@
     </widget>
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MyTubePlayer" position="0,512" size="1280,220" title="InfoBar">
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
-    <eLabel backgroundColor="background" position="0,112" size="1280,110" zPosition="-2"/>
+    <ePixmap alphatest="off" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
     <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/dvr.png" position="85,142" size="122,19" transparent="1" zPosition="1"/>
     <widget backgroundColor="background" font="Regular;24" foregroundColor="foreground" halign="center" position="240,110" render="Label" size="800,77" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
       <convert type="ServiceName">Name</convert>
@@ -400,8 +396,7 @@
     </widget>
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="VirtualZap" position="0,512" size="1280,220" title="Virtual Zap">
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
-    <eLabel backgroundColor="background" position="0,112" size="1280,110" zPosition="-2"/>
+    <ePixmap alphatest="off" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
     <widget backgroundColor="transparent" name="video" position="60,66" size="214,120" zPosition="1"/>
     <widget backgroundColor="secondBG" font="Regular;24" halign="left" name="NowChannel" position="305,73" size="887,32" transparent="1" zPosition="2"/>
     <widget backgroundColor="background" font="Regular;24" foregroundColor="secondFG" halign="left" name="NowEPG" position="305,120" size="748,28" transparent="1" zPosition="2"/>
@@ -410,15 +405,13 @@
     <widget backgroundColor="background" font="Regular;24" halign="right" name="NextTime" position="1070,153" size="124,28" transparent="1" zPosition="2"/>
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RemotePlayer" position="0,512" size="1280,220" title="Partnerbox - RemotePlayer">
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
-    <eLabel backgroundColor="background" position="0,112" size="1280,110" zPosition="-2"/>
+    <ePixmap alphatest="off" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
     <widget font="Regular;24" halign="center" name="ServiceName" position="100,110" size="1080,72" transparent="1" valign="center" zPosition="2"/>
     <widget font="Regular;22" halign="left" name="DateTime" position="100,75" size="537,30" transparent="1" valign="top" zPosition="2"/>
     <widget font="Regular;22" halign="right" name="IP" position="639,75" size="541,30" transparent="1" valign="top" zPosition="2"/>
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RadioInfoBar" position="0,512" size="1280,242" title="InfoBar">
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
-    <eLabel backgroundColor="background" position="0,112" size="1280,110" zPosition="-2"/>
+    <ePixmap alphatest="off" pixmap="Vali.HD.atlantis/osd.png" position="0,0" size="1280,220" zPosition="-1"/>
 	<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/picon_default.png" position="90,122" size="100,60"/>
     <widget backgroundColor="secondBG" font="Regular;24" foregroundColor="foreground" halign="center" position="380,73" render="Label" size="520,30" source="session.CurrentService" transparent="1" zPosition="1">
       <convert type="ServiceName">Name</convert>
@@ -760,10 +753,10 @@
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
   </screen>
   <screen flags="wfNoBorder" name="GraphMultiEPG" position="0,0" size="1280,720" title="Electronic Program Guide">
-    <eLabel backgroundColor="secondBG" position="0,0" size="1280,110" zPosition="-1"/>
-    <eLabel backgroundColor="secondBG" position="0,596" size="1280,125" zPosition="-1"/>
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/red.png" position="100,625" size="30,30"/>
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/green.png" position="100,663" size="30,30"/>
+	<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+    <eLabel backgroundColor="background" position="70,110" size="1130,610" zPosition="-1"/>
+    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,625" size="30,30"/>
+    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="100,663" size="30,30"/>
     <widget font="Regular;22" foregroundColor="foreground" halign="left" name="key_red" position="145,625" size="200,30" transparent="1" valign="center"/>
     <widget font="Regular;22" foregroundColor="foreground" halign="left" name="key_green" position="145,663" size="200,30" transparent="1" valign="center"/>
     <widget backgroundColor="secondBG" name="timeline_text" position="0,60" size="1182,30"/>
@@ -1344,33 +1337,33 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
   </screen>
   <screen flags="wfNoBorder" name="NetworkAdapterTest" position="0,0" size="1280,720" title="Network test...">
     <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-1"/>
-    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/net.png" position="180,165" size="150,150"/>
+    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/net.png" position="130,175" size="150,150"/>
     <widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
     <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
       <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
     </widget>
     <widget alphatest="blend" name="EditSettingsButton" pixmaps="Vali.HD.atlantis/grey.png,Vali.HD.atlantis/blue.png" position="970,643" size="30,30" transparent="1" zPosition="1"/>
     <widget font="Regular;22" foregroundColors="#4f4f4f,#8c8c93,#1cff1c" name="EditSettings_Text" position="1015,645" size="220,26" transparent="1" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="Adaptertext" position="550,170" size="800,23" zPosition="1"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="Adapter" position="780,170" size="306,23" transparent="1" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="AdapterInfo_Text" position="1130,170" size="200,23" transparent="1" zPosition="2"/>
-    <widget alphatest="on" name="AdapterInfo_OK" pixmap="skin_default/icons/lock_on.png" position="1090,165" size="38,31" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="Networktext" position="550,220" size="800,23" zPosition="1"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="Network" position="780,220" size="306,23" transparent="1" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="NetworkInfo_Text" position="1130,220" size="200,23" transparent="1" zPosition="2"/>
-    <widget alphatest="on" name="NetworkInfo_Check" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" position="1090,215" size="38,31" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="Dhcptext" position="550,270" size="800,23" zPosition="1"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="Dhcp" position="780,270" size="306,23" transparent="1" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="DhcpInfo_Text" position="1130,270" size="200,23" transparent="1" zPosition="2"/>
-    <widget alphatest="on" name="DhcpInfo_Check" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" position="1090,265" size="38,31" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="IPtext" position="550,320" size="800,23" zPosition="1"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="IP" position="780,320" size="306,23" transparent="1" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="IPInfo_Text" position="1130,320" size="200,23" transparent="1" zPosition="2"/>
-    <widget alphatest="on" name="IPInfo_Check" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" position="1090,315" size="38,31" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="DNStext" position="550,370" size="800,23" zPosition="1"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="DNS" position="780,370" size="306,23" transparent="1" zPosition="2"/>
-    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="DNSInfo_Text" position="1130,370" size="200,23" transparent="1" zPosition="2"/>
-    <widget alphatest="on" name="DNSInfo_Check" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" position="1090,365" size="38,31" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="Adaptertext" position="350,170" size="800,23" zPosition="1"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="Adapter" position="580,170" size="306,23" transparent="1" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="AdapterInfo_Text" position="930,170" size="200,23" transparent="1" zPosition="2"/>
+    <widget alphatest="on" name="AdapterInfo_OK" pixmap="skin_default/icons/lock_on.png" position="890,165" size="38,31" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="Networktext" position="350,220" size="800,23" zPosition="1"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="Network" position="580,220" size="306,23" transparent="1" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="NetworkInfo_Text" position="930,220" size="200,23" transparent="1" zPosition="2"/>
+    <widget alphatest="on" name="NetworkInfo_Check" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" position="890,215" size="38,31" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="Dhcptext" position="350,270" size="800,23" zPosition="1"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="Dhcp" position="580,270" size="306,23" transparent="1" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="DhcpInfo_Text" position="930,270" size="200,23" transparent="1" zPosition="2"/>
+    <widget alphatest="on" name="DhcpInfo_Check" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" position="890,265" size="38,31" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="IPtext" position="350,320" size="800,23" zPosition="1"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="IP" position="580,320" size="306,23" transparent="1" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="IPInfo_Text" position="930,320" size="200,23" transparent="1" zPosition="2"/>
+    <widget alphatest="on" name="IPInfo_Check" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" position="890,315" size="38,31" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#1cff1c" halign="left" name="DNStext" position="350,370" size="800,23" zPosition="1"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" halign="center" name="DNS" position="580,370" size="306,23" transparent="1" zPosition="2"/>
+    <widget font="Regular;20" foregroundColors="#8c8c93,#4f4f4f,#1cff1c" name="DNSInfo_Text" position="930,370" size="200,23" transparent="1" zPosition="2"/>
+    <widget alphatest="on" name="DNSInfo_Check" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" position="890,365" size="38,31" zPosition="2"/>
     <widget font="Regular;21" halign="center" name="InfoText" position="100,520" size="1080,100" zPosition="25"/>
     <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
     <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
@@ -2177,7 +2170,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
     <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
   </screen>
-  <screen flags="wfNoBorder" backgroundColor="transparent" name="Z_infobar2" position="0,16" size="720,32" title="Zinfobar">
+	<screen flags="wfNoBorder" backgroundColor="transparent" name="Z_infobar2" position="0,16" size="720,32" title="Zinfobar">
 		<ePixmap alphatest="off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/ZIB/bg-fs8.png" position="-440,0" size="720,32" zPosition="-1" />
 		<widget alphatest="off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/ZIB/bg-fs8.png" position="0,0" render="Pixmap" size="720,32" source="session.CurrentService" zPosition="0">
 			<convert type="ServiceInfo">IsCrypted</convert>
@@ -2505,6 +2498,214 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget font="Regular;20" position="870,550" render="Label" size="150,24" source="weekday4_temp" transparent="1" valign="bottom" zPosition="1"/>
     <widget font="Regular;20" halign="center" position="520,108" render="Label" size="700,504" source="statustext" transparent="1" valign="center" zPosition="1"/>
   </screen>
+  
+  
+<!-- MyTube Player ##### -->
+	<screen backgroundColor="secondBG" name="MyTubeHistoryScreen" position="150,200" size="980,400" title="MyTubeHistoryScreen..." zPosition="6" >
+		<widget source="historylist" render="Listbox" position="0,0" zPosition="7" size="980,400" scrollbarMode="showOnDemand" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 2), size = (920, 35), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 40
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="MyTubePlayerMainScreen" position="0,0" size="1280,720" title="MyTubePlayerMainScreen..." flags="wfNoBorder" >
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		</widget>
+		<widget name="config" position="150,115" size="980,28" zPosition="3" scrollbarMode="showNever" transparent="1"/>
+		<widget source="feedlist" render="Listbox" position="150,160" size="980,400" zPosition="3" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" >
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (100,[
+						MultiContentEntryPixmapAlphaTest(pos = (10, 12), size = (100, 75), png = 4), # index 4 is the thumbnail
+						MultiContentEntryText(pos = (120, 10), size = (850, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 1 is the Title
+						MultiContentEntryText(pos = (120, 40), size = (300, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5), # index 5 is the Published Date
+						MultiContentEntryText(pos = (120, 70), size = (300, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6), # index 6 is the Views Count
+						MultiContentEntryText(pos = (420, 40), size = (250, 20), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 7), # index 7 is the duration
+						MultiContentEntryText(pos = (420, 70), size = (250, 20), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 8), # index 8 is the ratingcount
+					]),
+				"state": (100,[
+						MultiContentEntryText(pos = (10, 10), size = (870, 28), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (10, 40), size = (870, 50), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 2 is the description
+					])
+				},
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18),gFont("Regular", 26),gFont("Regular", 20)],
+				"itemHeight": 100
+			}
+			</convert>
+		</widget>
+		<widget name="HelpWindow" position="545,500" size="1,1" zPosition="10" transparent="1" alphatest="on" />	
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+	    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget name="ButtonBlue" pixmap="Vali.HD.atlantis/blue.png" zPosition="2" position="970,643" size="30,30" alphatest="blend" />
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<eLabel text="Virtual KeyBoard" position="1015,645" size="220,26" font="Regular;22" halign="left" backgroundColor="secondBG" transparent="1" zPosition="1"/>
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on"/>
+		<widget name="VKeyIcon" position="0,0" size="0,0"/>
+	</screen>
+	<screen name="MyTubeSettingsScreen" position="0,0" size="1280,720" title="MyTubeSettingsScreen" flags="wfNoBorder" >
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		</widget>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/setup.png" position="130,285" size="150,150"/>
+		<widget itemHeight="28" name="config" position="400,108" scrollbarMode="showOnDemand" size="780,504"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+	    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>
+	<screen backgroundColor="secondBG" name="MyTubeSuggestionsListScreen" position="150,200" size="980,300" title="MyTubeSuggestionsListScreen..." zPosition="6" >
+		<widget source="suggestionslist" render="Listbox" position="0,0" zPosition="7" size="980,300" scrollbarMode="showOnDemand" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 2), size = (710, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (730, 2), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="MyTubeTasksScreen" position="0,0" size="1280,720" title="MyTubeTasksScreen" flags="wfNoBorder" >
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		</widget>
+		<widget source="tasklist" render="Listbox" position="150,125" size="980,480" zPosition="3" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 3), size = (350, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
+						MultiContentEntryText(pos = (370, 3), size = (200, 24), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
+						MultiContentEntryProgress(pos = (580, 3), size = (120, 24), percent = -3), # index 3 should be progress 
+						MultiContentEntryText(pos = (710, 3), size = (90, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+	    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>	
+	<screen name="MyTubeVideoHelpScreen" position="0,0" size="1280,720" title="MyTubePlayerHelpScreen..." flags="wfNoBorder" >
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		</widget>
+		<widget name="detailtext" position="150,130" size="980,480" zPosition="3" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+	    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>
+	<screen name="MyTubeVideoInfoScreen" position="0,0" size="1280,720" title="MyTubePlayerMainScreen..." flags="wfNoBorder" >
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		</widget>
+		<widget name="author" position="80,145" size="370,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="duration" position="80,175" size="370,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="published" position="80,205" size="370,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="views" position="80,235" size="370,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="tags" position="80,265" size="370,75" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
+		<widget name="starsbg" position="185,360" size="100,20" pixmap="Vali.HD.atlantis/starsbar_empty.png"  zPosition="5" transparent="1" alphatest="on" />
+		<widget name="stars" position="185,360" size="100,20" pixmap="Vali.HD.atlantis/starsbar_filled.png" zPosition="6" transparent="1" />
+		<widget source="infolist" render="Listbox" position="480,145" size="730,135" zPosition="6" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (135,[
+						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (180, 135), png = 0), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (190, 0), size = (180, 135), png = 1), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (370, 0), size = (180, 135), png = 2), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (550, 0), size = (180, 135), png = 3), # index 0 is the thumbnail							
+					]),
+				"state": (135,[
+						MultiContentEntryText(pos = (0, 35), size = (740, 65), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text = 0), # index 0 is the name
+					])
+				},
+				"fonts": [gFont("Regular", 20),gFont("Regular", 14),gFont("Regular", 28)],
+				"itemHeight": 135
+			}
+			</convert>
+		</widget>
+		<widget name="detailtext" position="490,310" size="710,280" zPosition="10" font="Regular;22" foregroundColor="white" backgroundColor="darkgrey" transparent="1" />
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget name="thumbnail" position="0,0" size="180,135" alphatest="on"/>
+	</screen>
+	
+	
+<!-- EnhancedMovieCenter ##### -->
+	<screen flags="wfNoBorder" name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center">
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-1"/>
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		</widget>
+		<widget name="wait" position="100,90" size="1080,450"/>
+		<widget CoolFont="Regular;20" CoolDirPos="770" CoolFolderSize="730" CoolMoviePos="30" CoolMovieSize="680" CoolDatePos="720" CoolTimePos="820" name="list" position="100,90" size="1080,450" itemHeight="30" scrollbarMode="showNever" backgroundColor="background" transparent="1" />
+		<eLabel backgroundColor="secondBG" position="50,545" size="1180,2"/>
+		<widget font="Regular;20" position="380,550" render="Label" noWrap="1" size="750,27" source="Service" zPosition="1">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+		<widget font="Regular;22" position="100,550" render="Label" size="130,27" source="Service" zPosition="1">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget name="FileSize" position="230,550" size="150,27" font="Regular;22" backgroundColor="background" transparent="1" />
+		<widget font="Regular;20" position="100,575" render="Label" size="1080,48" source="Service" zPosition="1">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>
+	<screen flags="wfNoBorder" name="EnhancedMovieCenterMenu" position="0,0" size="1280,720" title="EnhancedMovieCenterMenu">
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-1"/>
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		</widget>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/setup.png" position="130,285" size="150,150"/>
+		<widget itemHeight="28" name="config" position="400,108" scrollbarMode="showOnDemand" size="780,504"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>
   
  
   
