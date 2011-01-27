@@ -2706,6 +2706,110 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
 		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
 		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
 	</screen>
+
+
+<!--VideoDB Plugin ##### -->
+	<screen backgroundColor="background" flags="wfNoBorder" name="VideoManager" position="0,0" size="1280,720" title="VideoDB">
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<widget font="Regular;24" foregroundColor="secondFG" name="headertext" position="50,35" size="850,50" transparent="1" valign="center" zPosition="1"/>
+		    <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		      <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		    </widget>
+		<widget name="config" position="50,105" size="1180,60" scrollbarMode="showOnDemand" />
+		<widget name="list" position="50,185" scrollbarMode="showOnDemand" size="1180,460" transparent="1"/>
+		<widget name="descriptionBorder" position="0,530" zPosition="1" size="1180,1" transparent="1" alphatest="on" />
+		<widget name="shortdescription" position="50,542" zPosition="3" size="1180,20" font="Regular;16" transparent="1" foregroundColor="#fcc000" backgroundColor="#00000000"/>
+		<widget name="servicename" position="50,542" zPosition="3" size="1180,20" halign="right" font="Regular;16" transparent="1" foregroundColor="#fcc000" backgroundColor="#00000000"/>
+		<widget name="filesize" position="550,542" zPosition="3" size="130,20" font="Regular;16" transparent="1" foregroundColor="#fcc000" backgroundColor="#00000000"/>
+		<widget name="duration" position="600,542" zPosition="3" size="120,20" halign="right" font="Regular;16" transparent="1" foregroundColor="#fcc000" backgroundColor="#00000000"/>
+		<widget name="progress" position="725,549" zPosition="3" size="50,6" borderWidth="1" borderColor="#fcc000" />
+		<widget name="extendeddescription" position="50,570" zPosition="3" size="1180,55" font="Regular;16" transparent="1" foregroundColor="#fcc000" backgroundColor="#00000000"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget render="Label" source="key_red" backgroundColor="secondBG" font="Regular;22" halign="left" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_green" backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_yellow" backgroundColor="secondBG" font="Regular;22" halign="left" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_blue" backgroundColor="secondBG" font="Regular;22" halign="left" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>
+	<screen backgroundColor="background" flags="wfNoBorder" name="VideoManagerEventView" position="0,0" size="1280,720" title="Event Info">
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<eLabel font="Regular;24" foregroundColor="secondFG" text="Event Info" position="50,35" size="850,50" transparent="1" valign="center" zPosition="1"/>
+		    <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		      <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		    </widget>
+		<widget name="headertext" position="250,100" size="850,26" transparent="1" font="Regular;24" valign="center" zPosition="1"/>
+		<widget name="poster" zPosition="2" position="50,140" size="185,278" alphatest="blend" />
+		<widget name="overview" position="250,140" size="980,278" zPosition="3" font="Regular;24" transparent="1"/>
+		<widget name="misc" position="250,425" size="980,130" zPosition="2" font="Regular;22" transparent="1"/>
+		<widget name="epg_description" position="50,100" size="1180,500" zPosition="3" font="Regular;24" transparent="1"/>
+		<widget name="datetime" foregroundColor="secondFG" font="Regular;20"  position="60,605" size="300,24" zPosition="5" transparent="1"/>
+		<widget name="duration" foregroundColor="secondFG" font="Regular;20" position="440,605" size="200,24" zPosition="5" transparent="1"/>
+		<widget name="channel"  foregroundColor="secondFG" font="Regular;20" position="745,605" size="475,24" zPosition="5" halign="right" transparent="1"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget render="Label" source="key_red" backgroundColor="secondBG" font="Regular;22" halign="left" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_green" backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_yellow" backgroundColor="secondBG" font="Regular;22" halign="left" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_blue" backgroundColor="secondBG" font="Regular;22" halign="left" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>
+	<screen backgroundColor="background" flags="wfNoBorder" name="SelectScannedPath" position="0,0" size="1280,720" title="Select path">
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<widget render="Label" source="text" font="Regular;24" foregroundColor="secondFG" position="50,35" size="850,50" transparent="1" valign="center" zPosition="1"/>
+		    <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		      <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		    </widget>
+		<widget name="list" position="50,105" zPosition="2" size="1180,510" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget render="Label" source="key_red" backgroundColor="secondBG" font="Regular;22" halign="left" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_green" backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_yellow" backgroundColor="secondBG" font="Regular;22" halign="left" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_blue" backgroundColor="secondBG" font="Regular;22" halign="left" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>
+	<screen backgroundColor="background" flags="wfNoBorder" name="TMDbSelection" position="0,0" size="1280,720" title="TMDb Info">
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<widget font="Regular;24" foregroundColor="secondFG" name="headertext" position="50,35" size="850,50" transparent="1" valign="center" zPosition="1"/>
+		    <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		      <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		    </widget>
+		<widget name="list" position="50,105" zPosition="2" size="1180,510" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="poster" zPosition="2" position="50,120" size="185,278" alphatest="blend" />
+		<widget name="overview" position="250,120" size="980,278" zPosition="3" font="Regular;24" transparent="1"/>
+		<widget name="misc" position="250,405" size="980,200" zPosition="2" font="Regular;22" transparent="1"/>
+		<widget name="statustext" position="50,105" size="1180,510" zPosition="2" font="Regular;18" transparent="1" valign="center" halign="center"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget render="Label" source="key_red" backgroundColor="secondBG" font="Regular;22" halign="left" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_green" backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_yellow" backgroundColor="secondBG" font="Regular;22" halign="left" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_blue" backgroundColor="secondBG" font="Regular;22" halign="left" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>
+	<screen backgroundColor="background" flags="wfNoBorder" name="TVDbSelection" position="0,0" size="1280,720" title="TMDb Info">
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-2"/>
+		<widget font="Regular;24" foregroundColor="secondFG" name="headertext" position="50,35" size="850,50" transparent="1" valign="center" zPosition="1"/>
+		    <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		      <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		    </widget>
+		<widget name="list" position="50,105" zPosition="2" size="1180,510" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="overview" position="50,105" size="1180,510" zPosition="3" font="Regular;24" transparent="1"/>
+		<widget name="statustext" position="50,105" size="1180,510" zPosition="2" font="Regular;18" transparent="1" valign="center" halign="center"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
+		<widget render="Label" source="key_red" backgroundColor="secondBG" font="Regular;22" halign="left" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_green" backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_yellow" backgroundColor="secondBG" font="Regular;22" halign="left" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget render="Label" source="key_blue" backgroundColor="secondBG" font="Regular;22" halign="left" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>
   
  
   
