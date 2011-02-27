@@ -599,7 +599,7 @@
 		<eLabel 			position="70,155" size="700,2" backgroundColor="grey" />
 		<widget name="list" position="70,165" size="700,450" scrollbarMode="showOnDemand" 
 			colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" 
-			picServiceEventProgressbar="DMConcinnity-HD/progcl.png"			
+			picServiceEventProgressbar="Kerni-HD1R2/progcl.png"
 			colorEventProgressbarBorder="grey" 	colorEventProgressbarBorderSelected="grey"
 			foregroundColorServiceNotAvail="#777777" serviceItemHeight="30"
 			serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" 
@@ -652,7 +652,7 @@
 		<eLabel 								position="70,155" size="700,2" backgroundColor="grey" />
 		<widget name="list" 					position="70,165" size="700,450" scrollbarMode="showOnDemand" 
 			colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" 
-			picServiceEventProgressbar="DMConcinnity-HD/progcl.png"			
+			picServiceEventProgressbar="Kerni-HD1R2/progcl.png"
 			colorEventProgressbarBorder="grey" 	colorEventProgressbarBorderSelected="grey"
 			foregroundColorServiceNotAvail="#777777" serviceItemHeight="30"
 			serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" 
@@ -2052,7 +2052,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<widget name="list" position="70,120" size="700,480" scrollbarMode="showOnDemand" 
 			colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" 
-			picServiceEventProgressbar="DMConcinnity-HD/progcl.png"			
+			picServiceEventProgressbar="Kerni-HD1R2/progcl.png"
 			colorEventProgressbarBorder="grey" 	colorEventProgressbarBorderSelected="grey"
 			foregroundColorServiceNotAvail="#777777" serviceItemHeight="30"
 			serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" transparent="1" 
