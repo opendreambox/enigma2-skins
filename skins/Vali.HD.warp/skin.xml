@@ -2487,7 +2487,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget font="Regular;18" name="languagetext" position="155,325" size="147,30"/>
     <widget name="config" position="150,400" scrollbarMode="showOnDemand" size="700,200" transparent="1" zPosition="1"/>
     <widget alphatest="on" name="wizard" pixmap="skin_default/wizard.png" position="140,150" size="110,174" transparent="1" zPosition="10"/>
-    <widget alphatest="on" name="rc" pixmap="skin_default/rc.png" position="920,110" size="154,500" transparent="1" zPosition="10"/>
+    <widget alphatest="on" name="rc" pixmap="skin_default/rc0.png" position="920,110" size="154,500" transparent="1" zPosition="10"/>
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
     <widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" transparent="1" zPosition="11"/>
@@ -2503,7 +2503,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget font="Regular;18" name="languagetext" position="155,325" size="191,30"/>
     <widget name="config" position="150,400" scrollbarMode="showOnDemand" size="700,200" transparent="1" zPosition="1"/>
     <widget alphatest="on" name="wizard" pixmap="skin_default/wizard.png" position="140,150" size="110,174" transparent="1" zPosition="10"/>
-    <widget alphatest="on" name="rc" pixmap="skin_default/rc.png" position="920,110" size="154,500" transparent="1" zPosition="10"/>
+    <widget alphatest="on" name="rc" pixmap="skin_default/rc0.png" position="920,110" size="154,500" transparent="1" zPosition="10"/>
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
     <widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" transparent="1" zPosition="11"/>
@@ -2519,7 +2519,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget font="Regular;18" name="languagetext" position="155,335" size="181,30"/>
     <widget name="config" position="150,400" scrollbarMode="showOnDemand" size="700,200" transparent="1" zPosition="1"/>
     <widget alphatest="on" name="wizard" pixmap="skin_default/wizard.png" position="140,150" size="110,174" transparent="1" zPosition="10"/>
-    <widget alphatest="on" name="rc" pixmap="skin_default/rc.png" position="920,110" size="154,500" transparent="1" zPosition="10"/>
+    <widget alphatest="on" name="rc" pixmap="skin_default/rc0.png" position="920,110" size="154,500" transparent="1" zPosition="10"/>
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
     <widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" transparent="1" zPosition="11"/>
