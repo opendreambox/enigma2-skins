@@ -1189,7 +1189,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="help..." 	position="80,40" size="300,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="rc" 			position="170,105" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on"/>
+		<widget name="rc" 			position="170,105" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on"/>
 		<widget name="long_key" 	position="100,630" size="300,30" font="Regular;27" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
 		<widget name="list" 		position="550,120" size="660,456" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
@@ -2377,7 +2377,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 		<eLabel text="CleanupWizard" 	position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
 
-		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -3943,7 +3943,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="Welcome..." 	position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -3966,7 +3966,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="NetworkWizard" 	position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" 	position="-100,-100" 	size="37,70" 		pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" 	size="37,70" 		pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" 	size="37,70" 		pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -4053,7 +4053,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="ImageWizard" 	position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -4076,7 +4076,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="Language selection" 	position="80,40" size="1000,40" zPosition="3" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" 			position="170,105" 		size="154,500" 	pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -4104,7 +4104,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="TutorialWizard" 	position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="rc" 			position="130,105" 		size="154,500" 	pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" 			position="130,105" 		size="154,500" 	pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" 	position="-100,-100" 	size="37,70" 	pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -4120,7 +4120,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="VideoWizard" 	position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="rc" 			position="170,105" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on"/>
+		<widget name="rc" 			position="170,105" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on"/>
 		<widget name="arrowdown" 	position="-100,-100" 	size="37,70" 		pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" 	size="37,70" 		pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" 	size="37,70" 		pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />

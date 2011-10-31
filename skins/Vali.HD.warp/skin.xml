@@ -2470,7 +2470,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget name="config" position="150,440" scrollbarMode="showOnDemand" size="700,187" transparent="1" zPosition="1"/>
     <ePixmap alphatest="on" pixmap="skin_default/buttons/button_red.png" position="140,135" size="15,16"/>
     <widget font="Regular;18" name="languagetext" position="160,130" size="411,30"/>
-    <widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="920,110" size="154,500" zPosition="10"/>
+    <widget alphatest="on" name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="920,110" size="154,500" zPosition="10"/>
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,89" zPosition="-1"/>
     <widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
@@ -2540,7 +2540,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
 			</convert>
     </widget>
     <widget alphatest="on" name="wizard" pixmap="skin_default/wizard.png" position="140,150" size="110,174" zPosition="10"/>
-    <widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="920,110" size="154,500" zPosition="10"/>
+    <widget alphatest="on" name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="920,110" size="154,500" zPosition="10"/>
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
     <widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
@@ -2551,7 +2551,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
   <screen flags="wfNoBorder" name="HelpMenu" position="0,0" size="1280,720" title="Help...">
     <widget name="list" position="250,100" scrollbarMode="showOnDemand" size="450,380"/>
     <widget font="Regular;25" foregroundColor="yellow" halign="right" name="long_key" position="520,520" size="350,50"/>
-    <widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="920,110" size="154,500" zPosition="10"/>
+    <widget alphatest="on" name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="920,110" size="154,500" zPosition="10"/>
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
     <widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
@@ -2568,7 +2568,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <ePixmap alphatest="on" pixmap="skin_default/buttons/button_red.png" position="185,270" size="15,16" transparent="1" zPosition="0"/>
     <widget font="Regular;18" name="languagetext" position="200,265" size="95,30"/>
     <widget alphatest="on" name="wizard" pixmap="skin_default/wizard.png" position="205,90" size="110,174" zPosition="10"/>
-    <widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="870,100" size="154,500" zPosition="10"/>
+    <widget alphatest="on" name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="870,100" size="154,500" zPosition="10"/>
     <widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
     <widget alphatest="on" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
     <widget alphatest="on" name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11"/>
@@ -2584,7 +2584,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <ePixmap alphatest="on" pixmap="skin_default/buttons/button_red.png" position="195,290" size="15,16" transparent="1" zPosition="0"/>
     <widget font="Regular;18" name="languagetext" position="210,285" size="95,30"/>
     <widget alphatest="on" name="portpic" pixmap="%s" position="50,300" size="150,150" transparent="1" zPosition="10"/>
-    <widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="885,105" size="154,500" transparent="1" zPosition="10"/>
+    <widget alphatest="on" name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="885,105" size="154,500" transparent="1" zPosition="10"/>
     <widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="0,0" size="37,70" transparent="1" zPosition="11"/>
     <widget alphatest="on" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="0,0" size="37,70" transparent="1" zPosition="11"/>
     <widget alphatest="on" name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" transparent="1" zPosition="11"/>

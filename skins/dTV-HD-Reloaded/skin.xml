@@ -1007,7 +1007,7 @@
 	</screen>
 	<screen name="HelpMenu" 						position="0,0" size="1280,720" title="Menu" flags="wfNoBorder">
 		<eLabel text="help..." position="450,63" size="740,50" font="Regular;40" halign="center" backgroundColor="black" transparent="1" />
-		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="long_key" position="80,615" size="300,30" font="Regular;24" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="list" position="450,140" size="740,494" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select750_38.png" transparent="1" />
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
@@ -1950,7 +1950,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="StartWizard" 						position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Welcome..." position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1" />
-		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -1966,7 +1966,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="NetworkWizard" 					position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Welcome..." position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1" />
-		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -2018,7 +2018,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="ImageWizard" 						position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Welcome..." position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="#0b67a2" transparent="1" />
-		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -2034,7 +2034,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="LanguageWizard" 					position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Language selection" position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1" />
-		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -2059,14 +2059,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Welcome..." position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1" />
 		<widget name="text" position="640,120" size="500,240" font="Regular;23" backgroundColor="background" transparent="1" />
 		<widget name="list" position="460,370" size="730,150" zPosition="1" />
-		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
 	</screen>
 	<screen name="VideoWizard" 						position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
 		<eLabel text="Welcome..." position="500,63" size="330,30" font="Regular;27" halign="center" backgroundColor="background" transparent="1" />
-		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on" />
+		<widget name="rc" position="150,105" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on" />
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />

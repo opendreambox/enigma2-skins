@@ -480,7 +480,7 @@
 			</convert>
 		</widget>
 		<widget name="config" 							position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel25.png" transparent="1" />            
-		<widget name="rc" 								position="990,110" size="154,500" pixmaps="Elgato-HD/rc.png,Elgato-HD/rcold.png" zPosition="10" alphatest="on"/>
+		<widget name="rc" 								position="990,110" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on"/>
 		<widget name="arrowdown" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -553,7 +553,7 @@
 			</convert>
 		</widget>
 		<widget name="config" 							position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel25.png" transparent="1" />            
-		<widget name="rc" 								position="990,110" size="154,500" pixmaps="Elgato-HD/rc.png,Elgato-HD/rcold.png" zPosition="10" alphatest="on"/>
+		<widget name="rc" 								position="990,110" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on"/>
 		<widget name="arrowdown" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -574,7 +574,7 @@
 				}
 			</convert>
 		</widget>
-		<widget name="rc" 			position="990,110" size="154,500" pixmaps="Elgato-HD/rc.png,Elgato-HD/rcold.png" zPosition="10"/>
+		<widget name="rc" 			position="990,110" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10"/>
 		<widget name="arrowdown" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -596,7 +596,7 @@
 			</convert>
 		</widget>
 		<widget name="config" 							position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel25.png" transparent="1" />            
-		<widget name="rc" 								position="990,110" size="154,500" pixmaps="Elgato-HD/rc.png,Elgato-HD/rcold.png" zPosition="10" alphatest="on"/>
+		<widget name="rc" 								position="990,110" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="on"/>
 		<widget name="arrowdown" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -618,7 +618,7 @@
 			</convert>
 		</widget>
 		<widget name="config" 							position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel25.png" transparent="1" />            
-		<widget name="rc" 								position="990,110" size="154,500" pixmaps="Elgato-HD/rc.png,Elgato-HD/rcold.png" zPosition="10"/>
+		<widget name="rc" 								position="990,110" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10"/>
 		<widget name="arrowdown" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -641,7 +641,7 @@
 		</widget>
 		<widget name="config" 							position="150,420" size="510,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel25.png" transparent="1" />            
 		<widget name="portpic" 				 			position="750,465" size="150,150" zPosition="10" transparent="1" alphatest="on"/>
-		<widget name="rc" 								position="990,110" size="154,500" pixmaps="Elgato-HD/rc.png,Elgato-HD/rcold.png" zPosition="10"/>
+		<widget name="rc" 								position="990,110" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10"/>
 		<widget name="arrowdown" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" 	position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" 		position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -1507,7 +1507,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<ePixmap 								position="1040,10" size="  35, 35" pixmap="Elgato-HD/micon/help.png" alphatest="on"/>
 		<eLabel 								position=" 20,55" size="1060,  1" backgroundColor="white" />
 		<widget name="list" position="20,75" size="710,494" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel35.png" backgroundColor="background1" transparent="1" />
-		<widget name="rc" pixmaps="Elgato-HD/rc.png,Elgato-HD/rcold.png" position="835,60" zPosition="10" size="154,500" alphatest="on"/>
+		<widget name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="835,60" zPosition="10" size="154,500" alphatest="on"/>
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="on" />

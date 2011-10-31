@@ -779,7 +779,7 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 		<ePixmap alphatest="on" pixmap="skin_default/buttons/button_red.png" position="40,35" size="15,16"/>
 		<widget font="Regular;18" name="languagetext" position="60,30" size="200,30"/>
 		<widget alphatest="blend" name="wizard" pixmap="Vali-XD/window/merlin.png" position="720,125" size="200,326" zPosition="10"/>
-		<widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="500,50" size="154,500" zPosition="10"/>
+		<widget alphatest="on" name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="500,50" size="154,500" zPosition="10"/>
 		<widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
 		<widget alphatest="on" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
 		<widget alphatest="on" name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11"/>
@@ -845,7 +845,7 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 			</convert>
 		</widget>
 		<widget alphatest="blend" name="wizard" pixmap="Vali-XD/window/merlin.png" position="720,125" size="200,326" zPosition="10"/>
-		<widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="500,50" size="154,500" zPosition="10"/>
+		<widget alphatest="on" name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="500,50" size="154,500" zPosition="10"/>
 		<widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
 		<widget alphatest="on" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
 		<widget alphatest="on" name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11"/>
@@ -866,7 +866,7 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 		<eLabel font="Regular;40" position="400,40" size="220,60" text="help..."/>
 		<widget name="list" position="50,100" scrollbarMode="showOnDemand" size="450,380"/>
 		<ePixmap alphatest="blend" pixmap="Vali-XD/window/merlin.png" position="720,125" size="200,326" zPosition="10"/>
-		<widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="540,10" size="154,500" zPosition="10"/>
+		<widget alphatest="on" name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="540,10" size="154,500" zPosition="10"/>
 		<widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
 		<widget alphatest="on" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
 		<widget alphatest="on" name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11"/>
@@ -883,7 +883,7 @@ self.instance.move(ePoint((1024-wsizex)/2, (576-wsizey)/2))
 		<ePixmap alphatest="on" pixmap="skin_default/buttons/button_red.png" position="40,35" size="15,16"/>
 		<widget font="Regular;18" name="languagetext" position="60,30" size="200,30"/>
 		<widget alphatest="blend" name="wizard" pixmap="Vali-XD/window/merlin.png" position="720,125" size="200,326" zPosition="10"/>
-		<widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="540,10" size="154,500" zPosition="10"/>
+		<widget alphatest="on" name="rc" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" position="540,10" size="154,500" zPosition="10"/>
 		<widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
 		<widget alphatest="on" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
 		<widget alphatest="on" name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11"/>

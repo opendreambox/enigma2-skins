@@ -1324,7 +1324,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<eLabel text="Help..." position="180,50" size="550,36" zPosition="3" font="Regular;32" backgroundColor="background2" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<eLabel position="122,210" size="496,301" zPosition="1" backgroundColor="white"/>
 		<widget source="session.VideoPicture" render="Pig" position="125,213" size="490,295" zPosition="2" backgroundColor="#ff000000"/>
-		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend"/>
+		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="blend"/>
 		<widget name="long_key" position="310,600" size="305,35" font="Regular;30" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<eLabel position="646,153" size="548,479" zPosition="3" backgroundColor="background"/>
 		<eLabel position="650,157" size="544,475" zPosition="4" backgroundColor="background2"/>
@@ -1355,7 +1355,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="config" position="645,400" size="550,150" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel25-740.png" transparent="1"/>            
 		<ePixmap pixmap="UltraViolet/buttons/red.png" position="210,662" size="35,35" alphatest="blend"/>
 		<widget name="languagetext" position=" 250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend"/>
+		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="blend"/>
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on"/>
@@ -1932,7 +1932,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="645,400" size="550,150" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel25-740.png" transparent="1"/>            
 		<ePixmap pixmap="UltraViolet/buttons/red.png" position="210,662" size="35,35" alphatest="blend"/>
 		<widget name="languagetext" position=" 250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend"/>
+		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="blend"/>
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on"/>
@@ -2698,7 +2698,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="645,400" size="550,150" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel25-740.png" transparent="1"/>            
 		<ePixmap pixmap="UltraViolet/buttons/red.png" position="210,662" size="35,35" alphatest="blend"/>
 		<widget name="languagetext" position=" 250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend"/>
+		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="blend"/>
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on"/>
@@ -3106,7 +3106,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="645,400" size="550,150" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel25-740.png" transparent="1"/>            
 		<ePixmap pixmap="UltraViolet/buttons/red.png" position="210,662" size="35,35" alphatest="blend"/>
 		<widget name="languagetext" position=" 250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend"/>
+		<widget name="rc" position="140,150" size="154,500" pixmaps="skin_default/rc0.png,skin_default/rc1.png,skin_default/rc2.png" zPosition="10" alphatest="blend"/>
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on"/>
