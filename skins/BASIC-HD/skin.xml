@@ -1513,7 +1513,7 @@
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
 		<widget name="buttonred" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="buttonredgreen" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="buttongreen" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="config" position="10,40" size="780,450" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="FilebrowserScreen" position="240,130" size="800,510" title="">
