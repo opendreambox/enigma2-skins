@@ -26,6 +26,15 @@ skins/BrushedAlu-HD/buttons/Makefile
 skins/BrushedAlu-HD/mmp3/Makefile
 skins/BrushedAlu-HD/frame/Makefile
 skins/BrushedAlu-HD/meta/Makefile
+skins/DMConcinnity-HD/Makefile
+skins/DMConcinnity-HD/buttons/Makefile
+skins/DMConcinnity-HD/extensions/Makefile
+skins/DMConcinnity-HD/fonts/Makefile
+skins/DMConcinnity-HD/icons/Makefile
+skins/DMConcinnity-HD/menu/Makefile
+skins/DMConcinnity-HD/skin_default/Makefile
+skins/DMConcinnity-HD/skin_default/buttons/Makefile
+skins/DMConcinnity-HD/skin_default/icons/Makefile
 skins/dmm-HD/Makefile
 skins/dmm-HD/buttons/Makefile
 skins/dmm-HD/extensions/Makefile
