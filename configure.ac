@@ -32,6 +32,7 @@ skins/DMConcinnity-HD/extensions/Makefile
 skins/DMConcinnity-HD/fonts/Makefile
 skins/DMConcinnity-HD/icons/Makefile
 skins/DMConcinnity-HD/menu/Makefile
+skins/DMConcinnity-HD/meta/Makefile
 skins/DMConcinnity-HD/skin_default/Makefile
 skins/DMConcinnity-HD/skin_default/buttons/Makefile
 skins/DMConcinnity-HD/skin_default/icons/Makefile

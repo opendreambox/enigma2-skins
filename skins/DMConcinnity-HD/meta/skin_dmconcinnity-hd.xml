@@ -1,0 +1,21 @@
+<default>
+	  <prerequisites>
+		    <hardware type="dm8000" />
+		    <hardware type="dm800" />
+		    <hardware type="dm800se" />
+		    <hardware type="dm500hd" />
+		    <hardware type="dm7020hd" />
+                    <tag type="Skin" />
+	  </prerequisites>
+          <info>
+                    <author>Kerni</author>
+                    <name>DMConcinnity-HD</name>
+                    <packagename>enigma2-skin-dmconcinnity-hd</packagename>
+                    <shortdescription>Kerni's DMConcinnity-HD skin</shortdescription>
+                    <description>a HD skin from Kerni</description>
+          </info>
+
+	  <files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-dmconcinnity-hd" />
+	  </files>
+</default>
