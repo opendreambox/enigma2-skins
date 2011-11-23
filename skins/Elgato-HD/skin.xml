@@ -8,14 +8,14 @@
 	<colors>
 		<color name="white" 		value="#ffffff" />
 		<color name="black" 		value="#000000" />
-		<color name="dark" 			value="#062748" />
-		<color name="menu" 			value="#062748" />
-		<color name="red" 			value="#f23d21" />
+		<color name="dark" 		value="#062748" />
+		<color name="menu" 		value="#062748" />
+		<color name="red" 		value="#f23d21" />
 		<color name="green" 		value="#389416" />
-		<color name="blue" 			value="#0064c7" />
+		<color name="blue" 		value="#0064c7" />
 		<color name="yellow" 		value="#bab329" />
 		<color name="yellow1" 		value="#cc9329" />
-		<color name="grey" 			value="#aaaaaa" />
+		<color name="grey" 		value="#aaaaaa" />
 		<color name="transparent" 	value="#ffffffff" />
 		<color name="transpBlack" 	value="#80000000" />
 		<color name="transpWhite" 	value="#80ffffff" />
@@ -28,18 +28,18 @@
 	</colors>
 	<windowstyle type="skinned" id="0">
 		<title offset="210,14" font="Regular;27" />
-		<color name="Background" 							color="#2518252e" />
-		<color name="LabelForeground" 						color="#ffffff" />
-		<color name="ListboxBackground" 					color="#2518252e" />
-		<color name="ListboxForeground" 					color="#ffffff" />
-		<color name="ListboxSelectedBackground" 			color="#25344452" />
-		<color name="ListboxSelectedForeground" 			color="#ffffff" />
-		<color name="ListboxMarkedBackground" 				color="#25344452" />
-		<color name="ListboxMarkedForeground" 				color="#389416" />
+		<color name="Background" 				color="#2518252e" />
+		<color name="LabelForeground" 				color="#ffffff" />
+		<color name="ListboxBackground" 			color="#2518252e" />
+		<color name="ListboxForeground" 			color="#ffffff" />
+		<color name="ListboxSelectedBackground" 		color="#25344452" />
+		<color name="ListboxSelectedForeground" 		color="#ffffff" />
+		<color name="ListboxMarkedBackground" 			color="#25344452" />
+		<color name="ListboxMarkedForeground" 			color="#389416" />
 		<color name="ListboxMarkedAndSelectedBackground" 	color="#25344452" />
 		<color name="ListboxMarkedAndSelectedForeground" 	color="#f23d21" />
-		<color name="WindowTitleForeground" 				color="#ffffff" />
-		<color name="WindowTitleBackground" 				color="#232a33" />
+		<color name="WindowTitleForeground" 			color="#ffffff" />
+		<color name="WindowTitleBackground" 			color="#232a33" />
 		<borderset name="bsWindow">
 			<pixmap pos="bpTopLeft" 	filename="Elgato-HD/b_tl.png"/>
 			<pixmap pos="bpTop" 		filename="Elgato-HD/b_t.png"/>
@@ -52,18 +52,18 @@
 		</borderset>
 	</windowstyle>
 	<windowstyle type="skinned" id="1">
-		<color name="Background" 							color="#000000" />
-		<color name="LabelForeground" 						color="#ffffff" />
-		<color name="ListboxBackground" 					color="#000000" />
-		<color name="ListboxForeground" 					color="#ffffff" />
-		<color name="ListboxSelectedBackground" 			color="#000000" />
-		<color name="ListboxSelectedForeground" 			color="#ffffff" />
-		<color name="ListboxMarkedBackground" 				color="#000000" />
-		<color name="ListboxMarkedForeground" 				color="#ffffff" />
+		<color name="Background" 				color="#000000" />
+		<color name="LabelForeground" 				color="#ffffff" />
+		<color name="ListboxBackground" 			color="#000000" />
+		<color name="ListboxForeground" 			color="#ffffff" />
+		<color name="ListboxSelectedBackground" 		color="#000000" />
+		<color name="ListboxSelectedForeground" 		color="#ffffff" />
+		<color name="ListboxMarkedBackground" 			color="#000000" />
+		<color name="ListboxMarkedForeground" 			color="#ffffff" />
 		<color name="ListboxMarkedAndSelectedBackground" 	color="#000000" />
 		<color name="ListboxMarkedAndSelectedForeground" 	color="#ffffff" />
-		<color name="WindowTitleForeground" 				color="#ffffff" />
-		<color name="WindowTitleBackground" 				color="#000000" />
+		<color name="WindowTitleForeground" 			color="#ffffff" />
+		<color name="WindowTitleBackground" 			color="#000000" />
 	</windowstyle>
 	<fonts>
 		<font filename="nmsbd.ttf" name="Regular" scale="95" />
@@ -1473,25 +1473,76 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<ePixmap pixmap="Elgato-HD/buttons/info.png" position=" 920,562" size="70,30" alphatest="on"/>
 		<ePixmap pixmap="Elgato-HD/buttons/menu.png" position="1000,562" size="70,30" alphatest="on"/>
 	</screen>
-	<screen name="HarddiskSelection" 				position="center,center" size="750,600" title="Select HDD" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="HarddiskDriveSelection" position="center,center" size="750,600" title="Select HDD" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="750,600" zPosition="-1" pixmap="Elgato-HD/menu_bg2.png"/>
 		<eLabel text="Select HDD" position="50,12" size="650,33" zPosition="1" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
-		<ePixmap position="25,16" size=" 15, 20" pixmap="Elgato-HD/al.png" alphatest="on"/>
-		<ePixmap position="690,10" size="  35, 35" pixmap="Elgato-HD/micon/hdd.png" alphatest="blend"/>
-		<eLabel position=" 20,55" size="710,  1" backgroundColor="white" />
-		<widget name="hddlist" 	position="20,65" size="710,480" zPosition="1" itemHeight="32" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel32.png" transparent="1"/>
+		<ePixmap position="25,16" size=" 15,20" pixmap="Elgato-HD/al.png" alphatest="on"/>
+		<ePixmap position="690,10" size="35,35" pixmap="Elgato-HD/micon/hdd.png" alphatest="blend"/>
+		<eLabel position="20,55" size="710,1" backgroundColor="white" />
+		<widget source="hddlist" render="Listbox" position="15,65" size="720,450" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel75.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 6), size = (600, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (720, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), # index 3 is the device pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), # index 4 is the online state pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (0, 73), size = (700, 2), png = 9), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<ePixmap pixmap="Elgato-HD/buttons/red.png" position=" 30,590" size="170,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/green.png" position="200,590" size="170,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/yellow.png" position="370,590" size="170,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/blue.png" position="540,590" size="170,2" alphatest="on"/>
+		<widget source="key_red" render="Label" position=" 30,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_green" render="Label" position="200,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_yellow" render="Label" position="370,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_blue" render="Label" position="540,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<ePixmap position="690,10" size="35,35" pixmap="Elgato-HD/micon/hdd.png" alphatest="blend"/>
 	</screen>
-	<screen name="HarddiskSetup" 					position="center,center" size="750,600" title="Harddisk" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="HarddiskDriveSetup" position="center,center" size="750,600" title="Harddisk" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="750,600" zPosition="-1" pixmap="Elgato-HD/menu_bg2.png"/>
 		<eLabel text="Harddisk" position="50,12" size="650,33" zPosition="1" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
-		<ePixmap position="25,16" size=" 15, 20" pixmap="Elgato-HD/al.png" alphatest="on"/>
-		<ePixmap position="690,10" size="  35, 35" pixmap="Elgato-HD/micon/hdd.png" alphatest="blend"/>
-		<eLabel position=" 20,55" size="710,  1" backgroundColor="white" />
-		<widget name="model" 	position="20,120" size="710,32" zPosition="2" font="Regular;27" halign="center" backgroundColor="background" transparent="1"/>
-		<widget name="capacity" position="20,190" size="710,32" zPosition="2" font="Regular;27" halign="center" backgroundColor="background" transparent="1"/>
-		<widget name="bus" 		position="20,260" size="710,32" zPosition="2" font="Regular;27" halign="center" backgroundColor="background" transparent="1"/>
-		<ePixmap pixmap="Elgato-HD/buttons/red.png" position=" 50,590" size="250,2" alphatest="on"/>
-		<widget name="initializetext" position=" 50,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<ePixmap position="25,16" size="15,20" pixmap="Elgato-HD/al.png" alphatest="on"/>
+		<eLabel position="20,55" size="710,1" backgroundColor="white" />
+		<widget source="icon" render="Pixmap" position="20,70" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<widget source="model" render="Label" position="110,70" size="620,25" font="Regular;23" backgroundColor="background" transparent="1" />
+		<widget source="capacity" render="Label" position="110,120" size="620,25" font="Regular;23" backgroundColor="background" transparent="1" />
+		<widget source="bus" render="Label" position="110,171" size="620,25" font="Regular;23" backgroundColor="background" transparent="1" />
+		<widget name="config" position="20,205" size="710,50" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
+		<ePixmap pixmap="skin_default/div-h.png" position="25,500" zPosition="1" size="700,2" />
+		<widget source="introduction" render="Label" position="25,505" size="700,45" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="background" transparent="1" />
+		<ePixmap pixmap="skin_default/div-h.png" position="25,555" zPosition="1" size="700,2" />
+		<widget name="HelpWindow" position="339,355" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+		<ePixmap pixmap="Elgato-HD/buttons/red.png" position=" 30,590" size="170,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/green.png" position="200,590" size="170,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/yellow.png" position="370,590" size="170,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/blue.png" position="540,590" size="170,2" alphatest="on"/>
+		<widget source="key_red" render="Label" position=" 30,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_green" render="Label" position="200,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_yellow" render="Label" position="370,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_blue" render="Label" position="540,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+	</screen>
+	<screen name="HarddiskMountpointBrowser" position="center,center" size="750,600" title="Select mountpoint" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap position="0,0" size="750,600" zPosition="-1" pixmap="Elgato-HD/menu_bg2.png"/>
+		<eLabel text="Select mountpoint" position="50,12" size="650,33" zPosition="1" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
+		<ePixmap position="25,16" size="15,20" pixmap="Elgato-HD/al.png" alphatest="on"/>
+		<ePixmap position="690,10" size="35,35" pixmap="Elgato-HD/micon/hdd.png" alphatest="blend"/>
+		<eLabel position="20,55" size="710,1" backgroundColor="white" />
+		<ePixmap pixmap="Elgato-HD/buttons/red.png" position=" 30,590" size="170,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/green.png" position="200,590" size="170,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/yellow.png" position="370,590" size="170,2" alphatest="on"/>
+		<ePixmap pixmap="Elgato-HD/buttons/blue.png" position="540,590" size="170,2" alphatest="on"/>
+		<widget source="key_red" render="Label" position=" 30,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_green" render="Label" position="200,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_yellow" render="Label" position="370,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget source="key_blue" render="Label" position="540,560" zPosition="1" size="170,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+		<widget name="filelist" position="20,65" size="710,480" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Elgato-HD/selpic/sel30.png" transparent="1" />
 	</screen>
 	<screen name="HarddiskWait" 					position="center,center" size="750,600" title="please wait" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="750,600" zPosition="-1" pixmap="Elgato-HD/menu_bg2.png"/>
@@ -2538,6 +2589,25 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="pass" 			position="20,185" size="710,30" font="Regular;24" backgroundColor="background" transparent="1"/>
 		<widget name="scan_progress" 	position="20,235" size="710,15" borderWidth="1" transparent="1"/>
 		<widget name="servicelist" 		position="20,265" size="710,270" itemHeight="30" selectionDisabled="1" backgroundColor="background" transparent="1"/>
+	</screen>
+	<screen name="SatBlindscanState" position="center,center" size="750,600" title="Satellite Blindscan" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap position="0,0" size="750,600" zPosition="-1" pixmap="Elgato-HD/menu_bg2.png"/>
+		<widget source="Title" render="Label"	position="50,12" size=" 500, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
+		<ePixmap position="690,10" size="35,35" pixmap="Elgato-HD/micon/search.png" alphatest="on"/>
+		<eLabel position="20,55" size="710,1" backgroundColor="white" />
+		<widget name="text" position="50,65" size="650,30" font="Regular;26" backgroundColor="background" transparent="1" />
+		<widget name="progress" position="50,115" size="650,30" font="Regular;26" backgroundColor="background" transparent="1" />
+		
+		<widget source="list" render="Listbox" position="50,175" size="375,360" scrollbarMode="showAlways" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (0, 0), size = (375, 20), flags = RT_HALIGN_LEFT, text = 0) ],
+				 "fonts": [gFont("Regular", 16)],
+				 "itemHeight": 20
+				}
+			</convert>
+		</widget>
+		<widget source="constellation" render="Canvas" position="464,227" size="256,256" correct_aspect="width" />		
+		<widget name="post_action" position="20,560" size="710,33" halign="center" valign="center" font="Regular;22" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
 	</screen>
 	<screen name="ServiceInfo" 						position="center,center" size="1100,600" title="Serviceinfo" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap 					position="  0, 0" size="1100,600" zPosition="-1" pixmap="Elgato-HD/menu_bg3.png"/>
