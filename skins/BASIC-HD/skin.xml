@@ -103,7 +103,7 @@
 	</windowstyle>
 
 	<!-- About -->
-	<screen name="About" position="360,130" size="560,420" title="Skin created by Ismail Demir">
+	<screen name="About" position="360,130" size="560,420" title="Skin by Ismail Demir">
 		<widget source="EnigmaVersion" render="Label" position="10,10" size="480,25" font="Regular;22" />
 		<widget source="ImageVersion" render="Label" position="10,40" size="480,25" font="Regular;22" />
 		<widget source="FPVersion" render="Label" position="10,70" size="480,25" font="Regular;22" />
@@ -114,7 +114,7 @@
 		<widget source="Tuner3" render="Label" position="10,220" size="480,25" font="Regular;22" />
 		<widget source="HDDHeader" render="Label" position="10,250" size="480,25" font="Regular;22" />
 		<widget source="hddA" render="Label" position="10,280" size="480,50" font="Regular;22" />
-		<eLabel text="Last change: 28.07.2010" position="10,340" size="540,30" font="Regular;22" />
+		<eLabel text="Last change: 28.11.2011" position="10,340" size="540,30" font="Regular;22" />
 		<ePixmap pixmap="skin_default/icons/dmm_logo.png" position="180,390" size="200,10" alphatest="on" />
 	</screen>
 
@@ -1086,21 +1086,63 @@
 		<widget name="UnhandledKeyPixmap" pixmap="skin_default/unhandled-key.png" position="0,0" size="34,45" backgroundColor="transparent" alphatest="on" />
 	</screen>
 
-	<!-- Harddisk selection -->
-	<screen name="HarddiskSelection" position="240,130" size="800,520" title="Select HDD">
-		<widget name="hddlist" position="10,10" size="780,500" />
-	</screen>
-
-	<!-- Harddisk setup -->
-	<screen name="HarddiskSetup" position="240,130" size="800,500" title="Harddisk">
+	<!-- Harddrive selection --> 
+	<screen name="HarddiskDriveSelection" position="240,130" size="800,500" title="Select HDD">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
-		<widget name="initializetext" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="model" position="20,50" size="760,28" font="Regular;23" />
-		<widget name="capacity" position="20,80" size="760,28" font="Regular;23" />
-		<widget name="bus" position="20,110" size="760,28" font="Regular;23" />
+		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="hddlist" render="Listbox" position="10,40" size="780,450" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), # index 3 is the device pixmap
+						MultiContentEntryText(pos = (60, 6), size = (730, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (710, 24), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
+						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), # index 4 is the online state pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (10, 70), size = (780, 2), png = 9), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 22)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+	</screen>
+	<!-- Harddisk setup -->
+	<screen name="HarddiskDriveSetup" position="240,130" size="800,500" title="Harddisk">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="icon" render="Pixmap" position="30,60" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<widget source="model" render="Label" position="145,60" size="380,25" font="Regular;23" />
+		<widget source="capacity" render="Label" position="145,90" size="380,25" font="Regular;23" />
+		<widget source="bus" render="Label" position="145,120" size="380,25" font="Regular;23" />
+		<widget name="config" position="10,200" size="780,50" scrollbarMode="showOnDemand" />
+		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="440,400" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+		<widget source="introduction" render="Label" position="10,440" size="780,50" zPosition="10" font="Regular;22" halign="center" transparent="1" />
+	</screen>
+
+	<!-- Harddisk mountpoint selection -->
+	<screen name="HarddiskMountpointBrowser" position="240,130" size="800,500" title="Select mountpoint">
+		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
+		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
+		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
+		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
+		<widget source="key_red" render="Label" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_green" render="Label" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_yellow" render="Label" position="404,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget source="key_blue" render="Label" position="602,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
+		<widget name="filelist" position="10,40" size="780,450" scrollbarMode="showOnDemand" />
 	</screen>
 
 	<!-- Harddisk wait -->
