@@ -1862,33 +1862,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget name="list" position="400,112" scrollbarMode="showOnDemand" size="780,495" transparent="1"/>
     <widget name="text" position="0,0" size="0,0"/>
   </screen>
-  <screen flags="wfNoBorder" name="HarddiskSelection" position="0,0" size="1280,720" title="Select HDD">
-    <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
-    <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
-    <ePixmap alphatest="blend" pixmap="Vali.HD.warp/images/hdd.png" position="135,285" size="150,150"/>
-    <widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
-    <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
-    </widget>
-    <widget itemHeight="28" name="hddlist" position="400,118" size="780,476" transparent="1"/>
-  </screen>
-  <screen flags="wfNoBorder" name="HarddiskSetup" position="0,0" size="1280,720" title="Harddisk">
-    <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
-    <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
-    <ePixmap alphatest="blend" pixmap="Vali.HD.warp/images/setup.png" position="135,285" size="150,150"/>
-    <widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
-    <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
-    </widget>
-    <widget font="Regular;23" name="model" position="500,150" size="700,30" transparent="1"/>
-    <widget font="Regular;23" name="capacity" position="500,200" size="700,30" transparent="1"/>
-    <widget font="Regular;23" name="bus" position="500,250" size="700,30" transparent="1"/>
-    <ePixmap alphatest="on" pixmap="Vali.HD.warp/red.png" position="100,643" size="30,30"/>
-    <ePixmap alphatest="on" pixmap="Vali.HD.warp/green.png" position="390,643" size="30,30"/>
-    <ePixmap alphatest="on" pixmap="Vali.HD.warp/yellow.png" position="680,643" size="30,30"/>
-    <ePixmap alphatest="on" pixmap="Vali.HD.warp/blue.png" position="970,643" size="30,30"/>
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="initializetext" position="145,645" size="220,26" transparent="1" zPosition="1"/>
-  </screen>
   <screen flags="wfNoBorder" name="PositionerSetup" position="0,0" size="1280,720" title="Positioner setup...">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
@@ -2897,55 +2870,104 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
 	</screen>
 	
 	
-<!-- EnhancedMovieCenter ##### -->
-	<screen flags="wfNoBorder" name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center">
+<!-- HarddiskSelection ##### -->
+	<screen name="HarddiskDriveSelection" position="0,0" size="1280,720" title="Select HDD" lags="wfNoBorder">
+		<eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
+		<eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/images/hdd.png" position="135,285" size="150,150"/>
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
+		</widget>
+ 		<widget source="hddlist" render="Listbox" position="400,118" size="780,475" scrollbarMode="showOnDemand" transparent="1">
+ 				<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 6), size = (600, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (720, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), # index 3 is the device pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), # index 4 is the online state pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (0, 73), size = (700, 2), png = 9), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>		
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/blue.png" position="970,643" size="30,30"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_red" render="Label" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_green" render="Label" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_yellow" render="Label" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_blue" render="Label" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>	
+	<screen name="HarddiskDriveSetup" position="0,0" size="1280,720" title="Harddisk" flags="wfNoBorder">
 		<eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
 		<eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
 		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
 		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
 		</widget>
-		<widget name="wait" position="100,90" size="1080,450"/>
-		<widget CoolFont="Regular;20" CoolDirPos="770" CoolFolderSize="730" CoolMoviePos="30" CoolMovieSize="680" CoolDatePos="720" CoolTimePos="820" name="list" position="100,90" size="1080,450" itemHeight="30" scrollbarMode="showNever" backgroundColor="background" transparent="1" />
-		<eLabel backgroundColor="darkgrey" position="50,545" size="1180,2"/>
-		<widget font="Regular;20" position="380,550" render="Label" noWrap="1" size="750,27" source="Service" zPosition="1">
-			<convert type="MovieInfo">ShortDescription</convert>
+		<widget source="icon" render="Pixmap" position="135,285" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
 		</widget>
-		<widget font="Regular;22" position="100,550" render="Label" size="130,27" source="Service" zPosition="1">
-			<convert type="ServiceTime">Duration</convert>
-			<convert type="ClockToText">AsLength</convert>
+		<widget font="Regular;23" source="model" render="Label" position="500,150" size="700,30" transparent="1" />
+		<widget font="Regular;23" source="capacity" render="Label" position="500,200" size="700,30" transparent="1" />
+		<widget font="Regular;23" source="bus" render="Label" position="500,250" size="700,30" transparent="1" />
+		<widget name="config" position="500,300" size="700,50" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap pixmap="skin_default/div-h.png" position="500,550" zPosition="1" size="700,2" />
+		<widget source="introduction" render="Label" position="500,555" size="700,50" zPosition="10" font="Regular;23" halign="center" valign="center" transparent="1" />
+		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="655,400" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/blue.png" position="970,643" size="30,30"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_red" render="Label" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_green" render="Label" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_yellow" render="Label" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_blue" render="Label" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+	</screen>	
+ 	<screen name="HarddiskMountpointBrowser" position="0,0" size="1280,720" title="Select mountpoint" flags="wfNoBorder">
+		<eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
+		<eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
+		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/images/hdd.png" position="135,285" size="150,150"/>
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
 		</widget>
-		<widget name="FileSize" position="230,550" size="150,27" font="Regular;22" backgroundColor="background" transparent="1" />
-		<widget font="Regular;20" position="100,575" render="Label" size="1080,48" source="Service" zPosition="1">
-			<convert type="EventName">ExtendedDescription</convert>
-		</widget>
-		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/red.png" position="100,643" size="30,30"/>
-		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/green.png" position="390,643" size="30,30"/>
-		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/yellow.png" position="680,643" size="30,30"/>
-		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/blue.png" position="970,643" size="30,30"/>
-		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
-		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
-		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
-		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/red.png" position="100,643" size="30,30"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/green.png" position="390,643" size="30,30"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/yellow.png" position="680,643" size="30,30"/>
+		<ePixmap alphatest="on" pixmap="Vali.HD.warp/blue.png" position="970,643" size="30,30"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_yellow" position="725,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_blue" position="1015,645" size="220,26" transparent="1" zPosition="1"/>
+		<widget name="filelist" position="400,110" size="780,504" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
-	<screen flags="wfNoBorder" name="EnhancedMovieCenterMenu" position="0,0" size="1280,720" title="EnhancedMovieCenterMenu">
+<!-- SatBlindscanState ##### -->
+  	<screen name="SatBlindscanState" position="0,0" size="1280,720" title="Satellite Blindscan" flags="wfNoBorder">
 		<eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
 		<eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
 		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
 		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 			<convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
 		</widget>
-		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/images/setup.png" position="130,285" size="150,150"/>
-		<widget itemHeight="28" name="config" position="400,108" scrollbarMode="showOnDemand" size="780,504"/>
-		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/red.png" position="100,643" size="30,30"/>
-		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/green.png" position="390,643" size="30,30"/>
-		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/yellow.png" position="680,643" size="30,30"/>
-		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/blue.png" position="970,643" size="30,30"/>
-		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
-		<widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
+  		<widget name="text" position="239,120" size="1000,25" font="Regular;22" transparent="1" />
+  		<widget name="progress" position="239,150" size="1000,25" font="Regular;22" transparent="1" />
+  		<widget source="list" render="Listbox" position="239,200" size="440,420" scrollbarMode="showAlways" transparent="1" >
+  			<convert type="TemplatedMultiContent">
+  				{"template": [ MultiContentEntryText(pos = (0, 0), size = (440, 30), flags = RT_HALIGN_LEFT, text = 0) ],
+  				 "fonts": [gFont("Regular", 20)],
+  				 "itemHeight": 30
+  				}
+  			</convert>
+  		</widget>
+  		<widget name="post_action" position="140,639" size="1000,40" font="Regular;20" halign="center" valign="center" transparent="1" />
+		<eLabel backgroundColor="darkgrey" position="749,231" size="258,258" />
+  		<widget source="constellation" render="Canvas" position="750,232" size="256,256" correct_aspect="width" zPosition="5" />
 	</screen>
-  
- 
   
 <!--  End of Vali.HD.warp     -->
 </skin>

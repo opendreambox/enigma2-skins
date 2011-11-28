@@ -897,6 +897,30 @@
 		<widget name="servicelist" position="550,300" size="660,300" selectionDisabled="1" backgroundColor="darkgrey" transparent="1" />
 		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend" />
 	</screen>
+	<screen name="SatBlindscanState" position="0,0" size="1280,720" title="Satellite Blindscan" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
+		<ePixmap position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
+		<widget source="session.VideoPicture" render="Pig" position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000" />
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<eLabel text="Satellite Blindscan" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<widget name="text" position="515,140" size="600,25" backgroundColor="background" transparent="1" font="Regular;22" />
+		<widget name="progress" position="515,175" size="700,25" backgroundColor="background" transparent="1" font="Regular;22" />
+		<widget source="list" render="Listbox" position="540,215" size="410,420" scrollbarMode="showAlways" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (0, 0), size = (410, 20), flags = RT_HALIGN_LEFT, text = 0) ],
+				 "fonts": [gFont("Regular", 16)],
+				 "itemHeight": 20
+				}
+			</convert>
+		</widget>
+		<widget name="post_action" position="1005,210" size="256,100" font="Regular;19" halign="center" transparent="1" />
+		<widget source="constellation" render="Canvas" position="1005,378" size="256,256" correct_aspect="width" transparent="1" />
+	</screen>	
 	<screen name="Satfinder" position="0,0" size="1280,720" title="Satfinder" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
@@ -1016,36 +1040,91 @@
 		</widget>
 		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend"/>
 	</screen>
-	<screen name="HarddiskSelection" position="0,0" size="1280,720" title="Select HDD" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
+	<screen name="HarddiskDriveSetup" position="0,0" size="1280,720" title="Harddisk" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>"/>
+		<ePixmap position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
+		<widget source="session.VideoPicture" render="Pig" position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<eLabel text="Select HDD" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
-		<ePixmap position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
-		<widget source="session.VideoPicture" render="Pig" position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000" />
-		<widget name="hddlist" position="550,120" size="660,500" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="darkgrey" selectionPixmap="BrushedAlu-HD/frame/sel660_25.png" transparent="1" />
-		<ePixmap position="60,540" size="270,105" pixmap="BrushedAlu-HD/db.png" transparent="1" alphatest="blend" />
+		<eLabel text="Harddisk Setup" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<widget source="icon" render="Pixmap" position="500,140" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<widget source="model" render="Label" 	position="600,140" size="600,25" font="Regular;23" transparent="1"/>
+		<widget source="capacity" render="Label" position="600,190" size="600,25" font="Regular;23" transparent="1"/>
+		<widget source="bus" render="Label" position="600,241" size="600,25" font="Regular;23" transparent="1"/>
+		<widget name="config" position="500,300" size="650,50" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
+		<eLabel position="550,590" size="660,2" backgroundColor="black" zPosition="5" />
+		<eLabel position="550,592" size="660,2" backgroundColor="grey" zPosition="5" />
+		<widget source="introduction" render="Label" position="550,600" size="660,27" zPosition="1" font="Regular;24" halign="center" foregroundColor="white" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
+		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="500,400" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,450" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="80,500" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="80,550" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" position="80,600" size="30,30" alphatest="blend" />
+		<widget source="key_red" render="Label" position="130,452" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552" size="320,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602" size="320,54" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
-	<screen name="HarddiskSetup" position="0,0" size="1280,720" title="Harddisk" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
+	<screen name="HarddiskDriveSelection" position="0,0" size="1280,720" title="Select HDD" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
+		<ePixmap position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
+		<widget source="session.VideoPicture" render="Pig" position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<eLabel text="Harddisk" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<eLabel text="Select HDD" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<widget source="hddlist" render="Listbox" position="500,130" size="700,375" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 6), size = (600, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (720, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), # index 3 is the device pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), # index 4 is the online state pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (0, 73), size = (700, 2), png = 9), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,450" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="80,500" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="80,550" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" position="80,600" size="30,30" alphatest="blend" />
+		<widget source="key_red" render="Label" position="130,452" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552" size="320,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602" size="320,54" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+	</screen>
+	<screen name="HarddiskMountpointBrowser" position="0,0" size="1280,720" title="Select mountpoint" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png"/>
 		<ePixmap position="70,200" size="390,225" zPosition="2" pixmap="BrushedAlu-HD/frame/pig_bg.png" />
 		<widget source="session.VideoPicture" render="Pig" position="75,205" size="380,215" zPosition="3" backgroundColor="#ff000000" />
-		<widget name="model" position="550,120" size="660,28" font="Regular;25" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="capacity" position="550,160" size="660,28" font="Regular;25" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<widget name="bus" position="550,200" size="660,28" font="Regular;25" halign="center" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,550" size="30,30" alphatest="blend" />
-		<widget name="initializetext" position="130,552" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1000,72" size="210,22" font="Regular;20" halign="right" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<eLabel text="Select Mountpoint" position="80,110" size="350,72" zPosition="3" font="Regular;32" foregroundColor="grey" backgroundColor="darkgrey" shadowColor="black" shadowOffset="2,2" transparent="1"/>
+		<widget name="filelist" position="500,130" size="630,425" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/red.png" position="80,450" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/green.png" position="80,500" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/yellow.png" position="80,550" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="BrushedAlu-HD/buttons/blue.png" position="80,600" size="30,30" alphatest="blend" />
+		<widget source="key_red" render="Label" position="130,452" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502" size="220,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552" size="320,30" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602" size="320,54" font="Regular;24" halign="left" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1" />
 	</screen>
 	<screen name="HarddiskWait" position="0,0" size="1280,720" title="HarddiskWait" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu.png" />
