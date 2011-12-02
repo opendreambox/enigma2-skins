@@ -2871,7 +2871,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
 	
 	
 <!-- HarddiskSelection ##### -->
-	<screen name="HarddiskDriveSelection" position="0,0" size="1280,720" title="Select HDD" lags="wfNoBorder">
+	<screen name="HarddiskDriveSelection" position="0,0" size="1280,720" title="Select HDD" flags="wfNoBorder">
 		<eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
 		<eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
 		<ePixmap alphatest="blend" pixmap="Vali.HD.warp/images/hdd.png" position="135,285" size="150,150"/>

@@ -3839,7 +3839,7 @@
 	
 	
 <!-- HarddiskSelection ##### -->
-	<screen name="HarddiskDriveSelection" position="0,0" size="1280,720" title="Select HDD" lags="wfNoBorder">
+	<screen name="HarddiskDriveSelection" position="0,0" size="1280,720" title="Select HDD" flags="wfNoBorder">
   		<eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
   		<eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1" />
   		<widget backgroundColor="transparent" position="0,90" render="Pig" size="497,280" source="session.VideoPicture" zPosition="1" />
