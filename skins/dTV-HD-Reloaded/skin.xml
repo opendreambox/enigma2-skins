@@ -969,31 +969,58 @@
 		<widget name="key_red" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
 		<widget name="key_green" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="HarddiskSelection" 				position="center,74" size="742,572" title="Select HDD" backgroundColor="transparent2" flags="wfNoBorder">
-		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
-		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
-		<eLabel text="Select HDD" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,499" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<widget name="hddlist" position="26,106" size="690,390" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1"/>
+	<!-- Harddrive selection --> 
+	<screen name="HarddiskDriveSelection" position="90,90" size="1100,570" title="Select HDD" >
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+ 		<widget source="hddlist" render="Listbox" position="10,10" size="750,375" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select780_75.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 6), size = (600, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), 	# index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (720, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), 	# index 2 is the device info
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), 						# index 3 is the device pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), 						# index 4 is the online state pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (0, 73), size = (750, 2), png = 9), 						# index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="0,470" size="760,50" zPosition="10" font="Regular;24" halign="center" valign="center" transparent="1" />
+		<eLabel position="780,0" size="2,518" backgroundColor="grey" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position=" 20,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="290,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="560,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="830,532" zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 20,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" zPosition="2" size="250,38" font="Regular;20" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1" />
+		<ePixmap position="800,400" size="150,110" zPosition="2" pixmap="dTV-HD-Reloaded/icons/hdd.png" transparent="1" alphatest="blend" />
 	</screen>
-	<screen name="HarddiskSetup" 					position="center,74" size="742,572" title="Harddisk" backgroundColor="transparent2" flags="wfNoBorder">
-		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
-		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
-		<eLabel text="Harddisk" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,499" size="700,  2" backgroundColor="grey" zPosition="5" />
-
-		<widget name="model" 	position="31,140" size="680,28" font="Regular;25" halign="center" />
-		<widget name="capacity" position="31,180" size="680,28" font="Regular;25" halign="center" />
-		<widget name="bus" 		position="31,220" size="680,28" font="Regular;25" halign="center" />
-
-		<ePixmap pixmap="dTV-HD-Reloaded/button300.png" 	position="221,517" zPosition="1" size="300,38"/>
-		<widget name="initializetext" 			position="221,516" zPosition="2" size="300,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
+	<!-- Harddisk setup -->
+	<screen name="HarddiskDriveSetup" position="90,90" size="1100,570" title="Select HDD" >
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+ 		<widget source="icon" render="Pixmap" position="150,40" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<widget source="model" render="Label" position="315,40" size="380,25" font="Regular;23" />
+		<widget source="capacity" render="Label" position="315,90" size="380,25" font="Regular;23" />
+		<widget source="bus" render="Label" position="315,140" size="380,25" font="Regular;23" />
+		<widget name="config" position="30,200" size="780,60" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" backgroundColor="background" transparent="1"/>
+		<widget name="HelpWindow" position="170,370" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+		<widget source="introduction" render="Label" position="0,460" size="830,50" zPosition="10" font="Regular;24" halign="center" valign="center" transparent="1" />
+		<eLabel position="830,0" size="2,518" backgroundColor="grey" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position=" 20,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="290,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="560,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="830,532" zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 20,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" zPosition="2" size="250,38" font="Regular;20" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<screen name="HarddiskWait" 					position="center,74" size="742,572" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
@@ -1191,7 +1218,7 @@
 		<widget source="key_blue" render="Label" position="830,531" zPosition="2" size="250,38" font="Regular;22" halign="center" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" />
 		<ePixmap position="970,400" size="110,110" zPosition="2" pixmap="dTV-HD-Reloaded/icons/net.png" transparent="1" alphatest="blend" />
 	</screen>
-	<screen name="NetworkAdapterTest" 				position="center,90" size="1100,570" title="Network test...">
+	<screen name="NetworkAdapterTest" position="center,90" size="1100,570" title="Network test...">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
@@ -1263,96 +1290,92 @@
 			</convert>
 		</widget>
 	</screen>
-	<screen name="NimSetup" 						position="center,74" size="742,572" title="Reception Settings" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="NimSetup" position="center,74" size="742,572" title="Reception Settings" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<eLabel text="Reception Settings" position="21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="700,  2" backgroundColor="grey" zPosition="5" />
-
+		<eLabel position="21, 99" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,549" size="700, 2" backgroundColor="grey" zPosition="5" />
 		<widget name="config" position="31,115" size="680,420" enableWrapAround="1" itemHeight="30" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
-	<screen name="NumberZap" 						position="center,355" size="400,60" title="Channel">
+	<screen name="NumberZap" position="center,355" size="400,60" title="Channel">
 		<eLabel position="0,0" size="400,2" backgroundColor="grey" zPosition="5" />
 		<widget name="channel" position="30,15" size="130,28" font="Regular;25" />
 		<widget name="number" position="190,15" size="80,28" halign="right" font="Regular;25" />
 	</screen>
-	<screen name="NumericalTextInputHelpDialog" 	position="center,470" zPosition="10" size="602,122" flags="wfNoBorder">
+	<screen name="NumericalTextInputHelpDialog" position="center,470" zPosition="10" size="602,122" flags="wfNoBorder">
 		<eLabel position="0,0" size="602,162" backgroundColor="#c0c0c0" zPosition="-1" />
-		<widget name="key1" 	position="  2, 2" size="198,28" font="Console;19" halign="center" valign="center" />
-		<widget name="key2" 	position="202, 2" size="198,28" font="Console;19" halign="center" valign="center" />
-		<widget name="key3" 	position="402, 2" size="198,28" font="Console;19" halign="center" valign="center" />
-		<widget name="key4" 	position="  2,32" size="198,28" font="Console;19" halign="center" valign="center" />
-		<widget name="key5" 	position="202,32" size="198,28" font="Console;19" halign="center" valign="center" />
-		<widget name="key6" 	position="402,32" size="198,28" font="Console;19" halign="center" valign="center" />
-		<widget name="key7" 	position="  2,62" size="198,28" font="Console;19" halign="center" valign="center" />
-		<widget name="key8" 	position="202,62" size="198,28" font="Console;19" halign="center" valign="center" />
-		<widget name="key9" 	position="402,62" size="198,28" font="Console;19" halign="center" valign="center" />
-		<widget name="help1" 	position="  2,92" size="198,28" font="Console;22" halign="center" valign="center" />
-		<widget name="key0" 	position="202,92" size="198,28" font="Console;18" halign="center" valign="center" />
-		<widget name="help2" 	position="402,92" size="198,28" font="Console;22" halign="center" valign="center" />
+		<widget name="key1" position=" 2, 2" size="198,28" font="Console;19" halign="center" valign="center" />
+		<widget name="key2" position="202, 2" size="198,28" font="Console;19" halign="center" valign="center" />
+		<widget name="key3" position="402, 2" size="198,28" font="Console;19" halign="center" valign="center" />
+		<widget name="key4" position=" 2,32" size="198,28" font="Console;19" halign="center" valign="center" />
+		<widget name="key5" position="202,32" size="198,28" font="Console;19" halign="center" valign="center" />
+		<widget name="key6" position="402,32" size="198,28" font="Console;19" halign="center" valign="center" />
+		<widget name="key7" position=" 2,62" size="198,28" font="Console;19" halign="center" valign="center" />
+		<widget name="key8" position="202,62" size="198,28" font="Console;19" halign="center" valign="center" />
+		<widget name="key9" position="402,62" size="198,28" font="Console;19" halign="center" valign="center" />
+		<widget name="help1" position=" 2,92" size="198,28" font="Console;22" halign="center" valign="center" />
+		<widget name="key0" position="202,92" size="198,28" font="Console;18" halign="center" valign="center" />
+		<widget name="help2" position="402,92" size="198,28" font="Console;22" halign="center" valign="center" />
 	</screen>
-	<screen name="ParentalControlChangePin" 		position="center,74" size="742,572" title="Change pin code" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="ParentalControlChangePin" position="center,74" size="742,572" title="Change pin code" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<eLabel position="21,99" size="700,2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="700,  2" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,549" size="700, 2" backgroundColor="grey" zPosition="5" />
 		<ePixmap position="131,11" size="480,66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
-		<eLabel text="Change pin code" position="71,66" size="600,32" font="Regular;25" halign="center"/>
+		<eLabel text="Change pin code" position="71,66" size="600,32" font="Regular;25" halign="center" />
 		<widget name="config" position="26,108" size="690,435" itemHeight="29" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
 	</screen>
-	<screen name="ParentalControlEditor" 			position="center,74" size="742,572" title="Parental control services Editor" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="ParentalControlEditor" position="center,74" size="742,572" title="Parental control services Editor" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<eLabel position="21,99" size="700,2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,438" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,438" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,537" size="700,  2" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,101" size=" 2,438" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,438" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,537" size="700, 2" backgroundColor="grey" zPosition="5" />
 		<ePixmap position="131,11" size="480,66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
-		<eLabel text="Parental control services Editor" position="71,66" size="600,32" font="Regular;25" halign="center"/>
+		<eLabel text="Parental control services Editor" position="71,66" size="600,32" font="Regular;25" halign="center" />
 		<widget name="servicelist" position="31,111" size="680,418" itemHeight="38" selectionPixmap="dTV-HD-Reloaded/menu/select750_38.png" transparent="1" />
 	</screen>
-	<screen name="ParentalControlSetup" 			position="center,74" size="742,572" title="Parental control setup" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="ParentalControlSetup" position="center,74" size="742,572" title="Parental control setup" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<eLabel position="21,99" size="700,2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="700,  2" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,549" size="700, 2" backgroundColor="grey" zPosition="5" />
 		<ePixmap position="131,11" size="480,66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
-		<eLabel text="Parental control setup" position="71,66" size="600,32" font="Regular;25" halign="center"/>
+		<eLabel text="Parental control setup" position="71,66" size="600,32" font="Regular;25" halign="center" />
 		<widget name="config" position="26,108" size="690,435" itemHeight="29" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
 	</screen>
-	<screen name="PluginBrowser" 					position="center,74" size="742,572" title="Plugin browser" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="PluginBrowser" position="center,74" size="742,572" title="Plugin browser" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
-		<eLabel position=" 21, 99" size="700,2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,499" size="700,  2" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21, 99" size="700,2" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,101" size=" 2,400" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,400" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,499" size="700, 2" backgroundColor="grey" zPosition="5" />
 		<ePixmap position="131,11" size="480,66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
-		<widget source="Title" render="Label" position="71,66" size="600,32" font="Regular;25" halign="center"/>
-
+		<widget source="Title" render="Label" position="71,66" size="600,32" font="Regular;25" halign="center" />
 		<widget name="list" position="21,101" size="700,400" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select800_50.png" />
-
-		<ePixmap pixmap="dTV-HD-Reloaded/button300.png" position=" 51,517" zPosition="1" size="300,38"/>
-		<ePixmap pixmap="dTV-HD-Reloaded/button300.png" position="391,517" zPosition="1" size="300,38"/>
+		<ePixmap pixmap="dTV-HD-Reloaded/button300.png" position=" 51,517" zPosition="1" size="300,38" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button300.png" position="391,517" zPosition="1" size="300,38" />
 		<widget name="red" position="51,516" zPosition="2" size="300,38" font="Regular;22" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
 		<widget name="green" position="391,516" zPosition="2" size="300,38" font="Regular;22" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="PluginDownloadBrowser" 			position="center,74" size="742,572" title="Downloadable plugins" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="PluginDownloadBrowser" position="center,74" size="742,572" title="Downloadable plugins" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<eLabel position="21,99" size="700,2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="700,  2" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="21,549" size="700, 2" backgroundColor="grey" zPosition="5" />
 		<ePixmap position="131,11" size="480,66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
-		<widget source="Title" render="Label" position="71,66" size="600,32" font="Regular;25" halign="center"/>
-
+		<widget source="Title" render="Label" position="71,66" size="600,32" font="Regular;25" halign="center" />
 		<widget name="text" position="40,130" size="660,50" font="Regular;23" />
 		<widget name="list" position="21,101" size="700,450" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select800_50.png" />
 	</screen>
-	<screen name="PositionerSetup" 					position="center,125" size="800,492" title="Positioner setup...">
+	<screen name="PositionerSetup" position="center,125" size="800,492" title="Positioner setup...">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" />
 		<widget name="list" position="200,10" size="400,155" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
 		<widget name="red" position="0, 180" size="200,100" backgroundColor="red" halign="center" valign="center" font="Regular;21" />
@@ -1375,7 +1398,7 @@
 		<eLabel text="FEC:" position="470,420" size="150,24" font="Regular;21" transparent="1" />
 		<widget name="fec_value" position="630,420" size="150,24" font="Regular;21" transparent="1" />
 	</screen>
-	<screen name="RadioInfoBar" 					position="center,490" size="1122,192" title="InfoBar" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="RadioInfoBar" position="center,490" size="1122,192" title="InfoBar" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/infobar_radio.png" position="1,1" size="1120,190" zPosition="-5" alphatest="blend" />
 		<widget source="session.CurrentService" render="Label" position="15,6" size="600,26" font="Regular;24" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Name</convert>
@@ -1398,8 +1421,8 @@
 		<eLabel position="10,60" zPosition="1" size="1102,2" backgroundColor="white" />
 		<ePixmap pixmap="dTV-HD-Reloaded/picon_default.png" position="30,73" size="100,60" zPosition="1" alphatest="blend" />
 		<!-- widget source="session.CurrentService" render="Picon" position="30,73" zPosition="1" size="100,60" alphatest="on">
-				<convert type="ServiceName">Reference</convert>
-			</widget-->
+					<convert type="ServiceName">Reference</convert>
+				</widget-->
 		<widget source="session.Event_Now" render="Label" position="140,67" size="65,25" halign="right" font="Regular;22" backgroundColor="background" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
@@ -1447,105 +1470,98 @@
 			<convert type="RdsInfo">RadioText</convert>
 		</widget>
 	</screen>
-	<screen name="RdsInfoDisplay" 					position="0,0" size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="RdsInfoDisplay" position="0,0" size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="RadioText" position="100,620" size="1080,30" font="Regular;24" noWrap="1" backgroundColor="black" />
 		<widget name="RtpText" position="100,650" size="1080,30" font="Regular;24" halign="right" noWrap="1" backgroundColor="black" />
 		<widget name="RassLogo" position="0,0" size="0,0" />
 	</screen>
-	<screen name="RecordPathsSettings" 				position="center,74" size="742,572" title="Recording paths..." backgroundColor="transparent2" flags="wfNoBorder">
-		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
-		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
-		<eLabel text="Recording paths" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,499" size="700,  2" backgroundColor="grey" zPosition="5" />
-
-		<widget name="config" 	position="26,106" size="690,390" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1"/>
-
-		<ePixmap pixmap="dTV-HD-Reloaded/button.png" 		position="109,517" zPosition="1" size="250,38" />
-		<ePixmap pixmap="dTV-HD-Reloaded/button.png" 		position="379,517" zPosition="1" size="250,38" />
-		<widget source="key_red" 	render="Label" 	position="109,516" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label" 	position="379,516" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" />
+	<screen name="RecordPathsSettings" position="90,90" size="1100,570" title="Recording paths...">
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+		<widget name="config" position="20,10" size="780,425" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
+		<widget source="introduction" render="Label" position="0,460" size="830,50" zPosition="10" font="Regular;24" halign="center" valign="center" transparent="1" />
+		<eLabel position="830,0" size="2,518" backgroundColor="grey" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position=" 20,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="290,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="560,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="830,532" zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 20,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" zPosition="2" size="250,38" font="Regular;20" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1" />
 	</screen>
-	<screen name="Satfinder" 						position="center,74" size="742,572" title="Satfinder" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="Satfinder" position="center,74" size="742,572" title="Satfinder" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<eLabel text="Service scan" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,516" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="700,  2" backgroundColor="grey" zPosition="5" />
-
-		<ePixmap pixmap="skin_default/icons/dish_scan.png" 	position=" 86,125" zPosition="0" size="119,110" transparent="1" alphatest="on" />
-		<widget source="Frontend" render="Label" 			position="301,110" zPosition="2" size="280,20" font="Regular;19" halign="center" valign="center" transparent="1">
+		<eLabel position=" 21, 99" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,516" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,549" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<ePixmap pixmap="skin_default/icons/dish_scan.png" position=" 86,125" zPosition="0" size="119,110" transparent="1" alphatest="on" />
+		<widget source="Frontend" render="Label" position="301,110" zPosition="2" size="280,20" font="Regular;19" halign="center" valign="center" transparent="1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<eLabel name="snr" text="SNR:" 						position="211,135" size="60,22" font="Regular;21" halign="right" transparent="1" />
-		<widget source="Frontend" render="Progress" 		position="301,135" size="280,20" pixmap="skin_default/bar_snr.png" borderWidth="2" borderColor="#cccccc">
+		<eLabel name="snr" text="SNR:" position="211,135" size="60,22" font="Regular;21" halign="right" transparent="1" />
+		<widget source="Frontend" render="Progress" position="301,135" size="280,20" pixmap="skin_default/bar_snr.png" borderWidth="2" borderColor="#cccccc">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="Frontend" render="Label" 			position="601,135" size="60,22" font="Regular;21">
+		<widget source="Frontend" render="Label" position="601,135" size="60,22" font="Regular;21">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<eLabel name="agc" text="AGC:" 						position="211,160" size="60,22" font="Regular;21" halign="right" transparent="1" />
-		<widget source="Frontend" render="Progress" 		position="301,160" size="280,20" pixmap="skin_default/bar_snr.png" borderWidth="2" borderColor="#cccccc">
+		<eLabel name="agc" text="AGC:" position="211,160" size="60,22" font="Regular;21" halign="right" transparent="1" />
+		<widget source="Frontend" render="Progress" position="301,160" size="280,20" pixmap="skin_default/bar_snr.png" borderWidth="2" borderColor="#cccccc">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="Frontend" render="Label" 			position="601,160" size="60,22" font="Regular;21">
+		<widget source="Frontend" render="Label" position="601,160" size="60,22" font="Regular;21">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<eLabel name="ber" text="BER:" 						position="211,185" size="60,22" font="Regular;21" halign="right" transparent="1" />
-		<widget source="Frontend" render="Progress" 		position="301,185" size="280,20" pixmap="skin_default/bar_ber.png" borderWidth="2" borderColor="#cccccc">
+		<eLabel name="ber" text="BER:" position="211,185" size="60,22" font="Regular;21" halign="right" transparent="1" />
+		<widget source="Frontend" render="Progress" position="301,185" size="280,20" pixmap="skin_default/bar_ber.png" borderWidth="2" borderColor="#cccccc">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<widget source="Frontend" render="Label" 			position="601,185" size="60,22" font="Regular;21">
+		<widget source="Frontend" render="Label" position="601,185" size="60,22" font="Regular;21">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<eLabel name="lock" text="Lock:" 					position="211,215" size="80,25" font="Regular;21" halign="right" />
-		<widget source="Frontend" render="Pixmap" 			position="301,210" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on">
+		<eLabel name="lock" text="Lock:" position="211,215" size="80,25" font="Regular;21" halign="right" />
+		<widget source="Frontend" render="Pixmap" position="301,210" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="Frontend" render="Pixmap" 			position="301,210" size="38,31" pixmap="skin_default/icons/lock_off.png" alphatest="on">
+		<widget source="Frontend" render="Pixmap" position="301,210" size="38,31" pixmap="skin_default/icons/lock_off.png" alphatest="on">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
-
-		<widget name="config" 								position="31,265" size="680,240" scrollbarMode="showOnDemand" itemHeight="30" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
-		<widget name="introduction" 						position="21,521" size="700,25" font="Regular;22" halign="center" />
-	</screen>
-	<screen name="ScanSetup" 						position="center,74" size="742,572" title="Service scan" backgroundColor="transparent2" flags="wfNoBorder">
-		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
-		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
-		<eLabel text="Service scan" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,516" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="700,  2" backgroundColor="grey" zPosition="5" />
-
-		<widget name="config" 	position="31,112" size="680,390" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1"/>
-
+		<widget name="config" position="31,265" size="680,240" scrollbarMode="showOnDemand" itemHeight="30" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
 		<widget name="introduction" position="21,521" size="700,25" font="Regular;22" halign="center" />
 	</screen>
-	<screen name="ScanSimple" 						position="center,74" size="742,572" title="Service scan" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="ScanSetup" position="center,74" size="742,572" title="Service scan" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<eLabel text="Service scan" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,516" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="700,  2" backgroundColor="grey" zPosition="5" />
-
-		<widget name="header" position="31,106" size="680,25" font="Regular;23" halign="center"/>
-		<widget name="config" position="31,145" size="680,360" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1"/>
-
+		<eLabel position=" 21, 99" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,516" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,549" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<widget name="config" position="31,112" size="680,390" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
+		<widget name="introduction" position="21,521" size="700,25" font="Regular;22" halign="center" />
+	</screen>
+	<screen name="ScanSimple" position="center,74" size="742,572" title="Service scan" backgroundColor="transparent2" flags="wfNoBorder">
+		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
+		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
+		<eLabel text="Service scan" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
+		<eLabel position=" 21, 99" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,516" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,549" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<widget name="header" position="31,106" size="680,25" font="Regular;23" halign="center" />
+		<widget name="config" position="31,145" size="680,360" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
 		<widget name="footer" position="21,521" size="700,25" font="Regular;22" halign="center" />
 	</screen>
-	<screen name="ServiceInfo" 						position="center,90" size="1100,570" title="Serviceinfo">
+	<screen name="ServiceInfo" position="center,90" size="1100,570" title="Serviceinfo">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
@@ -1560,51 +1576,51 @@
 		<widget name="yellow" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="blue" position="830,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="ServiceScan" 						position="center,74" size="742,572" title="Service Scan" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="ServiceScan" position="center,74" size="742,572" title="Service Scan" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<eLabel text="Service Scan" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<widget source="FrontendInfo" render="Pixmap" 	position=" 86,115" size=" 64,64" pixmap="skin_default/icons/scan-s.png" transparent="1" alphatest="on">
+		<eLabel position=" 21, 99" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,549" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<widget source="FrontendInfo" render="Pixmap" position=" 86,115" size=" 64,64" pixmap="skin_default/icons/scan-s.png" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" 	position=" 86,115" size=" 64,64" pixmap="skin_default/icons/scan-c.png" transparent="1" alphatest="on">
+		<widget source="FrontendInfo" render="Pixmap" position=" 86,115" size=" 64,64" pixmap="skin_default/icons/scan-c.png" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" 	position=" 86,115" size=" 64,64" pixmap="skin_default/icons/scan-t.png" transparent="1" alphatest="on">
+		<widget source="FrontendInfo" render="Pixmap" position=" 86,115" size=" 64,64" pixmap="skin_default/icons/scan-t.png" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget name="network" 							position="171,125" size="430,25" font="Regular;22" />
-		<widget name="transponder" 						position="171,155" size="430,25" font="Regular;22" />
-		<widget name="scan_state" 						position=" 91,205" size="560,25" zPosition="2" font="Regular;22" />
-		<widget name="pass" 							position=" 91,205" size="560,25" font="Regular;22" />
-		<widget name="scan_progress" 					position=" 91,240" size="560,20" pixmap="dTV-HD-Reloaded/progress_big.png" borderWidth="1" borderColor="#cccccc" />
-		<widget name="servicelist" 						position=" 91,270" size="560,275" selectionDisabled="1" />
+		<widget name="network" position="171,125" size="430,25" font="Regular;22" />
+		<widget name="transponder" position="171,155" size="430,25" font="Regular;22" />
+		<widget name="scan_state" position=" 91,205" size="560,25" zPosition="2" font="Regular;22" />
+		<widget name="pass" position=" 91,205" size="560,25" font="Regular;22" />
+		<widget name="scan_progress" position=" 91,240" size="560,20" pixmap="dTV-HD-Reloaded/progress_big.png" borderWidth="1" borderColor="#cccccc" />
+		<widget name="servicelist" position=" 91,270" size="560,275" selectionDisabled="1" />
 	</screen>
-	<screen name="Setup" 							position="center,74" size="742,572" title="Setup" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="Setup" position="center,74" size="742,572" title="Setup" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<widget source="Title" render="Label" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,499" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<widget name="config" 	position="26,106" size="690,390" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1"/>
-		<ePixmap pixmap="dTV-HD-Reloaded/button.png" 		position="109,517" zPosition="1" size="250,38" />
-		<ePixmap pixmap="dTV-HD-Reloaded/button.png" 		position="379,517" zPosition="1" size="250,38" />
-		<widget source="key_red" 	render="Label" 	position="109,516" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
-		<widget source="key_green" 	render="Label" 	position="379,516" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" />
+		<eLabel position=" 21, 99" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,101" size=" 2,400" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,400" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,499" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<widget name="config" position="26,106" size="690,390" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="109,517" zPosition="1" size="250,38" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="379,517" zPosition="1" size="250,38" />
+		<widget source="key_red" render="Label" position="109,516" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="379,516" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="SimpleChannelSelection" 			position="center,90" size="1100,570" title="Channel Selection">
+	<screen name="SimpleChannelSelection" position="center,90" size="1100,570" title="Channel Selection">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
@@ -1619,49 +1635,46 @@
 		<widget name="key_yellow" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="key_blue" position="830,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="SkinSelector" 					position="center,74" size="742,572" title="Skin Selector" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="SkinSelector" position="center,74" size="742,572" title="Skin Selector" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<widget source="Title" render="Label" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position="370,101" size="  2,370" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,469" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,499" size="700,  2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21, 99" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position="370,101" size=" 2,370" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,101" size=" 2,400" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,400" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,469" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,499" size="700, 2" backgroundColor="grey" zPosition="5" />
 		<widget name="SkinList" position="26,106" size="340,360" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
 		<widget name="Preview" position="410,180" size="280,210" alphatest="on" />
-		<widget source="introduction" render="Label" position="21,469" size="700,30" font="Regular;22" halign="center" valign="center"/>
-		<ePixmap pixmap="dTV-HD-Reloaded/button.png" 		position="245,517" zPosition="1" size="250,38" />
-		<widget source="key_red" 	render="Label" 	position="245,516" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
+		<widget source="introduction" render="Label" position="21,469" size="700,30" font="Regular;22" halign="center" valign="center" />
+		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="245,517" zPosition="1" size="250,38" />
+		<widget source="key_red" render="Label" position="245,516" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="SleepTimerEdit" 					position="center,74" size="742,572" title="Sleep Timer" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="SleepTimerEdit" position="center,74" size="742,572" title="Sleep Timer" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<eLabel text="Sleep Timer" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,400" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,499" size="700,  2" backgroundColor="grey" zPosition="5" />
-
-		<widget name="pretext" 			position="140,135" size="320,25" font="Regular;22" />
-		<widget name="input" 			position="470,135" size=" 50,25" font="Regular;22" />
-		<widget name="aftertext" 		position="520,135" size="100,25" font="Regular;22" />
-
-		<widget name="red" 				position=" 45,227" size="30,30" pixmap="dTV-HD-Reloaded/buttons/red.png" />
-		<widget name="green" 			position=" 45,277" size="30,30" pixmap="dTV-HD-Reloaded/buttons/green.png" />
-		<widget name="yellow" 			position=" 45,327" size="30,30" pixmap="dTV-HD-Reloaded/buttons/yellow.png" />
-		<widget name="blue" 			position=" 45,377" size="30,30" pixmap="dTV-HD-Reloaded/buttons/blue.png" />
-		<widget name="red_text" 		position=" 95,230" size="550,25" font="Regular;22" />
-		<widget name="green_text" 		position=" 95,280" size="550,25" font="Regular;22" />
-		<widget name="yellow_text" 		position=" 95,330" size="550,25" font="Regular;22" />
-		<widget name="blue_text" 		position=" 95,380" size="550,25" font="Regular;22" />
-		<ePixmap 						position="605,220" size="90,125" pixmap="skin_default/sleeptimer.png" alphatest="on" />
-
-		<widget name="current_status" 	position=" 21,522" size="700,25" halign="center" valign="center" font="Regular;22" />
+		<eLabel position=" 21, 99" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,101" size=" 2,400" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,400" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,499" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<widget name="pretext" position="140,135" size="320,25" font="Regular;22" />
+		<widget name="input" position="470,135" size=" 50,25" font="Regular;22" />
+		<widget name="aftertext" position="520,135" size="100,25" font="Regular;22" />
+		<widget name="red" position=" 45,227" size="30,30" pixmap="dTV-HD-Reloaded/buttons/red.png" />
+		<widget name="green" position=" 45,277" size="30,30" pixmap="dTV-HD-Reloaded/buttons/green.png" />
+		<widget name="yellow" position=" 45,327" size="30,30" pixmap="dTV-HD-Reloaded/buttons/yellow.png" />
+		<widget name="blue" position=" 45,377" size="30,30" pixmap="dTV-HD-Reloaded/buttons/blue.png" />
+		<widget name="red_text" position=" 95,230" size="550,25" font="Regular;22" />
+		<widget name="green_text" position=" 95,280" size="550,25" font="Regular;22" />
+		<widget name="yellow_text" position=" 95,330" size="550,25" font="Regular;22" />
+		<widget name="blue_text" position=" 95,380" size="550,25" font="Regular;22" />
+		<ePixmap position="605,220" size="90,125" pixmap="skin_default/sleeptimer.png" alphatest="on" />
+		<widget name="current_status" position=" 21,522" size="700,25" halign="center" valign="center" font="Regular;22" />
 	</screen>
-	<screen name="Standby" 							position="0,0" size="1280,720" title="Standby" flags="wfNoBorder" />
-	<screen name="SubservicesQuickzap" 				position="380,600" size="560,100" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="Standby" position="0,0" size="1280,720" title="Standby" flags="wfNoBorder" />
+	<screen name="SubservicesQuickzap" position="380,600" size="560,100" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
 		<widget source="session.RecordState" render="Pixmap" pixmap="skin_default/icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
@@ -1671,18 +1684,18 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
-	<screen name="Subtitles" 						position="center,74" size="742,572" title="Subtitle selection" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="Subtitles" position="center,74" size="742,572" title="Subtitle selection" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback.png" position="1,1" size="740,570" zPosition="-5" alphatest="on" />
 		<ePixmap position="131,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<eLabel text="Subtitle selection" position=" 21,66" size="700,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="719,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="700,  2" backgroundColor="grey" zPosition="5" />
-		<widget name="config" 	position="31,108" size="680,435" itemHeight="29" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1"/>
+		<eLabel position=" 21, 99" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="719,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,549" size="700, 2" backgroundColor="grey" zPosition="5" />
+		<widget name="config" position="31,108" size="680,435" itemHeight="29" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_25.png" transparent="1" />
 	</screen>
-	<screen name="SubtitleDisplay" 					position="0,0" size="1280,720" zPosition="-1" backgroundColor="transparent2" flags="wfNoBorder" />
-	<screen name="TimerEditList" 					position="center,90" size="1100,570" title="Timer Editor">
+	<screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-1" backgroundColor="transparent2" flags="wfNoBorder" />
+	<screen name="TimerEditList" position="center,90" size="1100,570" title="Timer Editor">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
@@ -1697,7 +1710,7 @@
 		<widget name="key_yellow" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="key_blue" position="830,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="TimerEntry" 						position="center,90" size="1100,570" title="Timer entry">
+	<screen name="TimerEntry" position="center,90" size="1100,570" title="Timer entry">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
@@ -1708,7 +1721,7 @@
 		<widget name="canceltext" position=" 20,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
 		<widget name="oktext" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="TimerLog" 						position="center,90" size="1100,570" title="Timer log">
+	<screen name="TimerLog" position="center,90" size="1100,570" title="Timer log">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
@@ -1725,7 +1738,7 @@
 		<widget name="key_yellow" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="key_blue" position="830,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="TimerSanityConflict" 				position="center,90" size="1100,570" title="Timer sanity error">
+	<screen name="TimerSanityConflict" position="center,90" size="1100,570" title="Timer sanity error">
 		<eLabel position=" 0, 0" size="1100, 2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
@@ -1744,23 +1757,23 @@
 		<widget name="key_yellow" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="key_blue" position="830,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="TimerSelection" 					position="center,90" size="1100,570" title="Timer selection">
+	<screen name="TimerSelection" position="center,90" size="1100,570" title="Timer selection">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
 		<widget name="timerlist" position="10,20" size="1080,350" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_70.png" backgroundPixmap="dTV-HD-Reloaded/menu/sep1080.png" transparent="1" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
 	</screen>
-	<screen name="UnhandledKey" 					position="70,70" size="60,60" backgroundColor="transparent2" flags="wfNoBorder">
-		<widget name="UnhandledKeyPixmap" position="0,0" size="60,60" pixmap="dTV-HD-Reloaded/skin_default/nk.png"/>
+	<screen name="UnhandledKey" position="70,70" size="60,60" backgroundColor="transparent2" flags="wfNoBorder">
+		<widget name="UnhandledKeyPixmap" position="0,0" size="60,60" pixmap="dTV-HD-Reloaded/skin_default/nk.png" />
 	</screen>
-	<screen name="VideoEnhancementSetup" 			position="center,90" size="1100,570" title="VideoEnhancementSetup">
+	<screen name="VideoEnhancementSetup" position="center,90" size="1100,570" title="VideoEnhancementSetup">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />
 		<widget name="config" position="10,14" size="1080,430" scrollbarMode="showOnDemand" itemHeight="30" selectionPixmap="dTV-HD-Reloaded/menu/select1080_30.png" transparent="1" />
 		<eLabel position="0,488" size="1100,2" backgroundColor="grey" />
-		<widget source="introduction" render="Label" position="20,490" size="1080,27" font="Regular;22" halign="center"/>
+		<widget source="introduction" render="Label" position="20,490" size="1080,27" font="Regular;22" halign="center" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position=" 20,532" zPosition="1" size="250,38" />
 		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="290,532" zPosition="1" size="250,38" />
@@ -1770,43 +1783,38 @@
 		<widget source="key_green" render="Label" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget source="key_blue" render="Label" position="830,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" />
-
 	</screen>
-	<screen name="VideoEnhancementPreview" 			position="90,90" size="700,190" title="VideoEnhancementPreview">
+	<screen name="VideoEnhancementPreview" position="90,90" size="700,190" title="VideoEnhancementPreview">
 		<eLabel position="0,0" size="700,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,140" backgroundColor="grey" />
 		<eLabel position="698,0" size="2,140" backgroundColor="grey" />
-		<widget name="config" position="10,10" size="680,90" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_30.png" transparent="1"/>
+		<widget name="config" position="10,10" size="680,90" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD-Reloaded/menu/select1080_30.png" transparent="1" />
 		<eLabel position="0,108" size="700,2" backgroundColor="grey" />
-		<widget source="introduction" render="Label" position="10,112" size="680,27" font="Regular;22" halign="center"/>
+		<widget source="introduction" render="Label" position="10,112" size="680,27" font="Regular;22" halign="center" />
 		<eLabel position="0,140" size="700,2" backgroundColor="grey" />
-
 		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="90,151" zPosition="1" size="250,38" />
 		<ePixmap pixmap="dTV-HD-Reloaded/button.png" position="360,151" zPosition="1" size="250,38" />
 		<widget source="key_red" render="Label" position="90,150" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
 		<widget source="key_green" render="Label" position="360,150" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="VideoFinetune" 					position="0,0" size="1280,720" backgroundColor="black">
+	<screen name="VideoFinetune" position="0,0" size="1280,720" backgroundColor="black">
 		<widget source="Canvas" render="Canvas" position="280,70" size="720,576" />
 	</screen>
-	
-	<screen name="VirtualKeyBoard" 				position="center,74" size="942,572" zPosition="99" title="VirtualKeyBoard" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="VirtualKeyBoard" position="center,74" size="942,572" zPosition="99" title="VirtualKeyBoard" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap pixmap="dTV-HD-Reloaded/menu/menuback2.png" position="1,1" size="940,570" zPosition="-5" alphatest="on" />
 		<ePixmap position="231,11" size="480, 66" pixmap="dTV-HD-Reloaded/menu/db.png" alphatest="blend" />
 		<eLabel text="VirtualKeyBoard" position=" 21,66" size="900,32" font="Regular;25" halign="center" backgroundColor="black" transparent="1" />
-		<eLabel position=" 21, 99" size="900,  2" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position="919,101" size="  2,450" backgroundColor="grey" zPosition="5" />
-		<eLabel position=" 21,549" size="900,  2" backgroundColor="grey" zPosition="5" />
-
-		<widget name="header" 	position="31,111" size="880,30" font="Regular;24" noWrap="1" halign="center" />
-		<eLabel 				position="21,145" size="900,  2" backgroundColor="grey" zPosition="5" />
-		<widget name="text" 	position="41,155" size="860,46" font="Regular;40" noWrap="1" halign="right" />
-		<eLabel 				position="21,210" size="900,  2" backgroundColor="grey" zPosition="5" />
-
-		<widget name="list" 	position="33,260" size="876,225" selectionDisabled="1" transparent="1" />
+		<eLabel position=" 21, 99" size="900, 2" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position="919,101" size=" 2,450" backgroundColor="grey" zPosition="5" />
+		<eLabel position=" 21,549" size="900, 2" backgroundColor="grey" zPosition="5" />
+		<widget name="header" position="31,111" size="880,30" font="Regular;24" noWrap="1" halign="center" />
+		<eLabel position="21,145" size="900, 2" backgroundColor="grey" zPosition="5" />
+		<widget name="text" position="41,155" size="860,46" font="Regular;40" noWrap="1" halign="right" />
+		<eLabel position="21,210" size="900, 2" backgroundColor="grey" zPosition="5" />
+		<widget name="list" position="33,260" size="876,225" selectionDisabled="1" transparent="1" />
 	</screen>
-	<screen name="WlanStatus" 						position="center,90" size="1100,570" title="Wireless Network State">
+	<screen name="WlanStatus" position="center,90" size="1100,570" title="Wireless Network State">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<eLabel position="0,0" size="2,518" backgroundColor="grey" />
 		<eLabel position="1098,0" size="2,518" backgroundColor="grey" />

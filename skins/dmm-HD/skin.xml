@@ -1133,7 +1133,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="timeline_now" position="0,385" zPosition="2" size="19,310" pixmap="dmm-HD/timeline-now.png" alphatest="on"/>
 
 	</screen>
-	<screen name="HarddiskSelection" 			position="0,0" 		size="1280,720" title="Select HDD"					flags="wfNoBorder">
+	<screen name="HarddiskDriveSelection" position="0,0" size="1280,720" title="Select HDD" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -1143,28 +1143,61 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		</widget>
 		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
-		<eLabel text="Select HDD" position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-		<widget name="hddlist" position="550,120" size="660,500" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1"/>
-	</screen>
-	<screen name="HarddiskSetup" 				position="0,0" 		size="1280,720" title="Harddisk" 					flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
-		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
-			<convert type="ClockToText">Default</convert>
+		<eLabel text="Select HDD"  position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
+		<widget source="hddlist" render="Listbox" position="550,120" size="660,375"  enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 6), size = (600, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (720, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), # index 3 is the device pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), # index 4 is the online state pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (0, 73), size = (700, 2), png = 9), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
-		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
-		<eLabel text="Harddisk" position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-
-
-		<widget name="model" 		position="550,120" size="660,28" font="Regular;25" halign="center" />
-		<widget name="capacity" 	position="550,160" size="660,28" font="Regular;25" halign="center" />
-		<widget name="bus" 			position="550,200" size="660,28" font="Regular;25" halign="center" />
-
+		<widget source="introduction" render="Label" position="540,590" size="660,50" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
 		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
-		<widget name="initializetext" 				position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="HarddiskDriveSetup" position="0,0" size="1280,720" title="Harddisk" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
+		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<ePixmap position="70,110" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png" />
+		<widget source="session.VideoPicture" render="Pig" position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000" />
+		<widget source="Title" render="Label" position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel text="Harddisk" position="550,110" size="600,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
+		<eLabel position="550,145" size="660,2" backgroundColor="grey" zPosition="5" />
+		<widget source="icon" render="Pixmap" position="550,170" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<widget source="model" render="Label" position="660,170" size="600,26" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="white" backgroundColor="darkgrey" transparent="1" />
+		<widget source="capacity" render="Label" position="660,210" size="600,26" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="white" backgroundColor="darkgrey" transparent="1" />
+		<widget source="bus" render="Label" position="660,250" size="600,26" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="white" backgroundColor="darkgrey" transparent="1" />
+		<widget name="config" position="550,320" size="660,80" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
+		<widget name="HelpWindow" position="588,420" size="1,1" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="introduction" render="Label" position="550,580" size="660,50" zPosition="1" font="Regular;24" halign="center" backgroundColor="darkgrey" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/red.png" 	position="80,450"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position="80,500"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550"  size="30,30" alphatest="blend"   />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" 	position="80,600"  size="30,30" alphatest="blend"   />
+		<widget source="key_red" render="Label" 	position="130,452"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" 	position="130,502"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" 	position="130,552"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" 	position="130,602"  size="340,26"  font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="HarddiskWait" 				position="0,0" 		size="1280,720" title="HarddiskWait"				flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
@@ -1177,7 +1210,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
 		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
 		<eLabel text="Harddisk" position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
-
 		<widget name="wait" position="10,12" size="580,475" font="Regular;23" />
 	</screen>
 	<screen name="HelpMenu" 					position="0,0" 		size="1280,720" title="Menu" 						flags="wfNoBorder">
@@ -1700,7 +1732,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="RdsInfo">RadioText</convert>
 		</widget>
 	</screen>
-	<screen name="RecordPathsSettings" 			position="0,0" 		size="1280,720" title="Recording paths..." 			flags="wfNoBorder">
+	<screen name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-menu.png" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -1708,14 +1740,19 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="global.CurrentTime" render="Label" position="900,72" size="310,22" font="Regular;20" halign="right" backgroundColor="darkgrey" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<ePixmap 											position="70,110" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png"/>
-		<widget source="session.VideoPicture" render="Pig"  position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000"/>
-		<widget source="Title" render="Label" position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
+		<ePixmap position="70,110" size="390,225" zPosition="2" pixmap="dmm-HD/pig_bg.png" />
+		<widget source="session.VideoPicture" render="Pig" position="75,115" size="380,215" zPosition="3" backgroundColor="#ff000000" />
+		<widget source="Title" render="Label" position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1" />
 		<widget name="config" position="550,120" size="660,510" enableWrapAround="1" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="darkgrey" transparent="1" />
-		<ePixmap pixmap="dmm-HD/buttons/red.png"   	position=" 80,450"  size="30,30" alphatest="blend"   zPosition="2"/>
-		<ePixmap pixmap="dmm-HD/buttons/green.png" 	position=" 80,500"  size="30,30" alphatest="blend"   zPosition="2" />
-		<widget source="key_red" render="Label" 	position="130,452"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" 	position="130,502"  size="340,26" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="introduction" render="Label" position="550,580" size="660,50" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
+		<ePixmap pixmap="dmm-HD/buttons/red.png" position="80,450" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="dmm-HD/buttons/green.png" position="80,500" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="dmm-HD/buttons/yellow.png" position="80,550" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="dmm-HD/buttons/blue.png" position="80,600" size="30,30" alphatest="blend" />
+		<widget source="key_red" render="Label" position="130,452" size="340,26" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="130,502" size="340,26" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="130,552" size="340,26" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" position="130,602" size="340,26" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="RdsInfoDisplay" 				position="0,0" 		size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="100,585" size="50,21"/>

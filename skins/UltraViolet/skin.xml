@@ -1264,7 +1264,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="key_red" position=" 250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<widget name="key_green" position=" 500,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 	</screen>
-	<screen name="HarddiskSelection" position="0,0" size="1280,720" title="Select HDD" flags="wfNoBorder">
+	<screen name="HarddiskDriveSelection" position="0,0" size="1280,720" title="Select HDD" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1060,35" size=" 80,26" font="Regular;26" halign="right" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -1278,9 +1278,31 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<eLabel position="646,163" size="548,273" zPosition="3" backgroundColor="background"/>
 		<eLabel position="650,167" size="544,269" zPosition="4" backgroundColor="background2"/>
 		<eLabel position="650,167" size="540,265" zPosition="5" backgroundColor="background1"/>
-		<widget name="hddlist" position="660,174" size="520,250" zPosition="6" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel25-740.png"/>
+		<widget source="hddlist" render="Listbox" position="660,174" size="520,250" zPosition="6" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel75-730.png" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 6), size = (500, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (480, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), # index 3 is the device pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), # index 4 is the online state pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="180,590" size="1000,55" font="Regular;25" halign="center" valign="center" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<ePixmap pixmap="UltraViolet/buttons/red.png" position="210,662" size="35,35" alphatest="blend"/>
+		<ePixmap pixmap="UltraViolet/buttons/green.png" position="460,662" size="35,35" alphatest="blend"/>
+		<ePixmap pixmap="UltraViolet/buttons/yellow.png" position="710,662" size="35,35" alphatest="blend"/>
+		<ePixmap pixmap="UltraViolet/buttons/blue.png" position="950,662" size="35,35" alphatest="blend"/>
+		<widget source="key_red" render="Label" position=" 250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="key_green" render="Label" position=" 500,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="key_yellow" render="Label" position=" 750,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="key_blue" render="Label" position="1000,665" size="210,29" halign="left" font="Regular;22" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 	</screen>
-	<screen name="HarddiskSetup" position="0,0" size="1280,720" title="Harddisk" flags="wfNoBorder">
+
+	<screen name="HarddiskDriveSetup" position="0,0" size="1280,720" title="Harddisk" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1060,35" size=" 80,26" font="Regular;26" halign="right" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -1291,11 +1313,26 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<eLabel text="Harddisk" position="180,50" size="550,36" zPosition="3" font="Regular;32" backgroundColor="background2" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<eLabel position="122,210" size="496,301" zPosition="1" backgroundColor="white"/>
 		<widget source="session.VideoPicture" render="Pig" position="125,213" size="490,295" zPosition="2" backgroundColor="#ff000000"/>
-		<widget name="model" position="650,230" size="540,28" font="Regular;25"/>
-		<widget name="capacity" position="650,270" size="540,28" font="Regular;25"/>
-		<widget name="bus" position="650,310" size="540,28" font="Regular;25"/>
+		<eLabel position="646,198" size="548,203" zPosition="3" backgroundColor="background"/>
+		<eLabel position="650,202" size="544,199" zPosition="4" backgroundColor="background2"/>
+		<eLabel position="650,202" size="540,195" zPosition="5" backgroundColor="background1"/>
+		<widget name="config" position="660,209" size="520,75" zPosition="6" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel25-740.png"/>
+		<widget source="icon" render="Pixmap" position="660,440" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<widget source="model" render="Label" position="800,440" size="380,25" font="Regular;23" />
+		<widget source="capacity" render="Label" position="800,465" size="380,25" font="Regular;23" />
+		<widget source="bus" render="Label" position="800,490" size="380,25" font="Regular;23" />
+		<widget source="introduction" render="Label" position="180,590" size="1000,55" font="Regular;25" halign="center" valign="center" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<ePixmap pixmap="UltraViolet/buttons/red.png" position="210,662" size="35,35" alphatest="blend"/>
-		<widget name="initializetext" position="250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<ePixmap pixmap="UltraViolet/buttons/green.png" position="460,662" size="35,35" alphatest="blend"/>
+		<ePixmap pixmap="UltraViolet/buttons/yellow.png" position="710,662" size="35,35" alphatest="blend"/>
+		<ePixmap pixmap="UltraViolet/buttons/blue.png" position="950,662" size="35,35" alphatest="blend"/>
+		<widget source="key_red" render="Label" position=" 250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="key_green" render="Label" position=" 500,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="key_yellow" render="Label" position=" 750,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="key_blue" render="Label" position="1000,665" size="210,29" halign="left" font="Regular;22" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget name="HelpWindow" position="625,410" size="1,1" zPosition="10"/>
 	</screen>
 	<screen name="HarddiskWait" position="0,0" size="1280,720" title="HarddiskWait" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>
@@ -2418,6 +2455,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="RadioText" position="100,620" size="1080,30" font="Regular;24" noWrap="1" backgroundColor="transpBlack"/>
 		<widget name="RtpText" position="100,650" size="1080,30" font="Regular;24" halign="right" noWrap="1" backgroundColor="transpBlack"/>
 	</screen>
+
 	<screen name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1060,35" size=" 80,26" font="Regular;26" halign="right" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
@@ -2429,14 +2467,19 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Recording paths" position="180,50" size="550,36" zPosition="3" font="Regular;32" backgroundColor="background2" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<eLabel position="122,210" size="496,301" zPosition="1" backgroundColor="white"/>
 		<widget source="session.VideoPicture" render="Pig" position="125,213" size="490,295" zPosition="2" backgroundColor="#ff000000"/>
-		<eLabel position="496,163" size="698,473" zPosition="3" backgroundColor="background"/>
-		<eLabel position="500,167" size="694,469" zPosition="4" backgroundColor="background2"/>
-		<eLabel position="500,167" size="690,465" zPosition="5" backgroundColor="background1"/>
-		<widget name="config" position="510,174" size="670,450" zPosition="6" scrollbarMode="showOnDemand" itemHeight="30" selectionPixmap="UltraViolet/selpic/sel30-740.png"/>
+		<eLabel position="646,198" size="548,203" zPosition="3" backgroundColor="background"/>
+		<eLabel position="650,202" size="544,199" zPosition="4" backgroundColor="background2"/>
+		<eLabel position="650,202" size="540,195" zPosition="5" backgroundColor="background1"/>
+		<widget name="config" position="660,209" size="520,175" zPosition="6" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel25-740.png"/>
+		<widget source="introduction" render="Label" position="180,590" size="1000,55" font="Regular;25" halign="center" valign="center" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<ePixmap pixmap="UltraViolet/buttons/red.png" position="210,662" size="35,35" alphatest="blend"/>
 		<ePixmap pixmap="UltraViolet/buttons/green.png" position="460,662" size="35,35" alphatest="blend"/>
-		<widget source="key_red" render="Label"	position=" 250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<ePixmap pixmap="UltraViolet/buttons/yellow.png" position="710,662" size="35,35" alphatest="blend"/>
+		<ePixmap pixmap="UltraViolet/buttons/blue.png" position="950,662" size="35,35" alphatest="blend"/>
+		<widget source="key_red" render="Label" position=" 250,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<widget source="key_green" render="Label" position=" 500,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="key_yellow" render="Label" position=" 750,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
+		<widget source="key_blue" render="Label" position="1000,665" size="210,29" halign="left" font="Regular;22" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 	</screen>
 	<screen name="RestoreMenu" position="0,0" size="1280,720" title="Restore Backups" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>

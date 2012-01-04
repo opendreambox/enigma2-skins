@@ -795,18 +795,58 @@
 		<widget name="key_red" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
 		<widget name="key_green" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
 	</screen>
-	<screen name="HarddiskSelection" position="340,125" size="600,502" title="Select HDD">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5" />
-		<widget name="hddlist" position="10,12" size="580,475" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
+	<!-- Harddrive selection --> 
+	<screen name="HarddiskDriveSelection" position="90,90" size="1100,570" title="Select HDD" >
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+ 		<widget source="hddlist" render="Listbox" position="10,10" size="750,375" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select780_75.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 6), size = (600, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), 	# index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (720, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), 	# index 2 is the device info
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), 						# index 3 is the device pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), 						# index 4 is the online state pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (0, 73), size = (750, 2), png = 9), 						# index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="0,470" size="760,50" zPosition="10" font="Regular;24" halign="center" valign="center" transparent="1" />
+		<eLabel position="780,0" size="2,518" backgroundColor="grey" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="560,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="830,532" zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 20,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" zPosition="2" size="250,38" font="Regular;20" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1" />
+		<ePixmap position="800,400" size="150,110" zPosition="2" pixmap="dTV-HD/icons/hdd.png" transparent="1" alphatest="blend" />
 	</screen>
-	<screen name="HarddiskSetup" position="340,125" size="600,502" title="Harddisk">
-		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5" />
-		<widget name="model" position="10,20" size="580,28" font="Regular;25" halign="center" />
-		<widget name="capacity" position="10,60" size="580,28" font="Regular;25" halign="center" />
-		<widget name="bus" position="10,100" size="580,28" font="Regular;25" halign="center" />
-		<eLabel position="0,450" size="600,2" backgroundColor="grey" zPosition="5" />
-		<ePixmap pixmap="dTV-HD/button300.png" position=" 150,464" zPosition="1" size="300,38" alphatest="blend" />
-		<widget name="initializetext" position=" 150,463" zPosition="2" size="300,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
+	<!-- Harddisk setup -->
+	<screen name="HarddiskDriveSetup" position="90,90" size="1100,570" title="Select HDD" >
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+ 		<widget source="icon" render="Pixmap" position="150,40" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<widget source="model" render="Label" position="315,40" size="380,25" font="Regular;23" />
+		<widget source="capacity" render="Label" position="315,90" size="380,25" font="Regular;23" />
+		<widget source="bus" render="Label" position="315,140" size="380,25" font="Regular;23" />
+		<widget name="config" position="30,200" size="780,60" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" backgroundColor="background" transparent="1"/>
+		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="170,370" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+		<widget source="introduction" render="Label" position="0,460" size="830,50" zPosition="10" font="Regular;24" halign="center" valign="center" transparent="1" />
+		<eLabel position="830,0" size="2,518" backgroundColor="grey" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="560,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="830,532" zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 20,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" zPosition="2" size="250,38" font="Regular;20" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<screen name="HarddiskWait" position="340,125" size="600,502">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5" />
@@ -1207,14 +1247,21 @@
 		<widget name="RadioText" position="100,620" size="1080,30" font="Regular;24" noWrap="1" backgroundColor="black" />
 		<widget name="RtpText" position="100,650" size="1080,30" font="Regular;24" halign="right" noWrap="1" backgroundColor="black" />
 	</screen>
-	<screen name="RecordPathsSettings" position="190,90" size="900,570" title="Recording paths...">
-		<eLabel position="0,0" size="900,2" backgroundColor="grey" />
-		<widget name="config" position="20,10" size="860,425" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
-		<eLabel position="0,518" size="900,2" backgroundColor="grey" />
-		<ePixmap pixmap="dTV-HD/button.png" position="190,532" zPosition="1" size="250,38" alphatest="blend" />
-		<ePixmap pixmap="dTV-HD/button.png" position="460,532" zPosition="1" size="250,38" alphatest="blend" />
-		<widget source="key_red" render="Label" position="190,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="460,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" />
+
+	<screen name="RecordPathsSettings" position="90,90" size="1100,570" title="Recording paths...">
+		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
+		<widget name="config" position="20,10" size="780,425" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
+		<widget source="introduction" render="Label" position="0,460" size="830,50" zPosition="10" font="Regular;24" halign="center" valign="center" transparent="1" />
+		<eLabel position="830,0" size="2,518" backgroundColor="grey" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
+		<ePixmap pixmap="dTV-HD/button.png" position=" 20,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="290,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="560,532" zPosition="1" size="250,38" alphatest="blend" />
+		<ePixmap pixmap="dTV-HD/button.png" position="830,532" zPosition="1" size="250,38" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 20,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_green" render="Label" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="darkgrey" transparent="1" />
+		<widget source="key_blue" render="Label" position="830,531" zPosition="2" size="250,38" font="Regular;20" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1" />
 	</screen>
 	<screen name="Satfinder" position="340,100" size="600,502" title="Satfinder">
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5" />

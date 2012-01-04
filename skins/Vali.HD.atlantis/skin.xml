@@ -1687,21 +1687,24 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget font="Regular;20" halign="center" position="570,235" render="Label" size="600,100" source="package" transparent="1" valign="center"/>
     <widget font="Regular;22" halign="center" position="570,345" render="Label" size="600,120" source="status" transparent="1" valign="center"/>
   </screen>
-  <screen flags="wfNoBorder" name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths...">
-    <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-1"/>
-    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/blend.png" position="135,285" size="150,150"/>
-    <widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
-    <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
-    </widget>
-    <widget backgroundColor="background" itemHeight="28" name="config" position="400,108" scrollbarMode="showOnDemand" size="780,504" transparent="1"/>
-    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
-    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
-    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>
-    <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="145,645" render="Label" size="220,26" source="key_red" transparent="1" zPosition="1"/>
-    <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" render="Label" size="220,26" source="key_green" transparent="1" zPosition="1"/>
-  </screen>
+	<screen flags="wfNoBorder" name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths...">
+		<ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-1" />
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/blend.png" position="135,285" size="150,150" />
+		<widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+			<convert type="ClockToText">Format:%a %d. %b %H:%M</convert>
+		</widget>
+		<widget backgroundColor="background" itemHeight="28" name="config" position="400,108" scrollbarMode="showOnDemand" size="780,504" transparent="1" />
+		<ePixmap pixmap="skin_default/div-h.png" position="500,550" zPosition="1" size="700,2" />
+		<widget source="introduction" render="Label" position="500,555" size="700,50" zPosition="10" font="Regular;23" halign="center" valign="center" transparent="1" />
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30" />
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30" />
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30" />
+		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30" />
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_red" render="Label" position="145,645" size="220,26" transparent="1" zPosition="1" />
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_green" render="Label" position="435,645" size="220,26" transparent="1" zPosition="1" />
+		<widget backgroundColor="secondBG" font="Regular;22" halign="left" source="key_yellow" render="Label" position="725,645" size="220,26" transparent="1" zPosition="1" />
+	</screen>
   <screen flags="wfNoBorder" name="WebIfConfigScreen" position="0,0" size="1280,720" title="Main Setup">
     <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-1"/>
     <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/setup.png" position="135,285" size="150,150"/>
@@ -2807,6 +2810,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
 				}
 			</convert>
 		</widget>		
+		<ePixmap pixmap="skin_default/div-h.png" position="500,550" zPosition="1" size="700,2" />
+		<widget source="introduction" render="Label" position="500,555" size="700,50" zPosition="10" font="Regular;23" halign="center" valign="center" transparent="1" />
 		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/red.png" position="100,643" size="30,30"/>
 		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/green.png" position="390,643" size="30,30"/>
 		<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/yellow.png" position="680,643" size="30,30"/>

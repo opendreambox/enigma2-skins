@@ -537,15 +537,55 @@
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 	</screen>
-	<screen name="HarddiskSelection" position="100,90" size="520,285" title="Select HDD">
-		<widget name="hddlist" position="10,10" size="500,275" />
+	<!-- Harddrive selection --> 
+	<screen name="HarddiskDriveSelection" position="center,center" size="580,460" title="Select HDD">
+		<widget source="key_red" render="Label" position="10,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="red"/>
+		<widget source="key_green" render="Label" position="150,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="290,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" render="Label" position="430,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="blue"/>
+		<widget source="hddlist" render="Listbox" position="10,50" size="560,352" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 6), size = (500, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (480, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
+						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), # index 3 is the device pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), # index 4 is the online state pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (0, 68), size = (560, 2), png = 9), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+				"itemHeight": 70
+				}
+			</convert>
+		</widget>
+		<ePixmap pixmap="skin_default/div-h.png" position="0,405" zPosition="1" size="580,2" />
+		<widget source="introduction" render="Label" position="10,410" size="560,50" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
 	</screen>
-	<screen name="HarddiskSetup" position="150,90" size="420,160" title="Harddisk">
-		<widget name="model" position="10,10" size="400,25" font="Regular;23" />
-		<widget name="capacity" position="10,40" size="400,25" font="Regular;23" />
-		<widget name="bus" position="10,70" size="400,25" font="Regular;23" />
-		<widget name="initializetext" position="135,120" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
+	<!-- Harddisk setup -->
+	<screen name="HarddiskDriveSetup" position="center,center" size="560,450" title="Harddisk">
+		<widget source="key_red" render="Label" position="10,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="red"/>
+		<widget source="key_green" render="Label" position="150,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="290,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" render="Label" position="430,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="blue"/>
+		<widget source="icon" render="Pixmap" position="26,50" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<widget source="model" render="Label" position="145,50" size="380,25" font="Regular;23" />
+		<widget source="capacity" render="Label" position="145,80" size="380,25" font="Regular;23" />
+		<widget source="bus" render="Label" position="145,110" size="380,25" font="Regular;23" />
+		<widget name="config" position="10,200" size="540,50" scrollbarMode="showOnDemand" />
+		<ePixmap pixmap="skin_default/div-h.png" position="0,400" zPosition="1" size="560,2" />
+		<widget source="introduction" render="Label" position="10,405" size="540,45" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="160,330" zPosition="1" size="1,1" transparent="1" alphatest="on" />
 	</screen>
+	<!-- Harddisk mountpoint selection -->
+	<screen name="HarddiskMountpointBrowser" position="center,90" size="560,400" title="Select mountpoint">
+		<widget source="key_red" render="Label" position="10,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="red"/>
+		<widget source="key_green" render="Label" position="150,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="290,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" render="Label" position="430,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="blue"/>
+		<widget name="filelist" position="5,50" size="510,350" scrollbarMode="showOnDemand" />
+	</screen>
+	<!-- Harddisk wait -->
 	<screen name="HarddiskWait" position="100,90" size="520, 60">
 		<widget name="wait" position="10,10" size="500,25" font="Regular;23" />
 	</screen>
@@ -957,13 +997,15 @@
 		<widget name="RtpText" position="50,510" size="620,29" font="Regular;21" valign="center" halign="right" noWrap="1" backgroundColor="transpBlack" shadowOffset="-2,-2" shadowColor="black" />
 		<widget name="RassLogo" position="50,445" size="50,21" pixmap="skin_default/icons/rass_logo.png" />
 	</screen>
-	<screen name="RecordPathsSettings" position=" 50,90" size="620,430" title="Recording paths...">
-		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
-		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
-		<eLabel position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" />
-		<eLabel position="466,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="blue" />
-		<eLabel position="10,50" size="600,35" backgroundColor="background2" />
-		<widget name="config" position="10,56" size="600,325" scrollbarMode="showOnDemand" />
+	<!-- RecordPathsSettings -->
+	<screen name="RecordPathsSettings" position="center,center" size="580,460" title="Recording paths">
+		<widget source="key_red" render="Label" position="10,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="red"/>
+		<widget source="key_green" render="Label" position="150,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="green"/>
+		<widget source="key_yellow" render="Label" position="290,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
+		<widget source="key_blue" render="Label" position="430,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="blue"/>
+		<widget name="config" position="10,50" size="560,200" scrollbarMode="showOnDemand" />
+		<ePixmap pixmap="skin_default/div-h.png" position="0,405" zPosition="1" size="580,2" />
+		<widget source="introduction" render="Label" position="10,410" size="560,50" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
 	</screen>
 	<screen name="ScanSetup" position="100,90" size="520,430" title="Service scan">
 		<widget name="config" position="10,10" size="500,350" scrollbarMode="showOnDemand" />
@@ -1368,7 +1410,6 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget source="disabled" render="Label" position="406,50" size="199,26" zPosition="2" font="Regular;20" halign="left" valign="center" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" />
 		<widget name="ifacelist" position="10,90" size="600,325" scrollbarMode="showOnDemand" />
 	</screen>
-
 	<screen name="DVDMovieSelection" position=" 50,80" size="620,450" title="Select a movie">
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
@@ -1439,10 +1480,10 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget source="titles" render="Listbox" position="10,86" size="600,312" scrollbarMode="showOnDemand">
 			<convert type="StaticMultiList" />
 		</widget>
-		<widget source="space_bar_single" 	render="Progress" 	position="10,410" size="300,26" zPosition="2" borderWidth="1" backgroundColor="#254f7497" />
-		<widget source="space_label_single" render="Label" 		position="20,414" size="280,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
-		<widget source="space_bar_dual" 	render="Progress"	position="10,410" size="600,26" zPosition="1" borderWidth="1" backgroundColor="#254f7497" />
-		<widget source="space_label_dual" 	render="Label" 		position="20,414" size="580,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+		<widget source="space_bar_single" render="Progress" position="10,410" size="300,26" zPosition="2" borderWidth="1" backgroundColor="#254f7497" />
+		<widget source="space_label_single" render="Label" position="20,414" size="280,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
+		<widget source="space_bar_dual" render="Progress" position="10,410" size="600,26" zPosition="1" borderWidth="1" backgroundColor="#254f7497" />
+		<widget source="space_label_dual" render="Label" position="20,414" size="580,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
 	</screen>
 	<screen name="TitleProperties" position=" 50,90" size="620,445" title="Properties of current title">
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
@@ -1548,7 +1589,7 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget source="global.CurrentTime" render="Label" position="6,44" size="58,20" font="Regular;20" halign="left" valign="top">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="session.RecordState" render="FixedLabel" text=" " position="6,44" zPosition="1" size="58,20">
+		<widget source="session.RecordState" render="FixedLabel" text="" position="6,44" zPosition="1" size="58,20">
 			<convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
@@ -1582,7 +1623,7 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget source="global.CurrentTime" render="Label" position="6,44" size="58,20" font="Regular;20" halign="left" valign="top">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="session.RecordState" render="FixedLabel" text=" " position="6,44" zPosition="1" size="58,20">
+		<widget source="session.RecordState" render="FixedLabel" text="" position="6,44" zPosition="1" size="58,20">
 			<convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>

@@ -1029,11 +1029,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<eLabel position="480,146" size="730,470" zPosition="1" backgroundColor="grey" />
 		<eLabel position="482,148" size="726,466" zPosition="2" backgroundColor="background" />
 		<ePixmap position="80,490" size="150,110" zPosition="2" pixmap="Kerni-HD1/icons/hdd.png" transparent="1" alphatest="blend" />
-		<widget source="hddlist" render="Listbox" position="490,156" size="710,450" scrollbarMode="showOnDemand" zPosition="3" transparent="1">
+		<widget source="hddlist" render="Listbox" position="490,156" size="710,375" scrollbarMode="showOnDemand" zPosition="3" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (60, 6), size = (600, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
-						MultiContentEntryText(pos = (80, 44), size = (720, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
+						MultiContentEntryText(pos = (60, 6), size = (640, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
+						MultiContentEntryText(pos = (80, 44), size = (620, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
 						MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (55, 55), png = 7), # index 3 is the device pixmap
 						MultiContentEntryPixmapAlphaTest(pos = (58, 46), size = (15, 16), png = 8), # index 4 is the online state pixmap
 						MultiContentEntryPixmapAlphaTest(pos = (0, 73), size = (700, 2), png = 9), # index 3 is the div pixmap
@@ -1044,6 +1044,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 			</convert>
 		</widget>
 		<ePixmap position="80,490" size="150,110" zPosition="2" pixmap="Kerni-HD1/icons/hdd.png" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="skin_default/div-h.png" position="490,545" zPosition="10" size="710,2" />
+		<widget source="introduction" render="Label" position="490,550" size="710,50" zPosition="10" font="Regular;22" halign="center" valign="center" backgroundColor="background" transparent="1" />
 		<ePixmap pixmap="Kerni-HD1/buttons/red.png" 	position=" 80,637" size="21,21" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1/buttons/green.png" 	position="370,637" size="21,21" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" 	position="660,637" size="21,21" alphatest="on" />
@@ -1061,25 +1063,25 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget source="global.CurrentTime" render="Label" position="900,70" size="310,22" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Harddisk" position="80,60" size="800,35" font="Regular;32" backgroundColor="backtop" transparent="1"/>
-		<eLabel text="Harddisk Setup" 	position="480,110" size="730,30" font="Regular;24" backgroundColor="backtop" transparent="1"/>
+		<eLabel text="Harddisk" position="80,60" size="800,35" font="Regular;32" backgroundColor="backtop" transparent="1" />
+		<eLabel text="Harddisk Setup" position="480,110" size="730,30" font="Regular;24" backgroundColor="backtop" transparent="1" />
 		<eLabel position="480,146" size="730,470" zPosition="1" backgroundColor="grey" />
 		<eLabel position="482,148" size="726,466" zPosition="2" backgroundColor="background" />
 		<widget source="icon" render="Pixmap" position="490,156" zPosition="3" size="88,126" alphatest="on">
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
-		<widget source="model" render="Label" 	position="588,156" size="600,25" font="Regular;23" zPosition="3" backgroundColor="background" transparent="1"/>
-		<widget source="capacity" render="Label" position="588,206" size="600,25" font="Regular;23" zPosition="3" backgroundColor="background" transparent="1"/>
-		<widget source="bus" render="Label" position="588,257" size="600,25" font="Regular;23" zPosition="3" backgroundColor="background" transparent="1"/>
-		<widget name="config" position="490,300" size="650,50" scrollbarMode="showOnDemand" zPosition="3" backgroundColor="background" transparent="1" />
-		<ePixmap pixmap="skin_default/div-h.png" position="565,545" zPosition="10" size="560,2" />
-		<widget source="introduction" render="Label" position="575,550" size="540,45" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="background" transparent="1" />
+		<widget source="model" render="Label" position="588,156" size="600,25" font="Regular;23" zPosition="3" backgroundColor="background" transparent="1" />
+		<widget source="capacity" render="Label" position="588,206" size="600,25" font="Regular;23" zPosition="3" backgroundColor="background" transparent="1" />
+		<widget source="bus" render="Label" position="588,257" size="600,25" font="Regular;23" zPosition="3" backgroundColor="background" transparent="1" />
+		<widget name="config" position="490,300" size="710,50" scrollbarMode="showOnDemand" zPosition="3" backgroundColor="background" transparent="1" />
+		<ePixmap pixmap="skin_default/div-h.png" position="490,545" zPosition="10" size="710,2" />
+		<widget source="introduction" render="Label" position="490,550" size="710,50" zPosition="10" font="Regular;22" halign="center" valign="center" backgroundColor="background" transparent="1" />
 		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="535,400" zPosition="1" size="1,1" transparent="1" alphatest="on" />
 		<ePixmap position="80,490" size="150,110" zPosition="2" pixmap="Kerni-HD1/icons/hdd.png" transparent="1" alphatest="blend" />
-		<ePixmap pixmap="Kerni-HD1/buttons/red.png" 	position=" 80,637" size="21,21" alphatest="on" />
-		<ePixmap pixmap="Kerni-HD1/buttons/green.png" 	position="370,637" size="21,21" alphatest="on" />
-		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" 	position="660,637" size="21,21" alphatest="on" />
-		<ePixmap pixmap="Kerni-HD1/buttons/blue.png" 	position="950,637" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/red.png" position=" 80,637" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/green.png" position="370,637" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" position="660,637" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/blue.png" position="950,637" size="21,21" alphatest="on" />
 		<widget source="key_red" render="Label" position="120,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_green" render="Label" position="410,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" position="700,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
@@ -1093,22 +1095,22 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget source="global.CurrentTime" render="Label" position="900,70" size="310,22" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Harddisk" position="80,60" size="800,35" font="Regular;32" backgroundColor="backtop" transparent="1"/>
-		<eLabel text="Select mountpoint" 	position="480,110" size="730,30" font="Regular;24" backgroundColor="backtop" transparent="1"/>
+		<eLabel text="Harddisk" position="80,60" size="800,35" font="Regular;32" backgroundColor="backtop" transparent="1" />
+		<eLabel text="Select mountpoint" position="480,110" size="730,30" font="Regular;24" backgroundColor="backtop" transparent="1" />
 		<eLabel position="480,146" size="730,470" zPosition="1" backgroundColor="grey" />
 		<eLabel position="482,148" size="726,466" zPosition="2" backgroundColor="background" />
 		<widget name="filelist" position="530,168" size="630,425" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
 		<ePixmap position="80,490" size="150,110" zPosition="2" pixmap="Kerni-HD1/icons/hdd.png" transparent="1" alphatest="blend" />
-		<ePixmap pixmap="Kerni-HD1/buttons/red.png" 	position=" 80,637" size="21,21" alphatest="on" />
-		<ePixmap pixmap="Kerni-HD1/buttons/green.png" 	position="370,637" size="21,21" alphatest="on" />
-		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" 	position="660,637" size="21,21" alphatest="on" />
-		<ePixmap pixmap="Kerni-HD1/buttons/blue.png" 	position="950,637" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/red.png" position=" 80,637" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/green.png" position="370,637" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" position="660,637" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/blue.png" position="950,637" size="21,21" alphatest="on" />
 		<widget source="key_red" render="Label" position="120,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_green" render="Label" position="410,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" position="700,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_blue" render="Label" position="990,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="HarddiskWait" 					position="0,0" 		size="1280,720" 	title="HarddiskWait"				flags="wfNoBorder">
+	<screen name="HarddiskWait" position="0,0" size="1280,720" title="HarddiskWait" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -1116,11 +1118,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget source="global.CurrentTime" render="Label" position="900,70" size="310,22" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Date</convert>
 		</widget>
-		<eLabel text="Harddisk" position="80,60" size="800,35" font="Regular;32" backgroundColor="backtop" transparent="1"/>
-		<eLabel text="please wait" 	position="480,110" size="730,30" font="Regular;24" backgroundColor="backtop" transparent="1"/>
-		<eLabel 								position="480,146" size="730,470" zPosition="1" backgroundColor="grey" />
-		<eLabel 								position="482,148" size="726,466" zPosition="2" backgroundColor="background" />
-		<widget name="wait" 					position="490,156" size="710,450" zPosition="3" font="Regular;27" halign="center" valign="center" backgroundColor="background" transparent="1" />
+		<eLabel text="Harddisk" position="80,60" size="800,35" font="Regular;32" backgroundColor="backtop" transparent="1" />
+		<eLabel text="please wait" position="480,110" size="730,30" font="Regular;24" backgroundColor="backtop" transparent="1" />
+		<eLabel position="480,146" size="730,470" zPosition="1" backgroundColor="grey" />
+		<eLabel position="482,148" size="726,466" zPosition="2" backgroundColor="background" />
+		<widget name="wait" position="490,156" size="710,450" zPosition="3" font="Regular;27" halign="center" valign="center" backgroundColor="background" transparent="1" />
 		<ePixmap position="80,490" size="150,110" zPosition="2" pixmap="Kerni-HD1/icons/hdd.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="HelpMenu" 						position="0,0" 		size="1280,720" 	title="Menu" 						flags="wfNoBorder">
@@ -1762,10 +1764,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel 								position="480,146" size="730,470" zPosition="1" backgroundColor="grey" />
 		<eLabel 								position="482,148" size="726,466" zPosition="2" backgroundColor="background" />
 		<widget name="config" 					position="490,156" size="710,450" zPosition="3" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" />
+		<ePixmap pixmap="skin_default/div-h.png" position="490,545" zPosition="10" size="710,2" />
+		<widget source="introduction" render="Label" position="490,550" size="710,50" zPosition="10" font="Regular;22" halign="center" valign="center" backgroundColor="background" transparent="1" />
 		<ePixmap pixmap="Kerni-HD1/buttons/red.png" 	position=" 80,637" size="21,21" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1/buttons/green.png" 	position="370,637" size="21,21" alphatest="on" />
-		<widget source="key_red" render="Label" 		position="120,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label"		position="410,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<ePixmap pixmap="Kerni-HD1/buttons/yellow.png" 	position="660,637" size="21,21" alphatest="on" />
+		<ePixmap pixmap="Kerni-HD1/buttons/blue.png" 	position="950,637" size="21,21" alphatest="on" />
+		<widget source="key_red" render="Label" position="120,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="410,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label" position="700,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue" render="Label" position="990,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
 		<ePixmap position="80,490" size="170,110" zPosition="2" pixmap="Kerni-HD1/icons/setup.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="Satfinder" 						position="0,0" 		size="1280,720" 	title="Satfinder" 					flags="wfNoBorder">
