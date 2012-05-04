@@ -983,15 +983,11 @@
 		<eLabel position=" 0,397" size="620,33" backgroundColor="background2" />
 		<widget source="introduction" render="Label" position="10,402" size="600,25" zPosition="1" font="Regular;22" backgroundColor="background2" shadowColor="background" shadowOffset="-2,-2" transparent="1" halign="center" />
 	</screen>
-	<screen name="PluginBrowser" position="100,90" size="520,405" title="Plugin browser">
+<!--	<screen name="PluginBrowser" position="100,90" size="520,405" title="Plugin browser">
 		<widget name="red" position=" 8,5" zPosition="1" size="250,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
 		<widget name="green" position="262,5" zPosition="1" size="250,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
 		<widget name="list" position="10,45" size="500,355" scrollbarMode="showOnDemand" />
-	</screen>
-	<screen name="PluginDownloadBrowser" position="100,90" size="520,420" title="Downloadable plugins">
-		<widget name="text" position="10,10" zPosition="1" size="500,405" font="Regular;20" halign="center" valign="center" />
-		<widget name="list" position="10,10" zPosition="2" size="500,405" scrollbarMode="showOnDemand" />
-	</screen>
+	</screen>-->
 	<screen name="RdsInfoDisplay" position=" 0, 0" size="720,576" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="RadioText" position="50,481" size="620,29" font="Regular;21" valign="center" noWrap="1" backgroundColor="transpBlack" shadowOffset="-2,-2" shadowColor="black" />
 		<widget name="RtpText" position="50,510" size="620,29" font="Regular;21" valign="center" halign="right" noWrap="1" backgroundColor="transpBlack" shadowOffset="-2,-2" shadowColor="black" />
@@ -1470,7 +1466,7 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget name="Timeline" position="50,485" size="615,20" backgroundColor="#505555" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
 		<ePixmap pixmap="skin_default/icons/mp_buttons.png" position="305,515" size="109,13" alphatest="on" />
 	</screen>
-	<screen name="TitleList" position=" 50,90" size="620,445" title="DVD Tool">
+<!--	<screen name="TitleList" position=" 50,90" size="620,445" title="DVD Tool">
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_yellow" render="Label" position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2" />
@@ -1484,7 +1480,7 @@ self.instance.move(ePoint((720-wsizex)/2, (576-wsizey)/(count &gt; 7 and 2 or 3)
 		<widget source="space_label_single" render="Label" position="20,414" size="280,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
 		<widget source="space_bar_dual" render="Progress" position="10,410" size="600,26" zPosition="1" borderWidth="1" backgroundColor="#254f7497" />
 		<widget source="space_label_dual" render="Label" position="20,414" size="580,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
-	</screen>
+	</screen>-->
 	<screen name="TitleProperties" position=" 50,90" size="620,445" title="Properties of current title">
 		<widget source="key_red" render="Label" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
 		<widget source="key_green" render="Label" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />

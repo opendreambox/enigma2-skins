@@ -414,13 +414,13 @@
 		<ePixmap position="0,0" size="34,45" pixmap="Nemesis.ShadowLine/mute.png"/>
 	</screen>
 	<!-- Plugin browser -->
-	<screen name="PluginBrowser" position="center,center" size="420,370" title="Plugin browser">
+<!--	<screen name="PluginBrowser" position="center,center" size="420,370" title="Plugin browser">
 		<widget name="list" position="10,10" size="400,300" scrollbarMode="showOnDemand" />
 		<ePixmap name="remove" position="10,335" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="download" position="390,335" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<widget name="red" position="35,325" size="200,40" valign="center" halign="left" font="Regular;18" backgroundColor="background" transparent="1" />
 		<widget name="green" position="178,325" size="200,40" valign="center" halign="right" font="Regular;18" backgroundColor="background" transparent="1" />
-	</screen>
+	</screen>-->
 	<!-- Radio Infobar -->
 	<screen name="RadioInfoBar" position="85,408" size="560,120" zPosition="-1" title="Radio">
 		<widget source="session.CurrentService" render="Label" position="5,1" size="325,26" font="Regular;20" noWrap="1" transparent="1">

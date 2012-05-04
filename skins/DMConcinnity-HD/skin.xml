@@ -1368,7 +1368,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Parental control setup" position="270,20" size="540,43" font="Regular;35" halign="right" foregroundColor="black" backgroundColor="white" transparent="1" />
 		<widget name="config" position="30,90" size="780,450" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="DMConcinnity-HD/menu/sel900x30.png" backgroundColor="background" transparent="1" />
 	</screen>
-	<screen name="PluginBrowser" position="center,center" size=" 840,605" title="Plugin browser" flags="wfNoBorder">
+<!--	<screen name="PluginBrowser" position="center,center" size=" 840,605" title="Plugin browser" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/setupbg.png" />
 		<widget source="global.CurrentTime" render="Label" position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -1382,19 +1382,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="DMConcinnity-HD/buttons/green.png" position="390,570" size="35,27" alphatest="blend" />
 		<widget name="red" position=" 80,571" size="300,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 		<widget name="green" position="440,571" size="300,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
-	</screen>
-	<screen name="PluginDownloadBrowser" position="center,center" size=" 840,605" title="Downloadable plugins" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/setupbg.png" />
-		<widget source="global.CurrentTime" render="Label" position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="110,20" size="140,25" font="Regular;23" foregroundColor="blue" backgroundColor="white" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
-		</widget>
-		<widget source="Title" render="Label" position="270,20" size="540,43" font="Regular;35" halign="right" foregroundColor="black" backgroundColor="white" transparent="1" />
-		<widget name="list" position="30,80" size="780,450" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="DMConcinnity-HD/menu/sel800x50.png" transparent="1" />
-		<widget name="text" position="0,0" size="0,0" />
-	</screen>
+	</screen>-->
 	<screen name="PositionerSetup" position="center,center" size="1100,605" title="Positioner setup..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/mainbg.png" />
 		<widget source="global.CurrentTime" render="Label" position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
@@ -2115,7 +2103,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="340,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 		<widget source="key_yellow" render="Label" position="600,573" size="200,26" zPosition="1" font="Regular;20" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 	</screen>
-	<screen name="TitleList" 						position="center,center" size="1100,605" title="DVD Tool" 							flags="wfNoBorder" >
+<!--	<screen name="TitleList" 						position="center,center" size="1100,605" title="DVD Tool" 							flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/mainbg.png" />
 		<widget source="global.CurrentTime" render="Label" position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -2157,7 +2145,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="340,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 		<widget source="key_yellow" render="Label" position="600,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 		<widget source="key_blue" render="Label" position="880,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
-	</screen>
+	</screen>-->
 	<screen name="TitleCutter" 						position="center,center" size="1100,605" title="Cutlist editor" 					flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/mainbg.png"/>
 		<widget source="global.CurrentTime" render="Label" 	position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">

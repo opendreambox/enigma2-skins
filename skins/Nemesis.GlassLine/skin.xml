@@ -629,13 +629,13 @@
 		<widget name="help2" position="265,98" size="130,30" font="Console;16" halign="center" valign="center" />
 	</screen>
 	<!-- Plugin browser -->
-	<screen name="PluginBrowser" position="145,85" size="430,410" title="Plugin browser">
+<!--	<screen name="PluginBrowser" position="145,85" size="430,410" title="Plugin browser">
 		<widget name="list" position="5,10" size="420,350" scrollbarMode="showOnDemand" />
 		<ePixmap name="key_red" position="5,380" size="21,21" pixmap="Nemesis.GlassLine/key_red.png" alphatest="on" />
 		<ePixmap name="key_green" position="400,380" size="21,21" pixmap="Nemesis.GlassLine/key_green.png" alphatest="on" />
 		<widget name="red" position="35,380" size="180,21" font="Regular;19" valign="top" halign="left" backgroundColor="background" transparent="1" />
 		<widget name="green" position="215,380" size="180,21" font="Regular;19" valign="top" halign="right" backgroundColor="background" transparent="1" />
-	</screen>
+	</screen>-->
 	<!-- Radio infobar -->
 	<screen name="RadioInfoBar" position="85,408" size="560,120" zPosition="-1" title="Radio">
 		<widget source="session.CurrentService" render="Label" position="5,1" size="325,26" font="Regular;20" noWrap="1" transparent="1">

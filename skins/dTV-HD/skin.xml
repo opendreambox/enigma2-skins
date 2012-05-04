@@ -1132,7 +1132,7 @@
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5" />
 		<widget name="config" position="10,12" size="580,475" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 	</screen>
-	<screen name="PluginBrowser" position="240,125" size="800,502" title="Plugin browser">
+<!--	<screen name="PluginBrowser" position="240,125" size="800,502" title="Plugin browser">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" />
 		<widget name="list" position="0,0" size="801,452" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select800_50.png" />
 		<eLabel position="0,450" size="800,2" backgroundColor="grey" />
@@ -1140,13 +1140,7 @@
 		<ePixmap pixmap="dTV-HD/button300.png" position="420,464" zPosition="1" size="300,38" alphatest="blend" />
 		<widget name="red" position="80,463" zPosition="2" size="300,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
 		<widget name="green" position="420,463" zPosition="2" size="300,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
-	</screen>
-	<screen name="PluginDownloadBrowser" position="240,125" size="800,502" title="Downloadable plugins">
-		<eLabel position="0,0" size="800,2" backgroundColor="grey" />
-		<widget name="text" position="20,30" size="760,50" font="Regular;23" />
-		<widget name="list" position="0,0" size="801,452" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select800_50.png" />
-		<eLabel position="0,450" size="800,2" backgroundColor="grey" />
-	</screen>
+	</screen>-->
 	<screen name="PositionerSetup" position="240,125" size="800,492" title="Positioner setup...">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" />
 		<widget name="list" position="200,10" size="400,155" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
@@ -2215,7 +2209,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key_green" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
 		<widget name="key_yellow" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="darkgrey" transparent="1" />
 	</screen>
-	<screen name="TitleList" position="90,90" size="1100,570" title="DVD Tool">
+<!--	<screen name="TitleList" position="90,90" size="1100,570" title="DVD Tool">
 		<eLabel position="0,0" size="1100,2" backgroundColor="grey" />
 		<widget source="title_label" render="Label" position="10,48" size="1080,45" font="Regular;22" />
 		<widget name="error_label" position="10,48" size="1080,395" zPosition="3" font="Regular;20" />
@@ -2237,7 +2231,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="290,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
 		<widget source="key_yellow" render="Label" position="560,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="darkgrey" transparent="1" />
 		<widget source="key_blue" render="Label" position="830,531" zPosition="2" size="250,38" font="Regular;24" halign="center" valign="center" foregroundColor="blue" backgroundColor="darkgrey" transparent="1" />
-	</screen>
+	</screen>-->
 	<screen name="TitleCutter" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder" >
 		<eLabel position="80,125" size="300,420" zPosition="1" backgroundColor="grey" />
 		<eLabel position="81,126" size="298,418" zPosition="2" backgroundColor="black" />

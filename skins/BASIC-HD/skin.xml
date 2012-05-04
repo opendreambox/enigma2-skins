@@ -904,7 +904,7 @@
 	</screen>
 
 	<!-- Plugin browser -->
-	<screen name="PluginBrowser" position="240,130" size="800,500" title="Plugin browser">
+<!--	<screen name="PluginBrowser" position="240,130" size="800,500" title="Plugin browser">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
@@ -912,13 +912,7 @@
 		<widget name="red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;18" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;18" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="list" position="10,40" size="780,450" backgroundColor="Background" scrollbarMode="showOnDemand" />
-	</screen>
-
-	<!-- Plugin downloads -->
-	<screen name="PluginDownloadBrowser" position="240,130" size="800,520" title="Downloadable plugins">
-		<widget name="text" position="10,10" zPosition="1" size="780,500" font="Regular;20" halign="center" valign="center" />
-		<widget name="list" position="10,10" zPosition="2" size="780,500" scrollbarMode="showOnDemand" />
-	</screen>
+	</screen>-->
 
 	<!-- Adapter Setup -->
 	<screen name="AdapterSetupConfiguration" position="240,130" size="800,500" title="Network Configuration...">
@@ -2525,7 +2519,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="config" position="10,40" size="780,300" scrollbarMode="showOnDemand" />
 		<widget source="info" render="Label" position="10,350" size="780,140" zPosition="10" font="Regular;22" halign="center" valign="center" />
 	</screen>
-	<screen name="TitleList" position="240,130" size="800,500" title="DVD Tool -beta-">
+<!--	<screen name="TitleList" position="240,130" size="800,500" title="DVD Tool -beta-">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
@@ -2557,7 +2551,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="space_label_single" render="Label" position="10,449" size="270,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
 		<widget source="space_bar_dual" render="Progress" position="10,446" size="540,24" borderWidth="1" backgroundColor="#254f7497" />
 		<widget source="space_label_dual" render="Label" position="10,449" size="540,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="#000000" />
-	</screen>
+	</screen>-->
 	<screen name="DVDMovieSelection" position="140,100" size="1000,550" title="Select a movie">
 		<ePixmap position="12,4" size="235,32" pixmap="BASIC-HD/button/button_red.png" alphatest="on" />
 		<ePixmap position="259,4" size="235,32" pixmap="BASIC-HD/button/button_green.png" alphatest="on" />

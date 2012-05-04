@@ -1298,7 +1298,7 @@
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="145,645" render="Label" size="220,26" source="key_red" transparent="1" zPosition="1" />
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" render="Label" size="220,26" source="key_green" transparent="1" zPosition="1" />
   </screen>
-  <screen flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
+<!--  <screen flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1" />
     <widget backgroundColor="transparent" position="0,90" render="Pig" size="497,280" source="session.VideoPicture" zPosition="1" />
@@ -1313,7 +1313,7 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.nano/blue.png" position="970,643" size="30,30" />
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="red" position="145,645" size="220,26" transparent="1" zPosition="1" />
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="green" position="435,645" size="220,26" transparent="1" zPosition="1" />
-  </screen>
+  </screen>-->
   <screen flags="wfNoBorder" name="DirectoryBrowser" position="0,0" size="1280,720" title="Directory browser">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1" />
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1" />

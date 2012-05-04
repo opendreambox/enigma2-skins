@@ -1098,7 +1098,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="text" position="20,65" size="710,515" font="Console;20" transparent="1"/>
 	</screen>
 	<!-- DVD Burn Start -->
-	<screen name="TitleList" 						position="center,center" size="1100,600" title="DVD Tool" backgroundColor="transparent" flags="wfNoBorder">
+<!--	<screen name="TitleList" 						position="center,center" size="1100,600" title="DVD Tool" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1100,600" zPosition="-1" pixmap="Elgato-HD/menu_bg3.png"/>
 		<widget source="Title" render="Label" position=" 50,12" size="1050, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<ePixmap position="1040,10" size="35,35" pixmap="Elgato-HD/micon/dvd.png" alphatest="blend"/>
@@ -1142,7 +1142,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget source="key_green" 	render="Label" position="300,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
 		<widget source="key_yellow" render="Label" position="550,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
 		<widget source="key_blue" 	render="Label" position="800,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-	</screen>
+	</screen>-->
 	<screen name="DVDMovieSelection" 				position="center,center" size="1100,600" title="Select a movie" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1100,600" zPosition="-1" pixmap="Elgato-HD/menu_bg3.png"/>
 		<widget source="Title" render="Label" position=" 50,12" size="1050, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
@@ -2367,7 +2367,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="PiPSetup" 						position="70,580" size="600,100" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="text" position="0,0" size="600,100" font="Regular;23" halign="center" valign="center" transparent="1"/>
 	</screen>
-	<screen name="PluginBrowser" 					position="center,center" size="750,600" title="Plugin browser" backgroundColor="transparent" flags="wfNoBorder">
+<!--	<screen name="PluginBrowser" 					position="center,center" size="750,600" title="Plugin browser" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="750,600" zPosition="-1" pixmap="Elgato-HD/menu_bg2.png"/>
 		<widget source="Title" render="Label" position=" 50,12" size="600, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<ePixmap position="25,16" size=" 15, 20" pixmap="Elgato-HD/al.png" alphatest="on"/>
@@ -2379,16 +2379,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="Elgato-HD/buttons/green.png" 	position="320,590" size="250,2" alphatest="on"/>
 		<widget name="red" position=" 50,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
 		<widget name="green" position="300,560" zPosition="1" size="290,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-	</screen>
-	<screen name="PluginDownloadBrowser" 			position="center,center" size="750,600" title="Downloadable plugins" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap position="0,0" size="750,600" zPosition="-1" pixmap="Elgato-HD/menu_bg2.png"/>
-		<widget source="Title" render="Label" position=" 50,12" size="600, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
-		<ePixmap position="25,16" size=" 15, 20" pixmap="Elgato-HD/al.png" alphatest="on"/>
-		<ePixmap position="690,10" size="  35, 35" pixmap="Elgato-HD/micon/setup.png" alphatest="blend"/>
-		<eLabel position=" 20,55" size="710,  1" backgroundColor="white" />
-		<widget name="list" 	position="20,80" size="710,500" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Elgato-HD/selpic/sel50.png" backgroundPixmap="Elgato-HD/selpic/sep750.png" transparent="1"/>
-		<widget name="text" 	position="0,0" size="0,0"/>
-	</screen>
+	</screen>-->
 	<!-- Pluginmanager Start -->
 	<screen name="PluginManager" 					position="center,center" size="1100,600" title="Plugin manager" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1100,600" zPosition="-1" pixmap="Elgato-HD/menu_bg3.png"/>

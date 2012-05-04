@@ -950,17 +950,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="blue" position="452,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<!-- Erweiterungen -->
-	<screen name="PluginBrowser" position=" 96,105" size="623,470" title="Plugin browser" backgroundColor="transparent">
+<!--	<screen name="PluginBrowser" position=" 96,105" size="623,470" title="Plugin browser" backgroundColor="transparent">
 		<eLabel position="2, 4" size="500, 408" zPosition="-1" backgroundColor="background" />
 		<widget name="list" position="5, 8" size="494, 400" scrollbarMode="showOnDemand" />
 		<widget name="red" position="2, 420" size="250, 28" font="Regular;20" halign="center" valign="center" backgroundColor="red" />
 		<widget name="green" position="252, 420" size="250, 28" font="Regular;20" halign="center" valign="center" backgroundColor="green" />
-	</screen>
-	<screen name="PluginDownloadBrowser" position=" 96,105" size="623,470" title="Downloadable plugins" backgroundColor="transparent">
-		<eLabel position="2, 4" size="537, 408" zPosition="-1" backgroundColor="background" />
-		<widget name="text" position="8, 8" size="526, 400" zPosition="1" font="Regular;20" halign="center" valign="center" />
-		<widget name="list" position="8, 8" size="526, 400" zPosition="2" scrollbarMode="showOnDemand" />
-	</screen>
+	</screen>-->
 	<!-- Einstellungen -->
 	<!-- Kanalsuche -->	
 	<screen name="NimSelection" position="96,105" size="623,470" title="Choose Tuner" backgroundColor="transparent">
@@ -1633,7 +1628,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_yellow" render="Label" position="302,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 		<widget source="key_blue" render="Label" position="452,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
-	<screen name="TitleList" position=" 96,105" size="623,470" title="DVD Tool" backgroundColor="transparent">
+<!--	<screen name="TitleList" position=" 96,105" size="623,470" title="DVD Tool" backgroundColor="transparent">
 		<eLabel position="2, 4" size="583,408" zPosition="-1" backgroundColor="background" />
 		<widget source="title_label" render="Label" position="8,16" size="572, 36" font="Regular; 12" />
 		<eLabel position="8,56" size="572, 1" zPosition="2" backgroundColor="lgrey" />
@@ -1649,7 +1644,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="152,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="green" />
 		<widget source="key_yellow" render="Label" position="302,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" foregroundColor="black" />
 		<widget source="key_blue" render="Label" position="452,420" size="150,28" font="Regular;20" halign="center" valign="center" backgroundColor="blue" />
-	</screen>
+	</screen>-->
 	<screen name="TitleProperties" position=" 96,105" size="623,470" title="Properties of current title" backgroundColor="transparent">
 		<eLabel position=" 2, 4" size="583,408" zPosition="-1" backgroundColor="background" />
 		<widget name="thumbnail" position=" 5, 16" size="146,128" alphatest="on" />

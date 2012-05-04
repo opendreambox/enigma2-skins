@@ -1664,7 +1664,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Parental control setup" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1" />
 		<widget name="config" position="70,120" size="700,480" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
 	</screen>
-	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder">
+<!--	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png" />
 		<eLabel position="800,120" size="430,244" zPosition="2" backgroundColor="white" />
 		<widget source="session.VideoPicture" render="Pig" position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000" />
@@ -1681,22 +1681,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" position="350,635" size="24,24" alphatest="on" />
 		<widget name="red" position="100,635" size="250,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget name="green" position="380,635" size="250,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-	</screen>
-	<screen name="PluginDownloadBrowser" position="0,0" size="1280,720" title="Downloadable plugins" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png" />
-		<eLabel position="800,120" size="430,244" zPosition="2" backgroundColor="white" />
-		<widget source="session.VideoPicture" render="Pig" position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000" />
-		<ePixmap position="870,560" zPosition="-9" size="350,44" pixmap="Kerni-HD1R2/menu/db.png" />
-		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1" />
-		<widget name="list" position="70,115" size="700,500" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
-		<widget name="text" position="0,0" size="0,0" />
-	</screen>
+	</screen>-->
 	<screen name="PositionerSetup" position="0,0" size="1280,720" title="Positioner setup..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png" />
 		<eLabel position="800,120" size="430,244" zPosition="2" backgroundColor="white" />
@@ -2659,7 +2644,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="390,635" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" position="680,635" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
-	<screen name="TitleList" 					position="0,0" 		size="1280,720" 	title="DVD Tool" 					flags="wfNoBorder" >
+<!--	<screen name="TitleList" 					position="0,0" 		size="1280,720" 	title="DVD Tool" 					flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png" />
 		<eLabel position="800,120" size="430,244" zPosition="2" backgroundColor="white" />
 		<widget source="session.VideoPicture" render="Pig" position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000" />
@@ -2704,7 +2689,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="390,635" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_yellow" render="Label" position="680,635" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget source="key_blue" render="Label" position="970,635" size="360,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-	</screen>
+	</screen>-->
 	<screen name="TitleCutter" 					position="0,0" 		size="1280,720" 	title="Cutlist editor" 				flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">

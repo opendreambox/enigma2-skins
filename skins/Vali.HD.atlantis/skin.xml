@@ -1159,7 +1159,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" render="Label" size="220,26" source="key_green" transparent="1" zPosition="1"/>
 	<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/setup.png" position="135,285" size="150,150"/>
   </screen>
-  <screen flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
+<!--  <screen flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
     <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-1"/>
 	<ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/plugin.png" position="135,285" size="150,150"/>
     <widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
@@ -1173,7 +1173,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/blue.png" position="970,643" size="30,30"/>
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
-  </screen>
+  </screen>-->
   <screen flags="wfNoBorder" name="DirectoryBrowser" position="0,0" size="1280,720" title="Directory browser">
     <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-1"/>
     <ePixmap alphatest="blend" pixmap="Vali.HD.atlantis/images/hdd.png" position="135,285" size="150,150"/>
