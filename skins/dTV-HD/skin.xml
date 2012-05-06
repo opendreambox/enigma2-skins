@@ -1132,15 +1132,29 @@
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5" />
 		<widget name="config" position="10,12" size="580,475" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />
 	</screen>
-<!--	<screen name="PluginBrowser" position="240,125" size="800,502" title="Plugin browser">
+	<screen name="PluginBrowser" position="240,125" size="800,502" title="Plugin browser">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" />
-		<widget name="list" position="0,0" size="801,452" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select800_50.png" />
+		<widget source="pluginlist" render="Listbox" position="0,0" size="801,452" scrollbarMode="showOnDemand" selectionPixmap="dTV-HD/menu/select800_50.png">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>		
 		<eLabel position="0,450" size="800,2" backgroundColor="grey" />
 		<ePixmap pixmap="dTV-HD/button300.png" position=" 80,464" zPosition="1" size="300,38" alphatest="blend" />
 		<ePixmap pixmap="dTV-HD/button300.png" position="420,464" zPosition="1" size="300,38" alphatest="blend" />
 		<widget name="red" position="80,463" zPosition="2" size="300,38" font="Regular;24" halign="center" valign="center" foregroundColor="red" backgroundColor="darkgrey" transparent="1" />
 		<widget name="green" position="420,463" zPosition="2" size="300,38" font="Regular;24" halign="center" valign="center" foregroundColor="green" backgroundColor="darkgrey" transparent="1" />
-	</screen>-->
+	</screen>
 	<screen name="PositionerSetup" position="240,125" size="800,492" title="Positioner setup...">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" />
 		<widget name="list" position="200,10" size="400,155" selectionPixmap="dTV-HD/menu/select1080_25.png" transparent="1" />

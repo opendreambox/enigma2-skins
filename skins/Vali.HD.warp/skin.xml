@@ -1218,7 +1218,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" position="435,645" render="Label" size="220,26" source="key_green" transparent="1" zPosition="1"/>
 	<ePixmap alphatest="blend" pixmap="Vali.HD.warp/images/setup.png" position="135,285" size="150,150"/>
   </screen>
-<!--  <screen flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
+  <screen flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>
 	<ePixmap alphatest="blend" pixmap="Vali.HD.warp/images/plugin.png" position="135,285" size="150,150"/>
@@ -1226,14 +1226,28 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
       <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
     </widget>
-    <widget name="list" position="400,112" scrollbarMode="showOnDemand" size="780,500"/>
+    	<widget source="pluginlist" render="Listbox" position="400,112" size="780,500" scrollbarMode="showOnDemand">
+		<convert type="TemplatedMultiContent">
+		{"templates":
+			{"default": (50,[
+					MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+					MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+					MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+					
+				]),
+			},
+			"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+			"itemHeight": 50
+		}
+		</convert>
+	</widget>    
     <ePixmap alphatest="on" pixmap="Vali.HD.warp/red.png" position="100,643" size="30,30"/>
     <ePixmap alphatest="on" pixmap="Vali.HD.warp/green.png" position="390,643" size="30,30"/>
     <ePixmap alphatest="on" pixmap="Vali.HD.warp/yellow.png" position="680,643" size="30,30"/>
     <ePixmap alphatest="on" pixmap="Vali.HD.warp/blue.png" position="970,643" size="30,30"/>
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="red" position="145,645" size="220,26" transparent="1" zPosition="1"/>
     <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="green" position="435,645" size="220,26" transparent="1" zPosition="1"/>
-  </screen>-->
+  </screen>
   <screen flags="wfNoBorder" name="DirectoryBrowser" position="0,0" size="1280,720" title="Directory browser">
     <eLabel backgroundColor="secondBG" position="0,0" size="1280,90" zPosition="-1"/>
     <eLabel backgroundColor="secondBG" position="0,630" size="1280,90" zPosition="-1"/>

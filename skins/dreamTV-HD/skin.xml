@@ -1268,13 +1268,27 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5" />
 		<widget name="config" position="10,12" size="580,475" selectionPixmap="dreamTV-HD/menu/select1080_25.png" />
 	</screen>
-<!--	<screen name="PluginBrowser" position="240,134" size="800,492" title="Plugin browser">
+	<screen name="PluginBrowser" position="240,134" size="800,492" title="Plugin browser">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" />
-		<widget name="list" position="0,0" size="801,452" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select800_50.png" />
+		<widget source="pluginlist" render="Listbox" position="0,0" size="801,452" scrollbarMode="showOnDemand" selectionPixmap="dreamTV-HD/menu/select800_50.png">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>		
 		<eLabel position="0,450" size="800,2" backgroundColor="grey" />
 		<widget name="red" position="50,457" size="350,30" font="Regular;24" halign="center" valign="center" foregroundColor="red" />
 		<widget name="green" position="400,457" size="350,30" font="Regular;24" halign="center" valign="center" foregroundColor="green" />
-	</screen>-->
+	</screen>
 	<screen name="PositionerSetup" position="240,134" size="800,492" title="Positioner setup...">
 		<eLabel position="0,0" size="800,2" backgroundColor="grey" />
 		<widget name="list" position="200,10" size="400,155" selectionPixmap="dreamTV-HD/menu/select1080_25.png" />

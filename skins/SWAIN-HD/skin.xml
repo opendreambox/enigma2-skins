@@ -987,12 +987,26 @@
 		<widget name="blue" position="800,525" size="265,35" font="Regular;24" halign="center" valign="center" backgroundColor="blue" />
 	</screen>
 	<!-- Erweiterungen -->
-<!--	<screen name="PluginBrowser" position="172,132" size="1108,588" title="Plugin browser" backgroundColor="transparent">
+	<screen name="PluginBrowser" position="172,132" size="1108,588" title="Plugin browser" backgroundColor="transparent">
 		<eLabel position="5,5" size="600,510" zPosition="-1" backgroundColor="background" />
-		<widget name="list" position="15,10" size="580,500" scrollbarMode="showOnDemand" />
+		<widget source="pluginlist" render="Listbox" position="15,10" size="580,500" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>		
 		<widget name="red" position="5,525" size="300,35" font="Regular;24" halign="center" valign="center" backgroundColor="red" />
 		<widget name="green" position="305,525" size="300,35" font="Regular;24" halign="center" valign="center" backgroundColor="green" />
-	</screen>-->
+	</screen>
 	<!-- Einstellungen -->
 	<!-- Kanalsuche -->
 	<screen name="NimSelection" position="172,132" size="1108,588" title="Choose Tuner" backgroundColor="transparent">

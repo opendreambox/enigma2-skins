@@ -904,15 +904,29 @@
 	</screen>
 
 	<!-- Plugin browser -->
-<!--	<screen name="PluginBrowser" position="240,130" size="800,500" title="Plugin browser">
+	<screen name="PluginBrowser" position="240,130" size="800,500" title="Plugin browser">
 		<ePixmap position="8,4" size="190,32" pixmap="BASIC-HD/button/button_red_sm.png" alphatest="on" />
 		<ePixmap position="206,4" size="190,32" pixmap="BASIC-HD/button/button_green_sm.png" alphatest="on" />
 		<ePixmap position="404,4" size="190,32" pixmap="BASIC-HD/button/button_yellow_sm.png" alphatest="on" />
 		<ePixmap position="602,4" size="190,32" pixmap="BASIC-HD/button/button_blue_sm.png" alphatest="on" />
 		<widget name="red" position="8,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;18" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="green" position="206,4" size="190,32" valign="center" halign="center" zPosition="1" font="Regular;18" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
-		<widget name="list" position="10,40" size="780,450" backgroundColor="Background" scrollbarMode="showOnDemand" />
-	</screen>-->
+		<widget source="pluginlist" render="Listbox" position="10,40" size="780,450" backgroundColor="Background" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>		
+	</screen>
 
 	<!-- Adapter Setup -->
 	<screen name="AdapterSetupConfiguration" position="240,130" size="800,500" title="Network Configuration...">

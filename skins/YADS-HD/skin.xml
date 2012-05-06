@@ -2735,7 +2735,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_red" render="Label"	position="100,650" zPosition="1" size="248,30" font="Regular;24" halign="center" valign="center" backgroundColor="#9f1313" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 	</screen>
 	<!-- Plugin browser -->
-<!--	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder">
+	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder">
 		<ePixmap position="0,40" size="1280,95" pixmap="YADS-HD/top1.png" alphatest="on" />
 		<widget source="global.CurrentTime" render="Label" position="65,44" size="180,25" zPosition="1" font="Regular;25" halign="left" backgroundColor="background1" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
@@ -2749,7 +2749,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget source="Title" render="Label" position="0,90" size="1280,33" zPosition="1" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
 		<ePixmap position="90,140" size="1100,500" zPosition="-1" pixmap="YADS-HD/back2.png" />
-		<widget name="list" position="110,160" size="700,450" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="YADS-HD/selpic/sel50.png" backgroundPixmap="YADS-HD/selpic/sep750.png" transparent="1" />
+		<widget source="pluginlist" render="Listbox" osition="110,160" size="700,450" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="YADS-HD/selpic/sel50.png" backgroundPixmap="YADS-HD/selpic/sep750.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>		
 		<widget source="session.VideoPicture" render="Pig" position=" 830,150" size="350,205" zPosition="3" backgroundColor="#ff000000" />
 		<ePixmap pixmap="YADS-HD/buttons/red.png" position="100,650" size="200,32" zPosition="2" alphatest="on" />
 		<ePixmap pixmap="YADS-HD/buttons/red.png" position="200,650" size="248,32" zPosition="1" alphatest="on" />
@@ -2757,7 +2771,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="YADS-HD/buttons/green.png" position="520,650" size="248,32" zPosition="1" alphatest="on" />
 		<widget name="red" position="100,650" zPosition="3" size="348,30" font="Regular;24" halign="center" valign="center" backgroundColor="#9f1313" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 		<widget name="green" position="420,650" zPosition="3" size="348,30" font="Regular;24" halign="center" valign="center" backgroundColor="#1f771f" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
-	</screen>-->
+	</screen>
 	<!-- Pluginmanager -->
 	<screen name="PluginManager" 					position="0,0" size="1280,720" title="Plugin manager" flags="wfNoBorder">
 		<ePixmap 												position="0,40" size="1280,95" pixmap="YADS-HD/top1.png"  alphatest="on"/>

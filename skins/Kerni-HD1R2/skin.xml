@@ -1664,7 +1664,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Parental control setup" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1" />
 		<widget name="config" position="70,120" size="700,480" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
 	</screen>
-<!--	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder">
+	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png" />
 		<eLabel position="800,120" size="430,244" zPosition="2" backgroundColor="white" />
 		<widget source="session.VideoPicture" render="Pig" position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000" />
@@ -1676,12 +1676,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel text="Plugin browser" position="70,47" size="800,43" font="Regular;35" backgroundColor="backtop" transparent="1" />
-		<widget name="list" position="70,115" size="700,500" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
+		<widget source="pluginlist" render="Listbox" position="70,115" size="700,500" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>		
 		<ePixmap pixmap="Kerni-HD1R2/buttons/red.png" position="70,635" size="24,24" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1R2/buttons/green.png" position="350,635" size="24,24" alphatest="on" />
 		<widget name="red" position="100,635" size="250,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
 		<widget name="green" position="380,635" size="250,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-	</screen>-->
+	</screen>
 	<screen name="PositionerSetup" position="0,0" size="1280,720" title="Positioner setup..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png" />
 		<eLabel position="800,120" size="430,244" zPosition="2" backgroundColor="white" />

@@ -346,13 +346,27 @@
 		<ePixmap position="140,110" zPosition="1" size="140,40" pixmap="Nemesis.Flatline/key-red.png"  transparent="1" alphatest="on" />
 		<widget name="initializetext" position="140,110" size="140,40" valign="center" halign="center" zPosition="2" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 	</screen>
-<!--	<screen name="PluginBrowser" position="center,center" size="420,370" title="Plugin browser">
-		<widget name="list" position="10,10" size="400,300" scrollbarMode="showOnDemand" />
+	<screen name="PluginBrowser" position="center,center" size="420,370" title="Plugin browser">
+		<widget source="pluginlist" render="Listbox" position="10,10" size="400,300" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (300, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (300, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>
 		<ePixmap name="remove" position="5,325" size="200,40" pixmap="Nemesis.Flatline/key-red_200.png" transparent="1" alphatest="on" />
 		<ePixmap name="download" position="215,325" size="200,40" pixmap="Nemesis.Flatline/key-green_200.png" transparent="1" alphatest="on" />
 		<widget name="red" position="5,325" zPosition="2" size="200,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="green" position="215,325" zPosition="2" size="200,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
-	</screen>-->
+	</screen>
 	<screen name="ServiceInfo" position="center,center" size="560,370" title="Serviceinfo">
 		<ePixmap name="bg_red" position="0,0" size="140,40" pixmap="Nemesis.Flatline/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="bg_green" position="140,0" size="140,40" pixmap="Nemesis.Flatline/key-green.png" transparent="1" alphatest="on" />

@@ -506,13 +506,27 @@
 		<widget source="introduction" render="Label" position="10,305" size="440,23" zPosition="10" font="Regular;20" halign="center" transparent="1" />
 	</screen>
 	<!-- Plugin browser -->
-<!--	<screen name="PluginBrowser" position="center,center" size="420,410" title="Plugin browser">
+	<screen name="PluginBrowser" position="center,center" size="420,410" title="Plugin browser">
 		<ePixmap position="5,5" zPosition="1" pixmap="Nemesis.BlackBox/key_red_big.png" size="200,40" alphatest="on" />
 		<ePixmap position="215,5" zPosition="1" pixmap="Nemesis.BlackBox/key_green_big.png" size="200,40" alphatest="on" />
 		<widget name="red" position="5,5" zPosition="2" size="200,40" font="Regular;18" valign="center" halign="center" backgroundColor="black" transparent="1" />
 		<widget name="green" position="215,5" zPosition="2" size="200,40" font="Regular;18" valign="center" halign="center" backgroundColor="black" transparent="1" />
-		<widget name="list" position="10,50" size="400,350" scrollbarMode="showOnDemand" />
-	</screen>-->
+		<widget source="pluginlist" render="Listbox" position="10,50" size="400,350" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>		
+	</screen>
 	<!-- Radio infobar -->
 	<screen name="RadioInfoBar" position="90,420" size="560,110" zPosition="-1" title="Radio">
 		<widget source="session.CurrentService" render="Label" position="5,2" size="325,26" font="Regular;22" transparent="1">

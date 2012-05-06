@@ -2185,7 +2185,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_yellow" render="Label" position=" 750,665" size="210,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<widget source="key_blue" render="Label" position="1000,665" size="210,29" halign="left" font="Regular;22" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 	</screen>
-<!--	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder">
+	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1060,35" size=" 80,26" font="Regular;26" halign="right" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -2199,12 +2199,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="656,156" size="528,408" zPosition="3" backgroundColor="background"/>
 		<eLabel position="660,160" size="524,404" zPosition="4" backgroundColor="background2"/>
 		<eLabel position="660,160" size="520,1" zPosition="7"/>
-		<widget name="list" position="660,160" size="520,400" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel50-520.png" backgroundPixmap="UltraViolet/selpic/sep.png" transparent="1"/>
+		<widget source="pluginlist" render="Listbox" position="660,160" size="520,400" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="UltraViolet/selpic/sel50-520.png" backgroundPixmap="UltraViolet/selpic/sep.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (50,[
+						MultiContentEntryText(pos = (120, 5), size = (320, 25), font = 0, text = 1), # index 1 is the plugin.name
+						MultiContentEntryText(pos = (120, 26), size = (320, 17), font = 1, text = 2), # index 2 is the plugin.description
+						MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (100, 40), png = 3), # index 3 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>		
 		<ePixmap pixmap="UltraViolet/buttons/red.png" position="210,662" size="35,35" alphatest="blend"/>
 		<ePixmap pixmap="UltraViolet/buttons/green.png" position="560,662" size="35,35" alphatest="blend"/>
 		<widget name="red" position=" 250,665" size="310,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
 		<widget name="green" position=" 600,665" size="310,29" halign="left" font="Regular;24" backgroundColor="grey" shadowColor="black" shadowOffset="-2,-2" transparent="1"/>
-	</screen>-->
+	</screen>
 	<screen name="PluginManager" position="0,0" size="1280,720" title="Plugin manager" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg1.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1060,35" size=" 80,26" font="Regular;26" halign="right" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
