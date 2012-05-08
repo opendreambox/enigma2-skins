@@ -2117,21 +2117,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="340,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 		<widget source="key_yellow" render="Label" position="600,573" size="200,26" zPosition="1" font="Regular;20" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 	</screen>
-<!--	<screen name="TitleList" 						position="center,center" size="1100,605" title="DVD Tool" 							flags="wfNoBorder" >
-		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/mainbg.png" />
+	<screen name="TitleList" position="center,center" size="1100,605" title="DVD Tool" flags="wfNoBorder" >
+		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/mainbg.png"/>
 		<widget source="global.CurrentTime" render="Label" position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="110,20" size="140,25" font="Regular;23" foregroundColor="blue" backgroundColor="white" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<widget source="Title" render="Label" position="270,20" size="800,43" font="Regular;35" halign="right" foregroundColor="black" backgroundColor="white" transparent="1" />
-		<ePixmap pixmap="DMConcinnity-HD/buttons/menu.png" position="770,94" size="70,30" alphatest="blend" />
-		<widget source="hint" render="Label" position="860,95" size="350,25" font="Regular;20" halign="left" backgroundColor="background" transparent="1" />
+		<widget source="Title" render="Label" position="270,20" size="800,43" font="Regular;35" halign="right" foregroundColor="black" backgroundColor="white" transparent="1"/>
+		<ePixmap pixmap="DMConcinnity-HD/buttons/menu.png" position="770,94" size="70,30" alphatest="blend"/>
+		<widget source="hint" render="Label" position="860,95" size="350,25" font="Regular;20" halign="left" backgroundColor="background" transparent="1"/>
 		<widget source="title_label" render="Label" position="30, 90" size="700,56" font="Regular;23" backgroundColor="background" transparent="1" />
-	    <widget name="error_label" 							position="30, 90" size="1040,400" zPosition="3" font="Regular;20" backgroundColor="background" />
-		<eLabel 											position="30,160" size="1040,2" backgroundColor="grey" />
-		<widget source="titles" render="Listbox" 			position="30,170" size="1040,300" scrollbarMode="showOnDemand"  selectionPixmap="DMConcinnity-HD/menu/sel1040x60.png" backgroundColor="background" transparent="1" >
+		<widget name="error_label" position="30, 90" size="1040,400" zPosition="3" font="Regular;20" backgroundColor="background" />
+		<eLabel position="30,160" size="1040,2" backgroundColor="grey" />
+		<widget source="titles" render="Listbox" position="30,170" size="1040,300" scrollbarMode="showOnDemand"  selectionPixmap="DMConcinnity-HD/menu/sel1040x60.png" backgroundColor="background" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = ( 10,  2), size = (690, 28), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
@@ -2145,21 +2145,25 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				}
 			</convert>
 		</widget>
-		<eLabel 											position="30,470" size="1040,2" backgroundColor="grey" />
-		<widget name="medium_label" position="30,488" size="1040,28" font="Regular;22" halign="left" foregroundColors="white,yellow,red" backgroundColor="background" transparent="1" />
-		<widget source="space_bar_single" render="Progress" position="30,530" size="520,26" zPosition="2" borderWidth="1" backgroundColor="grey" />
-		<widget source="space_label_single" render="Label" position="40,532" size="500,22" zPosition="3" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
-		<widget source="space_bar_dual" render="Progress" position="30,530" size="1040,26" zPosition="1" borderWidth="1" backgroundColor="grey" />
-		<widget source="space_label_dual" render="Label" position="40,532" size="1020,22" zPosition="2" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
+		<eLabel position="30,470" size="1040,2" backgroundColor="grey" />
+		<widget name="medium_label"  position="30,488" size="1040,28" font="Regular;22" halign="left" foregroundColors="white,yellow,red" backgroundColor="background" transparent="1"/>
+		<widget source="space_bar_single" render="Progress" position="192,520" size="1,26" zPosition="3" borderWidth="1" backgroundColor="grey"/>
+		<widget source="space_bar_dual" render="Progress" position="357,520" size="1,26" zPosition="2" borderWidth="1" backgroundColor="grey"/>
+		<widget source="space_bar_bludisc" render="Progress" position="30,520" size="1040,26" zPosition="1" borderWidth="1" backgroundColor="grey"/>
+		<widget source="space_label" render="Label" position="40,522" size="1020,22" zPosition="4" font="Regular;18" halign="center" transparent="1" foregroundColor="black" backgroundColor="grey" />
+		<widget source="marker_single" render="Label" position="168,552" size="48,12" zPosition="1" font="Regular;11" halign="center" foregroundColor="grey" />
+		<widget source="marker_dvd" render="Label" position="275,552" size="48,12" zPosition="1" font="Regular;11" halign="center" foregroundColor="grey" />
+		<widget source="marker_dual" render="Label" position="333,552" size="48,12" zPosition="1" font="Regular;11" halign="center" foregroundColor="grey" />
+		<widget source="marker_bludisc" render="Label" position="972,552" size="52,12" zPosition="1" font="Regular;11" halign="center" foregroundColor="grey" />
 		<ePixmap pixmap="DMConcinnity-HD/buttons/red.png" position=" 30,570" size="35,27" alphatest="blend" />
 		<ePixmap pixmap="DMConcinnity-HD/buttons/green.png" position="290,570" size="35,27" alphatest="blend" />
 		<ePixmap pixmap="DMConcinnity-HD/buttons/yellow.png" position="550,570" size="35,27" alphatest="blend" />
-		<ePixmap pixmap="DMConcinnity-HD/buttons/blue.png" position="830,570" size="35,27" alphatest="blend" />
-		<widget source="key_red" render="Label" position="80,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/blue.png" position="830,570" 	size="35,27" alphatest="blend" />
+		<widget source="key_red" render="Label"	position=" 80,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 		<widget source="key_green" render="Label" position="340,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 		<widget source="key_yellow" render="Label" position="600,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
-		<widget source="key_blue" render="Label" position="880,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
-	</screen>-->
+		<widget source="key_blue" render="Label" position="880,573"  size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+	</screen>
 	<screen name="TitleCutter" 						position="center,center" size="1100,605" title="Cutlist editor" 					flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/mainbg.png"/>
 		<widget source="global.CurrentTime" render="Label" 	position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
