@@ -349,10 +349,6 @@
 			<convert type="MenuEntryCompare">web_browser</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="DMConcinnity-HD/menu/hbbtv.png"	position="26,141" size="250,297">
-			<convert type="MenuEntryCompare">hbbtv_browser</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>		
 		<widget source="menu" render="Pixmap" pixmap="DMConcinnity-HD/menu/media.png" 	position="26,141" size="250,297">
 			<convert type="MenuEntryCompare">media_player</convert>
 			<convert type="ConditionalShowHide" />
