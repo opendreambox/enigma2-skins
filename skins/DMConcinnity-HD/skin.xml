@@ -1651,6 +1651,64 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="DMConcinnity-HD/buttons/red.png" position=" 30,570" size="35,27" alphatest="blend" />
 		<widget source="key_red" render="Label" position=" 80,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 	</screen>
+	<screen name="MiniDLNASetup" position="center,center" size="1100,605" title="Mediaserver (DLNA) Setup" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/mainbg.png"/>
+		<widget source="global.CurrentTime" render="Label" position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="110,20" size="140,25" font="Regular;23" foregroundColor="blue" backgroundColor="white" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<eLabel text="Mediaserver (DLNA) Setup" position="270,20" size="800,43" font="Regular;35" halign="right" foregroundColor="black" backgroundColor="white" transparent="1"/>
+
+		<widget name="config" position="40,80" size="1020,440" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
+
+		<ePixmap pixmap="DMConcinnity-HD/buttons/red.png" position=" 30,570" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/green.png" position="290,570" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/yellow.png" position="550,570" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/blue.png" position="830,570" size="35,27" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 80,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget source="key_green" render="Label" position="340,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="600,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+	</screen>
+	<screen name="MiniDLNAShareSetup" position="center,center" size="1100,605" title="Mediaserver (DLNA) Shares" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/mainbg.png"/>
+		<widget source="global.CurrentTime" render="Label" position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="110,20" size="140,25" font="Regular;23" foregroundColor="blue" backgroundColor="white" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<eLabel text="Mediaserver (DLNA) Shares" position="270,20" size="800,43" font="Regular;35" halign="right" foregroundColor="black" backgroundColor="white" transparent="1"/>
+
+		<widget name="config" position="40,80" size="1020,440" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
+
+		<ePixmap pixmap="DMConcinnity-HD/buttons/red.png" position=" 30,570" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/green.png" position="290,570" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/yellow.png" position="550,570" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/blue.png" position="830,570" size="35,27" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 80,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget source="key_green" render="Label" position="340,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+	</screen>
+	<screen name="CecConfig" position="center,center" size="1100,605" title="HDMI CEC Setup" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/mainbg.png"/>
+		<widget source="global.CurrentTime" render="Label" position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="110,20" size="140,25" font="Regular;23" foregroundColor="blue" backgroundColor="white" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<eLabel text="HDMI CEC Setup" position="270,20" size="800,43" font="Regular;35" halign="right" foregroundColor="black" backgroundColor="white" transparent="1"/>
+
+		<widget name="config" position="40,80" size="1020,440" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1"/>
+
+		<ePixmap pixmap="DMConcinnity-HD/buttons/red.png" position=" 30,570" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/green.png" position="290,570" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/yellow.png" position="550,570" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/blue.png" position="830,570" size="35,27" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 80,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget source="key_green" render="Label" position="340,573" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+	</screen>	
 	<screen name="SleepTimerEdit" position="center,center" size=" 840,570" title="Sleep Timer" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="840,570" pixmap="DMConcinnity-HD/menu/menubg.png" />
 		<widget source="global.CurrentTime" render="Label" position=" 40,25" size=" 80,25" font="Regular;23" backgroundColor="black" transparent="1">
