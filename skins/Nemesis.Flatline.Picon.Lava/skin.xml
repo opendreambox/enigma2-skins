@@ -69,7 +69,7 @@
 		<font filename="lcd.ttf" name="LCD" scale="100" />
 		<font filename="nmsbd.ttf" name="Regular" scale="95" />
 		<font filename="tuxtxt.ttf" name="Console" scale="100" />
-		<font filename="ae_AlMateen.ttf" name="Replacement" scale="90" is_replacement="1" />
+		<font filename="ae_AlMateen.ttf" name="Replacement" scale="90" replacement="1" />
 	</fonts>
 	<!-- Subtitle effects -->
 	<subtitles>
