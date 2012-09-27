@@ -1073,6 +1073,9 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		</widget>
 		<ePixmap pixmap="skin_default/div-h.png" position="20,485" zPosition="1" size="800,2" />
 		<widget source="introduction" render="Label" position="20,490" size="800,45" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="background" transparent="1" />
+		<widget source="info" render="Pixmap" pixmap="DMConcinnity-HD/buttons/info.png" position="740,540" zPosition="2" size="70,30" alphatest="blend" >
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<ePixmap pixmap="DMConcinnity-HD/buttons/red.png" position=" 5,570" size="35,27" alphatest="blend" />
 		<ePixmap pixmap="DMConcinnity-HD/buttons/green.png" position="215,570" size="35,27" alphatest="blend" />
 		<ePixmap pixmap="DMConcinnity-HD/buttons/yellow.png" position="425,570" size="35,27" alphatest="blend" />
@@ -1112,6 +1115,38 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget source="key_yellow" render="Label" position="465,573" size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 		<widget source="key_blue" render="Label" position="680,573" size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 	</screen>
+	<!-- Storage Information -->
+	<screen name="StorageInformation" position="center,center" size=" 840,605" title="Storage device information" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/setupbg.png"/>
+		<widget source="global.CurrentTime" render="Label" 	position=" 20,20" size=" 80,25" font="Regular;23" foregroundColor="black" backgroundColor="white" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" 	position="110,20" size="140,25" font="Regular;23" foregroundColor="blue" backgroundColor="white" transparent="1">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<eLabel text="Storage Information" position="270,20" size="540,43" font="Regular;35" halign="right" foregroundColor="black" backgroundColor="white" transparent="1"/>
+		<widget source="icon" render="Pixmap" position="150,90" size="88,126" alphatest="on">
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<widget source="model" render="Label" position="315,90" size="380,25" font="Regular;23" />
+		<widget source="device_capacity" render="Label" position="315,130" size="380,25" font="Regular;23" />
+		<widget source="device_free" render="Label" position="315,170" size="380,25" font="Regular;23" />
+		<widget source="bus" render="Label" position="315,210" size="380,25" font="Regular;23" />
+		<widget source="num_partitions" render="Label" position="315,250" size="380,25" font="Regular;23" />
+		<widget source="partition" render="Label" position="315,290" size="380,25" font="Regular;23" />
+		<widget source="partition_capacity" render="Label" position="315,330" size="380,25" font="Regular;23" />
+		<widget source="filesystem" render="Label" position="315,370" size="380,25" font="Regular;23" />
+		<widget source="introduction" render="Label" position="150,490" size="540,45" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="background" transparent="1" />
+		<ePixmap pixmap="skin_default/div-h.png" position="140,485" zPosition="1" size="560,2" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/red.png" 	position=" 5,570" 	size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/green.png" 	position="215,570" 	size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/yellow.png"	position="425,570" 	size="35,27" alphatest="blend" />
+		<ePixmap pixmap="DMConcinnity-HD/buttons/blue.png"	position="640,570" 	size="35,27" alphatest="blend" />
+		<widget source="key_red" render="Label" position=" 45,573" 	size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget source="key_green" render="Label" position="255,573" 	size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget source="key_yellow" render="Label" position="465,573" 	size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget source="key_blue" render="Label" position="680,573" 	size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />		
+	</screen>	
 	<!-- Harddisk mountpoint selection -->
 	<screen name="HarddiskMountpointBrowser" position="center,center" size="840,605" title="Select mountpoint" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1100,605" pixmap="DMConcinnity-HD/menu/setupbg.png" />
