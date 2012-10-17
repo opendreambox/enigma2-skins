@@ -163,6 +163,9 @@
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<eLabel text=")" position="1100,100" size=" 10,28" font="Regular;24" halign="right" foregroundColor="darkgrey" backgroundColor="white" transparent="1" />
+		<widget source="HbbtvApplication" render="Pixmap" pixmap="DMConcinnity-HD/icons/hbbtv.png" position="812,18" size="58,20" zPosition="1" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 	<screen name="MediaPlayer" position="0,0" size="1280,720" title="MediaPlayer" backgroundColor="black" flags="wfNoBorder">
 		<ePixmap position="40,30" zPosition="-10" size="1200,660" pixmap="DMConcinnity-HD/menu/mpbg.png" alphatest="on" />
