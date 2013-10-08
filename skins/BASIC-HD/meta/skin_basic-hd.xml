@@ -1,10 +1,13 @@
 <default>
 	<prerequisites>
-                <hardware type="dm8000" />
-                <hardware type="dm800" />
+		<hardware type="dm8000" />
+		<hardware type="dm800" />
 		<hardware type="dm800se" />
-                <hardware type="dm500hd" />
+		<hardware type="dm800sev2" />
+		<hardware type="dm500hd" />
+		<hardware type="dm500hdv2" />
 		<hardware type="dm7020hd" />
+		<hardware type="dm7020hdv2" />
 		<tag type="Skin" />
 	</prerequisites>
 	<info>
