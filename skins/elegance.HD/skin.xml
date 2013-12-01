@@ -1991,24 +1991,21 @@
     <widget source="key_blue" render="Label" position="985,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
     <widget name="detailtext" position="70,105" size="1141,520" zPosition="10" font="Regular;20" transparent="1" halign="left" valign="top" />
   </screen>
-<screen name="CutListEditor" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
-  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
-  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
-    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
-  </widget>
-		
-		<widget name="Video" position="514,105" zPosition="1" size="696,377" backgroundColor="transparent" />
-		<widget source="session.CurrentService" render="Label" position="514,500" size="696,50" font="Regular;22" halign="center" valign="center" foregroundColor="lightblue">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="514,551" zPosition="1" size="696,28" font="Regular;20" halign="center" valign="center">
-			<convert type="ServicePosition">Position,Detailed</convert>
-		</widget>
-		<widget name="SeekState" position="514,580" zPosition="1" size="696,25" halign="center" font="Regular;20" valign="center" />
-		
-		
-		<widget source="cutlist" position="70,105" zPosition="1" size="280,520" scrollbarMode="showOnDemand" transparent="1" render="Listbox">
-			<convert type="TemplatedMultiContent">
+  <screen name="CutListEditor" position="0,0" size="1280,720" title="Cutlist editor" flags="wfNoBorder">
+    <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+    <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+      <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+    </widget>
+    <widget name="Video" position="514,105" zPosition="1" size="696,377" backgroundColor="transparent" />
+    <widget source="session.CurrentService" render="Label" position="514,500" size="696,50" font="Regular;22" halign="center" valign="center" foregroundColor="lightblue">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="514,551" zPosition="1" size="696,28" font="Regular;20" halign="center" valign="center">
+      <convert type="ServicePosition">Position,Detailed</convert>
+    </widget>
+    <widget name="SeekState" position="514,580" zPosition="1" size="696,25" halign="center" font="Regular;20" valign="center" />
+    <widget source="cutlist" position="70,105" zPosition="1" size="280,520" scrollbarMode="showOnDemand" transparent="1" render="Listbox">
+      <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=(0,0), size=(180, 40), text = 1, backcolor = MultiContentTemplateColor(3)),
 						MultiContentEntryText(pos=(200,0), size=(60, 40), text = 2, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(3))
@@ -2017,10 +2014,9 @@
 					"itemHeight": 40
 				}
 			</convert>
-		</widget>
-		<widget name="Timeline" position="70,643" size="1141,20" backgroundColor="grey" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
-		
-	</screen>
+    </widget>
+    <widget name="Timeline" position="70,643" size="1141,20" backgroundColor="grey" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black" />
+  </screen>
   <!-- Externe Plugins -->
   <!-- AirPlayer -->
   <screen name="AP_ConfigScreen" title="AirPlayer Settings" position="0,0" size="1280,720" flags="wfNoBorder">
@@ -3905,7 +3901,7 @@
     <widget source="key_blue" render="Label" position="985,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
   </screen>
   <screen name="CrossEPG_Downloader" position="240,40" size="800,100" title="CrossEPG" flags="wfNoBorder">
-    <widget name="transpBlack" position="0,0" size="800,100" zPosition="-1" />
+    <widget name="background" position="0,0" size="800,100" zPosition="-1" />
     <widget name="action" halign="center" valign="center" position="10,10" size="780,28" font="Regular;20" transparent="1" />
     <widget name="status" halign="center" valign="center" position="10,48" size="780,28" font="Regular;20" transparent="1" />
     <widget name="progress" position="10,85" size="780,5" borderWidth="1" />
