@@ -2642,22 +2642,8 @@
     </widget>
     <widget name="HelpWindow" position="338,270" size="1,1" zPosition="1" transparent="1" />
   </screen>
-  <!-- PTSTimeshiftState -->
-  <screen name="PTSTimeshiftState" position="center,40" zPosition="2" size="420,70" backgroundColor="transpBlack" flags="wfNoBorder">
-    <widget name="state" position="10,3" size="80,27" font="Regular;20" halign="center" backgroundColor="transpBlack" />
-    <widget source="session.CurrentService" render="Label" position="95,5" size="120,27" font="Regular;20" halign="left" foregroundColor="white" backgroundColor="transpBlack">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="335,5" size="70,27" font="Regular;20" halign="left" foregroundColor="white" backgroundColor="transpBlack">
-      <convert type="ServicePosition">Length</convert>
-    </widget>
-    <widget name="PTSSeekPointer" position="8,30" zPosition="3" size="19,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/timeline-now.png" alphatest="on" />
-    <ePixmap position="10,33" size="840,15" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/slider_back.png" alphatest="on" />
-    <widget source="session.CurrentService" render="Progress" position="10,33" size="390,15" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/slider.png" transparent="1">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
-    <widget name="eventname" position="10,49" zPosition="4" size="420,20" font="Regular;18" halign="center" backgroundColor="transpBlack" />
-  </screen>
+  
+  
   <!-- ThreeDSettings -->
   <screen name="ThreeDSettings" position="0,0" size="1280,720" title="3D settings" flags="wfNoBorder">
     <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
@@ -4134,6 +4120,205 @@
 			</convert>
     </widget>
   </screen>
+  <!-- AdvHDMI -->
+<screen name="AdvHdmiCecSetup" position="0,0" size="1280,720" title="Advanced HDMI-Cec Setup" flags="wfNoBorder">
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+  <widget source="key_red" render="Label" position="115,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_green" render="Label" position="405,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_yellow" render="Label" position="695,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="config" position="70,105" size="1141,400" scrollbarMode="showOnDemand" itemHeight="40" />			
+  <widget source="help" render="Label" position="70,520" size="1141,100" font="Regular;20" foregroundColor="white" />
+</screen>
+<screen name="TimeSpanListScreen" position="0,0" size="1280,720" title="disable chronologically" flags="wfNoBorder">
+			<widget name="fromwd" position="70,105" size="165,30" halign="left" font="Regular;20" />
+			<widget name="towd" position="240,105" size="165,30" halign="left" font="Regular;20" />
+			<widget name="begin" position="410,105" size="80,30" halign="left" font="Regular;20" />
+			<widget name="end" position="575,105" size="80,30" halign="left" font="Regular;20" />
+			<widget name="entrylist" position="70,150" size="1141,440" scrollbarMode="showOnDemand" itemHeight="40" />
+
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+  <widget name="key_red" position="115,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="key_green" position="405,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="key_yellow" position="695,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="key_blue" position="985,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+		</screen>
+<screen name="TimeSpanConfigScreen" position="0,0" size="1280,720" title="ignoreit" flags="wfNoBorder">
+  <widget name="config" position="70,105" size="1141,400" scrollbarMode="showOnDemand" itemHeight="40" />			
+  <widget source="help" render="Label" position="70,520" size="1141,100" font="Regular;20" foregroundColor="white" />			
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+  <widget source="key_red" render="Label" position="115,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_green" render="Label" position="405,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+</screen>
+  <!-- eParted -->
+<screen name="Ceparted" position="0,0" size="1280,720" title="eParted" flags="wfNoBorder">
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <widget name="list" position="70,105" size="1141,520" itemHeight="40" />
+</screen>
+<screen name="AddPart" position="0,0" size="1280,720" title="add Partition" flags="wfNoBorder">
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+  <widget source="key_red" render="Label" position="115,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_green" render="Label" position="405,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="config" position="70,105" size="1141,520" scrollbarMode="showOnDemand" itemHeight="40" />
+</screen>
+<screen name="Cpart" position="0,0" size="1280,720" title="eParted" flags="wfNoBorder">
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+  <widget source="list" render="Listbox" position="70,105" size="1141,520" scrollbarMode="showOnDemand" enableWrapAround="on">
+    <convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (0,0), size = (50, 40), font=0, flags = RT_HALIGN_LEFT, text=0),
+				MultiContentEntryText(pos = (60,0), size = (150, 40), font=0, flags = RT_HALIGN_LEFT, text=1),
+				MultiContentEntryText(pos = (210,0), size = (150, 40), font=0, flags = RT_HALIGN_LEFT, text=2),
+				MultiContentEntryText(pos = (360,0), size = (150, 40), font=0, flags = RT_HALIGN_LEFT, text=3),
+				MultiContentEntryText(pos = (510,0), size = (160, 40), font=0, flags = RT_HALIGN_LEFT, text=4)
+				],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 40
+				}
+    </convert>
+  </widget>
+  <widget name="LabelRed" position="115,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="LabelGreen" position="405,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="LabelBlue" position="985,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+</screen>
+<screen name="Cpartexe" position="0,0" size="1280,720" title=" " flags="wfNoBorder">
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <widget source="list" render="Listbox" position="70,105" size="1141,520" scrollbarMode="showOnDemand" enableWrapAround="on">
+    <convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (50,0), size = (630, 40), font=0, flags = RT_HALIGN_LEFT, text=0),
+				MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (35,35), png=1),
+				],
+				"fonts": [gFont("Regular", 40)],
+				"itemHeight": 40
+				}
+    </convert>
+  </widget>
+  
+  <widget name="LabelButton" position="405,643" size="620,30" font="Regular;20" valign="center" />
+</screen>
+  <!-- MediaDownloader -->
+<screen name="MediaDownloader" position="0,0" size="1280,720" flags="wfNoBorder" title="MediaDownloader">
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <widget source="wait" render="Label" position="70,105" size="1141,28" valign="center" font="Regular; 20" foregroundColor="white" />
+  <widget source="progress" render="Progress" position="70,150" size="1141,20" />
+  <widget source="eta" render="Label" position="70,185" size="220,30" font="Regular; 20" foregroundColor="white" />
+  <widget source="speed" render="Label" position="990,185" size="220,30" halign="right" font="Regular; 20" foregroundColor="white" />
+</screen>
+  <!-- AutomaticVolumeAdjustment -->
+<screen name="AutomaticVolumeAdjustmentConfigScreen" position="0,0" size="1280,720" flags="wfNoBorder">
+			<widget name="config" position="70,105" size="1141,520" scrollbarMode="showOnDemand" itemHeight="40" />
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+  <widget source="key_red" render="Label" position="115,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_green" render="Label" position="405,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_blue" render="Label" position="985,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+		</screen>
+<screen name="AutomaticVolumeAdjustmentEntriesListConfigScreen" position="0,0" size="1280,720" flags="wfNoBorder">
+  <widget render="Label" source="name" position="70,105" size="350,30" font="Regular;20" halign="left" foregroundColor="white" />
+  <widget render="Label" source="adjustvalue" position="420,105" size="200,30" font="Regular;20" halign="left" foregroundColor="white" />
+  <widget name="entrylist" position="70,150" size="1141,480" scrollbarMode="showOnDemand" itemheight="40" />
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+  <widget source="key_red" render="Label" position="115,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_green" render="Label" position="405,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_yellow" render="Label" position="695,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_blue" render="Label" position="985,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+		</screen>
+<screen name="AutomaticVolumeAdjustmentEntryConfigScreen" position="0,0" size="1280,720" flags="wfNoBorder">
+  <widget name="config" position="70,105" size="1141,520" scrollbarMode="showOnDemand" itemheight="40" />
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+  <widget source="key_red" render="Label" position="115,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget source="key_green" render="Label" position="405,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+</screen>
+  <!-- PermanentTimeshift -->
+<screen name="PTSTimeshiftState" position="340,40" zPosition="2" size="600,120" flags="wfNoBorder">
+			<widget name="state" position="260,10" size="80,28" font="Regular;20" halign="center" foregroundColor="lightblue" />
+			<widget source="session.CurrentService" render="Label" position="10,10" size="120,28" font="Regular;20" halign="left" foregroundColor="white" backgroundColor="transpBlack">
+				<convert type="ServicePosition">Position</convert>
+			</widget>
+			<widget source="session.CurrentService" render="Label" position="470,10" size="120,28" font="Regular;20" halign="right" foregroundColor="white" backgroundColor="transpBlack">
+				<convert type="ServicePosition">Length</convert>
+			</widget>
+			<widget name="PTSSeekPointer" position="8,57" zPosition="3" size="19,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/timeline-now.png" alphatest="on" />
+			<ePixmap position="10,60" size="580,15" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/slider_back.png" alphatest="on" />
+				<widget source="session.CurrentService" render="Progress" position="10,60" size="580,15" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/slider.png" transparent="1">
+				<convert type="ServicePosition">Position</convert>
+			</widget>
+			<widget name="eventname" position="10,82" zPosition="4" size="580,28" font="Regular;20" halign="center" />
+		</screen>
+  <!-- SortableMenu -->
+<screen name="SortableMenu" position="0,0" size="1280,720" flags="wfNoBorder">
+  <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+		<widget name="menu" position="70,105" size="1141,520" scrollbarMode="showOnDemand" font="Regular;20" />
+		</screen>
   <!-- Gemini Plugin -->
   <screen name="gDesktop-HD" position="0,0" size="1280,720" zPosition="0" flags="wfNoBorder">
     <widget backgroundColor="transpBlack" foregroundColor="white" font="Regular; 34" position="70,35" size="920,45" render="Label" source="Title" valign="top" zPosition="1" />
