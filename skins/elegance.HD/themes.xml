@@ -1,0 +1,1253 @@
+<themes>
+    <colortheme name="Original - 100% OSD" value="active">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000b6fc" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#00000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Original - 90% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000b6fc" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#10000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Original - 80% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000b6fc" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#20000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Original - 70% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000b6fc" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#30000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Original - 60% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000b6fc" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#40000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Lady - 100% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00fc00b6" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#00000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Lady - 90% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00fc00b6" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#10000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Lady - 80% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00fc00b6" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#20000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Lady - 70% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00fc00b6" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#30000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Lady - 60% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00fc00b6" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#40000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Green - 100% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000fc1e" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#00000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Green - 90% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000fc1e" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#10000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Green - 80% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000fc1e" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#20000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Green - 70% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000fc1e" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#30000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Green - 60% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#0000fc1e" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#40000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Purple - 100% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ca3cff" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#00000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Purple - 90% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ca3cff" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#10000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Purple - 80% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ca3cff" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#20000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Purple - 70% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ca3cff" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#30000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Purple - 60% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ca3cff" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#40000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Red - 100% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ff0000" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#00000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Red - 90% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ff0000" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#10000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Red - 80% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ff0000" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#20000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Red - 70% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ff0000" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#30000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <colortheme name="Red - 60% OSD" value="inactive">
+        <colors>
+            <color name="background" value="#200d1940" />
+            <color name="black" value="#00000000" />
+            <color name="blue" value="#000064c7" />
+            <color name="bluekey" value="#00066aca" />
+            <color name="dark" value="#20062748" />
+            <color name="darkgrey" value="#00222222" />
+            <color name="foreground" value="#00ffffff" />
+            <color name="green" value="#00389416" />
+            <color name="greenkey" value="#0047a801" />
+            <color name="grey" value="#00888888" />
+            <color name="grey2" value="#00d3d3d9" />
+            <color name="lightblue" value="#00ff0000" />
+            <color name="menu" value="#20062748" />
+            <color name="realred" value="#00ff0000" />
+            <color name="red" value="#00f23d21" />
+            <color name="redkey" value="#00ca0705" />
+            <color name="transparent" value="#ff000000" />
+            <color name="transpBlack" value="#40000000" />
+            <color name="transpWhite" value="#80ffffff" />
+            <color name="un888888" value="#00888888" />
+            <color name="un9f1313" value="#009f1313" />
+            <color name="unb6fc" value="#0000b6fc" />
+            <color name="uncccccc" value="#00cccccc" />
+            <color name="unfcc000" value="#00fcc000" />
+            <color name="unff00" value="#0000ff00" />
+            <color name="unffc435" value="#00ffc435" />
+            <color name="white" value="#00ffffff" />
+            <color name="yellow" value="#00bab329" />
+            <color name="yellowkey" value="#00ecae05" />
+        </colors>
+    </colortheme>
+    <screenthemes>
+        <screens name="InfoBar">
+            <screentheme name="Original" value="active">
+                <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1280,720" title="InfoBar">
+                    <eLabel backgroundColor="transpBlack" position="0,568" size="1280,152" zPosition="-1" />
+                    <widget alphatest="blend" position="51,580" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
+                        <convert type="ServiceName">Reference</convert>
+                    </widget>
+                    <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
+                        <convert type="ServiceName">Name</convert>
+                    </widget>
+                    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1">
+                        <convert type="eHDClockToText">Format:  %a, %d. %B - %H:%M</convert>
+                    </widget>
+                    <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
+                        <convert type="EventName">Name</convert>
+                    </widget>
+                    <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
+                        <convert type="EventTime">Remaining</convert>
+                        <convert type="RemainingToText">InMinutes</convert>
+                    </widget>
+                    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
+                        <convert type="EventTime">StartTime</convert>
+                        <convert type="eHDClockToText">Default</convert>
+                    </widget>
+                    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
+                        <convert type="EventName">Name</convert>
+                    </widget>
+                    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
+                        <convert type="EventTime">Duration</convert>
+                        <convert type="eHDClockToText">InMinutes</convert>
+                    </widget>
+                    <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
+                    <eLabel backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="center" name="new eLabel" position="378,684" size="20,28" text="-" transparent="1" />
+                    <widget alphatest="blend" pixmap="elegance.HD/record.png" position="904,591" render="Pixmap" size="28,28" source="session.RecordState" zPosition="3">
+                        <convert type="ConditionalShowHide">Blink</convert>
+                    </widget>
+                </screen>
+            </screentheme>
+            <screentheme name="with CryptInfo" value="inactive">
+                  <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1280,720" title="InfoBar">
+  <eLabel backgroundColor="transpBlack" position="0,568" size="1280,152" zPosition="-1" />
+  <widget alphatest="blend" position="51,580" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1">
+    <convert type="eHDClockToText">Format:  %a, %d. %B - %H:%M</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="eHDClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="eHDClockToText">InMinutes</convert>
+  </widget>
+  <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
+  <eLabel backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="center" name="new eLabel" position="378,684" size="20,28" text="-" transparent="1" />
+  <widget alphatest="blend" pixmap="elegance.HD/record.png" position="904,591" render="Pixmap" size="28,28" source="session.RecordState" zPosition="3">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <eLabel backgroundColor="transpBlack" position="0,0" size="1280,30" zPosition="-1" />
+<widget alphatest="blend" backgroundColor="transpBlack" ecmColor="lightblue" emmColor="grey" font="Regular;18" position="5,5" render="eHDCaid" size="600,22" source="session.CurrentService" zPosition="2">
+  <convert type="eHDCOCA" />
+</widget>
+<widget backgroundColor="transpBlack" font="Regular; 18" foregroundColor="grey" halign="left" position="815,5" render="Label" size="225,22" source="session.CurrentService" transparent="1">
+  <convert type="ServiceName">Provider</convert>
+</widget>
+<widget backgroundColor="transpBlack" font="Regular;18" foregroundColor="grey" halign="right" position="1050,5" render="Label" size="90,22" source="session.FrontendStatus" transparent="1" zPosition="1">
+  <convert type="FrontendInfo">SNRdB</convert>
+</widget>
+<widget backgroundColor="transpBlack" font="Regular; 18" foregroundColor="grey" halign="right" position="1150,5" render="Label" size="60,22" source="session.FrontendStatus" transparent="1" zPosition="1">
+  <convert type="FrontendInfo">SNR</convert>
+</widget>
+<widget backgroundColor="transpBlack" font="Regular;18" foregroundColor="lightblue" halign="right" position="1220,5" render="Label" size="55,22" source="session.FrontendStatus" transparent="1" zPosition="1">
+  <convert type="FrontendInfo">BER</convert>
+</widget>
+</screen>
+            </screentheme>
+		    <screentheme name="Christmas (choose a 100% OSD ColorTheme)" value="inactive">
+                <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1280,720" title="InfoBar">
+  <eLabel backgroundColor="transpBlack" position="0,568" size="1280,152" zPosition="-1" />
+  <widget alphatest="blend" position="51,580" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="white" halign="left" position="323,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="white" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
+    <convert type="eHDClockToText">Format:  %a, %d. %B - %H:%M</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="realred" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="realred" halign="right" position="1070,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="white" position="323,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="eHDClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="white" noWrap="1" position="400,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="white" halign="right" position="1070,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="eHDClockToText">InMinutes</convert>
+  </widget>
+  <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="realred" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
+  <eLabel text="-" name="new eLabel" position="378,684" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="white" halign="center" transparent="1" />
+  <widget alphatest="blend" render="Pixmap" pixmap="elegance.HD/record.png" position="904,591" size="28,28" source="session.RecordState" zPosition="3">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <ePixmap name="new ePixmap" position="0,436" size="1280,154" pixmap="elegance.HD/christmasoverlay.png" zPosition="0" />
+</screen>
+            </screentheme>
+			<screentheme name="Kiddy (choose a 100% OSD ColorTheme)" value="inactive">
+<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1280,720" title="InfoBar">
+  
+  <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="223,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="835,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
+    <convert type="eHDClockToText">Format:  %a, %d. %B - %H:%M</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="300,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="970,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="223,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="eHDClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="300,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="970,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="eHDClockToText">InMinutes</convert>
+  </widget>
+  <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="223,636" size="100,38" text="jetzt:" transparent="1" />
+  <eLabel text="-" name="new eLabel" position="278,684" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="grey" halign="center" transparent="1" />
+  <widget alphatest="blend" render="Pixmap" pixmap="elegance.HD/record.png" position="904,591" size="28,28" source="session.RecordState" zPosition="3">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <ePixmap position="0,390" size="1280,330" pixmap="elegance.HD/kiddyoverlay.png" zPosition="-100" />
+</screen>
+            </screentheme>
+        </screens>
+        <screens name="ChannelSelection">
+            <screentheme name="Original" value="active">
+                <screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+                    <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="eHDChannelSelectionTitle" size="920,40" source="Title" transparent="1" />
+                    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+                        <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+                    </widget>
+                    <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+                    <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+                    <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+                    <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+                    <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_red" position="115,643" size="220,30" transparent="1" zPosition="1" />
+                    <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_green" position="405,643" size="220,30" transparent="1" zPosition="1" />
+                    <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_yellow" position="695,643" size="220,30" transparent="1" zPosition="1" />
+                    <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_blue" position="985,643" size="220,30" transparent="1" zPosition="1" />
+                    <widget backgroundColor="transpBlack" colorEventProgressbar="lightblue" colorEventProgressbarSelected="lightblue" colorEventProgressbarBorder="lightblue" colorEventProgressbarBorderSelected="lightblue" colorServiceDescription="grey" colorServiceDescriptionSelected="lightblue" foregroundColor="grey" foregroundColorSelected="lightblue" foregroundColorServiceNotAvail="darkgrey" itemHeight="40" name="list" position="70,105" scrollbarMode="showOnDemand" serviceInfoFont="Regular;24" serviceItemHeight="40" serviceNameFont="Regular;24" serviceNumberFont="Regular;24" size="1141,520" />
+                </screen>
+            </screentheme>
+            <screentheme name="with NextEvent" value="inactive">
+                <screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+  <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="eHDChannelSelectionTitle" size="920,40" source="Title" transparent="1" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+  </widget>
+  <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/yellow.png" position="650,643" size="30,30" />
+  <ePixmap alphatest="on" pixmap="elegance.HD/blue.png" position="940,643" size="30,30" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_red" position="115,643" size="220,30" transparent="1" zPosition="1" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_green" position="405,643" size="220,30" transparent="1" zPosition="1" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_yellow" position="695,643" size="220,30" transparent="1" zPosition="1" />
+  <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_blue" position="985,643" size="220,30" transparent="1" zPosition="1" />
+  <widget backgroundColor="transpBlack" colorEventProgressbar="lightblue" colorEventProgressbarSelected="lightblue" colorEventProgressbarBorder="lightblue" colorEventProgressbarBorderSelected="lightblue" colorServiceDescription="grey" colorServiceDescriptionSelected="lightblue" foregroundColor="grey" foregroundColorSelected="lightblue" foregroundColorServiceNotAvail="darkgrey" itemHeight="40" name="list" position="70,105" scrollbarMode="showOnDemand" serviceInfoFont="Regular;24" serviceItemHeight="40" serviceNameFont="Regular;24" serviceNumberFont="Regular;24" size="1141,480" />
+  <widget backgroundColor="transpBlack" font="Regular;20" foregroundColor="grey" noWrap="1" position="193,595" render="eHDNextEvent" size="1021,30" source="ServiceEvent" transparent="1" valign="top" zPosition="3" />
+  <eLabel font="Regular; 20" position="70,595" size="150,30" text="danach:" />
+</screen>
+            </screentheme>
+        </screens>
+		<screens name="SecondInfoBar">
+            <screentheme name="Original" value="active">
+				<screen name="SecondInfoBar" position="center,center" size="1280,720" title="InfoBar" flags="wfNoBorder" backgroundColor="transpBlack">
+  <widget alphatest="blend" position="51,580" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
+    <convert type="eHDClockToText">Format: %a, %d. %B - %H:%M</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="lightblue" noWrap="1" position="70,105" render="Label" size="1160,28" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="eHDClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="eHDClockToText">InMinutes</convert>
+  </widget>
+  <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
+  <eLabel text="-" name="new eLabel" position="378,684" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="grey" halign="center" transparent="1" />
+  <widget source="session.Event_Now" render="Label" position="70,133" size="1160,145" font="Regular; 20" zPosition="1" backgroundColor="transpBlack" foregroundColor="grey" transparent="1" halign="left">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <eLabel name="Tuner:" text="Aktiver Tuner:" position="70,35" size="200,28" font="Regular; 20" transparent="1" />
+  <eLabel name="SNR:" text="SNR:" position="680,35" size="100,28" font="Regular; 20" transparent="1" />
+  <eLabel name="AGC:" text="AGC:" position="880,35" size="100,28" font="Regular; 20" transparent="1" />
+  <eLabel name="BER:" text="BER:" position="1080,35" size="100,28" font="Regular; 20" transparent="1" />
+  <widget source="session.FrontendStatus" render="Label" position="740,35" size="90,28" font="Regular;20" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="940,35" size="90,28" font="Regular; 20" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" valign="center" halign="right">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="1140,35" size="90,28" font="Regular; 20" backgroundColor="transpBlack" transparent="1" halign="right" foregroundColor="lightblue">
+    <convert type="FrontendInfo">BER</convert>
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="A" position="270,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="B" position="298,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="C" position="326,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="D" position="354,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="270,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="298,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="326,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="354,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">3,3</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel name="new eLabel" position="270,35" size="28,28" text="A" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+  <eLabel name="new eLabel" position="298,35" size="28,28" text="B" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+  <eLabel name="new eLabel" position="326,35" size="28,28" text="C" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+  <eLabel name="new eLabel" position="354,35" size="28,28" text="D" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/crypted_on.png" position="1150,520" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/crypted_off.png" position="1150,520" size="80,46" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/hd_on.png" position="90,520" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">721,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/hd_off.png" position="90,520" size="80,46" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/dd_on.png" position="600,520" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/dd_off.png" position="600,520" size="80,46" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/txt_on.png" position="345,520" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/txt_off.png" position="345,520" size="80,46" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/ws_on.png" position="875,520" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/ws_off.png" position="875,520" size="80,46" alphatest="blend" />
+  <widget alphatest="blend" render="Pixmap" pixmap="elegance.HD/record.png" position="904,591" size="28,28" source="session.RecordState" zPosition="3">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="70,350" size="1160,145" font="Regular; 20" zPosition="1" backgroundColor="transpBlack" transparent="1">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="transpBlack" font="Regular; 20" noWrap="1" position="70,322" render="Label" size="1160,28" source="session.Event_Next" transparent="1" zPosition="1" foregroundColor="lightblue">
+    <convert type="EventName">Name</convert>
+  </widget>
+</screen>
+</screentheme>
+<screentheme name="Smart" value="inactive">
+<screen name="SecondInfoBar" position="center,center" size="1280,720" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
+<eLabel backgroundColor="transpBlack" position="0,568" size="1280,152" zPosition="-1" />
+<eLabel name="Tuner:" text="Aktiver Tuner:" position="70,660" size="200,28" font="Regular; 20" transparent="1" />
+  <eLabel name="SNR:" text="SNR:" position="680,660" size="100,28" font="Regular; 20" transparent="1" />
+  <eLabel name="AGC:" text="AGC:" position="880,660" size="100,28" font="Regular; 20" transparent="1" />
+  <eLabel name="BER:" text="BER:" position="1080,660" size="100,28" font="Regular; 20" transparent="1" />
+  <widget source="session.FrontendStatus" render="Label" position="740,660" size="90,28" font="Regular;20" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="940,660" size="90,28" font="Regular; 20" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" valign="center" halign="right">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="1140,660" size="90,28" font="Regular; 20" backgroundColor="transpBlack" transparent="1" halign="right" foregroundColor="lightblue">
+    <convert type="FrontendInfo">BER</convert>
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="A" position="270,660" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="B" position="298,660" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="C" position="326,660" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="D" position="354,660" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="270,660" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="298,660" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="326,660" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="354,660" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">3,3</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel name="new eLabel" position="270,660" size="28,28" text="A" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+  <eLabel name="new eLabel" position="298,660" size="28,28" text="B" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+  <eLabel name="new eLabel" position="326,660" size="28,28" text="C" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+  <eLabel name="new eLabel" position="354,660" size="28,28" text="D" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/crypted_on.png" position="1150,588" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/crypted_off.png" position="1150,588" size="80,46" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/hd_on.png" position="90,588" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">721,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/hd_off.png" position="90,588" size="80,46" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/dd_on.png" position="600,588" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/dd_off.png" position="600,588" size="80,46" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/txt_on.png" position="345,588" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/txt_off.png" position="345,588" size="80,46" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/ws_on.png" position="875,588" size="80,46" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="elegance.HD/ws_off.png" position="875,588" size="80,46" alphatest="blend" />
+</screen>
+</screentheme>
+</screens>
+    </screenthemes>
+</themes>
