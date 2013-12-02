@@ -863,59 +863,6 @@
                     </widget>
                 </screen>
             </screentheme>
-            <screentheme name="with CryptInfo" value="inactive">
-                  <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1280,720" title="InfoBar">
-  <eLabel backgroundColor="transpBlack" position="0,568" size="1280,152" zPosition="-1" />
-  <widget alphatest="blend" position="51,580" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
-    <convert type="ServiceName">Reference</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
-    <convert type="ServiceName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1">
-    <convert type="eHDClockToText">Format:  %a, %d. %B - %H:%M</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
-    <convert type="EventTime">Remaining</convert>
-    <convert type="RemainingToText">InMinutes</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventTime">StartTime</convert>
-    <convert type="eHDClockToText">Default</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventTime">Duration</convert>
-    <convert type="eHDClockToText">InMinutes</convert>
-  </widget>
-  <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
-  <eLabel backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="center" name="new eLabel" position="378,684" size="20,28" text="-" transparent="1" />
-  <widget alphatest="blend" pixmap="elegance.HD/record.png" position="904,591" render="Pixmap" size="28,28" source="session.RecordState" zPosition="3">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
-  <eLabel backgroundColor="transpBlack" position="0,0" size="1280,30" zPosition="-1" />
-<widget alphatest="blend" backgroundColor="transpBlack" ecmColor="lightblue" emmColor="grey" font="Regular;18" position="5,5" render="eHDCaid" size="600,22" source="session.CurrentService" zPosition="2">
-  <convert type="eHDCOCA" />
-</widget>
-<widget backgroundColor="transpBlack" font="Regular; 18" foregroundColor="grey" halign="left" position="815,5" render="Label" size="225,22" source="session.CurrentService" transparent="1">
-  <convert type="ServiceName">Provider</convert>
-</widget>
-<widget backgroundColor="transpBlack" font="Regular;18" foregroundColor="grey" halign="right" position="1050,5" render="Label" size="90,22" source="session.FrontendStatus" transparent="1" zPosition="1">
-  <convert type="FrontendInfo">SNRdB</convert>
-</widget>
-<widget backgroundColor="transpBlack" font="Regular; 18" foregroundColor="grey" halign="right" position="1150,5" render="Label" size="60,22" source="session.FrontendStatus" transparent="1" zPosition="1">
-  <convert type="FrontendInfo">SNR</convert>
-</widget>
-<widget backgroundColor="transpBlack" font="Regular;18" foregroundColor="lightblue" halign="right" position="1220,5" render="Label" size="55,22" source="session.FrontendStatus" transparent="1" zPosition="1">
-  <convert type="FrontendInfo">BER</convert>
-</widget>
-</screen>
-            </screentheme>
 		    <screentheme name="Christmas (choose a 100% OSD ColorTheme)" value="inactive">
                 <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1280,720" title="InfoBar">
   <eLabel backgroundColor="transpBlack" position="0,568" size="1280,152" zPosition="-1" />
@@ -1009,7 +956,7 @@
                 </screen>
             </screentheme>
             <screentheme name="with NextEvent" value="inactive">
-                <screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+<screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
   <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="eHDChannelSelectionTitle" size="920,40" source="Title" transparent="1" />
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
     <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
@@ -1022,9 +969,11 @@
   <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_green" position="405,643" size="220,30" transparent="1" zPosition="1" />
   <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_yellow" position="695,643" size="220,30" transparent="1" zPosition="1" />
   <widget backgroundColor="transpBlack" font="Regular; 20" halign="left" name="key_blue" position="985,643" size="220,30" transparent="1" zPosition="1" />
-  <widget backgroundColor="transpBlack" colorEventProgressbar="lightblue" colorEventProgressbarSelected="lightblue" colorEventProgressbarBorder="lightblue" colorEventProgressbarBorderSelected="lightblue" colorServiceDescription="grey" colorServiceDescriptionSelected="lightblue" foregroundColor="grey" foregroundColorSelected="lightblue" foregroundColorServiceNotAvail="darkgrey" itemHeight="40" name="list" position="70,105" scrollbarMode="showOnDemand" serviceInfoFont="Regular;24" serviceItemHeight="40" serviceNameFont="Regular;24" serviceNumberFont="Regular;24" size="1141,480" />
-  <widget backgroundColor="transpBlack" font="Regular;20" foregroundColor="grey" noWrap="1" position="193,595" render="eHDNextEvent" size="1021,30" source="ServiceEvent" transparent="1" valign="top" zPosition="3" />
-  <eLabel font="Regular; 20" position="70,595" size="150,30" text="danach:" />
+  <widget backgroundColor="transpBlack" colorEventProgressbar="lightblue" colorEventProgressbarSelected="lightblue" colorEventProgressbarBorder="lightblue" colorEventProgressbarBorderSelected="lightblue" colorServiceDescription="grey" colorServiceDescriptionSelected="lightblue" foregroundColor="grey" foregroundColorSelected="lightblue" foregroundColorServiceNotAvail="darkgrey" itemHeight="40" name="list" position="70,105" scrollbarMode="showOnDemand" serviceInfoFont="Regular;24" serviceItemHeight="40" serviceNameFont="Regular;24" serviceNumberFont="Regular;24" size="1141,400" />
+  <widget position="70,535" backgroundColor="transparent" transparent="1" alphatest="blend" render="EventListDisplay" size="1141,100" source="ServiceEvent" rowHeight="40" column0="0,180,grey,Regular,24,0,0" column1="180,801,white,Regular,24,0,1" column2="981,160,grey,Regular,24,1,2" primetimeoffset="0">
+<convert type="EventList">primetime=yes,eventcount=1</convert>
+</widget>
+<eLabel position="70,525" size="1141,1" backgroundColor="grey" />
 </screen>
             </screentheme>
         </screens>
