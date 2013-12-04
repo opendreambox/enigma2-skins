@@ -1,0 +1,25 @@
+<default>
+         <prerequisites>
+                 <hardware type="dm8000" />
+                 <hardware type="dm800" />
+                 <hardware type="dm800se" />
+                 <hardware type="dm800sev2" />
+                 <hardware type="dm500hd" />
+                 <hardware type="dm500hdv2" />
+                 <hardware type="dm7020hd" />
+                 <hardware type="dm7020hdv2" />
+                 <tag type="Skin" />
+         </prerequisites>
+         <info>
+                 <author>tikila</author>
+                 <name>elegance.HD</name>
+                 <packagename>enigma2-skin-elegance.hd</packagename>
+                 <shortdescription>Eleganter Skin fuer OE2.0</shortdescription>
+                 <description>mady by tikila</description>
+                 <screenshot src="http://www.dreamboxupdate.com/preview/skin_elegance.hd.jpg" />
+         </info>
+ 
+         <files type="package"> <!-- without version, without .ipk -->
+                 <file type="package" name="enigma2-skin-elegance.hd" />
+         </files>
+</default>
