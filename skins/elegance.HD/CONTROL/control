@@ -1,4 +1,4 @@
 Description: Eleganter Skin fuer OE2.0
-Depends: enigma2-plugin-skincomponents-eventlist
+Depends: enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-channelselectionshorttitle
 Maintainer: tikila
 Homepage: http://www.i-have-a-dreambox.com/wbb2/profile.php?userid=339725

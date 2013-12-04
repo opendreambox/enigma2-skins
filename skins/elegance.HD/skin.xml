@@ -437,7 +437,9 @@
     <widget name="Volume" pixmap="elegance.HD/volumeslider.png" position="10,10" zPosition="1" size="380,30" transparent="1" />
   </screen>
   <screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-    <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="Label" size="920,40" source="Title" transparent="1" />
+    <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="Label" size="920,40" source="Title" transparent="1" >
+	  <convert type="ChannelSelectionShortTitle"/>
+	</widget>
     <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
       <convert type="ClockToText">Format: %a %d. %b   %H:%M</convert>
     </widget>
