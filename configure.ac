@@ -70,6 +70,9 @@ skins/dTV-HD-Reloaded/menu/Makefile
 skins/dTV-HD-Reloaded/meta/Makefile
 skins/dTV-HD-Reloaded/skin_default/Makefile
 skins/dTV-HD-Reloaded/skin_default/icons/Makefile
+skins/elegance.HD/skin_default/Makefile
+skins/elegance.HD/skin_default/icons/Makefile
+skins/elegance.HD/skin_default/buttons/Makefile
 skins/elegance.HD/Makefile
 skins/elegance.HD/meta/Makefile
 skins/Elgato-HD/Makefile

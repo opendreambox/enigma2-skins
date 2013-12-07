@@ -8,7 +8,4 @@ SUBDIRS = \
 	SWAIN simple BASIC-HD UltraViolet DreamMM-HD YADS-HD Elgato-HD \
 	dTV-HD-Reloaded Kerni-HD1R2 dmm-HD Vali-XD Kerni-HD1 Vali.HD.nano \
 	Vali.HD.warp Vali.HD.atlantis DMConcinnity-HD elegance.HD
-
-# temporary disabled until the needed converters are checked in to schwerkraft plugins git
-# elegance.HD
-
+	
