@@ -836,7 +836,7 @@
                         <convert type="ServiceName">Name</convert>
                     </widget>
                     <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1">
-                        <convert type="eHDClockToText">Format:  %a, %d. %B - %H:%M</convert>
+                        <convert type="ClockToText">Format:  %a, %d. %B - %H:%M</convert>
                     </widget>
                     <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
                         <convert type="EventName">Name</convert>
@@ -847,14 +847,14 @@
                     </widget>
                     <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
                         <convert type="EventTime">StartTime</convert>
-                        <convert type="eHDClockToText">Default</convert>
+                        <convert type="ClockToText">Default</convert>
                     </widget>
                     <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
                         <convert type="EventName">Name</convert>
                     </widget>
                     <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
                         <convert type="EventTime">Duration</convert>
-                        <convert type="eHDClockToText">InMinutes</convert>
+                        <convert type="ClockToText">InMinutes</convert>
                     </widget>
                     <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
                     <eLabel backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="center" name="new eLabel" position="378,684" size="20,28" text="-" transparent="1" />
@@ -873,7 +873,7 @@
     <convert type="ServiceName">Name</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="white" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
-    <convert type="eHDClockToText">Format:  %a, %d. %B - %H:%M</convert>
+    <convert type="ClockToText">Format:  %a, %d. %B - %H:%M</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="realred" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
     <convert type="EventName">Name</convert>
@@ -884,14 +884,14 @@
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="white" position="323,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="EventTime">StartTime</convert>
-    <convert type="eHDClockToText">Default</convert>
+    <convert type="ClockToText">Default</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="white" noWrap="1" position="400,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="EventName">Name</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="white" halign="right" position="1070,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="EventTime">Duration</convert>
-    <convert type="eHDClockToText">InMinutes</convert>
+    <convert type="ClockToText">InMinutes</convert>
   </widget>
   <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="realred" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
   <eLabel text="-" name="new eLabel" position="378,684" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="white" halign="center" transparent="1" />
@@ -908,7 +908,7 @@
     <convert type="ServiceName">Name</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="835,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
-    <convert type="eHDClockToText">Format:  %a, %d. %B - %H:%M</convert>
+    <convert type="ClockToText">Format:  %a, %d. %B - %H:%M</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="300,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
     <convert type="EventName">Name</convert>
@@ -919,14 +919,14 @@
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="223,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="EventTime">StartTime</convert>
-    <convert type="eHDClockToText">Default</convert>
+    <convert type="ClockToText">Default</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="300,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="EventName">Name</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="970,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="EventTime">Duration</convert>
-    <convert type="eHDClockToText">InMinutes</convert>
+    <convert type="ClockToText">InMinutes</convert>
   </widget>
   <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="223,636" size="100,38" text="jetzt:" transparent="1" />
   <eLabel text="-" name="new eLabel" position="278,684" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="grey" halign="center" transparent="1" />
@@ -940,9 +940,11 @@
         <screens name="ChannelSelection">
             <screentheme name="Original" value="active">
                 <screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-                    <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="eHDChannelSelectionTitle" size="920,40" source="Title" transparent="1" />
+                    <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="Label" size="920,40" source="Title" transparent="1" >
+					  <convert type="ChannelSelectionShortTitle"/>
+					</widget>
                     <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-                        <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+                        <convert type="ClockToText">Format: %a %d. %b   %H:%M</convert>
                     </widget>
                     <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
                     <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
@@ -957,9 +959,11 @@
             </screentheme>
             <screentheme name="with NextEvent" value="inactive">
 <screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-  <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="eHDChannelSelectionTitle" size="920,40" source="Title" transparent="1" />
+  <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="Label" size="920,40" source="Title" transparent="1" >
+    <convert type="ChannelSelectionShortTitle"/>
+  </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="eHDClockToText">Format: %a %d. %b   %H:%M</convert>
+    <convert type="ClockToText">Format: %a %d. %b   %H:%M</convert>
   </widget>
   <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
   <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
@@ -987,7 +991,7 @@
     <convert type="ServiceName">Name</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
-    <convert type="eHDClockToText">Format: %a, %d. %B - %H:%M</convert>
+    <convert type="ClockToText">Format: %a, %d. %B - %H:%M</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="lightblue" noWrap="1" position="70,105" render="Label" size="1160,28" source="session.Event_Now" transparent="1" zPosition="1">
     <convert type="EventName">Name</convert>
@@ -998,14 +1002,14 @@
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,684" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="EventTime">StartTime</convert>
-    <convert type="eHDClockToText">Default</convert>
+    <convert type="ClockToText">Default</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,684" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="EventName">Name</convert>
   </widget>
   <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,684" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="EventTime">Duration</convert>
-    <convert type="eHDClockToText">InMinutes</convert>
+    <convert type="ClockToText">InMinutes</convert>
   </widget>
   <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
   <eLabel text="-" name="new eLabel" position="378,684" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="grey" halign="center" transparent="1" />
