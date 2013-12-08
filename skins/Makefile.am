@@ -7,5 +7,5 @@ SUBDIRS = \
 	Nemesis.ShadowLine dreamTV-HD dTV-HD BrushedAlu-HD SWAIN-HD \
 	SWAIN simple BASIC-HD UltraViolet DreamMM-HD YADS-HD Elgato-HD \
 	dTV-HD-Reloaded Kerni-HD1R2 dmm-HD Vali-XD Kerni-HD1 Vali.HD.nano \
-	Vali.HD.warp Vali.HD.atlantis DMConcinnity-HD
+	Vali.HD.warp Vali.HD.atlantis DMConcinnity-HD elegance.HD
 	
