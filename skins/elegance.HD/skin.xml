@@ -90,44 +90,44 @@
     </borderset>
   </windowstyle>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1280,720" title="InfoBar">
-  <eLabel backgroundColor="transpBlack" position="0,568" size="1280,152" zPosition="-1" />
-  <widget alphatest="blend" position="51,580" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
-    <convert type="ServiceName">Reference</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
-    <convert type="ServiceName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1">
-    <convert type="ClockToText">Format:  %a, %d. %B - %H:%M</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
-    <convert type="EventTime">Remaining</convert>
-    <convert type="RemainingToText">InMinutes</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,686" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventTime">StartTime</convert>
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,686" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,686" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventTime">Duration</convert>
-    <convert type="ClockToText">InMinutes</convert>
-  </widget>
-  <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
-  <eLabel backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="center" name="new eLabel" position="378,686" size="20,28" text="-" transparent="1" />
-  <widget alphatest="blend" pixmap="elegance.HD/record.png" position="904,591" render="Pixmap" size="28,28" source="session.RecordState" zPosition="3">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
-  <eLabel name="progressbg" position="323,679" size="908,1" backgroundColor="grey" />
-  <widget source="session.Event_Now" render="Progress" position="323,679" size="908,1" pixmap="elegance.HD/progressbar.png" zPosition="2" transparent="1">
-    <convert type="EventTime">Progress</convert>
-  </widget>
-</screen>
+    <eLabel backgroundColor="transpBlack" position="0,568" size="1280,152" zPosition="-1" />
+    <widget alphatest="blend" position="51,580" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1">
+      <convert type="ClockToText">Format:  %a, %d. %B - %H:%M</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,686" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,686" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,686" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
+    <eLabel backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="center" name="new eLabel" position="378,686" size="20,28" text="-" transparent="1" />
+    <widget alphatest="blend" pixmap="elegance.HD/record.png" position="904,591" render="Pixmap" size="28,28" source="session.RecordState" zPosition="3">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+    <eLabel name="progressbg" position="323,679" size="908,1" backgroundColor="grey" />
+    <widget source="session.Event_Now" render="Progress" position="323,679" size="908,1" pixmap="elegance.HD/progressbar.png" zPosition="2" transparent="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+  </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayer" position="center,458" size="1280,720" title="InfoBar">
     <eLabel backgroundColor="transpBlack" position="0,112" size="1280,152" zPosition="-1" />
     <widget backgroundColor="transpBlack" font="Regular; 29" halign="center" position="230,178" render="Label" size="820,44" source="session.CurrentService" transparent="1" zPosition="1" foregroundColor="lightblue">
@@ -166,42 +166,40 @@
     </widget>
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RadioInfoBar" position="center,458" size="1280,720" title="InfoBar">
-  <eLabel backgroundColor="transpBlack" position="0,110" size="1280,152" zPosition="-1" />
-  <widget alphatest="blend" position="52,122" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
-    <convert type="ServiceName">Reference</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,130" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
-    <convert type="ServiceName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="935,135" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
-    <convert type="ClockToText">Format: %a, %d. %B - %H:%M</convert>
-  </widget>
-  <eLabel text="-" name="new eLabel" position="378,228" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="grey" halign="center" transparent="1" />
-  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,178" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,178" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
-    <convert type="EventTime">Remaining</convert>
-    <convert type="RemainingToText">InMinutes</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,228" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventTime">StartTime</convert>
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,228" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,228" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventTime">Duration</convert>
-    <convert type="ClockToText">InMinutes</convert>
-  </widget>
-  <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,178" size="100,38" text="jetzt:" transparent="1" />
-  <widget alphatest="blend" render="Pixmap" pixmap="elegance.HD/record.png" position="904,133" size="28,28" source="session.RecordState" zPosition="3">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
-  
-  
-</screen>
+    <eLabel backgroundColor="transpBlack" position="0,110" size="1280,152" zPosition="-1" />
+    <widget alphatest="blend" position="52,122" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,130" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="935,135" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
+      <convert type="ClockToText">Format: %a, %d. %B - %H:%M</convert>
+    </widget>
+    <eLabel text="-" name="new eLabel" position="378,228" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="grey" halign="center" transparent="1" />
+    <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,178" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,178" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,228" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,228" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,228" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,178" size="100,38" text="jetzt:" transparent="1" />
+    <widget alphatest="blend" render="Pixmap" pixmap="elegance.HD/record.png" position="904,133" size="28,28" source="session.RecordState" zPosition="3">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+  </screen>
   <screen backgroundColor="transpBlack" flags="wfNoBorder" name="Menu" position="0,0" size="640,720" title="Main menu">
     <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="570,45" source="title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
     <widget enableWrapAround="1" position="70,105" render="Listbox" scrollbarMode="showNever" size="570,600" source="menu" transparent="1">
@@ -2071,138 +2069,138 @@
   </screen>
   <!-- SecondInfoBar -->
   <screen name="SecondInfoBar" position="center,center" size="1280,720" title="InfoBar" flags="wfNoBorder" backgroundColor="transpBlack">
-  <widget alphatest="blend" position="51,580" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
-    <convert type="ServiceName">Reference</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
-    <convert type="ServiceName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
-    <convert type="ClockToText">Format: %a, %d. %B - %H:%M</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="lightblue" noWrap="1" position="70,105" render="Label" size="1160,28" source="session.Event_Now" transparent="1" zPosition="1">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
-    <convert type="EventTime">Remaining</convert>
-    <convert type="RemainingToText">InMinutes</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,686" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventTime">StartTime</convert>
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,686" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,686" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
-    <convert type="EventTime">Duration</convert>
-    <convert type="ClockToText">InMinutes</convert>
-  </widget>
-  <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
-  <eLabel text="-" name="new eLabel" position="378,686" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="grey" halign="center" transparent="1" />
-  <widget source="session.Event_Now" render="Label" position="70,133" size="1160,145" font="Regular; 20" zPosition="1" backgroundColor="transpBlack" foregroundColor="grey" transparent="1" halign="left">
-    <convert type="EventName">ExtendedDescription</convert>
-  </widget>
-  <eLabel name="Tuner:" text="Aktiver Tuner:" position="70,35" size="200,28" font="Regular; 20" transparent="1" />
-  <eLabel name="SNR:" text="SNR:" position="680,35" size="100,28" font="Regular; 20" transparent="1" />
-  <eLabel name="AGC:" text="AGC:" position="880,35" size="100,28" font="Regular; 20" transparent="1" />
-  <eLabel name="BER:" text="BER:" position="1080,35" size="100,28" font="Regular; 20" transparent="1" />
-  <widget source="session.FrontendStatus" render="Label" position="740,35" size="90,28" font="Regular;20" backgroundColor="transpBlack" transparent="1" halign="right">
-    <convert type="FrontendInfo">SNR</convert>
-  </widget>
-  <widget source="session.FrontendStatus" render="Label" position="940,35" size="90,28" font="Regular; 20" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" valign="center" halign="right">
-    <convert type="FrontendInfo">AGC</convert>
-  </widget>
-  <widget source="session.FrontendStatus" render="Label" position="1140,35" size="90,28" font="Regular; 20" backgroundColor="transpBlack" transparent="1" halign="right" foregroundColor="lightblue">
-    <convert type="FrontendInfo">BER</convert>
-  </widget>
-  <widget source="session.TunerInfo" render="FixedLabel" text="A" position="270,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
-    <convert type="TunerInfo">TunerUseMask</convert>
-    <convert type="ValueBitTest">1</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget source="session.TunerInfo" render="FixedLabel" text="B" position="298,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
-    <convert type="TunerInfo">TunerUseMask</convert>
-    <convert type="ValueBitTest">2</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget source="session.TunerInfo" render="FixedLabel" text="C" position="326,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
-    <convert type="TunerInfo">TunerUseMask</convert>
-    <convert type="ValueBitTest">4</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget source="session.TunerInfo" render="FixedLabel" text="D" position="354,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
-    <convert type="TunerInfo">TunerUseMask</convert>
-    <convert type="ValueBitTest">8</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="270,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
-    <convert type="FrontendInfo">NUMBER</convert>
-    <convert type="ValueRange">0,0</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="298,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
-    <convert type="FrontendInfo">NUMBER</convert>
-    <convert type="ValueRange">1,1</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="326,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
-    <convert type="FrontendInfo">NUMBER</convert>
-    <convert type="ValueRange">2,2</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="354,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
-    <convert type="FrontendInfo">NUMBER</convert>
-    <convert type="ValueRange">3,3</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <eLabel name="new eLabel" position="270,35" size="28,28" text="A" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
-  <eLabel name="new eLabel" position="298,35" size="28,28" text="B" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
-  <eLabel name="new eLabel" position="326,35" size="28,28" text="C" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
-  <eLabel name="new eLabel" position="354,35" size="28,28" text="D" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
-  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/crypted_on.png" position="1150,520" size="80,46" zPosition="2" alphatest="blend">
-    <convert type="ServiceInfo">IsCrypted</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <ePixmap pixmap="elegance.HD/crypted_off.png" position="1150,520" size="80,46" alphatest="blend" />
-  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/hd_on.png" position="90,520" size="80,46" zPosition="2" alphatest="blend">
-    <convert type="ServiceInfo">VideoWidth</convert>
-    <convert type="ValueRange">721,1980</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <ePixmap pixmap="elegance.HD/hd_off.png" position="90,520" size="80,46" alphatest="blend" />
-  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/dd_on.png" position="600,520" size="80,46" zPosition="2" alphatest="blend">
-    <convert type="ServiceInfo">IsMultichannel</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <ePixmap pixmap="elegance.HD/dd_off.png" position="600,520" size="80,46" alphatest="blend" />
-  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/txt_on.png" position="345,520" size="80,46" zPosition="2" alphatest="blend">
-    <convert type="ServiceInfo">HasTelext</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <ePixmap pixmap="elegance.HD/txt_off.png" position="345,520" size="80,46" alphatest="blend" />
-  <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/ws_on.png" position="875,520" size="80,46" zPosition="2" alphatest="blend">
-    <convert type="ServiceInfo">IsWidescreen</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <ePixmap pixmap="elegance.HD/ws_off.png" position="875,520" size="80,46" alphatest="blend" />
-  <widget alphatest="blend" render="Pixmap" pixmap="elegance.HD/record.png" position="904,591" size="28,28" source="session.RecordState" zPosition="3">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
-  <widget source="session.Event_Next" render="Label" position="70,350" size="1160,145" font="Regular; 20" zPosition="1" backgroundColor="transpBlack" transparent="1">
-    <convert type="EventName">ExtendedDescription</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget backgroundColor="transpBlack" font="Regular; 20" noWrap="1" position="70,322" render="Label" size="1160,28" source="session.Event_Next" transparent="1" zPosition="1" foregroundColor="lightblue">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <eLabel name="progressbg" position="323,679" size="908,1" backgroundColor="grey" />
-  <widget source="session.Event_Now" render="Progress" position="323,679" size="908,1" pixmap="elegance.HD/progressbar.png" zPosition="2" transparent="1">
-    <convert type="EventTime">Progress</convert>
-  </widget>
-</screen>
+    <widget alphatest="blend" position="51,580" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="1">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 34" foregroundColor="grey" halign="left" position="323,588" render="Label" size="610,44" source="session.CurrentService" transparent="1" zPosition="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="935,593" render="Label" size="295,28" source="global.CurrentTime" transparent="1" valign="top" zPosition="1" halign="right">
+      <convert type="ClockToText">Format: %a, %d. %B - %H:%M</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="lightblue" noWrap="1" position="70,105" render="Label" size="1160,28" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="right" position="1070,636" render="Label" size="160,38" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" position="323,686" render="Label" size="70,28" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" noWrap="1" position="400,686" render="Label" size="670,28" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" foregroundColor="grey" halign="right" position="1070,686" render="Label" size="160,28" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <eLabel backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" halign="left" position="323,636" size="100,38" text="jetzt:" transparent="1" />
+    <eLabel text="-" name="new eLabel" position="378,686" size="20,28" font="Regular; 20" backgroundColor="transpBlack" foregroundColor="grey" halign="center" transparent="1" />
+    <widget source="session.Event_Now" render="Label" position="70,133" size="1160,145" font="Regular; 20" zPosition="1" backgroundColor="transpBlack" foregroundColor="grey" transparent="1" halign="left">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <eLabel name="Tuner:" text="Aktiver Tuner:" position="70,35" size="200,28" font="Regular; 20" transparent="1" />
+    <eLabel name="SNR:" text="SNR:" position="680,35" size="100,28" font="Regular; 20" transparent="1" />
+    <eLabel name="AGC:" text="AGC:" position="880,35" size="100,28" font="Regular; 20" transparent="1" />
+    <eLabel name="BER:" text="BER:" position="1080,35" size="100,28" font="Regular; 20" transparent="1" />
+    <widget source="session.FrontendStatus" render="Label" position="740,35" size="90,28" font="Regular;20" backgroundColor="transpBlack" transparent="1" halign="right">
+      <convert type="FrontendInfo">SNR</convert>
+    </widget>
+    <widget source="session.FrontendStatus" render="Label" position="940,35" size="90,28" font="Regular; 20" backgroundColor="transpBlack" transparent="1" foregroundColor="grey" valign="center" halign="right">
+      <convert type="FrontendInfo">AGC</convert>
+    </widget>
+    <widget source="session.FrontendStatus" render="Label" position="1140,35" size="90,28" font="Regular; 20" backgroundColor="transpBlack" transparent="1" halign="right" foregroundColor="lightblue">
+      <convert type="FrontendInfo">BER</convert>
+    </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="A" position="270,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="B" position="298,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="C" position="326,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">4</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="D" position="354,35" size="28,28" zPosition="2" font="Regular; 20" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1" halign="right">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">8</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="270,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">0,0</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="298,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">1,1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="326,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">2,2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="354,35" size="28,28" zPosition="3" font="Regular; 20" foregroundColor="lightblue" backgroundColor="transpBlack" transparent="1" halign="right">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">3,3</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <eLabel name="new eLabel" position="270,35" size="28,28" text="A" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+    <eLabel name="new eLabel" position="298,35" size="28,28" text="B" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+    <eLabel name="new eLabel" position="326,35" size="28,28" text="C" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+    <eLabel name="new eLabel" position="354,35" size="28,28" text="D" font="Regular; 20" halign="right" transparent="1" zPosition="1" backgroundColor="transpBlack" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/crypted_on.png" position="1150,520" size="80,46" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsCrypted</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="elegance.HD/crypted_off.png" position="1150,520" size="80,46" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/hd_on.png" position="90,520" size="80,46" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">VideoWidth</convert>
+      <convert type="ValueRange">721,1980</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="elegance.HD/hd_off.png" position="90,520" size="80,46" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/dd_on.png" position="600,520" size="80,46" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsMultichannel</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="elegance.HD/dd_off.png" position="600,520" size="80,46" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/txt_on.png" position="345,520" size="80,46" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">HasTelext</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="elegance.HD/txt_off.png" position="345,520" size="80,46" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="elegance.HD/ws_on.png" position="875,520" size="80,46" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsWidescreen</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="elegance.HD/ws_off.png" position="875,520" size="80,46" alphatest="blend" />
+    <widget alphatest="blend" render="Pixmap" pixmap="elegance.HD/record.png" position="904,591" size="28,28" source="session.RecordState" zPosition="3">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="70,350" size="1160,145" font="Regular; 20" zPosition="1" backgroundColor="transpBlack" transparent="1">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 29" foregroundColor="lightblue" noWrap="1" position="400,636" render="Label" size="670,38" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="transpBlack" font="Regular; 20" noWrap="1" position="70,322" render="Label" size="1160,28" source="session.Event_Next" transparent="1" zPosition="1" foregroundColor="lightblue">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <eLabel name="progressbg" position="323,679" size="908,1" backgroundColor="grey" />
+    <widget source="session.Event_Now" render="Progress" position="323,679" size="908,1" pixmap="elegance.HD/progressbar.png" zPosition="2" transparent="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+  </screen>
   <screen name="SIBsetupScreen" position="0,0" size="1280,720" title="Second-InfoBar setup" flags="wfNoBorder">
     <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />
     <widget backgroundColor="transpBlack" font="Regular; 20" halign="right" position="940,35" render="Label" size="270,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="grey">
@@ -3586,12 +3584,6 @@
       <convert type="ClockToText">Format: %a %d. %b   %H:%M</convert>
     </widget>
     <widget name="output" position="70,105" size="1141,520" valign="center" halign="center" font="Regular;20" />
-    <ePixmap alphatest="on" pixmap="elegance.HD/red.png" position="70,643" size="30,30" />
-    <ePixmap alphatest="on" pixmap="elegance.HD/green.png" position="360,643" size="30,30" />
-    <ePixmap alphatest="on" pixmap="elegance.HD/grey.png" position="650,643" size="30,30" />
-    <ePixmap alphatest="on" pixmap="elegance.HD/grey.png" position="940,643" size="30,30" />
-    <widget source="key_red" render="Label" position="115,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-    <widget source="key_green" render="Label" position="405,643" zPosition="1" size="220,30" font="Regular;20" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
   </screen>
   <screen name="TVDbAllSeasonEpisodeSelection" position="0,0" size="1280,720" flags="wfNoBorder" title="TVDb Info">
     <widget backgroundColor="transpBlack" font="Regular; 34" position="70,35" render="Label" size="920,45" source="Title" transparent="1" valign="center" zPosition="1" foregroundColor="white" />

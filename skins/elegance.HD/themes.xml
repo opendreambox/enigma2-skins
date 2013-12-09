@@ -30,6 +30,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Original - 90% OSD" value="inactive">
@@ -63,6 +64,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Original - 80% OSD" value="inactive">
@@ -96,6 +98,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Original - 70% OSD" value="inactive">
@@ -129,6 +132,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Original - 60% OSD" value="inactive">
@@ -162,6 +166,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Lady - 100% OSD" value="inactive">
@@ -195,6 +200,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Lady - 90% OSD" value="inactive">
@@ -228,6 +234,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Lady - 80% OSD" value="inactive">
@@ -261,6 +268,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Lady - 70% OSD" value="inactive">
@@ -294,6 +302,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Lady - 60% OSD" value="inactive">
@@ -327,6 +336,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Green - 100% OSD" value="inactive">
@@ -360,6 +370,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Green - 90% OSD" value="inactive">
@@ -393,6 +404,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Green - 80% OSD" value="inactive">
@@ -426,6 +438,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Green - 70% OSD" value="inactive">
@@ -459,6 +472,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Green - 60% OSD" value="inactive">
@@ -492,6 +506,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Purple - 100% OSD" value="inactive">
@@ -525,6 +540,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Purple - 90% OSD" value="inactive">
@@ -558,6 +574,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Purple - 80% OSD" value="inactive">
@@ -591,6 +608,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Purple - 70% OSD" value="inactive">
@@ -624,6 +642,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Purple - 60% OSD" value="inactive">
@@ -657,6 +676,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Red - 100% OSD" value="inactive">
@@ -690,6 +710,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Red - 90% OSD" value="inactive">
@@ -723,6 +744,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Red - 80% OSD" value="inactive">
@@ -756,6 +778,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Red - 70% OSD" value="inactive">
@@ -789,6 +812,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <colortheme name="Red - 60% OSD" value="inactive">
@@ -822,6 +846,7 @@
             <color name="white" value="#00ffffff" />
             <color name="yellow" value="#00bab329" />
             <color name="yellowkey" value="#00ecae05" />
+    <color name="vdbeventcol" value="#00d8a710" />
         </colors>
     </colortheme>
     <screenthemes>
