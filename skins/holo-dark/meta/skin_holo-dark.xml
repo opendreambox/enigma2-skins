@@ -1,0 +1,25 @@
+<default>
+	<prerequisites>
+		<hardware type="dm8000" />
+		<hardware type="dm800" />
+		<hardware type="dm800se" />
+		<hardware type="dm800sev2" />
+		<hardware type="dm500hd" />
+		<hardware type="dm500hdv2" />
+		<hardware type="dm7020hd" />
+		<hardware type="dm7020hdv2" />
+		<tag type="Skin" />
+	</prerequisites>
+	<info>
+		<author>Members of IhaD</author>
+		<name>holo-dark</name>
+		<packagename>enigma2-skin-holo-dark</packagename>
+		<shortdescription>holo-dark skin</shortdescription>
+		<description>A holo inspired HD skin from the Members of IhaD</description>
+		<screenshot src="http://www.dreamboxupdate.com/preview/skin_holo-dark.jpg" />
+	</info>
+
+	<files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-holo-dark" />
+	</files>
+</default>
