@@ -9,6 +9,7 @@
 		<hardware type="dm7020hd" />
 		<hardware type="dm7020hdv2" />
 		<hardware type="dm7080" />
+		<hardware type="dm820" />
 		<tag type="Skin" />
 	</prerequisites>
 	<info>
