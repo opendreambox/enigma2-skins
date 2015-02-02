@@ -1667,170 +1667,6 @@
         <ePixmap alphatest="on" pixmap="holo-dark/components/line_780.png" position="50,470" size="780,1"/>
         <widget backgroundColor="background" font="Regular;22" foregroundColor="2ndFG" halign="center" position="30,483" render="Label" size="820,50" source="status" transparent="1"/>
     </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Setup" position="center,center" size="880,600" title="CrossEPG - Configuration">
-        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
-        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_red" position="60,545" size="200,40" transparent="1" valign="center"/>
-        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
-            <convert type="ClockToText"/>
-        </widget>
-        <widget backgroundColor="background" enableWrapAround="1" name="config" position="30,65" scrollbarMode="showOnDemand" size="820,330" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/components/line_780.png" position="50,410" size="780,1"/>
-        <widget backgroundColor="background" font="Regular;22" foregroundColor="2ndFG" halign="center" name="information" position="30,420" size="820,115" transparent="1" valign="center"/>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Menu" position="center,center" size="880,600" title="">
-        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
-            <convert type="ClockToText"/>
-        </widget>
-        <widget backgroundColor="background" enableWrapAround="1" position="30,65" render="Listbox" scrollbarMode="showOnDemand" size="820,455" source="list" transparent="1">
-            <convert type="TemplatedMultiContent">
-			{"template":[
-			MultiContentEntryPixmapAlphaBlend(pos=(12,1),size=(32,32),png=0),
-			MultiContentEntryText(pos=(58,3),size=(750,28),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=1), 
-			],
-		    "fonts":[gFont("Regular",22) ],"itemHeight":35}
-		</convert>
-        </widget>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Providers" position="center,center" size="880,600" title="">
-        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
-            <convert type="ClockToText"/>
-        </widget>
-        <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_green.png" position="275,555" size="20,20"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_yellow.png" position="520,555" size="20,20"/>
-        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_red" position="60,545" size="200,40" transparent="1" valign="center"/>
-        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_green" position="305,545" size="200,40" transparent="1" valign="center"/>
-        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_yellow" position="550,545" size="200,40" transparent="1" valign="center"/>
-        <widget backgroundColor="background" enableWrapAround="1" position="30,65" render="Listbox" scrollbarMode="showOnDemand" size="820,450" source="list" transparent="1">
-            <convert type="TemplatedMultiContent">
-			{"template":[
-			MultiContentEntryText(pos=(12,1),size=(740,32),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=0),
-			MultiContentEntryPixmapAlphaBlend(pos=(760,0),size=(40,40),png=1), 
-			],
-		    "fonts":[gFont("Regular",20) ],"itemHeight":30}
-		</convert>
-        </widget>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Ordering" position="center,center" size="880,600" title="">
-        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
-            <convert type="ClockToText"/>
-        </widget>
-        <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_green.png" position="275,555" size="20,20"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_yellow.png" position="520,555" size="20,20"/>
-        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_red" position="60,545" size="200,40" transparent="1" valign="center"/>
-        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_green" position="305,545" size="200,40" transparent="1" valign="center"/>
-        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_yellow" position="550,545" size="200,40" transparent="1" valign="center"/>
-        <widget backgroundColor="background" enableWrapAround="1" position="30,65" render="Listbox" scrollbarMode="showOnDemand" size="820,450" source="list" transparent="1">
-            <convert type="TemplatedMultiContent">
-			{"template":[
-			MultiContentEntryText(pos=(12,1),size=(740,32),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=0),
-			MultiContentEntryPixmapAlphaBlend(pos=(760,0),size=(40,40),png=1), 
-			],
-		    "fonts":[gFont("Regular",20) ],"itemHeight":30}
-		</convert>
-        </widget>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Loader" position="0,540" size="1280,180" title="Download">
-        <ePixmap pixmap="holo-dark/components/infobar.png" position="0,0" size="1280,180" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;20" halign="right" position="15,13" render="Label" size="180,30" source="global.CurrentTime" transparent="1" valign="center">
-            <convert type="ClockToText">Format: %a, %d.%m. %H:%M</convert>
-        </widget>
-        <eLabel backgroundColor="background" font="Regular;22" foregroundColor="foreground" position="335,11" size="420,31" text="CrossEPG-Loader" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="action" position="115,50" size="1048,50" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;20" foregroundColor="2ndFG" halign="center" name="status" position="115,105" size="1048,25" transparent="1"/>
-        <widget borderWidth="1" name="progress" position="115,145" size="1048,15"/>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Downloader" position="0,540" size="1280,180" title="Download">
-        <ePixmap pixmap="holo-dark/components/infobar.png" position="0,0" size="1280,180" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;20" halign="right" position="15,13" render="Label" size="180,30" source="global.CurrentTime" transparent="1" valign="center">
-            <convert type="ClockToText">Format: %a, %d.%m. %H:%M</convert>
-        </widget>
-        <eLabel backgroundColor="background" font="Regular;22" foregroundColor="foreground" position="335,11" size="420,31" text="CrossEPG-Downloader" transparent="1" valign="top"/>
-        <widget backgroundColor="background" font="Regular;22" name="action" position="115,50" size="1048,50" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;20" foregroundColor="2ndFG" halign="center" name="status" position="115,105" size="1048,25" transparent="1"/>
-        <widget borderWidth="1" name="progress" position="115,145" size="1048,15"/>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Importer" position="0,540" size="1280,180" title="Download">
-        <ePixmap pixmap="holo-dark/components/infobar.png" position="0,0" size="1280,180" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;20" halign="right" position="15,13" render="Label" size="180,30" source="global.CurrentTime" transparent="1" valign="center">
-            <convert type="ClockToText">Format: %a, %d.%m. %H:%M</convert>
-        </widget>
-        <eLabel backgroundColor="background" font="Regular;22" foregroundColor="foreground" position="335,11" size="420,31" text="CrossEPG-Importer" transparent="1" valign="top"/>
-        <widget backgroundColor="background" font="Regular;22" name="action" position="115,50" size="1048,50" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;20" foregroundColor="2ndFG" halign="center" name="status" position="115,105" size="1048,25" transparent="1"/>
-        <widget borderWidth="1" name="progress" position="115,145" size="1048,15"/>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Xepgdb_Update" position="0,540" size="1280,180" title="Download">
-        <ePixmap pixmap="holo-dark/components/infobar.png" position="0,0" size="1280,180" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;20" halign="right" position="15,13" render="Label" size="180,30" source="global.CurrentTime" transparent="1" valign="center">
-            <convert type="ClockToText">Format: %a, %d.%m. %H:%M</convert>
-        </widget>
-        <eLabel backgroundColor="background" font="Regular;22" foregroundColor="foreground" position="335,11" size="420,31" text="CrossEPG-Xepgdb Update" transparent="1" valign="top"/>
-        <widget backgroundColor="background" font="Regular;22" name="action" position="115,50" size="1048,50" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;20" foregroundColor="2ndFG" halign="center" name="status" position="115,105" size="1048,25" transparent="1"/>
-        <widget borderWidth="1" name="progress" position="115,145" size="1048,15"/>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Converter" position="0,540" size="1280,180" title="Download">
-        <ePixmap pixmap="holo-dark/components/infobar.png" position="0,0" size="1280,180" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;20" halign="right" position="15,13" render="Label" size="180,30" source="global.CurrentTime" transparent="1" valign="center">
-            <convert type="ClockToText">Format: %a, %d.%m. %H:%M</convert>
-        </widget>
-        <eLabel backgroundColor="background" font="Regular;22" foregroundColor="foreground" position="335,11" size="420,31" text="CrossEPG-Converter" transparent="1" valign="top"/>
-        <widget backgroundColor="background" font="Regular;22" name="action" position="115,50" size="1048,50" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;20" foregroundColor="2ndFG" halign="center" name="status" position="115,105" size="1048,25" transparent="1"/>
-        <widget borderWidth="1" name="progress" position="115,145" size="1048,15"/>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Rytec_Update" position="0,540" size="1280,180" title="Download">
-        <ePixmap pixmap="holo-dark/components/infobar.png" position="0,0" size="1280,180" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;20" halign="right" position="15,13" render="Label" size="180,30" source="global.CurrentTime" transparent="1" valign="center">
-            <convert type="ClockToText">Format: %a, %d.%m. %H:%M</convert>
-        </widget>
-        <eLabel backgroundColor="background" font="Regular;22" foregroundColor="foreground" position="335,11" size="420,31" text="CrossEPG-Rytec Update" transparent="1" valign="top"/>
-        <widget backgroundColor="background" font="Regular;22" name="action" position="115,50" size="1048,50" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;20" foregroundColor="2ndFG" halign="center" name="status" position="115,105" size="1048,25" transparent="1"/>
-        <widget borderWidth="1" name="progress" position="115,145" size="1048,15"/>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Info" position="center,center" size="880,600" title="CrossEPG - DB Info">
-        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
-        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_red" position="60,545" size="200,40" transparent="1" valign="center"/>
-        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
-            <convert type="ClockToText"/>
-        </widget>
-        <widget backgroundColor="background" font="Regular;22" name="version" position="30,70" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="create" position="30,100" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="last_update" position="30,130" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="headersdb_size" position="30,160" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="descriptorsdb_size" position="30,190" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="indexesdb_size" position="30,220" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="aliasesdb_size" position="30,250" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="total_size" position="30,280" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="channels_count" position="30,310" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="events_count" position="30,340" size="820,28" transparent="1"/>
-        <widget backgroundColor="background" font="Regular;22" name="hashes_count" position="30,370" size="820,28" transparent="1"/>
-    </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_About" position="center,center" size="880,600" title="CrossEPG - About">
-        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
-        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
-        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_red" position="60,545" size="200,40" transparent="1" valign="center"/>
-        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
-            <convert type="ClockToText"/>
-        </widget>
-        <widget backgroundColor="background" font="Regular;22" name="about" position="30,65" size="740,450" transparent="1"/>
-        <widget name="rytec_pix" position="780,100" size="70,70"/>
-        <widget name="krkadoni_pix" position="780,200" size="70,22"/>
-    </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="CutListEditor" position="0,0" size="1280,720" title="Cutlist editor">
         <ePixmap pixmap="holo-dark/components/background_large.png" position="0,0" size="1280,720" zPosition="-1"/>
         <eLabel backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" size="550,35" text="CutlistEditor" transparent="1" zPosition="1"/>
@@ -2007,6 +1843,91 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
         <ePixmap alphatest="on" pixmap="holo-dark/components/line_780.png" position="50,458" size="780,1"/>
         <widget backgroundColor="background" font="Regular;20" foregroundColor="2ndFG" halign="center" position="30,465" render="Label" size="820,75" source="help" transparent="1" valign="center" zPosition="3"/>
         <ePixmap alphatest="on" pixmap="holo-dark/images/buttons/key_menu.png" position="810,555" size="40,20"/>
+    </screen>
+    <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGdbBackup" position="center,center" size="880,600" title=" ">
+        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
+        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
+            <convert type="ClockToText"/>
+        </widget>
+        <widget backgroundColor="background" name="config" position="30,65" scrollbarMode="showOnDemand" size="820,450" transparent="1"/>
+        <ePixmap alphatest="on" name="red" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
+        <ePixmap alphatest="on" name="green" pixmap="holo-dark/images/buttons/key_green.png" position="230,555" size="20,20"/>
+        <ePixmap alphatest="on" name="yellow" pixmap="holo-dark/images/buttons/key_yellow.png" position="430,555" size="20,20"/>
+        <ePixmap alphatest="on" name="blue" pixmap="holo-dark/images/buttons/key_blue.png" position="630,555" size="20,20"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="buttonred" position="60,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="buttongreen" position="260,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="buttonyellow" position="460,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="buttonblue" position="660,544" size="160,40" transparent="1" valign="center"/>
+    </screen>
+    <screen backgroundColor="transparent" flags="wfNoBorder" name="OpenEPG" position="center,center" size="880,600" title=" ">
+        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
+        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
+            <convert type="ClockToText"/>
+        </widget>
+        <widget backgroundColor="background" name="config" position="30,65" scrollbarMode="showOnDemand" size="820,390" transparent="1"/>
+        <ePixmap alphatest="on" pixmap="holo-dark/components/line1.png" position="30,465" scale="1" size="820,2"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="2ndFG" halign="center" name="status" position="30,470" size="820,70" transparent="1"/>
+        <ePixmap alphatest="on" name="red" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
+        <ePixmap alphatest="on" name="green" pixmap="holo-dark/images/buttons/key_green.png" position="230,555" size="20,20"/>
+        <ePixmap alphatest="on" name="yellow" pixmap="holo-dark/images/buttons/key_yellow.png" position="430,555" size="20,20"/>
+        <ePixmap alphatest="on" name="blue" pixmap="holo-dark/images/buttons/key_blue.png" position="630,555" size="20,20"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="buttonred" position="60,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="buttongreen" position="260,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="buttonyellow" position="460,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="buttonblue" position="660,544" size="160,40" transparent="1" valign="center"/>
+    </screen>
+    <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGMainSetup" position="center,center" size="880,600" title="EPG Import Configuration">
+        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
+        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
+            <convert type="ClockToText"/>
+        </widget>
+        <widget backgroundColor="background" name="config" position="30,65" scrollbarMode="showOnDemand" size="820,360" transparent="1"/>
+        <ePixmap alphatest="on" pixmap="holo-dark/components/line1.png" position="30,425" scale="1" size="820,2"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="2ndFG" halign="center" name="statusbar" position="30,435" size="820,35" transparent="1"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="2ndFG" halign="center" name="status" position="30,475" size="820,60" transparent="1"/>
+        <ePixmap alphatest="on" name="red" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
+        <ePixmap alphatest="on" name="green" pixmap="holo-dark/images/buttons/key_green.png" position="230,555" size="20,20"/>
+        <ePixmap alphatest="on" name="yellow" pixmap="holo-dark/images/buttons/key_yellow.png" position="430,555" size="20,20"/>
+        <ePixmap alphatest="on" name="blue" pixmap="holo-dark/images/buttons/key_blue.png" position="630,555" size="20,20"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_red" position="60,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_green" position="260,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_yellow" position="460,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_blue" position="660,544" size="160,40" transparent="1" valign="center"/>
+    </screen>
+    <screen flags="wfNoBorder" name="EPGImportSources" position="center,center" size="880,600" title="EPG Import Sources">
+        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
+        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
+            <convert type="ClockToText"/>
+        </widget>
+        <widget backgroundColor="background" name="list" position="30,65" scrollbarMode="showOnDemand" size="820,450" transparent="1"/>
+        <ePixmap alphatest="on" name="red" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
+        <ePixmap alphatest="on" name="green" pixmap="holo-dark/images/buttons/key_green.png" position="230,555" size="20,20"/>
+        <ePixmap alphatest="on" name="yellow" pixmap="holo-dark/images/buttons/key_yellow.png" position="430,555" size="20,20"/>
+        <ePixmap alphatest="on" name="blue" pixmap="holo-dark/images/buttons/key_blue.png" position="630,555" size="20,20"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_red" position="60,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_green" position="260,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_yellow" position="460,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_blue" position="660,544" size="160,40" transparent="1" valign="center"/>
+    </screen>
+    <screen flags="wfNoBorder" name="EPGImportLog" position="center,center" size="880,600" title="EPG Import Log">
+        <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" position="30,15" render="Label" size="650,35" source="Title" transparent="1"/>
+        <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="right" position="750,15" render="Label" size="100,35" source="global.CurrentTime" transparent="1">
+            <convert type="ClockToText"/>
+        </widget>
+        <widget backgroundColor="background" name="list" position="30,65" scrollbarMode="showOnDemand" size="820,450" transparent="1"/>
+        <ePixmap alphatest="on" name="red" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
+        <ePixmap alphatest="on" name="green" pixmap="holo-dark/images/buttons/key_green.png" position="230,555" size="20,20"/>
+        <ePixmap alphatest="on" name="yellow" pixmap="holo-dark/images/buttons/key_yellow.png" position="430,555" size="20,20"/>
+        <ePixmap alphatest="on" name="blue" pixmap="holo-dark/images/buttons/key_blue.png" position="630,555" size="20,20"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_red" position="60,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_green" position="260,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_yellow" position="460,545" size="160,40" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;21" foregroundColor="3rdFG" halign="left" name="key_blue" position="660,544" size="160,40" transparent="1" valign="center"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGRefreshConfiguration" position="center,center" size="880,600" title="Configure EPGRefresh">
         <ePixmap pixmap="holo-dark/components/background_small.png" position="0,0" size="880,600" zPosition="-1"/>
@@ -6240,7 +6161,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, (720-wsizey)/2))
             <convert type="ConditionalShowHide">Blink</convert>
         </widget>
         <widget font="Display;20" halign="center" position="0,43" render="Label" size="132,21" source="global.CurrentTime">
-            <convert type="DateToText">NNN DD.MMM</convert>
+            <convert type="ClockToText">NNN DD.MMM</convert>
         </widget>
     </screen>
     <screen id="1" name="JobView_summary" position="0,0" size="132,64">
