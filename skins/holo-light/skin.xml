@@ -6161,7 +6161,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, (720-wsizey)/2))
             <convert type="ConditionalShowHide">Blink</convert>
         </widget>
         <widget font="Display;20" halign="center" position="0,43" render="Label" size="132,21" source="global.CurrentTime">
-            <convert type="ClockToText">NNN DD.MMM</convert>
+            <convert type="ClockToText">Format:%d.%m.%Y</convert>
         </widget>
     </screen>
     <screen id="1" name="JobView_summary" position="0,0" size="132,64">
