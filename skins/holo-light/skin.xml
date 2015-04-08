@@ -2044,7 +2044,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </screen>
     <screen backgroundColor="background" flags="wfBorder" name="ExtendedNumberZap" position="center,center" size="720,180" title="Extended Number Zap">
         <widget alphatest="on" backgroundColor="background" position="0,10" render="Picon" scale="1" size="100,60" source="Service" transparent="1" zPosition="10">
-            <convert type="RefToString"/>
+            <convert type="RefToPiconName"/>
         </widget>
         <widget backgroundColor="background" font="Regular;25" foregroundColor="3rdFG" halign="center" name="number" position="0,10" size="720,30" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;22" halign="center" name="channelname" position="0,40" size="720,30" transparent="1" valign="center"/>
