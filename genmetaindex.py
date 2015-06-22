@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # usage: genmetaindex.py <xml-files>  > index.xml
 import sys, os
 from xml.etree.ElementTree import ElementTree, Element
@@ -19,7 +20,7 @@ for file in sys.argv[1:]:
 	for i in p.findall("info"):
 		if not info:
 			info = i
-	assert info
+	assert info is not None
 	
 	for i in info[:]:
 		if i.tag not in ["name", "packagename", "packagetype", "shortdescription"]:
