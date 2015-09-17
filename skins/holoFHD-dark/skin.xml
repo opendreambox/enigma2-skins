@@ -2725,7 +2725,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="center" position="1395,76" render="Label" size="120,36" source="session.CurrentService" transparent="1">
             <convert type="ServicePosition">Remaining,Negate</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-dark/extensions/nocover_de.png" position="97,85" size="105,150" transparent="1"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-dark/extensions/nocover.png" position="97,85" size="105,150" transparent="1"/>
         <ePixmap alphatest="on" pixmap="holoFHD-dark/icons/discover.png" position="804,217" size="318,15" transparent="1"/>
         <ePixmap alphatest="on" pixmap="holoFHD-dark/images/buttons/key_info.png" position="1621,27" size="60,30"/>
     </screen>
