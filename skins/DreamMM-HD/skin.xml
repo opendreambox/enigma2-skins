@@ -176,6 +176,13 @@
 		<widget source="RecordingPossible" render="FixedLabel" position="490,161" size="150,22" text="Record" zPosition="1" font="Regular;19" backgroundColor="background1" shadowColor="black" shadowOffset="-1,-1" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<!-- Red button, Hbbtv (only if record is not on red, for now) -->
+		<widget source="HbbtvApplication" render="Pixmap" pixmap="DreamMM-HD/buttons/button_red.png" position="460,160" size="20,20" zPosition="1" alphatest="on">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="HbbtvApplication" render="Label" position="490,161" size="150,22" zPosition="1" font="Regular;19" backgroundColor="background1" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+			<convert type="HbbtvApplicationInfo">Name</convert>
+		</widget>
 		<!-- Green button (is subservices available?) -->
 		<ePixmap position="650,160" size="20,20" pixmap="DreamMM-HD/buttons/button_green_off.png" alphatest="on" />
 		<widget source="session.CurrentService" render="Pixmap" position="650,160" size="20,20" pixmap="DreamMM-HD/buttons/button_green.png" zPosition="1" alphatest="on">
