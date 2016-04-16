@@ -1,7 +1,7 @@
 <skin>
     <copyright>
         <orginal author="members of IhaD" license="This skin is open source but it's not free software. If you want to use or modify the skin,you have to keep this license and inform me about any modifications." name="holoFHD" supporturl="www.ihad.tv" version="1.0"/>
-        <mod author="LukaNoah,mfgeg,Zombi" name="holoFHD" supporturl="http://www.ihad.tv" version="0.1"/>
+        <mod author="LukaNoah,mfgeg,Zombi " name="holoFHD" supporturl="http://www.ihad.tv" version="0.1"/>
     </copyright>
     <output id="0">
         <resolution bpp="32" xres="1920" yres="1080"/>
@@ -123,7 +123,6 @@
     </windowstyle>
     <fonts>
         <font filename="/usr/share/enigma2/holoFHD-light/fonts/Roboto-Medium.ttf" name="Regular" scale="100"/>
-        <font filename="/usr/share/enigma2/holoFHD-light/fonts/LoSoS.ttf" name="Rec" scale="100"/>
         <font filename="lcd.ttf" name="LCD" scale="100"/>
         <font filename="ae_AlMateen.ttf" name="Replacement" replacement="1" scale="100"/>
         <font filename="tuxtxt.ttf" name="Console" scale="100"/>
@@ -318,7 +317,7 @@
             <convert type="ConditionalShowHide"/>
         </widget>
         <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="22,705" scale="1" size="64,30"/>
-        <widget backgroundColor="background" font="Rec;32" foregroundColor="#C60317" position="23,701" render="FixedLabel" size="66,32" source="session.RecordState" text="REC" transparent="1">
+        <widget backgroundColor="background" pixmap="holoFHD-light/icons/ico_rec_on.png" position="22,705" render="Pixmap" size="64,30" source="session.RecordState" transparent="1">
             <convert type="ConditionalShowHide">Blink</convert>
         </widget>
         <widget backgroundColor="background" font="Regular;37" foregroundColor="foreground" halign="left" position="335,764" render="Label" size="105,48" source="session.Event_Now" transparent="1">
@@ -534,7 +533,7 @@
             <convert type="ServicePosition">Gauge</convert>
         </widget>
         <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="22,705" scale="1" size="64,30"/>
-        <widget backgroundColor="background" font="Rec;32" foregroundColor="#C60317" position="23,701" render="FixedLabel" size="66,32" source="session.RecordState" text="REC" transparent="1">
+        <widget backgroundColor="background" pixmap="holoFHD-light/icons/ico_rec_on.png" position="22,705" render="Pixmap" size="64,30" source="session.RecordState" transparent="1">
             <convert type="ConditionalShowHide">Blink</convert>
         </widget>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/cover_default.png" position="60,765" size="105,150"/>
@@ -594,7 +593,7 @@
             <convert type="ServicePosition">Gauge</convert>
         </widget>
         <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="22,705" scale="1" size="64,30"/>
-        <widget backgroundColor="background" font="Rec;32" foregroundColor="#C60317" position="23,701" render="FixedLabel" size="66,32" source="session.RecordState" text="REC" transparent="1">
+        <widget backgroundColor="background" pixmap="holoFHD-light/icons/ico_rec_on.png" position="22,705" render="Pixmap" size="64,30" source="session.RecordState" transparent="1">
             <convert type="ConditionalShowHide">Blink</convert>
         </widget>
         <widget alphatest="on" name="CoverPreview" position="30,750" size="130,130"/>
@@ -615,7 +614,7 @@
             <convert type="EventTime">Progress</convert>
         </widget>
         <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="1185,20" size="75,35"/>
-        <widget backgroundColor="background" font="Rec;32" foregroundColor="#C60317" position="23,701" render="FixedLabel" size="66,32" source="session.RecordState" text="REC" transparent="1">
+        <widget backgroundColor="background" pixmap="holoFHD-light/icons/ico_rec_on.png" position="1185,20" render="Pixmap" size="75,35" source="session.RecordState" transparent="1">
             <convert type="ConditionalShowHide">Blink</convert>
         </widget>
         <widget backgroundColor="background" font="Regular;26" halign="right" position="1245,16" render="Label" size="105,42" source="global.CurrentTime" transparent="1">
@@ -1001,6 +1000,7 @@
 				}
 			</convert>
         </widget>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" name="help_label" position="30,915" size="760,70" transparent="1" valign="center"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoMountEdit" position="0,0" size="1080,1080" title="">
         <ePixmap pixmap="holoFHD-light/components/background_menu_large.png" position="0,0" size="1080,1080" zPosition="-1"/>
@@ -2148,14 +2148,38 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="735,1000" render="Label" size="240,60" source="key_yellow" transparent="1" valign="center"/>
         <widget backgroundColor="background" enableWrapAround="1" name="filelist" position="30,85" scrollbarMode="showOnDemand" size="1020,880" transparent="1"/>
     </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="HbbTVSetup" position="00,0" size="730,1080" title="">
+    <screen backgroundColor="transparent" flags="wfNoBorder" name="HbbTVSetup" position="0,0" size="730,1080" title="">
         <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" size="730,1080" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" position="83,22" render="Label" size="620,52" source="Title" transparent="1" valign="center"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_red.png" position="30,1015" size="10,30"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_green.png" position="375,1015" size="10,30"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,1000" render="Label" size="320,60" source="key_red" transparent="1" valign="center"/>
-        <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="402,1000" render="Label" size="320,60" source="key_green" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="400,1000" render="Label" size="320,60" source="key_green" transparent="1" valign="center"/>
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="30,85" scrollbarMode="showOnDemand" size="670,880" transparent="1"/>
+    </screen>
+    <screen flags="wfNoBorder" name="HdmiInConfiguration" position="0,0" size="730,1080" title="HMDI Input Configuration">
+        <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" size="730,1080" zPosition="-1"/>
+        <widget backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" position="83,22" render="Label" size="620,52" source="Title" transparent="1" valign="center"/>
+        <widget name="config" position="20,80" scrollbarMode="showOnDemand" size="690,880"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_red.png" position="45,995" size="10,30"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_green.png" position="45,1030" size="10,30"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_yellow.png" position="370,995" size="10,30"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_blue.png" position="370,1030" size="10,30"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="buttonred" position="70,995" size="300,30" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="buttongreen" position="70,1030" size="300,30" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="buttonyellow" position="405,995" size="300,30" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="buttonblue" position="405,1030" size="300,30" transparent="1" valign="center"/>
+    </screen>
+    <screen flags="wfNoBorder" name="HdmiInAbout" position="0,0" size="730,1080" title="About HDMI Input Plugin">
+        <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" size="730,1080" zPosition="-1"/>
+        <widget backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" position="83,22" render="Label" size="620,52" source="Title" transparent="1" valign="center"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_red.png" position="30,1015" size="10,30"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_green.png" position="375,1015" size="10,30"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="buttonred" position="55,1000" size="320,60" transparent="1" valign="center"/>
+        <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="buttongreen" position="400,1000" size="320,60" transparent="1" valign="center"/>
+        <widget font="Regular;28" halign="center" name="abouthdmiin" position="20,120" size="690,100" valign="center" zPosition="2"/>
+        <widget font="Regular;28" halign="center" name="freefilesystem" position="100,240" size="220,220" valign="center" zPosition="2"/>
+        <widget font="Regular;28" halign="center" name="freememory" position="370,240" size="200,220" valign="center" zPosition="2"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="HelpMenu" position="center,center" size="1920,1080" title="help...">
         <ePixmap pixmap="holoFHD-light/components/background_large.png" position="0,0" size="1920,1080" zPosition="-1"/>
