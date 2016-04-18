@@ -150,7 +150,7 @@
 		</widget>
 	</screen>
 	<!-- Channel selection (tv) -->
-	<screen name="ChannelSelection" position="center,center" size="560,433" title="Channel Selection">
+	<screen name="ChannelSelection" zPosition="1000" position="center,center" size="560,433" title="Channel Selection">
 		<ePixmap name="red" position="10,10" size="17,17" pixmap="Nemesis.ShadowLine/key-red.png" alphatest="on" />
 		<ePixmap name="green" position="140,10" size="17,17" pixmap="Nemesis.ShadowLine/key-green.png" alphatest="on" />
 		<ePixmap name="yellow" position="280,10" size="17,17" pixmap="Nemesis.ShadowLine/key-yellow.png" alphatest="on" />

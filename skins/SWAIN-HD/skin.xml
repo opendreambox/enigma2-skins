@@ -480,7 +480,7 @@
 		<eLabel position="5,5" size="460,410" zPosition="-1" backgroundColor="background" />
 		<widget name="menu" position="10,10" size="450,400" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="ChannelSelection" position="172,132" size="1108,588" title="Channel Selection" backgroundColor="transparent">
+	<screen name="ChannelSelection" zPosition="1000" position="172,132" size="1108,588" title="Channel Selection" backgroundColor="transparent">
 		<eLabel position="5,5" size="1060,510" zPosition="-1" backgroundColor="background" />
 		<widget name="list" position="15,12" size="730,496" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" serviceItemHeight="31" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;21" />
 		<widget source="ServiceEvent" render="Label" position="760,10" size="300,25" font="Regular;22" foregroundColor="white" backgroundColor="grey">

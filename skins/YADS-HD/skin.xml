@@ -883,7 +883,7 @@
 		<widget source="key_blue" render="Label" position="760,650" zPosition="1" size="248,30" font="Regular;24" halign="center" valign="center" backgroundColor="#18188b" shadowColor="black" shadowOffset="-2,-2" transparent="1" />
 	</screen>
 	<!-- Channel selection - TV -->
-	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
+	<screen name="ChannelSelection" zPosition="1000" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
 		<ePixmap position="0,40" size="1280,95" pixmap="YADS-HD/top1.png" alphatest="on" />
 		<widget source="global.CurrentTime" render="Label" position="65,44" size="180,25" zPosition="1" font="Regular;25" halign="left" backgroundColor="background1" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>

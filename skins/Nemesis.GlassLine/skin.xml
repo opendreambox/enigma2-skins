@@ -201,7 +201,7 @@
 		</widget>
 	</screen>
 	<!-- Channel selection - (tv) -->
-	<screen name="ChannelSelection" position="0,0" size="720,576" title="Channel Selection" flags="wfNoBorder">
+	<screen name="ChannelSelection" zPosition="1000" position="0,0" size="720,576" title="Channel Selection" flags="wfNoBorder">
 		<ePixmap pixmap="Nemesis.GlassLine/bg_noBorder.png" position="0,0" zPosition="-3" size="720,576" />
 		<ePixmap pixmap="Nemesis.GlassLine/bg_Border_610x290.png" position="56,223" zPosition="-1" size="610,290" />
 		<ePixmap pixmap="Nemesis.GlassLine/logo_screen.png" position="60,40" size="103,36" alphatest="on" />

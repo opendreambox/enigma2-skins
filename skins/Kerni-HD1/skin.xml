@@ -631,7 +631,7 @@
 		<eLabel 						position="482,148" size="726,466" zPosition="2" backgroundColor="background" />
 		<widget name="menu" 			position="490,156" size="710,450" zPosition="3" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="ChannelSelection" 				position="0,0"		size="1280,720"		title="Channel Selection"			flags="wfNoBorder">
+	<screen name="ChannelSelection" zPosition="1000" 				position="0,0"		size="1280,720"		title="Channel Selection"			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1/menu/back-main.png" transparent="1" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
 			<convert type="ClockToText">Default</convert>

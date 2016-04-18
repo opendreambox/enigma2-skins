@@ -552,7 +552,7 @@
 		<widget name="menu" position="24,24" size="480,300" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="DreamMM-HD/selpic/sel25.png" />
 	</screen>
 	<!-- Channel selection - TV -->
-	<screen name="ChannelSelection" position="center,110" size="1040,530" title="Channel Selection">
+	<screen name="ChannelSelection" zPosition="1000" position="center,110" size="1040,530" title="Channel Selection">
 		<ePixmap pixmap="DreamMM-HD/buttons/red.png" position=" 0,2" size="260,40" alphatest="on" />
 		<ePixmap pixmap="DreamMM-HD/buttons/green.png" position="260,2" size="260,40" alphatest="on" />
 		<ePixmap pixmap="DreamMM-HD/buttons/yellow.png" position="520,2" size="260,40" alphatest="on" />

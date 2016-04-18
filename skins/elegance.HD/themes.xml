@@ -1077,9 +1077,9 @@
 </screen>
 			</screentheme>
         </screens>
-        <screens name="ChannelSelection">
+        <screens name="ChannelSelection" zPosition="1000">
             <screentheme name="Original" value="active">
-                <screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+                <screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" zPosition="1000" position="0,0" size="1280,720" title="Channel Selection">
                     <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="Label" size="920,40" source="Title" transparent="1" >
 					  <convert type="ChannelSelectionShortTitle"/>
 					</widget>
@@ -1098,7 +1098,7 @@
                 </screen>
             </screentheme>
             <screentheme name="NextEvent + NextEvent" value="inactive">
-<screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+<screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" zPosition="1000" position="0,0" size="1280,720" title="Channel Selection">
   <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="Label" size="920,40" source="Title" transparent="1" >
     <convert type="ChannelSelectionShortTitle"/>
   </widget>
@@ -1121,7 +1121,7 @@
 </screen>
             </screentheme>
             <screentheme name="NextEvent + Primetime" value="inactive">
-<screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+<screen backgroundColor="transpBlack" flags="wfNoBorder" name="ChannelSelection" zPosition="1000" position="0,0" size="1280,720" title="Channel Selection">
   <widget backgroundColor="transpBlack" font="Regular;34" foregroundColor="white" halign="left" position="70,35" render="Label" size="920,40" source="Title" transparent="1" >
     <convert type="ChannelSelectionShortTitle"/>
   </widget>

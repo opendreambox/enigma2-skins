@@ -494,7 +494,7 @@
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 	</screen>
-	<screen name="ChannelSelection" position="170,420" size="560,422" title="Channel Selection" >
+	<screen name="ChannelSelection" zPosition="1000" position="170,420" size="560,422" title="Channel Selection" >
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline.Blue/key-yellow.png" transparent="1" alphatest="on" />

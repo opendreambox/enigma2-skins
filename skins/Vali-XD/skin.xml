@@ -314,7 +314,7 @@
 	<!--  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
 	<!--  +++++++++++++++++++++++++++++++++++++++++++++ CHANNEL SELECTOR +++++++++++++++++++++++++++++++++++++++++++  -->
 	<!--  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
-	<screen flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1024,576" title="Channel Selection">
+	<screen flags="wfNoBorder" name="ChannelSelection" zPosition="1000" position="0,0" size="1024,576" title="Channel Selection">
 		<ePixmap alphatest="on" name="red" pixmap="Vali-XD/buttons/key-red.png" position="47,52" size="140,40" transparent="1"/>
 		<ePixmap alphatest="on" name="green" pixmap="Vali-XD/buttons/key-green.png" position="187,52" size="140,40" transparent="1"/>
 		<ePixmap alphatest="on" name="yellow" pixmap="Vali-XD/buttons/key-yellow.png" position="327,52" size="140,40" transparent="1"/>

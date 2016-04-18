@@ -608,7 +608,7 @@
   
   
 <!--Service Selectors ########## -->
-  <screen backgroundColor="background" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+  <screen backgroundColor="background" flags="wfNoBorder" name="ChannelSelection" zPosition="1000" position="0,0" size="1280,720" title="Channel Selection">
     <ePixmap alphatest="on" pixmap="Vali.HD.atlantis/bg.png" position="0,0" size="1280,720" zPosition="-1"/>
     <widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1"/>
     <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">

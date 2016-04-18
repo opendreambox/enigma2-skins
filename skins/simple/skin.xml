@@ -361,7 +361,7 @@
 	<screen name="ChannelContextMenu" position="150,90" size="420,430" title="Channellist menu">
 		<widget name="menu" position="10,10" size="400,400" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="ChannelSelection" position=" 50,90" size="620,430" title="Channel Selection">
+	<screen name="ChannelSelection" zPosition="1000" position=" 50,90" size="620,430" title="Channel Selection">
 		<widget name="key_red" position=" 4,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="red" shadowColor="background" shadowOffset="-2,-2" />
 		<widget name="key_green" position="158,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="green" shadowColor="background" shadowOffset="-2,-2" />
 		<widget name="key_yellow" position="312,5" zPosition="1" size="150,35" font="Regular;20" halign="center" valign="center" backgroundColor="yellow" shadowColor="background" shadowOffset="-2,-2" />

@@ -465,7 +465,7 @@
 		<eLabel position="2,4" size="458,328" zPosition="-1" backgroundColor="background" />
 		<widget name="menu" position="5,8" size="453,320" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="ChannelSelection" position=" 96,105" size="623,470" title="Channel Selection" backgroundColor="transparent">
+	<screen name="ChannelSelection" zPosition="1000" position=" 96,105" size="623,470" title="Channel Selection" backgroundColor="transparent">
 		<eLabel position="2, 4" size="596,408" zPosition="-1" backgroundColor="background" />
 		<widget name="list" position="5,8" size="590,280" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" serviceItemHeight="28" serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;17" />
 		<eLabel position="5,292" size="590,1" backgroundColor="white" />

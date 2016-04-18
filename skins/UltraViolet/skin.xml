@@ -645,7 +645,7 @@
 		<eLabel position="450,167" size="740,465" zPosition="2" backgroundColor="background1"/>
 		<widget name="menu" position="455,172" size="730,434" zPosition="3" scrollbarMode="showOnDemand" itemHeight="31" selectionPixmap="UltraViolet/selpic/sel31-740.png" transparent="1"/>
 	</screen>
-	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
+	<screen name="ChannelSelection" zPosition="1000" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-10" pixmap="UltraViolet/menu/menubg2.png"/>
 		<widget source="global.CurrentTime" render="Label" position="1060,35" size=" 80,26" font="Regular;26" halign="right" backgroundColor="background" shadowColor="black" shadowOffset="-2,-2" transparent="1">
 			<convert type="ClockToText">Default</convert>

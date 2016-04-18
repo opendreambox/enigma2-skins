@@ -813,7 +813,7 @@
 		<eLabel 						position="20,55" size="480,1" backgroundColor="white" />
 		<widget name="menu" 			position="20,65" size="480,520" itemHeight="40" scrollbarMode="showNever" selectionPixmap="Elgato-HD/selpic/sel32.png" backgroundPixmap="Elgato-HD/sel_bg.png" transparent="1"/>
 	</screen>
-	<screen name="ChannelSelection" 				position="center,center" size="1100,600" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="ChannelSelection" zPosition="1000" 				position="center,center" size="1100,600" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap 										position="  0, 0" size="1100,600" zPosition="-1" pixmap="Elgato-HD/menu_bg3.png"/>
 		<widget source="Title" render="Label" 			position=" 50,12" size="750, 33" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1"/>
 		<ePixmap 										position="1040,10" size="  35, 35" pixmap="Elgato-HD/micon/tv.png" alphatest="on"/>

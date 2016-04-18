@@ -1368,7 +1368,7 @@
         <widget name="servicelist" position="30,90" scrollbarMode="showOnDemand" size="670,880" transparent="1"/>
         <eLabel backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" position="80,22" size="620,52" text="Parental control services Editor" transparent="1" valign="center"/>
     </screen>
-    <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title=" ">
+    <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" zPosition="1000" position="0,0" size="1920,1080" title=" ">
         <ePixmap pixmap="holoFHD-light/components/background_large.png" position="0,0" size="1920,1080" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;40" foregroundColor="2ndFG" halign="right" position="1725,22" render="Label" size="150,52" source="global.CurrentTime" transparent="1">
             <convert type="ClockToText"/>

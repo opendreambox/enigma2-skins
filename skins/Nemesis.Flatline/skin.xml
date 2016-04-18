@@ -474,7 +474,7 @@
 		<widget name="key_blue" position="420,0" zPosition="2" size="140,40" valign="center" halign="center" font="keyFont;18" transparent="1" foregroundColor="KeyForeground" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="list" position="0,45" size="560,364" scrollbarMode="showOnDemand" />
 	</screen>
-	<screen name="ChannelSelection" position="center,center" size="560,422" title="Channel Selection" >
+	<screen name="ChannelSelection" zPosition="1000" position="center,center" size="560,422" title="Channel Selection" >
 		<ePixmap name="red" position="0,0" size="140,40" pixmap="Nemesis.Flatline/key-red.png" transparent="1" alphatest="on" />
 		<ePixmap name="green" position="140,0" size="140,40" pixmap="Nemesis.Flatline/key-green.png" transparent="1" alphatest="on" />
 		<ePixmap name="yellow" position="280,0" size="140,40" pixmap="Nemesis.Flatline/key-yellow.png" transparent="1" alphatest="on" />

@@ -2039,7 +2039,7 @@
 		<widget name="activityslider" position="50,670" size="1194,6" pixmap="BrushedAlu-HD/slider100.png" transparent="1" />
 	</screen>
 	<!-- Sonstiges -->
-	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
+	<screen name="ChannelSelection" zPosition="1000" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="BrushedAlu-HD/menu/menu2.png" transparent="1" />
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" foregroundColor="grey" backgroundColor="black" shadowColor="black" shadowOffset="2,2" transparent="1">
 			<convert type="ClockToText">Default</convert>

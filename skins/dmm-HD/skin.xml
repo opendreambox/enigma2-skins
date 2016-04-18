@@ -774,7 +774,7 @@
 		<widget name="menu" 			position="490,160"	size="702,450" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 		<eLabel 						position="70,627" 	size="1140,1"  backgroundColor="grey" />
 	</screen>
-	<screen name="ChannelSelection" 			position="0,0"		size="1280,720"	title="Channel Selection"			flags="wfNoBorder">
+	<screen name="ChannelSelection" zPosition="1000" 			position="0,0"		size="1280,720"	title="Channel Selection"			flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="dmm-HD/menu/back-main.png" />
 		<eLabel text="Channel Selection" position="80,40" size="1000,40" font="Regular;34" backgroundColor="darkgrey" transparent="1"/>
 		<widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="darkgrey" transparent="1">

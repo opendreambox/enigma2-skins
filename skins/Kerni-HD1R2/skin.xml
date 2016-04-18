@@ -571,7 +571,7 @@
 		<ePixmap pixmap="Kerni-HD1R2/buttons/yellow.png" position="650,635" size="24,24" alphatest="on" />
 		<ePixmap pixmap="Kerni-HD1R2/buttons/blue.png" position="940,635" size="24,24" alphatest="on" />
 	</screen>
-	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
+	<screen name="ChannelSelection" zPosition="1000" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Kerni-HD1R2/menu/back2.png" />
 		<eLabel position="800,120" size="430,244" zPosition="2" backgroundColor="white" />
 		<widget source="session.VideoPicture" render="Pig" position="802,122" size="426,240" zPosition="3" backgroundColor="#ff000000" />

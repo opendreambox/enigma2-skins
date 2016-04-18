@@ -200,7 +200,7 @@
 		<widget name="menu" position="10,10" size="290,225" scrollbarMode="showOnDemand" />
 	</screen>
 	<!-- Channel selection - (tv) -->
-	<screen name="ChannelSelection" position="center,center" size="560,425" title="Channel Selection">
+	<screen name="ChannelSelection" zPosition="1000" position="center,center" size="560,425" title="Channel Selection">
 		<ePixmap position="0,0" pixmap="Nemesis.BlackBox/separator.png" size="560,4" />
 		<ePixmap position="0,4" pixmap="Nemesis.BlackBox/key_red.png" size="140,30" alphatest="on" />
 		<ePixmap position="140,4" pixmap="Nemesis.BlackBox/key_green.png" size="140,30" alphatest="on" />

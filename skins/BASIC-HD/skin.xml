@@ -677,7 +677,7 @@
 	</screen>
 
 	<!-- Channel selection - TV -->
-	<screen name="ChannelSelection" position="140,100" size="1000,550" title="Channel Selection">
+	<screen name="ChannelSelection" zPosition="1000" position="140,100" size="1000,550" title="Channel Selection">
 		<ePixmap position="12,4" size="235,32" pixmap="BASIC-HD/button/button_red.png" alphatest="on" />
 		<ePixmap position="259,4" size="235,32" pixmap="BASIC-HD/button/button_green.png" alphatest="on" />
 		<ePixmap position="506,4" size="235,32" pixmap="BASIC-HD/button/button_yellow.png" alphatest="on" />
