@@ -1,7 +1,5 @@
 <default>
 	<prerequisites>
-		<hardware type="dm7080" />
-		<hardware type="dm820" />
 		<tag type="Skin" />
 	</prerequisites>
 	<info>
