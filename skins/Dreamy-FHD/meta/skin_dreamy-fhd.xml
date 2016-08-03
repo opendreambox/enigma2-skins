@@ -1,0 +1,17 @@
+<default>
+	<prerequisites>
+		<tag type="Skin" />
+	</prerequisites>
+	<info>
+		<author>Dreamy</author>
+		<name>Dreamy-FHD</name>
+		<packagename>enigma2-skin-dreamy-fhd</packagename>
+		<shortdescription>Dreamy-FHD skin</shortdescription>
+		<description>Dreamy FullHD skin</description>
+		<screenshot src="http://www.dreamboxupdate.com/preview/skin_dreamy-fhd.jpg" />
+	</info>
+
+	<files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-dreamy-fhd" />
+	</files>
+</default>
