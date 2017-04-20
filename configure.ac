@@ -1,9 +1,5 @@
-AC_INIT([enigma2-skins],3.0.0,[enigma2-devel@lists.elitedvb.net])
+AC_INIT([enigma2-skins],4.3.0,[https://github.com/opendreambox/enigma2-skins/issues])
 AM_INIT_AUTOMAKE([foreign])
-
-# Silent rules are available since 1.11, but older versions
-# are still in use. So don't use them unconditionally.
-m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 AM_PATH_PYTHON
 

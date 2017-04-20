@@ -2,8 +2,7 @@ Makefile
 Makefile.in
 aclocal.m4
 autom4te.cache/
-config.log
-config.status
+config.*
 configure
 index-enigma2-skins.xml
 install-sh
