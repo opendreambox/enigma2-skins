@@ -207,7 +207,7 @@
         <sub font="Regular;60" foregroundColor="pink" name="Subtitle_Italic" shadowColor="#40101010" shadowOffset="3,3"/>
     </subtitles>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,130" size="1920,950" title="InfoBar">
-        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="1" size="300,180" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="stretch" size="300,180" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;26" halign="center" position="1630,13" render="Label" size="270,30" source="global.CurrentTime" transparent="1" valign="center">
             <convert type="ClockToText">Format: %A</convert>
         </widget>
@@ -233,47 +233,47 @@
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" position="1800,895" render="Label" size="100,30" source="session.FrontendStatus" transparent="1">
             <convert type="FrontendInfo">BER</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_hd_off.png" position="1080,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_hd_on.png" position="1080,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_hd_off.png" position="1080,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_hd_on.png" position="1080,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">VideoWidth</convert>
             <convert type="ValueRange">721,1980</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_off.png" position="1240,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_on.png" position="1240,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_off.png" position="1240,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_on.png" position="1240,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">IsMultichannel</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_format_off.png" position="1160,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_format_on.png" position="1160,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_format_off.png" position="1160,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_format_on.png" position="1160,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">IsWidescreen</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_txt_off.png" position="1400,705" scale="1" size="64,30" zPosition="1"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_txt_on.png" position="1400,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="2">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_txt_off.png" position="1400,705" scale="stretch" size="64,30" zPosition="1"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_txt_on.png" position="1400,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="2">
             <convert type="ServiceInfo">HasTelext</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_crypt_off.png" position="1320,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_crypt_on.png" position="1320,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_crypt_off.png" position="1320,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_crypt_on.png" position="1320,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">IsCrypted</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_sub_off.png" position="1560,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_sub_on.png" position="1560,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_sub_off.png" position="1560,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_sub_on.png" position="1560,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">SubservicesAvailable</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_off.png" position="1480,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_on.png" position="1480,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_off.png" position="1480,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_on.png" position="1480,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">HasSubtitles</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_hbbtv_off.png" position="1640,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_hbbtv_on.png" position="1640,705" render="Pixmap" scale="1" size="64,30" source="HbbtvApplication" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_hbbtv_off.png" position="1640,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_hbbtv_on.png" position="1640,705" render="Pixmap" scale="stretch" size="64,30" source="HbbtvApplication" zPosition="1">
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget alphatest="on" position="110,754" render="Picon" scale="1" size="200,120" source="session.CurrentService">
+        <widget alphatest="on" position="110,754" render="Picon" scale="stretch" size="200,120" source="session.CurrentService">
             <convert type="ServiceName">Reference</convert>
         </widget>
         <widget backgroundColor="background" font="Regular;30" foregroundColor="3rdFG" position="1725,705" render="FixedLabel" size="40,35" source="session.TunerInfo" text="A" transparent="1">
@@ -316,7 +316,7 @@
             <convert type="ValueRange">3,3</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="22,705" scale="1" size="64,30"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="22,705" scale="stretch" size="64,30"/>
         <widget backgroundColor="background" pixmap="holoFHD-light/icons/ico_rec_on.png" position="22,705" render="Pixmap" size="64,30" source="session.RecordState" transparent="1">
             <convert type="ConditionalShowHide">Blink</convert>
         </widget>
@@ -395,7 +395,7 @@
         </widget>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="DVDPlayer" position="0,130" size="1920,950" title="InfoBar">
-        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="1" size="300,180" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="stretch" size="300,180" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;26" halign="center" position="1630,13" render="Label" size="270,30" source="global.CurrentTime" transparent="1" valign="center">
             <convert type="ClockToText">Format: %A</convert>
         </widget>
@@ -429,7 +429,7 @@
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="angleLabel" position="1197,705" size="180,33" transparent="1"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/icons/lang.png" position="1385,708" size="51,24"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="audioLabel" position="1437,705" size="180,33" transparent="1"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_sub_on.png" position="1615,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService">
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_sub_on.png" position="1615,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService">
             <convert type="ServiceInfo">HasTelext</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -438,7 +438,7 @@
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/dvd.png" position="45,765" size="105,150"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="DVDPlayerExtended" position="0,130" size="1920,950" title="InfoBar">
-        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="1" size="300,180" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="stretch" size="300,180" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;26" halign="center" position="1630,13" render="Label" size="270,30" source="global.CurrentTime" transparent="1" valign="center">
             <convert type="ClockToText">Format: %A</convert>
         </widget>
@@ -472,7 +472,7 @@
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="angleLabel" position="1197,705" size="180,33" transparent="1"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/icons/lang.png" position="1385,708" size="51,24"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="audioLabel" position="1437,705" size="180,33" transparent="1"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_sub_on.png" position="1615,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService">
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_sub_on.png" position="1615,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService">
             <convert type="ServiceInfo">HasTelext</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -482,7 +482,7 @@
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/dvd.png" position="35,765" size="105,150"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayer" position="0,130" size="1920,950" title="InfoBar">
-        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="1" size="300,180" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="stretch" size="300,180" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;26" halign="center" position="1630,13" render="Label" size="270,30" source="global.CurrentTime" transparent="1" valign="center">
             <convert type="ClockToText">Format: %A</convert>
         </widget>
@@ -497,24 +497,24 @@
         <widget backgroundColor="background" font="Regular;37" foregroundColor="foreground" halign="center" noWrap="1" position="324,800" render="Label" size="1275,45" source="session.CurrentService" transparent="1" valign="center">
             <convert type="ServiceName">Name</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_off.png" position="1160,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_on.png" position="1160,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_off.png" position="1160,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_on.png" position="1160,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">IsMultichannel</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_format_off.png" position="1240,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_format_on.png" position="1240,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_format_off.png" position="1240,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_format_on.png" position="1240,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">IsWidescreen</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_hd_off.png" position="1320,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_hd_on.png" position="1320,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_hd_off.png" position="1320,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_hd_on.png" position="1320,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">VideoWidth</convert>
             <convert type="ValueRange">721,1980</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_off.png" position="1400,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_on.png" position="1400,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_off.png" position="1400,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_on.png" position="1400,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">HasSubtitles</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -532,7 +532,7 @@
         <widget backgroundColor="background" position="555,767" progress_pointer="holoFHD-light/components/pointer.png:20,3" render="PositionGauge" size="814,23" source="session.CurrentService" transparent="1" zPosition="1">
             <convert type="ServicePosition">Gauge</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="22,705" scale="1" size="64,30"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="22,705" scale="stretch" size="64,30"/>
         <widget backgroundColor="background" pixmap="holoFHD-light/icons/ico_rec_on.png" position="22,705" render="Pixmap" size="64,30" source="session.RecordState" transparent="1">
             <convert type="ConditionalShowHide">Blink</convert>
         </widget>
@@ -541,7 +541,7 @@
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_info.png" position="1820,704" size="60,30"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayerExtended" position="0,130" size="1920,950" title="InfoBar">
-        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="1" size="300,180" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_clock.png" position="1620,0" scale="stretch" size="300,180" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;26" halign="center" position="1630,13" render="Label" size="270,30" source="global.CurrentTime" transparent="1" valign="center">
             <convert type="ClockToText">Format: %A</convert>
         </widget>
@@ -557,24 +557,24 @@
             <convert type="ServiceName">Name</convert>
         </widget>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="foreground" halign="center" name="ShortDesc" noWrap="1" position="324,845" size="1275,35" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_off.png" position="1160,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_on.png" position="1160,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_off.png" position="1160,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_dolby_on.png" position="1160,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">IsMultichannel</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_format_off.png" position="1240,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_format_on.png" position="1240,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_format_off.png" position="1240,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_format_on.png" position="1240,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">IsWidescreen</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_hd_off.png" position="1320,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_hd_on.png" position="1320,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_hd_off.png" position="1320,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_hd_on.png" position="1320,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">VideoWidth</convert>
             <convert type="ValueRange">721,1980</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_off.png" position="1400,705" scale="1" size="64,30"/>
-        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_on.png" position="1400,705" render="Pixmap" scale="1" size="64,30" source="session.CurrentService" zPosition="1">
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_off.png" position="1400,705" scale="stretch" size="64,30"/>
+        <widget alphatest="on" pixmap="holoFHD-light/icons/ico_subtitle_on.png" position="1400,705" render="Pixmap" scale="stretch" size="64,30" source="session.CurrentService" zPosition="1">
             <convert type="ServiceInfo">HasSubtitles</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -592,7 +592,7 @@
         <widget backgroundColor="background" position="555,767" progress_pointer="holoFHD-light/components/pointer.png:20,3" render="PositionGauge" size="814,23" source="session.CurrentService" transparent="1" zPosition="1">
             <convert type="ServicePosition">Gauge</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="22,705" scale="1" size="64,30"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="22,705" scale="stretch" size="64,30"/>
         <widget backgroundColor="background" pixmap="holoFHD-light/icons/ico_rec_on.png" position="22,705" render="Pixmap" size="64,30" source="session.RecordState" transparent="1">
             <convert type="ConditionalShowHide">Blink</convert>
         </widget>
@@ -692,7 +692,7 @@
         <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" size="730,1080" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" position="80,22" render="Label" size="620,52" source="Title" transparent="1" valign="center"/>
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="30,85" scrollbarMode="showOnDemand" size="670,440" transparent="1"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="20,530" scale="1" size="680,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="20,530" scale="stretch" size="680,2"/>
         <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="center" name="info" position="20,950" size="670,40" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" name="details_hint" position="220,1000" size="480,70" transparent="1"/>
         <ePixmap alphatest="blend" pixmap="holoFHD-light/images/buttons/key_blue.png" position="45,1015" size="10,30"/>
@@ -908,7 +908,7 @@
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_red.png" position="30,995" size="10,30"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_green.png" position="30,1030" size="10,30"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_yellow.png" position="365,995" size="10,30"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,840" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,840" scale="stretch" size="670,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,995" render="Label" size="270,30" source="key_red" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,1030" render="Label" size="270,30" source="key_green" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="390,995" render="Label" size="270,30" source="key_yellow" transparent="1" valign="center"/>
@@ -944,7 +944,7 @@
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,1000" render="Label" size="270,60" source="key_red" transparent="1" valign="center"/>
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="30,85" scrollbarMode="showOnDemand" size="670,720" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="390,1000" render="Label" size="270,60" source="key_green" transparent="1" valign="center"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,835" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,835" scale="stretch" size="670,2"/>
         <widget backgroundColor="background" enableWrapAround="1" font="Regular;26" foregroundColor="2ndFG" halign="center" position="30,845" scrollbarMode="showOnDemand" size="670,135" source="help" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="AudioConfigurationPlus" position="0,0" size="1080,1080" title="">
@@ -961,7 +961,7 @@
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="30,85" scrollbarMode="showOnDemand" size="1020,720" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="AudioSelection" position="0,0" size="820,1080" title="">
-        <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" scale="1" size="820,1080" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" scale="stretch" size="820,1080" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" position="80,22" render="Label" size="620,52" source="Title" transparent="1" valign="center"/>
         <widget alphatest="on" pixmap="holoFHD-light/images/buttons/key_red.png" position="30,100" render="Pixmap" size="10,30" source="key_red">
             <convert type="ConditionalShowHide"/>
@@ -976,7 +976,7 @@
             <convert type="ConditionalShowHide"/>
         </widget>
         <widget backgroundColor="background" itemHeight="45" name="config" position="72,96" scrollbarMode="showOnDemand" size="630,180" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,285" scale="1" size="760,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,285" scale="stretch" size="760,2"/>
         <widget backgroundColor="background" position="30,295" render="Listbox" scrollbarMode="showOnDemand" size="760,600" source="streams" transparent="1">
             <convert type="TemplatedMultiContent">
 				{"templates":
@@ -1042,7 +1042,7 @@
         <widget backgroundColor="background" font="Regular;26" halign="center" position="60,97" render="Label" size="195,97" source="legend1" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" halign="center" position="480,94" render="Label" size="600,97" source="legend2" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" halign="center" position="1290,94" render="Label" size="180,97" source="legend3" transparent="1" valign="center"/>
-        <ePixmap backgroundColor="3rdFG" pixmap="holoFHD-light/components/line.png" position="75,202" scale="1" size="1395,2"/>
+        <ePixmap backgroundColor="3rdFG" pixmap="holoFHD-light/components/line.png" position="75,202" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" enableWrapAround="1" position="45,217" render="Listbox" scrollbarMode="showOnDemand" size="1455,540" source="config" transparent="1">
             <convert type="TemplatedMultiContent">
 			{"template":[
@@ -1069,7 +1069,7 @@
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="45,95" scrollbarMode="showOnDemand" size="1230,540" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,652" scale="1" size="1170,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,652" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="45,664" render="Label" size="1230,144" source="help" transparent="1" valign="center"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerEditor" position="center,center" size="1320,900" title="Edit AutoTimer">
@@ -1087,7 +1087,7 @@
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="670,817" render="Label" size="270,60" source="key_yellow" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="970,816" render="Label" size="300,60" source="key_blue" transparent="1" valign="center"/>
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="45,95" scrollbarMode="showOnDemand" size="1230,585" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,697" scale="1" size="1170,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,697" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="45,709" render="Label" size="1230,108" source="help" transparent="1" valign="center"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerFilterEditor" position="center,center" size="1320,900" title="Edit AutoTimer Filters">
@@ -1325,7 +1325,7 @@
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,1000" render="Label" size="300,60" source="key_red" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="390,1000" render="Label" size="320,60" source="key_green" transparent="1" valign="center"/>
         <widget backgroundColor="background" itemHeight="45" name="list" position="30,85" scrollbarMode="showOnDemand" size="670,800" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="670,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="30,920" render="Label" size="670,70" source="introduction" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="CDInfo" position="center,center" size="1545,900" title="CDInfo">
@@ -1342,9 +1342,9 @@
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" font="Regular;26" position="45,82" render="Label" size="1455,90" source="info" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,180" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,180" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" name="config" position="45,195" scrollbarMode="showOnDemand" size="1455,360" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,570" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,570" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" position="45,585" render="Label" size="1455,144" source="info2" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="CecConfig" position="0,0" size="1080,1080" title="">
@@ -1374,7 +1374,7 @@
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" noWrap="1" position="45,22" render="Label" size="1650,52" source="Title" transparent="1" valign="center"/>
-        <ePixmap pixmap="holoFHD-light/components/line_v.png" position="1282,82" scale="1" size="1,900"/>
+        <ePixmap pixmap="holoFHD-light/components/line_v.png" position="1282,82" scale="stretch" size="1,900"/>
         <widget additionalInfoFont="Regular;26" backgroundColor="background" colorEventProgressbar="2ndFG" colorEventProgressbarBorder="3rdFG" colorEventProgressbarBorderSelected="white" colorEventProgressbarSelected="foreground" colorServiceDescription="2ndFG" colorServiceDescriptionSelected="foreground" foregroundColorServiceNotAvail="3rdFG" name="list" position="45,85"
             scrollbarMode="showOnDemand" serviceInfoFont="Regular;26" serviceItemHeight="36" serviceNameFont="Regular;27" serviceNumberFont="Regular;26" size="1230,900" transparent="1"/>
         <widget backgroundColor="background" font="Regular;28" foregroundColor="foreground" position="1296,93" render="Label" size="391,45" source="ServiceEvent" transparent="1">
@@ -1455,7 +1455,7 @@
         <widget backgroundColor="background" enableWrapAround="1" itemHeight="40" name="menu" position="35,92" scrollbarMode="showOnDemand" size="660,900" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="ChoiceBox" position="0,0" size="820,1080">
-        <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" scale="1" size="820,1080" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" scale="stretch" size="820,1080" zPosition="-1"/>
         <eLabel backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" halign="left" position="80,22" size="620,52" text="Input" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" halign="left" name="text" position="30,90" size="735,150" transparent="1" valign="bottom"/>
         <widget backgroundColor="background" enableWrapAround="1" name="list" position="30,255" scrollbarMode="showOnDemand" size="760,720" transparent="1"/>
@@ -1472,11 +1472,11 @@
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="575,995" render="Label" size="450,30" source="key_yellow" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="575,1030" render="Label" size="450,30" source="key_blue" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" position="30,100" render="Label" size="1020,40" source="CAidList_desc" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,150" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,150" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" position="30,165" render="Label" size="1020,135" source="CAidList" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,322" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,322" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" position="30,345" render="Label" size="1020,40" source="ServiceList_desc" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,405" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,405" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" name="ServiceList" position="30,430" scrollbarMode="showOnDemand" size="1020,520" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" position="30,430" render="Label" size="1020,520" source="ServiceList_info" transparent="1"/>
     </screen>
@@ -1511,7 +1511,7 @@
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,1000" render="Label" size="320,60" source="key_red" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="390,1000" render="Label" size="320,60" source="key_green" transparent="1" valign="center"/>
         <widget backgroundColor="background" name="config" position="30,85" scrollbarMode="showOnDemand" size="670,800" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="670,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="30,920" render="Label" size="670,70" source="status" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="CrashlogAutoSubmitConfiguration" position="0,0" size="1080,1080" title="CrashlogAutoSubmit settings...">
@@ -1524,7 +1524,7 @@
         <widget alphatest="on" name="VKeyIcon" pixmap="holoFHD-light/images/buttons/key_text.png" position="980,1015" size="60,30"/>
         <widget backgroundColor="background" name="config" position="30,85" scrollbarMode="showOnDemand" size="1020,800" transparent="1"/>
         <widget name="HelpWindow" position="507,660"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="1020,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="1020,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="30,920" render="Label" size="1020,70" source="status" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="CutListEditor" position="0,0" size="1920,1080" title="Cutlist editor">
@@ -1636,7 +1636,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,1030" render="Label" size="320,30" source="key_green" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="390,995" render="Label" size="320,30" source="key_yellow" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" position="30,85" render="Label" size="670,80" source="ServiceList_desc" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,172" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,172" scale="stretch" size="670,2"/>
         <widget backgroundColor="background" itemHeight="45" name="ServiceList" position="30,172" scrollbarMode="showOnDemand" size="670,800" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" position="30,182" render="Label" size="670,800" source="ServiceList_info" transparent="1"/>
     </screen>
@@ -1712,7 +1712,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="565,995" render="Label" size="400,30" source="key_yellow" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="565,1030" render="Label" size="400,30" source="key_blue" transparent="1" valign="center"/>
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="30,85" scrollbarMode="showOnDemand" size="1020,800" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="1020,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="1020,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="30,920" render="Label" size="1020,70" source="help" transparent="1" valign="center"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGRefreshServiceEditor" position="center,center" size="1320,900" title="Edit Services to refresh">
@@ -1767,7 +1767,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget font="Regular;26" foregroundColor="3rdFG" halign="left" position="395,1000" render="Label" size="300,60" source="ButtonBluetext" transparent="1" valign="center" zPosition="5"/>
     </screen>
     <screen flags="wfNoBorder" name="eHueAutoSceneConfig" position="0,0" size="780,1080" title="eHue Auto Scene">
-        <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" scale="1" size="780,1080" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_menu.png" position="0,0" scale="stretch" size="780,1080" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" position="80,22" render="Label" size="620,52" source="Title" transparent="1" valign="center"/>
         <widget backgroundColor="background" name="config" position="30,85" scrollbarMode="showOnDemand" size="720,810" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" name="msg" position="30,930" size="670,60" transparent="1" valign="center" zPosition="2"/>
@@ -1952,7 +1952,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" font="Regular;30" foregroundColor="2ndFG" halign="center" name="consideration" position="45,90" size="1455,35" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,135" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,135" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="45,150" scrollbarMode="showOnDemand" size="1455,640" transparent="1"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_menu.png" position="1350,832" size="60,30"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_info.png" position="1440,832" size="60,30"/>
@@ -1972,7 +1972,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" name="statusbar" position="45,82" size="1455,42" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,135" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,135" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" enableWrapAround="1" position="60,150" render="Listbox" scrollbarMode="showOnDemand" size="1455,640" source="entries" transparent="1">
             <convert type="TemplatedMultiContent">
 			{"template":[
@@ -2032,7 +2032,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         </widget>
         <ePixmap alphatest="on" name="red" pixmap="holoFHD-light/images/buttons/key_red.png" position="45,832" size="10,30"/>
         <ePixmap alphatest="on" name="green" pixmap="holoFHD-light/images/buttons/key_green.png" position="345,832" size="10,30"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,645" scale="1" size="1170,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,645" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="kRed" position="70,817" size="270,60" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="kGreen" position="370,817" size="270,60" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" halign="center" name="infotext" position="45,90" size="1230,300" transparent="1" valign="center"/>
@@ -2070,9 +2070,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="grey" position="45,123" render="Label" size="1830,270" source="Event" transparent="1">
             <convert type="EventName">ExtendedDescription</convert>
         </widget>
-        <ePixmap pixmap="holoFHD-light/components/line3.png" position="30,396" scale="1" size="1860,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line3.png" position="30,396" scale="stretch" size="1860,2"/>
         <widget name="timeline_text" position="0,406" selectionDisabled="1" size="1920,39" transparent="1"/>
-        <ePixmap pixmap="holoFHD-light/components/line3.png" position="30,439" scale="1" size="1860,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line3.png" position="30,439" scale="stretch" size="1860,2"/>
         <widget EntryActiveBackgroundColor="2ndFG" EntryActiveBackgroundColorSelected="background" EntryBackgroundColor="background" EntryBackgroundColorSelected="2ndFG" EntryBorderColor="grey" backgroundColor="background" foregroundColorSelected="foreground" itemHeight="90" name="list" position="45,445" scrollbarMode="showOnDemand" size="1830,540" transparent="1"/>
         <widget alphatest="on" name="timeline_now" pixmap="holoFHD-light/components/timeline-now.png" position="0,442" size="28,546" zPosition="1"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="1225,1010" render="Label" size="480,40" source="Event" transparent="1" valign="center">
@@ -2115,7 +2115,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
 					"fonts":[gFont("Regular",26),gFont("Regular",24) ],"itemHeight":70}
 			</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="1020,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="1020,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="200,920" render="Label" size="670,70" source="introduction" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskDriveSetup" position="0,0" size="1080,1080" title="HarddiskDriveSetup">
@@ -2134,7 +2134,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;34" position="30,255" render="Label" size="670,45" source="bus" transparent="1"/>
         <widget backgroundColor="background" name="config" position="30,340" scrollbarMode="showOnDemand" size="1020,120" transparent="1"/>
         <widget name="HelpWindow" position="55,622"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="1020,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="1020,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="200,920" render="Label" size="670,70" source="introduction" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskMountpointBrowser" position="0,0" size="1080,1080" title="">
@@ -2260,7 +2260,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;28" name="headertext" position="45,90" size="825,70" transparent="1"/>
         <widget backgroundColor="background" name="list" position="45,170" scrollbarMode="showOnDemand" size="825,720" transparent="1"/>
         <ePixmap pixmap="holoFHD-light/components/line_v.png" position="880,85" size="2,820"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="40,910" scale="1" size="1840,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="40,910" scale="stretch" size="1840,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="statustext" position="45,920" size="1830,65" transparent="1"/>
         <widget name="cover" position="1170,250" size="300,300" transparent="1"/>
         <eLabel backgroundColor="background" font="Regular;26" foregroundColor="blue_grey" name="stationCap" position="885,100" size="127,45" text="Station :" transparent="1"/>
@@ -2394,7 +2394,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,1000" render="Label" size="320,60" source="key_red" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="390,1015" render="Label" size="320,60" source="key_green" transparent="1" valign="center"/>
         <widget backgroundColor="background" itemHeight="45" name="list" position="30,85" scrollbarMode="showOnDemand" size="1020,800" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="1020,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="1020,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="30,920" render="Label" size="1020,70" source="introduction" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="IPKGMenu" position="0,0" size="730,1080" title="">
@@ -2480,14 +2480,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_green" position="407,712" size="300,60" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_yellow" position="775,712" size="300,60" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_blue" position="1142,712" size="300,60" transparent="1" valign="center"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="45,697" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="45,697" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" name="text" position="15,12" size="1455,37" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="45,105" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="45,105" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" name="target" position="15,57" size="1455,37" transparent="1"/>
         <widget backgroundColor="background" name="filelist" position="15,117" scrollbarMode="showOnDemand" selectionDisabled="1" size="1455,320" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="45,450" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="45,450" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" name="textbook" position="15,462" size="1455,37" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="45,510" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="45,510" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" itemHeight="40" name="booklist" position="15,525" scrollbarMode="showOnDemand" size="1455,162" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="mediaInfoConfigScreen" position="0,0" size="730,1080" title="MediaInfo">
@@ -2661,7 +2661,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" itemHeight="45" name="list" position="45,95" scrollbarMode="showOnDemand" size="1455,630" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,750" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,750" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="45,762" render="Label" size="1455,40" source="introduction" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="myProviderSelection" position="center,center" size="1545,900" title="Select provider to add...">
@@ -2679,7 +2679,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" itemHeight="45" name="list" position="45,95" scrollbarMode="showOnDemand" size="1455,630" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,750" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,750" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="45,762" render="Label" size="1455,40" source="introduction" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="MMIDialog" position="center,center" size="1320,900" title="Common interface">
@@ -2689,9 +2689,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" font="Regular;26" name="subtitle" position="45,120" size="1230,37" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,172" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,172" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" itemHeight="45" name="entries" position="45,195" scrollbarMode="showOnDemand" size="1230,315" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,528" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,528" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" halign="center" name="bottom" position="45,547" size="1230,37" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieBrowser" position="center,center" size="1545,900" title="Select a movie">
@@ -2920,7 +2920,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
 				</convert>
         </widget>
         <ePixmap pixmap="holoFHD-light/components/line_v.png" position="640,85" size="2,855"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line1.png" position="30,945" scale="1" size="1020,1"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line1.png" position="30,945" scale="stretch" size="1020,1"/>
         <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="center" name="hint" position="30,947" size="1020,45" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="details_label" position="650,90" size="410,37" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="details" position="650,142" size="410,750" transparent="1"/>
@@ -2970,7 +2970,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
     <screen name="NumberZapExt" position="center,center" size="870,170" title="Extended NumberZap">
         <widget font="Regular;35" name="number" position="5,15" size="140,38"/>
         <widget font="Regular;35" halign="left" name="chNum" position="170,15" size="120,38"/>
-        <widget alphatest="on" name="chPicon" position="640,20" scale="1" size="220,132"/>
+        <widget alphatest="on" name="chPicon" position="640,20" scale="stretch" size="220,132"/>
         <widget font="Regular;35" name="channel" position="5,70" size="160,38"/>
         <widget font="Regular;33" halign="left" name="chName" position="170,72" size="460,36"/>
         <widget font="Regular;35" name="bouquet" position="5,120" size="160,38"/>
@@ -3000,7 +3000,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="key_green" position="440,1000" size="350,60" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="key_yellow" position="810,1000" size="350,60" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" name="key_blue" position="1180,1000" size="350,60" transparent="1" valign="center"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line1.png" position="60,922" scale="1" size="1800,1"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line1.png" position="60,922" scale="stretch" size="1800,1"/>
         <widget alphatest="on" name="button_red" pixmap="holoFHD-light/images/buttons/key_red.png" position="45,1015" size="10,30"/>
         <widget alphatest="on" name="button_green" pixmap="holoFHD-light/images/buttons/key_green.png" position="415,1015" size="10,30"/>
         <widget alphatest="on" name="button_yellow" pixmap="holoFHD-light/images/buttons/key_yellow.png" position="785,1015" size="10,30"/>
@@ -3249,7 +3249,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         </widget>
         <widget alphatest="on" name="statuspic" position="45,105" size="72,72"/>
         <widget backgroundColor="background" font="Regular;40" position="195,112" render="Label" size="1035,52" source="author" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,195" scale="1" size="1170,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,195" scale="stretch" size="1170,2"/>
         <widget alphatest="on" name="screenshot" position="60,210" size="480,345"/>
         <widget backgroundColor="background" font="Regular;26" name="detailtext" position="600,210" size="555,585" transparent="1"/>
         <widget name="divpic" position="0,0" size="0,0"/>
@@ -3299,7 +3299,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
 			"fonts":[gFont("Regular",26),gFont("Regular",24) ],"itemHeight":70}
 		</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="1020,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="1020,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="30,920" render="Label" size="1020,70" source="status" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginManagerInfo" position="0,0" size="730,1080" title="Plugin manager activity">
@@ -3319,7 +3319,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
 			"fonts":[gFont("Regular",26),gFont("Regular",24) ],"itemHeight":70}
 		</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="670,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="30,920" render="Label" size="670,70" source="status" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginManagerHelp" position="center,center" size="1320,900" title="Plugin manager help">
@@ -3340,7 +3340,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
 			"fonts":[gFont("Regular",26),gFont("Regular",24) ],"itemHeight":70}
 		</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,750" scale="1" size="1170,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,750" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="45,762" render="Label" size="1230,42" source="status" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginBrowser" position="0,0" size="730,1080" title="Plugin browser">
@@ -3481,7 +3481,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,1000" render="Label" size="320,60" source="key_red" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="390,1000" render="Label" size="320,60" source="key_green" transparent="1" valign="center"/>
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="30,85" scrollbarMode="showOnDemand" size="1020,800" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="1020,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="1020,2"/>
         <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="center" position="30,920" render="Label" size="1020,70" source="introduction" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="RestoreSelectionScreen" position="0,0" size="730,1080" title="Config Manager">
@@ -3501,7 +3501,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_red" position="70,817" size="270,60" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_yellow" position="670,817" size="270,60" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_blue" position="970,817" size="270,60" transparent="1" valign="center"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,150" scale="1" size="1170,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,150" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" font="Regular;26" halign="left" name="name" position="45,95" size="300,45" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" halign="left" name="ip" position="345,97" size="210,45" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" halign="left" name="port" position="555,97" size="120,45" transparent="1"/>
@@ -3548,7 +3548,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <ePixmap pixmap="holoFHD-light/images/buttons/key_menu.png" position="640,1015" size="60,30"/>
     </screen>
     <screen flags="wfNoBorder" name="RemotePlayer" position="0,900" size="1920,180" title="Remote Player">
-        <ePixmap pixmap="holoFHD-light/components/infobar.png" position="0,0" scale="1" size="1920,180" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/infobar.png" position="0,0" scale="stretch" size="1920,180" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;30" name="IP" position="20,9" size="300,35" transparent="1"/>
         <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="center" name="DateTime" position="300,135" size="1320,33" transparent="1"/>
         <widget backgroundColor="background" font="Regular;36" halign="center" name="ServiceName" position="20,70" size="1880,40" transparent="1"/>
@@ -3656,7 +3656,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         </widget>
         <widget backgroundColor="background" font="Regular;26" name="text" position="45,95" size="1230,45" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" name="progress" position="45,165" size="1230,42" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,225" scale="1" size="1170,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,225" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" position="45,240" render="Listbox" scrollbarMode="showOnDemand" size="750,520" source="list" transparent="1">
             <convert type="TemplatedMultiContent">
 			{"template":[ MultiContentEntryText(pos=(0,0),size=(750,40),flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER,text=0) 
@@ -3698,7 +3698,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
             <convert type="FrontendInfo">LOCK</convert>
             <convert type="ConditionalShowHide">Invert</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,330" scale="1" size="1170,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,330" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" name="config" position="180,360" scrollbarMode="showOnDemand" size="900,450" transparent="1"/>
         <ePixmap alphatest="on" pixmap="skin_default/icons/dish_scan.png" position="1095,105" size="178,165"/>
     </screen>
@@ -3769,7 +3769,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="center" name="footer" position="30,995" size="670,70" transparent="1" valign="center"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,130" size="1620,680" title="Infobar">
-        <ePixmap pixmap="holoFHD-light/components/background_medium.png" position="0,0" scale="1" size="1620,680" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_medium.png" position="0,0" scale="stretch" size="1620,680" zPosition="-1"/>
         <eLabel backgroundColor="background" font="Regular;32" foregroundColor="foreground" halign="left" position="30,20" size="120,45" text="NOW" transparent="1"/>
         <widget backgroundColor="background" font="Regular;32" foregroundColor="foreground" halign="left" position="170,20" render="Label" size="90,45" source="session.Event_Now" transparent="1">
             <convert type="EventTime">StartTime</convert>
@@ -3786,7 +3786,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;29" foregroundColor="3rdFG" position="30,63" render="Label" size="1560,270" source="session.Event_Now" transparent="1" valign="top">
             <convert type="EventName">ExtendedDescription</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="50,340" scale="1" size="1520,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="50,340" scale="stretch" size="1520,2"/>
         <eLabel backgroundColor="background" font="Regular;31" foregroundColor="foreground" halign="left" position="30,350" size="165,40" text="NEXT" transparent="1"/>
         <widget backgroundColor="background" font="Regular;31" foregroundColor="foreground" halign="left" position="200,350" render="Label" size="90,40" source="session.Event_Next" transparent="1">
             <convert type="EventTime">StartTime</convert>
@@ -4101,7 +4101,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" position="420,375" render="Label" size="630,40" source="partition" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" position="420,420" render="Label" size="630,40" source="partition_capacity" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" position="420,465" render="Label" size="630,40" source="filesystem" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,750" scale="1" size="1170,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,750" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" font="Regular;37" foregroundColor="2ndFG" halign="center" position="45,757" render="Label" size="1230,42" source="introduction" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="SubservicesQuickzap" position="00,810" size="1920,270" title="Subservices Quickzap">
@@ -4161,7 +4161,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" halign="left" position="67,19" render="Label" size="288,45" source="global.CurrentTime" transparent="1" valign="center">
             <convert type="ClockToText">Format: %a,%d.%m. %H:%M</convert>
         </widget>
-        <widget alphatest="on" position="195,90" render="Picon" scale="1" size="150,90" source="session.CurrentService">
+        <widget alphatest="on" position="195,90" render="Picon" scale="stretch" size="150,90" source="session.CurrentService">
             <convert type="ServiceName">Reference</convert>
         </widget>
         <ePixmap alphatest="on" pixmap="holoFHD-light/icons/ico_rec_off.png" position="442,30" size="51,24"/>
@@ -4200,7 +4200,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_g" position="55,1030" size="300,30" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_y" position="390,995" size="300,30" transparent="1" valign="center"/>
         <widget backgroundColor="background" name="config" position="30,85" scrollbarMode="showOnDemand" size="670,680" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,775" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,775" scale="stretch" size="670,2"/>
         <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="center" name="label" position="30,785" size="670,200" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="TeleTextFavoritesMenu" position="0,0" size="730,1080" title="TeleText Favorites Menu">
@@ -4442,7 +4442,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         </widget>
         <widget backgroundColor="background" font="Regular;26" position="45,96" render="Label" size="1200,66" source="title_label" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" name="error_label" position="45,96" render="Label" size="1200,66" transparent="1" zPosition="3"/>
-        <ePixmap backgroundColor="background" pixmap="holoFHD-light/components/line.png" position="75,162" scale="1" size="1395,2"/>
+        <ePixmap backgroundColor="background" pixmap="holoFHD-light/components/line.png" position="75,162" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" position="45,168" render="Listbox" scrollbarMode="showOnDemand" size="1455,480" source="titles" transparent="1">
             <convert type="TemplatedMultiContent">
 				{"template": [
@@ -4457,7 +4457,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
 				}
 			</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,657" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,657" scale="stretch" size="1395,2"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_menu.png" position="45,670" size="60,30"/>
         <widget backgroundColor="background" font="Regular;26" halign="left" position="195,666" render="Label" size="1200,39" source="hint" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" halign="left" name="medium_label" position="135,705" size="1200,39" transparent="1"/>
@@ -4501,7 +4501,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" name="config" position="45,95" scrollbarMode="showOnDemand" size="1455,495" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,615" scale="1" size="1395,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="75,615" scale="stretch" size="1395,2"/>
         <widget backgroundColor="background" font="Regular;26" position="45,645" render="Label" size="1455,150" source="info" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="TitleCutter" position="0,0" size="1920,1080" title="Title Cutter">
@@ -4544,7 +4544,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_green.png" position="365,1015" size="10,30"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_red" position="55,1000" size="270,60" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" name="key_green" position="390,1000" size="270,60" transparent="1" valign="center"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="670,2"/>
     </screen>
     <screen backgroundColor="background" flags="wfNoBorder" name="TunerState" padding="20" position="0,0" size="1920,35" spacing="15">
         <widget alphatest="on" name="Type" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/record.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/stream.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/finished.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/info.png" position="0,0" size="32,35"/>
@@ -4600,7 +4600,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
 			"fonts":[gFont("Regular",26) ],"itemHeight":40}
 		</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,770" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,770" scale="stretch" size="670,2"/>
         <widget backgroundColor="background" foregroundColor="2ndFG" position="30,780" render="Listbox" scrollbarMode="showNever" selectionDisabled="1" size="670,170" source="menu" transparent="1">
             <convert type="TemplatedMultiContent">
 			{"template":[
@@ -4742,7 +4742,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
             <convert type="ValueToPixmap">LanguageCode</convert>
         </widget>
         <widget backgroundColor="background" font="Regular;40" halign="center" name="header" noWrap="1" position="45,95" size="1230,52" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="skin_default/vkey_text.png" position="247,165" scale="1" size="813,78"/>
+        <ePixmap alphatest="on" pixmap="skin_default/vkey_text.png" position="247,165" scale="stretch" size="813,78"/>
         <widget backgroundColor="background" font="Regular;40" halign="right" name="text" noWrap="1" position="252,172" size="804,60" transparent="1"/>
         <widget backgroundColor="background" name="list" position="185,300" selectionDisabled="1" size="950,320" transparent="1"/>
     </screen>
@@ -4760,7 +4760,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="55,1030" render="Label" size="450,30" source="key_green" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="575,1030" render="Label" size="450,30" source="key_blue" transparent="1" valign="center"/>
         <widget backgroundColor="background" enableWrapAround="1" name="config" position="30,85" scrollbarMode="showOnDemand" size="1020,880" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,860" scale="1" size="1020,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,860" scale="stretch" size="1020,2"/>
         <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="center" position="30,880" render="Label" size="1020,110" source="help" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="VPS_Screen_Info" position="0,0" size="730,1080" title="">
@@ -4769,7 +4769,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;28" name="text" position="30,85" size="670,880" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="WebIfConfigScreen" position="0,0" size="1300,1080" title="">
-        <ePixmap pixmap="holoFHD-light/components/background_menu_large.png" position="0,0" scale="1" size="1300,1080" zPosition="-1"/>
+        <ePixmap pixmap="holoFHD-light/components/background_menu_large.png" position="0,0" scale="stretch" size="1300,1080" zPosition="-1"/>
         <widget backgroundColor="background" font="Regular;33" foregroundColor="2ndFG" position="90,22" render="Label" size="975,52" source="Title" transparent="1" valign="center"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_red.png" position="30,1015" size="10,30"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_green.png" position="365,1015" size="10,30"/>
@@ -4798,7 +4798,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
 			"fonts":[gFont("Regular",26),gFont("Regular",24) ],"itemHeight":80}
 		</convert>
         </widget>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="1" size="1020,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,900" scale="stretch" size="1020,2"/>
         <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" halign="center" position="30,920" render="Label" size="1020,70" source="info" transparent="1"/>
     </screen>
     <screen backgroundColor="transparent" flags="wfNoBorder" name="WlanStatus" position="0,0" size="730,1080" title="">
@@ -4808,7 +4808,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" position="62,98" render="Label" size="240,48" source="IFtext" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" position="307,99" render="Label" size="390,48" source="IF" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;28" foregroundColor="2ndFG" position="30,530" render="Label" size="670,70" source="Statustext" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,150" scale="1" size="670,2"/>
+        <ePixmap alphatest="on" pixmap="holoFHD-light/components/line.png" position="30,150" scale="stretch" size="670,2"/>
         <widget backgroundColor="background" font="Regular;28" position="30,165" render="Label" size="670,42" source="LabelBSSID" transparent="1"/>
         <widget backgroundColor="background" font="Regular;28" position="30,225" render="Label" size="670,42" source="LabelESSID" transparent="1"/>
         <widget backgroundColor="background" font="Regular;28" position="30,285" render="Label" size="670,42" source="LabelQuality" transparent="1"/>
@@ -4848,8 +4848,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="foreground" halign="left" noWrap="1" position="1475,120" render="Label" size="400,40" source="Service" transparent="1" valign="center">
             <convert type="MovieInfo">RecordServiceName</convert>
         </widget>
-        <ePixmap alphatest="blend" pixmap="holoFHD-light/images/cover_backdrop_small.png" position="1265,120" scale="1" size="186,276" transparent="1" zPosition="-1"/>
-        <widget alphatest="blend" name="CoverPreview" position="1268,123" scale="1" size="180,270" zPosition="3"/>
+        <ePixmap alphatest="blend" pixmap="holoFHD-light/images/cover_backdrop_small.png" position="1265,120" scale="stretch" size="186,276" transparent="1" zPosition="-1"/>
+        <widget alphatest="blend" name="CoverPreview" position="1268,123" scale="stretch" size="180,270" zPosition="3"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="1475,170" render="Label" size="400,40" source="Service" transparent="1" valign="center">
             <convert type="ServiceTime">StartTime</convert>
             <convert type="ClockToText">Format:%A %d %B,%Y</convert>
@@ -5019,8 +5019,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="foreground" halign="left" noWrap="1" position="1475,120" render="Label" size="400,40" source="Service" transparent="1" valign="center">
             <convert type="MovieInfo">RecordServiceName</convert>
         </widget>
-        <ePixmap alphatest="blend" pixmap="holoFHD-light/images/cover_backdrop_small.png" position="1265,120" scale="1" size="186,276" transparent="1" zPosition="-1"/>
-        <widget alphatest="blend" name="CoverPreview" position="1268,123" scale="1" size="180,270" zPosition="3"/>
+        <ePixmap alphatest="blend" pixmap="holoFHD-light/images/cover_backdrop_small.png" position="1265,120" scale="stretch" size="186,276" transparent="1" zPosition="-1"/>
+        <widget alphatest="blend" name="CoverPreview" position="1268,123" scale="stretch" size="180,270" zPosition="3"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="1475,170" render="Label" size="400,40" source="Service" transparent="1" valign="center">
             <convert type="ServiceTime">StartTime</convert>
             <convert type="ClockToText">Format:%A %d %B,%Y</convert>
@@ -5191,8 +5191,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="foreground" halign="left" noWrap="1" position="1475,120" render="Label" size="400,40" source="Service" transparent="1" valign="center">
             <convert type="MovieInfo">RecordServiceName</convert>
         </widget>
-        <ePixmap alphatest="blend" pixmap="holoFHD-light/images/cover_backdrop_small.png" position="1265,120" scale="1" size="186,276" transparent="1" zPosition="-1"/>
-        <widget alphatest="blend" name="CoverPreview" position="1268,123" scale="1" size="180,270" zPosition="3"/>
+        <ePixmap alphatest="blend" pixmap="holoFHD-light/images/cover_backdrop_small.png" position="1265,120" scale="stretch" size="186,276" transparent="1" zPosition="-1"/>
+        <widget alphatest="blend" name="CoverPreview" position="1268,123" scale="stretch" size="180,270" zPosition="3"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="1475,170" render="Label" size="400,40" source="Service" transparent="1" valign="center">
             <convert type="ServiceTime">StartTime</convert>
             <convert type="ClockToText">Format:%A %d %B,%Y</convert>
@@ -5277,8 +5277,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="background" font="Regular;26" foregroundColor="foreground" halign="left" noWrap="1" position="1475,120" render="Label" size="400,40" source="Service" transparent="1" valign="center">
             <convert type="MovieInfo">RecordServiceName</convert>
         </widget>
-        <ePixmap alphatest="blend" pixmap="holoFHD-light/images/cover_backdrop_small.png" position="1265,120" scale="1" size="186,276" transparent="1" zPosition="-1"/>
-        <widget alphatest="blend" name="CoverPreview" position="1268,123" scale="1" size="180,270" zPosition="3"/>
+        <ePixmap alphatest="blend" pixmap="holoFHD-light/images/cover_backdrop_small.png" position="1265,120" scale="stretch" size="186,276" transparent="1" zPosition="-1"/>
+        <widget alphatest="blend" name="CoverPreview" position="1268,123" scale="stretch" size="180,270" zPosition="3"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="1475,170" render="Label" size="400,40" source="Service" transparent="1" valign="center">
             <convert type="ServiceTime">StartTime</convert>
             <convert type="ClockToText">Format:%A %d %B,%Y</convert>
@@ -5591,7 +5591,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <ePixmap pixmap="holoFHD-light/components/line_v.png" position="1372,82" size="1,900"/>
         <widget backgroundColor="background" enableWrapAround="1" foregroundColorSelected="foreground" name="config" position="45,90" scrollbarMode="showOnDemand" size="1320,720" transparent="1"/>
         <ePixmap alphatest="blend" pixmap="holoFHD-light/images/buttons/key_info.png" position="1740,1015" size="60,30"/>
-        <ePixmap alphatest="blend" pixmap="holoFHD-light/components/line1.png" position="105,825" scale="1" size="1170,2"/>
+        <ePixmap alphatest="blend" pixmap="holoFHD-light/components/line1.png" position="105,825" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="45,840" render="Label" size="1320,135" source="help" transparent="1" valign="center"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="1387,90" render="Label" size="495,120" source="TMDbtxt" transparent="1" valign="top"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="3rdFG" halign="left" position="1387,240" render="Label" size="495,120" source="IMDbtxt" transparent="1" valign="top"/>
@@ -5753,7 +5753,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" name="config" position="45,95" scrollbarMode="showOnDemand" size="1230,135" transparent="1"/>
-        <ePixmap alphatest="blend" pixmap="holoFHD-light/components/line2.png" position="75,255" scale="1" size="1170,2"/>
+        <ePixmap alphatest="blend" pixmap="holoFHD-light/components/line2.png" position="75,255" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" font="Regular;37" foregroundColor="2ndFG" halign="center" name="Path" position="45,270" size="1230,180" transparent="1"/>
         <widget name="HelpWindow" position="0,0"/>
     </screen>
@@ -5820,7 +5820,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget enableWrapAround="1" name="config" position="45,95" scrollbarMode="showOnDemand" size="1170,160" transparent="1"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="45,270" render="Label" size="1230,45" source="clienttxt" transparent="1" valign="center" zPosition="3"/>
         <widget backgroundColor="background" enableWrapAround="1" name="list" position="45,330" selectionDisabled="1" size="1170,405" transparent="1"/>
-        <ePixmap alphatest="blend" pixmap="holoFHD-light/components/line2.png" position="75,795" scale="1" size="1170,2"/>
+        <ePixmap alphatest="blend" pixmap="holoFHD-light/components/line2.png" position="75,795" scale="stretch" size="1170,2"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="45,810" render="Label" size="1230,75" source="status" transparent="1" valign="center" zPosition="3"/>
         <widget backgroundColor="background" font="Regular;26" foregroundColor="2ndFG" halign="center" position="45,900" render="Label" size="1230,75" source="help" transparent="1" valign="center" zPosition="3"/>
         <ePixmap pixmap="holoFHD-light/components/line_v.png" position="1282,82" size="1,900"/>
@@ -5983,7 +5983,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <eLabel backgroundColor="#66000000" font="Regular;30" foregroundColor="2ndFG" position="50,1010" size="200,32" text="ACTORS" transparent="0"/>
         <widget backgroundColor="#66000000" font="Regular;27" foregroundColor="white" name="actors" position="50,1040" size="1000,28" transparent="0"/>
         <widget backgroundColor="#66000000" enableWrapAround="1" name="list" position="1330,575" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/green_dark_transparent_big.png" size="550,440" transparent="1"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="1" size="550,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="stretch" size="550,2"/>
         <widget alphatest="on" name="poster" position="50,570" size="133,200" zPosition="2"/>
         <widget backgroundColor="#66000000" font="Regular;30" foregroundColor="2ndFG" name="page" position="1330,1038" size="200,35" transparent="0"/>
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_menu.png" position="1580,1040" size="60,30"/>
@@ -6029,7 +6029,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
     </screen>
     <screen backgroundColor="black" flags="wfNoBorder" name="PosterwallTopThumb" position="0,0" size="1920,1080" title="PosterwallTop Thumb">
         <widget backgroundColor="black" coverBeginPosition="120,130" coverDistance="20,10" coverSize="120,180" name="covercollection" noCoverAvailablePic="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/no_poster.jpg" position="0,0" selectedCoverScale="1.4" size="1920,840" style="0" transparent="0" unselectedCoverDimm="0.8" zPosition="10"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,840" scale="1" size="1920,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,840" scale="stretch" size="1920,2"/>
         <widget backgroundColor="black" font="Regular;39" foregroundColor="2ndFG" name="title" position="20,850" size="1600,40" transparent="0"/>
         <widget backgroundColor="black" font="Regular;32" name="col_overview" position="20,850" size="1880,330" transparent="0" zPosition="9"/>
         <widget backgroundColor="black" font="Regular;30" foregroundColor="white" name="rating" position="1630,850" size="120,28" transparent="0"/>
@@ -6117,7 +6117,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <eLabel backgroundColor="#66000000" position="0,570" size="1920,510" zPosition="-1"/>
         <widget backgroundColor="#66000000" font="Regular;37" foregroundColor="2ndFG" name="title" position="20,575" size="1270,38" transparent="0"/>
         <widget backgroundColor="background" enableWrapAround="1" name="list" position="1330,575" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/green_dark_transparent_big.png" size="550,440" transparent="1"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="1" size="550,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="stretch" size="550,2"/>
         <widget name="poster" position="20,625" size="240,356" zPosition="2"/>
         <widget backgroundColor="#66000000" font="Regular;30" foregroundColor="2ndFG" halign="right" name="page" position="1350,1038" size="500,35" transparent="0"/>
         <widget backgroundColor="#66000000" font="Regular;37" foregroundColor="white" name="overview" position="280,620" size="1000,500" transparent="0"/>
@@ -6128,7 +6128,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <widget backgroundColor="#66000000" font="Regular;43" foregroundColor="2ndFG" name="headertext" position="50,30" size="1850,45" transparent="0"/>
         <widget backgroundColor="#66000000" font="Regular;37" foregroundColor="white" name="overview" position="320,100" size="1580,480" transparent="0"/>
         <widget backgroundColor="#66000000" font="Regular;32" foregroundColor="2ndFG" name="misc" position="50,600" size="1850,310" transparent="0"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="20,1000" scale="1" size="1880,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="20,1000" scale="stretch" size="1880,2"/>
         <widget backgroundColor="#66000000" font="Regular;37" foregroundColor="white" name="datetime" position="20,1025" size="700,36" transparent="0"/>
         <widget backgroundColor="#66000000" font="Regular;37" foregroundColor="white" name="duration" position="850,1025" size="300,36" transparent="0"/>
         <widget backgroundColor="#66000000" font="Regular;37" foregroundColor="white" halign="right" name="channel" position="1200,1025" size="700,36" transparent="0"/>
@@ -6142,7 +6142,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
     <screen backgroundColor="#ff000000" flags="wfNoBorder" name="TVShowList" position="0,0" size="1920,1080" title="TVShowList">
         <eLabel backgroundColor="#66000000" position="0,770" size="1920,510" zPosition="-1"/>
         <widget backgroundColor="background" enableWrapAround="1" name="list" position="1330,775" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/green_dark_transparent_big.png" size="550,240" transparent="1"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="1" size="550,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="stretch" size="550,2"/>
         <widget backgroundColor="#66000000" font="Regular;30" foregroundColor="white" name="overviewWidget" position="20,550" size="1880,230" zPosition="5"/>
         <widget name="poster" position="50,790" size="185,278" transitionDuration="500" zPosition="2"/>
         <widget backgroundColor="#66000000" font="Regular;37" foregroundColor="2ndFG" name="title" position="265,775" size="1000,38" transparent="0"/>
@@ -6187,7 +6187,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
     <screen backgroundColor="black" flags="wfNoBorder" name="TVPosterTop" position="0,0" size="1920,1080" title="TVPosterTop">
         <eLabel backgroundColor="grey" position="785,652" size="2,428"/>
         <widget backgroundColor="black" coverBeginPosition="140,170" coverDistance="20,5" coverSize="185,278" name="covercollection" noCoverAvailablePic="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/no_poster.jpg" position="0,0" selectedCoverScale="1.3" size="1920,640" style="0" transparent="0" unselectedCoverDimm="0.8" zPosition="10"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,650" scale="1" size="1920,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,650" scale="stretch" size="1920,2"/>
         <widget backgroundColor="black" font="Regular;37" foregroundColor="2ndFG" name="title" position="20,660" size="750,80" transparent="0"/>
         <widget backgroundColor="black" font="Regular;30" name="description" position="800,660" size="1100,360" transparent="1" zPosition="3"/>
         <eLabel backgroundColor="black" font="Regular;32" foregroundColor="2ndFG" position="20,750" size="240,35" text="GENRE" transparent="0"/>
@@ -6207,10 +6207,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
         <ePixmap alphatest="on" pixmap="holoFHD-light/images/buttons/key_exit.png" position="1820,1045" size="60,30"/>
     </screen>
     <screen backgroundColor="black" flags="wfNoBorder" name="TVSmallThumbsTop" position="0,0" size="1920,1080" title="TVSmallThumbsTop">
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,650" scale="1" size="1920,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,650" scale="stretch" size="1920,2"/>
         <eLabel backgroundColor="grey" position="785,652" size="2,428"/>
         <widget backgroundColor="black" coverBeginPosition="120,130" coverDistance="20,10" coverSize="120,180" name="covercollection" noCoverAvailablePic="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/no_poster.jpg" position="0,0" selectedCoverScale="1.4" size="1920,650" style="0" transparent="0" unselectedCoverDimm="0.8" zPosition="10"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,650" scale="1" size="1920,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,650" scale="stretch" size="1920,2"/>
         <widget backgroundColor="black" font="Regular;37" foregroundColor="2ndFG" name="title" position="20,660" size="750,80" transparent="0"/>
         <widget backgroundColor="black" font="Regular;30" name="description" position="800,660" size="1100,360" transparent="1" zPosition="3"/>
         <eLabel backgroundColor="black" font="Regular;32" foregroundColor="2ndFG" position="20,750" size="240,35" text="GENRE" transparent="0"/>
@@ -6232,7 +6232,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
     <screen backgroundColor="black" flags="wfNoBorder" name="TVBannerScreen" position="0,0" size="1920,1080" title="TVBanner">
         <eLabel backgroundColor="grey" position="785,602" size="2,478"/>
         <widget backgroundColor="#55000000" coverBeginPosition="356,80" coverDistance="20,20" coverSize="379,70" name="covercollection" noCoverAvailablePic="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/no_poster.jpg" position="0,0" selectedCoverScale="1.2" size="1920,600" style="0" transparent="1" unselectedCoverDimm="0.6" zPosition="10"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,600" scale="1" size="1920,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="0,600" scale="stretch" size="1920,2"/>
         <widget backgroundColor="black" font="Regular;37" foregroundColor="2ndFG" name="title" position="20,610" size="750,80" transparent="0"/>
         <widget backgroundColor="black" font="Regular;30" name="description" position="800,605" size="1100,430" transparent="1" zPosition="3"/>
         <eLabel backgroundColor="black" font="Regular;32" foregroundColor="2ndFG" position="20,700" size="240,35" text="GENRE" transparent="0"/>
@@ -6260,7 +6260,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
     <screen backgroundColor="#ff000000" flags="wfNoBorder" name="SeasonScreen" position="0,0" size="1920,1080" title="Season Screen">
         <eLabel backgroundColor="#66000000" position="0,770" size="1920,510" zPosition="-1"/>
         <widget backgroundColor="background" enableWrapAround="1" name="list" position="1330,775" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/green_dark_transparent_big.png" size="550,240" transparent="1"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="1" size="550,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="stretch" size="550,2"/>
         <widget backgroundColor="#66000000" font="Regular;30" foregroundColor="white" name="overviewWidget" position="20,550" size="1880,230" zPosition="5"/>
         <widget name="poster" position="50,790" size="185,278" transitionDuration="500" zPosition="2"/>
         <widget backgroundColor="#66000000" font="Regular;37" foregroundColor="2ndFG" name="title" position="265,775" size="1000,38" transparent="0"/>
@@ -6282,7 +6282,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,(1080-wsizey)/2))
     <screen backgroundColor="#ff000000" flags="wfNoBorder" name="EpisodesScreen" position="0,0" size="1920,1080" title="Episodes Screen">
         <eLabel backgroundColor="#66000000" position="0,770" size="1920,510" zPosition="-1"/>
         <widget backgroundColor="background" enableWrapAround="1" name="list" position="1330,775" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/green_dark_transparent_big.png" size="550,240" transparent="1"/>
-        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="1" size="550,2"/>
+        <ePixmap pixmap="holoFHD-light/components/line.png" position="1330,1016" scale="stretch" size="550,2"/>
         <widget name="poster" position="20,790" size="355,200" transitionDuration="500" zPosition="2"/>
         <widget alphatest="on" name="audio_icons" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/dts1.png,/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/ac3.png,/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/stereo.png" position="40,1033" size="85,30" transparent="0"/>
         <widget alphatest="on" name="definition" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/hd.png,/usr/lib/enigma2/python/Plugins/Extensions/VideoDB/icons/sd.png" position="140,1033" size="51,30" transparent="0"/>

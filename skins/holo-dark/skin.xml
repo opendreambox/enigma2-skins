@@ -214,7 +214,7 @@
         <widget font="Regular;20" halign="center" position="41,13" render="Label" size="192,30" source="global.CurrentTime" valign="center">
             <convert type="ClockToText">Format: %a, %d.%m. %H:%M</convert>
         </widget>
-        <widget alphatest="on" position="85,60" render="Picon" scale="1" size="100,60" source="session.CurrentService" zPosition="1">
+        <widget alphatest="on" position="85,60" render="Picon" scale="stretch" size="100,60" source="session.CurrentService" zPosition="1">
             <convert type="ServiceName">Reference</convert>
         </widget>
         <widget font="Regular;14" foregroundColor="3rdFG" position="90,143" render="FixedLabel" size="14,18" source="session.TunerInfo" text="A" zPosition="2">
@@ -1877,7 +1877,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" name="config" position="30,65" scrollbarMode="showOnDemand" size="820,390" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/components/line1.png" position="30,465" scale="1" size="820,2"/>
+        <ePixmap alphatest="on" pixmap="holo-dark/components/line1.png" position="30,465" scale="stretch" size="820,2"/>
         <widget backgroundColor="background" font="Regular;21" foregroundColor="2ndFG" halign="center" name="status" position="30,470" size="820,70" transparent="1"/>
         <ePixmap alphatest="on" name="red" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
         <ePixmap alphatest="on" name="green" pixmap="holo-dark/images/buttons/key_green.png" position="230,555" size="20,20"/>
@@ -1895,7 +1895,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
             <convert type="ClockToText"/>
         </widget>
         <widget backgroundColor="background" name="config" position="30,65" scrollbarMode="showOnDemand" size="820,360" transparent="1"/>
-        <ePixmap alphatest="on" pixmap="holo-dark/components/line1.png" position="30,425" scale="1" size="820,2"/>
+        <ePixmap alphatest="on" pixmap="holo-dark/components/line1.png" position="30,425" scale="stretch" size="820,2"/>
         <widget backgroundColor="background" font="Regular;21" foregroundColor="2ndFG" halign="center" name="statusbar" position="30,435" size="820,35" transparent="1"/>
         <widget backgroundColor="background" font="Regular;21" foregroundColor="2ndFG" halign="center" name="status" position="30,475" size="820,60" transparent="1"/>
         <ePixmap alphatest="on" name="red" pixmap="holo-dark/images/buttons/key_red.png" position="30,555" size="20,20"/>
@@ -2053,7 +2053,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
         <widget backgroundColor="background" font="Regular;25" halign="right" name="channel" position="300,505" size="700,27" transparent="1"/>
     </screen>
     <screen backgroundColor="background" flags="wfBorder" name="ExtendedNumberZap" position="center,center" size="720,180" title="Extended Number Zap">
-        <widget alphatest="on" backgroundColor="background" position="0,10" render="Picon" scale="1" size="100,60" source="Service" transparent="1" zPosition="10">
+        <widget alphatest="on" backgroundColor="background" position="0,10" render="Picon" scale="stretch" size="100,60" source="Service" transparent="1" zPosition="10">
             <convert type="RefToPiconName"/>
         </widget>
         <widget backgroundColor="background" font="Regular;25" foregroundColor="3rdFG" halign="center" name="number" position="0,10" size="720,30" transparent="1" valign="center"/>
@@ -4868,7 +4868,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, (720-wsizey)/2))
         <widget backgroundColor="background" font="Regular;20" halign="left" position="45,13" render="Label" size="192,30" source="global.CurrentTime" transparent="1" valign="center">
             <convert type="ClockToText">Format: %a, %d.%m. %H:%M</convert>
         </widget>
-        <widget alphatest="on" position="130,60" render="Picon" scale="1" size="100,60" source="session.CurrentService" zPosition="1">
+        <widget alphatest="on" position="130,60" render="Picon" scale="stretch" size="100,60" source="session.CurrentService" zPosition="1">
             <convert type="ServiceName">Reference</convert>
         </widget>
         <ePixmap alphatest="on" pixmap="holo-dark/icons/ico_rec_off.png" position="295,20" size="34,16"/>
@@ -5658,7 +5658,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, (720-wsizey)/2))
         <widget backgroundColor="background" font="Regular;25" foregroundColor="2ndFG" halign="center" noWrap="1" position="200,550" render="Label" size="880,31" source="session.CurrentService" transparent="1" zPosition="2">
             <convert type="ServiceName">Name</convert>
         </widget>
-        <widget alphatest="on" position="80,600" render="Picon" scale="1" size="100,60" source="session.CurrentService" zPosition="2">
+        <widget alphatest="on" position="80,600" render="Picon" scale="stretch" size="100,60" source="session.CurrentService" zPosition="2">
             <convert type="ServiceName">Reference</convert>
         </widget>
         <widget backgroundColor="background" font="Regular;23" foregroundColor="foreground" halign="center" position="240,590" render="Label" size="810,58" source="session.Event_Now" transparent="1" valign="center" zPosition="2">
