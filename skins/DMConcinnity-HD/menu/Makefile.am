@@ -1,2 +1,2 @@
 installdir = $(datadir)/enigma2/DMConcinnity-HD/menu
-install_DATA = *.png
+install_DATA = *.png *.svg
