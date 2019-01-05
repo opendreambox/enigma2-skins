@@ -1169,7 +1169,7 @@
 			foregroundColor="#a0a0a0" foregroundColorSelected="#ffffff" backgroundColor="#272e43" backgroundColorSelected="#272e43"
 			selectionPixmap="Dreamy-FHD/menu/slider/sliderb60.png" backgroundPixmap="Dreamy-FHD/menu/slider/slider60.png" >
 			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (20, 8), size = (620, 34), text = 0) ],
+				{"template": [ MultiContentEntryText(pos = (20, 8), size = (620, 34), text = 1) ],
 				"fonts": [gFont("Regular", 30)],
 				"itemHeight": 60
 				}
