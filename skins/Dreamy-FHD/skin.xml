@@ -4059,7 +4059,7 @@
 		</widget>
 		<!-- Progressbar (movie position)-->
 		<eLabel position="500,945" size="1125,2" backgroundColor="#202020" zPosition="1" />
-		<widget source="session.CurrentService" render="Progress" position="500,943" size="1125,6" backgroundColor="bluette" transparent="1" zPosition="3" >
+		<widget source="session.CurrentService" render="Progress" position="500,943" size="1125,6" foregroundColor="bluette" transparent="1" zPosition="3" >
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget source="session.CurrentService" render="PositionGauge" position="500,943" size="1125,6" transparent="1" zPosition="3">
