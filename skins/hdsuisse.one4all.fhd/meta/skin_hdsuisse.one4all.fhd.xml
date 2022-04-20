@@ -1,0 +1,17 @@
+<default>
+	<prerequisites>
+		<tag type="Skin" />
+	</prerequisites>
+	<info>
+		<author>hdsuisse</author>
+		<name>hdsuisse.one4all.fhd</name>
+		<packagename>enigma2-skin-hdsuisse.one4all.fhd</packagename>
+		<shortdescription>hdsuisse.one4all.fhd Skin</shortdescription>
+		<description>hdsuisse.one4all.fhd all DreamOS FHD Skin</description>
+		<screenshot src="http://www.dreamboxupdate.com/preview/skin_hdsuisse.one4all.fhd.jpg" />
+	</info>
+
+	<files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-skin-hdsuisse.one4all.fhd" />
+	</files>
+</default>
