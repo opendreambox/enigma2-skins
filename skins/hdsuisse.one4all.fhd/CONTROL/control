@@ -1,11 +1,5 @@
 Package: enigma2-skin-hdsuisse.one4all.fhd
 Version: 6.6
-Architecture: all
 Maintainer: hdsuisse
 Depends: enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-eventposition, enigma2-plugin-skincomponents-channelselectionshorttitle, enigma2-plugin-systemplugins-weathercomponenthandler, enigma2-plugin-skincomponents-weathercomponent, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-skincomponents-serviceresolution
-Section: base
-Priority: optional
-Homepage: 
 Description: all DreamOS FHD Skin
-Oe: enigma2-skins
-Packagearch: all
