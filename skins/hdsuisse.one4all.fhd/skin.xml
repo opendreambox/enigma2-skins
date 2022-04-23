@@ -9166,9 +9166,9 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget source="Event" render="RunningText" font="Regular;28" position="15,905" size="1470,100" valign="top" transparent="1" backgroundColor="bg2" options="movetype=running,startpoint=0,direction=top,startdelay=4000,steptime=80,always=0,repeat=2,oneshot=1,wrap=1">
-      <convert type="EventName">ExtendedDescription</convert>
-    </widget>
+    <widget source="Event" render="Label" font="Regular;28" position="15,905" size="1470,100" valign="top" transparent="1" backgroundColor="bg2">
+  <convert type="EventName">ExtendedDescription</convert>
+</widget>
     <widget source="session.VideoPicture" render="Pig" position="1540,827" size="340,190" zPosition="3" backgroundColor="video" />
   </screen>
   <screen name="MultiEPGSetup" position="0,0" size="1920,1080" title="MultiEPG Vali-Mod Setup" backgroundColor="transparent">
