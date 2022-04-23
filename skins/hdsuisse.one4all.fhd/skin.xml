@@ -1,7 +1,7 @@
 <!-- hdsuisse.one4all.fhd Skin -->
 <skin>
   <copyright>
-    <original author="hdsuisse" version="6.6" name="hdsuisse.one4all.fhd" supporturl="https://dreambox.de/board/" license="all Dreambox oe2.5/2.6 Images, no modifications allowed" />
+    <original author="hdsuisse" version="6.7" name="hdsuisse.one4all.fhd" supporturl="https://dreambox.de/board/" license="all Dreambox oe2.5/2.6 Images, no modifications allowed" />
   </copyright>
   <output id="0">
     <resolution xres="1920" yres="1080" bpp="32" />
@@ -752,7 +752,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <eLabel backgroundColor="background" font="Regular; 26" foregroundColor="title" position="360,290" size="300,40" text="Box Type:" transparent="1" />
     <widget backgroundColor="bg2" font="Regular; 28" foregroundColor="help" noWrap="1" position="360,160" render="Label" size="550,40" source="EnigmaVersion" transparent="1" valign="center" />
     <widget backgroundColor="bg2" font="Regular; 28" foregroundColor="help" halign="left" noWrap="1" position="1120,160" render="Label" size="470,40" source="ImageVersion" transparent="1" valign="center" />
-    <widget backgroundColor="bg2" font="Regular; 28" foregroundColor="help" noWrap="1" position="1120,220" render="Label" size="470,40" source="FPVersion" transparent="1" valign="center" halign="left" />
+    <widget backgroundColor="bg2" font="Regular; 28" foregroundColor="help" noWrap="1" position="360,220" render="Label" size="470,40" source="FPVersion" transparent="1" valign="center" halign="left" />
     <widget backgroundColor="background" font="Regular; 26" foregroundColor="title" position="360,390" render="Label" size="300,40" source="TunerHeader" transparent="1" />
     <widget backgroundColor="background" font="Regular; 24" noWrap="1" position="670,390" render="Label" size="450,40" source="Tuner0" transparent="1" />
     <widget backgroundColor="background" font="Regular; 24" noWrap="1" position="1120,390" render="Label" size="450,40" source="Tuner1" transparent="1" />
@@ -2040,6 +2040,14 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <eLabel backgroundColor="line" foregroundColor="line" position="360,890" size="1230,2" />
     <eLabel backgroundColor="line" foregroundColor="line" position="360,780" size="1230,2" />
   </screen>
+  <screen name="StreamServicesConfigScreen" position="0,0" size="1920,1080" title="Stream Server configuration" backgroundColor="transparent" flags="wfNoBorder">
+    <layout name="hdsuisse_main" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/yellow.png" position="975,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
+    <widget source="key_yellow" render="Label" position="995,987" zPosition="1" size="260,40" font="Thin; 28" halign="left" valign="center" backgroundColor="bg2" transparent="1" foregroundColor="button" />
+    <widget source="key_green" render="Label" position="695,987" size="260,40" backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" valign="center" zPosition="10" transparent="1" />
+    <widget name="config" position="360,159" size="1230,720" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+  </screen>
   <screen name="NetworkBrowser" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" title="Network Neighbourhood">
     <layout name="hdsuisse_main" />
     <layout name="hdsuisse_main_buttons" />
@@ -2637,9 +2645,10 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <layout name="hdsuisse_main" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
     <widget backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" position="395,987" render="Label" size="260,40" source="key_red" transparent="1" valign="center" zPosition="1" />
-    <widget name="SkinList" position="360,160" scrollbarMode="showOnDemand" size="720,720" transparent="1" backgroundColor="background" />
-    <eLabel backgroundColor="line" position="1100,160" size="2,720" />
-    <widget name="Preview" position="1120,165" size="480,283" backgroundColor="background" transparent="1" />
+    <widget name="SkinList" position="360,160" scrollbarMode="showOnDemand" size="600,720" transparent="1" backgroundColor="background" />
+    <eLabel backgroundColor="line" position="980,160" size="2,720" />
+    <widget name="Preview" position="1000,165" size="580,330" backgroundColor="background" transparent="1" />
+    <eLabel name="" position="1000,165" size="580,330" zPosition="-5" backgroundColor="blue" />
     <eLabel backgroundColor="line" foregroundColor="line" position="360,890" size="1230,2" />
     <widget font="Regular; 28" foregroundColor="help" halign="center" position="360,900" render="Label" size="1230,40" source="introduction" transparent="1" backgroundColor="background" />
   </screen>
@@ -3824,8 +3833,8 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   <screen name="MerlinRemuxCutEditorInOut" position="0,0" size="1920,1080" title="merlin remux editor" backgroundColor="transparent" flags="wfNoBorder">
     <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="5,55" size="1910,100" zPosition="-15" />
     <eLabel name="" position="0,0" size="1920,160" zPosition="-20" backgroundColor="layout" />
-    <ePixmap position="5,5" size="1910,50" gradient="#0050565c,#00111111,vertical" zPosition="-10" />
-    <ePixmap position="5,1025" size="1910,-14" gradient="#00111111,#0050565c,vertical" zPosition="-10" />
+    <ePixmap position="5,5" size="1910,50" gradient="layout,gradient,vertical" zPosition="-10" />
+    <ePixmap position="5,1025" size="1910,-14" gradient="gradient,layout,vertical" zPosition="-10" />
     <widget source="key_red" render="Label" position="95,10" size="260,40" backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" valign="center" zPosition="10" transparent="1" />
     <widget source="key_green" render="Label" position="395,10" size="260,40" backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" valign="center" zPosition="10" transparent="1" />
     <widget source="key_yellow" render="Label" position="695,10" size="260,40" backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" valign="center" zPosition="10" transparent="1" />
@@ -4347,14 +4356,14 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget name="tab_text_5" position="1658,0" size="210,58" zPosition="2" valign="center" halign="left" font="Regular;30" transparent="1" foregroundColor="progressmarked" shadowColor="black" shadowOffset="0,0" />
     <widget name="timerlist" position="15,80" size="1290,925" scrollbarMode="showNever" transparent="1" zPosition="9" />
     <widget name="list" position="15,80" size="1290,925" scrollbarMode="showNever" transparent="1" />
-    <widget name="upcomingSeparator" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/separator_h.png" position="16,998" size="1289,0" zPosition="0" alphatest="on" />
+    <widget name="upcomingSeparator" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/separator_h.png" position="15,998" size="1290,0" zPosition="15" alphatest="on" />
     <widget name="upcoming" position="15,921" size="1290,0" scrollbarMode="showNever" zPosition="-8" />
     <widget name="history" position="15,80" size="1290,925" scrollbarMode="showNever" transparent="1" />
     <widget name="settings" position="15,80" size="1290,925" scrollbarMode="showNever" transparent="1" backgroundColor="bg2" />
     <widget name="infoText" position="15,80" size="1290,925" font="Regular;30" transparent="1" />
     <widget name="searchLabel" position="15,80" size="593,38" zPosition="1" font="Regular;30" transparent="1" halign="left" />
     <widget name="search" position="15,111" size="593,38" scrollbarMode="showNever" transparent="1" />
-    <widget name="eventInfoSeparator" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/separator_v.png" position="1298,80" size="9,920" zPosition="1" alphatest="on" />
+    <widget name="eventInfoSeparator" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/separator_v.png" position="1298,58" size="9,957" zPosition="15" alphatest="on" />
     <widget name="picon" path="picon" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/PiconMissing.png" position="1690,135" size="180,110" zPosition="1" transparent="1" alphatest="on" />
     <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="right" position="1714,70" render="Label" size="100,40" source="global.CurrentTime" transparent="1" valign="center">
       <convert type="ClockToText">Format: %H:%M</convert>
@@ -8270,8 +8279,8 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="140,65" size="1675,970" zPosition="-10" />
     <eLabel backgroundColor="darkevent" foregroundColor="darkevent" position="140,130" size="1675,2" zPosition="-5" />
     <eLabel backgroundColor="darkevent" foregroundColor="darkevent" position="140,970" size="1675,2" zPosition="-5" />
-    <ePixmap gradient="#0050565c,#00111111,vertical" position="140,65" size="1675,60" zPosition="-5" />
-    <ePixmap gradient="#0050565c,#00111111,vertical" position="140,975" size="1675,60" zPosition="-5" />
+    <ePixmap gradient="layout,gradient,vertical" position="140,65" size="1675,60" zPosition="-5" />
+    <ePixmap gradient="layout,gradient,vertical" position="140,975" size="1675,60" zPosition="-5" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/icons/epgclock_prepost.png" position="175,77" scale="1" size="40,40" transparent="1" zPosition="0" />
     <widget backgroundColor="bg2" font="Regular; 30" foregroundColor="title" halign="left" position="235,77" render="Label" size="935,40" source="Title" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="help" halign="center" name="Location" noWrap="1" position="1190,910" size="590,40" transparent="1" valign="center" zPosition="3" />
@@ -8364,8 +8373,8 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AdvancedMovieSelectionTrash" position="0,0" size="1920,1080" title="AdvancedMovieSelectionTrash">
     <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="340,65" size="1270,970" zPosition="-10" />
-    <ePixmap position="345,70" size="1260,50" gradient="#0050565c,#00111111,vertical" zPosition="-10" />
-    <ePixmap position="345,980" size="1260,50" gradient="#00111111,#0050565c,vertical" zPosition="-10" />
+    <ePixmap position="345,70" size="1260,50" gradient="layout,gradient,vertical" zPosition="-10" />
+    <ePixmap position="345,980" size="1260,50" gradient="gradient,layout,vertical" zPosition="-10" />
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="title" position="360,77" render="Label" size="600,40" source="Title" transparent="1" zPosition="3" />
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="help" halign="right" name="location" position="970,77" size="620,40" transparent="1" zPosition="3" />
     <widget font="Regular; 26" halign="center" name="waitingtext" position="360,220" size="1230,540" transparent="1" valign="center" zPosition="3" />
@@ -8629,8 +8638,8 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="ClockToText">Format: %A, %d.%m.%Y  %H:%M:%S</convert>
     </widget>
     <eLabel name="" position="0, 0" size="1920,1080" zPosition="-20" backgroundColor="background" />
-    <ePixmap position="5,5" size="1910,50" gradient="#0050565c,#00111111,vertical" zPosition="-10" />
-    <ePixmap position="5,1025" size="1910,50" gradient="#00111111,#0050565c,vertical" zPosition="-10" />
+    <ePixmap position="5,5" size="1910,50" gradient="layout,gradient,vertical" zPosition="-10" />
+    <ePixmap position="5,1025" size="1910,50" gradient="gradient,layout,vertical" zPosition="-10" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/blue.png" position="1565,868" size="10,25" zPosition="1" />
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreground" position="1590,860" render="Label" size="300,40" source="country" transparent="1" zPosition="1" />
     <widget backgroundColor="background" backgroundColorSelected="backselect" enableWrapAround="1" position="270,70" render="Listbox" scrollbarMode="showOnDemand" size="1150,840" source="list" zPosition="1">
@@ -8891,7 +8900,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttongreen" position="700,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonyellow" position="1000,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonblue" position="1300,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
-    <widget enableWrapAround="1" name="config" position="407,139" scrollbarMode="showOnDemand" size="1140,770" transparent="1" backgroundColor="background" />
+    <widget enableWrapAround="1" name="config" position="360,150" scrollbarMode="showOnDemand" size="1230,800" transparent="1" backgroundColor="background" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1507,990" size="40,30" zPosition="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1556,990" size="40,30" zPosition="1" />
   </screen>
@@ -8905,10 +8914,11 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttongreen" position="700,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonyellow" position="1000,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonblue" position="1300,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
-    <widget enableWrapAround="1" name="config" position="400,140" scrollbarMode="showOnDemand" size="1140,670" transparent="1" />
+    <widget enableWrapAround="1" name="config" position="360,150" scrollbarMode="showOnDemand" size="1230,670" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1507,990" size="40,30" zPosition="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1556,990" size="40,30" zPosition="1" />
-    <widget name="text" backgroundColor="bg2" position="400,850" size="1140,80" font="Regular;28" zPosition="1" transparent="1" foregroundColor="help" halign="center" />
+    <eLabel backgroundColor="grey" position="360,840" size="1230,1" />
+    <widget name="text" backgroundColor="bg2" position="360,860" size="1230,80" font="Regular;28" zPosition="1" transparent="1" foregroundColor="help" halign="center" />
   </screen>
   <screen name="gutemineAbout" position="0,0" size="1920,1080" title="About gutemine" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
@@ -8922,8 +8932,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/blue.png" position="1275,995" size="10,25" />
     <widget name="preview" position="680,136" size="576,576" transparent="1" backgroundColor="bg2" />
     <eLabel backgroundColor="grey" position="380,740" size="1160,1" />
-    <eLabel backgroundColor="grey" position="380,810" size="1160,1" />
-    <widget name="info" position="380,751" size="1160,50" halign="center" valign="center" foregroundColor="help" font="Regular;28" backgroundColor="bg2" transparent="1" />
+    <widget name="info" position="380,751" size="1160,190" halign="center" valign="center" foregroundColor="help" font="Regular;28" backgroundColor="bg2" transparent="1" />
   </screen>
   <screen name="gutemineInfo" position="0,0" size="1920,1080" title="About gutemine" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
@@ -8949,7 +8958,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttongreen" position="700,987" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
-    <widget enableWrapAround="1" name="filelist" position="380,120" scrollbarMode="showOnDemand" size="1160,630" transparent="1" />
+    <widget enableWrapAround="1" name="filelist" position="360,150" scrollbarMode="showOnDemand" size="1230,630" transparent="1" />
   </screen>
   <screen name="dBackup" position="0,0" size="1920,1080" title="Flashing" backgroundColor="transparent" transparent="0" flags="wfNoBorder">
     <layout name="hdsuisse_dbackup" />
@@ -8977,7 +8986,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/yellow.png" position="975,995" size="10,25" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/blue.png" position="1275,995" size="10,25" />
-    <widget enableWrapAround="1" name="config" position="407,139" scrollbarMode="showOnDemand" size="1140,800" transparent="1" />
+    <widget enableWrapAround="1" name="config" position="360,150" scrollbarMode="showOnDemand" size="1230,800" transparent="1" />
   </screen>
   <screen name="dBackupAbout" position="0,0" size="1920,1080" title="About dBackup" backgroundColor="transparent" transparent="0">
     <layout name="hdsuisse_main" />
@@ -8988,7 +8997,6 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <eLabel backgroundColor="line" foregroundColor="line" position="390,300" size="1160,2" />
     <widget name="aboutdbackup" foregroundColor="yellow" position="390,340" size="1160,50" halign="center" font="Regular;36" transparent="1" backgroundColor="bg2" />
     <eLabel backgroundColor="line" foregroundColor="line" position="390,434" size="1160,2" />
-    <ePixmap position="765,560" size="400,105" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/dBackup/dreamboxupdate.png" />
     <widget name="freefilesystem" position="390,500" size="300,260" valign="center" halign="center" font="Regular;32" transparent="1" backgroundColor="bg2" />
     <widget name="freememory" position="1240,500" size="300,260" valign="center" halign="center" font="Regular;32" transparent="1" backgroundColor="bg2" />
     <eLabel backgroundColor="line" foregroundColor="line" position="390,794" size="1160,2" />
@@ -9016,28 +9024,192 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <layout name="hdsuisse_main" />
     <layout name="hdsuisse_main_buttons" />
     <layout name="hdsuisse_main_keys_buttons" />
-    <widget enableWrapAround="1" name="menu" position="410,160" scrollbarMode="showOnDemand" size="1140,720" transparent="1" />
+    <widget enableWrapAround="1" name="menu" position="360,150" scrollbarMode="showOnDemand" size="1230,720" transparent="1" />
   </screen>
   <screen name="ToolsWizardba" position="0,0" size="1920,1080" title="Wizard for Tools" backgroundColor="transparent" transparent="0">
     <layout name="hdsuisse_main" />
     <layout name="hdsuisse_main_buttons" />
     <layout name="hdsuisse_main_keys_buttons" />
-    <widget enableWrapAround="1" name="menu" position="410,160" scrollbarMode="showOnDemand" size="1140,720" transparent="1" />
+    <widget enableWrapAround="1" name="menu" position="360,150" scrollbarMode="showOnDemand" size="1230,720" transparent="1" />
   </screen>
   <screen name="ChangeWizardba" position="0,0" size="1920,1080" title="Wizard for installed Images" backgroundColor="transparent" transparent="0">
     <layout name="hdsuisse_main" />
     <layout name="hdsuisse_main_buttons" />
     <layout name="hdsuisse_main_keys_buttons" />
-    <widget enableWrapAround="1" name="menu" position="410,160" scrollbarMode="showOnDemand" size="1140,720" transparent="1" />
+    <widget enableWrapAround="1" name="menu" position="360,150" scrollbarMode="showOnDemand" size="1230,720" transparent="1" />
   </screen>
   <screen name="BarryAllenConfiguration" position="0,0" size="1920,1080" title="Wizard for Setup" backgroundColor="transparent" transparent="0">
     <layout name="hdsuisse_main" />
     <layout name="hdsuisse_main_buttons" />
     <layout name="hdsuisse_main_keys_buttons" />
-    <widget enableWrapAround="1" name="config" position="410,160" scrollbarMode="showOnDemand" size="1140,720" transparent="1" />
+    <widget enableWrapAround="1" name="config" position="360,150" scrollbarMode="showOnDemand" size="1230,720" transparent="1" />
   </screen>
-  <screen name="BootmanagerSelection" position="410,150" size="1140,720" title="Bootmanager Select" flags="wfNoBorder" backgroundColor="transparent" transparent="0">
+  <screen name="BootmanagerSelection" position="360,150" size="1230,720" title="Bootmanager Select" flags="wfNoBorder" backgroundColor="transparent" transparent="0">
     <layout name="hdsuisse_main" />
+  </screen>
+  <screen name="AlanTuring" position="0,0" size="1920,1080" title="Alan Turing" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <layout name="hdsuisse_main_buttons" />
+    <layout name="hdsuisse_main_keys_buttons" />
+    <eLabel backgroundColor="line" position="360,210" size="1230,2" />
+    <widget name="slider" position="506,168" size="940,10" foregroundColor="clock" transparent="1" />
+    <widget source="size" render="Label" size="120,45" position="360,150" font="Regular; 30" halign="center" valign="center" transparent="1" />
+    <widget source="duration" render="Label" size="120,45" position="1470,150" font="Regular; 30" halign="center" valign="center" transparent="1" />
+    <widget enableWrapAround="1" name="config" position="360,230" scrollbarMode="showOnDemand" size="1230,640" transparent="1" />
+    <eLabel backgroundColor="line" position="360,890" size="1230,2" />
+    <widget name="statustext" size="1230,40" position="360,910" font="Regular;32" halign="center" valign="center" foregroundColor="help" transparent="1" backgroundColor="bg2" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1507,990" size="40,30" zPosition="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1556,990" size="40,30" zPosition="1" />
+  </screen>
+  <screen name="AlanTuringSettingsBackup" position="0,0" size="1920,1080" title="Backup is running" backgroundColor="transparent">
+    <layout name="hdsuisse_base" />
+    <widget name="config" position="360,150" size="1230,660" transparent="1" scrollbarMode="showOnDemand" />
+  </screen>
+  <screen name="AlanTuringSettingsRestore" position="0,0" size="1920,1080" title="Restore is running..." backgroundColor="transparent">
+    <layout name="hdsuisse_base" />
+    <widget name="config" position="360,150" size="1230,660" transparent="1" scrollbarMode="showOnDemand" />
+  </screen>
+  <screen name="AlanTuringSummary" position="0,0" size="240,86" id="100">
+    <widget font="Regular;14" halign="center" position="12,0" render="Label" size="220,24" source="titletext" valign="center" />
+    <widget font="Regular;14" halign="center" position="12,16" render="Label" size="220,24" source="duration" valign="center" />
+    <widget name="slider" position="12,36" size="220,10" borderWidth="1" borderColor="white" foregroundColor="clockPermanent" transparent="1" />
+    <widget font="Regular;28" halign="center" position="12,48" render="Label" size="220,32" source="displayentry" foregroundColor="white" valign="center" />
+  </screen>
+  <!-- Sven H Plugins -->
+  <screen name="SvenH_Main" position="0,0" size="1920,1080" title="Sven H - Feed Plugin" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/yellow.png" position="975,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/blue.png" position="1275,995" size="10,25" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonred" position="400,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttongreen" position="700,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonyellow" position="1000,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonblue" position="1300,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget enableWrapAround="1" name="config" position="360,150" scrollbarMode="showOnDemand" size="1230,800" transparent="1" backgroundColor="background" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1507,990" size="40,30" zPosition="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1556,990" size="40,30" zPosition="1" />
+  </screen>
+  <screen name="SvenH_Info" position="0,0" size="1920,1080" title="About Sven H" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonred" position="400,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttongreen" position="700,987" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonyellow" position="1000,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget name="buttonblue" position="1295,987" size="260,40" backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" valign="center" zPosition="10" transparent="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/yellow.png" position="975,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/blue.png" position="1275,995" size="10,25" />
+    <eLabel backgroundColor="grey" position="400,800" size="1140,1" />
+    <widget name="about" foregroundColor="help" position="400,810" size="1140,50" halign="center" valign="center" font="Regular;36" transparent="1" backgroundColor="bg2" />
+    <eLabel backgroundColor="grey" position="400,870" size="1140,1" />
+    <widget name="info" position="400,880" size="1140,50" halign="center" valign="center" foregroundColor="help" font="Regular;28" transparent="1" backgroundColor="bg2" />
+    <widget name="text" position="400,140" size="1140,640" font="Regular;26" transparent="1" backgroundColor="bg2" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1507,990" size="40,30" zPosition="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1556,990" size="40,30" zPosition="1" />
+  </screen>
+  <screen name="SvenH_DirectoryBrowser" position="0,0" size="1920,1080" title="Sven H - Browser" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonred" position="400,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttongreen" position="700,987" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
+    <widget enableWrapAround="1" name="filelist" position="360,150" scrollbarMode="showOnDemand" size="1230,630" transparent="1" />
+  </screen>
+  <screen name="SvenH_Setup" position="0,0" size="1920,1080" title="Sven H - Setup" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/yellow.png" position="975,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/blue.png" position="1275,995" size="10,25" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonred" position="400,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttongreen" position="700,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonyellow" position="1000,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="buttonblue" position="1300,987" foregroundColor="button" shadowColor="black" shadowOffset="-2,-2" size="260,40" valign="center" transparent="1" />
+    <widget enableWrapAround="1" name="config" position="360,150" scrollbarMode="showOnDemand" size="1230,670" transparent="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1507,990" size="40,30" zPosition="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1556,990" size="40,30" zPosition="1" />
+    <eLabel backgroundColor="grey" position="360,840" size="1230,1" />
+    <widget name="text" backgroundColor="bg2" position="360,860" size="1230,80" font="Regular;28" zPosition="1" transparent="1" foregroundColor="help" halign="center" />
+  </screen>
+  <screen name="MultiEPG_MV_New" position="center,center" size="1920,1080" title="MultiEPG Vali-Mod" flags="wfNoBorder" backgroundColor="transparent">
+    <layout name="hdsuisse_req" />
+    <layout name="hdsuisse_epg_buttons" />
+    <layout name="hdsuisse_epg_keys" />
+    <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="5,810" size="1910,215" zPosition="-5" />
+    <widget name="channel_txt" position="15,835" size="500,35" font="Regular;32" foregroundColor="channel" transparent="1" backgroundColor="bg2" />
+    <widget name="bouquet_txt" position="600,9" size="700,40" font="Regular; 30" halign="center" transparent="1" foregroundColor="title" backgroundColor="bg2" />
+    <ePixmap alphatest="on" pixmap="hdsuisse.fhd/skin_default/buttons/key_info.png" position="1840,1040" size="40,30" transparent="1" />
+    <ePixmap alphatest="on" pixmap="hdsuisse.fhd/skin_default/buttons/key_menu.png" position="1790,1040" size="40,30" transparent="1" />
+    <widget name="timeline_text" position="-10,55" size="1930,45" transparent="1" />
+    <widget name="list" position="5,103" size="1910,715" foregroundColor="foreground" ServiceNameBackgroundColor="transparent" ActiveServiceNameBackgroundColor="green" NowBackgroundColor="dark" PrimetimeBackgroundColor="dark" TimerBackgroundColor="red" nowTimerBackgroundColor="red" halfTimerBackgroundColor="red" EntryBackgroundColor="transparent" EntryForegroundColorSelected="foreground" EntryBackgroundColorSelected="marked" EntryBorderColor="grey" scrollbarMode="showNever" transparent="0" />
+    <widget name="timeline0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MultiEPG_MV/timeline.png" position="90,98" size="5,725" zPosition="-2" />
+    <widget alphatest="on" name="timeline_now" pixmap="hdsuisse.fhd/gfx/timeline-now.png" position="90,95" size="30,730" zPosition="2" />
+    <eLabel backgroundColor="light-red" position="135,102" size="1780,2" zPosition="5" />
+    <eLabel backgroundColor="light-red" position="135,817" size="1780,2" zPosition="5" />
+    <widget source="Event" render="Label" position="15,870" size="1090,35" font="Regular;28" noWrap="1" valign="top" transparent="1" backgroundColor="bg2">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="Event" position="1120,835" size="360,35" render="Label" font="Regular;28" halign="left" valign="top" foregroundColor="clock" transparent="1" backgroundColor="bg2">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Format:%A %e. %B</convert>
+    </widget>
+    <widget source="Event" render="Label" position="1120,870" size="80,35" font="Regular;28" halign="left" valign="center" foregroundColor="clock" transparent="1" backgroundColor="bg2">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="1190,870" size="100,35" font="Regular;28" foregroundColor="clock" transparent="1" backgroundColor="bg2" halign="left">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format: - %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="1300,870" size="160,35" font="Regular;28" halign="right" valign="top" foregroundColor="red" transparent="1" backgroundColor="bg2">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget source="Event" render="RunningText" font="Regular;28" position="15,905" size="1470,100" valign="top" transparent="1" backgroundColor="bg2" options="movetype=running,startpoint=0,direction=top,startdelay=4000,steptime=80,always=0,repeat=2,oneshot=1,wrap=1">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget source="session.VideoPicture" render="Pig" position="1540,827" size="340,190" zPosition="3" backgroundColor="video" />
+  </screen>
+  <screen name="MultiEPGSetup" position="0,0" size="1920,1080" title="MultiEPG Vali-Mod Setup" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <layout name="hdsuisse_main_buttons" />
+    <layout name="hdsuisse_main_keys_label" />
+    <widget name="config" position="360,150" size="1230,620" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <eLabel backgroundColor="line" position="360,800" size="1230,2" />
+    <widget name="help" position="360,820" size="1230,120" font="Regular; 30" transparent="1" foregroundColor="help" backgroundColor="bg2" halign="center" valign="center" />
+  </screen>
+  <!-- Div. Plugins -->
+  <screen name="AltCamManager" position="0,0" size="1920,1080" title="AltCamManager" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <layout name="hdsuisse_main_buttons" />
+    <layout name="hdsuisse_main_keys_label" />
+    <eLabel position="1090,160" size="2,720" backgroundColor="line" />
+    <widget source="list" render="Listbox" position="345,160" size="740,720" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (76, 60), png = 1), 
+				MultiContentEntryText(pos = (90, 10), size = (510, 60), font=0, flags = RT_HALIGN_LEFT, text = 0), 
+				MultiContentEntryText(pos = (5, 38), size = (76, 24), font=1, flags = RT_HALIGN_CENTER, text = 2), 
+				],
+		"fonts": [gFont("Regular", 40),gFont("Regular", 16)],
+		"itemHeight": 80
+		}
+    </convert>
+    </widget>
+    <eLabel halign="left" position="1130,160" size="450,40" font="Regular; 30" text="Ecm info" transparent="1" foregroundColor="help" backgroundColor="bg2" />
+    <widget name="status" position="1130,250" size="450,630" font="Regular; 30" halign="left" noWrap="1" transparent="1" backgroundColor="bg2" valign="top" />
+  </screen>
+  <screen name="ConfigEdit" position="0,0" size="1920,1080" title="ConfigEdit" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <eLabel backgroundColor="line" foregroundColor="line" position="360,850" size="1230,2" />
+    <widget name="config" position="360,150" size="1230,660" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
+    <widget source="key_red" render="Label" position="395,987" size="260,40" backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" valign="center" zPosition="10" transparent="1" />
+    <widget source="key_green" render="Label" position="695,987" size="260,40" backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" valign="center" zPosition="10" transparent="1" />
+    <widget source="about" render="Label" position="360,870" size="1230,90" valign="center" halign="center" zPosition="2" foregroundColor="help" font="Regular; 28" backgroundColor="bg2" transparent="1" />
+    <widget name="HelpWindow" position="670,580" size="1,1" zPosition="5" pixmap="skin_default/vkey_icon.png" transparent="1" alphatest="on" />
   </screen>
   <screen name="MySpeedtest" position="0,0" size="1920,1080" title="simple e2Speedtest" backgroundColor="transparent" flags="wfNoBorder">
     <layout name="hdsuisse_base" />
@@ -9070,13 +9242,11 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <layout name="hdsuisse_main" />
     <layout name="hdsuisse_main_buttons" />
     <layout name="hdsuisse_main_keys" />
-    <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="350,75" size="1250,950" zPosition="-15" />
-    <widget name="config" position="370,149" size="1200,720" scrollbarMode="showOnDemand" transparent="1" backgroundColor="bg2" />
+    <widget name="config" position="360,149" size="1230,720" scrollbarMode="showOnDemand" transparent="1" backgroundColor="bg2" />
     <widget name="help" position="520,890" size="890,63" font="Regular;30" backgroundColor="bg2" valign="center" halign="center" transparent="1" foregroundColor="orange-dark" />
   </screen>
   <screen name="menulist7" position="0,0" size="1920,1080" title="PlanerFS" backgroundColor="transparent" flags="wfNoBorder">
     <layout name="hdsuisse_base" />
-    <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="350,75" size="1250,950" zPosition="-15" />
     <widget source="menulist" render="Listbox" position="520,277" size="880,600" scrollbarMode="showOnDemand" foregroundColor="foreground" enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 			{"templates": 
@@ -9097,7 +9267,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PlanerFS7" position="0,0" size="1920,1080" title="PlanerFS" transparent="0">
     <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="130,142" size="1630,770" zPosition="-15" />
-    <eLabel backgroundColor="background" name="" position="120,80" size="1650,890" zPosition="-20" />
+    <eLabel backgroundColor="layout" name="" position="120,80" size="1650,890" zPosition="-20" />
     <widget backgroundColor="black" font="Regular;32" foregroundColor="yellow" halign="left" name="kal_num" position="149,80" size="110,60" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="bg2" font="Regular;32" foregroundColor="title" halign="center" name="titel" position="150,80" size="1600,60" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="bg2" font="Regular;32" foregroundColor="clock" halign="right" name="datum" position="1450,80" size="300,60" transparent="1" valign="center" zPosition="4" />
@@ -9197,12 +9367,12 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/yellow.png" position="975,920" size="10,25" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/blue.png" position="1275,920" size="10,25" />
     <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1650,920" size="40,30" transparent="1" zPosition="2" />
-    <ePixmap gradient="#003b4045,#00111111,vertical" position="130,92" size="1630,50" zPosition="-10" />
-    <ePixmap gradient="#00111111,#003b4045,vertical" position="130,912" size="1630,50" zPosition="-10" />
+    <ePixmap gradient="layout,gradient,vertical" position="130,92" size="1630,50" zPosition="-10" />
+    <ePixmap gradient="gradient,layout,vertical" position="130,912" size="1630,50" zPosition="-10" />
   </screen>
   <screen name="startscreen8" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
     <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="600,110" size="820,830" zPosition="-15" />
-    <eLabel name="" position="590,60" size="840,930" zPosition="-20" backgroundColor="background" />
+    <eLabel name="" position="590,60" size="840,930" zPosition="-20" backgroundColor="layout" />
     <widget name="version" font="Regular; 30" zPosition="3" position="1315,944" size="90,40" valign="center" halign="center" foregroundColor="orange-dark" transparent="1" backgroundColor="bg2" />
     <widget name="titel" font="Regular;32" zPosition="2" position="618,70" size="355,40" foregroundColor="title" backgroundColor="bg2" transparent="1" />
     <widget name="dat1" position="973,70" size="430,40" font="Regular;32" foregroundColor="clock" zPosition="3" halign="right" backgroundColor="bg2" transparent="1" />
@@ -9234,8 +9404,8 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget name="greentext" position="645,945" size="140,30" font="Thin; 28" zPosition="3" valign="center" halign="left" backgroundColor="bg2" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/yellow.png" position="920,950" size="10,25" />
     <widget name="yellowtext" position="945,945" size="140,30" font="Thin; 28" zPosition="3" valign="center" halign="left" backgroundColor="bg2" transparent="1" />
-    <ePixmap position="600,65" size="820,45" gradient="#003b4045,#00111111,vertical" zPosition="-10" />
-    <ePixmap position="600,940" size="820,45" gradient="#00111111,#003b4045,vertical" zPosition="-10" />
+    <ePixmap position="600,65" size="820,45" gradient="layout,gradient,vertical" zPosition="-10" />
+    <ePixmap position="600,940" size="820,45" gradient="gradient,layout,vertical" zPosition="-10" />
   </screen>
   <screen name="Timermeldung" position="20,20" size="350,239" title=" " flags="wfNoBorder">
     <widget name="text1" position="30,10" zPosition="15" size="235,50" font="Regular;32" valign="center" halign="center" foregroundColor="foreground" backgroundColor="bg2" transparent="1" />
@@ -9243,21 +9413,13 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget name="text2" zPosition="14" position="15,40" size="310,180" font="Regular;30" valign="center" halign="center" foregroundColor="foreground" backgroundColor="bg2" />
   </screen>
   <screen name="camoFSSetup" position="0,0" size="1920,1080" title="camoFS - Setup" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="350,125" size="1250,850" zPosition="-15" />
-    <widget source="Title" render="Label" position="420,77" size="600,40" halign="left" valign="center" font="Regular; 30" foregroundColor="title" backgroundColor="bg2" transparent="1" zPosition="1" />
-    <ePixmap pixmap="hdsuisse.one4all.fhd/gfx/s_news.png" position="360,78" size="40,40" transparent="1" zPosition="-1" />
-    <widget backgroundColor="bg2" font="Regular; 28" foregroundColor="clock" halign="right" position="1140,77" render="Label" size="450,40" source="global.CurrentTime" transparent="1" valign="center">
-      <convert type="ClockToText">Format: %A, %d.%m.%Y  %H:%M:%S</convert>
-    </widget>
-    <eLabel name="" position="340,65" size="1270,970" zPosition="-20" backgroundColor="background" />
-    <ePixmap position="350,75" size="1250,50" gradient="#003b4045,#00111111,vertical" zPosition="-10" />
-    <ePixmap position="350,975" size="1250,50" gradient="#00111111,#003b4045,vertical" zPosition="-10" />
+    <layout name="hdsuisse_main" />
     <widget name="config" enableWrapAround="1" position="407,139" scrollbarMode="showOnDemand" size="1140,800" transparent="1" />
-    <widget name="pic_help" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/camoFS/key_help.png" zPosition="2" position="1505,980" size="40,40" backgroundColor="black" alphatest="blend" />
-    <widget name="key_red" position="407,985" zPosition="2" size="150,30" font="Thin; 28" foregroundColor="foreground" transparent="1" />
-    <widget name="key_green" position="706,985" zPosition="2" size="150,30" font="Thin; 28" foregroundColor="foreground" transparent="1" />
-    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,990" size="10,25" />
-    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,990" size="10,25" />
+    <widget name="pic_help" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/camoFS/key_help.png" zPosition="2" position="1505,987" size="40,40" backgroundColor="black" alphatest="blend" />
+    <widget name="key_red" position="407,990" zPosition="2" size="150,30" font="Thin; 28" foregroundColor="foreground" transparent="1" />
+    <widget name="key_green" position="706,990" zPosition="2" size="150,30" font="Thin; 28" foregroundColor="foreground" transparent="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
   </screen>
   <screen name="camoFS_menu" position="0,0" size="1920,1080" title="camoFS-menu" backgroundColor="transparent" flags="wfNoBorder">
     <layout name="hdsuisse_base" />
@@ -9291,6 +9453,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget name="kro" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/camoFS/k_r_o.png" position="560,10" size="40,40" zPosition="6" alphatest="on" />
     <widget name="kru" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/camoFS/k_r_u.png" position="560,290" size="40,40" zPosition="6" alphatest="on" />
   </screen>
+  <!-- SerienRecorder -->
   <screen name="SerienRecorder" position="0,0" size="1920,1100" flags="wfNoBorder" title="Serien Recorder" transparent="0" backgroundColor="transparent">
     <layout name="hdsuisse_req" />
     <eLabel backgroundColor="video" position="1310,70" size="578,300" zPosition="2" transparent="0" />
@@ -9311,7 +9474,6 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget name="popup_list2" position="20,180" size="1250,780" scrollbarMode="showOnDemand" zPosition="3" transparent="0" />
     <widget name="cover" position="1709,801" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/skins/DreamOS FHD/images/cover_default.png" size="106,162" transparent="1" />
     <widget name="config_information_text" position="1585,379" size="320,420" font="Regular;28" zPosition="5" transparent="1" />
-    <!-- Buttons -->
     <widget name="bt_ok" position="1300,375" size="50,37" zPosition="1" pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_ok.png" alphatest="on" />
     <widget name="bt_exit" position="1300,412" size="50,37" zPosition="1" pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_exit.png" alphatest="on" />
     <widget name="bt_text" position="1300,449" size="50,37" zPosition="1" pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_text.png" alphatest="on" />
@@ -9356,7 +9518,8 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/blue.png" position="1358,1040" size="10,25" />
     <eLabel backgroundColor="foreground" position="1570,375" size="1,595" />
   </screen>
-  <screen name="PlutoConfig" size="1920,1080" position="0,0" title="PlutoConfig" backgroundColor="transparent">
+  <!-- Merlin Neu -->
+  <screen name="PlutoConfig" size="1920,1080" position="0,0" title="Pluto Setup" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
     <widget name="config" position="360,150" size="1230,800" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="ButtonRedText" position="395,987" size="260,40" valign="center" halign="left" font="Thin; 28" transparent="1" foregroundColor="button" backgroundColor="bg2" />
@@ -9431,7 +9594,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget name="slider" position="300,10" size="200,30" borderWidth="2" borderColor="line" foregroundColor="foreselect" transparent="1" backgroundColor="bg2" zPosition="5" />
     <widget font="Regular;28" halign="right" valign="center" position="500,0" size="290,50" render="Label" source="eta" transparent="1" backgroundColor="bg2" zPosition="5" />
   </screen>
-  <!-- VPNmanager -->
+  <!-- Boxpirates -->
   <screen name="VpnManagerScreen" backgroundColor="transparent" position="0,0" size="1920,1080" title="Vpn Manager Selection" flags="wfNoBorder">
     <layout name="hdsuisse_epgselection" />
     <widget name="logo" position="320,90" size="509,148" alphatest="blend" zPosition="2" transparent="1" />
@@ -9451,44 +9614,92 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   </screen>
   <screen name="VpnManagerConfigScreen" backgroundColor="transparent" position="0,0" size="1920,1080" title="Vpn Manager Settings" flags="wfNoBorder">
     <layout name="hdsuisse_epgselection" />
-    <widget name="config" position="30,90" size="1150,756" backgroundColorSelected="backselect" foregroundColorSelected="foreselect" foregroundColor="foreground" backgroundColor="bg2" zPosition="3" transparent="1" />
+    <widget name="logo" position="320,90" size="509,148" alphatest="blend" zPosition="2" transparent="1" />
+    <widget name="config" position="30,250" size="1150,756" backgroundColorSelected="backselect" foregroundColorSelected="foreselect" foregroundColor="foreground" backgroundColor="bg2" zPosition="3" transparent="1" />
     <widget name="myInfoLabel" position="1245,90" size="630,870" transparent="1" foregroundColor="help" backgroundColor="bg2" zPosition="3" font="Regular; 28" valign="center" halign="center" />
     <eLabel text="Set default DNS" position="65,1033" size="260,40" backgroundColor="bg2" transparent="1" foregroundColor="button" zPosition="3" font="Thin; 28" valign="center" halign="left" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="40,1040" size="10,25" />
     <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_ok.png" position="1795,1040" size="40,30" transparent="1" />
     <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_exit.png" position="1845,1040" size="40,30" transparent="1" />
   </screen>
-  <screen name="AltCamManager" position="0,0" size="1920,1080" title="AltCamManager" backgroundColor="transparent">
+  <screen name="FolderScreen" backgroundColor="transparent" position="center,center" size="1920,1080" title="VPN Manager Folder" flags="wfNoBorder">
+    <layout name="hdsuisse_epgselection" />
+    <widget name="logo" position="320,90" size="509,148" alphatest="blend" zPosition="2" transparent="1" />
+    <widget name="media" position="30,250" size="1090,40" foregroundColor="white" backgroundColor="bg2" font="Regular; 30" valign="top" halign="left" zPosition="2" transparent="1" />
+    <widget name="folderlist" scrollbarMode="showOnDemand" position="30,290" size="1150,712" backgroundColorSelected="backselect" foregroundColorSelected="foreselect" foregroundColor="foreground" backgroundColor="background" zPosition="3" transparent="1" itemHeight="42" />
+    <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_ok.png" position="915,1040" size="40,30" transparent="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="40,1040" size="10,25" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="340,1040" size="10,25" />
+    <eLabel text="Exit" position="65,1033" size="260,40" backgroundColor="bg2" transparent="1" foregroundColor="button" zPosition="3" font="Thin; 28" valign="center" halign="left" />
+    <eLabel text="Save" position="365,1033" size="260,40" backgroundColor="bg2" transparent="1" foregroundColor="button" zPosition="3" font="Thin; 28" valign="center" halign="left" />
+    <eLabel name="" position="965,1033" size="260,40" transparent="1" text="Select" font="Thin; 28" foregroundColor="button" backgroundColor="bg2" />
+    <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_exit.png" position="1845,1040" size="40,30" transparent="1" />
+  </screen>
+  <screen name="cammanager" position="center,center" size="1920,1080" title="BoxPirates-Cam-Manager" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
     <layout name="hdsuisse_main_buttons" />
-    <layout name="hdsuisse_main_keys_label" />
-    <eLabel position="1090,160" size="2,720" backgroundColor="line" />
-    <widget source="list" render="Listbox" position="345,160" size="740,720" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-			{"template": [
-				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (76, 60), png = 1), 
-				MultiContentEntryText(pos = (90, 10), size = (510, 60), font=0, flags = RT_HALIGN_LEFT, text = 0), 
-				MultiContentEntryText(pos = (5, 38), size = (76, 24), font=1, flags = RT_HALIGN_CENTER, text = 2), 
-				],
-		"fonts": [gFont("Regular", 40),gFont("Regular", 16)],
-		"itemHeight": 80
-		}
-    </convert>
+    <layout name="hdsuisse_main_keys" />
+    <widget name="info_use" position="360,150" zPosition="2" size="1230,40" valign="center" halign="center" font="Regular; 30" transparent="1" foregroundColor="help" backgroundColor="bg2" />
+    <widget name="config" position="360,210" size="1230,180" seperation="270" zPosition="2" transparent="1" />
+    <widget name="ecmlabels" font="Regular;24" position="1160,495" zPosition="2" size="150,390" transparent="1" backgroundColor="bg2" />
+    <widget name="ecmValues" font="Regular;24" position="1300,495" zPosition="3" size="290,390" transparent="1" backgroundColor="bg2" />
+    <widget position="360,490" size="300,60" source="session.CurrentService" render="Label" halign="center" font="Regular; 30" transparent="1" backgroundColor="bg2" foregroundColor="channel">
+      <convert type="ServiceName">Name</convert>
     </widget>
-    <eLabel halign="left" position="1130,160" size="450,40" font="Regular; 30" text="Ecm info" transparent="1" foregroundColor="help" backgroundColor="bg2" />
-    <widget name="status" position="1130,250" size="450,630" font="Regular; 30" halign="left" noWrap="1" transparent="1" backgroundColor="bg2" valign="top" />
+    <widget name="picchannel" position="360,580" size="300,60" zPosition="2" alphatest="blend" transparent="1" />
+    <widget source="session.CurrentService" render="Label" position="740,490" size="300,60" font="Regular; 30" halign="center" transparent="1" backgroundColor="bg2" foregroundColor="channel">
+      <convert type="ServiceName">Provider</convert>
+    </widget>
+    <widget name="picprov" position="740,580" size="300,60" zPosition="2" alphatest="blend" transparent="1" />
+    <widget name="sat" position="360,700" size="300,60" font="Regular; 30" transparent="1" zPosition="2" halign="center" backgroundColor="bg2" foregroundColor="orange" />
+    <widget name="picsat" position="360,790" size="300,60" zPosition="2" alphatest="blend" transparent="1" />
+    <widget name="cas" position="740,700" size="300,60" font="Regular; 30" transparent="1" zPosition="2" halign="center" backgroundColor="bg2" foregroundColor="orange-dark" />
+    <widget name="piccode" position="740,790" size="300,60" zPosition="2" alphatest="blend" transparent="1" />
+    <eLabel name="" position="360,400" size="1230,2" foregroundColor="line" backgroundColor="line" />
   </screen>
-  <screen name="ConfigEdit" position="0,0" size="1920,1080" title="ConfigEdit" backgroundColor="transparent">
+  <screen name="bpinfoscreen" title="Info/Help" position="center,center" size="1920,1080" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
-    <eLabel backgroundColor="line" foregroundColor="line" position="360,850" size="1230,2" />
-    <widget name="config" position="360,150" size="1230,660" zPosition="1" scrollbarMode="showOnDemand" transparent="1" />
-    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
-    <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
-    <widget source="key_red" render="Label" position="395,987" size="260,40" backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" valign="center" zPosition="10" transparent="1" />
-    <widget source="key_green" render="Label" position="695,987" size="260,40" backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" valign="center" zPosition="10" transparent="1" />
-    <widget source="about" render="Label" position="360,870" size="1230,90" valign="center" halign="center" zPosition="2" foregroundColor="help" font="Regular; 28" backgroundColor="bg2" transparent="1" />
-    <widget name="HelpWindow" position="670,580" size="1,1" zPosition="5" pixmap="skin_default/vkey_icon.png" transparent="1" alphatest="on" />
+    <layout name="hdsuisse_main_buttons" />
+    <widget name="key_red" position="395,987" size="260,40" font="Thin; 28" halign="left" foregroundColor="button" zPosition="2" transparent="1" backgroundColor="bg2" />
+    <widget name="info_use" position="360,150" zPosition="2" size="610,40" halign="center" valgin="center" font="Regular;34" transparent="0" backgroundColor="yellow" foregroundColor="black" />
+    <widget name="info_use1" position="360,185" zPosition="2" size="610,425" halign="center" font="Regular;25" transparent="1" backgroundColor="bg2" />
+    <eLabel name="Oscam" position="360,190" zPosition="3" size="610,40" halign="center" font="Regular;30" transparent="1" backgroundColor="bg2" text="Welche OScam?" foregroundColor="help" />
+    <eLabel name="Oscam1" position="360,315" zPosition="3" size="610,40" halign="center" font="Regular;30" transparent="1" backgroundColor="bg2" text="Was bedeuten die Endungen?" foregroundColor="help" />
+    <eLabel name="Oscam2" position="360,435" zPosition="3" size="610,40" halign="center" font="Regular;30" transparent="1" backgroundColor="bg2" text="Was bedeuten die Zahlen?" foregroundColor="help" />
+    <widget name="info_use2" position="360,630" zPosition="2" size="610,40" halign="center" valgin="center" font="Regular;34" transparent="0" backgroundColor="yellow" foregroundColor="black" />
+    <eLabel name="Config" position="359,680" zPosition="3" size="610,40" halign="center" font="Regular;30" transparent="1" backgroundColor="bg2" text="Welche Konfigurationsdatei benötige ich?" foregroundColor="help" />
+    <widget name="info_use3" position="360,680" zPosition="2" size="610,175" halign="center" font="Regular;25" transparent="1" backgroundColor="bg2" />
+    <widget name="info_use4" position="980,150" zPosition="2" size="610,40" halign="center" valgin="center" font="Regular;34" transparent="0" backgroundColor="yellow" foregroundColor="black" />
+    <eLabel name="CCcam" position="980,190" zPosition="3" size="610,40" halign="center" font="Regular;30" transparent="1" backgroundColor="bg2" text="Welche CCcam?" foregroundColor="help" />
+    <widget name="info_use5" position="980,185" zPosition="2" size="610,215" halign="center" font="Regular;25" transparent="1" backgroundColor="bg2" />
+    <widget name="info_use6" position="980,410" zPosition="2" size="610,40" halign="center" valgin="center" font="Regular;34" transparent="0" backgroundColor="yellow" foregroundColor="black" />
+    <widget name="info_use7" position="980,460" zPosition="2" size="610,120" halign="center" font="Regular;25" transparent="1" backgroundColor="bg2" />
+    <widget name="info_use8" position="980,630" zPosition="2" size="610,40" halign="center" valgin="center" font="Regular;34" transparent="0" backgroundColor="yellow" foregroundColor="black" />
+    <widget name="info_use9" position="980,680" zPosition="2" size="610,175" halign="center" font="Regular;25" transparent="1" backgroundColor="bg2" />
+    <widget name="forum" position="360,901" zPosition="2" size="1230,40" halign="center" valgin="center" font="Regular; 30" transparent="1" backgroundColor="bg2" foregroundColor="help" />
+    <eLabel name="" position="360,870" size="1230,2" foregroundColor="line" backgroundColor="line" />
   </screen>
+  <screen name="GetCamlist" title="Download Cam" position="center,center" size="1920,1080" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <layout name="hdsuisse_main_buttons" />
+    <layout name="hdsuisse_main_keys" />
+    <widget name="info" position="360,800" zPosition="4" size="1230,90" font="Regular; 30" foregroundColor="help" transparent="1" halign="center" valign="center" backgroundColor="bg2" />
+    <widget name="list" position="360,150" size="1230,560" scrollbarMode="showOnDemand" setFont="Regular;28" itemHeight="35" transparent="1" />
+  </screen>
+  <screen name="GetCamIpk" title="Install ..." position="center,center" size="1920,1080" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <widget name="info" position="360,800" zPosition="4" size="1230,40" font="Regular; 30" foregroundColor="help" transparent="1" halign="center" valign="center" backgroundColor="bg2" />
+    <widget name="list" position="360,150" size="1230,500" scrollbarMode="showOnDemand" setFont="Regular;28" itemHeight="35" transparent="1" />
+  </screen>
+  <screen name="BoxPiratescamuninstall" title="Cam uninstall" position="center,center" size="1920,1080" backgroundColor="transparent">
+    <layout name="hdsuisse_main" />
+    <layout name="hdsuisse_main_buttons" />
+    <widget name="info" position="360,800" zPosition="4" size="1230,45" font="Regular; 30" foregroundColor="help" transparent="1" halign="center" backgroundColor="bg2" />
+    <widget name="menu" position="360,150" size="1230,560" scrollbarMode="showOnDemand" itemHeight="35" transparent="1" />
+    <widget name="key_red" position="395,987" size="260,40" font="Thin; 28" halign="left" foregroundColor="button" zPosition="2" transparent="1" backgroundColor="bg2" />
+    <widget backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" name="key_yellow" position="995,987" size="260,40" transparent="1" valign="center" zPosition="10" />
+  </screen>
+  <!-- EDM -->
   <screen name="EventDataManagerMain" position="0,0" size="1920,1080" title="EventDataManagerMain" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
     <layout name="hdsuisse_main_buttons" />
@@ -9651,7 +9862,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="EventDataManagerEventInfo">Multi,{Episode: %s   }{Genre: %G   }{Rating: %r   }{FSK: %F   }</convert>
     </widget>
   </screen>
-  <!-- LCD/OLED -->
+  <!-- LCD/OLED 820 -->
   <screen id="1" name="ChannelSelection_summary" position="0,0" size="132,64">
     <widget source="session.CurrentService" render="Label" halign="center" position="2,18" size="126,20" font="Regular; 18" noWrap="1">
       <convert type="ServiceName">Name</convert>
@@ -9714,7 +9925,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget name="rms0" channel="0" pixmap="hdsuisse.one4all.fhd/gfx/prog_7080.png" zPosition="13" position="5,40" size="120,6" transparent="1" borderWidth="0" mode="standardEnigmaSlider" maxValue="130" fadeOutTime="1600" smoothing="0.98" />
     <widget name="rms1" channel="1" pixmap="hdsuisse.one4all.fhd/gfx/prog_7080.png" zPosition="13" position="5,50" size="120,6" transparent="1" borderWidth="0" mode="standardEnigmaSlider" maxValue="130" fadeOutTime="1600" smoothing="0.98" />
   </screen>
-  <!-- LCD/OLED 900UHD -->
+  <!-- LCD/OLED 900 -->
   <screen flags="wfNoBorder" id="3" name="InfoBarSummary" position="0,0" size="400,240">
     <widget font="Regular; 50" foregroundColor="white" halign="center" noWrap="1" position="0,160" render="Label" size="400,70" source="session.Event_Now" valign="center">
       <convert type="EventName">Name</convert>
@@ -9749,8 +9960,8 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget font="Regular; 55" halign="center" position="225,10" render="Label" size="170,70" source="global.CurrentTime" transparent="1" valign="center" zPosition="5" foregroundColor="white">
-  <convert type="ClockToText">Format: %H:%M</convert>
-</widget>
+      <convert type="ClockToText">Format: %H:%M</convert>
+    </widget>
   </screen>
   <screen id="3" name="StandbySummary" position="0,0" size="400,240">
     <widget alphatest="on" position="200,100" render="MSNWeatherPixmap" size="200,150" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -9959,7 +10170,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="ServicePosition">Remaining,Negate</convert>
     </widget>
   </screen>
-  <!-- LCD/OLED twoUHD -->
+  <!-- LCD/OLED two -->
   <screen flags="wfNoBorder" id="100" name="ChannelSelection_summary" position="0,0" size="240,80">
     <widget source="parent.ServiceEvent" render="Picon" size="168,80" position="30,0" transparent="1" zPosition="10" scale="stretch">
       <convert type="ServiceName">Reference</convert>
