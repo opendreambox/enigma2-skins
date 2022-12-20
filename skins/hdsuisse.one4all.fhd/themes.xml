@@ -24,7 +24,7 @@
 			<GlobalsTheme name="all_Menus_left" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -60,7 +60,7 @@
 			<GlobalsTheme name="all_Menus_right" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -96,7 +96,7 @@
 			<GlobalsTheme name="all_Menus_left" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -132,7 +132,7 @@
 			<GlobalsTheme name="all_Menus_right" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -168,7 +168,7 @@
 			<GlobalsTheme name="all_Menus_left" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -204,7 +204,7 @@
 			<GlobalsTheme name="all_Menus_right" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -240,7 +240,7 @@
 			<GlobalsTheme name="all_Menus_left" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -276,7 +276,7 @@
 			<GlobalsTheme name="all_Menus_right" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -312,7 +312,7 @@
 			<GlobalsTheme name="all_Menus_left" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -348,7 +348,7 @@
 			<GlobalsTheme name="all_Menus_right" />	
 			<ComponentTheme name="Normal" />
 			<FontTheme name="Normal" />
-			<InfoBar name="Standard_Weather" />			
+			<InfoBar name="Standard_Time" />			
 			<PluginBrowser name="Vertical_left-right" />
 			<ChannelSelection name="Fullscreen_miniTV" />	
 			<MovieSelection name="Fullscreen_miniTV" />
@@ -1090,6 +1090,7 @@
 			  </widget>
 			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="5,55" size="1260,910" zPosition="-15" />
 			  <ePixmap gradient="layout,gradient,vertical" position="5,5" size="1260,50" zPosition="-10" />
+			  <ePixmap position="5,915" size="1260,50" gradient="gradient,layout,vertical" zPosition="-10" />
 			</layout>
 			<layout name="hdsuisse_base">
 			  <widget backgroundColor="bg2" font="Regular; 30" foregroundColor="title" halign="left" position="420,74" render="Label" size="600,40" source="Title" transparent="1" valign="center" zPosition="1" />
@@ -1412,6 +1413,7 @@
 				<convert type="ClockToText">Format: %A, %d.%m.%Y  %H:%M:%S</convert>
 			  </widget>
 			  <ePixmap position="5,5" size="1260,50" gradient="layout,gradient,vertical" zPosition="-10" />
+			  <ePixmap position="5,915" size="1260,50" gradient="gradient,layout,vertical" zPosition="-10" />
 			  <eLabel name="" position="0,0" size="1270,5" backgroundColor="layout" />
 			  <eLabel name="" position="0,965" size="1270,5" backgroundColor="layout" />
 			  <eLabel name="" position="0,0" size="5,970" backgroundColor="layout" />
@@ -1501,8 +1503,8 @@
 			  <eLabel name="layout" position="0, 0" size="1920,1080" zPosition="-20" backgroundColor="layout" />
 			  <ePixmap gradient="layout,gradient,vertical" position="5,5" size="1910,50" zPosition="-10" />
 			  <ePixmap gradient="gradient,layout,vertical" position="5,1025" size="1910,50" zPosition="-10" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1250,410" size="630,67" zPosition="-5" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1250,840" size="630,170" zPosition="-5" />
+			  <ePixmap gradient="gradient,layout,vertical" position="1250,410" size="630,67" zPosition="-5" />
+			  <ePixmap gradient="gradient,layout,vertical" position="1250,840" size="630,170" zPosition="-5" />
 			</layout>
 			<layout name="hdsuisse_channelselection_compact">
 			  <widget backgroundColor="bg2" font="Regular; 29" foregroundColor="title" position="80,25" render="Label" size="600,40" source="Title" transparent="1" zPosition="1" halign="left" noWrap="1" />
@@ -1513,7 +1515,7 @@
 			  </widget>
 			  <ePixmap position="5,20" size="1170,50" gradient="layout,gradient,vertical" zPosition="-10" />
 			  <ePixmap position="5,1000" size="1170,50" gradient="gradient,layout,vertical" zPosition="-10" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="500,830" size="675,170" zPosition="-1" />
+			  <ePixmap gradient="gradient,layout,vertical" position="500,830" size="675,170" zPosition="-1" />
 			  <eLabel name="" position="0,15" size="1180,5" backgroundColor="layout" />
 			  <eLabel name="" position="-6,1050" size="1180,5" backgroundColor="layout" />
 			  <eLabel name="" position="0,15" size="5,1040" backgroundColor="layout" />
@@ -1529,8 +1531,8 @@
 			  <eLabel name="layout" position="0,0" size="1920,1080" zPosition="-20" backgroundColor="bgtransp" />
 			  <ePixmap position="5,5" size="1910,50" gradient="layout,gradient,vertical" zPosition="-10" />
 			  <ePixmap position="5,1025" size="1910,50" gradient="gradient,layout,vertical" zPosition="-10" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1250,70" size="630,170" zPosition="-5" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1250,840" size="630,170" zPosition="-5" />
+			  <ePixmap gradient="gradient,layout,vertical" position="1250,70" size="630,170" zPosition="-5" />
+			  <ePixmap gradient="gradient,layout,vertical" position="1250,840" size="630,170" zPosition="-5" />
 			  <eLabel name="" position="0,0" size="1920,5" backgroundColor="layout" />
 			  <eLabel name="" position="0,1075" size="1920,5" backgroundColor="layout" />
 			  <eLabel name="" position="0,0" size="5,1080" backgroundColor="layout" />
@@ -1561,7 +1563,7 @@
 			  <eLabel name="layout" position="0, 0" size="1920,1080" zPosition="-20" backgroundColor="layout" />
 			  <ePixmap position="5,5" size="1910,50" gradient="layout,gradient,vertical" zPosition="-10" />
 			  <ePixmap position="5,1025" size="1910,50" gradient="gradient,layout,vertical" zPosition="-10" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1250,410" size="630,67" zPosition="-5" />
+			  <ePixmap gradient="gradient,layout,vertical" position="1250,410" size="630,67" zPosition="-5" />
 			  <eLabel name="line" position="1200,55" size="5,970" zPosition="15" backgroundColor="layout" />
 			</layout>
 			<layout name="hdsuisse_selection_simple">
@@ -1574,7 +1576,7 @@
 			  <eLabel name="layout" position="0, 0" size="1920,1080" zPosition="-20" backgroundColor="bgtransp" />
 			  <ePixmap position="5,5" size="1910,50" gradient="layout,gradient,vertical" zPosition="-10" />
 			  <ePixmap position="5,1025" size="1910,50" gradient="gradient,layout,vertical" zPosition="-10" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1250,70" size="630,170" zPosition="-5" />
+			  <ePixmap gradient="gradient,layout,vertical" position="1250,70" size="630,170" zPosition="-5" />
 			  <eLabel name="" position="0,0" size="1920,5" backgroundColor="layout" />
 			  <eLabel name="" position="0,1075" size="1920,5" backgroundColor="layout" />
 			  <eLabel name="" position="0,0" size="5,1080" backgroundColor="layout" />
@@ -1589,7 +1591,7 @@
 			  </widget>
 			  <ePixmap position="5,20" size="1170,50" gradient="layout,gradient,vertical" zPosition="-10" />
 			  <ePixmap position="5,1000" size="1170,50" gradient="gradient,layout,vertical" zPosition="-10" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="15,721" size="1150,67" zPosition="-5" />
+			  <ePixmap gradient="gradient,layout,vertical" position="15,721" size="1150,67" zPosition="-5" />
 			  <eLabel name="" position="0,15" size="1180,5" backgroundColor="layout" />
 			  <eLabel name="" position="-6,1050" size="1180,5" backgroundColor="layout" />
 			  <eLabel name="" position="0,15" size="5,1040" backgroundColor="layout" />
@@ -1636,7 +1638,7 @@
 			  <ePixmap gradient="gradient,layout,vertical" position="5,875" size="1910,50" zPosition="-10" />
 			  <ePixmap gradient="layout,gradient,vertical" position="5,5" size="1910,50" zPosition="-10" />
 			  <eLabel backgroundColor="layout" name="" position="0, 0" size="1920,930" zPosition="-20" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1330,343" size="560,75" zPosition="-5" />
+			  <ePixmap gradient="gradient,layout,vertical" position="1330,343" size="560,75" zPosition="-5" />
 			</layout>
 			<layout name="hdsuisse_radio_infobar">
 			  <eLabel name="" position="5,5" size="300,150" zPosition="-20" transparent="0" backgroundColor="bg2" />
@@ -1700,7 +1702,7 @@
 			</layout>
 			<layout name="hdsuisse_infobar_compact">
 			  <eLabel backgroundColor="bgtransp" name="" position="125,40" size="1675,160" zPosition="-50" transparent="0" />
-			  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1365,95" size="430,50" transparent="0" zPosition="-20" />
+			  <ePixmap gradient="gradient,layout,vertical" position="1365,95" size="430,50" transparent="0" zPosition="-20" />
 			  <eLabel name="line" position="425,40" size="5,160" zPosition="5" backgroundColor="layout" />
 			  <eLabel name="line" position="1360,40" size="5,160" zPosition="5" backgroundColor="layout" />
 			  <eLabel name="line" position="1795,40" size="5,160" zPosition="5" backgroundColor="layout" />
@@ -1725,7 +1727,7 @@
 			  <eLabel name="" position="1915,875" size="5,210" backgroundColor="layout" />
 			</layout>
 			<layout name="hdsuisse_movieplayer">
-			  <ePixmap gradient="mpgradfg,mpgradbg,vertical" position="360,1017" size="1200,45" zPosition="-1" />
+			  <ePixmap gradient="layout,gradient,vertical" position="360,1017" size="1200,45" zPosition="-1" />
 			  <eLabel name="" position="310,920" size="1300,160" zPosition="-15" backgroundColor="bgtransp" />
 			  <eLabel name="" position="310,920" size="1300,5" backgroundColor="layout" />
 			  <eLabel name="" position="310,1075" size="1300,5" backgroundColor="layout" />
@@ -1803,6 +1805,7 @@
 			  </widget>
 			  <ePixmap gradient="mpgradbg,layout,vertical" position="5,55" size="1260,910" zPosition="-15" />
 			  <ePixmap gradient="layout,gradient,vertical" position="5,5" size="1260,50" zPosition="-10" />
+			  <ePixmap position="5,915" size="1260,50" gradient="gradient,layout,vertical" zPosition="-10" />
 			</layout>
 			<layout name="hdsuisse_base">
 			  <widget backgroundColor="bg2" font="Regular; 30" foregroundColor="title" halign="left" position="420,74" render="Label" size="600,40" source="Title" transparent="1" valign="center" zPosition="1" />
@@ -2232,7 +2235,153 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 	  </screens>
 	  
 	  <screens name="InfoBar">
-			<screentheme name="Standard_Weather" value="active">
+			<screentheme name="Standard_Time" value="active">	
+				<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" transparent="0" zPosition="0">
+				  <layout name="hdsuisse_infobar" />
+				  <widget alphatest="on" path="picon" position="45,939" render="Picon" scale="stretch" size="220,132" source="session.CurrentService">
+					<convert type="ServiceName">Reference</convert>
+				  </widget>
+				  <widget source="session.Event_Now" render="Progress" position="320,1007" size="900,6" zPosition="3" pixmap="hdsuisse.one4all.fhd/bg/progress1460.png" transparent="1">
+					<convert type="EventTime">Progress</convert>
+				  </widget>
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/bg/progress1460back.png" position="320,1005" size="900,10" transparent="0" zPosition="1" />
+				  <widget backgroundColor="background" font="Regular; 34" noWrap="1" position="320,948" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+					<convert type="EventTime">StartTime</convert>
+					<convert type="ClockToText">Default</convert>
+				  </widget>
+				  <widget backgroundColor="bg2" font="Regular; 34" noWrap="1" position="420,948" render="Label" size="640,40" source="session.Event_Now" transparent="1">
+					<convert type="EventName">Name</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 34" halign="right" noWrap="1" position="1080,948" render="Label" size="140,40" source="session.Event_Now" transparent="1">
+					<convert type="EventTime">Remaining</convert>
+					<convert type="RemainingToText">InMinutes</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 32" foregroundColor="darkevent" noWrap="1" position="320,1028" render="Label" size="90,40" source="session.Event_Next" transparent="1" valign="center">
+					<convert type="EventTime">StartTime</convert>
+					<convert type="ClockToText">Default</convert>
+				  </widget>
+				  <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="darkevent" noWrap="1" position="420,1028" render="Label" size="640,40" source="session.Event_Next" transparent="1" valign="center">
+					<convert type="EventName">Name</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 32" foregroundColor="darkevent" halign="right" noWrap="1" position="1080,1028" render="Label" size="140,40" source="session.Event_Next" transparent="1" valign="center">
+					<convert type="EventTime">Duration</convert>
+					<convert type="ClockToText">InMinutes</convert>
+				  </widget>
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/hbbtv_off.png" position="1490,945" size="45,23" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/txt_off.png" position="1720,945" size="34,22" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/crypt_off.png" position="1587,945" size="34,22" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/format_off.png" position="1769,945" size="37,22" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/iptv_off.png" position="1546,941" size="30,30" />
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/hbbtv_on.png" position="1490,945" render="Pixmap" size="45,23" source="HbbtvApplication" transparent="1" zPosition="2">
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/format_on.png" position="1769,945" render="Pixmap" size="37,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">IsWidescreen</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/txt_on.png" position="1720,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">HasTelext</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/sdtv_on.png" position="1820,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">VideoWidth</convert>
+					<convert type="ValueRange">120,720</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/hd_on.png" position="1820,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">VideoWidth</convert>
+					<convert type="ValueRange">721,1280</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/fhd_on.png" position="1820,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">VideoWidth</convert>
+					<convert type="ValueRange">1281,1920</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/uhd_on.png" position="1820,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">VideoWidth</convert>
+					<convert type="ValueRange">1921,3880</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/hdr_on.png" position="1854,945" render="Pixmap" size="40,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">IsHdr</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 32" foregroundColor="clock" halign="center" position="1235,940" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+					<convert type="ClockToText">Format:%H:%M</convert>
+				  </widget>
+				  <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1235,985" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+					<convert type="ClockToText">Format: %A</convert>
+				  </widget>
+				  <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1235,1030" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+					<convert type="ClockToText">Format: %d.%m.%Y</convert>
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/crypt_on.png" position="1587,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">IsCrypted</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="levelmeter" halign="left" noWrap="1" position="1570,1035" render="Label" size="65,30" source="session.FrontendStatus" transparent="1" valign="center">
+					<convert type="FrontendInfo">SNR</convert>
+				  </widget>
+				  <eLabel backgroundColor="background" font="Regular; 24" foregroundColor="grey" halign="left" position="1490,995" size="73,30" text="Video:" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="movieWatching" halign="right" position="1555,995" render="Label" size="60,30" source="session.CurrentService" transparent="1" valign="center">
+					<convert type="ServiceInfo">VideoWidth</convert>
+				  </widget>
+				  <eLabel backgroundColor="background" font="Regular; 16" foregroundColor="grey" halign="center" position="1617,998" size="20,22" text="x" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="movieWatching" halign="left" position="1637,995" render="Label" size="65,30" source="session.CurrentService" transparent="1" valign="center">
+					<convert type="ServiceInfo">VideoHeight</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="light-blue" halign="left" position="1720,995" render="Label" size="85,30" source="session.CurrentService" transparent="1" valign="center">
+					<convert type="ServiceInfo">VideoType</convert>
+				  </widget>
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/rec_off.png" position="1810,998" scale="1" size="51,24" />
+				  <widget backgroundColor="background" pixmap="hdsuisse.one4all.fhd/icons/rec_on.png" position="1810,998" render="Pixmap" size="51,24" source="session.RecordState" transparent="1">
+					<convert type="ConditionalShowHide">Blink</convert>
+				  </widget>
+				  <widget backgroundColor="black" font="Regular; 24" foregroundColor="light-green" halign="center" position="1795,1036" render="FixedLabel" size="40,30" source="session.FrontendInfo" text="A1" transparent="1" zPosition="3">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">0,0</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget backgroundColor="black" font="Regular; 24" foregroundColor="light-red" halign="center" position="1795,1036" render="FixedLabel" size="40,30" source="session.TunerInfo" text="A1" transparent="1" zPosition="2">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">1</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <eLabel backgroundColor="black" font="Regular; 24" foregroundColor="darkevent" halign="center" position="1795,1036" size="40,30" text="A1" transparent="1" zPosition="1" />
+				  <widget backgroundColor="black" font="Regular; 24" foregroundColor="light-green" halign="center" position="1840,1036" render="FixedLabel" size="40,30" source="session.FrontendInfo" text="A2" transparent="1" zPosition="3">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">1,1</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget backgroundColor="black" font="Regular; 24" foregroundColor="light-red" halign="center" position="1840,1036" render="FixedLabel" size="40,30" source="session.TunerInfo" text="A2" transparent="1" zPosition="2">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">2</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <eLabel backgroundColor="black" font="Regular; 24" foregroundColor="darkevent" halign="center" position="1840,1036" size="40,30" text="A2" transparent="1" zPosition="1" />
+				  <eLabel backgroundColor="background" font="Regular; 24" foregroundColor="grey" halign="left" position="1490,1035" size="79,30" text="Signal:" transparent="1" valign="center" />
+				  <eLabel backgroundColor="background" font="Regular; 24" foregroundColor="grey" halign="left" position="1720,1035" size="70,30" text="Tuner:" transparent="1" valign="center" />
+				  <eLabel backgroundColor="line" foregroundColor="line" name="line" position="1490,980" size="400,2" zPosition="10" />
+				  <widget backgroundColor="bg2" font="Thin; 36" foregroundColor="channel" halign="center" noWrap="1" position="0,885" render="Label" shadowColor="black" shadowOffset="-2,-2" size="330,45" source="session.CurrentService" transparent="1" valign="center" zPosition="2">
+					<convert type="ServiceName">Name</convert>
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/iptv_on.png" backgroundColor="bg2" position="1546,941" render="Pixmap" size="30,30" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">SubservicesAvailable</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget source="session.CurrentService" render="Pixmap" pixmap="hdsuisse.one4all.fhd/icons/dolby_on.png" position="1638,945" size="65,25" zPosition="2" alphatest="blend">
+					<convert type="ServiceInfo">IsMultichannel</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/dolby_off.png" position="1638,945" size="65,25" zPosition="1" alphatest="blend" />
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="orange" halign="left" noWrap="1" position="1640,1035" render="Label" size="80,30" source="session.FrontendInfo" transparent="1" valign="center">
+					<convert type="FrontendInfo">TYPE</convert>
+				  </widget>
+				</screen>
+			</screentheme>			
+	  
+			<screentheme name="Standard_Weather" value="inactive">
 				<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" transparent="0" zPosition="0">
 				  <layout name="hdsuisse_infobar" />
 				  <widget alphatest="on" path="picon" position="45,939" render="Picon" scale="stretch" size="220,132" source="session.CurrentService">
@@ -2511,6 +2660,304 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 				  </widget>
 				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/dolby_off.png" position="1528,110" size="65,25" zPosition="1" alphatest="blend" />
 				</screen>
+			</screentheme>		
+
+			<screentheme name="Multituner_Time" value="inactive">
+				<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" transparent="0" zPosition="0">
+				  <layout name="hdsuisse_infobar" />
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="levelmeter" halign="left" noWrap="1" position="1840,1040" render="Label" size="65,30" source="session.FrontendStatus" transparent="1" valign="center">
+					<convert type="FrontendInfo">SNR</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="orange" halign="left" noWrap="1" position="1490,1040" render="Label" size="85,30" source="session.FrontendInfo" transparent="1" valign="center">
+					<convert type="FrontendInfo">TYPE</convert>
+				  </widget>
+				  <widget alphatest="on" path="picon" position="45,939" render="Picon" scale="stretch" size="220,132" source="session.CurrentService">
+					<convert type="ServiceName">Reference</convert>
+				  </widget>
+				  <widget source="session.Event_Now" render="Progress" position="320,1007" size="900,6" zPosition="3" pixmap="hdsuisse.one4all.fhd/bg/progress1460.png" transparent="1">
+					<convert type="EventTime">Progress</convert>
+				  </widget>
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/bg/progress1460back.png" position="320,1005" size="900,10" transparent="0" zPosition="1" />
+				  <widget backgroundColor="background" font="Regular; 34" noWrap="1" position="320,948" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+					<convert type="EventTime">StartTime</convert>
+					<convert type="ClockToText">Default</convert>
+				  </widget>
+				  <widget backgroundColor="bg2" font="Regular; 34" noWrap="1" position="420,948" render="Label" size="640,40" source="session.Event_Now" transparent="1">
+					<convert type="EventName">Name</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 34" halign="right" noWrap="1" position="1080,948" render="Label" size="140,40" source="session.Event_Now" transparent="1">
+					<convert type="EventTime">Remaining</convert>
+					<convert type="RemainingToText">InMinutes</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 32" foregroundColor="darkevent" noWrap="1" position="320,1028" render="Label" size="90,40" source="session.Event_Next" transparent="1" valign="center">
+					<convert type="EventTime">StartTime</convert>
+					<convert type="ClockToText">Default</convert>
+				  </widget>
+				  <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="darkevent" noWrap="1" position="420,1028" render="Label" size="640,40" source="session.Event_Next" transparent="1" valign="center">
+					<convert type="EventName">Name</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 32" foregroundColor="darkevent" halign="right" noWrap="1" position="1080,1028" render="Label" size="140,40" source="session.Event_Next" transparent="1" valign="center">
+					<convert type="EventTime">Duration</convert>
+					<convert type="ClockToText">InMinutes</convert>
+				  </widget>
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/hbbtv_off.png" position="1490,945" size="45,23" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/txt_off.png" position="1720,945" size="34,22" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/crypt_off.png" position="1587,945" size="34,22" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/format_off.png" position="1769,945" size="37,22" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/iptv_off.png" position="1546,941" size="30,30" />
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/hbbtv_on.png" position="1490,945" render="Pixmap" size="45,23" source="HbbtvApplication" transparent="1" zPosition="2">
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/format_on.png" position="1769,945" render="Pixmap" size="37,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">IsWidescreen</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/txt_on.png" position="1720,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">HasTelext</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/sdtv_on.png" position="1820,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">VideoWidth</convert>
+					<convert type="ValueRange">120,720</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/hd_on.png" position="1820,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">VideoWidth</convert>
+					<convert type="ValueRange">721,1280</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/fhd_on.png" position="1820,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">VideoWidth</convert>
+					<convert type="ValueRange">1281,1920</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/uhd_on.png" position="1820,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">VideoWidth</convert>
+					<convert type="ValueRange">1921,3880</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/hdr_on.png" position="1854,945" render="Pixmap" size="40,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">IsHdr</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 32" foregroundColor="clock" halign="center" position="1235,940" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+					<convert type="ClockToText">Format:%H:%M</convert>
+				  </widget>
+				  <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1235,985" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+					<convert type="ClockToText">Format: %A</convert>
+				  </widget>
+				  <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1235,1030" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+					<convert type="ClockToText">Format: %d.%m.%Y</convert>
+				  </widget>
+				  <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/crypt_on.png" position="1587,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">IsCrypted</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <eLabel backgroundColor="background" font="Regular; 24" foregroundColor="grey" halign="left" position="1490,995" size="73,30" text="Video:" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="movieWatching" halign="right" position="1555,995" render="Label" size="60,30" source="session.CurrentService" transparent="1" valign="center">
+					<convert type="ServiceInfo">VideoWidth</convert>
+				  </widget>
+				  <eLabel backgroundColor="background" font="Regular; 16" foregroundColor="grey" halign="center" position="1617,998" size="20,22" text="x" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="movieWatching" halign="left" position="1637,995" render="Label" size="65,30" source="session.CurrentService" transparent="1" valign="center">
+					<convert type="ServiceInfo">VideoHeight</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 24" foregroundColor="light-blue" halign="left" position="1720,995" render="Label" size="85,30" source="session.CurrentService" transparent="1" valign="center">
+					<convert type="ServiceInfo">VideoType</convert>
+				  </widget>
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/rec_off.png" position="1820,998" scale="1" size="51,24" />
+				  <widget backgroundColor="background" pixmap="hdsuisse.one4all.fhd/icons/rec_on.png" position="1820,998" render="Pixmap" size="51,24" source="session.RecordState" transparent="1">
+					<convert type="ConditionalShowHide">Blink</convert>
+				  </widget>
+				  <eLabel backgroundColor="line" foregroundColor="line" name="line" position="1490,980" size="400,2" zPosition="10" />
+				  <widget backgroundColor="bg2" font="Thin; 36" foregroundColor="channel" halign="center" noWrap="1" position="0,885" render="Label" shadowColor="black" shadowOffset="-2,-2" size="330,45" source="session.CurrentService" transparent="1" valign="center" zPosition="2">
+					<convert type="ServiceName">Name</convert>
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/iptv_on.png" backgroundColor="bg2" position="1546,941" render="Pixmap" size="30,30" source="session.CurrentService" transparent="1" zPosition="2">
+					<convert type="ServiceInfo">SubservicesAvailable</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget source="session.CurrentService" render="Pixmap" pixmap="hdsuisse.one4all.fhd/icons/dolby_on.png" position="1638,945" size="65,25" zPosition="2" alphatest="blend">
+					<convert type="ServiceInfo">IsMultichannel</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/dolby_off.png" position="1638,945" size="65,25" zPosition="1" alphatest="blend" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1590,1041" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1620,1041" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1650,1041" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1680,1041" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1710,1041" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1740,1041" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1770,1041" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1800,1041" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1590,1058" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1620,1058" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1650,1058" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1680,1058" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1710,1058" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1740,1058" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1770,1058" size="25,9" />
+				  <ePixmap pixmap="hdsuisse.one4all.fhd/icons/led_off.png" position="1800,1058" size="25,9" />
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1590,1041" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">0,0</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1620,1041" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">1,1</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1650,1041" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">2,2</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1680,1041" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">3,3</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1710,1041" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">4,4</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1740,1041" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">5,5</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1770,1041" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">6,6</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1800,1041" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">7,7</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1590,1058" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">8,8</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1620,1058" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">9,9</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1650,1058" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">10,10</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1680,1058" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">11,11</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1710,1058" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">12,12</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1740,1058" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">13,13</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1770,1058" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">14,14</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_green.png" position="1800,1058" render="Pixmap" size="25,9" source="session.FrontendInfo" transparent="1" zPosition="2">
+					<convert type="FrontendInfo">NUMBER</convert>
+					<convert type="ValueRange">15,15</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1590,1041" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">1</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1620,1041" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">2</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1650,1041" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">4</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1680,1041" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">8</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1710,1041" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">16</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1740,1041" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">32</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1770,1041" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">64</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1800,1041" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">128</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1590,1058" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">256</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1620,1058" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">512</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1650,1058" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">1024</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1680,1058" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">2048</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1710,1058" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">4096</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1740,1058" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">8192</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1770,1058" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">16384</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				  <widget pixmap="hdsuisse.one4all.fhd/icons/led_red.png" position="1800,1058" render="Pixmap" size="25,9" source="session.TunerInfo" transparent="1" zPosition="1">
+					<convert type="TunerInfo">TunerUseMask</convert>
+					<convert type="ValueBitTest">32768</convert>
+					<convert type="ConditionalShowHide" />
+				  </widget>
+				</screen>  
 			</screentheme>			
 
 			<screentheme name="Multituner_Weather" value="inactive">
@@ -3107,30 +3554,30 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 				  <widget backgroundColor="background" font="Regular; 29" foregroundColor="foreground" position="1005,720" render="Label" size="860,345" source="session.Event_Next" transparent="1" zPosition="1">
 					<convert type="EventName">FullDescription</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreselect" halign="left" position="265,650" render="Label" size="510,40" source="session.Event_Now" transparent="1" zPosition="5">
+				  <widget backgroundColor="background" font="Regular; 33" foregroundColor="foreselect" halign="left" position="265,650" render="Label" size="510,40" source="session.Event_Now" transparent="1" zPosition="5" valign="center">
 					<convert type="EventName">Name</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreselect" halign="left" position="1213,650" render="Label" size="510,40" source="session.Event_Next" transparent="1" zPosition="1">
+				  <widget backgroundColor="background" font="Regular; 33" foregroundColor="foreselect" halign="left" position="1213,650" render="Label" size="510,40" source="session.Event_Next" transparent="1" zPosition="1" valign="center">
 					<convert type="EventName">Name</convert>
 				  </widget>
 				  <widget backgroundColor="bg2" font="Thin; 36" foregroundColor="channel" halign="center" noWrap="1" position="0,595" render="Label" size="330,45" source="session.CurrentService" shadowColor="black" shadowOffset="-2,-2" transparent="1" valign="top" zPosition="2">
 					<convert type="ServiceName">Name</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="57,650" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="57,650" render="Label" size="90,40" source="session.Event_Now" transparent="1" valign="center">
 					<convert type="EventTime">StartTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
-				  <eLabel backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="center" position="139,650" size="15,40" text="-" transparent="1" />
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="161,650" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+				  <eLabel backgroundColor="background" font="Regular; 35" foregroundColor="white" halign="center" position="135,650" size="20,40" text="-" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="161,650" render="Label" size="90,40" source="session.Event_Now" transparent="1" valign="center">
 					<convert type="EventTime">EndTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1005,650" render="Label" size="90,40" source="session.Event_Next" transparent="1">
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1005,650" render="Label" size="90,40" source="session.Event_Next" transparent="1" valign="center">
 					<convert type="EventTime">StartTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
-				  <eLabel backgroundColor="background" font="Regular; 30" foregroundColor="darkblue" halign="center" position="1087,650" size="15,40" text="-" transparent="1" valign="center" />
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1109,650" render="Label" size="90,40" source="session.Event_Next" transparent="1">
+				  <eLabel backgroundColor="background" font="Regular; 35" foregroundColor="darkevent" halign="left" position="1085,650" size="20,40" text="-" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1109,650" render="Label" size="90,40" source="session.Event_Next" transparent="1" valign="center">
 					<convert type="EventTime">EndTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
@@ -3140,46 +3587,46 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 					<convert type="EventTime">Duration</convert>
 					<convert type="ClockToText">InMinutes</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" halign="right" noWrap="1" position="775,650" render="Label" size="140,40" source="session.Event_Now" transparent="1">
+				  <widget backgroundColor="background" font="Regular; 30" halign="right" noWrap="1" position="775,650" render="Label" size="140,40" source="session.Event_Now" transparent="1" valign="center">
 					<convert type="EventTime">Remaining</convert>
 					<convert type="RemainingToText">InMinutes</convert>
 				  </widget>
 				</screen>
 			</screentheme>
 			
-			<screentheme name="Standard_Info" value="inactive">
+			<screentheme name="Standard_Weather" value="inactive">
 				<screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1920,1080" title="SecondInfoBar" zPosition="5">
-				  <layout name="hdsuisse_secondinfobar_info" />
+				 <layout name="hdsuisse_secondinfobar_info" />
 				  <widget backgroundColor="background" font="Regular; 29" foregroundColor="foreground" position="57,673" render="Label" size="860,345" source="session.Event_Now" transparent="1" zPosition="1">
 					<convert type="EventName">FullDescription</convert>
 				  </widget>
 				  <widget backgroundColor="background" font="Regular; 29" foregroundColor="foreground" position="1005,673" render="Label" size="860,345" source="session.Event_Next" transparent="1" zPosition="1">
 					<convert type="EventName">FullDescription</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreselect" halign="left" position="265,605" render="Label" size="510,40" source="session.Event_Now" transparent="1" zPosition="5">
+				  <widget backgroundColor="background" font="Regular; 33" foregroundColor="foreselect" halign="left" position="265,605" render="Label" size="510,40" source="session.Event_Now" transparent="1" zPosition="5" valign="center">
 					<convert type="EventName">Name</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreselect" halign="left" position="1213,605" render="Label" size="510,40" source="session.Event_Next" transparent="1" zPosition="1">
+				  <widget backgroundColor="background" font="Regular; 33" foregroundColor="foreselect" halign="left" position="1213,605" render="Label" size="510,40" source="session.Event_Next" transparent="1" zPosition="1" valign="center">
 					<convert type="EventName">Name</convert>
 				  </widget>
 				  <widget backgroundColor="bg2" font="Thin; 36" foregroundColor="channel" halign="center" noWrap="1" position="0,550" render="Label" size="330,45" source="session.CurrentService" shadowColor="black" shadowOffset="-2,-2" transparent="1" valign="top" zPosition="2">
 					<convert type="ServiceName">Name</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="57,605" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="57,605" render="Label" size="90,40" source="session.Event_Now" transparent="1" valign="center">
 					<convert type="EventTime">StartTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
-				  <eLabel backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="center" position="139,605" size="15,40" text="-" transparent="1" />
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="161,605" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+				  <eLabel backgroundColor="background" font="Regular; 35" foregroundColor="white" halign="left" position="135,605" size="20,40" text="-" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="161,605" render="Label" size="90,40" source="session.Event_Now" transparent="1" valign="center">
 					<convert type="EventTime">EndTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1005,605" render="Label" size="90,40" source="session.Event_Next" transparent="1">
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1005,605" render="Label" size="90,40" source="session.Event_Next" transparent="1" valign="center">
 					<convert type="EventTime">StartTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
-				  <eLabel backgroundColor="background" font="Regular; 30" foregroundColor="darkblue" halign="center" position="1087,605" size="15,40" text="-" transparent="1" valign="center" />
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1109,605" render="Label" size="90,40" source="session.Event_Next" transparent="1">
+				  <eLabel backgroundColor="background" font="Regular; 35" foregroundColor="darkevent" halign="left" position="1085,605" size="20,40" text="-" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1109,605" render="Label" size="90,40" source="session.Event_Next" transparent="1" valign="center">
 					<convert type="EventTime">EndTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
@@ -3189,7 +3636,7 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 					<convert type="EventTime">Duration</convert>
 					<convert type="ClockToText">InMinutes</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" halign="right" noWrap="1" position="775,605" render="Label" size="140,40" source="session.Event_Now" transparent="1">
+				  <widget backgroundColor="background" font="Regular; 30" halign="right" noWrap="1" position="775,605" render="Label" size="140,40" source="session.Event_Now" transparent="1" valign="center">
 					<convert type="EventTime">Remaining</convert>
 					<convert type="RemainingToText">InMinutes</convert>
 				  </widget>
@@ -3202,20 +3649,28 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 				  <widget backgroundColor="bg2" font="Regular; 25" foregroundColor="orange" halign="left" noWrap="1" position="1005,1029" render="Label" size="110,40" source="session.FrontendInfo" transparent="1" valign="center">
 					<convert type="FrontendInfo">TYPE</convert>
 				  </widget>
-				  <widget alphatest="on" position="57,1029" render="MSNWeatherPixmap" size="45,45" source="session.MSNWeather" transparent="1" zPosition="3">
+				  <widget backgroundColor="bg2" font="Regular; 28" foregroundColor="clock" halign="left" noWrap="1" position="57,1030" render="Label" size="120,40" source="global.CurrentTime" transparent="1" valign="center">
+					<convert type="ClockToText">Format: %H:%M:%S</convert>
+				  </widget>
+				  <widget alphatest="on" position="227,1031" render="MSNWeatherPixmap" size="45,45" source="session.MSNWeather" transparent="1" zPosition="3">
 					<convert type="MSNWeather">weathericon,current</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 25" foregroundColor="yellow" halign="center" noWrap="1" position="130,1029" render="Label" size="40,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
+				  <widget backgroundColor="background" font="Regular; 25" foregroundColor="yellow" halign="left" noWrap="1" position="295,1030" render="Label" size="60,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
 					<convert type="MSNWeather">temperature_current</convert>
 				  </widget>
-				  <widget backgroundColor="bg2" font="Regular; 25" foregroundColor="darkevent" halign="left" noWrap="1" position="350,1029" render="Label" size="220,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
+				  <widget backgroundColor="bg2" font="Regular; 25" foregroundColor="darkevent" halign="left" noWrap="1" position="710,1029" render="Label" size="210,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
 					<convert type="MSNWeather">winddisplay</convert>
 				  </widget>
-				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/wind.png" position="270,1029" size="45,45" zPosition="5" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/wind.png" position="645,1031" size="45,45" zPosition="5" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.2k/icons/humid.png" position="440,1031" size="40,40" zPosition="5" />
+				  <widget backgroundColor="bg2" font="Regular; 25" foregroundColor="light-blue" halign="left" noWrap="1" position="500,1030" render="Label" size="70,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
+					<convert type="MSNWeather">humidity</convert>
+				  </widget>
+				  <eLabel backgroundColor="background" font="Regular; 25" foregroundColor="light-blue" halign="left" position="530,1030" size="40,40" text="%" transparent="1" valign="center" zPosition="5" />
 				</screen>
 			</screentheme>
 			
-			<screentheme name="Standard_Top-Info" value="inactive">
+			<screentheme name="Standard_Weather-Top" value="inactive">
 				<screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1920,1080" title="SecondInfoBar" zPosition="5">
 				  <layout name="hdsuisse_secondinfobar_top" />
 				  <widget backgroundColor="background" font="Regular; 29" foregroundColor="foreground" position="57,720" render="Label" size="860,345" source="session.Event_Now" transparent="1" zPosition="1">
@@ -3224,30 +3679,30 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 				  <widget backgroundColor="background" font="Regular; 29" foregroundColor="foreground" position="1005,720" render="Label" size="860,345" source="session.Event_Next" transparent="1" zPosition="1">
 					<convert type="EventName">FullDescription</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreselect" halign="left" position="265,650" render="Label" size="510,40" source="session.Event_Now" transparent="1" zPosition="5">
+				  <widget backgroundColor="background" font="Regular; 33" foregroundColor="foreselect" halign="left" position="265,650" render="Label" size="510,40" source="session.Event_Now" transparent="1" zPosition="5" valign="center">
 					<convert type="EventName">Name</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreselect" halign="left" position="1213,650" render="Label" size="510,40" source="session.Event_Next" transparent="1" zPosition="1">
+				  <widget backgroundColor="background" font="Regular; 33" foregroundColor="foreselect" halign="left" position="1213,650" render="Label" size="510,40" source="session.Event_Next" transparent="1" zPosition="1" valign="center">
 					<convert type="EventName">Name</convert>
 				  </widget>
 				  <widget backgroundColor="bg2" font="Thin; 36" foregroundColor="channel" halign="center" noWrap="1" position="0,595" render="Label" size="330,45" source="session.CurrentService" shadowColor="black" shadowOffset="-2,-2" transparent="1" valign="top" zPosition="2">
 					<convert type="ServiceName">Name</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="57,650" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="57,650" render="Label" size="90,40" source="session.Event_Now" transparent="1" valign="center">
 					<convert type="EventTime">StartTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
-				  <eLabel backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="center" position="139,650" size="15,40" text="-" transparent="1" />
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="161,650" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+				  <eLabel backgroundColor="background" font="Regular; 35" foregroundColor="white" halign="center" position="135,650" size="20,40" text="-" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="161,650" render="Label" size="90,40" source="session.Event_Now" transparent="1" valign="center">
 					<convert type="EventTime">EndTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1005,650" render="Label" size="90,40" source="session.Event_Next" transparent="1">
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1005,650" render="Label" size="90,40" source="session.Event_Next" transparent="1" valign="center">
 					<convert type="EventTime">StartTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
-				  <eLabel backgroundColor="background" font="Regular; 30" foregroundColor="darkblue" halign="center" position="1087,650" size="15,40" text="-" transparent="1" valign="center" />
-				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1109,650" render="Label" size="90,40" source="session.Event_Next" transparent="1">
+				  <eLabel backgroundColor="background" font="Regular; 35" foregroundColor="darkblue" halign="left" position="1085,650" size="20,40" text="-" transparent="1" valign="center" />
+				  <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkevent" halign="left" position="1109,650" render="Label" size="90,40" source="session.Event_Next" transparent="1" valign="center">
 					<convert type="EventTime">EndTime</convert>
 					<convert type="ClockToText">Default</convert>
 				  </widget>
@@ -3257,7 +3712,7 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 					<convert type="EventTime">Duration</convert>
 					<convert type="ClockToText">InMinutes</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 30" halign="right" noWrap="1" position="775,650" render="Label" size="140,40" source="session.Event_Now" transparent="1">
+				  <widget backgroundColor="background" font="Regular; 30" halign="right" noWrap="1" position="775,650" render="Label" size="140,40" source="session.Event_Now" transparent="1" valign="center">
 					<convert type="EventTime">Remaining</convert>
 					<convert type="RemainingToText">InMinutes</convert>
 				  </widget>
@@ -3270,16 +3725,24 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 				  <widget backgroundColor="bg2" font="Regular; 25" foregroundColor="orange" halign="left" noWrap="1" position="1005,7" render="Label" size="110,40" source="session.FrontendInfo" transparent="1" valign="center">
 					<convert type="FrontendInfo">TYPE</convert>
 				  </widget>
-				  <widget alphatest="on" position="57,7" render="MSNWeatherPixmap" size="45,45" source="session.MSNWeather" transparent="1" zPosition="3">
+				  <widget backgroundColor="bg2" font="Regular; 28" foregroundColor="clock" halign="left" noWrap="1" position="57,7" render="Label" size="120,40" source="global.CurrentTime" transparent="1" valign="center">
+					<convert type="ClockToText">Format: %H:%M:%S</convert>
+				  </widget>
+				  <widget alphatest="on" position="227,9" render="MSNWeatherPixmap" size="45,45" source="session.MSNWeather" transparent="1" zPosition="3">
 					<convert type="MSNWeather">weathericon,current</convert>
 				  </widget>
-				  <widget backgroundColor="background" font="Regular; 25" foregroundColor="yellow" halign="center" noWrap="1" position="130,7" render="Label" size="40,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
+				  <widget backgroundColor="background" font="Regular; 25" foregroundColor="yellow" halign="left" noWrap="1" position="295,7" render="Label" size="60,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
 					<convert type="MSNWeather">temperature_current</convert>
 				  </widget>
-				  <widget backgroundColor="bg2" font="Regular; 25" foregroundColor="darkevent" halign="left" noWrap="1" position="350,7" render="Label" size="220,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
+				  <widget backgroundColor="bg2" font="Regular; 25" foregroundColor="darkevent" halign="left" noWrap="1" position="710,7" render="Label" size="210,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
 					<convert type="MSNWeather">winddisplay</convert>
 				  </widget>
-				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/wind.png" position="270,7" size="45,45" zPosition="5" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/wind.png" position="645,9" size="45,45" zPosition="5" />
+				  <ePixmap alphatest="on" pixmap="hdsuisse.2k/icons/humid.png" position="440,9" size="40,40" zPosition="5" />
+				  <widget backgroundColor="bg2" font="Regular; 25" foregroundColor="light-blue" halign="left" noWrap="1" position="500,7" render="Label" size="70,40" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
+					<convert type="MSNWeather">humidity</convert>
+				  </widget>
+				  <eLabel backgroundColor="background" font="Regular; 25" foregroundColor="light-blue" halign="left" position="530,7" size="40,40" text="%" transparent="1" valign="center" zPosition="5" />
 				</screen>
 			</screentheme>			
       </screens>
@@ -3587,7 +4050,7 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 				  <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1745,1032" size="40,30" transparent="1" />
 				  <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1795,1032" size="40,30" transparent="1" />
 				  <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_exit.png" position="1845,1032" size="40,30" transparent="1" />
-				  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1440,345" size="460,67" zPosition="-5" />
+				  <ePixmap gradient="gradient,layout,vertical" position="1440,345" size="460,67" zPosition="-5" />
 				  <widget render="Pig" source="session.VideoPicture" position="1440,75" size="460,270" backgroundColor="transparent" zPosition="1" />
 				  <eLabel backgroundColor="line" position="300,141" size="2,839" zPosition="5" />
 				  <widget backgroundColor="background" font="Regular; 29" halign="left" noWrap="1" position="1440,430" render="Label" size="460,40" source="Event" transparent="1" valign="center" zPosition="5" foregroundColor="title">
@@ -3656,7 +4119,7 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 				  <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1745,1032" size="40,30" transparent="1" />
 				  <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1795,1032" size="40,30" transparent="1" />
 				  <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_exit.png" position="1845,1032" size="40,30" transparent="1" />
-				  <ePixmap gradient="mpgradbg,mpgradfg,vertical" position="1440,345" size="460,67" zPosition="-5" />
+				  <ePixmap gradient="gradient,layout,vertical" position="1440,345" size="460,67" zPosition="-5" />
 				  <widget render="Pig" source="session.VideoPicture" position="1440,75" size="460,270" backgroundColor="transparent" zPosition="1" />
 				  <eLabel backgroundColor="line" position="300,141" size="2,839" zPosition="5" />
 				  <widget backgroundColor="background" font="Regular; 29" halign="left" noWrap="1" position="1440,430" render="Label" size="460,40" source="Event" transparent="1" valign="center" zPosition="5" foregroundColor="title">
@@ -3849,5 +4312,61 @@ self.instance.move(ePoint((1920-wsizex-100) / 7, (1080-wsizey)/7))
 			</extlcdscreentheme>
 		</screens>
 	</extlcdscreenthemes>	
+	
+	<lcdscreenthemes>
+	
+		<screens name="StandbySummary">	
+			<lcdscreentheme name="Time" value="active">			
+				<screen id="100" name="StandbySummary" position="1,2" size="240,80" flags="wfNoBorder">
+				  <widget backgroundColor="black" font="Regular; 65" foregroundColor="white" halign="center" position="0,0" render="Label" size="238,77" source="global.CurrentTime" transparent="1" valign="center">
+					<convert type="ClockToText">Format:%H:%M</convert>
+				  </widget>
+				</screen>
+			</lcdscreentheme>
+
+			<lcdscreentheme name="Weather" value="inactive">
+				<screen id="100" name="StandbySummary" position="0,0" size="240,80">
+				  <widget alphatest="on" position="120,0" render="MSNWeatherPixmap" size="120,80" source="session.MSNWeather" transparent="1" zPosition="5">
+					<convert type="MSNWeather">weathericon,current</convert>
+				  </widget>
+				  <widget backgroundColor="background" font="Regular; 70" foregroundColor="yellow" halign="center" noWrap="1" position="0,0" render="Label" size="120,80" source="session.MSNWeather" transparent="1" valign="center" zPosition="3">
+					<convert type="MSNWeather">temperature_current</convert>
+				  </widget>
+				</screen>
+			</lcdscreentheme>
+			
+		</screens>
+		
+		<screens name="InfoBarSummary">	
+			<lcdscreentheme name="Picon" value="active">
+			  <screen flags="wfNoBorder" id="100" name="InfoBarSummary" position="0,0" size="240,80">
+				<widget position="36,0" render="Picon" scale="stretch" size="168,80" source="session.CurrentService" transparent="1" zPosition="10">
+				  <convert type="ServiceName">Reference</convert>
+				</widget>
+			  </screen>
+			</lcdscreentheme>
+			
+			<lcdscreentheme name="Title" value="inactive">
+				<screen flags="wfNoBorder" id="100" name="InfoBarSummary" position="0,0" size="240,80">
+				  <widget font="Regular; 38" foregroundColor="channel" halign="center" position="0,0" render="Label" size="240,80" source="session.Event_Now" valign="center" zPosition="20" backgroundColor="black">
+					<convert type="EventName">Name</convert>
+				  </widget>
+				</screen>
+			</lcdscreentheme>	
+			
+			<lcdscreentheme name="Time" value="inactive">
+				<screen id="100" name="InfoBarSummary" position="0,0" size="240,80">
+				  <widget font="Regular; 50" halign="center" position="0,2" render="Label" size="238,55" source="global.CurrentTime" noWrap="1" foregroundColor="white" transparent="1" zPosition="1">
+					<convert type="ClockToText">Format: %H:%M:%S</convert>
+				  </widget>
+				  <widget borderWidth="1" pixmap="hdsuisse.one4all.fhd/gfx/progress_two.png" position="1,60" render="Progress" size="238,15" source="session.Event_Now" transparent="1">
+					<convert type="EventTime">Progress</convert>
+				  </widget> 
+				</screen>
+			</lcdscreentheme>
+
+		</screens>			
+	</lcdscreenthemes>	
+	
 
 </themes>
