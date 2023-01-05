@@ -1,7 +1,7 @@
 <!-- hdsuisse.one4all.fhd Skin -->
 <skin>
   <copyright>
-    <original author="hdsuisse" version="7.2" name="hdsuisse.one4all.fhd" supporturl="https://dreambox.de/board/" license="all Dreambox oe2.5/2.6 Images, no modifications allowed" />
+    <original author="hdsuisse" version="8.0" name="hdsuisse.one4all.fhd" supporturl="https://dreambox.de/board/" license="all Dreambox oe2.5/2.6 Images, no modifications allowed" />
   </copyright>
   <output id="0">
     <resolution xres="1920" yres="1080" bpp="32" />
@@ -254,59 +254,62 @@
 				{"templates":
 					{
 					"default" : (100, [
-						MultiContentEntryText(pos=(0, 0), size=(full_width, 100), font=0, flags=RT_HALIGN_LEFT, text="", color=None, backcolor=0xFF00000C, backcolor_sel=0xFF00000D),
-						MultiContentEntryText(pos=(0, 0), size=(width-182, 35), font=0, flags=RT_HALIGN_LEFT, text=1, color=0xFF000009),
-						MultiContentEntryText(pos=(width-180, 0), size=(180, 35), font=3, flags=RT_HALIGN_RIGHT, text=2, color=0xFF000009),
-						MultiContentEntryText(pos=(200, 65), size=(200, 30), font=2, flags=RT_HALIGN_LEFT, text=3, color=0xFF000009),
-						MultiContentEntryText(pos=(0, 35), size=(width-120, 35), font=2, flags=RT_HALIGN_LEFT, text=4, color=0xFF000009),
-						MultiContentEntryText(pos=(0, 65), size=(200, 30), font=2, flags=RT_HALIGN_LEFT, text=5, color=0xFF000009),
-						MultiContentEntryText(pos=(width-200, 35), size=(198, 30), font=2, flags=RT_HALIGN_RIGHT, text=6, color=0xFF000009),
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 27), size = (40, 40), png =7),
+					    MultiContentEntryText(pos=(0,0),size=(1150,100),border_width=1,border_color=0xa0a0a0),
+						MultiContentEntryText(pos=(5, 0), size=(full_width, 100), font=0, flags=RT_HALIGN_LEFT, text="", color=None, backcolor=0xFF00000C, backcolor_sel=0xFF00000D),
+						MultiContentEntryText(pos=(5, 0), size=(width-182, 37), font=0, flags=RT_HALIGN_LEFT, text=1, color=0xFF000009),
+						MultiContentEntryText(pos=(width-180, 0), size=(0, 0), font=3, flags=RT_HALIGN_RIGHT, text=2, color=0xFF000009),
+						MultiContentEntryText(pos=(300, 65), size=(400, 30), font=2, flags=RT_HALIGN_LEFT, text=3, color=0xffcc80),
+						MultiContentEntryText(pos=(20, 35), size=(width-120, 35), font=2, flags=RT_HALIGN_LEFT, text=4, color=0xa0a0a0),
+						MultiContentEntryText(pos=(20, 65), size=(300, 30), font=2, flags=RT_HALIGN_LEFT, text=5, color=0xffffff),
+						MultiContentEntryText(pos=(width-200, 5), size=(198, 30), font=2, flags=RT_HALIGN_RIGHT, text=6, color=0xf23d21),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 27), size = (40, 40), png =7),
 						MultiContentEntryText(pos=(60, 30), size=(width-60, 30), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=8),
-						MultiContentEntryProgress(pos=(width-70,75), size=(70,15), percent=-11, borderWidth = 1, foreColor = 0x00FFFFFF),
+						MultiContentEntryProgress(pos=(width-70,65), size=(70,15), percent=-11, borderWidth = 1, foreColor = 0x0996f1),
 					]),
-					"compact_description" : (80, [
-						MultiContentEntryText(pos=(0+20, 0), size=(full_width-70, 37), font=0, flags=RT_HALIGN_LEFT, text="", color=None, backcolor=0xFF00000B, backcolor_sel=0xFF00000C),
+					"compact_description" : (75, [
+					    MultiContentEntryText(pos=(0,0),size=(1150,75),border_width=1,border_color=0xa0a0a0),
+						MultiContentEntryText(pos=(5+20, 0), size=(full_width-70, 37), font=0, flags=RT_HALIGN_LEFT, text="", color=None, backcolor=0xFF00000B, backcolor_sel=0xFF00000C),
 						MultiContentEntryText(pos=(60+20, 0), size=(width-60-70-120-60, 40), font=1, flags=RT_HALIGN_LEFT, text=1, color=0xFF000008),
-						MultiContentEntryText(pos=(60+20, 40), size=(width-60-70-212, 40), font=4, flags=RT_HALIGN_LEFT, text=2, color=0xFF000008),
-						MultiContentEntryText(pos=(width-120-60, 6), size=(120+60, 40), font=4, flags=RT_HALIGN_RIGHT, text=3, color=0xFF000008),
-						MultiContentEntryText(pos=(width-212-70, 40), size=(154+50, 40), font=4, flags=RT_HALIGN_RIGHT, text=4, color=0xFF000008),
-						MultiContentEntryText(pos=(width-85, 40), size=(85, 40), font=4, flags=RT_HALIGN_RIGHT, text=5, color=0xFF000008),
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 20), size = (40, 40), png = 6),
+						MultiContentEntryText(pos=(60+20, 40), size=(width-60-70-212, 40), font=4, flags=RT_HALIGN_LEFT, text=2, color=0xa0a0a0),
+						MultiContentEntryText(pos=(width-130-60, 6), size=(130+60, 40), font=4, flags=RT_HALIGN_RIGHT, text=3, color=0xffffff),
+						MultiContentEntryText(pos=(width-212-80, 40), size=(154+50, 40), font=4, flags=RT_HALIGN_RIGHT, text=4, color=0xffcc80),
+						MultiContentEntryText(pos=(width-85, 40), size=(85, 40), font=4, flags=RT_HALIGN_RIGHT, text=5, color=0xf23d21),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 20), size = (40, 40), png = 6),
 						MultiContentEntryPixmapAlphaBlend(pos = (5, 25), size = (40, 40), png = 9),
 						MultiContentEntryText(pos=(60, 15), size=(width-60, 50), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=7),
-						MultiContentEntryProgress(pos=(0,10), size=(50,6), percent=-10, borderWidth = 1, foreColor = 0x00FFFFF8),
+						MultiContentEntryProgress(pos=(5,10), size=(50,8), percent=-10, borderWidth = 1, foreColor = 0x0996f1),
 					]),
-					"compact" : (80, [
+					"compact" : (75, [
+					    MultiContentEntryText(pos=(0,0),size=(1150,75),border_width=1,border_color=0xa0a0a0),
 						MultiContentEntryText(pos=(50, 0), size=(full_width-50, 37), font=0, flags=RT_HALIGN_LEFT, text="", color=None, backcolor=0xFF00000B, backcolor_sel=0xFF00000C),
 						MultiContentEntryText(pos=(50, 0), size=(width-77-50, 40), font=1, flags=RT_HALIGN_LEFT, text=1, color=0xFF000008),
-						MultiContentEntryText(pos=(width-240, 40), size=(240, 40), font=4, flags=RT_HALIGN_RIGHT, text=2, color=0xFF000008),
-						MultiContentEntryText(pos=(270, 40), size=(200, 40), font=4, flags=RT_HALIGN_LEFT, text=3, color=0xFF000008),
-						MultiContentEntryText(pos=(50, 40), size=(200, 40), font=4, flags=RT_HALIGN_LEFT, text=4, color=0xFF000008),
-						MultiContentEntryText(pos=(width-125, 0), size=(125, 40), font=1, flags=RT_HALIGN_RIGHT, text=5, color=0xFF000008),
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 20), size = (40, 40), png = 6),
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 20), size = (40, 40), png = 9),
+						MultiContentEntryText(pos=(width-240, 40), size=(0, 0), font=4, flags=RT_HALIGN_RIGHT, text=2, color=0xFF000008),
+						MultiContentEntryText(pos=(270, 40), size=(400, 40), font=4, flags=RT_HALIGN_LEFT, text=3, color=0xffcc80),
+						MultiContentEntryText(pos=(50, 40), size=(200, 40), font=4, flags=RT_HALIGN_LEFT, text=4, color=0xffffff),
+						MultiContentEntryText(pos=(width-125, 5), size=(125, 40), font=4, flags=RT_HALIGN_RIGHT, text=5, color=0xf23d21),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 20), size = (40, 40), png = 6),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 20), size = (40, 40), png = 9),
 						MultiContentEntryText(pos=(60, 15), size=(width-60, 50), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=7),
-						MultiContentEntryProgress(pos=(width-70,38), size=(70,6), percent=-10, borderWidth = 1, foreColor = 0x00FFFFF8),
+						MultiContentEntryProgress(pos=(width-70,45), size=(70,15), percent=-10, borderWidth = 1, foreColor = 0x0996f1),
 					]),
-					"minimal" : (40, [
+					"minimal" : (39, [
 						MultiContentEntryText(pos=(0, 0), size=(full_width, 40), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text="", color=None, backcolor=0xFF000008, backcolor_sel=0xFF000009),
-						MultiContentEntryText(pos=(110, 0), size=(width-316, 40), font=2, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=1, color=0xFF000005),
-						MultiContentEntryText(pos=(width-225, 0), size=(225, 40), font=2, flags=RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text=2, color=0xFF000005),
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 5), size = (30, 30), png = 3),
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 5), size = (30, 30), png = 6),
+						MultiContentEntryText(pos=(120, 0), size=(width-316, 40), font=2, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=1, color=0xFF000005),
+						MultiContentEntryText(pos=(width-220, 0), size=(225, 40), font=2, flags=RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text=2, color=0xffffff),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 5), size = (30, 30), png = 3),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 5), size = (30, 30), png = 6),
 						MultiContentEntryText(pos=(60, 0), size=(width-60, 40), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=4),
-						MultiContentEntryProgress(pos=(50,15), size=(40,10), percent=-7, borderWidth = 1, foreColor = 0x00077BC6), 
+						MultiContentEntryProgress(pos=(50,12), size=(50,15), percent=-7, borderWidth = 1, foreColor = 0x0996f1), 
 					]),
-					"minimal_merlin" : (40, [
+					"minimal_merlin" : (39, [
 						MultiContentEntryText(pos=(0, 0), size=(full_width, 40), font=0, flags=RT_HALIGN_LEFT, text="", color=None, backcolor=0xFF000008, backcolor_sel=0xFF000009),
-						MultiContentEntryText(pos=(60+70, 0), size=(200, 38), font=3, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=2, color=0xFF000005),
+						MultiContentEntryText(pos=(60+70, 0), size=(220, 38), font=3, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=2, color=0xffffff),
 						MultiContentEntryText(pos=(60+240+50, 0), size=(width-60-240-160-100, 38), font=2, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=1, color=0xFF000005),
-						MultiContentEntryText(pos=(width-180, 0), size=(180, 38), font=3, flags=RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text=10, color=0xFF000005),
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (40, 40), png = 3),
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (40, 40), png = 6),
+						MultiContentEntryText(pos=(width-180, 0), size=(180, 38), font=3, flags=RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text=10, color=0xffcc80),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 5), size = (30, 30), png = 3),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 5), size = (30, 30), png = 6),
 						MultiContentEntryText(pos=(60, 0), size=(width-60, 38), font=2, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=4),
-						MultiContentEntryProgress(pos=(0+60,10), size=(50,20), percent=-7, borderWidth = 1, foreColor = 0x00FFFFFF), 
+						MultiContentEntryProgress(pos=(0+60,12), size=(50,15), percent=-7, borderWidth = 1, foreColor = 0x0996f1), 
 					])
 					},
 					"fonts" : [gFont("Regular", 32), gFont("Regular", 32), gFont("Regular", 30), gFont("Regular", 28), gFont("Regular", 26)]
@@ -318,30 +321,33 @@
 				{"templates":
 				{
 				"default" : (114, [
-				MultiContentEntryText(pos=(0,3), size=(width-182,35), font=0, flags=RT_HALIGN_LEFT, text=1),
-				MultiContentEntryText(pos=(width-170,3), size=(180,33), font=3, flags=RT_HALIGN_RIGHT, text=2),
-				MultiContentEntryText(pos=(260,78), size=(400,33), font=2, flags=RT_HALIGN_LEFT, text=3,color=0xa0a0a0),
-				MultiContentEntryText(pos=(0,41), size=(width,33), font=2, flags=RT_HALIGN_LEFT, text=4,color=0xa0a0a0),
-				MultiContentEntryText(pos=(0,78), size=(260,33), font=2, flags=RT_HALIGN_LEFT, text=5,color=0xa0a0a0),
-				MultiContentEntryText(pos=(width-80, 78), size=(90, 32), font=2, flags=RT_HALIGN_RIGHT, text=6,color=0xa0a0a0),
+				MultiContentEntryText(pos=(0,0),size=(1150,114),border_width=1,border_color=0xa0a0a0),
+				MultiContentEntryText(pos=(10,3), size=(820,35), font=0, flags=RT_HALIGN_LEFT, text=1),
+				MultiContentEntryText(pos=(width-170,3), size=(0,0), font=3, flags=RT_HALIGN_RIGHT, text=2),
+				MultiContentEntryText(pos=(20,78), size=(800,33), font=2, flags=RT_HALIGN_LEFT, text=3,color=0xffcc80),
+				MultiContentEntryText(pos=(20,41), size=(800,33), font=2, flags=RT_HALIGN_LEFT, text=4,color=0xa0a0a0),
+				MultiContentEntryText(pos=(width-240,3), size=(240,33), font=2, flags=RT_HALIGN_RIGHT, text=5,color=0xffffff),
+				MultiContentEntryText(pos=(width-100, 78), size=(100, 32), font=2, flags=RT_HALIGN_RIGHT, text=6,color=0xf23d21),
 				]),
-				"compact_description" : (57, [
-				MultiContentEntryText(pos=(0,0), size=(width-160,33), font=1, flags=RT_HALIGN_LEFT, text=1),
-				MultiContentEntryText(pos=(0,30), size=(width-320,28), font=4, flags=RT_HALIGN_LEFT, text=2,color=0xa0a0a0),
-				MultiContentEntryText(pos=(width-205,1), size=(220,28), font=4, flags=RT_HALIGN_RIGHT, text=3),
-				MultiContentEntryText(pos=(width-270,30), size=(200,28), font=4, flags=RT_HALIGN_RIGHT, text=4,color=0xa0a0a0),
-				MultiContentEntryText(pos=(width-65,30), size=(80,28), font=4, flags=RT_HALIGN_RIGHT, text=5,color=0xa0a0a0),
+				"compact_description" : (65, [
+				MultiContentEntryText(pos=(0,0),size=(1150,65),border_width=1,border_color=0xa0a0a0),
+				MultiContentEntryText(pos=(10,0), size=(820,33), font=1, flags=RT_HALIGN_LEFT, text=1),
+				MultiContentEntryText(pos=(20,32), size=(700,28), font=4, flags=RT_HALIGN_LEFT, text=2,color=0xa0a0a0),
+				MultiContentEntryText(pos=(width-220,2), size=(220,28), font=4, flags=RT_HALIGN_RIGHT, text=3),
+				MultiContentEntryText(pos=(width-350,32), size=(250,28), font=4, flags=RT_HALIGN_RIGHT, text=4,color=0xffcc80),
+				MultiContentEntryText(pos=(width-80,32), size=(80,28), font=4, flags=RT_HALIGN_RIGHT, text=5,color=0xf23d21),
 				]),
-				"compact" : (57, [
-				MultiContentEntryText(pos=(0,0), size=(width-90,33), font=1, flags=RT_HALIGN_LEFT, text=1),
-				MultiContentEntryText(pos=(width-170,0), size=(180,28), font=4, flags=RT_HALIGN_RIGHT, text=2),
-				MultiContentEntryText(pos=(200,30), size=(200,28), font=4, flags=RT_HALIGN_LEFT, text=3,color=0xa0a0a0),
-				MultiContentEntryText(pos=(0,30), size=(200,28), font=4, flags=RT_HALIGN_LEFT, text=4,color=0xa0a0a0),
-				MultiContentEntryText(pos=(width-80,30), size=(90,28), font=4, flags=RT_HALIGN_RIGHT, text=5, color=0xa0a0a0),
+				"compact" : (65, [
+				MultiContentEntryText(pos=(0,0),size=(1150,65),border_width=1,border_color=0xa0a0a0),
+				MultiContentEntryText(pos=(10,0), size=(800,33), font=1, flags=RT_HALIGN_LEFT, text=1),
+				MultiContentEntryText(pos=(width-170,0), size=(0,0), font=4, flags=RT_HALIGN_RIGHT, text=2),
+				MultiContentEntryText(pos=(20,32), size=(800,28), font=4, flags=RT_HALIGN_LEFT, text=3,color=0xffcc80),
+				MultiContentEntryText(pos=(width-220,2), size=(220,28), font=4, flags=RT_HALIGN_RIGHT, text=4,color=0xffffff),
+				MultiContentEntryText(pos=(width-80,32), size=(80,28), font=4, flags=RT_HALIGN_RIGHT, text=5, color=0xf23d21),
 				]),
 				"minimal" : (38, [
-				MultiContentEntryText(pos=(0, 2), size=(width-150,33), font=1, flags=RT_HALIGN_LEFT, text=1),
-				MultiContentEntryText(pos=(width-230, 2), size=(240,33), font=3, flags=RT_HALIGN_RIGHT, text=2),
+				MultiContentEntryText(pos=(10, 2), size=(800,33), font=1, flags=RT_HALIGN_LEFT, text=1),
+				MultiContentEntryText(pos=(width-240, 2), size=(240,33), font=3, flags=RT_HALIGN_RIGHT, text=2),
 				])
 				},
 				"fonts" : [gFont("Regular", 31), gFont("Regular", 29), gFont("Regular", 29), gFont("Regular", 29), gFont("Regular", 25)]
@@ -397,14 +403,14 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="EventTime">Progress</convert>
     </widget>
     <ePixmap alphatest="on" pixmap="hdsuisse.one4all.fhd/bg/progress1460back.png" position="320,1005" size="900,10" transparent="0" zPosition="1" />
-    <widget backgroundColor="background" font="Regular; 34" noWrap="1" position="320,948" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+    <widget backgroundColor="background" font="Regular; 32" noWrap="1" position="320,948" render="Label" size="90,40" source="session.Event_Now" transparent="1">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 34" noWrap="1" position="420,948" render="Label" size="640,40" source="session.Event_Now" transparent="1">
+    <widget backgroundColor="bg2" font="Regular; 32" noWrap="1" position="420,948" render="Label" size="640,40" source="session.Event_Now" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 34" halign="right" noWrap="1" position="1080,948" render="Label" size="140,40" source="session.Event_Now" transparent="1">
+    <widget backgroundColor="background" font="Regular; 32" halign="right" noWrap="1" position="1080,948" render="Label" size="140,40" source="session.Event_Now" transparent="1">
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
@@ -459,13 +465,13 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="ServiceInfo">IsHdr</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="background" font="Regular; 32" foregroundColor="clock" halign="center" position="1235,940" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+    <widget backgroundColor="background" font="Regular; 32" foregroundColor="clock" halign="center" position="1230,940" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1235,985" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1230,985" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
       <convert type="ClockToText">Format: %A</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1235,1030" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1230,1030" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
       <convert type="ClockToText">Format: %d.%m.%Y</convert>
     </widget>
     <widget alphatest="on" pixmap="hdsuisse.one4all.fhd/icons/crypt_on.png" position="1587,945" render="Pixmap" size="34,22" source="session.CurrentService" transparent="1" zPosition="2">
@@ -515,7 +521,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <eLabel backgroundColor="background" font="Regular; 24" foregroundColor="grey" halign="left" position="1490,1035" size="79,30" text="Signal:" transparent="1" valign="center" />
     <eLabel backgroundColor="background" font="Regular; 24" foregroundColor="grey" halign="left" position="1720,1035" size="70,30" text="Tuner:" transparent="1" valign="center" />
     <eLabel backgroundColor="line" foregroundColor="line" name="line" position="1490,980" size="400,2" zPosition="10" />
-    <widget backgroundColor="bg2" font="Thin; 36" foregroundColor="channel" halign="center" noWrap="1" position="0,885" render="Label" shadowColor="black" shadowOffset="-2,-2" size="330,45" source="session.CurrentService" transparent="1" valign="center" zPosition="2">
+    <widget backgroundColor="bg2" font="Thin; 36" foregroundColor="channel" halign="left" noWrap="1" position="10,885" render="Label" shadowColor="black" shadowOffset="-2,-2" size="450,45" source="session.CurrentService" transparent="1" valign="center" zPosition="2">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget pixmap="hdsuisse.one4all.fhd/icons/iptv_on.png" backgroundColor="bg2" position="1546,941" render="Pixmap" size="30,30" source="session.CurrentService" transparent="1" zPosition="2">
@@ -533,19 +539,19 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1920,1080" title="SecondInfoBar" zPosition="5">
     <layout name="hdsuisse_secondinfobar" />
-    <widget backgroundColor="background" font="Regular; 29" foregroundColor="foreground" position="57,720" render="Label" size="860,345" source="session.Event_Now" transparent="1" zPosition="1">
+    <widget backgroundColor="background" font="Regular; 29" foregroundColor="darkblue" position="57,720" render="Label" size="860,345" source="session.Event_Now" transparent="1" zPosition="1">
       <convert type="EventName">FullDescription</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 29" foregroundColor="foreground" position="1005,720" render="Label" size="860,345" source="session.Event_Next" transparent="1" zPosition="1">
+    <widget backgroundColor="background" font="Regular; 29" foregroundColor="darkblue" position="1005,720" render="Label" size="860,345" source="session.Event_Next" transparent="1" zPosition="1">
       <convert type="EventName">FullDescription</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 33" foregroundColor="foreselect" halign="left" position="265,650" render="Label" size="510,40" source="session.Event_Now" transparent="1" zPosition="5" valign="center">
+    <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreselect" halign="left" position="265,650" render="Label" size="510,40" source="session.Event_Now" transparent="1" zPosition="5" valign="center">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 33" foregroundColor="foreselect" halign="left" position="1213,650" render="Label" size="510,40" source="session.Event_Next" transparent="1" zPosition="1" valign="center">
+    <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreselect" halign="left" position="1213,650" render="Label" size="510,40" source="session.Event_Next" transparent="1" zPosition="1" valign="center">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Thin; 36" foregroundColor="channel" halign="center" noWrap="1" position="0,595" render="Label" size="330,45" source="session.CurrentService" shadowColor="black" shadowOffset="-2,-2" transparent="1" valign="top" zPosition="2">
+    <widget backgroundColor="bg2" font="Thin; 36" foregroundColor="channel" halign="left" noWrap="1" position="10,595" render="Label" size="450,45" source="session.CurrentService" shadowColor="black" shadowOffset="-2,-2" transparent="1" valign="center" zPosition="2">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="white" halign="left" position="57,650" render="Label" size="90,40" source="session.Event_Now" transparent="1" valign="center">
@@ -874,28 +880,32 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" name="key_green" position="365,1033" size="260,40" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" name="key_yellow" position="665,1033" size="260,40" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" name="key_blue" position="965,1033" size="240,40" transparent="1" valign="center" zPosition="1" />
-    <widget additionalInfoFont="Regular;27" backgroundColor="background" backgroundColorMarked="background" backgroundColorMarkedSelected="backselect" colorEventProgressbarBorder="foreground" colorEventProgressbarBorderSelected="progressmarked" colorServiceDescription="foreground" colorServiceDescriptionSelected="foreselect" foregroundColor="channel" foregroundColorMarked="levelmeter" foregroundColorMarkedSelected="light-green" foregroundColorSelected="foreselect" foregroundColorServiceNotAvail="darkevent" itemHeight="44" name="list" picServiceEventProgressbar="hdsuisse.one4all.fhd/bg/progress70.png" position="30,104" scrollbarMode="showOnDemand" serviceInfoFont="Regular;29" serviceItemHeight="44" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="1150,880" transparent="1" />
-    <widget backgroundColor="bg2" font="Regular; 30" foregroundColor="channel" halign="center" position="1360,425" render="Label" size="310,40" source="ServiceEvent" transparent="1" valign="center">
+    <widget additionalInfoFont="Regular;27" backgroundColor="background" backgroundColorMarked="background" backgroundColorMarkedSelected="backselect" colorServiceDescription="foreground" colorServiceDescriptionSelected="foreselect" foregroundColor="channel" foregroundColorMarked="levelmeter" foregroundColorMarkedSelected="light-green" foregroundColorSelected="foreselect" foregroundColorServiceNotAvail="darkevent" itemHeight="44" name="list" picServiceEventProgressbar="hdsuisse.one4all.fhd/bg/progress70.png" colorEventProgressbarBorder="white" position="30,104" scrollbarMode="showOnDemand" serviceInfoFont="Regular;29" serviceItemHeight="44" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="1150,880" transparent="1" />
+    <widget backgroundColor="bg2" font="Regular; 29" foregroundColor="channel" halign="right" position="1520,425" render="Label" size="360,40" source="ServiceEvent" transparent="1" valign="center" noWrap="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="clock" halign="right" position="1680,425" render="Label" size="100,40" source="ServiceEvent" transparent="1" valign="center">
+    <widget backgroundColor="background" font="Regular; 29" foregroundColor="clock" halign="left" position="1250,425" render="Label" size="100,40" source="ServiceEvent" transparent="1" valign="center">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">
       </convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="clock" halign="right" position="1770,425" render="Label" size="100,40" source="ServiceEvent" transparent="1" valign="center">
+    <widget backgroundColor="background" font="Regular; 29" foregroundColor="red" halign="left" noWrap="1" position="1425,425" render="Label" size="100,40" source="ServiceEvent" transparent="1" valign="center">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">NoSeconds</convert>
+    </widget>
+    <widget backgroundColor="background" font="Regular; 29" foregroundColor="clock" halign="left" position="1325,425" render="Label" size="100,40" source="ServiceEvent" transparent="1" valign="center">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" position="1250,480" render="Label" size="630,355" source="ServiceEvent" transparent="1" zPosition="3">
+    <widget backgroundColor="background" font="Regular; 30" position="1250,530" render="Label" size="630,280" source="ServiceEvent" transparent="1" zPosition="3" foregroundColor="darkblue">
       <convert type="EventName">FullDescription</convert>
+    </widget>
+    <widget backgroundColor="background" font="Regular; 30" halign="left" position="1250,490" render="Label" size="630,40" source="ServiceEvent" transparent="1" valign="top" zPosition="2" noWrap="1">
+      <convert type="EventName">Name</convert>
     </widget>
     <widget backgroundColor="transparent" position="1250,70" render="Pig" size="630,340" source="session.VideoPicture" transparent="1" zPosition="5" />
     <eLabel backgroundColor="line" foregroundColor="line" name="line" position="1250,970" size="630,2" zPosition="2" />
-    <widget alphatest="on" path="picon" position="1250,415" render="Picon" scale="stretch" size="100,60" source="ServiceEvent" zPosition="5">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget alphatest="on" backgroundColor="transparent" column0="0,75,clock,Regular,28,0,0" column1="90,570,darkblue,Regular,28,0,1" position="1250,843" render="EventListDisplay" rowHeight="30" size="630,170" source="ServiceEvent" transparent="0">
+    <widget alphatest="on" backgroundColor="transparent" column0="0,160,clock,Regular,28,0,0" column1="160,470,foreground,Regular,27,0,1" position="1250,843" render="EventListDisplay" rowHeight="30" size="630,170" source="ServiceEvent" transparent="0">
       <convert type="EventList">primetime=yes,eventcount=4</convert>
     </widget>
     <widget backgroundColor="bg2" font="Regular; 30" foregroundColor="title" position="380,10" render="Label" size="700,40" source="Title" transparent="1" zPosition="1" halign="left" noWrap="1" />
@@ -922,27 +932,29 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" name="key_yellow" noWrap="1" position="665,1033" size="270,40" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" name="key_blue" noWrap="1" position="965,1033" size="235,40" transparent="1" valign="center" zPosition="1" />
     <widget font="Regular;30" halign="center" name="waitingtext" position="25,104" size="1150,880" transparent="1" valign="center" zPosition="4" backgroundColor="bg2" />
-    <widget name="list" position="25,104" scrollbarMode="showOnDemand" size="1150,880" transparent="1" zPosition="2" enableWrapAround="1" />
-    <widget backgroundColor="bg2" font="Regular; 30" foregroundColor="channel" halign="center" noWrap="1" position="1360,425" render="Label" size="250,40" source="Service" transparent="1" valign="center" zPosition="2">
+    <widget name="list" position="25,85" scrollbarMode="showOnDemand" size="1150,914" transparent="1" zPosition="2" enableWrapAround="1" />
+    <widget backgroundColor="bg2" font="Regular; 29" foregroundColor="channel" halign="right" noWrap="1" position="1520,425" render="Label" size="360,40" source="Service" transparent="1" valign="center" zPosition="2">
       <convert type="MovieInfo">RecordServiceName</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 30" foregroundColor="red" halign="left" noWrap="1" position="1620,425" render="Label" size="120,40" source="Service" transparent="1" valign="center" zPosition="2">
+    <widget backgroundColor="bg2" font="Regular; 29" foregroundColor="red" halign="left" noWrap="1" position="1250,425" render="Label" size="100,40" source="Service" transparent="1" valign="center" zPosition="2">
       <convert type="ServiceTime">Duration</convert>
-      <convert type="ClockToText">AsLengthWithHours</convert>
+      <convert type="ClockToText">AsLength</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" position="1250,490" render="Label" size="630,525" source="Service" transparent="1" valign="top" zPosition="2">
+    <widget backgroundColor="background" font="Regular; 30" halign="left" position="1250,489" render="Label" size="630,40" source="Service" transparent="1" valign="top" zPosition="2" noWrap="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="background" font="Regular; 30" position="1250,530" render="Label" size="630,420" source="Service" transparent="1" valign="top" zPosition="2" foregroundColor="darkblue">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 28" halign="center" name="freeDiskSpace" position="1200,1033" size="445,40" transparent="1" valign="center" foregroundColor="orange" />
+    <eLabel backgroundColor="line" alphatest="on" foregroundColor="line" position="1250,970" size="630,2" name="line" />
+    <eLabel name="" position="1250,975" size="100,40" transparent="1" text="HDD:" font="Regular; 29" foregroundColor="orange" backgroundColor="background" valign="center" />
+    <widget backgroundColor="bg2" font="Regular; 29" halign="right" name="freeDiskSpace" position="1350,975" size="530,40" transparent="1" valign="center" foregroundColor="darkblue" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_help.png" position="1655,1038" size="40,30" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1705,1038" size="40,30" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1755,1038" size="40,30" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_pvr.png" position="1805,1038" size="40,30" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_exit.png" position="1855,1038" size="40,30" transparent="1" />
-    <widget alphatest="on" path="picon" position="1250,415" render="Picon" scale="stretch" size="100,60" source="Service" zPosition="5">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget source="Service" render="Label" position="1745,425" zPosition="1" size="130,40" font="Regular; 30" halign="right" transparent="1" backgroundColor="bg2" foregroundColor="orange" valign="center">
+    <widget source="Service" render="Label" position="1360,425" zPosition="1" size="150,40" font="Regular; 29" halign="left" transparent="1" backgroundColor="bg2" foregroundColor="orange" valign="center">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
     <widget backgroundColor="transparent" position="1250,70" render="Pig" size="630,340" source="session.VideoPicture" transparent="1" zPosition="5" />
@@ -980,29 +992,29 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" name="key_yellow" position="665,1033" size="260,40" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="bg2" font="Thin; 28" foregroundColor="button" halign="left" name="key_blue" position="965,1033" size="245,40" transparent="1" valign="center" zPosition="1" />
     <widget name="list" position="25,105" scrollbarMode="showOnDemand" size="1150,880" transparent="1" />
-    <widget backgroundColor="background" font="Regular; 30" position="1250,490" render="Label" size="630,525" source="Event" transparent="1" zPosition="1">
+    <widget backgroundColor="background" foregroundColor="darkblue" font="Regular; 30" position="1250,530" render="Label" size="630,460" source="Event" transparent="1" zPosition="1">
       <convert type="EventName">FullDescription</convert>
+    </widget>
+    <widget backgroundColor="background" font="Regular; 30" halign="left" position="1250,490" render="Label" size="630,40" source="Event" transparent="1" valign="top" zPosition="2" noWrap="1">
+      <convert type="EventName">Name</convert>
     </widget>
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_left.png" position="1595,1039" size="40,30" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_right.png" position="1645,1039" size="40,30" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1745,1039" size="40,30" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_ok.png" position="1795,1039" size="40,30" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_exit.png" position="1845,1039" size="40,30" transparent="1" />
-    <widget path="picon" position="1250,415" render="Picon" scale="1" size="100,60" source="Service" transparent="1" zPosition="5">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget backgroundColor="bg2" font="Regular; 30" foregroundColor="channel" halign="center" position="1360,425" render="Label" size="320,40" source="Service" transparent="1" valign="center">
+    <widget backgroundColor="bg2" font="Regular; 29" foregroundColor="channel" halign="right" position="1520,425" render="Label" size="360,40" source="Service" transparent="1" valign="center">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="clock" position="1680,425" render="Label" size="100,40" source="Event" transparent="1" halign="right">
+    <widget backgroundColor="background" font="Regular; 29" foregroundColor="clock" position="1250,425" render="Label" size="100,40" source="Event" transparent="1" halign="left">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText" />
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="clock" position="1770,425" render="Label" size="100,40" source="Event" transparent="1" halign="right">
+    <widget backgroundColor="background" font="Regular; 29" foregroundColor="clock" position="1325,425" render="Label" size="100,40" source="Event" transparent="1" halign="left">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="red" halign="left" position="1250,1033" render="Label" size="300,40" source="Event" transparent="1">
+    <widget backgroundColor="background" font="Regular; 29" foregroundColor="red" halign="left" position="1418,425" render="Label" size="110,40" source="Event" transparent="1">
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
@@ -1029,17 +1041,17 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="key_green" position="400,880" size="260,40" transparent="1" valign="center" zPosition="1" foregroundColor="button" noWrap="1" />
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="key_yellow" position="720,880" size="260,40" transparent="1" valign="center" zPosition="1" foregroundColor="button" noWrap="1" />
     <widget backgroundColor="bg2" font="Thin; 28" halign="left" name="key_blue" position="1040,880" size="250,40" transparent="1" valign="center" zPosition="1" foregroundColor="button" noWrap="1" />
-    <widget additionalInfoFont="Regular;27" backgroundColor="background" backgroundColorMarked="background" backgroundColorMarkedSelected="backselect" colorEventProgressbarBorder="foreground" colorEventProgressbarBorderSelected="progressmarked" colorServiceDescription="foreground" colorServiceDescriptionSelected="foreselect" foregroundColor="channel" foregroundColorMarked="levelmeter" foregroundColorMarkedSelected="light-green" foregroundColorSelected="foreselect" foregroundColorServiceNotAvail="darkevent" name="list" picServiceEventProgressbar="hdsuisse.one4all.fhd/bg/progress70.png" position="59,83" scrollbarMode="showOnDemand" serviceInfoFont="Regular;29" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="1190,750" transparent="1" serviceItemHeight="44" itemHeight="44" />
+    <widget additionalInfoFont="Regular;27" backgroundColor="background" backgroundColorMarked="background" backgroundColorMarkedSelected="backselect" colorServiceDescription="foreground" colorServiceDescriptionSelected="foreselect" foregroundColor="channel" foregroundColorMarked="levelmeter" foregroundColorMarkedSelected="light-green" foregroundColorSelected="foreselect" foregroundColorServiceNotAvail="darkevent" itemHeight="44" name="list" picServiceEventProgressbar="hdsuisse.one4all.fhd/bg/progress70.png" colorEventProgressbarBorder="white" position="59,83" scrollbarMode="showOnDemand" serviceInfoFont="Regular;29" serviceItemHeight="44" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="1190,750" transparent="1" />
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="channel" halign="center" noWrap="1" position="1330,90" render="Label" size="560,40" source="session.CurrentService" transparent="1" valign="center" zPosition="10">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget alphatest="on" path="picon" position="1480,165" render="Picon" scale="stretch" size="250,150" source="session.CurrentService">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="help" halign="center" position="1330,362" render="Label" size="560,40" source="RdsDecoder" transparent="1">
+    <widget backgroundColor="background" font="LCD; 30" foregroundColor="help" halign="center" position="1330,362" render="Label" size="560,40" source="RdsDecoder" transparent="1">
       <convert type="RdsInfo">RadioText</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 30" position="1330,464" render="Label" size="560,390" source="session.Event_Now" transparent="1" zPosition="1" halign="center">
+    <widget backgroundColor="bg2" font="Regular; 30" position="1330,464" render="Label" size="560,390" source="session.Event_Now" transparent="1" zPosition="1" halign="center" foregroundColor="darkblue">
       <convert type="EventName">FullDescription</convert>
     </widget>
   </screen>
@@ -1049,44 +1061,40 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget source="session.Event_Now" render="Progress" position="320,82" size="900,6" zPosition="3" pixmap="hdsuisse.one4all.fhd/bg/progress1460.png" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 32" position="320,25" render="Label" size="90,40" source="session.Event_Now" transparent="1">
+    <widget backgroundColor="bg2" font="Regular; 32" position="320,25" render="Label" size="90,40" source="session.Event_Now" transparent="1" valign="center">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 32" position="420,25" render="Label" size="640,40" source="session.Event_Now" transparent="1">
+    <widget backgroundColor="bg2" font="Regular; 32" position="420,25" render="Label" size="640,40" source="session.Event_Now" transparent="1" valign="center">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 32" halign="right" position="1077,25" render="Label" size="140,40" source="session.Event_Now" transparent="1">
+    <widget backgroundColor="bg2" font="Regular; 32" halign="right" position="1077,25" render="Label" size="140,40" source="session.Event_Now" transparent="1" valign="center">
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="darkevent" position="320,105" render="Label" size="90,40" source="session.Event_Next" transparent="1">
+    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="darkevent" position="320,105" render="Label" size="90,40" source="session.Event_Next" transparent="1" valign="center">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="darkevent" position="420,105" render="Label" size="640,40" source="session.Event_Next" transparent="1">
+    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="darkevent" position="420,105" render="Label" size="640,40" source="session.Event_Next" transparent="1" valign="center">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="darkevent" halign="right" position="1077,105" render="Label" size="140,40" source="session.Event_Next" transparent="1">
+    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="darkevent" halign="right" position="1077,105" render="Label" size="140,40" source="session.Event_Next" transparent="1" valign="center">
       <convert type="EventTime">Duration</convert>
       <convert type="ClockToText">InMinutes</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 34" foregroundColor="clock" halign="center" position="1280,15" render="Label" size="100,40" source="global.CurrentTime" transparent="1" valign="center">
+    <widget backgroundColor="background" font="Regular; 32" foregroundColor="clock" halign="center" position="1230,15" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <eLabel backgroundColor="background" font="Regular; 20" foregroundColor="clock" halign="center" position="1363,19" size="20,22" text=":" transparent="1" valign="center" />
-    <widget backgroundColor="background" font="Regular; 22" foregroundColor="clock" halign="center" position="1378,17" render="Label" size="30,30" source="global.CurrentTime" transparent="1" valign="center">
-      <convert type="ClockToText">Format:%S</convert>
+    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1230,62" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+      <convert type="ClockToText">Format: %A</convert>
+    </widget>
+    <widget backgroundColor="bg2" font="Regular; 32" foregroundColor="clock" halign="center" noWrap="1" position="1230,110" render="Label" size="235,40" source="global.CurrentTime" transparent="1" valign="center">
+      <convert type="ClockToText">Format: %d.%m.%Y</convert>
     </widget>
     <eLabel backgroundColor="background" font="Regular; 24" position="1490,115" size="79,30" text="Signal:" transparent="1" valign="center" foregroundColor="darkevent" halign="left" />
     <widget backgroundColor="background" font="Regular; 23" halign="left" noWrap="1" position="1570,115" render="Label" size="65,30" source="session.FrontendStatus" transparent="1" valign="center" foregroundColor="levelmeter">
       <convert type="FrontendInfo">SNR</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 29" halign="center" noWrap="1" position="1256,60" render="Label" size="80,80" source="session.MSNWeather" transparent="1" valign="center" zPosition="3" foregroundColor="yellow">
-      <convert type="MSNWeather">temperature_current</convert>
-    </widget>
-    <widget alphatest="on" position="1347,58" render="MSNWeatherPixmap" size="90,90" source="session.MSNWeather" transparent="1" zPosition="3">
-      <convert type="MSNWeather">weathericon,current</convert>
     </widget>
     <widget text="Internet Radio" position="1615,20" render="FixedLabel" size="170,30" source="session.CurrentService" transparent="1" zPosition="0" font="Regular; 24" foregroundColor="channel" backgroundColor="bg2" noWrap="1">
       <convert type="ServiceInfo">SubservicesAvailable</convert>
@@ -1160,7 +1168,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RdsInfoDisplay" position="0,0" size="1920,1080" zPosition="-2">
     <widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="70,200" size="50,21" transparent="1" zPosition="2" />
-    <widget backgroundColor="transpBlack" font="Regular; 30" name="RadioText" noWrap="1" position="70,130" size="1750,60" halign="center" transparent="1" foregroundColor="title" zPosition="2" />
+    <widget backgroundColor="transpBlack" font="LCD; 30" name="RadioText" noWrap="1" position="70,130" size="1750,60" halign="center" transparent="1" foregroundColor="title" zPosition="2" />
     <widget backgroundColor="transparent" font="Regular; 30" halign="center" name="RtpText" noWrap="1" position="70,190" size="1750,60" transparent="1" foregroundColor="transparent" zPosition="2" />
   </screen>
   <screen name="HelpMenu" title="" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="transparent">
@@ -1447,7 +1455,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="EventTime">Progress</convert>
     </widget>
     <ePixmap pixmap="hdsuisse.one4all.fhd/bg/progress450back.png" position="1440,413" size="460,8" transparent="1" zPosition="5" />
-    <widget backgroundColor="background" font="Regular; 29" position="1440,480" render="Label" size="460,515" source="Event" transparent="1">
+    <widget backgroundColor="background" font="Regular; 29" position="1440,480" render="Label" size="460,515" source="Event" transparent="1" foregroundColor="darkblue">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <eLabel backgroundColor="dark" position="25,75" size="1400,40" zPosition="0" foregroundColor="fg2" />
@@ -1459,7 +1467,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <ePixmap gradient="gradient,layout,vertical" position="1440,345" size="460,67" zPosition="-5" />
     <widget render="Pig" source="session.VideoPicture" position="1440,75" size="460,270" backgroundColor="transparent" zPosition="1" />
     <eLabel backgroundColor="line" position="300,141" size="2,839" zPosition="5" />
-    <widget backgroundColor="background" font="Regular; 29" halign="left" noWrap="1" position="1440,430" render="Label" size="460,40" source="Event" transparent="1" valign="center" zPosition="5" foregroundColor="title">
+    <widget backgroundColor="background" font="Regular; 29" halign="left" noWrap="1" position="1440,430" render="Label" size="460,40" source="Event" transparent="1" valign="center" zPosition="5">
       <convert type="EventName">Name</convert>
     </widget>
   </screen>
@@ -2269,7 +2277,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       {"templates":
         {"default": (80,[
             MultiContentEntryText(pos = (180, 5), size = (500, 40), font = 0, text = 1), # index 1 is the plugin.name
-            MultiContentEntryText(pos = (180, 40), size = (500, 40), font = 1, text = 2), # index 2 is the plugin.description
+            MultiContentEntryText(pos = (180, 40), size = (500, 40), font = 1, text = 2, color=0xa0a0a0), # index 2 is the plugin.description
             MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (150, 60), png = 3), # index 3 is the icon
           ]),
         },
@@ -2610,7 +2618,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <layout name="hdsuisse_main" />
     <layout name="hdsuisse_main_buttons" />
     <layout name="hdsuisse_main_keys" />
-    <widget backgroundColor="background" colorEventProgressbarBorder="foreground" colorEventProgressbarBorderSelected="foreground" colorServiceDescription="channel" colorServiceDescriptionSelected="button" foregroundColorServiceNotAvail="darkblue" name="list" picServiceEventProgressbar="hdsuisse.one4all.fhd/bg/progress50.png" position="360,150" scrollbarMode="showOnDemand" serviceInfoFont="Regular;26" serviceItemHeight="40" serviceNameFont="Regular;30" size="1230,800" transparent="1" />
+    <widget additionalInfoFont="Regular;27" backgroundColor="background" backgroundColorMarked="background" backgroundColorMarkedSelected="backselect" colorServiceDescription="foreground" colorServiceDescriptionSelected="foreselect" foregroundColor="channel" foregroundColorMarked="levelmeter" foregroundColorMarkedSelected="light-green" foregroundColorSelected="foreselect" foregroundColorServiceNotAvail="darkevent" itemHeight="44" name="list" picServiceEventProgressbar="hdsuisse.one4all.fhd/bg/progress70.png" colorEventProgressbarBorder="white" position="360,150" scrollbarMode="showOnDemand" serviceInfoFont="Regular;29" serviceItemHeight="44" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="1230,800" transparent="1" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SkinSelector" position="0,0" size="1920,1080" title="Choose your Skin">
     <layout name="hdsuisse_main" />
@@ -3850,7 +3858,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget source="key_green" render="Label" position="406,875" size="260,40" zPosition="1" font="Thin; 24" halign="left" valign="center" backgroundColor="bg2" transparent="1" shadowColor="#000000" shadowOffset="-2,-2" foregroundColor="button" />
     <widget source="key_yellow" render="Label" position="730,875" size="260,40" zPosition="1" font="Thin; 24" halign="left" valign="center" backgroundColor="bg2" transparent="1" shadowColor="#000000" shadowOffset="-2,-2" foregroundColor="button" />
     <widget source="key_blue" render="Label" position="1046,875" size="245,40" zPosition="1" font="Thin; 24" halign="left" valign="center" backgroundColor="bg2" transparent="1" shadowColor="#000000" shadowOffset="-2,-2" foregroundColor="button" />
-    <widget backgroundColor="background" backgroundColorMarked="background" backgroundColorMarkedSelected="backselect" colorEventProgressbarBorder="progress" colorEventProgressbarBorderSelected="progressmarked" colorServiceDescription="foreground" colorServiceDescriptionSelected="foreselect" foregroundColor="channel" foregroundColorMarked="levelmeter" foregroundColorMarkedSelected="light-green" foregroundColorServiceNotAvail="darkevent" picServiceEventProgressbar="hdsuisse.one4all.fhd/bg/progress70.png" position="60,100" scrollbarMode="showOnDemand" serviceInfoFont="Regular;30" serviceItemHeight="40" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="1190,720" transparent="1" name="list" />
+    <widget additionalInfoFont="Regular;27" backgroundColor="background" backgroundColorMarked="background" backgroundColorMarkedSelected="backselect" colorServiceDescription="foreground" colorServiceDescriptionSelected="foreselect" foregroundColor="channel" foregroundColorMarked="levelmeter" foregroundColorMarkedSelected="light-green" foregroundColorSelected="foreselect" foregroundColorServiceNotAvail="darkevent" itemHeight="44" name="list" picServiceEventProgressbar="hdsuisse.one4all.fhd/bg/progress70.png" colorEventProgressbarBorder="white" position="59,83" scrollbarMode="showOnDemand" serviceInfoFont="Regular;29" serviceItemHeight="44" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="1190,750" transparent="1" />
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="channel" halign="center" noWrap="1" position="1330,90" render="Label" size="560,40" source="session.CurrentService" transparent="1" valign="center" zPosition="10">
       <convert type="ServiceName">Name</convert>
     </widget>
@@ -3860,7 +3868,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="help" halign="center" position="1330,362" render="Label" size="560,40" source="RdsDecoder" transparent="1">
       <convert type="RdsInfo">RadioText</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" position="1394,464" render="Label" size="470,410" source="session.Event_Now" transparent="1" zPosition="1" halign="center">
+    <widget backgroundColor="background" font="Regular; 30" position="1394,464" render="Label" size="470,410" source="session.Event_Now" transparent="1" zPosition="1" halign="center" foregroundColor="darkblue">
       <convert type="EventName">FullDescription</convert>
     </widget>
   </screen>
@@ -4342,7 +4350,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="ClockToText">Format:%A %d.%m.%Y</convert>
     </widget>
     <widget name="serviceName" position="1312,125" size="370,42" zPosition="1" font="Regular; 30" transparent="1" halign="center" valign="center" foregroundColor="channel" backgroundColor="bg2" />
-    <widget name="eventTitle" position="1312,265" size="590,40" zPosition="1" font="Regular; 30" transparent="1" halign="left" valign="center" foregroundColor="orange-dark" backgroundColor="bg2" />
+    <widget name="eventTitle" position="1312,265" size="590,40" zPosition="1" font="Regular; 30" transparent="1" halign="left" valign="center" backgroundColor="bg2" />
     <widget name="beginTime" position="1312,180" size="90,30" zPosition="1" font="Regular;30" transparent="1" halign="left" valign="center" />
     <widget name="eventProgress" position="1430,190" size="80,15" zPosition="1" borderWidth="1" transparent="1" />
     <widget name="eventProgressImage" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/EventProgress_0.png,/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/EventProgress_1.png,/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/EventProgress_2.png,/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/EventProgress_3.png,/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/EventProgress_4.png" position="1430,190" size="80,15" zPosition="1" transparent="1" alphatest="on" />
@@ -4351,7 +4359,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget name="duration" position="1447,225" size="68,30" zPosition="1" font="Regular;30" transparent="1" halign="left" valign="center" />
     <widget name="remaining" position="1562,225" size="120,30" foregroundColors="#ef7f1a,#e31e24,#74de0a,#ffed00,#ffffff" zPosition="1" font="Regular;30" transparent="1" halign="left" valign="center" />
     <widget name="isRecording" pixmap="hdsuisse.one4all.fhd/icons/rec_on.png" position="1220,1040" size="51,24" zPosition="2" transparent="1" alphatest="on" />
-    <widget name="description" position="1312,310" size="590,695" zPosition="1" font="Regular;29" transparent="1" halign="left" valign="top" backgroundColor="bg2" />
+    <widget name="description" position="1312,310" size="590,695" zPosition="1" font="Regular;29" transparent="1" halign="left" valign="top" backgroundColor="bg2" foregroundColor="darkblue" />
     <widget name="videoPicture" position="1312,685" size="590,320" zPosition="5" backgroundColor="transparent" />
     <widget name="bouquet" position="1313,1033" size="600,36" zPosition="4" font="Regular;30" transparent="1" halign="center" valign="center" foregroundColor="title" backgroundColor="bg2" />
     <widget name="volume" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MerlinEPGCenter/images/FHD/volume.png" position="1301,1023" size="620,56" zPosition="3" transparent="1" />
@@ -6296,7 +6304,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
-    <widget source="Event" render="Label" backgroundColor="background" font="Regular; 28" position="1250,370" size="640,600" zPosition="1" transparent="1">
+    <widget source="Event" render="Label" backgroundColor="background" font="Regular; 28" position="1250,370" size="640,600" zPosition="1" transparent="1" foregroundColor="darkblue">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <widget backgroundColor="bg2" font="Regular; 30" foregroundColor="clock" halign="right" position="1440,9" render="Label" size="460,40" source="global.CurrentTime" transparent="1" valign="center" noWrap="1">
@@ -6401,7 +6409,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="background" font="Regular; 28" foregroundColor="clock" halign="left" position="1425,935" render="Label" size="130,35" source="global.CurrentTime" transparent="1">
       <convert type="ClockToText">Format:%H:%M:%S</convert>
     </widget>
-    <widget name="Cover" position="35,690" size="240,360" zPosition="1" alphatest="blend" transparent="1" />
+    <widget name="Cover" position="45,45" size="310,460" zPosition="1" alphatest="blend" transparent="1" />
     <eLabel backgroundColor="background" font="Regular; 28" foregroundColor="help" halign="left" position="380,1020" size="100,35" text="Time:" transparent="1" valign="center" />
     <eLabel backgroundColor="background" font="Regular; 28" foregroundColor="help" halign="left" position="690,1020" size="130,35" text="Remain:" transparent="1" valign="center" />
     <eLabel backgroundColor="background" font="Regular; 28" foregroundColor="help" halign="left" position="1020,1020" size="100,35" text="Total:" transparent="1" valign="center" />
@@ -6417,7 +6425,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <layout name="hdsuisse_main" />
     <widget name="config" position="360,150" size="1230,720" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <eLabel backgroundColor="line" foregroundColor="line" position="360,870" size="1230,2" />
-    <widget source="help" render="Label" position="360,870" size="1230,80" font="Regular; 24" foregroundColor="help" halign="center" valign="center" />
+    <widget source="help" render="Label" position="360,870" size="1230,100" font="Regular; 28" foregroundColor="help" halign="center" valign="center" transparent="1" backgroundColor="bg2" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/green.png" position="675,995" size="10,25" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/blue.png" position="1275,995" size="10,25" />
@@ -6431,25 +6439,30 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <layout name="hdsuisse_epg_keys" />
     <widget name="list" position="10,104" size="1180,880" itemHeight="40" CoolFont="Regular;29" CoolSelectFont="Regular;29" CoolDateFont="Thin;28" CoolMoviePos="40" CoolMovieSize="750" CoolFolderSize="750" CoolTitleColor="0" CoolDatePos="970" CoolDateWidth="190" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="850" CoolBarPos="850" CoolBarHPos="14" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="foreground" UnwatchedColor="foreground" WatchingColor="movieWatching" FinishedColor="movieFinished" RecordingColor="movieRecording" BackColorSel="black" foregroundColorSelected="foreselect" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="wait" position="20,418" size="1140,50" zPosition="5" font="Regular;32" foregroundColor="help" backgroundColor="bg2" halign="center" valign="center" transparent="1" />
-    <widget source="Service" render="Label" position="1530,425" size="180,40" font="Regular; 29" halign="center" foregroundColor="red" backgroundColor="background" transparent="1">
+    <widget source="Service" render="Label" position="1250,425" size="140,40" font="Regular; 29" halign="left" foregroundColor="red" backgroundColor="bg2" transparent="1">
       <convert type="EMCServiceTime">Duration</convert>
       <convert type="EMCClockToText">Format:%Hh:%Mmin</convert>
     </widget>
-    <widget source="Service" render="Label" position="1710,425" size="160,40" font="Regular; 29" foregroundColor="title" halign="right" backgroundColor="background" transparent="1">
+    <widget source="Service" render="Label" position="1390,425" size="140,40" font="Regular; 29" foregroundColor="title" halign="left" backgroundColor="bg2" transparent="1">
       <convert type="EMCMovieInfo">FileSize</convert>
     </widget>
-    <widget source="Service" render="Label" backgroundColor="background" font="Regular; 30" position="1250,490" size="630,525" valign="top" zPosition="2" transparent="1">
+    <widget source="Service" render="Label" position="1250,490" size="630,40" font="Regular; 30" backgroundColor="bg2" halign="left" transparent="1">
+      <convert type="EMCEventName">Name</convert>
+    </widget>
+    <widget source="Service" render="Label" backgroundColor="background" font="Regular; 30" position="1250,530" size="370,485" valign="top" zPosition="2" transparent="1" foregroundColor="darkblue">
       <convert type="EventName">FullDescription</convert>
     </widget>
-    <widget source="Service" render="Label" position="1260,425" size="270,40" font="Regular; 29" foregroundColor="channel" halign="left" backgroundColor="bg2" transparent="1" noWrap="1">
+    <widget source="Service" render="Label" position="1520,425" size="360,40" font="Regular; 29" foregroundColor="channel" halign="right" backgroundColor="bg2" transparent="1" noWrap="1">
       <convert type="EMCMovieInfo">RecordServiceName</convert>
     </widget>
     <widget backgroundColor="transparent" position="1250,70" render="Pig" size="630,340" source="session.VideoPicture" transparent="1" zPosition="5" />
+    <widget name="Cover" position="1630,540" size="250,360" zPosition="5" transparent="1" />
+    <widget name="CoverBg" position="1630,540" size="250,360" zPosition="4" transparent="1" />
   </screen>
   <screen name="DownloadMovieInfo" position="center,center" size="1920,1080" title="Movie Information Download (TMDb)" backgroundColor="transparent" flags="wfNoBorder">
     <layout name="hdsuisse_main" />
     <widget name="movielist" position="360,160" size="1230,720" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="resulttext" position="360,910" size="1230,40" zPosition="0" font="Regular; 26" valign="center" transparent="1" foregroundColor="help" backgroundColor="background" halign="center" />
+    <widget name="resulttext" position="360,910" size="1230,40" zPosition="0" font="Regular; 26" valign="center" transparent="1" foregroundColor="help" backgroundColor="bg2" halign="center" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="375,989" size="40,30" transparent="1" />
     <widget name="setup" position="420,987" size="300,40" font="Thin; 28" halign="left" valign="center" transparent="1" foregroundColor="button" backgroundColor="bg2" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_ok.png" position="751,989" size="40,30" transparent="1" />
@@ -6460,19 +6473,19 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   </screen>
   <screen name="EMCImdbScan" position="0,0" size="1920,1080" title="EMC Cover search" flags="wfNoBorder" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
-    <widget name="m_info" position="720,160" size="850,40" zPosition="0" font="Regular; 30" halign="center" valign="center" transparent="0" foregroundColor="light-blue" backgroundColor="background" />
+    <widget name="m_info" position="720,160" size="850,40" zPosition="0" font="Regular; 30" halign="center" valign="center" transparent="1" foregroundColor="light-blue" backgroundColor="background" />
     <widget name="menulist" position="720,220" size="850,640" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="on" />
-    <widget name="poster" position="430,234" size="185,230" zPosition="4" />
-    <widget name="download" position="380,590" size="300,40" zPosition="0" font="Regular; 26" halign="left" valign="center" transparent="0" foregroundColor="foreground" backgroundColor="background" />
-    <widget name="exist" position="380,510" size="300,40" zPosition="0" font="Regular; 26" halign="left" valign="center" transparent="0" foregroundColor="foreground" backgroundColor="background" />
-    <widget name="no_poster" position="380,550" size="300,40" zPosition="0" font="Regular; 26" halign="left" valign="center" transparent="0" foregroundColor="foreground" backgroundColor="background" />
-    <widget name="done_msg" position="360,896" size="1230,60" zPosition="0" font="Regular; 26" halign="center" valign="center" transparent="1" foregroundColor="help" backgroundColor="black" />
+    <widget name="poster" position="430,234" size="185,230" zPosition="4" transparent="1" />
+    <widget name="download" position="380,590" size="300,40" zPosition="0" font="Regular; 26" halign="left" valign="center" transparent="1" foregroundColor="foreground" backgroundColor="background" />
+    <widget name="exist" position="380,510" size="300,40" zPosition="0" font="Regular; 26" halign="left" valign="center" transparent="1" foregroundColor="foreground" backgroundColor="background" />
+    <widget name="no_poster" position="380,550" size="300,40" zPosition="0" font="Regular; 26" halign="left" valign="center" transparent="1" foregroundColor="foreground" backgroundColor="background" />
+    <widget name="done_msg" position="360,896" size="1230,60" zPosition="0" font="Regular; 28" halign="center" valign="center" transparent="1" foregroundColor="help" backgroundColor="bg2" />
     <widget name="ButtonGreenText" position="695,987" size="260,40" valign="center" halign="left" zPosition="1" font="Thin; 28" transparent="1" foregroundColor="button" backgroundColor="bg2" />
     <widget name="Manage Cover" position="995,987" size="260,40" font="Thin; 28" halign="left" valign="center" transparent="1" foregroundColor="button" backgroundColor="bg2" />
     <widget name="ButtonRedText" position="395,987" size="260,40" valign="center" halign="left" zPosition="1" font="Thin; 28" transparent="1" foregroundColor="button" backgroundColor="bg2" />
-    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_ok.png" position="1260,989" size="40,30" transparent="1" />
-    <widget name="Setup" position="425,820" size="260,40" font="Thin; 28" halign="left" valign="center" transparent="0" foregroundColor="button" />
-    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="373,825" size="40,30" transparent="1" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_ok.png" position="1260,992" size="40,30" transparent="1" />
+    <widget name="Setup" position="425,820" size="260,40" font="Thin; 28" halign="left" valign="center" transparent="1" foregroundColor="button" />
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="373,827" size="40,30" transparent="1" />
     <widget name="Single search" position="1305,987" size="260,40" font="Thin; 28" halign="left" valign="center" transparent="1" foregroundColor="button" backgroundColor="bg2" />
     <eLabel backgroundColor="line" foregroundColor="line" position="360,885" size="1230,2" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/buttons/red.png" position="375,995" size="10,25" />
@@ -6490,9 +6503,9 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   </screen>
   <screen name="getCover" position="0,0" size="1920,1080" title="EMC Cover Selecter" flags="wfNoBorder" backgroundColor="transparent">
     <layout name="hdsuisse_base" />
-    <widget name="poster" position="370,165" size="400,600" alphatest="blend" />
-    <widget name="menulist" position="840,165" size="720,800" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" />
-    <widget name="info" position="370,845" size="400,120" font="Regular; 28" halign="center" valign="center" foregroundColor="yellow" />
+    <widget name="poster" position="370,165" size="400,600" alphatest="blend" transparent="1" />
+    <widget name="menulist" position="840,165" size="720,800" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget name="info" position="370,845" size="400,120" font="Regular; 28" halign="center" valign="center" foregroundColor="yellow" transparent="1" backgroundColor="bg2" />
   </screen>
   <screen name="EMCPlaylistScreen" position="0,0" size="1920,1080" title="EMC Playlist" flags="wfNoBorder" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
@@ -6521,20 +6534,20 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   </screen>
   <screen name="MovieInfoTMDb" position="0,0" size="1920,1080" title="Movie Information TMDb" flags="wfNoBorder" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
-    <widget name="movie_name" position="383,139" size="1180,80" font="Regular;35" halign="center" valign="center" foregroundColor="yellow" />
+    <widget name="movie_name" position="383,139" size="1180,80" font="Regular;35" halign="center" valign="center" foregroundColor="yellow" transparent="1" />
     <widget name="previewlist" enableWrapAround="1" position="740,230" size="850,630" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="previewcover" position="400,230" size="300,451" alphatest="blend" transparent="1" />
     <widget name="contenttxt" position="740,230" size="850,460" font="Regular;30" transparent="1" />
-    <widget name="runtime" position="370,715" size="160,35" font="Regular;28" foregroundColor="foreground" transparent="0" />
-    <widget name="runtimetxt" position="550,715" size="330,35" font="Regular;28" transparent="0" />
-    <widget name="genre" position="370,765" size="160,35" font="Regular;28" foregroundColor="foreground" transparent="0" />
-    <widget name="genretxt" position="550,765" size="330,35" font="Regular;28" transparent="0" />
-    <widget name="country" position="370,860" size="290,35" font="Regular;28" foregroundColor="foreground" transparent="0" />
-    <widget name="countrytxt" position="665,860" size="340,35" font="Regular;28" transparent="0" />
-    <widget name="release" position="370,905" size="290,35" font="Regular;28" foregroundColor="foreground" />
-    <widget name="releasetxt" position="665,905" size="340,35" font="Regular;28" />
-    <widget name="rating" position="370,815" size="160,35" font="Regular;28" foregroundColor="foreground" transparent="0" />
-    <widget name="ratingtxt" position="550,815" size="330,35" font="Regular;28" transparent="0" />
+    <widget name="runtime" position="370,715" size="160,35" font="Regular;28" foregroundColor="foreground" transparent="1" />
+    <widget name="runtimetxt" position="550,715" size="330,35" font="Regular;28" transparent="1" />
+    <widget name="genre" position="370,765" size="160,35" font="Regular;28" foregroundColor="foreground" transparent="1" />
+    <widget name="genretxt" position="550,765" size="330,35" font="Regular;28" transparent="1" />
+    <widget name="country" position="370,860" size="290,35" font="Regular;28" foregroundColor="foreground" transparent="1" />
+    <widget name="countrytxt" position="665,860" size="340,35" font="Regular;28" transparent="1" />
+    <widget name="release" position="370,905" size="290,35" font="Regular;28" foregroundColor="foreground" transparent="1" />
+    <widget name="releasetxt" position="665,905" size="340,35" font="Regular;28" transparent="1" />
+    <widget name="rating" position="370,815" size="160,35" font="Regular;28" foregroundColor="foreground" transparent="1" />
+    <widget name="ratingtxt" position="550,815" size="330,35" font="Regular;28" transparent="1" />
     <widget name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img_fhd/starsbar_empty.png" position="1290,910" size="300,30" alphatest="blend" />
     <widget name="stars" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img_fhd/starsbar_filled.png" position="1290,910" size="300,30" transparent="1" zPosition="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="375,989" size="40,30" alphatest="blend" />
@@ -8226,7 +8239,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="background" font="Regular; 28" halign="left" position="1645,215" render="Label" size="240,40" source="Service" transparent="1" valign="center" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreground" position="1250,465" render="Label" size="640,530" source="Service" transparent="1" zPosition="1">
+    <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkblue" position="1250,465" render="Label" size="640,530" source="Service" transparent="1" zPosition="1">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreground" halign="center" name="waitingtext" position="30,170" size="1150,800" transparent="1" valign="center" zPosition="3" />
@@ -8280,7 +8293,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="background" font="Regular; 28" halign="left" position="1645,215" render="Label" size="240,40" source="Service" transparent="1" valign="center" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreground" position="1250,465" render="Label" size="640,530" source="Service" transparent="1" zPosition="1">
+    <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkblue" position="1250,465" render="Label" size="640,530" source="Service" transparent="1" zPosition="1">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreground" halign="center" name="waitingtext" position="30,170" size="1150,800" transparent="1" valign="center" zPosition="3" />
@@ -8328,7 +8341,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="background" font="Regular; 28" foregroundColor="foreselect" halign="left" position="1250,470" render="Label" size="200,40" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreground" position="1250,540" render="Label" size="640,440" source="Service" transparent="1" zPosition="1">
+    <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkblue" position="1250,540" render="Label" size="640,440" source="Service" transparent="1" zPosition="1">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreground" halign="center" name="waitingtext" position="32,180" size="1150,800" transparent="1" valign="center" zPosition="3" />
@@ -8375,7 +8388,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget backgroundColor="background" font="Regular; 28" foregroundColor="foreselect" halign="left" position="1250,470" render="Label" size="200,40" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreground" position="1250,540" render="Label" size="640,440" source="Service" transparent="1" zPosition="1">
+    <widget backgroundColor="background" font="Regular; 30" foregroundColor="darkblue" position="1250,540" render="Label" size="640,440" source="Service" transparent="1" zPosition="1">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <widget backgroundColor="background" font="Regular; 30" foregroundColor="foreground" halign="center" name="waitingtext" position="32,180" size="1150,800" transparent="1" valign="center" zPosition="3" />
@@ -9313,7 +9326,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget source="Event" render="Label" font="Regular;28" position="15,905" size="1470,100" valign="top" transparent="1" backgroundColor="bg2">
+    <widget source="Event" render="Label" font="Regular;28" position="15,905" size="1470,100" valign="top" transparent="1" backgroundColor="bg2" foregroundColor="darkblue">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="session.VideoPicture" render="Pig" position="1540,827" size="340,190" zPosition="3" backgroundColor="video" />
@@ -9345,7 +9358,7 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     </convert>
     </widget>
     <eLabel halign="left" position="1130,160" size="450,40" font="Regular; 30" text="Ecm info" transparent="1" foregroundColor="help" backgroundColor="bg2" />
-    <widget name="status" position="1130,250" size="450,630" font="Regular; 30" halign="left" noWrap="1" transparent="1" backgroundColor="bg2" valign="top" />
+    <widget name="status" position="1130,250" size="450,630" font="Regular; 30" halign="left" transparent="1" backgroundColor="bg2" valign="top" />
   </screen>
   <screen name="ConfigEdit" position="0,0" size="1920,1080" title="ConfigEdit" backgroundColor="transparent">
     <layout name="hdsuisse_main" />
@@ -9361,9 +9374,9 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
   <screen name="MySpeedtest" position="0,0" size="1920,1080" title="simple e2Speedtest" backgroundColor="transparent" flags="wfNoBorder">
     <layout name="hdsuisse_base" />
     <widget name="myMenu" position="635,160" size="690,90" scrollbarMode="showOnDemand" backgroundColor="bg2" transparent="1" />
-    <eLabel text="Click OK for speed test" position="444,744" size="1050,40" font="Regular; 32" foregroundColor="foreground" halign="center" valign="center" backgroundColor="bg2" />
+    <eLabel text="Click OK for speed test" position="444,744" size="1050,40" font="Regular; 32" foregroundColor="help" halign="center" valign="center" backgroundColor="bg2" transparent="1" />
     <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_exit.png" position="1400,990" size="80,35" alphatest="on" />
-    <ePixmap alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/e2Speedtest/e2speedtest.png" position="825,349" size="280,260" transparent="1" zPosition="-1" />
+    <ePixmap alphatest="blend" pixmap="hdsuisse.one4all.fhd/icons/speed.png" position="825,349" size="280,260" transparent="1" zPosition="-1" />
   </screen>
   <screen name="PictureView" title="UWZ" position="center,center" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel position="0,0" zPosition="1" size="720,576" backgroundColor="black" />
@@ -10018,9 +10031,9 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <layout name="hdsuisse_main_buttons" />
     <layout name="hdsuisse_main_keys_label" />
     <!-- update widget stationname wettertext wettericon temperature updatetime namelong -->
-    <widget source="wettertext" render="Label" position="1375,258" size="210,40" font="Regular;30" halign="left" zPosition="1" transparent="1" />
-    <widget source="temperature" render="Label" position="1375,210" size="80,40" font="Regular;30" halign="left" zPosition="1" transparent="1" />
-    <widget name="wettericon" position="1250,190" size="120,120" />
+    <widget source="wettertext" render="Label" position="1375,258" size="210,40" font="Regular;30" halign="left" zPosition="1" transparent="1" backgroundColor="bg2" />
+    <widget source="temperature" render="Label" position="1375,210" size="80,40" font="Regular; 33" halign="left" zPosition="1" transparent="1" foregroundColor="yellow" backgroundColor="bg2" />
+    <widget name="wettericon" position="1250,190" size="120,120" transparent="1" />
     <widget source="titleliste" render="Listbox" position="360,150" size="1230,150" enableWrapAround="1" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
       <convert type="TemplatedMultiContent">
 		{"template":[MultiContentEntryText(pos=(0,0),size=(1230,150),border_width=0,border_color=0xa0a0a0),
@@ -10049,13 +10062,13 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
 		MultiContentEntryText(pos=(10,60),size=(200,40),font=0,text=2),
 		MultiContentEntryPixmapAlphaTest(pos=(200,0),size=(140,100),png=4),
 		MultiContentEntryText(pos=(400,60),size=(470,40),font=0,text=3),
-		MultiContentEntryText(pos=(400,10),size=(80,60),font=1,text=5),
+		MultiContentEntryText(pos=(400,10),size=(80,60),font=1,text=5, color=0xffc435, color_sel=0xffc435),
 		MultiContentEntryText(pos=(465,10),size=(80,40),font=1,text=6),
 		MultiContentEntryText(pos=(570,15),size=(300,40),font=2,text=7),
 		MultiContentEntryText(pos=(855,60),size=(120,40),font=0,text=8),
-		MultiContentEntryPixmapAlphaTest(pos=(850,5),size=(50,50),png=9),
-		MultiContentEntryText(pos=(965,60),size=(120,40),font=0,text=10),
-		MultiContentEntryPixmapAlphaTest(pos=(985,5),size=(50,50),png=11),
+		MultiContentEntryPixmapAlphaTest(pos=(840,5),size=(50,50),png=9),
+		MultiContentEntryText(pos=(960,60),size=(120,40),font=0,text=10),
+		MultiContentEntryPixmapAlphaTest(pos=(975,5),size=(50,50),png=11),
 		MultiContentEntryText(pos=(1110,60),size=(400,40),font=0,text=12),
 		MultiContentEntryPixmapAlphaTest(pos=(1100,5),size=(50,50),png=14),
 		MultiContentEntryText(pos=(1155,23),size=(60,40),font=0,text=13),],
@@ -10066,18 +10079,19 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_info.png" position="1556,995" size="40,30" render="Pixmap" source="infoicon">
       <convert type="ConditionalShowHide" />
     </widget>
-    <eLabel backgroundColor="bg2" foregroundColor="help" font="Regular; 30" halign="right" position="770,935" size="220,40" text="Weatherdata" valign="center" transparent="1" />
-    <widget backgroundColor="bg2" foregroundColor="help" font="Regular; 30" halign="left" position="1010,935" size="190,40" valign="center" render="Label" source="updatetime" zPosition="1" transparent="1" />
+    <eLabel backgroundColor="bg2" foregroundColor="help" font="Regular; 30" halign="right" position="750,935" size="220,40" text="Weatherdata" valign="center" transparent="1" />
+    <widget backgroundColor="bg2" foregroundColor="help" font="Regular; 30" halign="left" position="990,935" size="190,40" valign="center" render="Label" source="updatetime" zPosition="1" transparent="1" />
   </screen>
   <screen name="ChoiceListe" position="0,0" size="1920,1080" title="Select" backgroundColor="transparent" flags="wfNoBorder">
     <layout name="hdsuisse_base" />
-    <widget source="list" render="Listbox" position="360,150" size="1230,720" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+    <widget source="list" render="Listbox" position="360,150" size="1230,820" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
 		{"template":[MultiContentEntryText(pos=(10,0),size=(805,45),flags=RT_VALIGN_CENTER,text=0),
 		MultiContentEntryText(pos=(0,0),size=(820,45),border_width=0,border_color=0xa0a0a0),],
 		"fonts":[gFont("Regular",28)],"itemHeight":45}
 		</convert>
     </widget>
+    <ePixmap pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_menu.png" position="1556,995" size="40,30" zPosition="1" transparent="1" />
   </screen>
   <screen name="WetterComFurther" position="0,0" size="1920,1080" title="Wetter.com" backgroundColor="transparent" flags="wfNoBorder">
     <layout name="hdsuisse_base" />
@@ -10092,23 +10106,58 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     </widget>
     <widget font="Regular;30" name="description" position="1050,151" size="550,720" transparent="1" valign="top" />
   </screen>
+  <screen name="WetterComStations" position="0,0" size="1920,1080" title="WetterCom Stations" backgroundColor="transparent" flags="wfNoBorder">
+    <layout name="hdsuisse_main" />
+    <widget source="liste" render="Listbox" position="360,130" size="1230,840" enableWrapAround="1" scrollbarMode="showAlways" transparent="1" itemHeight="120">
+      <convert type="TemplatedMultiContent">
+			{"template":[
+			MultiContentEntryText(pos=(0,0),size=(1215,120),font=0,border_width=2,border_color=0xa0a0a0),
+			#MultiContentEntryText(pos=(10,70),size=(200,40),font=0,text=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER),
+			MultiContentEntryText(pos=(10,70),size=(200,40),font=0,text=2, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER),
+			MultiContentEntryPixmapAlphaTest(pos=(220,40),size=(120,70),png=4),
+			MultiContentEntryText(pos=(500,70),size=(290,40),font=0,text=3, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER),
+			MultiContentEntryText(pos=(350,40),size=(80,50),font=1,text=5, color=0xffc435, color_sel=0xffc435),
+			MultiContentEntryText(pos=(350,10),size=(80,40),font=0,text=6),
+			MultiContentEntryText(pos=(350,70),size=(300,40),font=2,text=7),
+			MultiContentEntryText(pos=(800,70),size=(120,40),font=0,text=8),
+			MultiContentEntryPixmapAlphaTest(pos=(800,10),size=(50,50),png=9),
+			MultiContentEntryText(pos=(930,70),size=(120,40),font=0,text=10),
+			MultiContentEntryPixmapAlphaTest(pos=(940,10),size=(50,50),png=11),
+			MultiContentEntryText(pos=(920,70),size=(460,40),font=0,text=12, flags=RT_HALIGN_CENTER),
+			MultiContentEntryPixmapAlphaTest(pos=(1100,10),size=(50,50),png=14),
+			MultiContentEntryText(pos=(1160,10),size=(60,40),font=0,text=13),
+			MultiContentEntryText(pos=(10,10),size=(1740,40),font=0,text=17),
+			],
+			"fonts":[gFont("Regular",28),gFont("Regular",30),gFont("Regular",28)],"itemHeight":120}
+			</convert>
+    </widget>
+    <widget pixmap="hdsuisse.one4all.fhd/skin_default/buttons/key_ok.png" position="1550,995" size="40,30" render="Pixmap" source="okicon">
+      <convert type="ConditionalShowHide" />
+    </widget>
+  </screen>
   <!--Infobar-->
-  <screen backgroundColor="transparent" name="WetterComScreen" position="1400,30" size="480,45" flags="wfNoBorder">
-    <eLabel backgroundColor="bg2" blending="on" cornerRadius="0" foregroundColor="transparent" position="2,2" size="475,40" />
-    <eLabel backgroundColor="bg3" blending="on" cornerRadius="0" foregroundColor="transparent" position="0,0" size="480,44" zPosition="-20" />
+  <screen backgroundColor="transparent" name="WetterComScreen" position="1400,30" size="480,90" flags="wfNoBorder">
+    <eLabel backgroundColor="bg2" blending="on" cornerRadius="0" foregroundColor="transparent" position="2,2" size="475,85" />
+    <eLabel backgroundColor="bg3" blending="on" cornerRadius="0" foregroundColor="transparent" position="0,0" size="480,89" zPosition="-20" />
     <!-- title=0, stationname=1, wettertext=2, wettericon=3, temperature=4, updatetime=5, namelong=6, lastcheck=7, raintext=8, rainamounttext=9, winddirectiontext=10, winddirectionicon=11-->
-    <widget backgroundColor="background" source="global.WetterCom" render="Label" font="Regular; 27" position="70,2" size="50,40" transparent="1" foregroundColor="yellow" valign="center" zPosition="1">
+    <widget backgroundColor="background" source="global.WetterCom" render="Label" font="Regular; 34" position="80,24" size="50,40" transparent="1" foregroundColor="yellow" valign="center" zPosition="1">
       <convert type="WetterCom">4</convert>
     </widget>
-    <widget backgroundColor="background" source="global.WetterCom" render="Label" font="Regular; 27" position="125,2" size="235,40" halign="center" transparent="1" valign="center" zPosition="1">
+    <widget backgroundColor="background" source="global.WetterCom" render="Label" font="Regular; 27" position="125,5" size="235,80" halign="center" transparent="1" valign="center" zPosition="1">
       <convert type="WetterCom">2</convert>
     </widget>
-    <widget source="global.WetterCom" render="Pixmap" position="15,2" size="50,40" zPosition="15" alphatest="on" transparent="1">
+    <widget source="global.WetterCom" render="Pixmap" position="6,10" size="70,70" zPosition="1" alphatest="on" transparent="1">
       <convert type="WetterCom">3</convert>
     </widget>
-    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WetterCom/icons/ic_modern_precipitation_risk_s.png" position="375,7" size="30,30" transparent="1" />
-    <widget backgroundColor="background" source="global.WetterCom" render="Label" font="Regular; 27" position="415,2" size="50,40" halign="left" transparent="1" valign="center" zPosition="1">
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WetterCom/icons/ic_modern_precipitation_risk_s.png" position="375,10" size="30,30" transparent="1" zPosition="1" />
+    <widget backgroundColor="background" source="global.WetterCom" render="Label" font="Regular; 27" position="415,5" size="60,40" halign="left" transparent="1" valign="center" zPosition="1" foregroundColor="darkblue">
       <convert type="WetterCom">8</convert>
+    </widget>
+    <widget source="global.WetterCom" render="Pixmap" position="375,50" size="30,30" zPosition="1" alphatest="on" transparent="1">
+      <convert type="WetterCom">11</convert>
+    </widget>
+    <widget backgroundColor="background" source="global.WetterCom" render="Label" font="Regular; 27" position="415,45" size="60,40" halign="left" transparent="1" valign="center" foregroundColor="darkblue" zPosition="1">
+      <convert type="WetterCom">10</convert>
     </widget>
   </screen>
   <!-- LCD/OLED 820 -->
@@ -11520,10 +11569,10 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <widget enableWrapAround="1" position="52,164" render="Listbox" scrollbarMode="showOnDemand" size="566,720" source="config" transparent="1">
       <convert type="TemplatedMultiContent">
 		{"template": [
-		MultiContentEntryText(pos = (100, 2), size = (360, 30), font=0, flags = RT_HALIGN_LEFT, text = 0),
-		MultiContentEntryText(pos = (100, 32), size = (360, 26), font=1, flags = RT_HALIGN_LEFT, text = 5),
-		MultiContentEntryPixmapAlphaTest(pos = (20, 15), size = (48, 48), png = 4),
-		MultiContentEntryPixmapAlphaTest(pos = (100, 64), size = (450, 2), png = 6), 
+		MultiContentEntryText(pos = (100, 5), size = (360, 30), font=0, flags = RT_HALIGN_LEFT, text = 0),
+		MultiContentEntryText(pos = (100, 35), size = (360, 26), font=1, flags = RT_HALIGN_LEFT, text = 5, color=0xa0a0a0),
+		MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (45, 45), png = 4),
+		MultiContentEntryPixmapAlphaTest(pos = (100, 64), size = (0, 0), png = 6), 
 	  ],
 		"fonts": [gFont("Regular", 26),gFont("Regular", 22)],
 		"itemHeight": 65
