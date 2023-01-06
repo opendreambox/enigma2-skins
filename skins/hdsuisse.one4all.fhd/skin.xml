@@ -21,10 +21,11 @@
     <config offPixmap="hdsuisse.one4all.fhd/gfx/switch_off.png" onPixmap="hdsuisse.one4all.fhd/gfx/switch_on.png" size="60,30" />
   </listboxcontent>
   <fonts>
-    <font name="Regular" filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/regular.ttf" replacement="0" scale="100" />
-    <font name="Thin" filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/thin.ttf" replacement="1" scale="100" />
+    <font name="Regular" filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/regular.ttf" scale="100" />
+    <font name="Thin" filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/thin.ttf" scale="100" />
     <font name="LCD" filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/lcd.ttf" scale="100" />
     <font name="Console" filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/tuxtxt.ttf" scale="100" />
+	<font name="Replacement" filename="ae_AlMateen.ttf" scale="100" replacement="1" />	
   </fonts>
   <colors>
     <color name="background" value="#00141414" />
@@ -1770,10 +1771,10 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
     <eLabel backgroundColor="line" foregroundColor="line" position="200,870" size="450,2" />
   </screen>
   <screen name="VideoPlayer" position="0,0" size="1920,1080" title="Video Player" flags="wfNoBorder" backgroundColor="transparent">
-    <layout name="hdsuisse_main" />
-    <layout name="hdsuisse_main_buttons" />
-    <widget source="playlist" render="Listbox" position="360,151" size="1230,800" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
+  <layout name="hdsuisse_main" />
+  <layout name="hdsuisse_main_buttons" />
+  <widget source="playlist" render="Listbox" position="360,151" size="1230,790" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="TemplatedMultiContent">
       {"templates":{
       "default": (60, [
       MultiContentEntryText(pos = (5, 1), size = (1220, 55), font = 0, flags = RT_VALIGN_CENTER, text = 2),]),
@@ -1782,14 +1783,14 @@ self.instance.move(ePoint((1920-wsizex-200), (1080-wsizey)/5))
       "fonts": [gFont("Regular", 30), gFont("Regular", 30), gFont("Regular", 26)]
       }
     </convert>
-    </widget>
-    <!-- MediaCenter   <widget source="key_red" render="Label" position="235,627" zPosition="1" size="200,40" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" foregroundColor="button" />
+  </widget>
+  <!-- MediaCenter   <widget source="key_red" render="Label" position="235,627" zPosition="1" size="200,40" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" foregroundColor="button" />
   <widget source="key_green" render="Label" position="470,627" zPosition="1" size="200,40" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" foregroundColor="button" />
   <widget source="key_yellow" render="Label" position="705,627" zPosition="1" size="200,40" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" foregroundColor="button" /> -->
-    <eLabel backgroundColor="bg2" font="Thin; 28" halign="left" position="395,987" size="260,40" text="Liste leeren" transparent="1" />
-    <eLabel backgroundColor="bg2" font="Thin; 28" halign="left" position="695,987" size="260,40" text="Hinzufügen" transparent="1" />
-    <eLabel backgroundColor="bg2" font="Thin; 28" halign="left" position="1295,987" size="260,40" text="Entfernen" transparent="1" />
-  </screen>
+  <eLabel backgroundColor="bg2" font="Thin; 28" halign="left" position="395,987" size="260,40" text="Clear List" transparent="1" />
+  <eLabel backgroundColor="bg2" font="Thin; 28" halign="left" position="695,987" size="260,40" text="Add" transparent="1" />
+  <eLabel backgroundColor="bg2" font="Thin; 28" halign="left" position="1295,987" size="260,40" text="Remove" transparent="1" />
+</screen>
   <!-- MediaCenter MediaDatabas 7080  -->
   <screen name="MediaDatabaseManager" position="0,0" size="1920,1080" title="Database Manager" flags="wfNoBorder" backgroundColor="transparent">
     <layout name="hdsuisse_main" />

@@ -756,18 +756,20 @@
 	
 	<fonttheme name="Normal" value="active">
 		<fonts>
-			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/regular.ttf" name="Regular" replacement="0" scale="100" />
-			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/thin.ttf" name="Thin" replacement="1" scale="100" />
+			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/regular.ttf" name="Regular" scale="100" />
+			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/thin.ttf" name="Thin" scale="100" />
 			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/lcd.ttf" name="LCD" scale="100" />
 			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/tuxtxt.ttf" name="Console" scale="100" />
+			<font name="Replacement" filename="ae_AlMateen.ttf" scale="100" replacement="1" />	
 		</fonts>
 	</fonttheme>
 	<fonttheme name="Zoom" value="inactive">
 		<fonts>
-			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/regular.ttf" name="Regular" replacement="0" scale="110" />
-			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/thin.ttf" name="Thin" replacement="1" scale="110" />
+			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/regular.ttf" name="Regular" scale="110" />
+			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/thin.ttf" name="Thin" scale="110" />
 			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/lcd.ttf" name="LCD" scale="100" />
 			<font filename="/usr/share/enigma2/hdsuisse.one4all.fhd/fonts/tuxtxt.ttf" name="Console" scale="100" />
+			<font name="Replacement" filename="ae_AlMateen.ttf" scale="100" replacement="1" />	
 		</fonts>
 	</fonttheme>
 
