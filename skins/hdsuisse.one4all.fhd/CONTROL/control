@@ -1,11 +1,11 @@
 Package: enigma2-skin-hdsuisse.one4all.fhd
-Version: 8.1
+Version: 8.2
 Architecture: all
 Maintainer: hdsuisse
 Depends: enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-eventposition, enigma2-plugin-skincomponents-channelselectionshorttitle, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-skincomponents-serviceresolution
 Section: base
 Priority: optional
-Homepage: 
+Homepage: dreambox.de/board
 Description: all DreamOS FHD Skin
 Oe: enigma2-skins
 Packagearch: all
